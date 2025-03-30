@@ -1,4 +1,4 @@
-dateModified: 1743365325
+dateModified: 1743367390
 elementSources:
   craft\elements\Entry:
     -
@@ -97,6 +97,7 @@ meta:
     c670b800-a19f-4ca2-a056-283204e59d5d: 'Credit / License' # Credit / License
     c63194ff-c47c-4c20-80b1-39bfedfc3b0f: 'Project Categories' # Project Categories
     c4438391-90e5-49b1-93bd-6fcbbd3aed62: Simple # Simple
+    cff97bfa-6eb7-473b-97c0-cc3af58c0f64: 'Article ID' # Article ID
     d5397ea9-1d37-4f12-bf41-46082d130bd8: Image # Image
     ddc3aedf-983b-4fa7-81eb-69fd761d71af: German # German
     de820dbc-bd7e-4a0f-9554-3d750480d2a4: Projects # Projects
