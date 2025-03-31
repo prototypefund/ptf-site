@@ -1,15 +1,34 @@
 color: null
 fieldLayouts:
   1e6091d0-fce7-4a6f-84fd-9a05f8ebb92f:
+    cardView:
+      - 'layoutElement:fb7bf9c8-5781-4575-a811-352514751665'
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-03-30T20:43:10+00:00'
+            elementCondition: null
+            fieldUid: cff97bfa-6eb7-473b-97c0-cc3af58c0f64 # Article ID
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8d630891-228e-4414-9a60-5ee77df7d111
+            userCondition: null
+            warning: null
+            width: 100
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: '2025-02-19T09:40:13+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -24,7 +43,7 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
@@ -35,6 +54,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-02-19T09:40:13+00:00'
             elementCondition: null
             fieldUid: 3bde5cb4-3323-4862-906f-40053b1122bc # Main Image
             handle: null
@@ -50,6 +70,7 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-02-19T09:40:13+00:00'
             elementCondition: null
             fieldUid: 13a0aaca-3bd8-4653-b163-69738ce277c3 # Text
             handle: null
@@ -65,11 +86,13 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-02-19T09:40:13+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
             uid: aed9da80-acf1-4ba4-8add-5819e0dae19c
             userCondition: null
           -
+            dateAdded: '2025-02-19T09:40:13+00:00'
             elementCondition: null
             fieldUid: 9c0f58c4-4b28-4aca-b80d-3b370bc38f9e # Next Reads
             handle: null
@@ -91,6 +114,7 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-02-19T09:40:13+00:00'
             elementCondition: null
             fieldUid: 0d857c68-7bb1-4ce7-b61f-671446aa8bb3 # SEO
             handle: null
@@ -116,6 +140,6 @@ showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

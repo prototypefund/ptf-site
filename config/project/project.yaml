@@ -1,4 +1,4 @@
-dateModified: 1741804012
+dateModified: 1743367390
 elementSources:
   craft\elements\Entry:
     -
@@ -78,6 +78,7 @@ meta:
     28f95d3d-986f-41ed-b23b-c2f3b747c2eb: Homepage # Homepage
     34dc108f-02bd-42cb-9481-0693c7bc32b4: 'Tracking Head' # Tracking Head
     91a7ad8a-d35b-4738-b71b-a18f899afc5d: 'Resize: width 2000px' # Resize: width 2000px
+    276edf74-a032-4834-b9ef-5783f0b823d4: 'Project ID' # Project ID
     375cd22a-99b6-4667-8ca6-caf2572459ed: Blog # Blog
     504f909d-20af-4a66-b4a5-46c966689b30: 'Resize: width 1000px' # Resize: width 1000px
     645eb55b-61e5-4ed2-bf31-caed18a16ffb: 'Blog Index' # Blog Index
@@ -96,6 +97,7 @@ meta:
     c670b800-a19f-4ca2-a056-283204e59d5d: 'Credit / License' # Credit / License
     c63194ff-c47c-4c20-80b1-39bfedfc3b0f: 'Project Categories' # Project Categories
     c4438391-90e5-49b1-93bd-6fcbbd3aed62: Simple # Simple
+    cff97bfa-6eb7-473b-97c0-cc3af58c0f64: 'Article ID' # Article ID
     d5397ea9-1d37-4f12-bf41-46082d130bd8: Image # Image
     ddc3aedf-983b-4fa7-81eb-69fd761d71af: German # German
     de820dbc-bd7e-4a0f-9554-3d750480d2a4: Projects # Projects

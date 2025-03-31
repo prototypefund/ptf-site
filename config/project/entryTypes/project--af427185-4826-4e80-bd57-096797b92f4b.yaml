@@ -6,6 +6,22 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2025-03-30T19:35:37+00:00'
+            elementCondition: null
+            fieldUid: 276edf74-a032-4834-b9ef-5783f0b823d4 # Project ID
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b233697f-406c-4193-a93d-4e222afbe660
+            userCondition: null
+            warning: null
+            width: 100
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
