@@ -13,9 +13,10 @@
   } %}
   {% set hasImage = true %}
 {% endif %}
-{% set round = entry.round %}
+{% set rounds = entry.projectRounds.all() %}
 {% set teamMembers = entry.projectTeamMembers %}
-{% set categories = entry.projectCategories %}
+{% set topics = entry.projectTopics.all() %}
+{% set technologies = entry.projectTechnologies.all() %}
 {% set links = entry.projectLinks %}
 {% set status = entry.projectStatus[0].label %}
 
@@ -31,8 +32,9 @@
 
     <aside class="my-4">
       <p>{{ "Project Status: {status}"|t({"status": status}) }}</p>
-      <p>{{ "Round: {round}"|t({"round": round}) }}</p>
-      <p>{{ categories|join(", ") }}</p>
+      <p>Rounds: {{ rounds|join(", ") }}</p>
+      <p>Topics: {{ topics|join(", ") }}</p>
+      <p>Technologies: {{ technologies|join(", ") }}</p>
     </aside>
 
     {% if teamMembers|length %}
