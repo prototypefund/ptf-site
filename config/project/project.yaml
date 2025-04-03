@@ -1,4 +1,4 @@
-dateModified: 1743690650
+dateModified: 1743695869
 elementSources:
   craft\elements\Entry:
     -
@@ -51,10 +51,14 @@ email:
   fromEmail: $EMAIL_SYSTEM_ADDRESS
   fromName: $EMAIL_SENDER_NAME
   replyToEmail: null
-  template: null
+  template: ''
   transportSettings:
-    command: '/usr/sbin/sendmail -bs'
-  transportType: craft\mail\transportadapters\Sendmail
+    host: $EMAIL_SMTP_HOST
+    password: $EMAIL_SMTP_PASS
+    port: $EMAIL_SMTP_PORT
+    useAuthentication: '1'
+    username: $EMAIL_SMTP_USER
+  transportType: craft\mail\transportadapters\Smtp
 fs:
   uploadsFs:
     hasUrls: true
