@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: projectCategories
+handle: projectRounds
 instructions: null
-name: 'Project Categories'
+name: 'Project Rounds'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -11,8 +11,8 @@ settings:
   minRelations: null
   selectionLabel: null
   showCardsInGrid: false
-  showSiteMenu: true
-  source: 'group:c63194ff-c47c-4c20-80b1-39bfedfc3b0f' # Project Categories
+  showSiteMenu: false
+  source: 'group:a06eff6a-35ff-45b1-9c02-c6ef2f3f948c' # Project Rounds
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

@@ -1,6 +1,6 @@
 defaultPlacement: end
 fieldLayouts:
-  3c3603cd-00f7-4133-abe5-cd2ae7075295:
+  fa791d3b-8a4e-4e75-bf17-557bb3973daf:
     tabs:
       -
         elementCondition: null
@@ -10,7 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-03-10T15:25:36+00:00'
+            dateAdded: '2025-04-03T14:29:13+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -31,24 +31,24 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
-            uid: 610b4122-e90d-44d1-af8b-2008c3cac3df
+            uid: a87bf5be-2a0b-465c-8911-64460c734091
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: e1044590-32ca-4e22-a3d1-e39334e50fa9
+        uid: 9824da26-cf4b-4651-905a-0f59fbc2e77d
         userCondition: null
-handle: projectCategories
-name: 'Project Categories'
+handle: projectRounds
+name: 'Project Rounds'
 siteSettings:
   af0bbe1c-3613-4775-8a01-965b68d4e56e: # English
     hasUrls: true
-    template: project-categories/_category.twig
-    uriFormat: 'project-categories/{slug}'
+    template: project-rounds/_category.twig
+    uriFormat: 'project-rounds/{slug}'
   ddc3aedf-983b-4fa7-81eb-69fd761d71af: # German
     hasUrls: true
-    template: project-categories/_category.twig
-    uriFormat: 'project-categories/{slug}'
+    template: project-rounds/_category.twig
+    uriFormat: 'project-rounds/{slug}'
 structure:
   maxLevels: 1
-  uid: fe79925f-a854-469b-aa29-2b998ceab6d0
+  uid: f94ebbd3-34b8-4551-b542-eca3387f21a0
