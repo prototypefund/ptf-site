@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: projectTechnologies
+instructions: null
+name: 'Project Technologies'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  source: 'group:8d8e3436-a20e-4222-a530-d52fa736ae4d' # Project Technologies
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories
