@@ -88,12 +88,12 @@
   {% endif %}
 
   {% if secondaryFooterLinks|length %}
-    <div class="flex flex-wrap gap-y-1.5 gap-x-3 md:gap-x-6 p-2 md:p-3 text-body-14 border-b border-gray-400">
+    <div class="p-2 md:p-3 text-body-14 border-b border-gray-400">
       {% for linkGroup in secondaryFooterLinks %}
         {% set links = linkGroup.links %}
 
         {% if links|length %}
-          <ul>
+          <ul class="flex flex-wrap gap-y-1.5 gap-x-3 md:gap-x-6">
             {% for link in links %}
               {% switch link.type %}
                 {% case "internalPage" %}

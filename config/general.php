@@ -25,7 +25,7 @@ return GeneralConfig::create()
     // Disallow robots
     ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
     // Allow uploading of font data
-    ->extraAllowedFileExtensions(['woff2'])
+    ->extraAllowedFileExtensions(['woff', 'woff2'])
     // Prevent user enumeration attacks
     ->preventUserEnumeration()
     // use emails as user names
