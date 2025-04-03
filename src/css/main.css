@@ -1,5 +1,3 @@
-@import url("webfonts.css") layer(base);
-
 @import "tailwindcss";
 
 @custom-variant dark (:is(.dark &):not(.print &));

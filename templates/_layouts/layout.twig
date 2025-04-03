@@ -19,6 +19,8 @@
     <link rel="manifest" href="/static/images/favicons/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#28313d">
 
+    {% include "_web-fonts" only %}
+
     {% if extraHead is defined %}
       {{ extraHead }}
     {% endif %}

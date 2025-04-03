@@ -24,6 +24,8 @@ return GeneralConfig::create()
     ->allowAdminChanges(App::env('ALLOW_ADMIN_CHANGES') ?? false)
     // Disallow robots
     ->disallowRobots(App::env('DISALLOW_ROBOTS') ?? false)
+    // Allow uploading of font data
+    ->extraAllowedFileExtensions(['woff2'])
     // Prevent user enumeration attacks
     ->preventUserEnumeration()
     // use emails as user names
