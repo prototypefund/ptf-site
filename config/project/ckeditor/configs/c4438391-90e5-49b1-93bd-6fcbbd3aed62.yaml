@@ -1,9 +1,19 @@
 headingLevels: false
-listPlugin: ''
 name: Simple
+options:
+  link:
+    decorators:
+      openInNewTab:
+        attributes:
+          rel: 'noopener noreferrer'
+          target: _blank
+        label: 'Open in a new tab'
+        mode: manual
+  list:
+    properties:
+      styles: false
 toolbar:
-  - sourceEditing
-  - '|'
   - bold
   - italic
+  - strikethrough
   - link

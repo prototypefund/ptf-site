@@ -1,0 +1,140 @@
+fieldLayouts:
+  34fd07dd-87af-47ce-8a3f-5f7901db7a5c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-01T13:24:48+00:00'
+            elementCondition: null
+            fieldUid: 6ca70ace-9ae7-4dfa-a915-d1a24572619d # Footer Description
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: abadfe01-6de2-4141-8e00-d4e097c85d37
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-01T12:29:22+00:00'
+            elementCondition: null
+            fieldUid: 633b77bd-edb2-4812-ae43-7d61e39fd8fd # Main Footer Links
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e98d53ae-8588-4a62-9798-4666dd4de316
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-01T12:57:57+00:00'
+            elementCondition: null
+            fieldUid: 018c8387-bc84-4c1c-ae3a-186233bcf754 # Secondary Footer Links
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5f798bc1-1ab1-410b-96ed-88bd2e260816
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-01T12:50:51+00:00'
+            elementCondition: null
+            fieldUid: b0ebafde-641c-4e2c-9502-7f8890009108
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b40ddd48-4ddc-455d-8442-cd7caee03ce5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-01T13:11:42+00:00'
+            elementCondition: null
+            fieldUid: 8898a317-df17-4cc9-9475-6376bc29fbd5 # Newsletter Headline
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 67c47be3-9e46-4b2c-963b-f38bd2e2d17d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-01T13:11:42+00:00'
+            elementCondition: null
+            fieldUid: fdce3d41-b225-460c-85ea-1908f71ba724 # Newsletter Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4168c514-bd75-4529-bdc5-53eae639db98
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-01T13:04:13+00:00'
+            elementCondition: null
+            fieldUid: f81cb75d-92f5-44c4-89bd-673d8c8ee15c # Sponsors Headline
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 20f9ca52-d838-43f1-be9b-b008d82b2648
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-01T13:04:13+00:00'
+            elementCondition: null
+            fieldUid: 80466913-dc6f-46d5-8013-a55f3a7358da # Sponsors
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1b21dedc-7373-4297-abde-c7ae1478b00b
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Footer Content'
+        uid: 696b2592-c781-48b9-8e34-5f398c5df011
+        userCondition: null
+handle: footer
+name: Footer
+sortOrder: 1

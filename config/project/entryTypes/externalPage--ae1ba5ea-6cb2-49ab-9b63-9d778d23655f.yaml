@@ -1,6 +1,6 @@
 color: null
 fieldLayouts:
-  5814abf4-bd59-4f7c-bab9-9fe44aa69287:
+  0a6f96ff-f661-411f-9506-ff1f2df5e8f0:
     tabs:
       -
         elementCondition: null
@@ -10,14 +10,14 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-02-19T09:40:13+00:00'
+            dateAdded: '2025-04-03T10:13:34+00:00'
             disabled: false
             elementCondition: null
             id: null
             includeInCards: false
             inputType: null
             instructions: null
-            label: null
+            label: 'Short Title'
             max: null
             min: null
             name: null
@@ -31,43 +31,37 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: cc203093-39cb-4c07-9f5a-4fde053af5cf
+            uid: 0d06b633-f263-480c-9f72-547780195081
             userCondition: null
             warning: null
             width: 100
-        name: Content
-        uid: 7b70b50a-c718-421c-9f01-c898f00d7d4f
-        userCondition: null
-      -
-        elementCondition: null
-        elements:
           -
-            dateAdded: '2025-02-19T09:40:13+00:00'
+            dateAdded: '2025-04-03T10:15:12+00:00'
             elementCondition: null
-            fieldUid: 0d857c68-7bb1-4ce7-b61f-671446aa8bb3 # SEO
+            fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # External Link
             handle: null
             includeInCards: false
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ce454fad-b946-4695-bb64-ef63434e1938
+            uid: a0e27dfa-a3bb-48a1-8e4d-5238e6cabec1
             userCondition: null
             warning: null
             width: 100
-        name: SEO
-        uid: 68e1e41a-cdb5-4605-8c4d-9213f222c621
+        name: Content
+        uid: 147003c3-525a-420c-9ae7-b84343bed30a
         userCondition: null
-handle: homepage
+handle: externalPage
 hasTitleField: true
 icon: null
-name: Homepage
+name: 'External Page'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: '{section.name|raw}'
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

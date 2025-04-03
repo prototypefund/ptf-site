@@ -1,31 +1,39 @@
 @font-face {
-  font-family: "Inter";
-  src: url("/static/fonts/Inter-Regular.woff2") format("woff2");
+  font-family: "Inclusive Sans";
+  src: url("/static/fonts/InclusiveSans-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("/static/fonts/Inter-Italic.woff2") format("woff2");
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Inter";
-  src: url("/static/fonts/Inter-Bold.woff2") format("woff2");
+  font-family: "Inclusive Sans";
+  src: url("/static/fonts/InclusiveSans-SemiBold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Inter";
-  src: url("/static/fonts/Inter-BoldItalic.woff2") format("woff2");
+  font-family: "Inclusive Sans";
+  src: url("/static/fonts/InclusiveSans-SemiBoldItalic.woff2") format("woff2");
   font-weight: 700;
   font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Surt";
+  src: url("/static/fonts/Surt-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Surt";
+  src: url("/static/fonts/Surt-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
   font-display: swap;
 }

@@ -22,18 +22,20 @@
 
 
 {% block content %}
-  <article>
-    {% include "_rich-text/standard" with { text: "<h1>#{ headline }</h1>" } only %}
-    <p class="mt-2 mb-4">Written by {{authorName}} on {{ postDate }}</p>
+  <div class="max-w-4xl mx-auto px-2 md:px-4 lg:px-6 pb-2 md:pb-4 lg:pb-6">
+    <article>
+      {% include "_rich-text/standard" with { text: "<h1>#{ headline }</h1>" } only %}
+      <p class="mt-2 mb-4">Written by {{authorName}} on {{ postDate }}</p>
 
-    {% if hasImage %}
-      <div class="my-4">
-        {% include "_modules/figure" with { figure: figure, size: "textCol" } only %}
-      </div>
-    {% endif %}
+      {% if hasImage %}
+        <div class="my-4">
+          {% include "_modules/figure" with { figure: figure, size: "textCol" } only %}
+        </div>
+      {% endif %}
 
-    {% include "_rich-text/standard" with { text: text } only %}
-  </article>
+      {% include "_rich-text/standard" with { text: text } only %}
+    </article>
 
-  {% include "blog/_modules/next-reads" with { nextReads: nextReads } %}
+    {% include "blog/_modules/next-reads" with { nextReads: nextReads } %}
+  </div>
 {% endblock %}

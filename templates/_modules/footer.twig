@@ -1,0 +1,120 @@
+{% set footerDescription = footer.footerDescription %}
+{% set mainFooterLinks = footer.mainFooterLinks.all() %}
+{% set secondaryFooterLinks = footer.secondaryFooterLinks.all() %}
+{% set newsletterHeadline = footer.newsletterHeadline %}
+{% set newsletterText = footer.newsletterText %}
+{% set sponsorsHeadline = footer.sponsorsHeadline %}
+{% set sponsors = footer.sponsors.all() %}
+
+<footer class="bg-gray-100">
+  <div class="md:grid md:grid-cols-3 border-gray-400 border-t border-b">
+    <div class="pt-5 px-2 md:px-3 pb-2.5 md:pb-3 border-gray-400 md:border-r last:md:border-r-0">
+      <svg class="mb-3 last:mb-0" xmlns="http://www.w3.org/2000/svg" width="56" height="70" viewBox="0 0 56 70" fill="none">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M6.32489 0H45.7891L56 19.0701L47.4799 34.0591L41.3872 38.7634L25.1868 42.3165H24.1189L24.1189 57.7956L29.9395 60.2196V64.6585L23.6146 69.1765H0V64.5123L5.86531 60.3227V11.573L0 9.14899V4.51794L6.32489 0ZM28.5892 63.6304H7.21563V61.1256L13.0363 58.7016V6.47602L7.21563 4.052V1.3564H44.9821L54.4562 19.0505L46.5234 33.0062L30.9064 36.4313H22.7686L22.7686 58.7016L28.5892 61.1256V63.6304ZM31.0615 4.48049L42.4084 10.0604L46.5301 19.0836L42.395 26.8389L31.0787 33.0146L22.7686 31.1396V6.3886L31.0615 4.48049ZM36.2737 28.6359L39.1578 23.2267L35.5167 15.2556L25.0317 10.0995L24.1189 10.3095V30.0541L30.8798 31.5795L36.2737 28.6359Z" fill="#141414"/>
+      </svg>
+
+      {{ footerDescription|retcon([
+        ['removeEmpty', 'p'],
+        ['attr', 'a', { class: 'border-gray-400 border-sky-blue border-b'}, false],
+      ])|raw }}
+    </div>
+
+    <div class="pt-2.5 md:pt-5 pb-2.5 md:pb-3 border-gray-400 border-t md:border-t-0 md:border-r last:md:border-r-0">
+      <h4 class="px-2 md:px-3 pb-2 md:pb-3 uppercase font-bold text-body-16">{{ newsletterHeadline }}</h4>
+
+      <form class="relative mb-2.5">
+        <input class="px-2 md:px-3 border-gray-400 border-t border-b py-[1.125rem] pr-[9.6rem] text-body-18 bg-white w-full placeholder:text-black" type="email" placeholder="{{ "Email address"|t }}" required />
+        <input class="uppercase font-bold cursor-pointer absolute right-2 md:right-3 top-[50%] translate-y-[-50%] border-gray-400 border-l border-r px-[0.63rem] py-[0.3rem] bg-white hover:bg-black hover:text-white" type="submit" value="{{ "Register"|t }}" />
+      </form>
+
+      <div class="px-2 md:px-3 text-body-14">
+        {{ newsletterText|retcon([
+          ['removeEmpty', 'p'],
+          ['attr', 'a', { class: 'border-gray-400 border-sky-blue border-b'}, false],
+        ])|raw }}
+      </div>
+    </div>
+
+    {% if sponsorsHeadline|length or sponsors|length %}
+      <div class="flex p-2 md:p-3 border-gray-400 border-t md:border-t-0 md:border-r last:md:border-r-0">
+        <div class="mt-auto">
+          {% if sponsorsHeadline|length %}
+            <h4 class="mb-3 last:mb-0 text-body-14">{{ sponsorsHeadline }}</h4>
+          {% endif %}
+
+          {% if sponsors|length %}
+            <div class="flex flex-wrap gap-x-[2.8rem] gap-y-1.5">
+              {% for sponsor in sponsors %}
+                <img src="{{ sponsor.url }}" alt="{{ sponsor.alt }}" />
+              {% endfor %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+  </div>
+
+  {% if mainFooterLinks|length %}
+    <div class="md:grid md:grid-cols-3 text-body-16 md:text-body-18 border-b border-gray-400">
+      {% for linkGroup in mainFooterLinks %}
+        {% set links = linkGroup.links %}
+
+        {% if links|length %}
+          <ul class="p-2 md:p-3 border-gray-400 border-t first:border-t-0 md:border-t-0 md:border-r last:md:border-r-0">
+            {% for link in links %}
+              {% switch link.type %}
+                {% case "internalPage" %}
+                  {% set page = link.page.one() %}
+
+                  {% if page %}
+                    <li class="py-[0.25rem] mb-[0.38rem] md:py-0 md:mb-1 last:mb-0">
+                      <a href="{{ page.url }}">
+                        {{ link.title }}
+                      </a>
+                    </li>
+                  {% endif %}
+                {% case "externalPage" %}
+                  <li class="py-[0.25rem] mb-[0.38rem] md:py-0 md:mb-1 last:mb-0">
+                    <a class="flex after:ml-auto after:bg-link-arrow after:bg-no-repeat after:bg-cover after:content-[''] after:block after:h-2.5 after:w-2.5" href="{{ link.externalLink.url }}" target="{{ link.externalLink.target|default("_self") }}">
+                      {{ link.title }}
+                    </a>
+                  </li>
+              {% endswitch %}
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  {% if secondaryFooterLinks|length %}
+    <div class="flex flex-wrap gap-y-1.5 gap-x-3 md:gap-x-6 p-2 md:p-3 text-body-14 border-b border-gray-400">
+      {% for linkGroup in secondaryFooterLinks %}
+        {% set links = linkGroup.links %}
+
+        {% if links|length %}
+          <ul>
+            {% for link in links %}
+              {% switch link.type %}
+                {% case "internalPage" %}
+                  {% set page = link.page.one() %}
+
+                  {% if page %}
+                    <li>
+                      <a href="{{ page.url }}">
+                        {{ link.title }}
+                      </a>
+                    </li>
+                  {% endif %}
+                {% case "externalPage" %}
+                  <li>
+                    <a href="{{ link.externalLink.url }}" target="{{ link.externalLink.target|default("_self") }}">{{ link.title }}</a>
+                  </li>
+              {% endswitch %}
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</footer>
