@@ -1,0 +1,92 @@
+fieldLayouts:
+  ea8c5a6a-a0de-45a0-8eda-f578bf8c0e93:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-03T13:25:07+00:00'
+            elementCondition: null
+            fieldUid: 58b0cfc4-a7f2-491d-a49a-a29faaacedf3 # Inclusive Sans – Regular
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7a2f03f5-aa66-4aba-9913-78cb71658e6f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-03T13:25:07+00:00'
+            elementCondition: null
+            fieldUid: 8a18f61b-a93c-4302-8bde-b8f6ed6c0494 # Inclusive Sans – Semibold
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 623dab92-1035-44ea-950f-c21bd3ca9ad8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-03T13:25:07+00:00'
+            elementCondition: null
+            fieldUid: d42896d4-04a6-4211-8d97-f265c27a3be1 # Inclusive Sans – Semibold (Italic)
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cdd52df4-be5f-41ac-99db-32841a988af8
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-03T13:25:07+00:00'
+            elementCondition: null
+            fieldUid: 38533602-ed85-4c63-b7e3-819ae75ac47a # Surt – Regular
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3c79826e-8ecf-47b3-b133-524af1795635
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-03T13:25:07+00:00'
+            elementCondition: null
+            fieldUid: fe4cc5ff-86a2-4944-a119-aae5f36fa127 # Surt – Bold
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 683f1566-58fb-49a6-9203-72067a6f1bc5
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 9ff7a7eb-caa9-4dd0-9237-c58a01d17338
+        userCondition: null
+handle: fonts
+name: Fonts
+sortOrder: 2

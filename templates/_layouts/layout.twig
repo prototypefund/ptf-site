@@ -19,6 +19,8 @@
     <link rel="manifest" href="/static/images/favicons/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#28313d">
 
+    {% include "_web-fonts" only %}
+
     {% if extraHead is defined %}
       {{ extraHead }}
     {% endif %}
@@ -32,13 +34,12 @@
     {{ head() }}
   </head>
 
-  <body class="dark:antialiased font-inter bg-white text-black selection:bg-gray selection:text-white dark:bg-gray-800 dark:text-white dark:selection:text-gray dark:selection:bg-white">
-    <div class="max-w-4xl mx-auto p-2 md:p-4 lg:p-6">
-      {% include "_modules/main-nav" only %}
-      <main>
-        {% block content %}{% endblock %}
-      </main>
-    </div>
+  <body class="antialiased bg-white text-black selection:bg-[#4b5563] selection:text-white dark:bg-[#030712] dark:text-white dark:selection:text-[#4b5563] dark:selection:bg-white">
+    {% include "_modules/main-nav" only %}
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+    {% include "_modules/footer" only %}
     {{ settings.trackingBody|raw }}
     {{ endBody() }}
   </body>
