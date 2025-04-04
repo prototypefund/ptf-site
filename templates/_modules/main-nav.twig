@@ -1,7 +1,7 @@
 {% set homepage = craft.entries.section("homepage").one() %}
 {% set navLinks = navigation.navLinks.all() %}
 
-<header id="js-header">
+<header id="js-header" class="mb-4 md:mb-6 lg:mb-8">
   <nav>
     <div class="flex items-center px-3 py-[0.69rem] border-gray-400 border-b">
       <div>
@@ -12,6 +12,9 @@
 
       <aside class="ml-auto">
         {% include "_modules/lang-switch.twig" %}
+        {# <display-toggle class="hidden" data-light-mode-label="{{ "Switch to light mode"|t }}" data-dark-mode-label="{{ "Switch to dark mode"|t }}">
+          <button class="inline-block text-link cursor-pointer"></button>
+        </display-toggle> #}
       </aside>
     </div>
 
@@ -25,7 +28,7 @@
           {% endfor %}
         </ul>
 
-        <ul class="opacity-0 -z-10 group-focus:opacity-100 group-hover:opacity-100 group-focus:z-0 group-hover:z-0 flex absolute transition-opacity border-gray-400 border-b w-full text-body-16">
+        <ul class="opacity-0 -z-10 bg-white group-focus:opacity-100 group-hover:opacity-100 group-focus:z-0 group-hover:z-0 flex absolute transition-opacity border-gray-400 border-b w-full text-body-16">
           {% for linkGroup in navLinks %}
             {% set links = linkGroup.links %}
 
@@ -55,7 +58,3 @@
     {% endif %}
   </nav>
 </header>
-
-{# <display-toggle class="hidden" data-light-mode-label="{{ "Switch to light mode"|t }}" data-dark-mode-label="{{ "Switch to dark mode"|t }}">
-  <button class="inline-block text-link cursor-pointer"></button>
-</display-toggle> #}
