@@ -11,12 +11,7 @@ settings:
       __assoc__:
         -
           - uid
-          - a378508b-129e-4afe-a326-e95e143862bb # Internal Page
-    -
-      __assoc__:
-        -
-          - uid
-          - ae1ba5ea-6cb2-49ab-9b63-9d778d23655f # External Page
+          - 65570146-7afc-432e-9890-2cb116aa66ac # Link
   includeTableView: false
   maxEntries: null
   minEntries: null

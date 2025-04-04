@@ -11,7 +11,7 @@ settings:
       __assoc__:
         -
           - uid
-          - 5bafc55c-8f31-4f9b-add0-49e9957e63a7 # Link Group
+          - 5bafc55c-8f31-4f9b-add0-49e9957e63a7 # Footer Link Group
   includeTableView: false
   maxEntries: 1
   minEntries: null

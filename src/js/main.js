@@ -1,5 +1,6 @@
 import "../css/main.css";
 import { DisplayToggle } from "./components/display-toggle";
+import initMenu from "./menu";
 
 customElements.define("display-toggle", DisplayToggle);
 
@@ -11,6 +12,8 @@ window.addEventListener("beforeprint", () => {
 window.addEventListener("afterprint", () => {
   document.documentElement.classList.remove("print");
 });
+
+initMenu();
 
 if (import.meta.hot) {
   import.meta.hot.accept();

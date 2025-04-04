@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: mainFooterLinks
+handle: navLinks
 instructions: null
-name: 'Main Footer Links'
+name: 'Nav Links'
 searchable: false
 settings:
   createButtonLabel: 'Link Group'
@@ -11,9 +11,9 @@ settings:
       __assoc__:
         -
           - uid
-          - 5bafc55c-8f31-4f9b-add0-49e9957e63a7 # Footer Link Group
+          - c86f2a45-9639-4151-93dc-21dce075b6f9 # Link Group
   includeTableView: false
-  maxEntries: 3
+  maxEntries: 5
   minEntries: null
   pageSize: null
   propagationKeyFormat: null
