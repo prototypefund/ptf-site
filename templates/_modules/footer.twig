@@ -65,24 +65,18 @@
         {% if links|length %}
           <ul class="p-2 md:p-3 border-gray-400 border-t first:border-t-0 md:border-t-0 md:border-r last:md:border-r-0">
             {% for link in links %}
-              {% switch link.type %}
-                {% case "internalPage" %}
-                  {% set page = link.page.one() %}
+              {% set navLink = link.navLink %}
+              {% set isExternal = navLink.type == "url" %}
 
-                  {% if page %}
-                    <li class="py-[0.25rem] mb-[0.38rem] md:py-0 md:mb-1 last:mb-0">
-                      <a href="{{ page.url }}">
-                        {{ link.title }}
-                      </a>
-                    </li>
-                  {% endif %}
-                {% case "externalPage" %}
-                  <li class="py-[0.25rem] mb-[0.38rem] md:py-0 md:mb-1 last:mb-0">
-                    <a class="flex after:ml-auto after:bg-link-arrow after:bg-no-repeat after:bg-cover after:content-[''] after:block after:h-2.5 after:w-2.5" href="{{ link.externalLink.url }}" target="{{ link.externalLink.target|default("_self") }}">
-                      {{ link.title }}
-                    </a>
-                  </li>
-              {% endswitch %}
+              <li class="py-[0.25rem] mb-[0.38rem] md:py-0 md:mb-1 last:mb-0">
+                {{ tag('a', {
+                  class: "flex after:ml-auto #{isExternal ? 'after:bg-link-arrow after:bg-no-repeat after:bg-cover after:content-[\'\'] after:block after:h-2.5 after:w-2.5'}",
+                  href: navLink.value,
+                  target: navLink.target,
+                  rel: navLink.target == '_blank' ? 'noopener noreferrer' : null,
+                  text: navLink.label,
+                }) }}
+              </li>
             {% endfor %}
           </ul>
         {% endif %}
@@ -98,22 +92,16 @@
         {% if links|length %}
           <ul class="flex flex-wrap gap-y-1.5 gap-x-3 md:gap-x-6">
             {% for link in links %}
-              {% switch link.type %}
-                {% case "internalPage" %}
-                  {% set page = link.page.one() %}
+              {% set navLink = link.navLink %}
 
-                  {% if page %}
-                    <li>
-                      <a href="{{ page.url }}">
-                        {{ link.title }}
-                      </a>
-                    </li>
-                  {% endif %}
-                {% case "externalPage" %}
-                  <li>
-                    <a href="{{ link.externalLink.url }}" target="{{ link.externalLink.target|default("_self") }}">{{ link.title }}</a>
-                  </li>
-              {% endswitch %}
+              <li>
+                {{ tag('a', {
+                  href: navLink.value,
+                  target: navLink.target,
+                  rel: navLink.target == '_blank' ? 'noopener noreferrer' : null,
+                  text: navLink.label,
+                }) }}
+              </li>
             {% endfor %}
           </ul>
         {% endif %}

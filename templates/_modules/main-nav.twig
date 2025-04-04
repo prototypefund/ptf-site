@@ -1,27 +1,61 @@
 {% set homepage = craft.entries.section("homepage").one() %}
-{% set blogIndex = craft.entries.section("blogIndex").one() %}
-{% set projectsIndex = craft.entries.section("projectsIndex").one() %}
+{% set navLinks = navigation.navLinks.all() %}
 
-<div class="max-w-4xl mx-auto pt-2 md:pt-4 lg:pt-6 px-2 md:px-4 lg:px-6">
-  <header class="mb-4 md:mb-6 lg:mb-8">
-    <nav class="flex flex-col gap-1 lg:flex-row lg:justify-between">
-      <ul class="flex flex-row gap-2">
-        <li>
-          <a class="text-link" href="{{ homepage.getUrl() }}">{{ "Home"|t }}</a>
-        </li>
-        <li>
-          <a class="text-link" href="{{ blogIndex.getUrl() }}">{{ "Blog"|t }}</a>
-        </li>
-        <li>
-          <a class="text-link" href="{{ projectsIndex.getUrl() }}">{{ "Projects"|t }}</a>
-        </li>
-      </ul>
+<header id="js-header">
+  <nav>
+    <div class="flex items-center px-3 py-[0.69rem] border-gray-400 border-b">
       <div>
-        {% include "_modules/lang-switch.twig" %}
+        <a class="block" href="{{ homepage.url }}">
+          {% include "_modules/logo" only %}
+        </a>
       </div>
-      {# <display-toggle class="hidden" data-light-mode-label="{{ "Switch to light mode"|t }}" data-dark-mode-label="{{ "Switch to dark mode"|t }}">
-        <button class="inline-block text-link cursor-pointer"></button>
-      </display-toggle> #}
-    </nav>
-  </header>
-</div>
+
+      <aside class="ml-auto">
+        {% include "_modules/lang-switch.twig" %}
+      </aside>
+    </div>
+
+    {% if navLinks|length %}
+      <div class="group">
+        <ul class="flex uppercase font-bold border-gray-400 border-b">
+          {% for linkGroup in navLinks %}
+            <li id="title-{{ linkGroup.id }}" class="px-3 py-[0.875rem] w-1/5 cursor-pointer border-gray-400 border-r last:border-r-0 hover:bg-gray-100 [&.active]:bg-gray-100">
+              {{ linkGroup.title }}
+            </li>
+          {% endfor %}
+        </ul>
+
+        <ul class="opacity-0 -z-10 group-focus:opacity-100 group-hover:opacity-100 group-focus:z-0 group-hover:z-0 flex absolute transition-opacity border-gray-400 border-b w-full text-body-16">
+          {% for linkGroup in navLinks %}
+            {% set links = linkGroup.links %}
+
+            {% if links|length %}
+              <li id="{{ linkGroup.id }}" class="js-menu px-2 py-2 w-1/5 cursor-pointer border-gray-400 border-r last:border-r-0">
+                <ul>
+                  {% for link in links %}
+                    {% set navLink = link.navLink %}
+                    {% set isExternal = navLink.type == "url" %}
+
+                    <li class="mb-[0.38rem] last:mb-0">
+                      {{ tag('a', {
+                        class: "px-1 py-[0.13rem] flex #{isExternal ? 'after:ml-auto  after:bg-link-arrow after:bg-no-repeat after:bg-cover after:content-[\'\'] after:block after:h-2.5 after:w-2.5'}",
+                        href: navLink.value,
+                        target: navLink.target,
+                        rel: navLink.target == '_blank' ? 'noopener noreferrer' : null,
+                        text: navLink.label,
+                      }) }}
+                    </li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </nav>
+</header>
+
+{# <display-toggle class="hidden" data-light-mode-label="{{ "Switch to light mode"|t }}" data-dark-mode-label="{{ "Switch to dark mode"|t }}">
+  <button class="inline-block text-link cursor-pointer"></button>
+</display-toggle> #}

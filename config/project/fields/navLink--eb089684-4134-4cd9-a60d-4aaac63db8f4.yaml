@@ -1,0 +1,66 @@
+columnSuffix: null
+handle: navLink
+instructions: null
+name: Link
+searchable: false
+settings:
+  advancedFields:
+    - target
+  fullGraphqlData: true
+  maxLength: 255
+  showLabelField: true
+  typeSettings:
+    __assoc__:
+      -
+        - asset
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+            -
+              - allowedKinds
+              - '*'
+            -
+              - showUnpermittedVolumes
+              - ''
+            -
+              - showUnpermittedFiles
+              - ''
+      -
+        - category
+        -
+          __assoc__:
+            -
+              - sources
+              - '*'
+      -
+        - entry
+        -
+          __assoc__:
+            -
+              - sources
+              -
+                - singles
+                - 'section:375cd22a-99b6-4667-8ca6-caf2572459ed' # Blog
+                - 'section:de820dbc-bd7e-4a0f-9554-3d750480d2a4' # Projects
+      -
+        - url
+        -
+          __assoc__:
+            -
+              - allowRootRelativeUrls
+              - ''
+            -
+              - allowAnchors
+              - ''
+  types:
+    - entry
+    - url
+    - category
+    - email
+    - tel
+    - asset
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Link
