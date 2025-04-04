@@ -24,7 +24,7 @@
 
 <div class="inline-flex gap-[2px] uppercase text-body-14 border-gray-400 border rounded-sm p-[3px]">
   {% for link in languageLinks %}
-    <a class="{{ link.current ? "bg-black text-white" : "text-gray-200" }} rounded-[2px] px-[7px]" href="{{ link.url }}" tabindex="0">
+    <a class="rounded-[2px] px-1 py-[0.19rem] md:px-[7px] {{ link.current ? "bg-black text-white" : "text-gray-200" }}" href="{{ link.url }}" tabindex="0">
       {{ link.countryCode }}
     </a>
   {% endfor %}
