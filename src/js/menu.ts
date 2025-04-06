@@ -27,9 +27,7 @@ export default function initMenu() {
     document.documentElement.classList.remove("overflow-hidden");
   };
 
-  const menus = header.querySelectorAll(".js-menu");
-
-  menus.forEach((menu) => {
+  header.querySelectorAll(".js-menu").forEach((menu) => {
     const title = document.getElementById(`title-${menu.id}`);
 
     menu.addEventListener("mouseenter", () => {
