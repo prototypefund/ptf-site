@@ -41,7 +41,7 @@
           'md:h-auto',
           'md:py-[0.69rem]',
           'lg:px-3'
-        ] | join(' ') }}">
+        ]|join(' ') }}">
         <a class="block" href="{{ homepage.url }}">
           {% include "_modules/logo" only %}
         </a>
@@ -127,7 +127,7 @@
                     'lg:px-3',
                     'lg:py-[0.875rem]',
                     'lg:text-body-16',
-                  ] | join(' ') }}">
+                  ]|join(' ') }}">
                   {{ linkGroup.title }}
                 </span>
 
@@ -185,7 +185,7 @@
               'group-hover:opacity-100',
               'group-hover:z-0',
               'md:flex'
-            ] | join(' ') }}">
+            ]|join(' ') }}">
             {% for linkGroup in navLinks %}
               {% set links = linkGroup.links %}
 
@@ -201,7 +201,7 @@
                     'border-r',
                     'border-gray-400',
                     'last:border-r-0'
-                  ] | join(' ') }}">
+                  ]|join(' ') }}">
                   <ul>
                     {% for link in links %}
                       {% set navLink = link.navLink %}
@@ -224,7 +224,7 @@
                             'after:bg-no-repeat',
                             "after:content-['']"
                           ] : [])
-                          | join(' '),
+                         |join(' '),
                           href: navLink.value,
                           target: navLink.target,
                           rel: navLink.target == '_blank' ? 'noopener noreferrer' : null,
@@ -251,7 +251,7 @@
           'md:hidden',
           '[.menu-open_&]:flex',
           '[.menu-open_&]:md:hidden',
-        ] | join(' ') }}">
+        ]|join(' ') }}">
         {% include "_modules/lang-switch.twig" %}
       </aside>
     </nav>
