@@ -1,6 +1,6 @@
 {% extends "_layouts/layout.twig" %}
 
-{% set projectsQuery = craft.entries.section("projects").with(["mainImage.image:image"]).limit(20) %}
+{% set projectsQuery = craft.entries.section("projects").limit(20) %}
 {% paginate projectsQuery as pagination, projects %}
 
 {% block content %}

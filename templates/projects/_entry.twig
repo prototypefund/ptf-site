@@ -1,22 +1,13 @@
 {% extends "_layouts/layout.twig" %}
 
 {% set headline = entry.title %}
+{% set mainImage = entry.mainImage.eagerly().one() %}
 {% set claim = entry.claim %}
 {% set text = entry.text %}
-
-{% set mainImage = entry.mainImage.with(["image:image"]).all() %}
-{% set hasImage = false %}
-{% if mainImage|length %}
-  {% set figure = {
-    image: mainImage[0].image[0],
-    caption: mainImage[0].caption
-  } %}
-  {% set hasImage = true %}
-{% endif %}
 {% set rounds = entry.projectRounds.all() %}
 {% set teamMembers = entry.projectTeamMembers %}
-{% set topics = entry.projectTopics.all() %}
-{% set technologies = entry.projectTechnologies.all() %}
+{% set topics = entry.projectTopics.eagerly().all() %}
+{% set technologies = entry.projectTechnologies.eagerly().all() %}
 {% set links = entry.projectLinks %}
 {% set status = entry.projectStatus[0].label %}
 
@@ -56,9 +47,9 @@
       </p>
     {% endif %}
 
-    {% if hasImage %}
+    {% if mainImage %}
       <div class="my-4">
-        {% include "_modules/figure" with { figure: figure, size: "textCol" } only %}
+        {% include "_modules/figure" with { image: mainImage, size: "textCol" } only %}
       </div>
     {% endif %}
 
