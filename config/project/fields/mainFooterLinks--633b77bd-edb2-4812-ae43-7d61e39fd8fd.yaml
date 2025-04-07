@@ -17,7 +17,7 @@ settings:
   minEntries: null
   pageSize: null
   propagationKeyFormat: null
-  propagationMethod: all
+  propagationMethod: none
   showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null

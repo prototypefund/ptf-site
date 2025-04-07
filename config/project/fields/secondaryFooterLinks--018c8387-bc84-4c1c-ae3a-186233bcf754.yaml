@@ -4,20 +4,20 @@ instructions: null
 name: 'Secondary Footer Links'
 searchable: false
 settings:
-  createButtonLabel: 'Link Group'
+  createButtonLabel: Link
   defaultIndexViewMode: cards
   entryTypes:
     -
       __assoc__:
         -
           - uid
-          - 5bafc55c-8f31-4f9b-add0-49e9957e63a7 # Footer Link Group
+          - 65570146-7afc-432e-9890-2cb116aa66ac # Link
   includeTableView: false
-  maxEntries: 1
+  maxEntries: null
   minEntries: null
   pageSize: null
   propagationKeyFormat: null
-  propagationMethod: all
+  propagationMethod: none
   showCardsInGrid: false
   viewMode: blocks
 translationKeyFormat: null

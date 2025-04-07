@@ -86,26 +86,20 @@
 
   {% if secondaryFooterLinks|length %}
     <div class="p-2 md:p-3 text-body-14 border-b border-gray-400">
-      {% for linkGroup in secondaryFooterLinks %}
-        {% set links = linkGroup.links %}
+      <ul class="flex flex-wrap gap-y-1.5 gap-x-3 md:gap-x-6">
+        {% for link in secondaryFooterLinks %}
+          {% set navLink = link.navLink %}
 
-        {% if links|length %}
-          <ul class="flex flex-wrap gap-y-1.5 gap-x-3 md:gap-x-6">
-            {% for link in links %}
-              {% set navLink = link.navLink %}
-
-              <li>
-                {{ tag('a', {
-                  href: navLink.value,
-                  target: navLink.target,
-                  rel: navLink.target == '_blank' ? 'noopener noreferrer' : null,
-                  text: navLink.label,
-                }) }}
-              </li>
-            {% endfor %}
-          </ul>
-        {% endif %}
-      {% endfor %}
+          <li>
+            {{ tag('a', {
+              href: navLink.value,
+              target: navLink.target,
+              rel: navLink.target == '_blank' ? 'noopener noreferrer' : null,
+              text: navLink.label,
+            }) }}
+          </li>
+        {% endfor %}
+      </ul>
     </div>
   {% endif %}
 </footer>

@@ -1,10 +1,15 @@
+<<<<<<< HEAD
 dateModified: 1744014045
+=======
+dateModified: 1743954319
+>>>>>>> 364541f (Add generic pages)
 elementSources:
   craft\elements\Entry:
     -
       defaultSort:
         - postDate
         - desc
+      defaultViewMode: ''
       disabled: false
       key: '*'
       tableAttributes:
@@ -45,8 +50,8 @@ elementSources:
         - link
       type: native
     -
-      heading: ''
-      type: heading
+      key: 'section:6e040108-27cc-4a4a-bca9-c5e3ab1bdc04' # Generic Pages
+      type: native
 email:
   fromEmail: $EMAIL_SYSTEM_ADDRESS
   fromName: $EMAIL_SENDER_NAME
@@ -71,12 +76,14 @@ meta:
   __names__:
     0d857c68-7bb1-4ce7-b61f-671446aa8bb3: SEO # SEO
     0f8a3079-62db-4270-ac53-6903c9b28557: 'Main Image' # Main Image
+    1a0ed17a-7208-4b7e-894f-64506d5432d6: 'Events Index' # Events Index
     2b86894c-5b98-44d4-8ed6-88b2c8b5e601: 'Blog Index' # Blog Index
     5bafc55c-8f31-4f9b-add0-49e9957e63a7: 'Link Group' # Link Group
     4e97404d-0992-4280-b87e-903b4fc471c5: Navigation # Navigation
     5a2c3e10-bf78-4986-aecd-f75829889851: 'Project Topics' # Project Topics
     5bafc55c-8f31-4f9b-add0-49e9957e63a7: 'Footer Link Group' # Footer Link Group
     6ca70ace-9ae7-4dfa-a915-d1a24572619d: 'Footer Description' # Footer Description
+    6e040108-27cc-4a4a-bca9-c5e3ab1bdc04: 'Generic Pages' # Generic Pages
     6fa1e10a-d063-4c10-a955-f1b3eda7e7ef: Standard # Standard
     7eb26dd5-1c10-45d1-a16b-85a148e4bf8a: 'Projects Index' # Projects Index
     8a18f61b-a93c-4302-8bde-b8f6ed6c0494: 'Inclusive Sans – Semibold' # Inclusive Sans – Semibold
@@ -85,6 +92,7 @@ meta:
     13a0aaca-3bd8-4653-b163-69738ce277c3: Text # Text
     018c8387-bc84-4c1c-ae3a-186233bcf754: 'Secondary Footer Links' # Secondary Footer Links
     28f95d3d-986f-41ed-b23b-c2f3b747c2eb: Homepage # Homepage
+    29d80674-cc17-4976-ad67-b3f611a07dc2: 'Events Index' # Events Index
     34dc108f-02bd-42cb-9481-0693c7bc32b4: 'Tracking Head' # Tracking Head
     58b0cfc4-a7f2-491d-a49a-a29faaacedf3: 'Inclusive Sans – Regular' # Inclusive Sans – Regular
     91a7ad8a-d35b-4738-b71b-a18f899afc5d: 'Resize: width 2000px' # Resize: width 2000px
@@ -126,6 +134,7 @@ meta:
     de820dbc-bd7e-4a0f-9554-3d750480d2a4: Projects # Projects
     eb089684-4134-4cd9-a60d-4aaac63db8f4: Link # Link
     ed187804-9da6-4b7d-b983-1c751ac7a3ab: 'Tracking Body' # Tracking Body
+    eec7038e-53af-4299-bf11-db14e0fbd073: 'Generic Page' # Generic Page
     f4a87b3f-ed6d-49ce-8753-05dda85942a6: 'Project Status' # Project Status
     f81cb75d-92f5-44c4-89bd-673d8c8ee15c: 'Sponsors Headline' # Sponsors Headline
     f81e8821-286e-4e07-86f6-54880a45eafe: 'Project Team Members' # Project Team Members
