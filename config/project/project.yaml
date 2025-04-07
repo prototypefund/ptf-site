@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 dateModified: 1744014045
-=======
-dateModified: 1743954319
->>>>>>> 364541f (Add generic pages)
 elementSources:
   craft\elements\Entry:
     -
