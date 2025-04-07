@@ -6,12 +6,9 @@
     data-header
     class="{{ [
       'bg-white',
-      'mb-4',
-      'z-1',
+      'z-2',
       'relative',
       'md:z-auto',
-      'md:mb-6',
-      'lg:mb-8',
       '[&.menu-open]:fixed',
       '[&.menu-open]:h-[100dvh]',
       '[&.menu-open]:w-full',
@@ -135,7 +132,7 @@
                   {% if links|length %}
                     <ul class="md:hidden p-1">
                       {% for link in links %}
-                        {% set navLink = link.navLink %}
+                        {% set navLink = link.genericLink %}
                         {% set isExternal = navLink.type == "url" %}
 
                         <li>
@@ -184,7 +181,7 @@
                 'transition-opacity',
                 'group-focus-within:opacity-100',
                 'group-hover:opacity-100',
-                'group-hover:z-0',
+                'group-hover:z-2',
                 'md:flex'
               ]|join(' ') }}">
               {% for linkGroup in navLinks %}
@@ -204,7 +201,7 @@
                     ]|join(' ') }}">
                     <ul>
                       {% for link in links %}
-                        {% set navLink = link.navLink %}
+                        {% set navLink = link.genericLink %}
                         {% set isExternal = navLink.type == "url" %}
 
                         <li class="mb-[0.38rem] last:mb-0">

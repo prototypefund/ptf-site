@@ -1,4 +1,4 @@
-dateModified: 1744014045
+dateModified: 1744044755
 elementSources:
   craft\elements\Entry:
     -
@@ -90,6 +90,7 @@ meta:
     29d80674-cc17-4976-ad67-b3f611a07dc2: 'Events Index' # Events Index
     34dc108f-02bd-42cb-9481-0693c7bc32b4: 'Tracking Head' # Tracking Head
     58b0cfc4-a7f2-491d-a49a-a29faaacedf3: 'Inclusive Sans – Regular' # Inclusive Sans – Regular
+    62e3c2ea-24fd-42e2-a9ba-3602f1d6e2e8: 'Header Background' # Header Background
     91a7ad8a-d35b-4738-b71b-a18f899afc5d: 'Resize: width 2000px' # Resize: width 2000px
     137c86ac-e143-4792-b936-38c41302eccd: Fonts # Fonts
     183a1c32-7844-45ce-93f1-a991260eeadc: Caption # Caption
@@ -108,6 +109,7 @@ meta:
     67373325-a234-485a-a635-26dee1e7f325: 'Project Links' # Project Links
     80466913-dc6f-46d5-8013-a55f3a7358da: Sponsors # Sponsors
     a06eff6a-35ff-45b1-9c02-c6ef2f3f948c: 'Project Rounds' # Project Rounds
+    ad1324f8-1337-475f-8516-ab1e13543027: Intro # Intro
     ad6378ef-e24f-4541-9819-1a644a3dd8c4: 'Nav Links' # Nav Links
     af0bbe1c-3613-4775-8a01-965b68d4e56e: English # English
     af427185-4826-4e80-bd57-096797b92f4b: Project # Project
@@ -125,6 +127,7 @@ meta:
     cff97bfa-6eb7-473b-97c0-cc3af58c0f64: 'Article ID' # Article ID
     d5397ea9-1d37-4f12-bf41-46082d130bd8: Image # Image
     d42896d4-04a6-4211-8d97-f265c27a3be1: 'Inclusive Sans – Semibold (Italic)' # Inclusive Sans – Semibold (Italic)
+    d99528c4-136b-413c-9799-56fd20edd2c6: Headline # Headline
     ddc3aedf-983b-4fa7-81eb-69fd761d71af: German # German
     de820dbc-bd7e-4a0f-9554-3d750480d2a4: Projects # Projects
     eb089684-4134-4cd9-a60d-4aaac63db8f4: Link # Link

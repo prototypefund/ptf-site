@@ -23,8 +23,8 @@
 
   --text-head-88: calc(88 / 16 * 1rem);
   --text-head-88--line-height: 1.2;
-  --text-head-64: calc(64 / 16 * 1rem);
-  --text-head-64--line-height: 1.2;
+  --text-head-62: calc(62 / 16 * 1rem);
+  --text-head-62--line-height: 1.2;
   --text-head-56: calc(56 / 16 * 1rem);
   --text-head-56--line-height: 1.2;
   --text-head-48: calc(48 / 16 * 1rem);
@@ -57,10 +57,13 @@
   --text-ui-14--line-height: 1;
 
   --font-sans: "Inclusive Sans", Helvetica, Arial, sans-serif;
-  --font-sert: "Surt", Helvetica, Arial, sans-serif;
+  --font-surt: "Surt", Helvetica, Arial, sans-serif;
   --spacing: 8px;
 
   --background-image-link-arrow: url("/static/images/icons/link-arrow.svg");
+  --background-image-pattern-r-blue: url("/static/images/patterns/bg-pattern-r-blue.svg");
+  --background-image-pattern-r-dark-pink: url("/static/images/patterns/bg-pattern-r-dark-pink.svg");
+  --background-image-pattern-r-light-pink: url("/static/images/patterns/bg-pattern-r-light-pink.svg");
 }
 
 @layer base {

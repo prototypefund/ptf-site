@@ -27,7 +27,7 @@
 
       <form class="relative mb-2.5" method="post" action="https://te917244a.emailsys1a.net/172/4365/50b2a37e1e/subscribe/form.html">
         <input class="px-2 md:px-3 border-gray-400 border-t border-b py-[1.125rem] pr-[9.6rem] text-body-18 bg-white w-full placeholder:text-black" type="email" name="email" placeholder="{{ "Email address"|t }}" required />
-        <input class="uppercase font-bold cursor-pointer absolute right-2 md:right-3 top-[50%] translate-y-[-50%] border-gray-400 border-l border-r px-[0.63rem] py-[0.3rem] bg-white hover:bg-black hover:text-white" type="submit" value="{{ "Register"|t }}" />
+        <input class="uppercase font-bold text-ui-16 cursor-pointer absolute right-2 md:right-3 top-[50%] translate-y-[-50%] border-gray-400 border-l border-r px-[0.63rem] py-[0.3rem] bg-white hover:bg-black hover:text-white" type="submit" value="{{ "Register"|t }}" />
       </form>
 
       <div class="px-2 md:px-3 text-body-14">
@@ -65,7 +65,7 @@
         {% if links|length %}
           <ul class="p-2 md:p-3 border-gray-400 border-t first:border-t-0 md:border-t-0 md:border-r last:md:border-r-0">
             {% for link in links %}
-              {% set navLink = link.navLink %}
+              {% set navLink = link.genericLink %}
               {% set isExternal = navLink.type == "url" %}
 
               <li class="py-[0.25rem] mb-[0.38rem] md:py-0 md:mb-1 last:mb-0">
@@ -88,7 +88,7 @@
     <div class="p-2 md:p-3 text-body-14 border-b border-gray-400">
       <ul class="flex flex-wrap gap-y-1.5 gap-x-3 md:gap-x-6">
         {% for link in secondaryFooterLinks %}
-          {% set navLink = link.navLink %}
+          {% set navLink = link.genericLink %}
 
           <li>
             {{ tag('a', {
