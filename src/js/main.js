@@ -1,9 +1,10 @@
 import "../css/main.css";
 import { DisplayToggle } from "./components/display-toggle";
-import initMenu from "./menu";
+import { MainNav } from "./components/main-nav";
 
-if (!customElements.get("display-toggle")) {
+if (!customElements.get("display-toggle") || customElements.get("main-nav")) {
   customElements.define("display-toggle", DisplayToggle);
+  customElements.define("main-nav", MainNav);
 }
 
 window.addEventListener("beforeprint", () => {
@@ -14,8 +15,6 @@ window.addEventListener("beforeprint", () => {
 window.addEventListener("afterprint", () => {
   document.documentElement.classList.remove("print");
 });
-
-initMenu();
 
 if (import.meta.hot) {
   import.meta.hot.accept();

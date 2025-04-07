@@ -1,259 +1,260 @@
 {% set homepage = craft.entries.section("homepage").one() %}
 {% set navLinks = navigation.navLinks.all() %}
 
-<header
-  id="js-header"
-  class="{{ [
-    'bg-white',
-    'mb-4',
-    'z-1',
-    'relative',
-    'md:z-auto',
-    'md:mb-6',
-    'lg:mb-8',
-    '[&.menu-open]:fixed',
-    '[&.menu-open]:h-[100dvh]',
-    '[&.menu-open]:w-full',
-    '[&.menu-open]:lg:static',
-    '[&.menu-open]:lg:h-auto',
-    '[&.menu-open]:lg:bg-transparent',
-  ]|join(' ') }}">
-  <div class="{{ [
-    'overflow-visible',
-    '[.menu-open_&]:h-full',
-    '[.menu-open_&]:max-h-full',
-    '[.menu-open_&]:lg:h-auto',
-  ]|join(' ') }}">
-    <nav class="{{ [
-      'flex',
-      'flex-col',
-      'h-full',
-      'overflow-visible',
+<main-nav>
+  <header
+    data-header
+    class="{{ [
+      'bg-white',
+      'mb-4',
+      'z-1',
+      'relative',
+      'md:z-auto',
+      'md:mb-6',
+      'lg:mb-8',
+      '[&.menu-open]:fixed',
+      '[&.menu-open]:h-[100dvh]',
+      '[&.menu-open]:w-full',
+      '[&.menu-open]:lg:static',
+      '[&.menu-open]:lg:h-auto',
+      '[&.menu-open]:lg:bg-transparent',
     ]|join(' ') }}">
-      <div
-        class="{{ [
-          'flex',
-          'items-center',
-          'p-2',
-          'h-[3.75rem]',
-          'border-b',
-          'border-gray-400',
-          'md:h-auto',
-          'md:py-[0.69rem]',
-          'lg:px-3'
-        ]|join(' ') }}">
-        <a class="block" href="{{ homepage.url }}">
-          {% include "_modules/logo" only %}
-        </a>
-
-        <button
-          id="js-menu-sandwich"
+    <div class="{{ [
+      'overflow-visible',
+      '[.menu-open_&]:h-full',
+      '[.menu-open_&]:max-h-full',
+      '[.menu-open_&]:lg:h-auto',
+    ]|join(' ') }}">
+      <nav class="{{ [
+        'flex',
+        'flex-col',
+        'h-full',
+        'overflow-visible',
+      ]|join(' ') }}">
+        <div
           class="{{ [
             'flex',
             'items-center',
-            'cursor-pointer',
-            'ml-auto',
-            'md:hidden'
+            'p-2',
+            'h-[3.75rem]',
+            'border-b',
+            'border-gray-400',
+            'md:h-auto',
+            'md:py-[0.69rem]',
+            'lg:px-3'
           ]|join(' ') }}">
-          <span class="sr-only">Toggle menu</span>
+          <a class="block" href="{{ homepage.url }}">
+            {% include "_modules/logo" only %}
+          </a>
 
-          <svg
-            class="[.menu-open_&]:hidden"
-            width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M8 11H24" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M8 16H24" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-            <path d="M8 21H24" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
+          <button
+            data-sandwich
+            class="{{ [
+              'flex',
+              'items-center',
+              'cursor-pointer',
+              'ml-auto',
+              'md:hidden'
+            ]|join(' ') }}">
+            <span class="sr-only">Toggle menu</span>
 
-          <svg
-            class="hidden [.menu-open_&]:block"
-            width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M10.1616 21.6762L21.8378 10M10.1617 10.3238L21.838 22" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-        </button>
+            <svg
+              class="[.menu-open_&]:hidden"
+              width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 11H24" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M8 16H24" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M8 21H24" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
 
-        <aside class="hidden md:block ml-auto">
-          {% include "_modules/lang-switch.twig" %}
+            <svg
+              class="hidden [.menu-open_&]:block"
+              width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.1616 21.6762L21.8378 10M10.1617 10.3238L21.838 22" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
 
-          {# <display-toggle class="hidden" data-light-mode-label="{{ "Switch to light mode"|t }}" data-dark-mode-label="{{ "Switch to dark mode"|t }}">
-            <button class="inline-block text-link cursor-pointer"></button>
-          </display-toggle> #}
-        </aside>
-      </div>
+          <aside class="hidden md:block ml-auto">
+            {% include "_modules/lang-switch.twig" %}
 
-      {% if navLinks|length %}
-        <div class="{{ [
-          'group',
-          'hidden',
-          'overflow-y-auto',
-          'md:block',
-          '[.menu-open_&]:block',
-          '[.menu-open_&]:md:block',
-          'lg:overflow-visible'
-        ]|join(' ') }}">
-          <ul class="md:flex md:border-gray-400 md:border-b">
-            {% for linkGroup in navLinks %}
-              {% set links = linkGroup.links %}
+            {# <display-toggle class="hidden" data-light-mode-label="{{ "Switch to light mode"|t }}" data-dark-mode-label="{{ "Switch to dark mode"|t }}">
+              <button class="inline-block text-link cursor-pointer"></button>
+            </display-toggle> #}
+          </aside>
+        </div>
 
-              <li class="{{ [
-                'group/title',
+        {% if navLinks|length %}
+          <div class="{{ [
+            'group',
+            'hidden',
+            'overflow-y-auto',
+            'md:block',
+            '[.menu-open_&]:block',
+            '[.menu-open_&]:md:block',
+            'lg:overflow-visible'
+          ]|join(' ') }}">
+            <ul class="md:flex md:border-gray-400 md:border-b">
+              {% for linkGroup in navLinks %}
+                {% set links = linkGroup.links %}
+
+                <li class="{{ [
+                  'group/title',
+                  'border-b',
+                  'border-gray-400',
+                  'last:border-b-0',
+                  'md:w-1/5',
+                  'md:border-b-0',
+                  'md:border-r',
+                  'md:last:border-r-0'
+                ]|join(' ') }}">
+                  <span
+                    data-title="{{ linkGroup.id }}"
+                    class="{{ [
+                      'block',
+                      'cursor-pointer',
+                      'font-bold',
+                      'uppercase',
+                      'text-center',
+                      'px-3',
+                      'py-1',
+                      'text-[0.9375rem]',
+                      'border-gray-400',
+                      'border-b',
+                      'group-hover/title:bg-gray-100',
+                      '[&.active]:bg-gray-100',
+                      'md:p-1.5',
+                      'md:text-body-14',
+                      'md:text-left',
+                      'md:border-b-0',
+                      'lg:px-3',
+                      'lg:py-[0.875rem]',
+                      'lg:text-body-16',
+                    ]|join(' ') }}">
+                    {{ linkGroup.title }}
+                  </span>
+
+                  {% if links|length %}
+                    <ul class="md:hidden p-1">
+                      {% for link in links %}
+                        {% set navLink = link.navLink %}
+                        {% set isExternal = navLink.type == "url" %}
+
+                        <li>
+                          {{ tag('a', {
+                            class: [
+                              'flex',
+                              'px-1',
+                              'py-0.5',
+                              'text-body-16'
+                            ] 
+                            |merge(isExternal ? [
+                              'after:ml-auto',
+                              'after:block',
+                              'after:h-2.5',
+                              'after:w-2.5',
+                              'after:bg-link-arrow',
+                              'after:bg-cover',
+                              'after:bg-no-repeat',
+                              "after:content-['']"
+                            ] : [])
+                            |join(' '),
+                            href: navLink.value,
+                            target: navLink.target,
+                            rel: navLink.target == '_blank' ? 'noopener noreferrer' : null,
+                            text: navLink.label,
+                          }) }}
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  {% endif %}
+                </li>
+              {% endfor %}
+            </ul>
+
+            <ul
+              class="{{ [
+                'hidden',
+                'absolute',
+                '-z-10',
+                'w-full',
                 'border-b',
                 'border-gray-400',
-                'last:border-b-0',
-                'md:w-1/5',
-                'md:border-b-0',
-                'md:border-r',
-                'md:last:border-r-0'
+                'bg-white',
+                'text-body-16',
+                'opacity-0',
+                'transition-opacity',
+                'group-focus-within:opacity-100',
+                'group-hover:opacity-100',
+                'group-hover:z-0',
+                'md:flex'
               ]|join(' ') }}">
-                <span
-                  id="title-{{ linkGroup.id }}"
-                  class="{{ [
-                    'block',
-                    'cursor-pointer',
-                    'font-bold',
-                    'uppercase',
-                    'text-center',
-                    'px-3',
-                    'py-1',
-                    'text-[0.9375rem]',
-                    'border-gray-400',
-                    'border-b',
-                    'group-hover/title:bg-gray-100',
-                    '[&.active]:bg-gray-100',
-                    'md:p-1.5',
-                    'md:text-body-14',
-                    'md:text-left',
-                    'md:border-b-0',
-                    'lg:px-3',
-                    'lg:py-[0.875rem]',
-                    'lg:text-body-16',
-                  ]|join(' ') }}">
-                  {{ linkGroup.title }}
-                </span>
+              {% for linkGroup in navLinks %}
+                {% set links = linkGroup.links %}
 
                 {% if links|length %}
-                  <ul class="md:hidden p-1">
-                    {% for link in links %}
-                      {% set navLink = link.navLink %}
-                      {% set isExternal = navLink.type == "url" %}
+                  <li
+                    data-link-group="{{ linkGroup.id }}"
+                    class="{{ [
+                      'js-menu',
+                      'px-2',
+                      'py-2',
+                      'w-1/5',
+                      'border-r',
+                      'border-gray-400',
+                      'last:border-r-0'
+                    ]|join(' ') }}">
+                    <ul>
+                      {% for link in links %}
+                        {% set navLink = link.navLink %}
+                        {% set isExternal = navLink.type == "url" %}
 
-                      <li>
-                        {{ tag('a', {
-                          class: [
-                            'flex',
-                            'px-1',
-                            'py-0.5',
-                            'text-body-16'
-                          ] 
-                          |merge(isExternal ? [
-                            'after:ml-auto',
-                            'after:block',
-                            'after:h-2.5',
-                            'after:w-2.5',
-                            'after:bg-link-arrow',
-                            'after:bg-cover',
-                            'after:bg-no-repeat',
-                            "after:content-['']"
-                          ] : [])
+                        <li class="mb-[0.38rem] last:mb-0">
+                          {{ tag('a', {
+                            class: [
+                              'flex',
+                              'px-1',
+                              'py-[0.13rem]'
+                            ]
+                            | merge(isExternal ? [
+                              'after:ml-auto',
+                              'after:block',
+                              'after:h-2.5',
+                              'after:w-2.5',
+                              'after:bg-link-arrow',
+                              'after:bg-cover',
+                              'after:bg-no-repeat',
+                              "after:content-['']"
+                            ] : [])
                           |join(' '),
-                          href: navLink.value,
-                          target: navLink.target,
-                          rel: navLink.target == '_blank' ? 'noopener noreferrer' : null,
-                          text: navLink.label,
-                        }) }}
-                      </li>
-                    {% endfor %}
-                  </ul>
+                            href: navLink.value,
+                            target: navLink.target,
+                            rel: navLink.target == '_blank' ? 'noopener noreferrer' : null,
+                            text: navLink.label
+                          }) }}
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </li>
                 {% endif %}
-              </li>
-            {% endfor %}
-          </ul>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
 
-          <ul
-            class="{{ [
-              'hidden',
-              'absolute',
-              '-z-10',
-              'w-full',
-              'border-b',
-              'border-gray-400',
-              'bg-white',
-              'text-body-16',
-              'opacity-0',
-              'transition-opacity',
-              'group-focus-within:opacity-100',
-              'group-hover:opacity-100',
-              'group-hover:z-0',
-              'md:flex'
-            ]|join(' ') }}">
-            {% for linkGroup in navLinks %}
-              {% set links = linkGroup.links %}
-
-              {% if links|length %}
-                <li
-                  id="{{ linkGroup.id }}"
-                  class="{{ [
-                    'js-menu',
-                    'cursor-pointer',
-                    'px-2',
-                    'py-2',
-                    'w-1/5',
-                    'border-r',
-                    'border-gray-400',
-                    'last:border-r-0'
-                  ]|join(' ') }}">
-                  <ul>
-                    {% for link in links %}
-                      {% set navLink = link.navLink %}
-                      {% set isExternal = navLink.type == "url" %}
-
-                      <li class="mb-[0.38rem] last:mb-0">
-                        {{ tag('a', {
-                          class: [
-                            'flex',
-                            'px-1',
-                            'py-[0.13rem]'
-                          ]
-                          | merge(isExternal ? [
-                            'after:ml-auto',
-                            'after:block',
-                            'after:h-2.5',
-                            'after:w-2.5',
-                            'after:bg-link-arrow',
-                            'after:bg-cover',
-                            'after:bg-no-repeat',
-                            "after:content-['']"
-                          ] : [])
-                         |join(' '),
-                          href: navLink.value,
-                          target: navLink.target,
-                          rel: navLink.target == '_blank' ? 'noopener noreferrer' : null,
-                          text: navLink.label
-                        }) }}
-                      </li>
-                    {% endfor %}
-                  </ul>
-                </li>
-              {% endif %}
-            {% endfor %}
-          </ul>
-        </div>
-      {% endif %}
-
-      <aside
-        class="{{ [
-          'hidden',
-          'gap-2.5',
-          'justify-end',
-          'p-2',
-          'border-gray-400',
-          'border-t',
-          'md:hidden',
-          '[.menu-open_&]:flex',
-          '[.menu-open_&]:md:hidden',
-        ]|join(' ') }}">
-        {% include "_modules/lang-switch.twig" %}
-      </aside>
-    </nav>
-  </div>
-</header>
+        <aside
+          class="{{ [
+            'hidden',
+            'gap-2.5',
+            'justify-end',
+            'p-2',
+            'border-gray-400',
+            'border-t',
+            'md:hidden',
+            '[.menu-open_&]:flex',
+            '[.menu-open_&]:md:hidden',
+          ]|join(' ') }}">
+          {% include "_modules/lang-switch.twig" %}
+        </aside>
+      </nav>
+    </div>
+  </header>
+</main-nav>
