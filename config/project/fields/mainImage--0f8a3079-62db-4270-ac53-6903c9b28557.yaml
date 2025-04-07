@@ -1,35 +1,36 @@
 columnSuffix: null
-handle: image
+handle: mainImage
 instructions: null
-name: 'Main Image - Image - Image'
+name: 'Main Image'
 searchable: false
 settings:
   allowSelfRelations: false
   allowSubfolders: false
   allowUploads: true
-  allowedKinds: null
+  allowedKinds:
+    - image
+    - video
   branchLimit: null
   defaultUploadLocationSource: 'volume:b99ee1fe-b466-49ac-8315-43d2af7587e1' # Uploads
   defaultUploadLocationSubpath: null
-  localizeRelations: false
   maintainHierarchy: false
-  maxRelations: 1
+  maxRelations: null
   minRelations: null
   previewMode: full
-  restrictFiles: false
+  restrictFiles: true
   restrictLocation: false
   restrictedDefaultUploadSubpath: null
   restrictedLocationSource: 'volume:b99ee1fe-b466-49ac-8315-43d2af7587e1' # Uploads
   restrictedLocationSubpath: null
   selectionLabel: null
   showCardsInGrid: false
-  showSiteMenu: true
+  showSiteMenu: false
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources: '*'
   targetSiteId: null
   validateRelatedElements: false
-  viewMode: large
+  viewMode: list
 translationKeyFormat: null
-translationMethod: site
+translationMethod: none
 type: craft\fields\Assets

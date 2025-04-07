@@ -1,5 +1,5 @@
 {% set fallbackImageUrl = "https://placehold.co/400x300" %}
-{% set imageUrl = (entry.mainImage[0].image[0].getUrl("blogTeaser"))|default(fallbackImageUrl) %}
+{% set imageUrl = (entry.mainImage.eagerly().one().getUrl("blogTeaser"))|default(fallbackImageUrl) %}
 
 <article class="col-span-3 md:col-span-1">
   <a class="block" href="{{ entry.getUrl() }}">

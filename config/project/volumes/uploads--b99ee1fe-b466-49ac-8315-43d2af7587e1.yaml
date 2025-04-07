@@ -63,6 +63,22 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-04-07T08:17:29+00:00'
+            elementCondition: null
+            fieldUid: 183a1c32-7844-45ce-93f1-a991260eeadc # Caption
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8fbaeb9e-f5e6-4597-993d-573cf961e1bd
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-03-12T16:17:51+00:00'
             elementCondition: null
             fieldUid: c670b800-a19f-4ca2-a056-283204e59d5d # Credit / License
