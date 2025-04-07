@@ -1,7 +1,7 @@
 {% import '_macros' as macros %}
 
-{% set image = figure.image %}
-{% set caption = figure.caption %}
+{% set image = image %}
+{% set caption = image.caption %}
 {% set hasCaption = caption|length %}
 {% set size = size|default("textCol") %}
 
