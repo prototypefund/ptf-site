@@ -1,7 +1,7 @@
-columnSuffix: xlohqkic
+columnSuffix: null
 handle: caption
 instructions: null
-name: 'Main Image - Image - Caption'
+name: Caption
 searchable: false
 settings:
   availableTransforms: '*'

@@ -8,22 +8,6 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-03-30T20:43:10+00:00'
-            elementCondition: null
-            fieldUid: cff97bfa-6eb7-473b-97c0-cc3af58c0f64 # Article ID
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 8d630891-228e-4414-9a60-5ee77df7d111
-            userCondition: null
-            warning: null
-            width: 100
-          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -54,9 +38,9 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-02-19T09:40:13+00:00'
+            dateAdded: '2025-04-07T08:20:25+00:00'
             elementCondition: null
-            fieldUid: 3bde5cb4-3323-4862-906f-40053b1122bc # Main Image
+            fieldUid: 0f8a3079-62db-4270-ac53-6903c9b28557 # Main Image
             handle: null
             includeInCards: false
             instructions: null
@@ -65,7 +49,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 538b1511-a437-4df7-919f-8afa154ee117
+            uid: 26239e62-4e84-4316-acc8-4b5b2ac939eb
             userCondition: null
             warning: null
             width: 100
@@ -104,6 +88,28 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: ee84530e-bc02-4920-b19e-ea4e85144645
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-07T08:20:25+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: f99dcead-e6d0-4255-bb1b-59c13d3330f2
+            userCondition: null
+          -
+            dateAdded: '2025-03-30T20:43:10+00:00'
+            elementCondition: null
+            fieldUid: cff97bfa-6eb7-473b-97c0-cc3af58c0f64 # Article ID
+            handle: null
+            includeInCards: false
+            instructions: 'This only exists as a helper field for the data migration from the old site. Don’t change it.'
+            label: 'Legacy Article ID'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8d630891-228e-4414-9a60-5ee77df7d111
             userCondition: null
             warning: null
             width: 100
