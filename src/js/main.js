@@ -1,7 +1,10 @@
 import "../css/main.css";
 import { DisplayToggle } from "./components/display-toggle";
+import initMenu from "./menu";
 
-customElements.define("display-toggle", DisplayToggle);
+if (!customElements.get("display-toggle")) {
+  customElements.define("display-toggle", DisplayToggle);
+}
 
 window.addEventListener("beforeprint", () => {
   // we’re doing this to remove dark mode styles during printing
@@ -11,6 +14,8 @@ window.addEventListener("beforeprint", () => {
 window.addEventListener("afterprint", () => {
   document.documentElement.classList.remove("print");
 });
+
+initMenu();
 
 if (import.meta.hot) {
   import.meta.hot.accept();

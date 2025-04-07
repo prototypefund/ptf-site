@@ -1,6 +1,6 @@
 color: null
 fieldLayouts:
-  0a6f96ff-f661-411f-9506-ff1f2df5e8f0:
+  afd5848f-74e4-4afc-b1f5-61fb06f10e48:
     tabs:
       -
         elementCondition: null
@@ -10,14 +10,14 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-04-03T10:13:34+00:00'
+            dateAdded: '2025-04-06T15:17:48+00:00'
             disabled: false
             elementCondition: null
             id: null
             includeInCards: false
             inputType: null
             instructions: null
-            label: 'Short Title'
+            label: null
             max: null
             min: null
             name: null
@@ -31,33 +31,17 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 0d06b633-f263-480c-9f72-547780195081
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-04-03T10:15:12+00:00'
-            elementCondition: null
-            fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # External Link
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: a0e27dfa-a3bb-48a1-8e4d-5238e6cabec1
+            uid: 7ce0d75d-61d7-4b97-b101-cea43f89b2b4
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 147003c3-525a-420c-9ae7-b84343bed30a
+        uid: 8bc92c5e-06e8-4b34-b38d-b001a4037f03
         userCondition: null
-handle: externalPage
+handle: eventsIndex
 hasTitleField: true
 icon: null
-name: 'External Page'
+name: 'Events Index'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

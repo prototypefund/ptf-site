@@ -22,23 +22,10 @@
   }]) %}
 {% endfor %}
 
-{% set labels = {
-  de: "Auf Deutsch",
-  en: "In English",
-} %}
-
-<div class="inline-flex gap-1">
+<div class="inline-flex gap-[2px] uppercase text-body-14 border-gray-400 border rounded-sm p-[3px]">
   {% for link in languageLinks %}
-    {% if link.current %}
-      <strong>
-    {% else %}
-      <a class="text-link" href="{{ link.url }}" tabindex="0">
-    {% endif %}
-      {{ labels[link.countryCode] }}
-    {% if link.current %}
-      </strong>
-    {% else %}
-      </a>
-    {% endif %}
+    <a class="rounded-[2px] px-1 py-[0.19rem] md:px-[7px] {{ link.current ? "bg-black text-white" : "text-gray-200" }}" href="{{ link.url }}" tabindex="0">
+      {{ link.countryCode }}
+    </a>
   {% endfor %}
 </div>

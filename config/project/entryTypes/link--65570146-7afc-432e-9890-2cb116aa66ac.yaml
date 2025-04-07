@@ -1,37 +1,37 @@
 color: null
 fieldLayouts:
-  5a2bd6cd-68b2-4616-aca3-756c78c3f933:
+  5ecec522-16e2-4049-ac39-f20af6a8b057:
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-04-03T10:15:31+00:00'
+            dateAdded: '2025-04-03T21:15:13+00:00'
             elementCondition: null
-            fieldUid: f7486108-7a41-4ff3-83e8-34c2b334e19f # Links
+            fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # Link
             handle: null
             includeInCards: false
             instructions: null
-            label: null
+            label: Link
             providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 90c08698-7bd2-479b-885b-849ea0897a2e
+            uid: 50c759a5-075b-40f7-8a82-b426814dcc75
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 3e01cea7-defb-4c3c-9545-52f873597eb3
+        uid: 687ee6cc-9651-4630-a111-3158a4b3d235
         userCondition: null
-handle: linkGroup
+handle: link
 hasTitleField: false
-icon: link
-name: 'Link Group'
-showSlugField: false
-showStatusField: false
+icon: null
+name: Link
+showSlugField: true
+showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
-titleTranslationMethod: none
+titleTranslationMethod: site

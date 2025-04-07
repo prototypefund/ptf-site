@@ -1,6 +1,6 @@
 color: null
 fieldLayouts:
-  5600ec1a-2f71-4767-909e-adeffd45d915:
+  68a3e2a1-3736-410f-944b-53cbcd0eaa35:
     tabs:
       -
         elementCondition: null
@@ -10,14 +10,14 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-04-03T10:11:35+00:00'
+            dateAdded: '2025-04-03T21:43:54+00:00'
             disabled: false
             elementCondition: null
             id: null
             includeInCards: false
             inputType: null
             instructions: null
-            label: 'Short Title'
+            label: null
             max: null
             min: null
             name: null
@@ -31,14 +31,14 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: ccae62a6-8e33-4c42-b84c-cdb5741689ef
+            uid: 2f8b495c-789c-4144-bf48-d6ecb5faf9f1
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-03T10:14:31+00:00'
+            dateAdded: '2025-04-03T21:45:15+00:00'
             elementCondition: null
-            fieldUid: 59e53eb6-a51c-49ea-8d74-73c4434e20ef # Page
+            fieldUid: f7486108-7a41-4ff3-83e8-34c2b334e19f # Links
             handle: null
             includeInCards: false
             instructions: null
@@ -47,17 +47,17 @@ fieldLayouts:
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 8d0f3c5b-fd88-4bc5-a192-efe86711f4cd
+            uid: f244bf82-1722-472b-825f-ab8534ca2579
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 091c83a1-501c-4d4d-993b-678a3fd532aa
+        uid: 5f899a47-e815-4396-87e5-0d38a582ee9f
         userCondition: null
-handle: internalPage
+handle: linkGroup
 hasTitleField: true
 icon: null
-name: 'Internal Page'
+name: 'Link Group'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

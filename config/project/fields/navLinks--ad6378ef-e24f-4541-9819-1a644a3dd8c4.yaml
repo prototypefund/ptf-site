@@ -1,19 +1,19 @@
 columnSuffix: null
-handle: secondaryFooterLinks
+handle: navLinks
 instructions: null
-name: 'Secondary Footer Links'
+name: 'Nav Links'
 searchable: false
 settings:
-  createButtonLabel: Link
+  createButtonLabel: 'Link Group'
   defaultIndexViewMode: cards
   entryTypes:
     -
       __assoc__:
         -
           - uid
-          - 65570146-7afc-432e-9890-2cb116aa66ac # Link
+          - c86f2a45-9639-4151-93dc-21dce075b6f9 # Link Group
   includeTableView: false
-  maxEntries: null
+  maxEntries: 5
   minEntries: null
   pageSize: null
   propagationKeyFormat: null
