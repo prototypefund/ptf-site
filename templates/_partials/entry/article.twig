@@ -1,5 +1,4 @@
-{% set fallbackImageUrl = "https://placehold.co/234x172" %}
-{% set imageUrl = (entry.mainImage.eagerly().one().getUrl("blogTeaser"))|default(fallbackImageUrl) %}
+{% set image = entry.mainImage.eagerly().one() %}
 {% set categories = entry.blogCategories.all() %}
 {% set postDate = entry.postDate %}
 
@@ -27,7 +26,13 @@
       </div>
       
       <div class="col-span-3">
-        <img class="block w-full" src="{{ imageUrl }}">
+        <div class="aspect-4/3">
+          {% if image|length %}
+            <img class="block w-full h-full object-cover" src="{{ image.getUrl("blogTeaser") }}">
+          {% else %}
+            <div class="bg-gray-100 h-full"></div>
+          {% endif %}
+        </div>
       </div>
     </div>
 
