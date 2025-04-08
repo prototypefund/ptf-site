@@ -21,13 +21,13 @@
 
     {% if categories|length %}
       <div>
-        <h3 class="text-body-16 md:text-body-18 mb-2.5">
+        <h3 class="text-body-16 text-gray-200 md:text-body-18 mb-2.5">
           {{ "Filter by category"|t }}
         </h3>
 
         <ul class="flex gap-1">
           {% for category in categories %}
-            <a class="border border-gray-400 px-1 py-0.5 text-body-14" href="{{ category.url }}">
+            <a class="border border-gray-400 px-1 py-0.5 text-body-14 text-gray-200 hover:bg-[#EAEAEB] active:bg-gray-200 active:text-white transition-colors" href="{{ category.url }}">
               {{ category.title }}
             </a>
           {% endfor %}

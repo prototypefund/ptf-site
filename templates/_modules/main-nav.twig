@@ -50,6 +50,7 @@
               'flex',
               'items-center',
               'cursor-pointer',
+              'text-gray-200',
               'ml-auto',
               'md:hidden'
             ]|join(' ') }}">
@@ -114,6 +115,7 @@
                       'px-3',
                       'py-1',
                       'text-[0.9375rem]',
+                      'text-gray-200',
                       'border-gray-400',
                       'border-b',
                       'group-hover/title:bg-gray-100',
@@ -141,7 +143,8 @@
                               'flex',
                               'px-1',
                               'py-0.5',
-                              'text-body-16'
+                              'text-body-16',
+                              'text-gray-200'
                             ] 
                             |merge(isExternal ? [
                               'after:ml-auto',
@@ -209,7 +212,8 @@
                             class: [
                               'flex',
                               'px-1',
-                              'py-[0.13rem]'
+                              'py-[0.13rem]',
+                              'text-gray-200'
                             ]
                             | merge(isExternal ? [
                               'after:ml-auto',
