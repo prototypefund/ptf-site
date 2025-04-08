@@ -1,43 +1,11 @@
 {% extends "_layouts/layout.twig" %}
 
 {% set articlesQuery = craft.entries.section("blog") %}
-{% set totalArticles = articlesQuery.count() %}
-{% set categories = craft.categories.group("blogCategories").all() %}
-
-{% paginate articlesQuery.limit(14) as pagination, articles %}
 
 {% block content %}
-  {% include "_modules/header" with {
-    headline: entry.headline|default(entry.title),
-    intro: entry.intro,
-    link: entry.genericLink,
-    background: entry.headerBackground.value
+  {% include "blog/_modules/overview-page" with {
+    articlesQuery: articlesQuery,
+    indexEntry: entry,
+    entry
   } only %}
-
-  <div class="mt-5 md:mt-9 mb-5 px-2 md:px-5">
-    <h2 class="mb-3 md:mb-5 last:mb-0 font-surt text-head-22 md:text-head-28">
-      {{ "All Articles"|t }} <span class=" text-rich-blue">[{{ totalArticles }}]</span>
-    </h2>
-
-    {% if categories|length %}
-      <div>
-        <h3 class="text-body-16 text-gray-200 md:text-body-18 mb-2.5">
-          {{ "Filter by category"|t }}
-        </h3>
-
-        <ul class="flex gap-1">
-          {% for category in categories %}
-            <a class="border border-gray-400 px-1 py-0.5 text-body-14 text-gray-200 hover:bg-[#EAEAEB] active:bg-gray-200 active:text-white transition-colors" href="{{ category.url }}">
-              {{ category.title }}
-            </a>
-          {% endfor %}
-        </ul>
-      </div>
-    {% endif %}
-  </div>
-
-  <div class="px-2 md:px-5 mb-[3.75rem] md:mb-14">
-    {% include "blog/_modules/teasers-list" with { articles: articles } only %}
-    {% include "_modules/pagination" with { pagination: pagination } only %}
-  </div>
 {% endblock %}

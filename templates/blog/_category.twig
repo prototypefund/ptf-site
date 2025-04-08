@@ -1,7 +1,12 @@
 {% extends "_layouts/layout.twig" %}
 
+{% set articlesQuery = craft.entries.section("blog").relatedTo(category) %}
+{% set indexEntry = craft.entries.section("blogIndex").one() %}
+
 {% block content %}
-  <div class="h-[50vw] text-[#CCC] flex items-center justify-center">
-    Category
-  </div>
+  {% include "blog/_modules/overview-page" with {
+    articlesQuery: articlesQuery,
+    indexEntry,
+    entry: category
+  } only %}
 {% endblock %}
