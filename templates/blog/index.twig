@@ -1,7 +1,10 @@
 {% extends "_layouts/layout.twig" %}
 
-{% set articlesQuery = craft.entries.section("blog").limit(15) %}
-{% paginate articlesQuery as pagination, articles %}
+{% set articlesQuery = craft.entries.section("blog") %}
+{% set totalArticles = articlesQuery.count() %}
+{% set categories = craft.categories.group("blogCategories").all() %}
+
+{% paginate articlesQuery.limit(14) as pagination, articles %}
 
 {% block content %}
   {% include "_modules/header" with {
@@ -11,15 +14,30 @@
     background: entry.headerBackground.value
   } only %}
 
-  <div class="max-w-4xl mx-auto px-2 md:px-4 lg:px-6 pb-2 md:pb-4 lg:pb-6">
-    {% include "_rich-text/standard" with { text: "<h1>#{'Our blog'|t}</h1>" } only %}
-    <div class="my-4">
-      {% if articles|length %}
-        {% include "blog/_modules/teasers-list" with { articles: articles } only %}
-      {% else %}
-        {% include "_rich-text/standard" with { text: "<p>#{'No entries yet. Create some in the CMS!'|t}</p>" } only %}
-      {% endif %}
-    </div>
+  <div class="mt-5 md:mt-9 mb-5 px-2 md:px-5">
+    <h2 class="mb-3 md:mb-5 last:mb-0 font-surt text-head-22 md:text-head-28">
+      {{ "All Articles"|t }} <span class=" text-rich-blue">[{{ totalArticles }}]</span>
+    </h2>
+
+    {% if categories|length %}
+      <div>
+        <h3 class="text-body-16 md:text-body-18 mb-2.5">
+          {{ "Filter by category"|t }}
+        </h3>
+
+        <ul class="flex gap-1">
+          {% for category in categories %}
+            <a class="border border-gray-400 px-1 py-0.5 text-body-14" href="{{ category.url }}">
+              {{ category.title }}
+            </a>
+          {% endfor %}
+        </ul>
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="px-2 md:px-5 mb-[3.75rem] md:mb-14">
+    {% include "blog/_modules/teasers-list" with { articles: articles } only %}
     {% include "_modules/pagination" with { pagination: pagination } only %}
   </div>
 {% endblock %}

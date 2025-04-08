@@ -1,10 +1,44 @@
-{% set fallbackImageUrl = "https://placehold.co/400x300" %}
+{% set fallbackImageUrl = "https://placehold.co/234x172" %}
 {% set imageUrl = (entry.mainImage.eagerly().one().getUrl("blogTeaser"))|default(fallbackImageUrl) %}
+{% set categories = entry.blogCategories.all() %}
+{% set postDate = entry.postDate %}
 
-<article class="col-span-3 md:col-span-1">
-  <a class="block" href="{{ entry.getUrl() }}">
-    <img class="mb-1 w-full aspect-4/3 bg-[#4b5563]" src="{{ imageUrl }}">
-    <h3 class="text-body-24 font-bold mb-1">{{ entry.title }}</h3>
-    <p>{{ entry.text|striptags|truncate(120)|raw }}</p>
+<article class="border-gray-400 border-t mb-4 md:mb-0">
+  <a class="block pt-2.5" href="{{ entry.getUrl() }}">
+    <div class="group grid grid-cols-8 gap-3 mb-3 md:mb-0">
+      <div class="col-span-5 flex flex-col">
+        <time class=" mb-1 md:mb-2 text-body-14 md:text-body-16 text-gray-500" datetime="{{ postDate|date('Y-m-d') }}">{{ postDate|date('d/m/Y') }}</time>
+
+        <div class="mb-3 last:mb-0">
+          <h4 class="inline font-surt text-body-16 md:text-head-22 uppercase mb-1 group-hover:border-b-sky-blue group-hover:border-b-2">
+            {{ entry.title }}
+          </h4>
+        </div>
+
+        {% if categories|length %}
+          <ul class="hidden sm:flex flex-wrap gap-x-1 gap-y-0.5 mt-auto ">
+            {% for category in categories %}
+              <li class="text-gray-500 uppercase text-body-12 md:text-[13px] after:content-['|'] after:text-gray-400 last:after:hidden">
+                {{ category.title }}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+      
+      <div class="col-span-3">
+        <img class="block w-full" src="{{ imageUrl }}">
+      </div>
+    </div>
+
+    {% if categories|length %}
+      <ul class="sm:hidden flex-wrap gap-x-1 gap-y-0.5 mt-auto">
+        {% for category in categories %}
+          <li class="text-gray-500 uppercase text-body-12 md:text-[13px] after:content-['|'] after:text-gray-400 last:after:hidden">
+            {{ category.title }}
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
   </a>
 </article>
