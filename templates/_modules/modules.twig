@@ -1,0 +1,11 @@
+{% if entry.modules %}
+  {% for module in entry.modules.all() %}
+    {% switch module.type %}
+      {% case 'newsletter' %}
+        {% include "_modules/blocks/newsletter" with {
+          module: module
+        } only %}
+      {% default %}
+    {% endswitch %}
+  {% endfor %}
+{% endif %}

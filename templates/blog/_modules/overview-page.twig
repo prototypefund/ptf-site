@@ -41,3 +41,9 @@
   {% include "blog/_modules/teasers-list" with { articles: articles } only %}
   {% include "_modules/pagination" with { pagination: pagination } only %}
 </div>
+
+{% if entry.modules.count() > 0 %}
+  {% include "_modules/modules" with { entry: entry } %}
+{% else %}
+  {% include "_modules/modules" with { entry: indexEntry } %}
+{% endif %}

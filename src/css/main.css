@@ -37,6 +37,8 @@
   --text-head-32--line-height: 1.2;
   --text-head-28: calc(28 / 16 * 1rem);
   --text-head-28--line-height: 1.2;
+  --text-head-24: calc(24 / 16 * 1rem);
+  --text-head-24--line-height: 1.2;
   --text-head-22: calc(22 / 16 * 1rem);
   --text-head-22--line-height: 1.4;
 
@@ -70,6 +72,7 @@
   --background-image-pattern-r-blue: url("/static/images/patterns/bg-pattern-r-blue.svg");
   --background-image-pattern-r-dark-pink: url("/static/images/patterns/bg-pattern-r-dark-pink.svg");
   --background-image-pattern-r-light-pink: url("/static/images/patterns/bg-pattern-r-light-pink.svg");
+  --background-image-pattern-newsletter: url("/static/images/patterns/bg-pattern-newsletter.svg");
 }
 
 @layer base {

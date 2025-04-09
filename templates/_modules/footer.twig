@@ -2,8 +2,8 @@
 {% set footerDescription = footer.footerDescription %}
 {% set mainFooterLinks = footer.mainFooterLinks.all() %}
 {% set secondaryFooterLinks = footer.secondaryFooterLinks.all() %}
-{% set newsletterHeadline = footer.newsletterHeadline %}
-{% set newsletterText = footer.newsletterText %}
+{% set newsletterHeadline = footer.newsletterHeadline|default(newsletter.newsletterHeadline) %}
+{% set newsletterSecondaryText = footer.newsletterSecondaryText|default(newsletter.newsletterSecondaryText) %}
 {% set sponsorsHeadline = footer.sponsorsHeadline %}
 {% set sponsors = footer.sponsors.all() %}
 
@@ -25,13 +25,12 @@
     <div class="pt-2.5 md:pt-5 pb-2.5 md:pb-3 border-gray-400 border-t md:border-t-0 md:border-r last:md:border-r-0">
       <h4 class="px-2 md:px-3 pb-2 md:pb-3 uppercase font-bold text-body-16 text-gray-200">{{ newsletterHeadline }}</h4>
 
-      <form class="relative mb-2.5" method="post" action="https://te917244a.emailsys1a.net/172/4365/50b2a37e1e/subscribe/form.html">
-        <input class="px-2 md:px-3 border-gray-400 border-t border-b py-[1.125rem] pr-[9.6rem] text-body-18 text-gray-200 bg-white w-full placeholder:text-black" type="email" name="email" placeholder="{{ "Email address"|t }}" required />
-        <input class="uppercase font-bold text-ui-16 text-gray-200 cursor-pointer absolute right-2 md:right-3 top-[50%] translate-y-[-50%] border-gray-400 border-l border-r px-[0.63rem] py-[0.3rem] bg-white hover:bg-black hover:text-white transition-colors" type="submit" value="{{ "Register"|t }}" />
-      </form>
+      <div class="mb-2.5">
+        {% include "_modules/newsletter-form" only %}
+      </div>
 
       <div class="px-2 md:px-3 text-body-14 text-gray-200">
-        {{ newsletterText|retcon([
+        {{ newsletterSecondaryText|retcon([
           ['removeEmpty', 'p'],
           ['attr', 'a', { class: 'border-gray-400 border-sky-blue border-b'}, false],
         ])|raw }}
