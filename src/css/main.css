@@ -5,12 +5,13 @@
 @theme {
   --color-*: initial;
   --color-black: #000000;
-  --color-gray-500: #4D4D4D;
+  --color-gray-500: #4d4d4d;
   --color-gray-400: #aaaaaa;
+  --color-gray-300: #898989;
   --color-gray-200: #141414;
   --color-gray-100: #f5f5f5;
   --color-sky-blue: #49bcf2;
-  --color-rich-blue: #171BE5;
+  --color-rich-blue: #171be5;
   --color-white: #ffffff;
 
   --breakpoint-xxs: 420px;
@@ -23,16 +24,8 @@
   --breakpoint-3xl: 2000px;
   --breakpoint-4xl: 2560px;
 
-  --text-head-88: calc(88 / 16 * 1rem);
-  --text-head-88--line-height: 1.2;
   --text-head-62: calc(62 / 16 * 1rem);
   --text-head-62--line-height: 1.2;
-  --text-head-56: calc(56 / 16 * 1rem);
-  --text-head-56--line-height: 1.2;
-  --text-head-48: calc(48 / 16 * 1rem);
-  --text-head-48--line-height: 1.2;
-  --text-head-40: calc(40 / 16 * 1rem);
-  --text-head-40--line-height: 1.2;
   --text-head-32: calc(32 / 16 * 1rem);
   --text-head-32--line-height: 1.2;
   --text-head-28: calc(28 / 16 * 1rem);
@@ -54,11 +47,9 @@
   --text-body-14--line-height: 1.5;
   --text-body-12: calc(12 / 16 * 1rem);
   --text-body-12--line-height: 1.5;
+  --text-body-13: calc(13 / 16 * 1rem);
+  --text-body-13--line-height: 1.5;
 
-  --text-ui-20: calc(20 / 16 * 1rem);
-  --text-ui-20--line-height: 1;
-  --text-ui-18: calc(18 / 16 * 1rem);
-  --text-ui-18--line-height: 1;
   --text-ui-16: calc(16 / 16 * 1rem);
   --text-ui-16--line-height: 1;
   --text-ui-14: calc(14 / 16 * 1rem);
@@ -81,7 +72,7 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-[#e5e7eb], currentColor);
+    border-color: var(--color-gray-200, currentColor);
   }
 
   html {
@@ -112,7 +103,7 @@
   button,
   textarea,
   select {
-    @apply accent-[#4b5563] dark:accent-[#e5e7eb];
+    @apply accent-gray-500 dark:accent-gray-200;
     font: inherit;
   }
 
@@ -125,7 +116,7 @@
   }
 
   :focus-visible {
-    @apply outline-hidden ring-8 dark:ring-4 ring-[#4b5563] dark:ring-[#e5e7eb];
+    @apply outline-hidden ring-8 dark:ring-4 ring-gray-500 dark:ring-gray-200;
   }
 
   @media print {
@@ -136,9 +127,5 @@
 }
 
 .text-link {
-  @apply underline hover:text-[#4b5563];
-}
-
-.button {
-  @apply relative leading-none inline-block align-middle overflow-hidden whitespace-nowrap text-ellipsis max-w-full text-white rounded-3xl mr-1.5 px-2.5 py-1.25 bg-[#4b5563] hover:bg-[#111827] decoration-0 active:bg-[#030712] dark:text-[#111827] dark:bg-[#6b7280] dark:hover:bg-[#e5e7eb] dark:active:bg-[#f3f4f6];
+  @apply underline hover:text-gray-500;
 }
