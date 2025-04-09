@@ -5,12 +5,12 @@
 @theme {
   --color-*: initial;
   --color-black: #000000;
-  --color-gray-500: #4D4D4D;
+  --color-gray-500: #4d4d4d;
   --color-gray-400: #aaaaaa;
   --color-gray-200: #141414;
   --color-gray-100: #f5f5f5;
   --color-sky-blue: #49bcf2;
-  --color-rich-blue: #171BE5;
+  --color-rich-blue: #171be5;
   --color-white: #ffffff;
 
   --breakpoint-xxs: 420px;
