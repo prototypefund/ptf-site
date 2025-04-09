@@ -35,6 +35,92 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-04-09T13:38:45+00:00'
+            elementCondition: null
+            fieldUid: d99528c4-136b-413c-9799-56fd20edd2c6 # Headline
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f6ae81f5-b734-4cb4-9254-421a6bcc2a37
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-09T13:38:45+00:00'
+            elementCondition: null
+            fieldUid: ad1324f8-1337-475f-8516-ab1e13543027 # Intro
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c614197a-60b2-47a8-9e3c-4353bb4133e1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-09T13:38:45+00:00'
+            elementCondition: null
+            fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # Link
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cbe86d61-2e1c-423f-9188-ad393b078828
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-09T13:38:45+00:00'
+            elementCondition: null
+            fieldUid: 62e3c2ea-24fd-42e2-a9ba-3602f1d6e2e8 # Header Background
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7f1349b3-deb8-4fc6-bce5-069b0bc12df1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-09T13:38:45+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 7aa25a2e-bb79-4641-b3e2-16236a2bfbdc
+            userCondition: null
+          -
+            dateAdded: '2025-04-09T13:38:45+00:00'
+            elementCondition: null
+            fieldUid: 1bf40018-82e4-4e44-bbd6-6f49c132678d # Modules
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6d73c304-a46a-48c2-bcd0-efb3a2d47535
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 7c4654da-4cec-43ca-bbac-5888861faf3e
         userCondition: null

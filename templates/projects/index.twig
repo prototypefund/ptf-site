@@ -4,6 +4,13 @@
 {% paginate projectsQuery as pagination, projects %}
 
 {% block content %}
+  {% include "_modules/header" with {
+    headline: entry.headline|default(entry.title),
+    intro: entry.intro,
+    link: entry.genericLink,
+    background: entry.headerBackground.value
+  } only %}
+
   <div class="max-w-4xl mx-auto px-2 md:px-4 lg:px-6 pb-2 md:pb-4 lg:pb-6 mt-6">
     {% include "_rich-text/standard" with { text: "<h1>#{'Our projects'|t}</h1>" } only %}
     <div class="my-4">
