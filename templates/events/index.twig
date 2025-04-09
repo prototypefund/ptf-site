@@ -1,6 +1,13 @@
 {% extends "_layouts/layout.twig" %}
 
 {% block content %}
+  {% include "_modules/header" with {
+    headline: entry.headline|default(entry.title),
+    intro: entry.intro,
+    link: entry.genericLink,
+    background: entry.headerBackground.value
+  } only %}
+
   <div class="h-[50vw] text-gray-400 flex items-center justify-center">
     Events Index
   </div>

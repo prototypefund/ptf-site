@@ -35,8 +35,122 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-04-09T13:46:21+00:00'
+            elementCondition: null
+            fieldUid: d99528c4-136b-413c-9799-56fd20edd2c6 # Headline
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2b2ae48d-0a94-4fde-9af6-2edaeed9dede
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-09T13:46:21+00:00'
+            elementCondition: null
+            fieldUid: ad1324f8-1337-475f-8516-ab1e13543027 # Intro
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e2941755-29a0-45e0-828c-be173179f26c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-09T13:46:21+00:00'
+            elementCondition: null
+            fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # Link
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 364b6f6c-e712-4c92-b686-e88a0d4bdd26
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-09T13:46:21+00:00'
+            elementCondition: null
+            fieldUid: 62e3c2ea-24fd-42e2-a9ba-3602f1d6e2e8 # Header Background
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 05d59b41-5dd8-4012-9261-c8c7a485ad28
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-09T13:46:21+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 26eb7bb2-6a84-4b83-afc5-a8a498675151
+            userCondition: null
+          -
+            dateAdded: '2025-04-09T13:46:21+00:00'
+            elementCondition: null
+            fieldUid: 1bf40018-82e4-4e44-bbd6-6f49c132678d # Modules
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4502914d-ef1c-4ac6-9b77-28f4d887561f
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: e09469b8-1298-48d7-a52e-792fb3a07bcc
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-09T13:46:21+00:00'
+            elementCondition: null
+            fieldUid: 0d857c68-7bb1-4ce7-b61f-671446aa8bb3 # SEO
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c070d201-4ee0-4761-8ab6-eaf7a9cc0473
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-09T13:46:21+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: c2f6cb58-4f34-4fe0-8f23-fc72ff94d2b2
+            userCondition: null
+        name: SEO
+        uid: 9fe2a118-bf60-43e3-9a84-98fe584772b0
         userCondition: null
 handle: genericPage
 hasTitleField: true
