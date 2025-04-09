@@ -1,4 +1,4 @@
-dateModified: 1744117259
+dateModified: 1744183820
 elementSources:
   craft\elements\Entry:
     -
@@ -24,6 +24,7 @@ elementSources:
       defaultSort:
         - postDate
         - desc
+      defaultViewMode: ''
       disabled: false
       key: 'section:375cd22a-99b6-4667-8ca6-caf2572459ed' # Blog
       tableAttributes:
@@ -47,6 +48,12 @@ elementSources:
       type: native
     -
       key: 'section:6e040108-27cc-4a4a-bca9-c5e3ab1bdc04' # Generic Pages
+      type: native
+    -
+      heading: 'Shared Data'
+      type: heading
+    -
+      key: 'section:fedc8dc1-63ba-4aaf-9afa-ce0809c21186'
       type: native
 email:
   fromEmail: $EMAIL_SYSTEM_ADDRESS
@@ -73,13 +80,16 @@ meta:
     0d857c68-7bb1-4ce7-b61f-671446aa8bb3: SEO # SEO
     0f8a3079-62db-4270-ac53-6903c9b28557: 'Main Image' # Main Image
     1a0ed17a-7208-4b7e-894f-64506d5432d6: 'Events Index' # Events Index
+    1bf40018-82e4-4e44-bbd6-6f49c132678d: Modules # Modules
     2b86894c-5b98-44d4-8ed6-88b2c8b5e601: 'Blog Index' # Blog Index
+    4b6ba907-43f2-494b-9816-24894f8de0da: Newsletter # Newsletter
     4e97404d-0992-4280-b87e-903b4fc471c5: Navigation # Navigation
     5a2c3e10-bf78-4986-aecd-f75829889851: 'Project Topics' # Project Topics
     5bafc55c-8f31-4f9b-add0-49e9957e63a7: 'Footer Link Group' # Footer Link Group
     6ca70ace-9ae7-4dfa-a915-d1a24572619d: 'Footer Description' # Footer Description
     6e040108-27cc-4a4a-bca9-c5e3ab1bdc04: 'Generic Pages' # Generic Pages
     6fa1e10a-d063-4c10-a955-f1b3eda7e7ef: Standard # Standard
+    7e4dd8fe-6873-44a9-ada5-acf02698981d: 'Side Info' # Side Info
     7eb26dd5-1c10-45d1-a16b-85a148e4bf8a: 'Projects Index' # Projects Index
     8a18f61b-a93c-4302-8bde-b8f6ed6c0494: 'Inclusive Sans – Semibold' # Inclusive Sans – Semibold
     8d8e3436-a20e-4222-a530-d52fa736ae4d: 'Project Technologies' # Project Technologies
@@ -90,14 +100,19 @@ meta:
     29d80674-cc17-4976-ad67-b3f611a07dc2: 'Events Index' # Events Index
     34dc108f-02bd-42cb-9481-0693c7bc32b4: 'Tracking Head' # Tracking Head
     58b0cfc4-a7f2-491d-a49a-a29faaacedf3: 'Inclusive Sans – Regular' # Inclusive Sans – Regular
+    62e3c2ea-24fd-42e2-a9ba-3602f1d6e2e8: 'Header Background' # Header Background
+    62efdaf8-a4e7-4149-bc72-3bd492681eba: 'Newsletter Side Title' # Newsletter Side Title
+    69fb06a0-7361-46bd-a063-b293e6336a99: Description # Description
     91a7ad8a-d35b-4738-b71b-a18f899afc5d: 'Resize: width 2000px' # Resize: width 2000px
     137c86ac-e143-4792-b936-38c41302eccd: Fonts # Fonts
     183a1c32-7844-45ce-93f1-a991260eeadc: Caption # Caption
     276edf74-a032-4834-b9ef-5783f0b823d4: 'Project ID' # Project ID
+    358db54d-b951-4e0a-b4fa-c43aa2257acc: 'Newsletter Links' # Newsletter Links
     375cd22a-99b6-4667-8ca6-caf2572459ed: Blog # Blog
     504f909d-20af-4a66-b4a5-46c966689b30: 'Resize: width 1000px' # Resize: width 1000px
     633b77bd-edb2-4812-ae43-7d61e39fd8fd: 'Main Footer Links' # Main Footer Links
     645eb55b-61e5-4ed2-bf31-caed18a16ffb: 'Blog Index' # Blog Index
+    2965e0c7-feb2-4aa2-98d4-de16d458eb30: Categories # Categories
     8898a317-df17-4cc9-9475-6376bc29fbd5: 'Newsletter Headline' # Newsletter Headline
     53364b16-adc8-4b34-802f-054c272771c6: 'Projects Index' # Projects Index
     586087db-4dd7-43ba-929b-b3f7cef02ff8: 'Resize: width 0500px' # Resize: width 0500px
@@ -107,13 +122,16 @@ meta:
     65570146-7afc-432e-9890-2cb116aa66ac: Link # Link
     67373325-a234-485a-a635-26dee1e7f325: 'Project Links' # Project Links
     80466913-dc6f-46d5-8013-a55f3a7358da: Sponsors # Sponsors
+    a05e468d-5063-4f3a-8ea3-aa240eebc1bf: Newsletter # Newsletter
     a06eff6a-35ff-45b1-9c02-c6ef2f3f948c: 'Project Rounds' # Project Rounds
+    ad1324f8-1337-475f-8516-ab1e13543027: Intro # Intro
     ad6378ef-e24f-4541-9819-1a644a3dd8c4: 'Nav Links' # Nav Links
     af0bbe1c-3613-4775-8a01-965b68d4e56e: English # English
     af427185-4826-4e80-bd57-096797b92f4b: Project # Project
     b44bb4f4-87a6-47c4-ae20-f1594e9a775b: 'Blog Teaser' # Blog Teaser
     b99ee1fe-b466-49ac-8315-43d2af7587e1: Uploads # Uploads
     b629c55a-8642-44db-a823-26783a25058b: Footer # Footer
+    bdc78be0-ab3b-4c52-9657-0eaaff1208e9: 'Blog Categories' # Blog Categories
     c0e7400b-5611-4a34-bc52-4cd0edc31e41: Sites # Sites
     c03eff61-59aa-491d-bfa0-db442637813a: Article # Article
     c8c2dcfa-75cb-423f-9565-b550807d0e7e: 'Resize: width 1500px' # Resize: width 1500px
@@ -125,17 +143,20 @@ meta:
     cff97bfa-6eb7-473b-97c0-cc3af58c0f64: 'Article ID' # Article ID
     d5397ea9-1d37-4f12-bf41-46082d130bd8: Image # Image
     d42896d4-04a6-4211-8d97-f265c27a3be1: 'Inclusive Sans – Semibold (Italic)' # Inclusive Sans – Semibold (Italic)
+    d99528c4-136b-413c-9799-56fd20edd2c6: Headline # Headline
     ddc3aedf-983b-4fa7-81eb-69fd761d71af: German # German
     de820dbc-bd7e-4a0f-9554-3d750480d2a4: Projects # Projects
     eb089684-4134-4cd9-a60d-4aaac63db8f4: Link # Link
     ed187804-9da6-4b7d-b983-1c751ac7a3ab: 'Tracking Body' # Tracking Body
     eec7038e-53af-4299-bf11-db14e0fbd073: 'Generic Page' # Generic Page
+    f2fe1c5e-9903-41ca-a1b9-45815959a6ef: 'Newsletter Link Group' # Newsletter Link Group
     f4a87b3f-ed6d-49ce-8753-05dda85942a6: 'Project Status' # Project Status
     f81cb75d-92f5-44c4-89bd-673d8c8ee15c: 'Sponsors Headline' # Sponsors Headline
     f81e8821-286e-4e07-86f6-54880a45eafe: 'Project Team Members' # Project Team Members
     f7486108-7a41-4ff3-83e8-34c2b334e19f: Links # Links
     fb0276f2-1481-401a-b813-05bac05b0218: Settings # Settings
-    fdce3d41-b225-460c-85ea-1908f71ba724: 'Newsletter Text' # Newsletter Text
+    fc819c64-6715-4ac6-8573-d5c49ab5420e: 'Newsletter Text' # Newsletter Text
+    fdce3d41-b225-460c-85ea-1908f71ba724: 'Newsletter Secondary Text' # Newsletter Secondary Text
     fe4cc5ff-86a2-4944-a119-aae5f36fa127: 'Surt – Bold' # Surt – Bold
 plugins:
   blitz:

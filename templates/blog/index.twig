@@ -1,18 +1,11 @@
 {% extends "_layouts/layout.twig" %}
 
-{% set articlesQuery = craft.entries.section("blog").limit(15) %}
-{% paginate articlesQuery as pagination, articles %}
+{% set articlesQuery = craft.entries.section("blog") %}
 
 {% block content %}
-  <div class="max-w-4xl mx-auto px-2 md:px-4 lg:px-6 pb-2 md:pb-4 lg:pb-6">
-    {% include "_rich-text/standard" with { text: "<h1>#{'Our blog'|t}</h1>" } only %}
-    <div class="my-4">
-      {% if articles|length %}
-        {% include "blog/_modules/teasers-list" with { articles: articles } only %}
-      {% else %}
-        {% include "_rich-text/standard" with { text: "<p>#{'No entries yet. Create some in the CMS!'|t}</p>" } only %}
-      {% endif %}
-    </div>
-    {% include "_modules/pagination" with { pagination: pagination } only %}
-  </div>
+  {% include "blog/_modules/overview-page" with {
+    articlesQuery: articlesQuery,
+    indexEntry: entry,
+    entry
+  } only %}
 {% endblock %}

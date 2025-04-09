@@ -1,0 +1,25 @@
+columnSuffix: null
+handle: newsletterLinks
+instructions: null
+name: 'Newsletter Links'
+searchable: false
+settings:
+  createButtonLabel: 'Link Group'
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - f2fe1c5e-9903-41ca-a1b9-45815959a6ef # Newsletter Link Group
+  includeTableView: false
+  maxEntries: 3
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

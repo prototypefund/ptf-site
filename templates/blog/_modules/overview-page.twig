@@ -1,0 +1,49 @@
+{% paginate articlesQuery.limit(14) as pagination, articles %}
+
+{% set totalArticles = articlesQuery.count() %}
+{% set categories = craft.categories.group("blogCategories").all() %}
+
+{% set headline = entry.headline|default(indexEntry.headline)|default(indexEntry.title) %}
+{% set intro = entry.intro|default(indexEntry.intro) %}
+{% set link = entry.genericLink|default(indexEntry.genericLink) %}
+
+{% include "_modules/header" with {
+  headline,
+  intro,
+  link,
+  background: entry.headerBackground.value
+} only %}
+
+<div class="mt-5 md:mt-9 mb-5 px-2 md:px-5">
+  <h2 class="mb-3 md:mb-5 last:mb-0 font-surt text-head-22 md:text-head-28">
+    {{ "All Articles"|t }} <span class=" text-rich-blue">[{{ totalArticles }}]</span>
+  </h2>
+
+  {% if categories|length %}
+    <div id="list">
+      <h3 class="text-body-16 text-gray-200 md:text-body-18 mb-2.5">
+        {{ "Filter by category"|t }}
+      </h3>
+
+      <ul class="flex gap-1">
+        {% for category in categories %}
+          {% set categoryIsActive = category.id == entry.id %}
+          <a class="rounded-[2px] border px-1 py-0.5 text-body-14 text-gray-200 {{ categoryIsActive ? "bg-gray-200 text-white border-gray-200" : "hover:bg-[#EAEAEB] border-gray-400" }} active:bg-gray-200 active:text-white active:border-gray-200 transition-colors" href="{{ category.url }}#list">
+            {{ category.title }}
+          </a>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+</div>
+
+<div class="px-2 md:px-5 mb-[3.75rem] md:mb-14">
+  {% include "blog/_modules/teasers-list" with { articles: articles } only %}
+  {% include "_modules/pagination" with { pagination: pagination } only %}
+</div>
+
+{% if entry.modules.count() > 0 %}
+  {% include "_modules/modules" with { entry: entry } %}
+{% else %}
+  {% include "_modules/modules" with { entry: indexEntry } %}
+{% endif %}

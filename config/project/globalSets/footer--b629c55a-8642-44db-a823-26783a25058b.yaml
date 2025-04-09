@@ -53,31 +53,15 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-01T12:50:51+00:00'
-            elementCondition: null
-            fieldUid: b0ebafde-641c-4e2c-9502-7f8890009108
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: b40ddd48-4ddc-455d-8442-cd7caee03ce5
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2025-04-01T13:11:42+00:00'
             elementCondition: null
             fieldUid: 8898a317-df17-4cc9-9475-6376bc29fbd5 # Newsletter Headline
             handle: null
             includeInCards: false
-            instructions: null
+            instructions: 'Leave empty to use the default newsletter headline'
             label: null
             providesThumbs: false
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 67c47be3-9e46-4b2c-963b-f38bd2e2d17d
@@ -87,13 +71,13 @@ fieldLayouts:
           -
             dateAdded: '2025-04-01T13:11:42+00:00'
             elementCondition: null
-            fieldUid: fdce3d41-b225-460c-85ea-1908f71ba724 # Newsletter Text
+            fieldUid: fdce3d41-b225-460c-85ea-1908f71ba724 # Newsletter Secondary Text
             handle: null
             includeInCards: false
-            instructions: null
+            instructions: 'Leave empty to use the default newsletter disclaimer text'
             label: null
             providesThumbs: false
-            required: true
+            required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 4168c514-bd75-4529-bdc5-53eae639db98

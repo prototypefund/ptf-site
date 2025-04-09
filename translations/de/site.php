@@ -2,6 +2,7 @@
 
 return [
   "404!" => "404!",
+  "All Articles" => "Alle Artikel",
   "Blog" => "Blog",
   "Continue reading" => "Weiterlesen",
   "Email address" => "E-Mail-Adresse",
