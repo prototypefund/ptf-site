@@ -19,10 +19,9 @@
     <div class="max-w-64 col-span-11 lg:col-span-7 xl:col-start-9 xl:col-span-5 xl:border-0 relative z-1">
       {% if intro|length %}
         <div class="text-body-18 md:text-body-20 mb-5 last:mb-0">
-          {{ intro|retcon([
-            ['removeEmpty', 'p'],
-            ['attr', 'a', { class: 'border-gray-400 border-sky-blue border-b'}, false],
-          ])|raw }}
+          {% include "_rich-text/simple" with {
+            text: intro
+          } only %}
         </div>
       {% endif %}
 

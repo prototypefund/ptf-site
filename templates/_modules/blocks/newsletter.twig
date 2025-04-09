@@ -5,26 +5,25 @@
 {% set newsletterLinks = module.newsletterLinks.all()|default(newsletter.newsletterLinks.all()) %}
 
 <div class="md:grid md:grid-cols-2 mb-[3.75rem] md:mb-14 bg-gray-100 border-gray-400 border-t border-b">
-  <div class="relative border-gray-400 border-r after:bg-pattern-newsletter after:content-[''] after:absolute after:right-0 after:top-0 after:bottom-3 after:bg-no-repeat after:bg-right-top after:bg-contain after:h-[350px] after:w-[100px]">
+  <div class="relative border-gray-400 border-r after:bg-pattern-newsletter after:content-[''] after:absolute after:right-0 after:top-0 after:bottom-3 after:bg-no-repeat after:bg-right-top after:bg-contain after:h-[21.875rem] after:w-[6.25rem]">
     <div class="pt-4 pl-2 pr-6 md:pl-3 md:pr-12 md:pt-4 mb-3 md:mb-[2.75rem] relative z-1">
       <h4 class="font-surt text-head-24 mb-2">{{ newsletterHeadline }}</h4>
-      {{ newsletterText|retcon([
-        ['removeEmpty', 'p'],
-        ['attr', 'a', { class: 'border-gray-400 border-sky-blue border-b'}, false],
-      ])|raw }}
+
+      {% include "_rich-text/simple" with {
+        text: newsletterText
+      } only %}
     </div>
   </div>
 
   <div class="border-gray-400 border-r md:order-2 relative z-1">
-    <div class="mb-[10px] md:mb-2.5">
+    <div class="mb-[0.63rem] md:mb-2.5">
       {% include "_modules/newsletter-form" only %}
     </div>
 
     <div class="pl-2 pr-6 md:pl-3 md:pr-12 mb-3 md:mb-0 md:pb-[3.875rem] text-body-12 md:text-body-14 text-gray-200">
-      {{ newsletterSecondaryText|retcon([
-        ['removeEmpty', 'p'],
-        ['attr', 'a', { class: 'border-gray-400 border-sky-blue border-b'}, false],
-      ])|raw }}
+      {% include "_rich-text/simple" with {
+        text: newsletterSecondaryText
+      } only %}
     </div>
   </div>
 
@@ -44,7 +43,7 @@
         {% set isExternal = link.type == "url" %}
         {% set sideInfo = linkGroup.sideInfo %}
 
-        <li class="py-[18px] px-2 md:px-3 flex items-center md:h-[63px] border-gray-400 border-b last:border-0 first:!border-b">
+        <li class="py-[1.13rem] px-2 md:px-3 flex items-center md:h-[3.9375rem] border-gray-400 border-b last:border-0 first:!border-b">
           {{ tag('a', {
             class: 'text-gray-200',
             href: link.value,
@@ -54,7 +53,7 @@
           }) }}
 
           {% if sideInfo %}
-            <span class="ml-auto uppercase text-gray-500 text-[13px]">{{ sideInfo }}</span>
+            <span class="ml-auto uppercase text-gray-500 text-body-13">{{ sideInfo }}</span>
           {% endif %}
         </li>
       {% endif %}

@@ -16,10 +16,9 @@
         </svg>
       </a>
 
-      {{ footerDescription|retcon([
-        ['removeEmpty', 'p'],
-        ['attr', 'a', { class: 'border-gray-400 border-sky-blue border-b'}, false],
-      ])|raw }}
+      {% include "_rich-text/simple" with {
+        text: footerDescription
+      } only %}
     </div>
 
     <div class="pt-2.5 md:pt-5 pb-2.5 md:pb-3 border-gray-400 border-t md:border-t-0 md:border-r last:md:border-r-0">
@@ -30,10 +29,9 @@
       </div>
 
       <div class="px-2 md:px-3 text-body-14 text-gray-200">
-        {{ newsletterSecondaryText|retcon([
-          ['removeEmpty', 'p'],
-          ['attr', 'a', { class: 'border-gray-400 border-sky-blue border-b'}, false],
-        ])|raw }}
+        {% include "_rich-text/simple" with {
+          text: newsletterSecondaryText
+        } only %}
       </div>
     </div>
 
