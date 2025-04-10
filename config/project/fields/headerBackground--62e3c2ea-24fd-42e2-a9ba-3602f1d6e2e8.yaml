@@ -39,6 +39,39 @@ settings:
         -
           - default
           - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Light Blue Background / Dark Blue Pattern'
+        -
+          - value
+          - lightBlueBackgroundDarkBluePattern
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Rich Blue Background / Dark Pink Pattern'
+        -
+          - value
+          - richBlueBackgroundDarkPinkPattern
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Navy Blue Background / Light Blue Pattern'
+        -
+          - value
+          - navyBlueBackgroundLightBluePattern
+        -
+          - default
+          - ''
 translationKeyFormat: null
 translationMethod: none
 type: craft\fields\RadioButtons

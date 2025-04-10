@@ -1,15 +1,133 @@
 {% extends "_layouts/layout.twig" %}
 
-{% set projectsQuery = craft.entries.section("projects").limit(20) %}
-{% paginate projectsQuery as pagination, projects %}
+{% set queryString = craft.app.request.queryString %}
+{% set params = {} %}
+
+{% if queryString %}
+  {% for pair in queryString|split('&') %}
+    {% if pair %}
+      {% set parts = pair|split('=') %}
+      {% set key = parts[0] %}
+      {% set value = parts[1] is defined ? parts[1] : null %}
+
+      {% if params[key] is defined %}
+        {% set params = params|merge({ (key): params[key]|merge([value]) }) %}
+      {% else %}
+        {% set params = params|merge({ (key): [value] }) %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
 
 {% block content %}
+  {% if params|length %}
+    {% set yearGroupParams = params["year-group"]|default([]) %}
+    {% set yearGroups = yearGroupParams|length
+      ? craft.categories.group('projectYearGroups').slug(yearGroupParams)
+      : null
+    %}
+
+    {% set roundParams = params["round"]|default([]) %}
+    {% set rounds = roundParams|length
+      ? craft.categories.group('projectRounds').slug(roundParams)
+      : null
+    %}
+
+    {% set topicParams = params["topic"]|default([]) %}
+    {% set topics = topicParams|length
+      ? craft.categories.group('projectTopics').slug(topicParams)
+      : null
+    %}
+
+    {% set technologyParams = params["technology"]|default([]) %}
+    {% set technology = technologyParams|length
+      ? craft.categories.group('projectTechnologies').slug(technologyParams)
+      : null
+    %}
+
+    {% set projectsQuery = craft.entries.section("projects")
+      .relatedTo(yearGroups)
+      .andRelatedTo(rounds)
+      .andRelatedTo(topics)
+      .andRelatedTo(technology)
+      .with([
+        'projectYearGroups',
+        'projectRounds',
+        'projectTopics',
+        'projectTechnologies'
+      ])
+      .limit(20)
+    %}
+  {% else %}
+    {% set projectsQuery = craft.entries.section("projects")
+      .with([
+        'projectYearGroups',
+        'projectRounds',
+        'projectTopics',
+        'projectTechnologies'
+      ])
+      .limit(20)
+    %}
+  {% endif %}
+
+  {% paginate projectsQuery as pagination, projects %}
+
   {% include "_modules/header" with {
     headline: entry.headline|default(entry.title),
     intro: entry.intro,
     link: entry.genericLink,
     background: entry.headerBackground.value
   } only %}
+
+  <div id="list" class="mt-10 md:mt-9 mb-5 px-2 md:px-5">
+    <div class="mb-4 pt-[10px] border-gray-400 border-t">
+      <h3 class="text-body-14 uppercase mb-2">
+        {{ "Year Groups (from 2025)"|t }}
+      </h3>
+
+      {% include "_modules/projects-filter" with {
+        key: "year-group",
+        categories: craft.categories.group("projectYearGroups").all(),
+        params,
+      } only %}
+    </div>
+
+    <div class="mb-4 pt-[10px] border-gray-400 border-t">
+      <h3 class="text-body-14 uppercase mb-2">
+        {{ "Rounds (2016 – 2025)"|t }}
+      </h3>
+
+      {% include "_modules/projects-filter" with {
+        key: "round",
+        categories: craft.categories.group("projectRounds").all(),
+        params,
+      } only %}
+    </div>
+
+    <div class="mb-4 pt-[10px] border-gray-400 border-t">
+      <h3 class="text-body-14 uppercase mb-2">
+        {{ "Topics"|t }}
+      </h3>
+
+      {% include "_modules/projects-filter" with {
+        key: "topic",
+        categories: craft.categories.group("projectTopics").all(),
+        params,
+      } only %}
+    </div>
+
+    <div class="mb-4 pt-[10px] border-gray-400 border-t">
+      <h3 class="text-body-14 uppercase mb-2">
+        {{ "Technologies"|t }}
+      </h3>
+
+      {% include "_modules/projects-filter" with {
+        key: "technology",
+        categories: craft.categories.group("projectTechnologies").all(),
+        params,
+      } only %}
+    </div>
+  </div>
 
   <div class="max-w-4xl mx-auto px-2 md:px-4 lg:px-6 pb-2 md:pb-4 lg:pb-6 mt-6">
     {% include "_rich-text/standard" with { text: "<h1>#{'Our projects'|t}</h1>" } only %}
@@ -20,6 +138,9 @@
         {% include "_rich-text/standard" with { text: "<p>#{'No entries yet. Create some in the CMS!'|t}</p>" } only %}
       {% endif %}
     </div>
-    {% include "_modules/pagination" with { pagination: pagination } only %}
+    {% include "_modules/pagination" with {
+      pagination,
+      params
+    } only %}
   </div>
 {% endblock %}

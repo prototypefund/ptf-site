@@ -43,12 +43,12 @@ name: 'Project Technologies'
 siteSettings:
   af0bbe1c-3613-4775-8a01-965b68d4e56e: # English
     hasUrls: true
-    template: project-technologies/_category.twig
-    uriFormat: 'project-technologies/{slug}'
+    template: projects/_category.twig
+    uriFormat: 'projects/{slug}'
   ddc3aedf-983b-4fa7-81eb-69fd761d71af: # German
     hasUrls: true
-    template: project-technologies/_category.twig
-    uriFormat: 'project-technologies/{slug}'
+    template: projects/_category.twig
+    uriFormat: 'projects/{slug}'
 structure:
   maxLevels: 1
   uid: 3e288ef4-eb1d-428b-9577-909cb0cf7ec9

@@ -1,6 +1,6 @@
 defaultPlacement: end
 fieldLayouts:
-  3c3603cd-00f7-4133-abe5-cd2ae7075295:
+  19db7c15-f464-44b3-8068-dc525e1d79a9:
     tabs:
       -
         elementCondition: null
@@ -10,7 +10,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-03-10T15:25:36+00:00'
+            dateAdded: '2025-04-10T15:39:05+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -31,24 +31,24 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\TitleField
-            uid: 610b4122-e90d-44d1-af8b-2008c3cac3df
+            uid: a671a193-6bf0-4060-90d0-6016a628f600
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: e1044590-32ca-4e22-a3d1-e39334e50fa9
+        uid: a619d16d-9386-49c8-90f7-52718226833f
         userCondition: null
-handle: projectTopics
-name: 'Project Topics'
+handle: projectYearGroups
+name: 'Project Year Groups'
 siteSettings:
   af0bbe1c-3613-4775-8a01-965b68d4e56e: # English
     hasUrls: true
-    template: project-topics/_category.twig
-    uriFormat: 'projects/{slug}'
+    template: project-year-groups/_category.twig
+    uriFormat: 'project-year-groups/{slug}'
   ddc3aedf-983b-4fa7-81eb-69fd761d71af: # German
     hasUrls: true
-    template: project-topics/_category.twig
-    uriFormat: 'projects/{slug}'
+    template: project-year-groups/_category.twig
+    uriFormat: 'project-year-groups/{slug}'
 structure:
-  maxLevels: 1
-  uid: fe79925f-a854-469b-aa29-2b998ceab6d0
+  maxLevels: null
+  uid: 13c66926-5fac-4096-a2f3-05efcfe40391

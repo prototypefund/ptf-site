@@ -18,10 +18,13 @@ return [
   "Projects" => "Projekte",
   "Return to homepage" => "Zurück zur Homepage",
   "Round: {round}" => "Runde: {round}",
+  "Rounds (2016 – 2025)" => "Runden (2016 – 2025)",
   "Register" => "Anmelden",
   "Switch to dark mode" => "Zum dunklen Modus wechseln",
   "Switch to light mode" => "Zum hellen Modus wechseln",
   "Team Members" => "Team-Mitglieder",
+  "Technologies" => "Technologien",
   "This is a pre-configured <a href='https://www.craftcms.com'>Craft CMS</a> installation, created by <a href='https://www.village.one'>Village One</a>. Please check out the Readme in the project root or on Github for first steps." => "Dies ist eine vorkonfigurierte <a href='https://www.craftcms.com'>Craft CMS</a>-Installation, erstellt von <a href='https://www.village.one'>Village One</a>. Eine kurze Einführung gibt es in der Readme-Datei im Dateisystem oder auf Github.",
+  "Topics" => "Themen",
   "Welcome!" => "Willkommen!",
 ];
