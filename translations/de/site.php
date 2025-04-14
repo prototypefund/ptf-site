@@ -21,6 +21,7 @@ return [
   "Project Status: {status}" => "Projekt-Status: {status}",
   "Projects" => "Projekte",
   "Return to homepage" => "Zurück zur Homepage",
+  "Reset filters" => "Filter zurücksetzen",
   "Round: {round}" => "Runde: {round}",
   "Rounds (2016 – 2025)" => "Runden (2016 – 2025)",
   "Register" => "Anmelden",
