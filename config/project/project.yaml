@@ -1,4 +1,4 @@
-dateModified: 1744648394
+dateModified: 1744665341
 elementSources:
   craft\elements\Entry:
     -
@@ -99,6 +99,7 @@ meta:
     018c8387-bc84-4c1c-ae3a-186233bcf754: 'Secondary Footer Links' # Secondary Footer Links
     28f95d3d-986f-41ed-b23b-c2f3b747c2eb: Homepage # Homepage
     29d80674-cc17-4976-ad67-b3f611a07dc2: 'Events Index' # Events Index
+    33c3763c-9f38-4c39-bebd-48bbec68e094: 'Header Alignment' # Header Alignment
     34dc108f-02bd-42cb-9481-0693c7bc32b4: 'Tracking Head' # Tracking Head
     58b0cfc4-a7f2-491d-a49a-a29faaacedf3: 'Inclusive Sans – Regular' # Inclusive Sans – Regular
     62e3c2ea-24fd-42e2-a9ba-3602f1d6e2e8: 'Header Background' # Header Background
