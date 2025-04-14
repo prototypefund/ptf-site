@@ -1,4 +1,4 @@
-dateModified: 1744299862
+dateModified: 1744632560
 elementSources:
   craft\elements\Entry:
     -
@@ -146,6 +146,7 @@ meta:
     d5397ea9-1d37-4f12-bf41-46082d130bd8: Image # Image
     d42896d4-04a6-4211-8d97-f265c27a3be1: 'Inclusive Sans – Semibold (Italic)' # Inclusive Sans – Semibold (Italic)
     d99528c4-136b-413c-9799-56fd20edd2c6: Headline # Headline
+    da7ab602-1ed1-46b0-9e1c-5ec3a6e60c92: 'Project Teaser' # Project Teaser
     ddc3aedf-983b-4fa7-81eb-69fd761d71af: German # German
     de820dbc-bd7e-4a0f-9554-3d750480d2a4: Projects # Projects
     eb089684-4134-4cd9-a60d-4aaac63db8f4: Link # Link

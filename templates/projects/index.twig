@@ -83,13 +83,13 @@
     background: entry.headerBackground.value
   } only %}
 
-  <div id="list" class="grid grid-cols-12 lg:grid-cols-16 mt-10 md:mt-9 mb-[3.75rem] md:mb-14 px-2 md:px-5">
-    <div class="col-span-4" style="border: 1px solid red;">
+  <div id="list" class="items-start grid grid-cols-12 lg:grid-cols-16 mt-10 md:mt-9 mb-[3.75rem] md:mb-14 px-2 md:px-5">
+    <div class="col-span-4 sticky top-[1em]">
       <h2 class="mb-3 font-surt text-head-24">
         {{ "Filter projects"|t }}
       </h2>
 
-      <div class="mb-4 pt-[10px] border-gray-400 border-t">
+      <div class="mb-4 pt-[0.625rem] border-gray-400 border-t">
         <h3 class="text-body-14 uppercase mb-2">
           {{ "Funding status"|t }}
         </h3>
@@ -102,7 +102,7 @@
         } only %}
       </div>
 
-      <div class="mb-4 pt-[10px] border-gray-400 border-t">
+      <div class="mb-4 pt-[0.625rem] border-gray-400 border-t">
         <h3 class="text-body-14 uppercase mb-2">
           {{ "Year Groups (from 2025)"|t }}
         </h3>
@@ -114,7 +114,7 @@
         } only %}
       </div>
 
-      <div class="mb-4 pt-[10px] border-gray-400 border-t">
+      <div class="mb-4 pt-[0.625rem] border-gray-400 border-t">
         <h3 class="text-body-14 uppercase mb-2">
           {{ "Rounds (2016 – 2025)"|t }}
         </h3>
@@ -126,7 +126,7 @@
         } only %}
       </div>
 
-      <div class="mb-4 pt-[10px] border-gray-400 border-t">
+      <div class="mb-4 pt-[0.625rem] border-gray-400 border-t">
         <h3 class="text-body-14 uppercase mb-2">
           {{ "Topics"|t }}
         </h3>
@@ -138,7 +138,7 @@
         } only %}
       </div>
 
-      <div class="mb-4 pt-[10px] border-gray-400 border-t">
+      <div class="mb-4 pt-[0.625rem] border-gray-400 border-t">
         <h3 class="text-body-14 uppercase mb-2">
           {{ "Technologies"|t }}
         </h3>
@@ -151,10 +151,10 @@
       </div>
     </div>
 
-    <div class="col-start-6 col-span-11" style="border: 1px solid red;">
+    <div class="col-start-6 col-span-11">
       <div class=" mb-3.5 md:mb-5 flex items-center">
-        <h2 class="font-surt text-[20px] md:text-head-24">
-          {{ params|length ? "Matching Projects"|t : "All Projects"|t }} <span class=" text-rich-blue">[{{ projectsQuery.count() }}]</span>
+        <h2 class="font-surt text-head-20 md:text-head-24">
+          {{ params|length ? "Matching Projects"|t : "All Projects"|t }} <span class="text-rich-blue">[{{ projectsQuery.count() }}]</span>
         </h2>
 
         {% if params|length %}
@@ -164,11 +164,11 @@
 
       {% if projects|length %}
         {% include "projects/_modules/teasers-list" with { projects: projects } only %}
-      {% endif %}
-      {% include "_modules/pagination" with {
-        pagination,
-        params
-      } only %}
+        {% include "_modules/pagination" with {
+          pagination,
+          params
+        } only %}
+        {% endif %}
     </div>
   </div>
 
