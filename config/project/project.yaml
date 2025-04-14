@@ -1,4 +1,4 @@
-dateModified: 1744648393
+dateModified: 1744648394
 elementSources:
   craft\elements\Entry:
     -
@@ -166,7 +166,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: E3FLHMS038ASYZCMOT1N7IBT
-    schemaVersion: 5.9.0
+    schemaVersion: 5.10.0
     settings:
       apiKey: ''
       cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
