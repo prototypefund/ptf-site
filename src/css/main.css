@@ -74,8 +74,14 @@
   --background-image-close: url("/static/images/icons/close.svg");
   --background-image-tick-white: url("/static/images/icons/tick-white.svg");
   --background-image-pattern-tr-sky-blue: url("/static/images/patterns/bg-pattern-tr-sky-blue.svg");
+  --background-image-pattern-tl-sky-blue: url("/static/images/patterns/bg-pattern-tl-sky-blue.svg");
+  --background-image-pattern-br-sky-blue: url("/static/images/patterns/bg-pattern-br-sky-blue.svg");
   --background-image-pattern-tr-light-blue: url("/static/images/patterns/bg-pattern-tr-light-blue.svg");
+  --background-image-pattern-tl-light-blue: url("/static/images/patterns/bg-pattern-tl-light-blue.svg");
+  --background-image-pattern-br-light-blue: url("/static/images/patterns/bg-pattern-br-light-blue.svg");
   --background-image-pattern-tr-hot-pink: url("/static/images/patterns/bg-pattern-tr-hot-pink.svg");
+  --background-image-pattern-tl-hot-pink: url("/static/images/patterns/bg-pattern-tl-hot-pink.svg");
+  --background-image-pattern-br-hot-pink: url("/static/images/patterns/bg-pattern-br-hot-pink.svg");
   --background-image-pattern-newsletter: url("/static/images/patterns/bg-pattern-newsletter.svg");
 }
 
