@@ -8,12 +8,15 @@
     {% if pair %}
       {% set parts = pair|split('=') %}
       {% set key = parts[0] %}
-      {% set value = parts[1] is defined ? parts[1] : null %}
 
-      {% if params[key] is defined %}
-        {% set params = params|merge({ (key): params[key]|merge([value]) }) %}
-      {% else %}
-        {% set params = params|merge({ (key): [value] }) %}
+      {% if key != "p" %}
+        {% set value = parts[1] is defined ? parts[1] : null %}
+
+        {% if params[key] is defined %}
+          {% set params = params|merge({ (key): params[key]|merge([value]) }) %}
+        {% else %}
+          {% set params = params|merge({ (key): [value] }) %}
+        {% endif %}
       {% endif %}
     {% endif %}
   {% endfor %}
@@ -81,8 +84,8 @@
     background: entry.headerBackground.value
   } only %}
 
-  <div id="list" class="lg:items-start md:grid md:grid-cols-12 lg:grid-cols-16 mt-5 md:mt-9 mb-[6.25rem] md:mb-14 px-2 md:px-5">
-    <div class="hidden md:block md:col-span-3 lg:col-span-4 lg:sticky top-[1em]">
+  <div id="list" class="md:grid md:grid-cols-12 lg:grid-cols-16 mt-5 md:mt-9 mb-[6.25rem] md:mb-14 px-2 md:px-5">
+    <div class="hidden md:block md:col-span-3 lg:col-span-4">
       <h2 class="mb-3 font-surt text-head-24">
         {{ "Filter projects"|t }}
       </h2>
