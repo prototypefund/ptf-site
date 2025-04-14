@@ -165,7 +165,10 @@
       </div>
 
       {% if projects|length %}
-        {% include "projects/_modules/teasers-list" with { projects: projects } only %}
+        {% for project in projects %}
+          {{ project.render() }}
+        {% endfor %}
+
         {% include "_modules/pagination" with {
           pagination,
           params

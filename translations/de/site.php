@@ -9,6 +9,7 @@ return [
   "Email address" => "E-Mail-Adresse",
   "Home" => "Startseite",
   "Filter projects" => "Projekte filtern",
+  "Filter by category" => "Nach Kategorie filtern",
   "Links" => "Links",
   "More articles" => "Mehr Artikel",
   "No projects found." => "Keine Projekte gefunden.",

@@ -1,0 +1,58 @@
+{% extends "_layouts/layout.twig" %}
+
+{% set projectsQuery = craft.entries.section("projects").relatedTo(category) %}
+{% set indexEntry = craft.entries.section("projectsIndex").one() %}
+
+{% paginate projectsQuery.limit(14) as pagination, projects %}
+
+{% set categories = craft.categories.group(category.group.handle).all() %}
+
+{% set headline = category.headline|default(indexEntry.headline)|default(indexEntry.title) %}
+{% set intro = category.intro|default(indexEntry.intro) %}
+{% set link = category.genericLink|default(indexEntry.genericLink) %}
+
+{% block content %}
+  {% include "_modules/header" with {
+    headline,
+    intro,
+    link,
+    background: category.headerBackground.value
+  } only %}
+
+  <div class="mt-5 md:mt-9 mb-5 px-2 md:px-5">
+    <h2 class="mb-3 md:mb-5 last:mb-0 font-surt text-head-22 md:text-head-28">
+      {{ "Artikel"|t }} <span class=" text-rich-blue">[{{ projectsQuery.count() }}]</span>
+    </h2>
+
+    {% if categories|length %}
+      <div id="list">
+        <h3 class="text-body-16 text-gray-200 md:text-body-18 mb-2.5">
+          {{ "Filter by category"|t }}
+        </h3>
+
+        {% include "_modules/filters" with {
+          filters: categories|map((c) => c|merge({
+            url: c.url ~ "#list",
+            isActive: c.id == category.id
+          }))
+        } only %}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="px-2 md:px-5 mb-[6.25rem] md:mb-14">
+    {% if projects|length %}
+      {% include "blog/_modules/teasers-list" with { articles: projects } only %}
+      {% include "_modules/pagination" with { pagination: pagination } only %}
+    {% else %}
+      {{ "No projects found."|t }}
+    {% endif %}
+  </div>
+
+  {% if category.modules.count() > 0 %}
+    {% include "_modules/modules" with { entry: category } %}
+  {% else %}
+    {% include "_modules/modules" with { entry: indexEntry } %}
+  {% endif %}
+{% endblock %}
+
