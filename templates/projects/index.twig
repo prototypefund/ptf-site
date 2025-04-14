@@ -19,6 +19,8 @@
   {% endfor %}
 {% endif %}
 
+{% set projectsQuery = craft.entries.section("projects") %}
+
 {% if params|length %}
   {% set statusParams = params["status"]|default([]) %}
   {% set yearGroupParams = params["year-group"]|default([]) %}
@@ -52,32 +54,30 @@
     ]) %}
   {% endif %}
 
-  {% set projectsQuery = craft.entries.section("projects")
-    .relatedTo(['or']|merge(relationParams))
-    .with([
-      'projectYearGroups',
-      'projectRounds',
-      'projectTopics',
-      'projectTechnologies'
-    ])
-    .limit(20)
-  %}
-{% else %}
-  {% set projectsQuery = craft.entries.section("projects")
-    .with([
-      'projectYearGroups',
-      'projectRounds',
-      'projectTopics',
-      'projectTechnologies'
-    ])
-    .limit(20)
-  %}
+  {% if statusParams|length %}
+    {% set projectsQuery = projectsQuery.projectStatus(statusParams) %}
+  {% endif %}
+
+  {% if relationParams|length %}
+    {% set projectsQuery = projectsQuery.relatedTo(['or']|merge(relationParams)) %}
+  {% endif %}
 {% endif %}
+
+{% set projectsQuery = projectsQuery
+  .with([
+    'projectYearGroups',
+    'projectRounds',
+    'projectTopics',
+    'projectTechnologies'
+  ])
+  .limit(20)
+%}
 
 {% paginate projectsQuery as pagination, projects %}
 
 {% block content %}
   {{ projectsQuery.count() }}
+
   {% include "_modules/header" with {
     headline: entry.headline|default(entry.title),
     intro: entry.intro,
