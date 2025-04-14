@@ -38,6 +38,8 @@
   --text-head-22--line-height: 1.4;
   --text-head-20: calc(20 / 16 * 1rem);
   --text-head-20--line-height: 1.2;
+  --text-head-16: calc(16 / 16 * 1rem);
+  --text-head-16--line-height: 1.2;
 
   --text-body-24: calc(24 / 16 * 1rem);
   --text-body-24--line-height: 1.5;
@@ -60,6 +62,8 @@
   --text-ui-14--line-height: 1;
   --text-ui-13: calc(13 / 16 * 1rem);
   --text-ui-13--line-height: 1;
+  --text-ui-11: calc(11 / 16 * 1rem);
+  --text-ui-11--line-height: 1;
 
   --font-sans: "Inclusive Sans", Helvetica, Arial, sans-serif;
   --font-surt: "Surt", Helvetica, Arial, sans-serif;

@@ -21,46 +21,44 @@
 
 {% set projectsQuery = craft.entries.section("projects") %}
 
-{% if params|length %}
-  {% set statusParams = params["status"]|default([]) %}
-  {% set yearGroupParams = params["year-group"]|default([]) %}
-  {% set roundParams = params["round"]|default([]) %}
-  {% set topicParams = params["topic"]|default([]) %}
-  {% set technologyParams = params["technology"]|default([]) %}
+{% set statusParams = params["status"]|default([]) %}
+{% set yearGroupParams = params["year-group"]|default([]) %}
+{% set roundParams = params["round"]|default([]) %}
+{% set topicParams = params["topic"]|default([]) %}
+{% set technologyParams = params["technology"]|default([]) %}
 
-  {% set relationParams = [] %}
+{% set relations = [] %}
 
-  {% if yearGroupParams|length %}
-    {% set relationParams = relationParams|merge([
-      { targetElement: craft.categories.group('projectYearGroups').slug(yearGroupParams) }
-    ]) %}
-  {% endif %}
+{% if yearGroupParams|length %}
+  {% set relations = relations|merge([
+    { targetElement: craft.categories.group('projectYearGroups').slug(yearGroupParams) }
+  ]) %}
+{% endif %}
 
-  {% if roundParams|length %}
-    {% set relationParams = relationParams|merge([
-      { targetElement: craft.categories.group('projectRounds').slug(roundParams) }
-    ]) %}
-  {% endif %}
+{% if roundParams|length %}
+  {% set relations = relations|merge([
+    { targetElement: craft.categories.group('projectRounds').slug(roundParams) }
+  ]) %}
+{% endif %}
 
-  {% if topicParams|length %}
-    {% set relationParams = relationParams|merge([
-      { targetElement: craft.categories.group('projectTopics').slug(topicParams) }
-    ]) %}
-  {% endif %}
+{% if topicParams|length %}
+  {% set relations = relations|merge([
+    { targetElement: craft.categories.group('projectTopics').slug(topicParams) }
+  ]) %}
+{% endif %}
 
-  {% if technologyParams|length %}
-    {% set relationParams = relationParams|merge([
-      { targetElement: craft.categories.group('projectTechnologies').slug(technologyParams) }
-    ]) %}
-  {% endif %}
+{% if technologyParams|length %}
+  {% set relations = relations|merge([
+    { targetElement: craft.categories.group('projectTechnologies').slug(technologyParams) }
+  ]) %}
+{% endif %}
 
-  {% if statusParams|length %}
-    {% set projectsQuery = projectsQuery.projectStatus(statusParams) %}
-  {% endif %}
+{% if statusParams|length %}
+  {% set projectsQuery = projectsQuery.projectStatus(statusParams) %}
+{% endif %}
 
-  {% if relationParams|length %}
-    {% set projectsQuery = projectsQuery.relatedTo(['or']|merge(relationParams)) %}
-  {% endif %}
+{% if relations|length %}
+  {% set projectsQuery = projectsQuery.relatedTo(['or']|merge(relations)) %}
 {% endif %}
 
 {% set projectsQuery = projectsQuery
@@ -83,8 +81,8 @@
     background: entry.headerBackground.value
   } only %}
 
-  <div id="list" class="items-start grid grid-cols-12 lg:grid-cols-16 mt-10 md:mt-9 mb-[3.75rem] md:mb-14 px-2 md:px-5">
-    <div class="col-span-4 sticky top-[1em]">
+  <div id="list" class="lg:items-start md:grid md:grid-cols-12 lg:grid-cols-16 mt-5 md:mt-9 mb-[6.25rem] md:mb-14 px-2 md:px-5">
+    <div class="hidden md:block md:col-span-3 lg:col-span-4 lg:sticky top-[1em]">
       <h2 class="mb-3 font-surt text-head-24">
         {{ "Filter projects"|t }}
       </h2>
@@ -151,14 +149,16 @@
       </div>
     </div>
 
-    <div class="col-start-6 col-span-11">
-      <div class=" mb-3.5 md:mb-5 flex items-center">
+    <div class="md:col-start-5 md:col-span-12 lg:col-start-6 lg:col-span-11">
+      <div class="mb-[1.875rem] md:mb-5 md:flex md:items-center">
         <h2 class="font-surt text-head-20 md:text-head-24">
           {{ params|length ? "Matching Projects"|t : "All Projects"|t }} <span class="text-rich-blue">[{{ projectsQuery.count() }}]</span>
         </h2>
 
         {% if params|length %}
-          <a class="ml-auto uppercase text-ui-16 flex items-center gap-[0.625rem] after:block after:content-[''] after:h-[1.125rem] after:w-[1.125rem] after:bg-close after:bg-center after:bg-no-repeat" href="{{ '/' ~ craft.app.request.pathInfo }}">{{ "Reset filters"|t }}</a>
+          <div>
+            <a class="ml-auto uppercase text-ui-16 flex items-center gap-[0.625rem] after:block after:content-[''] after:h-[1.125rem] after:w-[1.125rem] after:bg-close after:bg-center after:bg-no-repeat" href="{{ '/' ~ craft.app.request.pathInfo }}">{{ "Reset filters"|t }}</a>
+          </div>
         {% endif %}
       </div>
 
