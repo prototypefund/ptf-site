@@ -9,12 +9,3 @@
   {% set imageSizes = [500, 1000, 1500, 2000] %}
   {{ imageSizes|reduce((carry, v) => "#{carry}, #{image.getUrl('w'~v)} #{v}w", "") }}
 {% endapply %}{% endmacro %}
-
-{% macro toQueryString(params) %}{% apply spaceless %}
-  {{ params
-    |map((values, k) => values|map(value => (k ~ '=' ~ value)))
-    |reduce((carry, item) => carry|merge(item), [])
-    |join('&')
-    |raw
-  }}
-{% endapply %}{% endmacro %}
