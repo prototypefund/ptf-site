@@ -13,6 +13,8 @@
   --color-gray-100: #f5f5f5;
   --color-sky-blue: #49bcf2;
   --color-rich-blue: #171be5;
+  --color-navy-blue: #1a0566;
+  --color-dark-magenta: #7d0e8c;
   --color-pink: #ffd2f5;
   --color-white: #ffffff;
 
@@ -71,9 +73,9 @@
 
   --background-image-close: url("/static/images/icons/close.svg");
   --background-image-tick-white: url("/static/images/icons/tick-white.svg");
-  --background-image-pattern-r-blue: url("/static/images/patterns/bg-pattern-r-blue.svg");
-  --background-image-pattern-r-dark-pink: url("/static/images/patterns/bg-pattern-r-dark-pink.svg");
-  --background-image-pattern-r-light-pink: url("/static/images/patterns/bg-pattern-r-light-pink.svg");
+  --background-image-pattern-r-sky-blue: url("/static/images/patterns/bg-pattern-r-sky-blue.svg");
+  --background-image-pattern-r-light-blue: url("/static/images/patterns/bg-pattern-r-light-blue.svg");
+  --background-image-pattern-r-hot-pink: url("/static/images/patterns/bg-pattern-r-hot-pink.svg");
   --background-image-pattern-newsletter: url("/static/images/patterns/bg-pattern-newsletter.svg");
 }
 

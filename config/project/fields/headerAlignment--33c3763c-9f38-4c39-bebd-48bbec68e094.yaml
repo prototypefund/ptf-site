@@ -1,0 +1,33 @@
+columnSuffix: null
+handle: headerAlignment
+instructions: null
+name: 'Header Alignment'
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - Left
+        -
+          - value
+          - left
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Centre
+        -
+          - value
+          - centre
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\RadioButtons
