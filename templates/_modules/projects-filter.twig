@@ -1,7 +1,4 @@
-{% import '_macros' as macros %}
-
 {% set values = params[key]|default([]) %}
-
 {% set filters = [] %}
 
 {% for category in categories %}
@@ -13,7 +10,12 @@
     : values|merge([slug])
   %}
 
-  {% set newParams = macros.toQueryString(params|merge({(key): newValues})) %}
+  {% set newParams = params|merge({(key): newValues})
+    |map((values, k) => values|map(value => (k ~ '=' ~ value)))
+    |reduce((carry, item) => carry|merge(item), [])
+    |join('&')
+    |raw
+  %}
 
   {% set filters = filters|merge([{
     title: category.title,

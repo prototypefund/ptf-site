@@ -1,0 +1,6 @@
+{% set values = params[key]|default([]) %}
+{% set filters = [] %}
+
+{% set isActive = "inUsage" in values %}
+
+{{ isActive }}

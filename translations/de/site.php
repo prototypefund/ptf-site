@@ -27,4 +27,5 @@ return [
   "This is a pre-configured <a href='https://www.craftcms.com'>Craft CMS</a> installation, created by <a href='https://www.village.one'>Village One</a>. Please check out the Readme in the project root or on Github for first steps." => "Dies ist eine vorkonfigurierte <a href='https://www.craftcms.com'>Craft CMS</a>-Installation, erstellt von <a href='https://www.village.one'>Village One</a>. Eine kurze Einführung gibt es in der Readme-Datei im Dateisystem oder auf Github.",
   "Topics" => "Themen",
   "Welcome!" => "Willkommen!",
+  "Year Groups (from 2025)" => "Jahrgänge (ab 2025)"
 ];

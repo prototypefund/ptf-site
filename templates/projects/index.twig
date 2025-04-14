@@ -19,59 +19,65 @@
   {% endfor %}
 {% endif %}
 
-{% block content %}
-  {% if params|length %}
-    {% set yearGroupParams = params["year-group"]|default([]) %}
-    {% set yearGroups = yearGroupParams|length
-      ? craft.categories.group('projectYearGroups').slug(yearGroupParams)
-      : null
-    %}
+{% if params|length %}
+  {% set statusParams = params["status"]|default([]) %}
+  {% set yearGroupParams = params["year-group"]|default([]) %}
+  {% set roundParams = params["round"]|default([]) %}
+  {% set topicParams = params["topic"]|default([]) %}
+  {% set technologyParams = params["technology"]|default([]) %}
 
-    {% set roundParams = params["round"]|default([]) %}
-    {% set rounds = roundParams|length
-      ? craft.categories.group('projectRounds').slug(roundParams)
-      : null
-    %}
+  {% set relationParams = [] %}
 
-    {% set topicParams = params["topic"]|default([]) %}
-    {% set topics = topicParams|length
-      ? craft.categories.group('projectTopics').slug(topicParams)
-      : null
-    %}
-
-    {% set technologyParams = params["technology"]|default([]) %}
-    {% set technology = technologyParams|length
-      ? craft.categories.group('projectTechnologies').slug(technologyParams)
-      : null
-    %}
-
-    {% set projectsQuery = craft.entries.section("projects")
-      .relatedTo(yearGroups)
-      .andRelatedTo(rounds)
-      .andRelatedTo(topics)
-      .andRelatedTo(technology)
-      .with([
-        'projectYearGroups',
-        'projectRounds',
-        'projectTopics',
-        'projectTechnologies'
-      ])
-      .limit(20)
-    %}
-  {% else %}
-    {% set projectsQuery = craft.entries.section("projects")
-      .with([
-        'projectYearGroups',
-        'projectRounds',
-        'projectTopics',
-        'projectTechnologies'
-      ])
-      .limit(20)
-    %}
+  {% if yearGroupParams|length %}
+    {% set relationParams = relationParams|merge([
+      { targetElement: craft.categories.group('projectYearGroups').slug(yearGroupParams) }
+    ]) %}
   {% endif %}
 
-  {% paginate projectsQuery as pagination, projects %}
+  {% if roundParams|length %}
+    {% set relationParams = relationParams|merge([
+      { targetElement: craft.categories.group('projectRounds').slug(roundParams) }
+    ]) %}
+  {% endif %}
 
+  {% if topicParams|length %}
+    {% set relationParams = relationParams|merge([
+      { targetElement: craft.categories.group('projectTopics').slug(topicParams) }
+    ]) %}
+  {% endif %}
+
+  {% if technologyParams|length %}
+    {% set relationParams = relationParams|merge([
+      { targetElement: craft.categories.group('projectTechnologies').slug(technologyParams) }
+    ]) %}
+  {% endif %}
+
+  {% set projectsQuery = craft.entries.section("projects")
+    .relatedTo(['or']|merge(relationParams))
+    .with([
+      'projectYearGroups',
+      'projectRounds',
+      'projectTopics',
+      'projectTechnologies'
+    ])
+    .limit(20)
+  %}
+{% else %}
+  {% set projectsQuery = craft.entries.section("projects")
+    .with([
+      'projectYearGroups',
+      'projectRounds',
+      'projectTopics',
+      'projectTechnologies'
+    ])
+    .limit(20)
+  %}
+{% endif %}
+
+{% paginate projectsQuery as pagination, projects %}
+
+{% block content %}
+  {{ projectsQuery.count() }}
   {% include "_modules/header" with {
     headline: entry.headline|default(entry.title),
     intro: entry.intro,
@@ -80,6 +86,20 @@
   } only %}
 
   <div id="list" class="mt-10 md:mt-9 mb-5 px-2 md:px-5">
+    <div class="mb-4 pt-[10px] border-gray-400 border-t">
+      <h3 class="text-body-14 uppercase mb-2">
+        {{ "Funding status"|t }}
+      </h3>
+
+      <a href="?status=inUsage">{{ "Show in funding only"|t }}</a>
+
+      {% include "_modules/projects-checkbox" with {
+        key: "status",
+        value: "inUsage",
+        params,
+      } only %}
+    </div>
+
     <div class="mb-4 pt-[10px] border-gray-400 border-t">
       <h3 class="text-body-14 uppercase mb-2">
         {{ "Year Groups (from 2025)"|t }}
