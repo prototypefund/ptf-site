@@ -1,4 +1,4 @@
-dateModified: 1744648065
+dateModified: 1744648393
 elementSources:
   craft\elements\Entry:
     -
@@ -172,8 +172,6 @@ plugins:
       cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
       cacheControlHeaderExpired: 'public, s-maxage=5, max-age=0'
       cacheDuration: null
-      cacheElementQueries: true
-      cacheElements: true
       cacheGeneratorSettings:
         __assoc__:
           -
@@ -196,33 +194,94 @@ plugins:
       defaultCacheControlHeader: 'no-cache, no-store, must-revalidate'
       deployerType: putyourlightson\blitz\drivers\deployers\DummyDeployer
       detectSsiEnabled: true
+      driverJobBatchSize: 100
       driverJobPriority: 100
       esiEnabled: false
       excludedQueryStringParams:
         -
-          enabled: true
-          queryStringParam: gclid
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - queryStringParam
+              - gclid
         -
-          enabled: true
-          queryStringParam: fbclid
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - queryStringParam
+              - fbclid
       excludedUriPatterns:
         -
-          enabled: true
-          uriPattern: knock-knock/who-is-there
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - uriPattern
+              - knock-knock/who-is-there
+        -
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - uriPattern
+              - projects
       generatePagesWithQueryStringParams: true
       hintsEnabled: true
       includedQueryStringParams:
         -
-          enabled: true
-          queryStringParam: '.*'
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - queryStringParam
+              - '.*'
       includedUriPatterns:
         1:
-          enabled: true
-          uriPattern: ''
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - uriPattern
+              - ''
         2:
-          enabled: true
-          uriPattern: '.*'
+          __assoc__:
+            -
+              - enabled
+              - '1'
+            -
+              - siteId
+              - ''
+            -
+              - uriPattern
+              - '.*'
       injectScriptEvent: DOMContentLoaded
+      injectScriptPosition: 3
       integrations:
         - putyourlightson\blitz\drivers\integrations\CommerceIntegration
         - putyourlightson\blitz\drivers\integrations\FeedMeIntegration
@@ -230,11 +289,13 @@ plugins:
       maxRetryAttempts: 10
       maxUriLength: 255
       mutexTimeout: 1
+      onlyCacheLowercaseUris: false
       outputComments: true
       purgeAssetImagesWhenChanged: true
       queryStringCaching: 0
       queueJobTtr: 300
       refreshCacheAutomaticallyForGlobals: true
+      refreshCacheEnabled: true
       refreshCacheJobPriority: 10
       refreshCacheWhenElementMovedInStructure: true
       refreshCacheWhenElementSavedNotLive: false
