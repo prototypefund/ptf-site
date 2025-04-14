@@ -7,6 +7,7 @@
   {% include "blog/_modules/overview-page" with {
     articlesQuery: articlesQuery,
     indexEntry,
-    entry: category
+    entry: category,
+    title: "Matching Articles"|t
   } only %}
 {% endblock %}
