@@ -89,7 +89,7 @@
         {{ "Funding status"|t }}
       </h3>
 
-      {% include "_modules/projects-checkbox" with {
+      {% include "projects/_modules/checkbox-filter" with {
         key: "status",
         value: "inUsage",
         params,
@@ -101,7 +101,7 @@
         {{ "Year Groups (from 2025)"|t }}
       </h3>
 
-      {% include "_modules/projects-filter" with {
+      {% include "projects/_modules/categories-filter" with {
         key: "year-group",
         categories: craft.categories.group("projectYearGroups").all(),
         params,
@@ -113,7 +113,7 @@
         {{ "Rounds (2016 – 2025)"|t }}
       </h3>
 
-      {% include "_modules/projects-filter" with {
+      {% include "projects/_modules/categories-filter" with {
         key: "round",
         categories: craft.categories.group("projectRounds").all(),
         params,
@@ -125,7 +125,7 @@
         {{ "Topics"|t }}
       </h3>
 
-      {% include "_modules/projects-filter" with {
+      {% include "projects/_modules/categories-filter" with {
         key: "topic",
         categories: craft.categories.group("projectTopics").all(),
         params,
@@ -137,7 +137,7 @@
         {{ "Technologies"|t }}
       </h3>
 
-      {% include "_modules/projects-filter" with {
+      {% include "projects/_modules/categories-filter" with {
         key: "technology",
         categories: craft.categories.group("projectTechnologies").all(),
         params,
