@@ -83,80 +83,94 @@
     background: entry.headerBackground.value
   } only %}
 
-  <div id="list" class="mt-10 md:mt-9 mb-5 px-2 md:px-5">
-    <div class="mb-4 pt-[10px] border-gray-400 border-t">
-      <h3 class="text-body-14 uppercase mb-2">
-        {{ "Funding status"|t }}
-      </h3>
+  <div id="list" class="grid grid-cols-12 lg:grid-cols-16 mt-10 md:mt-9 mb-[3.75rem] md:mb-14 px-2 md:px-5">
+    <div class="col-span-4" style="border: 1px solid red;">
+      <h2 class="mb-3 font-surt text-head-24">
+        {{ "Filter projects"|t }}
+      </h2>
 
-      {% include "projects/_modules/checkbox-filter" with {
-        key: "status",
-        value: "inUsage",
-        params,
-      } only %}
+      <div class="mb-4 pt-[10px] border-gray-400 border-t">
+        <h3 class="text-body-14 uppercase mb-2">
+          {{ "Funding status"|t }}
+        </h3>
+
+        {% include "projects/_modules/checkbox-filter" with {
+          key: "status",
+          value: "inUsage",
+          text: "Show in funding only"|t,
+          params,
+        } only %}
+      </div>
+
+      <div class="mb-4 pt-[10px] border-gray-400 border-t">
+        <h3 class="text-body-14 uppercase mb-2">
+          {{ "Year Groups (from 2025)"|t }}
+        </h3>
+
+        {% include "projects/_modules/categories-filter" with {
+          key: "year-group",
+          categories: craft.categories.group("projectYearGroups").all(),
+          params,
+        } only %}
+      </div>
+
+      <div class="mb-4 pt-[10px] border-gray-400 border-t">
+        <h3 class="text-body-14 uppercase mb-2">
+          {{ "Rounds (2016 – 2025)"|t }}
+        </h3>
+
+        {% include "projects/_modules/categories-filter" with {
+          key: "round",
+          categories: craft.categories.group("projectRounds").all(),
+          params,
+        } only %}
+      </div>
+
+      <div class="mb-4 pt-[10px] border-gray-400 border-t">
+        <h3 class="text-body-14 uppercase mb-2">
+          {{ "Topics"|t }}
+        </h3>
+
+        {% include "projects/_modules/categories-filter" with {
+          key: "topic",
+          categories: craft.categories.group("projectTopics").all(),
+          params,
+        } only %}
+      </div>
+
+      <div class="mb-4 pt-[10px] border-gray-400 border-t">
+        <h3 class="text-body-14 uppercase mb-2">
+          {{ "Technologies"|t }}
+        </h3>
+
+        {% include "projects/_modules/categories-filter" with {
+          key: "technology",
+          categories: craft.categories.group("projectTechnologies").all(),
+          params,
+        } only %}
+      </div>
     </div>
 
-    <div class="mb-4 pt-[10px] border-gray-400 border-t">
-      <h3 class="text-body-14 uppercase mb-2">
-        {{ "Year Groups (from 2025)"|t }}
-      </h3>
+    <div class="col-start-6 col-span-11" style="border: 1px solid red;">
+      <div class=" mb-3.5 md:mb-5 flex items-center">
+        <h2 class="font-surt text-[20px] md:text-head-24">
+          {{ params|length ? "Matching Projects"|t : "All Projects"|t }} <span class=" text-rich-blue">[{{ projectsQuery.count() }}]</span>
+        </h2>
 
-      {% include "projects/_modules/categories-filter" with {
-        key: "year-group",
-        categories: craft.categories.group("projectYearGroups").all(),
-        params,
-      } only %}
-    </div>
+        {% if params|length %}
+          <a class="ml-auto uppercase text-ui-16 flex items-center gap-[0.625rem] after:block after:content-[''] after:h-[1.125rem] after:w-[1.125rem] after:bg-close after:bg-center after:bg-no-repeat" href="{{ '/' ~ craft.app.request.pathInfo }}">{{ "Reset filters"|t }}</a>
+        {% endif %}
+      </div>
 
-    <div class="mb-4 pt-[10px] border-gray-400 border-t">
-      <h3 class="text-body-14 uppercase mb-2">
-        {{ "Rounds (2016 – 2025)"|t }}
-      </h3>
-
-      {% include "projects/_modules/categories-filter" with {
-        key: "round",
-        categories: craft.categories.group("projectRounds").all(),
-        params,
-      } only %}
-    </div>
-
-    <div class="mb-4 pt-[10px] border-gray-400 border-t">
-      <h3 class="text-body-14 uppercase mb-2">
-        {{ "Topics"|t }}
-      </h3>
-
-      {% include "projects/_modules/categories-filter" with {
-        key: "topic",
-        categories: craft.categories.group("projectTopics").all(),
-        params,
-      } only %}
-    </div>
-
-    <div class="mb-4 pt-[10px] border-gray-400 border-t">
-      <h3 class="text-body-14 uppercase mb-2">
-        {{ "Technologies"|t }}
-      </h3>
-
-      {% include "projects/_modules/categories-filter" with {
-        key: "technology",
-        categories: craft.categories.group("projectTechnologies").all(),
-        params,
-      } only %}
-    </div>
-  </div>
-
-  <div class="max-w-4xl mx-auto px-2 md:px-4 lg:px-6 pb-2 md:pb-4 lg:pb-6 mt-6">
-    {% include "_rich-text/standard" with { text: "<h1>#{'Our projects'|t}</h1>" } only %}
-    <div class="my-4">
       {% if projects|length %}
         {% include "projects/_modules/teasers-list" with { projects: projects } only %}
-      {% else %}
-        {% include "_rich-text/standard" with { text: "<p>#{'No entries yet. Create some in the CMS!'|t}</p>" } only %}
       {% endif %}
+      {% include "_modules/pagination" with {
+        pagination,
+        params
+      } only %}
     </div>
-    {% include "_modules/pagination" with {
-      pagination,
-      params
-    } only %}
   </div>
+
+  {% include "_modules/modules" with { entry: entry } %}
 {% endblock %}

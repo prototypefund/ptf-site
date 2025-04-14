@@ -1,6 +1,5 @@
 {% paginate articlesQuery.limit(14) as pagination, articles %}
 
-{% set totalArticles = articlesQuery.count() %}
 {% set categories = craft.categories.group("blogCategories").all() %}
 
 {% set headline = entry.headline|default(indexEntry.headline)|default(indexEntry.title) %}
@@ -16,7 +15,7 @@
 
 <div class="mt-5 md:mt-9 mb-5 px-2 md:px-5">
   <h2 class="mb-3 md:mb-5 last:mb-0 font-surt text-head-22 md:text-head-28">
-    {{ "All Articles"|t }} <span class=" text-rich-blue">[{{ totalArticles }}]</span>
+    {{ "All Articles"|t }} <span class=" text-rich-blue">[{{ articlesQuery.count() }}]</span>
   </h2>
 
   {% if categories|length %}
