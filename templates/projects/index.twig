@@ -168,7 +168,11 @@
           pagination,
           params
         } only %}
-        {% endif %}
+      {% else %}
+        <div class="border-gray-400 border-t mb-5 pt-2.5">
+         {{ "No projects found."|t }}
+        </div>
+      {% endif %}
     </div>
   </div>
 

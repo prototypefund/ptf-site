@@ -35,8 +35,12 @@
 </div>
 
 <div class="px-2 md:px-5 mb-[3.75rem] md:mb-14">
-  {% include "blog/_modules/teasers-list" with { articles: articles } only %}
-  {% include "_modules/pagination" with { pagination: pagination } only %}
+  {% if articles|length %}
+    {% include "blog/_modules/teasers-list" with { articles: articles } only %}
+    {% include "_modules/pagination" with { pagination: pagination } only %}
+  {% else %}
+    {{ "No articles found."|t }}
+  {% endif %}
 </div>
 
 {% if entry.modules.count() > 0 %}

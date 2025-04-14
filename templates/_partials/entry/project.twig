@@ -30,9 +30,11 @@
           </div>
         {% endif %}
 
-        <h3 class="uppercase font-surt text-head-22 tracking-[0.03em] mb-1.5">
-          <span class="text-rich-blue">{{ entry.title }}</span>{% if claim|length %}: {{ claim }}{% endif %}
-        </h3>
+        <div class="mb-1.5 last:mb-0">
+          <h4 class="inline uppercase font-surt text-head-22 tracking-[0.03em] group-hover:border-b-sky-blue group-hover:border-b-2">
+            <span class="text-rich-blue">{{ entry.title }}</span>{% if claim|length %}: {{ claim }}{% endif %}
+          </h4>
+        </div>
 
         {% if teamMembers|length %}
           <div class="text-body-14 mb-2.5 last:mb-0">{{ teamMembers }}</div>
