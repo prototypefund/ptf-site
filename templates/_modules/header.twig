@@ -7,25 +7,25 @@
 
 {% switch background  %}
   {% case "greyBackgroundBluePattern" %}
-    {% set headerClass = "bg-gray-100 after:bg-pattern-r-sky-blue border-gray-400 border-b" %}
+    {% set headerClass = "bg-gray-100 after:bg-pattern-tr-sky-blue border-gray-400 border-b" %}
     {% set buttonClass = darkButtonClass %}
   {% case "greyBackgroundPinkPattern" %}
-    {% set headerClass = "bg-gray-100 after:bg-pattern-r-hot-pink border-gray-400 border-b" %}
+    {% set headerClass = "bg-gray-100 after:bg-pattern-tr-hot-pink border-gray-400 border-b" %}
     {% set buttonClass = darkButtonClass %}
   {% case "skyBlueBackgroundLightBluePattern" %}
-    {% set headerClass = "bg-sky-blue after:bg-pattern-r-light-blue" %}
+    {% set headerClass = "bg-sky-blue after:bg-pattern-tr-light-blue" %}
     {% set buttonClass = darkButtonClass %}
   {% case "richBlueBackgroundPinkPattern" %}
-    {% set headerClass = "bg-rich-blue after:bg-pattern-r-hot-pink text-white" %}
+    {% set headerClass = "bg-rich-blue after:bg-pattern-tr-hot-pink text-white" %}
     {% set buttonClass = lightButtonClass %}
   {% case "darkMagentaBackgroundBluePattern" %}
-    {% set headerClass = "bg-dark-magenta after:bg-pattern-r-sky-blue text-white" %}
+    {% set headerClass = "bg-dark-magenta after:bg-pattern-tr-sky-blue text-white" %}
     {% set buttonClass = lightButtonClass %}
   {% case "navyBlueBackgroundPinkPattern" %}
-    {% set headerClass = "bg-navy-blue after:bg-pattern-r-hot-pink text-white" %}
+    {% set headerClass = "bg-navy-blue after:bg-pattern-tr-hot-pink text-white" %}
     {% set buttonClass = lightButtonClass %}
   {% default %}
-    {% set headerClass = "bg-gray-100 after:bg-pattern-r-sky-blue border-gray-400 border-b" %}
+    {% set headerClass = "bg-gray-100 after:bg-pattern-tr-sky-blue border-gray-400 border-b" %}
     {% set buttonClass = darkButtonClass %}
 {% endswitch %}
 

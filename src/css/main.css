@@ -73,9 +73,9 @@
 
   --background-image-close: url("/static/images/icons/close.svg");
   --background-image-tick-white: url("/static/images/icons/tick-white.svg");
-  --background-image-pattern-r-sky-blue: url("/static/images/patterns/bg-pattern-r-sky-blue.svg");
-  --background-image-pattern-r-light-blue: url("/static/images/patterns/bg-pattern-r-light-blue.svg");
-  --background-image-pattern-r-hot-pink: url("/static/images/patterns/bg-pattern-r-hot-pink.svg");
+  --background-image-pattern-tr-sky-blue: url("/static/images/patterns/bg-pattern-tr-sky-blue.svg");
+  --background-image-pattern-tr-light-blue: url("/static/images/patterns/bg-pattern-tr-light-blue.svg");
+  --background-image-pattern-tr-hot-pink: url("/static/images/patterns/bg-pattern-tr-hot-pink.svg");
   --background-image-pattern-newsletter: url("/static/images/patterns/bg-pattern-newsletter.svg");
 }
 
