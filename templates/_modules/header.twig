@@ -1,55 +1,85 @@
 {% set intro = intro|default(null) %}
 {% set link = link|default(null) %}
 {% set background = background|default(null) %}
+{% set alignment = alignment|default("left") %}
 
+{% set defaultPatterns = {
+  left: "after:bg-pattern-tr-sky-blue",
+  center: "after:bg-pattern-tr-sky-blue"
+} %}
+{% set defaultHeaderClass = "#{defaultPatterns[alignment]} bg-gray-100 border-gray-400 border-b" %}
 {% set darkButtonClass = "hover:bg-black hover:text-white" %}
 {% set lightButtonClass = "text-white hover:bg-white hover:text-black border-white" %}
 
 {% switch background  %}
   {% case "greyBackgroundBluePattern" %}
-    {% set headerClass = "bg-gray-100 after:bg-pattern-tr-sky-blue border-gray-400 border-b" %}
+    {% set patterns = defaultPatterns %}
+    {% set headerClass = defaultHeaderClass %}
     {% set buttonClass = darkButtonClass %}
   {% case "greyBackgroundPinkPattern" %}
-    {% set headerClass = "bg-gray-100 after:bg-pattern-tr-hot-pink border-gray-400 border-b" %}
+    {% set patterns = {
+      left: "after:bg-pattern-tr-hot-pink",
+      center: "after:bg-pattern-tr-hot-pink"
+    } %}
+    {% set headerClass = "#{patterns[alignment]} bg-gray-100 border-gray-400 border-b" %}
     {% set buttonClass = darkButtonClass %}
   {% case "skyBlueBackgroundLightBluePattern" %}
-    {% set headerClass = "bg-sky-blue after:bg-pattern-tr-light-blue" %}
+    {% set patterns = {
+      left: "after:bg-pattern-tr-light-blue",
+      center: "after:bg-pattern-tr-light-blue"
+    } %}
+    {% set headerClass = "#{patterns[alignment]} bg-sky-blue" %}
     {% set buttonClass = darkButtonClass %}
   {% case "richBlueBackgroundPinkPattern" %}
-    {% set headerClass = "bg-rich-blue after:bg-pattern-tr-hot-pink text-white" %}
+    {% set patterns = {
+      left: "after:bg-pattern-tr-hot-pink",
+      center: "after:bg-pattern-tr-hot-pink"
+    } %}
+    {% set headerClass = "#{patterns[alignment]} bg-rich-blue text-white" %}
     {% set buttonClass = lightButtonClass %}
   {% case "darkMagentaBackgroundBluePattern" %}
-    {% set headerClass = "bg-dark-magenta after:bg-pattern-tr-sky-blue text-white" %}
+    {% set patterns = {
+      left: "after:bg-pattern-tr-sky-blue",
+      center: "after:bg-pattern-tr-sky-blue"
+    } %}
+    {% set headerClass = "#{patterns[alignment]} bg-dark-magenta text-white" %}
     {% set buttonClass = lightButtonClass %}
   {% case "navyBlueBackgroundPinkPattern" %}
-    {% set headerClass = "bg-navy-blue after:bg-pattern-tr-hot-pink text-white" %}
+    {% set patterns = {
+      left: "after:bg-pattern-tr-hot-pink",
+      center: "after:bg-pattern-tr-hot-pink"
+    } %}
+    {% set headerClass = "#{patterns[alignment]} bg-navy-blue text-white" %}
     {% set buttonClass = lightButtonClass %}
   {% default %}
-    {% set headerClass = "bg-gray-100 after:bg-pattern-tr-sky-blue border-gray-400 border-b" %}
+    {% set patterns = defaultPatterns %}
+    {% set headerClass = defaultHeaderClass %}
     {% set buttonClass = darkButtonClass %}
 {% endswitch %}
 
-<header class="{{ headerClass }} grid grid-cols-12 lg:grid-cols-16 px-2 md:px-5 py-10 lg:py-[9.125rem] relative text-gray-200 after:content-[''] after:absolute after:right-0 after:top-0 after:bottom-3 after:h-[calc(100%-24px)] after:bg-no-repeat after:bg-right-top after:bg-contain after:w-[calc(15vw+16px)] after:md:w-[calc(15vw+40px)] after:lg:w-[calc(12vw+40px)]">
-  <h1 class="font-surt col-span-11 lg:col-span-7 xl:col-span-8 text-head-32 md:text-head-62 pr-3 mb-2.5 lg:mb-0 relative z-1">{{ headline }}</h1>
-  {% if intro|length or link|length %}
-    <div class="max-w-64 col-span-11 lg:col-span-7 xl:col-start-9 xl:col-span-5 xl:border-0 relative z-1">
-      {% if intro|length %}
-        <div class="text-body-18 md:text-body-20 mb-5 last:mb-0">
-          {% include "_rich-text/simple" with {
-            text: intro
-          } only %}
-        </div>
-      {% endif %}
+<header class="{{ headerClass }} {{ alignment == "left" ? "lg:py-[8.125rem]" : "lg:py-[6.25rem]" }} px-2 md:px-5 py-10 relative text-gray-200 after:content-[''] after:absolute after:right-0 after:top-0 after:bottom-3 after:h-[calc(100%-24px)] after:bg-no-repeat after:bg-right-top after:bg-contain after:w-[calc(15vw+16px)] after:md:w-[calc(15vw+40px)] after:lg:w-[calc(12vw+40px)]">
+  <div class="{{ alignment == "left" ? "grid grid-cols-12 lg:grid-cols-16" : "text-center" }}">
+    <h1 class="{{ alignment == "left" ? "col-span-11 lg:col-span-7 xl:col-span-8 mb-2.5 lg:mb-0" : "mb-2.5 lg:mb-[3.75rem]" }} font-surt text-head-32 md:text-head-62 pr-3 relative z-1">{{ headline }}</h1>
+    {% if intro|length or link|length %}
+      <div class="{{ alignment == "left" ? "col-span-11 lg:col-span-7 xl:col-start-9 xl:col-span-5" : "m-auto" }} max-w-64 relative z-1">
+        {% if intro|length %}
+          <div class="text-body-18 md:text-body-20 mb-2.5 md:mb-5 last:mb-0">
+            {% include "_rich-text/simple" with {
+              text: intro
+            } only %}
+          </div>
+        {% endif %}
 
-      {% if link|length %}
-        {{ tag('a', {
-          class: buttonClass ~ ' px-[0.625rem] py-1 md:py-[0.3125rem] uppercase border-l border-r font-surt text-ui-14 md:text-ui-16 transition-colors',
-          href: link.value,
-          target: link.target,
-          rel: link.target == '_blank' ? 'noopener noreferrer' : null,
-          text: link.label,
-        }) }}
-      {% endif %}
+        {% if link|length %}
+          {{ tag('a', {
+            class: buttonClass ~ ' px-[0.625rem] py-1 md:py-[0.3125rem] uppercase border-l border-r font-surt text-ui-14 md:text-ui-16 transition-colors',
+            href: link.value,
+            target: link.target,
+            rel: link.target == '_blank' ? 'noopener noreferrer' : null,
+            text: link.label,
+          }) }}
+        {% endif %}
+      </div>
+    {% endif %}
     </div>
-  {% endif %}
 </header>
