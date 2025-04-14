@@ -35,20 +35,128 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-04-14T15:44:37+00:00'
+            elementCondition: null
+            fieldUid: d99528c4-136b-413c-9799-56fd20edd2c6 # Headline
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c37feab7-f637-4f15-9bed-e4aea1205a60
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-14T15:44:37+00:00'
+            elementCondition: null
+            fieldUid: ad1324f8-1337-475f-8516-ab1e13543027 # Intro
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 1220c721-8128-48aa-8c10-3c67c324869e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-14T15:44:37+00:00'
+            elementCondition: null
+            fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # Link
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 2201c3ab-d94b-4e09-988a-13a70a01cb7d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-14T15:44:37+00:00'
+            elementCondition: null
+            fieldUid: 62e3c2ea-24fd-42e2-a9ba-3602f1d6e2e8 # Header Background
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6a504898-1191-4d20-a4b9-f584d4203154
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-14T15:44:37+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 87947c3c-3d58-4c86-ba2d-b63f6b94dd34
+            userCondition: null
+          -
+            dateAdded: '2025-04-14T15:44:37+00:00'
+            elementCondition: null
+            fieldUid: 1bf40018-82e4-4e44-bbd6-6f49c132678d # Modules
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6fd78862-013b-4e6f-ae8d-d8f8d742e9dd
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 9824da26-cf4b-4651-905a-0f59fbc2e77d
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-14T15:44:58+00:00'
+            elementCondition: null
+            fieldUid: 0d857c68-7bb1-4ce7-b61f-671446aa8bb3 # SEO
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8c8e5484-7403-4917-a6a5-656346c4d583
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: d700e008-7b18-4d11-bd8c-c4ed65426b3d
         userCondition: null
 handle: projectRounds
 name: 'Project Rounds'
 siteSettings:
   af0bbe1c-3613-4775-8a01-965b68d4e56e: # English
     hasUrls: true
-    template: project-rounds/_category.twig
-    uriFormat: 'project-rounds/{slug}'
+    template: projects/_category.twig
+    uriFormat: 'project/{slug}'
   ddc3aedf-983b-4fa7-81eb-69fd761d71af: # German
     hasUrls: true
-    template: project-rounds/_category.twig
-    uriFormat: 'project-rounds/{slug}'
+    template: projects/_category.twig
+    uriFormat: 'project/{slug}'
 structure:
   maxLevels: 1
   uid: f94ebbd3-34b8-4551-b542-eca3387f21a0
