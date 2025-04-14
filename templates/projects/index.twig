@@ -76,8 +76,6 @@
 {% paginate projectsQuery as pagination, projects %}
 
 {% block content %}
-  {{ projectsQuery.count() }}
-
   {% include "_modules/header" with {
     headline: entry.headline|default(entry.title),
     intro: entry.intro,
@@ -90,8 +88,6 @@
       <h3 class="text-body-14 uppercase mb-2">
         {{ "Funding status"|t }}
       </h3>
-
-      <a href="?status=inUsage">{{ "Show in funding only"|t }}</a>
 
       {% include "_modules/projects-checkbox" with {
         key: "status",

@@ -1,6 +1,20 @@
 {% set values = params[key]|default([]) %}
-{% set filters = [] %}
+{% set isActive = value in values %}
 
-{% set isActive = "inUsage" in values %}
+{% set newValues = isActive
+  ? values|filter(v => v != value)
+  : values|merge([value])
+%}
 
-{{ isActive }}
+{% set newParams = params|merge({(key): newValues})
+  |map((values, k) => values|map(value => (k ~ '=' ~ value)))
+  |reduce((carry, item) => carry|merge(item), [])
+  |join('&')
+  |raw
+%}
+
+{% set url = '/' ~ craft.app.request.pathInfo ~ '?' ~ newParams ~ '#list' %}
+
+<a class="{{ isActive ? 'before:bg-black before:bg-tick-white' : 'before:bg-gray-600' }} flex gap-[0.625rem] items-center text-body-16 before:rounded-[0.13rem] before:block before:content-[''] before:h-[18px] before:w-[18px] before:bg-no-repeat before:bg-center" href="{{ url }}">
+  {{ "Show in funding only"|t }}
+</a>
