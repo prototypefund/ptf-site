@@ -7,9 +7,9 @@
 
 {% set categories = craft.categories.group(category.group.handle).all() %}
 
-{% set headline = category.headline|default(indexEntry.headline)|default(indexEntry.title) %}
-{% set intro = category.intro|default(indexEntry.intro) %}
-{% set link = category.genericLink|default(indexEntry.genericLink) %}
+{% set headline = category.headline|default(category.title) %}
+{% set intro = category.intro %}
+{% set link = category.genericLink %}
 
 {% block content %}
   {% include "_modules/header" with {
@@ -17,7 +17,7 @@
     intro,
     link,
     background: category.headerBackground.value,
-    alignment: entry.headerAlignment.value
+    alignment: category.headerAlignment.value
   } only %}
 
   <div class="mt-5 md:mt-9 mb-5 px-2 md:px-5">
