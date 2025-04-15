@@ -61,7 +61,7 @@
 {% endif %}
 
 {% if relations|length %}
-  {% set projectsQuery = projectsQuery.relatedTo(['or']|merge(relations)) %}
+  {% set projectsQuery = projectsQuery.relatedTo(['and']|merge(relations)) %}
 {% endif %}
 
 {% set projectsQuery = projectsQuery
