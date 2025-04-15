@@ -98,7 +98,23 @@ fieldLayouts:
             uid: 544b3659-4428-4618-8205-c6fa522627ae
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            dateAdded: '2025-04-15T00:47:31+00:00'
+            elementCondition: null
+            fieldUid: 33c3763c-9f38-4c39-bebd-48bbec68e094 # Header Alignment
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e6c36306-f903-4eae-8dc5-a40d0308e601
+            userCondition: null
+            warning: null
+            width: 50
           -
             dateAdded: '2025-04-14T15:56:12+00:00'
             elementCondition: null
