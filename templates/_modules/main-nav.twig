@@ -1,5 +1,6 @@
 {% set homepage = craft.entries.section("homepage").one() %}
 {% set navLinks = navigation.navLinks.all() %}
+{% set matchedElement = craft.app.urlManager.matchedElement %}
 
 <main-nav>
   <header
@@ -95,7 +96,6 @@
                 {% set links = linkGroup.links %}
 
                 <li class="{{ [
-                  'group/title',
                   'border-b',
                   'border-gray-400',
                   'last:border-b-0',
@@ -105,7 +105,6 @@
                   'md:last:border-r-0'
                 ]|join(' ') }}">
                   <span
-                    data-title="{{ linkGroup.id }}"
                     class="{{ [
                       'block',
                       'cursor-pointer',
@@ -118,8 +117,6 @@
                       'text-gray-200',
                       'border-gray-400',
                       'border-b',
-                      'group-hover/title:bg-gray-100',
-                      '[&.active]:bg-gray-100',
                       'md:p-1.5',
                       'md:text-body-14',
                       'md:text-left',
@@ -179,7 +176,6 @@
                 'border-b',
                 'border-gray-400',
                 'bg-white',
-                'text-body-16',
                 'opacity-0',
                 'transition-opacity',
                 'group-focus-within:opacity-100',
@@ -192,13 +188,13 @@
 
                 {% if links|length %}
                   <li
-                    data-link-group="{{ linkGroup.id }}"
                     class="{{ [
                       'js-menu',
-                      'px-2',
-                      'py-2',
+                      'p-2',
                       'w-1/5',
                       'border-r',
+                      'text-body-16',
+                      'leading-[1]',
                       'border-gray-400',
                       'last:border-r-0'
                     ]|join(' ') }}">
@@ -206,16 +202,16 @@
                       {% for link in links %}
                         {% set navLink = link.genericLink %}
                         {% set isExternal = navLink.type == "url" %}
+                        {% set isActive = matchedElement.url == navLink.url %}
 
                         <li class="mb-[0.38rem] last:mb-0">
-                          {{ tag('a', {
-                            class: [
+                          <a class="{{ [
+                              'group/link',
                               'flex',
                               'px-1',
-                              'py-[0.13rem]',
-                              'text-gray-200'
-                            ]
-                            | merge(isExternal ? [
+                              'py-[0.5rem]',
+                              'text-gray-200',
+                            ]|merge(isExternal ? [
                               'after:ml-auto',
                               'after:block',
                               'after:h-2.5',
@@ -223,14 +219,30 @@
                               'after:bg-link-arrow',
                               'after:bg-cover',
                               'after:bg-no-repeat',
-                              "after:content-['']"
-                            ] : [])
-                          |join(' '),
-                            href: navLink.value,
-                            target: navLink.target,
-                            rel: navLink.target == '_blank' ? 'noopener noreferrer' : null,
-                            text: navLink.label
-                          }) }}
+                              "after:content-['']" 
+                            ] : [])|join(' ') }}"
+                            href="{{ navLink.value }}"
+                            target="{{ navLink.target }}"
+                            {{ navLink.target == '_blank' ? 'rel="noopener noreferrer"' : '' }}
+                          >
+                            <span
+                              class="{{ [
+                                'relative',
+                                'text-black',
+                                'sm:after:content-[\'\']',
+                                'sm:after:absolute',
+                                'sm:after:bottom-[-4px]',
+                                'sm:after:left-0',
+                                'sm:after:w-0',
+                                'sm:group-hover/link:after:w-full',
+                                'sm:after:h-[1px]',
+                                'sm:after:transition-all',
+                                'sm:after:bg-sky-blue',
+                                isActive ? 'sm:after:w-full' : ''
+                              ]|join(' ') }}">
+                              {{ navLink.label }}
+                            </span>
+                          </a>
                         </li>
                       {% endfor %}
                     </ul>
