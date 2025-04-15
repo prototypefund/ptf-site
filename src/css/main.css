@@ -73,6 +73,7 @@
   --font-surt: "Surt", Helvetica, Arial, sans-serif;
   --spacing: 8px;
 
+  --background-image-link-arrow: url("/static/images/icons/link-arrow.svg");
   --background-image-close: url("/static/images/icons/close.svg");
   --background-image-tick-white: url("/static/images/icons/tick-white.svg");
   --background-image-pattern-tr-sky-blue: url("/static/images/patterns/bg-pattern-tr-sky-blue.svg");
