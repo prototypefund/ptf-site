@@ -82,11 +82,11 @@
 
 <header class="{{ headerClass }} {{ alignment == "left" ? "lg:py-[8.125rem]" : "lg:py-[6.25rem]" }} px-2 md:px-5 py-10 relative text-gray-200 before:content-[''] before:absolute before:left-0 before:h-full before:bg-no-repeat before:bg-contain after:content-[''] after:absolute after:right-0 after:h-full after:bg-no-repeat after:bg-contain">
   <div class="{{ alignment == "left" ? "grid grid-cols-12 lg:grid-cols-16" : "text-center" }}">
-    <h1 class="{{ alignment == "left" ? "col-span-11 lg:col-span-7 xl:col-span-8 mb-2.5 lg:mb-0 md:pr-3 pr-0" : "mb-2.5 lg:mb-[3.75rem]" }} font-surt text-head-32 md:text-head-62 relative z-1">{{ headline }}</h1>
+    <h1 class="{{ alignment == "left" ? "col-span-11 lg:col-span-7 xl:col-span-8 mb-3 lg:mb-0 md:pr-3 pr-0" : "mb-3 lg:mb-5" }} font-surt text-head-28 md:text-head-46 uppercase relative z-1">{{ headline }}</h1>
     {% if intro|length or link|length %}
       <div class="{{ alignment == "left" ? "col-span-11 lg:col-span-7 xl:col-start-9 xl:col-span-5" : "m-auto" }} max-w-64 relative z-1">
         {% if intro|length %}
-          <div class="text-body-18 md:text-body-20 mb-2.5 md:mb-5 last:mb-0">
+          <div class="text-body-18 md:text-body-20 mb-6 last:mb-0">
             {% include "_rich-text/simple" with {
               text: intro
             } only %}
