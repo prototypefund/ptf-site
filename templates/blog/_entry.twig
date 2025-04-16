@@ -4,7 +4,7 @@
 
 {% set headline = entry.title %}
 {% set intro = entry.intro %}
-{% set text = entry.text %}
+{% set text = entry.textEntryTypes %}
 {% set image = entry.mainImage.eagerly().one() %}
 {% set postDate = entry.postDate|date("short") %}
 {% set categories = entry.blogCategories.all() %}
@@ -66,7 +66,20 @@
     </header>
 
     {% if intro|length or text|length %}
-      <div class="px-2 md:px-5 mt-10 grid grid-cols-16 [&>*]:col-span-8 [&>*]:col-start-8 [&>blockquote]:col-start-6 [&>blockquote]:col-span-11">
+      <div class="{{ [
+        'px-2',
+        'md:px-5',
+        'mt-10',
+        'grid',
+        'md:grid-cols-16',
+        'md:[&>*]:col-start-6',
+        'md:[&>*]:col-span-11',
+        'md:[&>div:not(:first-of-type)]:col-span-16',
+        'md:[&>blockquote]:col-start-6',
+        'md:[&>blockquote]:col-span-10',
+        'lg:[&>*]:col-start-8',
+        'lg:[&>*]:col-span-8',
+      ]|join(' ') }}">
         {% if intro|length %}
           <div class="mb-[60px]">
             {% include "_rich-text/intro" with {

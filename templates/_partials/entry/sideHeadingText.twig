@@ -1,0 +1,9 @@
+<div class="my-[60px] last:my-0 md:mt-6 grid md:grid-cols-16 md:items-start">
+  <h2 class="md:sticky md:top-[1em] mb-2.5 md:mb-0 md:col-span-4 font-surt text-body-22 md:text-body-32 lg:col-span-6">{{ entry.title }}</h2>
+
+  <div class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-8 flex flex-col">
+    {% include "_rich-text/standard" with {
+      text: entry.text
+    } only %}
+  </div>
+</div>
