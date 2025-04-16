@@ -3,7 +3,7 @@
 {% set background = background|default(null) %}
 {% set alignment = alignment|default("left") %}
 
-{% set leftPatternWidths = [
+{% set leftPatternPositions = [
   'after:top-0',
   'after:bg-right-top',
   'after:w-[calc(15vw+16px)]',
@@ -12,7 +12,7 @@
   ]|join(' ')
 %}
 
-{% set centerPatternWidths = [
+{% set centerPatternPositions = [
   'after:bottom-0',
   'after:bg-right-bottom',
   'after:w-[calc(18vw+16px)]',
@@ -23,20 +23,20 @@
   'before:w-[calc(18vw+16px)]',
   'before:md:w-[calc(18vw+40px)]',
   'before:lg:w-[calc(13vw+40px)]'
-] | join(' ') %}
+]|join(' ') %}
 
 {% set patternStyles = {
   skyBlue: {
-    left: "after:bg-pattern-tr-sky-blue #{leftPatternWidths}",
-    center: "after:bg-pattern-br-sky-blue before:bg-pattern-tl-sky-blue #{centerPatternWidths}"
+    left: "after:bg-pattern-tr-sky-blue #{leftPatternPositions}",
+    center: "after:bg-pattern-br-sky-blue before:bg-pattern-tl-sky-blue #{centerPatternPositions}"
   },
   hotPink: {
-    left: "after:bg-pattern-tr-hot-pink #{leftPatternWidths}",
-    center: "after:bg-pattern-br-hot-pink before:bg-pattern-tl-hot-pink #{centerPatternWidths}"
+    left: "after:bg-pattern-tr-hot-pink #{leftPatternPositions}",
+    center: "after:bg-pattern-br-hot-pink before:bg-pattern-tl-hot-pink #{centerPatternPositions}"
   },
   lightBlue: {
-    left: "after:bg-pattern-tr-light-blue #{leftPatternWidths}",
-    center: "after:bg-pattern-br-light-blue before:bg-pattern-tl-light-blue #{centerPatternWidths}"
+    left: "after:bg-pattern-tr-light-blue #{leftPatternPositions}",
+    center: "after:bg-pattern-br-light-blue before:bg-pattern-tl-light-blue #{centerPatternPositions}"
   }
 } %}
 
