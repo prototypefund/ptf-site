@@ -32,6 +32,8 @@
   --text-head-62--line-height: 1.2;
   --text-head-46: calc(46 / 16 * 1rem);
   --text-head-46--line-height: 1.2;
+  --text-head-38: calc(38 / 16 * 1rem);
+  --text-head-38--line-height: 1.2;
   --text-head-32: calc(32 / 16 * 1rem);
   --text-head-32--line-height: 1.2;
   --text-head-28: calc(28 / 16 * 1rem);
@@ -73,6 +75,7 @@
   --font-surt: "Surt", Helvetica, Arial, sans-serif;
   --spacing: 8px;
 
+  --background-image-arrow-left: url("/static/images/icons/arrow-left.svg");
   --background-image-link-arrow: url("/static/images/icons/link-arrow.svg");
   --background-image-close: url("/static/images/icons/close.svg");
   --background-image-tick-white: url("/static/images/icons/tick-white.svg");
