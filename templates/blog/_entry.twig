@@ -3,13 +3,14 @@
 {% set blogIndex = craft.entries.section("blogIndex").one() %}
 
 {% set headline = entry.title %}
+{% set intro = entry.intro %}
 {% set text = entry.text %}
 {% set image = entry.mainImage.eagerly().one() %}
 {% set postDate = entry.postDate|date("short") %}
 {% set categories = entry.blogCategories.all() %}
-{% set authorName = entry.author.name %}
 
 {% set nextReads = entry.nextReads.eagerly().all() %}
+
 {% if nextReads|length == 0 %}
   {% set nextReads =  craft.entries.section('blog').id('not ' ~ entry.id).limit(3).all() %}
 {% endif %}
@@ -63,17 +64,27 @@
       </div>
       {% endif %}
     </header>
+
+    {% if intro|length or text|length %}
+      <div class="px-2 md:px-5 mt-10 grid grid-cols-16 [&>*]:col-span-8 [&>*]:col-start-8 [&>blockquote]:col-start-6 [&>blockquote]:col-span-11">
+        {% if intro|length %}
+          <div class="mb-[60px]">
+            {% include "_rich-text/intro" with {
+              text: intro
+            } only %}
+          </div>
+        {% endif %}
+
+        {% if text|length %}
+          {% include "_rich-text/standard" with {
+            text
+          } only %}
+        {% endif %}
+      </div>
+    {% endif %}
   </article>
 
   <div class="max-w-4xl mx-auto px-2 md:px-4 lg:px-6 pb-2 md:pb-4 lg:pb-6 mt-6">
-    <article>
-      <p class="mt-2 mb-4">Written by {{authorName}} on {{ postDate }}</p>
-
-      {% include "_rich-text/standard" with {
-        text
-      } only %}
-    </article>
-
     {% include "blog/_modules/next-reads" with { nextReads: nextReads } %}
   </div>
 {% endblock %}

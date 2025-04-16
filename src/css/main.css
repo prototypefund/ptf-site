@@ -16,6 +16,7 @@
   --color-navy-blue: #1a0566;
   --color-dark-magenta: #7d0e8c;
   --color-pink: #ffd2f5;
+  --color-hot-pink: #eb13b9;
   --color-white: #ffffff;
 
   --breakpoint-xxs: 420px;
@@ -44,9 +45,13 @@
   --text-head-22--line-height: 1.4;
   --text-head-20: calc(20 / 16 * 1rem);
   --text-head-20--line-height: 1.2;
+  --text-head-18: calc(18 / 16 * 1rem);
+  --text-head-18--line-height: 1.2;
   --text-head-16: calc(16 / 16 * 1rem);
   --text-head-16--line-height: 1.2;
 
+  --text-body-32: calc(32 / 16 * 1rem);
+  --text-body-32--line-height: 1.4;
   --text-body-24: calc(24 / 16 * 1rem);
   --text-body-24--line-height: 1.5;
   --text-body-20: calc(20 / 16 * 1rem);
