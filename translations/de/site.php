@@ -27,6 +27,7 @@ return [
   "Round: {round}" => "Runde: {round}",
   "Rounds (2016 – 2025)" => "Runden (2016 – 2025)",
   "Register" => "Anmelden",
+  "See all articles" => "Alle Artikel anzeigen",
   "Switch to dark mode" => "Zum dunklen Modus wechseln",
   "Switch to light mode" => "Zum hellen Modus wechseln",
   "Only show currently funded projects" => "Nur aktuell geförderte Projekte anzeigen",

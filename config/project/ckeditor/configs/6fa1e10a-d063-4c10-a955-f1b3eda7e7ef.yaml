@@ -1,11 +1,9 @@
-css: ".ck.ck-editor .button {\r\n  padding: 0.2em 0.4em;\r\n  background-color: grey;\r\n  color: white;\r\n  display: inline-block;\r\n}"
+css: ".ck.ck-editor .button {\r\n  padding: 0.2em 0.4em;\r\n  background-color: grey;\r\n  color: white;\r\n  display: inline-block;\r\n}\r\n\r\n.ck.ck-editor .highlighted {\r\n  background-color: yellow;\r\n}"
 headingLevels:
   - 2
   - 3
   - 4
   - 5
-  - 6
-listPlugin: ''
 name: Standard
 options:
   list:
@@ -18,16 +16,20 @@ options:
           - button
         element: a
         name: Button
+      -
+        classes:
+          - highlighted
+        element: span
+        name: Highlight
 toolbar:
-  - sourceEditing
-  - '|'
   - heading
   - style
   - '|'
-  - blockQuote
   - bold
   - italic
   - strikethrough
   - link
+  - blockQuote
   - bulletedList
   - numberedList
+  - insertImage

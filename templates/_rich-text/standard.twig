@@ -1,10 +1,33 @@
+{{ text|retcon([
+  ["change", "h1", "h2"],
+  ["removeEmpty", "p, h1, h2, h3, h4, h5, h6"],
 
-<div>
-  {{ text|retcon([
-    ["removeEmpty", "p"],
-    ["attr", "h1, h2, h3, h4, h5, h6", { class: "font-bold text-pretty mb-[1em]"}, false],
-    ["attr", "p", { class: "mb-[1em] last:mb-0"}, false],
-    ["attr", "a", { class: "text-link"}, false],
-    ["attr", ".button.text-link", { class: "button" }],
-  ])|raw }}
-</div>
+  ["attr", "h2, h3, h4, h5, h6", { class: "[p+&]:mt-5 [ul+&]:mt-5 [ol+&]:mt-5 [blockquote+&]:mt-5 [figure+&]:mt-5 mb-2.5 last:mb-0" }, false],
+  ["attr", "h2", { class: "text-body-28 md:text-body-32" }, false],
+  ["attr", "h3", { class: "text-body-22 md:text-body-24" }, false],
+  ["attr", "h4", { class: "text-body-20 md:text-body-22" }, false],
+  ["attr", "h5", { class: "text-body-18 md:text-body-20" }, false],
+
+  ["attr", "hr", { class: "mt-5 mb-[60px] border-gray-400"}, false],
+  
+  ["attr", "p, ul, ol", { class: "text-body-18 mb-2.5 last:mb-0"}, false],
+
+  ["attr", "ul", { class: "list list-disc list-outside pl-[1.25em]" }, false],
+  ["attr", "ul > li", { class: "pl-[0.5em] my-1 last:my-0" }, false],
+  ["attr", "ol", { class: "list list-decimal pl-[1.5em]" }, false],
+  ["attr", "ol > li", { class: "pl-[0.4em] ml-0 my-1 last:my-0" }, false],
+  ["attr", "ol ol", { class: "list-[lower-latin]" }, false],
+
+  ["attr", "figure", { class: "mt-6 mb-[60px]"}, false],
+  ["attr", "img", { class: "block max-w-full" }, false],
+  ["attr", "figcaption", { class: "text-gray-500 text-body-12 uppercase mt-1.5 lg:text-body-14 lg:mt-2" }, false],
+
+  ["attr", "blockquote", { class: "border-l-4 border-l-hot-pink pl-4 mt-5 mb-[60px]" }, false],
+  ["attr", "blockquote > p", { class: "text-[red]" }],
+  ["attr", "blockquote, blockquote > p", { class: "font-surt text-rich-blue text-body-20 md:text-body-24 [hanging-punctuation:first_last]" }, false],
+
+  ["attr", "a", { class: "border-b-sky-blue border-b-2" }, false],
+  ["attr", ".button", { class: "uppercase font-surt text-ui-16 text-gray-200 border-gray-400 border-l border-r px-[0.63rem] py-[0.3rem] bg-black text-white hover:bg-white hover:text-black transition-colors" }],
+
+  ["attr", ".highlighted", { class: "bg-sky-blue"}]
+])|raw }}
