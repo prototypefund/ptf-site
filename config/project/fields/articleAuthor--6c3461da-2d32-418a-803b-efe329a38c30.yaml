@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: articleAuthor
+instructions: null
+name: 'Article Author'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  sources:
+    - 'section:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Author
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries
