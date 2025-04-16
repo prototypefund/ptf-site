@@ -4,7 +4,7 @@
 
 {% set headline = entry.title %}
 {% set intro = entry.intro %}
-{% set text = entry.text %}
+{% set text = entry.textEntryTypes %}
 {% set image = entry.mainImage.eagerly().one() %}
 {% set postDate = entry.postDate|date("short") %}
 {% set categories = entry.blogCategories.all() %}
@@ -70,14 +70,15 @@
         'px-2',
         'md:px-5',
         'mt-10',
-        'md:grid',
+        'grid',
         'md:grid-cols-16',
-        'md:[&>*]:col-span-11',
         'md:[&>*]:col-start-6',
+        'md:[&>*]:col-span-11',
+        'md:[&>div:not(:first-of-type)]:col-span-16',
         'md:[&>blockquote]:col-start-6',
-        'md:[&>blockquote]:col-span-11',
-        'lg:[&>*]:col-span-8',
+        'md:[&>blockquote]:col-span-10',
         'lg:[&>*]:col-start-8',
+        'lg:[&>*]:col-span-8',
       ]|join(' ') }}">
         {% if intro|length %}
           <div class="mb-[60px]">

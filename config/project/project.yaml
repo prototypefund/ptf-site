@@ -1,4 +1,4 @@
-dateModified: 1744823722
+dateModified: 1744835407
 elementSources:
   craft\elements\Entry:
     -
@@ -77,6 +77,7 @@ fs:
     url: '@web/uploads'
 meta:
   __names__:
+    0b9eb562-64e5-4b3c-9478-8cefd24e8039: Text # Text
     0d857c68-7bb1-4ce7-b61f-671446aa8bb3: SEO # SEO
     0f8a3079-62db-4270-ac53-6903c9b28557: 'Main Image' # Main Image
     1a0ed17a-7208-4b7e-894f-64506d5432d6: 'Events Index' # Events Index
@@ -89,7 +90,7 @@ meta:
     5bafc55c-8f31-4f9b-add0-49e9957e63a7: 'Footer Link Group' # Footer Link Group
     6ca70ace-9ae7-4dfa-a915-d1a24572619d: 'Footer Description' # Footer Description
     6e040108-27cc-4a4a-bca9-c5e3ab1bdc04: 'Generic Pages' # Generic Pages
-    6fa1e10a-d063-4c10-a955-f1b3eda7e7ef: Standard # Standard
+    6fa1e10a-d063-4c10-a955-f1b3eda7e7ef: 'Standard (with Entry Types)' # Standard (with Entry Types)
     7e4dd8fe-6873-44a9-ada5-acf02698981d: 'Side Info' # Side Info
     7eb26dd5-1c10-45d1-a16b-85a148e4bf8a: 'Projects Index' # Projects Index
     8a18f61b-a93c-4302-8bde-b8f6ed6c0494: 'Inclusive Sans – Semibold' # Inclusive Sans – Semibold
@@ -105,6 +106,7 @@ meta:
     62e3c2ea-24fd-42e2-a9ba-3602f1d6e2e8: 'Header Background' # Header Background
     62efdaf8-a4e7-4149-bc72-3bd492681eba: 'Newsletter Side Title' # Newsletter Side Title
     69fb06a0-7361-46bd-a063-b293e6336a99: Description # Description
+    72b63983-0825-4712-ab6f-b4d98ee4efd4: Standard # Standard
     91a7ad8a-d35b-4738-b71b-a18f899afc5d: 'Resize: width 2000px' # Resize: width 2000px
     137c86ac-e143-4792-b936-38c41302eccd: Fonts # Fonts
     183a1c32-7844-45ce-93f1-a991260eeadc: Caption # Caption
@@ -114,7 +116,10 @@ meta:
     504f909d-20af-4a66-b4a5-46c966689b30: 'Resize: width 1000px' # Resize: width 1000px
     633b77bd-edb2-4812-ae43-7d61e39fd8fd: 'Main Footer Links' # Main Footer Links
     645eb55b-61e5-4ed2-bf31-caed18a16ffb: 'Blog Index' # Blog Index
+    824f9bd0-21d0-47fd-a48a-b8519da12b29: Quote # Quote
+    894e5185-035a-41d1-b272-0b6c1608aabf: 'Side Heading + Text' # Side Heading + Text
     2965e0c7-feb2-4aa2-98d4-de16d458eb30: Categories # Categories
+    3660aa23-c5a0-4865-b14d-5bd479e01996: Source # Source
     5593a3e3-ad74-4e68-ad2d-36a6c8f1d95a: 'Project Year Groups' # Project Year Groups
     8898a317-df17-4cc9-9475-6376bc29fbd5: 'Newsletter Headline' # Newsletter Headline
     53364b16-adc8-4b34-802f-054c272771c6: 'Projects Index' # Projects Index
@@ -144,6 +149,7 @@ meta:
     c63194ff-c47c-4c20-80b1-39bfedfc3b0f: 'Project Topics' # Project Topics
     c4438391-90e5-49b1-93bd-6fcbbd3aed62: Simple # Simple
     cff97bfa-6eb7-473b-97c0-cc3af58c0f64: 'Article ID' # Article ID
+    d26ba65b-dbab-4a12-b3e8-1ae7a4a2845d: Quote # Quote
     d5397ea9-1d37-4f12-bf41-46082d130bd8: Image # Image
     d42896d4-04a6-4211-8d97-f265c27a3be1: 'Inclusive Sans – Semibold (Italic)' # Inclusive Sans – Semibold (Italic)
     d99528c4-136b-413c-9799-56fd20edd2c6: Headline # Headline

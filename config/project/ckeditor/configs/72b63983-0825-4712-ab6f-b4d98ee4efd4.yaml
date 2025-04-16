@@ -4,7 +4,7 @@ headingLevels:
   - 3
   - 4
   - 5
-name: 'Standard (with Entry Types)'
+name: Standard
 options:
   list:
     properties:
@@ -33,4 +33,3 @@ toolbar:
   - numberedList
   - insertImage
   - '|'
-  - createEntry

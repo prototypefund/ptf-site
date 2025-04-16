@@ -3,7 +3,7 @@
 {% set headline = entry.title %}
 {% set mainImage = entry.mainImage.eagerly().one() %}
 {% set claim = entry.claim %}
-{% set text = entry.text %}
+{% set text = entry.textEntryTypes %}
 {% set rounds = entry.projectRounds.all() %}
 {% set teamMembers = entry.projectTeamMembers %}
 {% set topics = entry.projectTopics.eagerly().all() %}

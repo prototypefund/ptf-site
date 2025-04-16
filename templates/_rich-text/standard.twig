@@ -1,33 +1,32 @@
 {{ text|retcon([
-  ["change", "h1", "h2"],
-  ["removeEmpty", "p, h1, h2, h3, h4, h5, h6"],
+  ["change", "body > h1", "body > h2"],
+  ["removeEmpty", "body > p, body > h1, body > h2, body > h3, body > h4, body > h5, body > h6"],
 
-  ["attr", "h2, h3, h4, h5, h6", { class: "font-surt [p+&]:mt-5 [ul+&]:mt-5 [ol+&]:mt-5 [blockquote+&]:mt-5 [figure+&]:mt-5 mb-2.5 last:mb-0" }, false],
-  ["attr", "h2", { class: "text-body-28 md:text-body-32" }, false],
-  ["attr", "h3", { class: "text-body-22 md:text-body-24" }, false],
-  ["attr", "h4", { class: "text-body-20 md:text-body-22" }, false],
-  ["attr", "h5", { class: "text-body-18 md:text-body-20" }, false],
+  ["attr", "body > h2, body > h3, body > h4, body > h5, body > h6", { class: "font-surt [p+&]:mt-5 [ul+&]:mt-5 [ol+&]:mt-5 [blockquote+&]:mt-5 [figure+&]:mt-5 mb-2.5 last:mb-0" }, false],
+  ["attr", "body > h2", { class: "text-body-28 md:text-body-32" }, false],
+  ["attr", "body > h3", { class: "text-body-22 md:text-body-24" }, false],
+  ["attr", "body > h4", { class: "text-body-20 md:text-body-22" }, false],
+  ["attr", "body > h5", { class: "text-body-18 md:text-body-20" }, false],
 
-  ["attr", "hr", { class: "my-[60px] md:mt-5 border-gray-400"}, false],
+  ["attr", "body > hr", { class: "my-[60px] md:mt-5 border-gray-400"}, false],
   
-  ["attr", "p, ul, ol", { class: "text-body-16 md:text-body-18 mb-2.5 last:mb-0"}, false],
+  ["attr", "body > p, body > ul, body > ol", { class: "text-body-16 md:text-body-18 mb-2.5 last:mb-0"}, false],
 
-  ["attr", "ul", { class: "list list-disc list-outside pl-[1.25em]" }, false],
-  ["attr", "ul > li", { class: "pl-[0.5em] my-1 last:my-0" }, false],
-  ["attr", "ol", { class: "list list-decimal pl-[1.5em]" }, false],
-  ["attr", "ol > li", { class: "pl-[0.4em] ml-0 my-1 last:my-0" }, false],
-  ["attr", "ol ol", { class: "list-[lower-latin]" }, false],
+  ["attr", "body > ul", { class: "list list-disc list-outside pl-[1.25em]" }, false],
+  ["attr", "body > ul > li", { class: "pl-[0.5em] my-1 last:my-0" }, false],
+  ["attr", "body > ol", { class: "list list-decimal pl-[1.5em]" }, false],
+  ["attr", "body > ol > li", { class: "pl-[0.4em] ml-0 my-1 last:my-0" }, false],
+  ["attr", "body > ol ol", { class: "list-[lower-latin]" }, false],
 
-  ["attr", "figure", { class: "my-[60px] md:mt-6"}, false],
-  ["attr", "img", { class: "block max-w-full" }, false],
-  ["attr", "figcaption", { class: "text-gray-500 text-body-12 uppercase mt-1.5 lg:text-body-14 lg:mt-2" }, false],
+  ["attr", "body > figure", { class: "my-[60px] md:mt-6"}, false],
+  ["attr", "body > img", { class: "block max-w-full" }, false],
+  ["attr", "body > figure > figcaption", { class: "text-gray-500 text-body-12 uppercase mt-1.5 lg:text-body-14 lg:mt-2" }, false],
 
-  ["attr", "blockquote", { class: "border-l-4 border-l-hot-pink pl-4 my-[60px] md:mt-5" }, false],
-  ["attr", "blockquote > p", { class: "text-[red]" }],
-  ["attr", "blockquote, blockquote > p", { class: "font-surt text-rich-blue text-body-20 md:text-body-24 [hanging-punctuation:first_last]" }, false],
+  ["attr", "body > blockquote", { class: "border-l-4 border-l-hot-pink pl-4 my-[60px] md:mt-5" }, false],
+  ["attr", "body > blockquote, body > blockquote > p", { class: "font-surt text-rich-blue text-body-20 md:text-body-24 [hanging-punctuation:first_last]" }, false],
 
-  ["attr", "a", { class: "border-b-sky-blue border-b-2" }, false],
-  ["attr", ".button", { class: "uppercase font-surt text-ui-16 text-gray-200 border-gray-400 border-l border-r px-[0.63rem] py-[0.3rem] bg-black text-white hover:bg-white hover:text-black transition-colors" }],
+  ["attr", "body > a", { class: "border-b-sky-blue border-b-2" }, false],
+  ["attr", "body > p > .button", { class: "uppercase font-surt text-ui-16 text-gray-200 border-gray-400 border-l border-r px-[0.63rem] py-[0.3rem] bg-black text-white hover:bg-white hover:text-black transition-colors" }],
 
   ["attr", ".highlighted", { class: "bg-sky-blue"}]
 ])|raw }}
