@@ -52,8 +52,12 @@
 
   --text-body-32: calc(32 / 16 * 1rem);
   --text-body-32--line-height: 1.4;
+  --text-body-28: calc(28 / 16 * 1rem);
+  --text-body-28--line-height: 1.5;
   --text-body-24: calc(24 / 16 * 1rem);
   --text-body-24--line-height: 1.5;
+  --text-body-22: calc(22 / 16 * 1rem);
+  --text-body-22--line-height: 1.5;
   --text-body-20: calc(20 / 16 * 1rem);
   --text-body-20--line-height: 1.5;
   --text-body-18: calc(18 / 16 * 1rem);
