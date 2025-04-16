@@ -15,9 +15,10 @@
 {% block content %}
   <article class="max-w-4xl mx-auto px-2 md:px-4 lg:px-6 pb-2 md:pb-4 lg:pb-6 mt-6">
     <header class="mb-4">
-      {% include "_rich-text/standard" with { text: "<h1>#{headline}</h1>" } only %}
-      {% include "_rich-text/standard" with { text: "<p>#{claim}</p>" } only %}
+      <h1 class="text-head-32">{{ headline }}</h1>
     </header>
+
+    <h2 class="text-head-28 mb-4">{{ claim }}</h2>
 
     {% include "_rich-text/standard" with { text: text } only %}
 
