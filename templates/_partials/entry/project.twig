@@ -44,11 +44,9 @@
         {% endif %}
 
         {% if categories|length %}
-          <ul class="flex flex-wrap gap-y-0.5">
-            {% for category in categories %}
-              <li class="text-gray-500 uppercase text-body-12 md:text-body-13 after:px-1 after:content-['|'] after:text-gray-400 last:after:hidden">{{ category.title }}</li>
-            {% endfor %}
-          </ul>
+          {% include "_modules/categories-list" with {
+            categories
+          } only %}
         {% endif %}
       </div>
     </div>

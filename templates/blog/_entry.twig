@@ -1,31 +1,77 @@
 {% extends "_layouts/layout.twig" %}
 
+{% set blogIndex = craft.entries.section("blogIndex").one() %}
+
 {% set headline = entry.title %}
 {% set text = entry.text %}
-
-{% set mainImage = entry.mainImage.eagerly().one() %}
-{% set authorName = entry.author.name %}
+{% set image = entry.mainImage.eagerly().one() %}
 {% set postDate = entry.postDate|date("short") %}
+{% set categories = entry.blogCategories.all() %}
+{% set authorName = entry.author.name %}
 
 {% set nextReads = entry.nextReads.eagerly().all() %}
 {% if nextReads|length == 0 %}
   {% set nextReads =  craft.entries.section('blog').id('not ' ~ entry.id).limit(3).all() %}
 {% endif %}
 
+{% set pattern = [
+  'after:bg-pattern-br-gray',
+  'after:content-[\'\']',
+  'after:absolute',
+  'after:right-0',
+  'after:bottom-0',
+  'after:h-full',
+  'after:bg-no-repeat',
+  'after:bg-contain',
+  'after:bg-right-bottom',
+  'after:w-[50vw]',
+  'after:md:w-[40vw]',
+  'after:lg:w-[30vw]'
+]|join(' ') %}
 
 {% block content %}
+  <article>
+    <header class="{{ pattern }} relative md:grid md:grid-cols-12 lg:grid-cols-16 bg-gray-100 border-gray-400 border-b pt-2.5 pb-5 md:py-[3.75rem] px-2 md:px-5">
+      <div class="mb-[60px] md:mb-0 md:col-span-6 lg:col-span-8 relative z-1">
+        {% if blogIndex|length %}
+          <div class="mb-6 font-surt uppercase text-ui-14 md:text-ui-16 tracking-wide">
+            <a class="inline-flex gap-[10px] items-center justify-center text-gray-200 hover:text-gray-500 transition-colors py-[5px] before:mt-[-2px] before:content-[''] before:bg-arrow-left before:h-[18px] before:w-[18px]" href="{{ blogIndex.url }}">
+              {{ "See all articles"|t }}
+            </a>
+          </div>
+        {% endif %}
+
+        <time class="block text-gray-500 mb-3 md:mb-3" datetime="{{ postDate|date('Y-m-d') }}">
+          {{ postDate|date('d/m/Y') }}
+        </time>
+
+        <h1 class="font-surt text-gray-200 text-head-22 md:text-head-38 uppercase mb-3 md:mb-4 last:mb-0">{{ entry.title }}</h1>
+
+        {% if categories|length %}
+          {% include "_modules/categories-list" with {
+            categories,
+            size: "large"
+          } only %}
+        {% endif %}
+      </div>
+
+      {% if image %}
+      <div class="md:col-start-8 md:col-span-5 lg:col-span-6 lg:col-start-11 relative z-1">
+        <div class="aspect-4/3">
+          <img class="block w-full h-full object-cover" src="{{ image.getUrl("blogTeaser") }}" alt="{{ image.alt }}">
+        </div>
+      </div>
+      {% endif %}
+    </header>
+  </article>
+
   <div class="max-w-4xl mx-auto px-2 md:px-4 lg:px-6 pb-2 md:pb-4 lg:pb-6 mt-6">
     <article>
-      {% include "_rich-text/standard" with { text: "<h1>#{ headline }</h1>" } only %}
       <p class="mt-2 mb-4">Written by {{authorName}} on {{ postDate }}</p>
 
-      {% if mainImage %}
-        <div class="my-4">
-          {% include "_modules/figure" with { image: mainImage, size: "textCol" } only %}
-        </div>
-      {% endif %}
-
-      {% include "_rich-text/standard" with { text: text } only %}
+      {% include "_rich-text/standard" with {
+        text
+      } only %}
     </article>
 
     {% include "blog/_modules/next-reads" with { nextReads: nextReads } %}

@@ -14,14 +14,13 @@
           </h4>
         </div>
 
+
         {% if categories|length %}
-          <ul class="hidden sm:flex flex-wrap gap-y-0.5 mt-auto">
-            {% for category in categories %}
-              <li class="text-gray-500 uppercase text-body-12 md:text-body-13 after:px-1 after:content-['|'] after:text-gray-400 last:after:hidden">
-                {{ category.title }}
-              </li>
-            {% endfor %}
-          </ul>
+          <div class="hidden sm:block mt-auto">
+            {% include "_modules/categories-list" with {
+              categories
+            } only %}
+          </div>
         {% endif %}
       </div>
       
@@ -37,13 +36,11 @@
     </div>
 
     {% if categories|length %}
-      <ul class="sm:hidden flex-wrap gap-y-0.5 mt-auto">
-        {% for category in categories %}
-          <li class="text-gray-500 uppercase text-body-12 md:text-body-13 after:px-1 after:content-['|'] after:text-gray-400 last:after:hidden">
-            {{ category.title }}
-          </li>
-        {% endfor %}
-      </ul>
+      <div class="sm:hidden mt-auto">
+        {% include "_modules/categories-list" with {
+          categories
+        } only %}
+      </div>
     {% endif %}
   </a>
 </article>
