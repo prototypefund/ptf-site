@@ -1,0 +1,33 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: f6ed0d5d-4ab8-418b-801e-b11f6cb309a5 # Author
+handle: author
+maxAuthors: 1
+name: Author
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  af0bbe1c-3613-4775-8a01-965b68d4e56e: # English
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+  ddc3aedf-983b-4fa7-81eb-69fd761d71af: # German
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel

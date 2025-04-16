@@ -92,6 +92,44 @@ fieldLayouts:
             uid: aed9da80-acf1-4ba4-8add-5819e0dae19c
             userCondition: null
           -
+            dateAdded: '2025-04-16T21:00:17+00:00'
+            elementCondition: null
+            fieldUid: 1bf40018-82e4-4e44-bbd6-6f49c132678d # Modules
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 33e40fdb-bb84-40da-b4b1-6d96f3f8a32b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-16T21:00:17+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 1cff222a-2a35-400e-a97a-398d6f58bc0f
+            userCondition: null
+          -
+            dateAdded: '2025-04-16T21:26:21+00:00'
+            elementCondition: null
+            fieldUid: 6c3461da-2d32-418a-803b-efe329a38c30 # Article Author
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 03191302-a907-4c96-ae37-23a9092c2644
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-04-07T17:37:58+00:00'
             elementCondition: null
             fieldUid: 2965e0c7-feb2-4aa2-98d4-de16d458eb30 # Categories

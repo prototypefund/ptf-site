@@ -6,7 +6,7 @@
 {% set activeClasses = "!text-gray-200 border-gray-400 border-x" %}
 
 {% if pagination.totalPages > 1 %}
-  <div class="flex flex-row justify-center items-center py-[0.625rem] md:py-2.5">
+  <div class="flex flex-row justify-center items-center pt-[0.625rem] md:pt-2.5">
     {% apply spaceless %}
       {% if pagination.currentPage > offset + 1 %}
         <a class="{{ itemClasses }}" href="{{ _self.getUrl(pagination.firstUrl) }}">1</a>
