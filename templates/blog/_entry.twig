@@ -33,10 +33,10 @@
 {% block content %}
   <article>
     <header class="{{ pattern }} relative md:grid md:grid-cols-12 lg:grid-cols-16 bg-gray-100 border-gray-400 border-b pt-2.5 pb-5 md:py-[3.75rem] px-2 md:px-5">
-      <div class="mb-[60px] md:mb-0 md:col-span-6 lg:col-span-8 relative z-1">
+      <div class="mb-[3.75rem] md:mb-0 md:col-span-6 lg:col-span-8 relative z-1">
         {% if blogIndex|length %}
           <div class="mb-6 font-surt uppercase text-ui-14 md:text-ui-16 tracking-wide">
-            <a class="inline-flex gap-[10px] items-center justify-center text-gray-200 hover:text-gray-500 transition-colors py-[5px] before:mt-[-2px] before:content-[''] before:bg-arrow-left before:h-[18px] before:w-[18px]" href="{{ blogIndex.url }}">
+            <a class="inline-flex gap-[0.63rem] items-center justify-center text-gray-200 hover:text-gray-500 transition-colors py-[0.3125rem] before:mt-[-0.125rem] before:content-[''] before:bg-arrow-left before:h-[1.13rem] before:w-[1.13rem]" href="{{ blogIndex.url }}">
               {{ "See all articles"|t }}
             </a>
           </div>
@@ -67,10 +67,10 @@
 
     {% if intro|length or text|length %}
       <div class="{{ [
-        'px-2',
-        'md:px-5',
-        'mt-10',
         'grid',
+        'px-2',
+        'mt-10',
+        'md:px-5',
         'md:grid-cols-16',
         'md:[&>*]:col-start-6',
         'md:[&>*]:col-span-11',
@@ -81,7 +81,7 @@
         'lg:[&>*]:col-span-8',
       ]|join(' ') }}">
         {% if intro|length %}
-          <div class="mb-[60px]">
+          <div class="mb-[3.75rem]">
             {% include "_rich-text/intro" with {
               text: intro
             } only %}
