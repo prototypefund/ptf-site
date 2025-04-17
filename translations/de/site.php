@@ -28,6 +28,7 @@ return [
   "Round: {round}" => "Runde: {round}",
   "Rounds (2016 – 2025)" => "Runden (2016 – 2025)",
   "Register" => "Anmelden",
+  "See all" => "Alle anzeigen",
   "See all articles" => "Alle Artikel anzeigen",
   "Switch to dark mode" => "Zum dunklen Modus wechseln",
   "Switch to light mode" => "Zum hellen Modus wechseln",

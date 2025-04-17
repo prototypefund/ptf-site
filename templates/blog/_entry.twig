@@ -141,7 +141,10 @@
   </article>
 
   <div class="mb-[6.25rem] md:mb-14 px-2 md:px-5">
-    {% include "blog/_modules/next-reads" with { nextReads: nextReads } %}
+    {% include "blog/_modules/next-reads" with {
+      nextReads,
+      blogIndex
+    } %}
   </div>
 
   {% include "_modules/modules" with { entry: entry } %}
