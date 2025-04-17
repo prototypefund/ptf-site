@@ -201,7 +201,7 @@
                       {% for link in links %}
                         {% set navLink = link.genericLink %}
                         {% set isExternal = navLink.type == "url" %}
-                        {% set isActive = matchedElement.url == navLink.url %}
+                        {% set isActive = matchedElement.url|default(null) == navLink.url %}
 
                         <li class="mb-[0.38rem] last:mb-0">
                           <a class="{{ [
