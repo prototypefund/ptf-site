@@ -4,19 +4,13 @@ instructions: null
 name: Caption
 searchable: false
 settings:
-  availableTransforms: '*'
-  availableVolumes: '*'
-  ckeConfig: c4438391-90e5-49b1-93bd-6fcbbd3aed62 # Simple
-  createButtonLabel: null
-  defaultTransform: null
-  purifierConfig: null
-  purifyHtml: true
-  showUnpermittedFiles: false
-  showUnpermittedVolumes: false
-  showWordCount: false
-  sourceEditingGroups:
-    - __ADMINS__
-  wordLimit: null
+  byteLimit: null
+  charLimit: null
+  code: false
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
 translationKeyFormat: null
 translationMethod: site
-type: craft\ckeditor\Field
+type: craft\fields\PlainText
