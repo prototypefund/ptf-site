@@ -1,17 +1,29 @@
 {% paginate articlesQuery.limit(14) as pagination, articles %}
 
-{% set categories = craft.categories.group("blogCategories").all() %}
-
 {% set headline = entry.headline|default(indexEntry.headline)|default(indexEntry.title) %}
 {% set intro = entry.intro|default(indexEntry.intro) %}
 {% set link = entry.genericLink|default(indexEntry.genericLink) %}
+{% set background = indexEntry.headerBackground.value %}
+{% set alignment = indexEntry.headerAlignment.value %}
+
+{% set allArticles = [{
+  title: "All Articles"|t,
+  url: indexEntry.url ~ "#list",
+  isActive: entry.id == indexEntry.id
+}] %}
+
+{% set categories = craft.categories.group("blogCategories").all()|map((category) => {
+  title: category.title,
+  url: category.url ~ "#list",
+  isActive: category.id == entry.id
+}) %}
 
 {% include "_modules/header" with {
   headline,
   intro,
   link,
-  background: indexEntry.headerBackground.value,
-  alignment: indexEntry.headerAlignment.value
+  background,
+  alignment
 } only %}
 
 <div class="mt-5 md:mt-9 mb-5 px-2 md:px-5">
@@ -26,10 +38,7 @@
       </h3>
 
       {% include "_modules/filters" with {
-        filters: categories|map((category) => category|merge({
-          url: category.url ~ "#list",
-          isActive: category.id == entry.id
-        }))
+        filters: allArticles|merge(categories)
       } only %}
     </div>
   {% endif %}
