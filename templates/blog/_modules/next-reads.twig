@@ -1,7 +1,24 @@
+{% set seeAll %}
+  <a class="uppercase font-surt text-ui-16 text-gray-200 border-gray-400 border-l border-r px-[0.63rem] py-[0.3rem] bg-white hover:bg-black hover:text-white transition-colors" href="{{ blogIndex.url }}">
+    {{ "See all"|t }}
+  </a>
+{% endset %}
+
 <aside>
-  <h4 class="font-surt text-head-22 md:text-head-32 mb-2.5 md:mb-5">
-    {{ "More articles like this"|t }}
-  </h4>
+  <div class="flex items-center mb-2.5 md:mb-5">
+    <h4 class="font-surt text-head-22 md:text-head-32">
+      {{ "More articles like this"|t }}
+    </h4>
+    {% if blogIndex|length %}
+      <div class="hidden sm:block sm:ml-auto">
+        {{ seeAll }}
+      </div>
+    {% endif %}
+  </div>
 
   {% include "blog/_modules/teasers-list" with { articles: nextReads } %}
+
+  <div class="flex justify-center sm:hidden">
+    {{ seeAll }}
+  </div>
 </aside>
