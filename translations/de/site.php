@@ -16,6 +16,7 @@ return [
   "No articles found." => "Keine Artikel gefunden.",
   "Matching Articles" => "Passende Artikel",
   "Matching Projects" => "Passende Projekte",
+  "More articles like this" => "Mehr Artikel wie dieser",
   "Open Readme on GitHub" => "Readme auf Github",
   "Our blog" => "Unser Blog",
   "Our projects" => "Unsere Projekte",

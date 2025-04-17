@@ -1,4 +1,7 @@
 <aside>
-  {% include "_rich-text/standard" with { text: "<h2>#{'Continue reading'|t}</h2>" } only %}
+  <h4 class="font-surt text-head-22 md:text-head-32 mb-2.5 md:mb-5">
+    {{ "More articles like this"|t }}
+  </h4>
+
   {% include "blog/_modules/teasers-list" with { articles: nextReads } %}
 </aside>
