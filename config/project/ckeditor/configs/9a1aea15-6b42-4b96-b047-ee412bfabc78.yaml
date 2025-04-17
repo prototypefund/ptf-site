@@ -1,0 +1,22 @@
+css: ".ck.ck-editor .highlighted {\r\n  background-color: yellow;\r\n}"
+headingLevels: false
+name: Intro
+options:
+  list:
+    properties:
+      styles: false
+  style:
+    definitions:
+      -
+        classes:
+          - highlighted
+        element: span
+        name: Highlight
+toolbar:
+  - style
+  - '|'
+  - bold
+  - italic
+  - strikethrough
+  - link
+  - '|'
