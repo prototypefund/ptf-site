@@ -1,4 +1,4 @@
-dateModified: 1744835407
+dateModified: 1744839825
 elementSources:
   craft\elements\Entry:
     -
@@ -50,10 +50,10 @@ elementSources:
       key: 'section:6e040108-27cc-4a4a-bca9-c5e3ab1bdc04' # Generic Pages
       type: native
     -
-      heading: 'Shared Data'
+      heading: People
       type: heading
     -
-      key: 'section:fedc8dc1-63ba-4aaf-9afa-ce0809c21186'
+      key: 'section:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Author
       type: native
 email:
   fromEmail: $EMAIL_SYSTEM_ADDRESS
@@ -88,6 +88,7 @@ meta:
     4e97404d-0992-4280-b87e-903b4fc471c5: Navigation # Navigation
     5a2c3e10-bf78-4986-aecd-f75829889851: 'Project Topics' # Project Topics
     5bafc55c-8f31-4f9b-add0-49e9957e63a7: 'Footer Link Group' # Footer Link Group
+    6c3461da-2d32-418a-803b-efe329a38c30: 'Article Author' # Article Author
     6ca70ace-9ae7-4dfa-a915-d1a24572619d: 'Footer Description' # Footer Description
     6e040108-27cc-4a4a-bca9-c5e3ab1bdc04: 'Generic Pages' # Generic Pages
     6fa1e10a-d063-4c10-a955-f1b3eda7e7ef: 'Standard (with Entry Types)' # Standard (with Entry Types)
@@ -108,6 +109,7 @@ meta:
     69fb06a0-7361-46bd-a063-b293e6336a99: Description # Description
     72b63983-0825-4712-ab6f-b4d98ee4efd4: Standard # Standard
     91a7ad8a-d35b-4738-b71b-a18f899afc5d: 'Resize: width 2000px' # Resize: width 2000px
+    98ac3e52-dafd-49ce-8852-a02e92879a39: 'Avatar (Small)' # Avatar (Small)
     137c86ac-e143-4792-b936-38c41302eccd: Fonts # Fonts
     183a1c32-7844-45ce-93f1-a991260eeadc: Caption # Caption
     276edf74-a032-4834-b9ef-5783f0b823d4: 'Project ID' # Project ID
@@ -121,6 +123,7 @@ meta:
     2965e0c7-feb2-4aa2-98d4-de16d458eb30: Categories # Categories
     3660aa23-c5a0-4865-b14d-5bd479e01996: Source # Source
     5593a3e3-ad74-4e68-ad2d-36a6c8f1d95a: 'Project Year Groups' # Project Year Groups
+    6848d2a0-5b5f-43f6-a0c7-22707ad5e028: Bio # Bio
     8898a317-df17-4cc9-9475-6376bc29fbd5: 'Newsletter Headline' # Newsletter Headline
     53364b16-adc8-4b34-802f-054c272771c6: 'Projects Index' # Projects Index
     586087db-4dd7-43ba-929b-b3f7cef02ff8: 'Resize: width 0500px' # Resize: width 0500px
@@ -132,6 +135,7 @@ meta:
     80466913-dc6f-46d5-8013-a55f3a7358da: Sponsors # Sponsors
     a05e468d-5063-4f3a-8ea3-aa240eebc1bf: Newsletter # Newsletter
     a06eff6a-35ff-45b1-9c02-c6ef2f3f948c: 'Project Rounds' # Project Rounds
+    a6babdad-fc37-48fb-ac86-088ea4129e1e: Author # Author
     ad1324f8-1337-475f-8516-ab1e13543027: Intro # Intro
     ad6378ef-e24f-4541-9819-1a644a3dd8c4: 'Nav Links' # Nav Links
     af0bbe1c-3613-4775-8a01-965b68d4e56e: English # English
@@ -149,6 +153,7 @@ meta:
     c63194ff-c47c-4c20-80b1-39bfedfc3b0f: 'Project Topics' # Project Topics
     c4438391-90e5-49b1-93bd-6fcbbd3aed62: Simple # Simple
     cff97bfa-6eb7-473b-97c0-cc3af58c0f64: 'Article ID' # Article ID
+    d13f787b-b91b-4821-8104-46e509830347: Avatar # Avatar
     d26ba65b-dbab-4a12-b3e8-1ae7a4a2845d: Quote # Quote
     d5397ea9-1d37-4f12-bf41-46082d130bd8: Image # Image
     d42896d4-04a6-4211-8d97-f265c27a3be1: 'Inclusive Sans – Semibold (Italic)' # Inclusive Sans – Semibold (Italic)
@@ -156,11 +161,13 @@ meta:
     da7ab602-1ed1-46b0-9e1c-5ec3a6e60c92: 'Project Teaser' # Project Teaser
     ddc3aedf-983b-4fa7-81eb-69fd761d71af: German # German
     de820dbc-bd7e-4a0f-9554-3d750480d2a4: Projects # Projects
+    e30e243f-a8dc-43b7-b826-e4788906231f: Pronouns # Pronouns
     eb089684-4134-4cd9-a60d-4aaac63db8f4: Link # Link
     ed187804-9da6-4b7d-b983-1c751ac7a3ab: 'Tracking Body' # Tracking Body
     eec7038e-53af-4299-bf11-db14e0fbd073: 'Generic Page' # Generic Page
     f2fe1c5e-9903-41ca-a1b9-45815959a6ef: 'Newsletter Link Group' # Newsletter Link Group
     f4a87b3f-ed6d-49ce-8753-05dda85942a6: 'Project Status' # Project Status
+    f6ed0d5d-4ab8-418b-801e-b11f6cb309a5: Author # Author
     f81cb75d-92f5-44c4-89bd-673d8c8ee15c: 'Sponsors Headline' # Sponsors Headline
     f81e8821-286e-4e07-86f6-54880a45eafe: 'Project Team Members' # Project Team Members
     f7486108-7a41-4ff3-83e8-34c2b334e19f: Links # Links

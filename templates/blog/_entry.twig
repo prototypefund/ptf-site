@@ -7,8 +7,8 @@
 {% set text = entry.textEntryTypes %}
 {% set image = entry.mainImage.eagerly().one() %}
 {% set postDate = entry.postDate|date("short") %}
+{% set articleAuthor = entry.articleAuthor.one() %}
 {% set categories = entry.blogCategories.all() %}
-
 {% set nextReads = entry.nextReads.eagerly().all() %}
 
 {% if nextReads|length == 0 %}
@@ -31,7 +31,7 @@
 ]|join(' ') %}
 
 {% block content %}
-  <article>
+  <article class="mb-[6.25rem] md:mb-14 last:mb-0">
     <header class="{{ pattern }} relative md:grid md:grid-cols-12 lg:grid-cols-16 bg-gray-100 border-gray-400 border-b pt-2.5 pb-5 md:py-[3.75rem] px-2 md:px-5">
       <div class="mb-[3.75rem] md:mb-0 md:col-span-6 lg:col-span-8 relative z-1">
         {% if blogIndex|length %}
@@ -56,7 +56,7 @@
         {% endif %}
       </div>
 
-      {% if image %}
+      {% if image|length %}
       <div class="md:col-start-8 md:col-span-5 lg:col-span-6 lg:col-start-11 relative z-1">
         <div class="aspect-4/3">
           <img class="block w-full h-full object-cover" src="{{ image.getUrl("blogTeaser") }}" alt="{{ image.alt }}">
@@ -70,6 +70,7 @@
         'grid',
         'px-2',
         'mt-10',
+        'mb-10',
         'md:px-5',
         'md:grid-cols-16',
         'md:[&>*]:col-start-6',
@@ -95,9 +96,40 @@
         {% endif %}
       </div>
     {% endif %}
+
+    {% if articleAuthor|length %}
+      {% set avatar = articleAuthor.avatar.eagerly().one() %}
+      {% set pronouns = articleAuthor.pronouns %}
+      {% set bio = articleAuthor.bio %}
+
+      <div class="grid px-2 md:grid-cols-16 md:px-5 border-gray-400 border-t md:border-t-0">
+        <div class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-8 pt-2.5 border-gray-400 border-t-0 md:border-t">
+          {% if avatar|length %}
+            <img class="mb-6 md:mb-[3.75rem]" src="{{ avatar.getUrl("avatarSmall") }}" alt="{{ avatar.alt }}">
+          {% endif %}
+
+          <div class="flex gap-2">
+            <h4 class="uppercase font-surt text-head-22 md:text-head-38 mb-3 md:mb-4">{{ articleAuthor.title  }}</h4>
+
+            {% if pronouns|length %}
+              <span class="uppercase font-surt text-head-16 md:text-head-22">{{ pronouns }}</span>
+            {% endif %}
+          </div>
+
+          {% if bio|length %}
+            {% include "_rich-text/simple" with {
+              text: bio,
+              size: "large"
+            } only %}
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
   </article>
 
-  <div class="max-w-4xl mx-auto px-2 md:px-4 lg:px-6 pb-2 md:pb-4 lg:pb-6 mt-6">
+  <div class="mb-[6.25rem] md:mb-14 px-2 md:px-5">
     {% include "blog/_modules/next-reads" with { nextReads: nextReads } %}
   </div>
+
+  {% include "_modules/modules" with { entry: entry } %}
 {% endblock %}
