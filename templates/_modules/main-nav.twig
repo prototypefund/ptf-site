@@ -1,3 +1,5 @@
+{% set blogIndex = craft.entries.section("blogIndex").one() %}
+
 {% set homepage = craft.entries.section("homepage").one() %}
 {% set navLinks = navigation.navLinks.all() %}
 {% set matchedElement = craft.app.urlManager.matchedElement %}
@@ -201,7 +203,22 @@
                       {% for link in links %}
                         {% set navLink = link.genericLink %}
                         {% set isExternal = navLink.type == "url" %}
-                        {% set isActive = matchedElement.url|default(null) == navLink.url %}
+                        {% set isActive = '' %}
+
+                        {% set navLinkHandle = navLink.element.section.handle|default(null) %}
+                        {% set matchedElementHandle = matchedElement.section.handle|default(null) %}
+                        {% set matchedElementUrl = matchedElement.url|default(null) %}
+
+                        {% set sectionMap = {
+                          'blogIndex': 'blog',
+                          'projectsIndex': 'projects'
+                        } %}
+
+                        {% if sectionMap[navLinkHandle] is defined and sectionMap[navLinkHandle] == matchedElementHandle %}
+                          {% set isActive = 'active' %}
+                        {% elseif matchedElementUrl == navLink.url %}
+                          {% set isActive = 'active' %}
+                        {% endif %}
 
                         <li class="mb-[0.38rem] last:mb-0">
                           <a class="{{ [
