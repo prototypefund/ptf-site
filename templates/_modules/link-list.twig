@@ -4,7 +4,7 @@
 
     <li class="border-gray-400 border-b border-r {% if loop.index is odd %}border-l{% endif %}">
       <a
-        class="group flex items-center text-[17px] px-2 py-[14px] hover:bg-gray-100 transition-colors after:ml-auto after:bg-link-arrow after:bg-no-repeat after:bg-cover after:content-[''] after:block after:h-2.5 after:w-2.5"
+        class="group flex items-center gap-1.5 text-base md:text-[1.06rem] px-2 py-1.5 md:py-[0.88rem] hover:bg-gray-100 transition-colors after:ml-auto after:bg-link-arrow after:bg-no-repeat after:bg-cover after:content-[''] after:block after:h-2.5 after:w-2.5"
         href="{{ link.url }}"
         target="{{ target }}"
         {{ target == '_blank' ? 'rel="noopener noreferrer"' }}
