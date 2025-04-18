@@ -1,0 +1,67 @@
+{% set postDate = entry.postDate|date("short") %}
+{% set categories = entry.blogCategories.all() %}
+{% set image = entry.mainImage.eagerly().one() %}
+
+{% set pattern = [
+  'after:bg-pattern-br-gray-1',
+  'after:content-[\'\']',
+  'after:absolute',
+  'after:right-0',
+  'after:bottom-0',
+  'after:h-full',
+  'after:bg-no-repeat',
+  'after:bg-contain',
+  'after:bg-right-bottom',
+  'after:w-[50vw]',
+  'after:md:w-[40vw]',
+  'after:lg:w-[30vw]'
+]|join(' ') %}
+
+<header class="{{ pattern }} relative md:grid md:grid-cols-12 lg:grid-cols-16 bg-gray-100 border-gray-400 border-b pt-2.5 pb-5 md:py-[3.75rem] px-2 md:px-5">
+  <div class="mb-[3.75rem] md:mb-0 md:col-span-6 lg:col-span-8 relative z-1">
+    {% if blogIndex|length %}
+      <div class="mb-6">
+        {% include "_modules/arrow-link" with {
+          url: blogIndex.url,
+          text: "See all articles"|t
+        } only %}
+      </div>
+    {% endif %}
+
+    <time class="block text-gray-500 mb-3 md:mb-3" datetime="{{ postDate|date('Y-m-d') }}">
+      {{ postDate|date('d/m/Y') }}
+    </time>
+
+    <h1 class="font-surt text-gray-200 text-head-22 md:text-head-38 uppercase mb-3 md:mb-4 last:mb-0">
+      {{ entry.title }}
+    </h1>
+
+    {% if categories|length %}
+      {% include "_modules/categories-list" with {
+        categories,
+        size: "large"
+      } only %}
+    {% endif %}
+  </div>
+
+  {% if image|length %}
+    {% set caption = [image.caption, image.credit]|filter(value => (value is not null)) %}
+
+    <figure class="md:col-start-8 md:col-span-5 lg:col-span-6 lg:col-start-11 relative z-1">
+      <div class="aspect-4/3">
+        <img class="block w-full h-full object-cover" src="{{ image.getUrl("blogTeaser") }}" alt="{{ image.alt }}">
+      </div>
+      {% if caption|length %}
+        <figcaption class="mt-1">
+          <ul class="flex flex-wrap gap-y-0.5">
+            {% for text in caption %}
+              <li class="uppercase text-gray-500 text-body-12 md:text-body-13 after:pl-[0.3125rem] after:pr-1 after:content-['|'] after:text-gray-400 last:after:hidden">
+                {{ text }}
+              </li>
+            {% endfor %}
+          </ul>
+        </figcaption>
+      {% endif %}
+    </figure>
+  {% endif %}
+</header>

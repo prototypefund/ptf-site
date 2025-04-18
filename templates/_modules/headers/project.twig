@@ -1,0 +1,103 @@
+{% set inFunding = "inUsage" in entry.projectStatus %}
+{% set claim = entry.claim %}
+{% set dateUpdated = entry.dateUpdated %}
+{% set image = entry.mainImage.eagerly().one() %}
+{% set projectLinks = entry.projectLinks %}
+
+{% set demoLink = projectLinks
+  |filter(item => item.name in [
+    "Demo Week",
+    "Demo Day",
+    "Demo-Woche",
+    "Demo-Tag"
+  ])
+  |first
+%}
+
+{% set remainingLinks = projectLinks
+  |filter(item => item != demoLink)
+%}
+
+{% set categories = entry.projectRounds.all()
+  |merge(entry.projectTopics.all())
+  |merge(entry.projectTechnologies.all())
+  |merge(entry.projectYearGroups.all())
+%}
+
+{% set pattern = [
+  'after:bg-pattern-br-gray-2',
+  'after:content-[\'\']',
+  'after:absolute',
+  'after:right-0',
+  'after:bottom-0',
+  'after:h-full',
+  'after:bg-no-repeat',
+  'after:bg-contain',
+  'after:bg-right-bottom',
+  'after:w-[50vw]',
+  'after:md:w-[35vw]',
+  'after:lg:w-[25vw]'
+]|join(' ') %}
+
+<header class="{{ pattern }} relative md:grid md:grid-cols-12 lg:grid-cols-16 border-gray-400 border-b pt-2.5 pb-5 md:py-[3.75rem] px-2 md:px-5">
+  <div class="mb-[3.75rem] md:mb-0 md:col-span-6 lg:col-span-10 relative z-1">
+    {% if inFunding|length %}
+      <div class="mb-1 md:mb-2">
+        {% include "_modules/pill" with {
+          text: "In Funding"|t
+        } only %}
+      </div>
+    {% endif %}
+
+    <h1 class="font-surt text-gray-200 text-head-22 md:text-head-38 uppercase mb-2.5 md:mb-3 last:mb-0 break-words">
+      <span class="text-rich-blue">{{ entry.title }}</span>{% if claim|length %}: {{ claim }}{% endif %}
+    </h1>
+
+    {% if categories|length %}
+      <div class="mb-2.5 md:mb-3">
+        {% include "_modules/categories-list" with {
+          categories,
+          size: "large"
+        } only %}
+      </div>
+    {% endif %}
+
+    <time class="block text-gray-200 mb-4 md:mb-5 text-ui-13 md:text-ui-14" datetime="{{ dateUpdated|date('Y-m-d') }}">
+      {{ "Last updated"|t }}: {{ dateUpdated|date("short") }}
+    </time>
+
+    {% if remainingLinks|length %}
+      <div class="mb-5 last:mb-0 max-w-64">
+        {% include "_modules/link-list" with {
+          links: remainingLinks
+            |map((link) => {
+              text: link.name,
+              url: link.linkURL,
+              target: "_blank"
+            })
+        } only %}
+      </div>
+    {% endif %}
+
+    {% if demoLink|length %}
+      <div class="mb-6">
+        {% include "_modules/arrow-link" with {
+          text: "See #{demoLink.name}"|t,
+          url: demoLink.linkURL,
+          target: "_blank",
+          arrow: "right"
+        } only %}
+      </div>
+    {% endif %}
+  </div>
+
+  {% if image|length %}
+    <div class="w-[14.31rem] ml-auto md:w-auto md:col-start-8 md:col-span-5 lg:col-span-4 lg:col-start-13 relative z-1">
+      <div class="bg-gray-100 flex items-center justify-center aspect-square p-[1.25rem]">
+        <div class="w-full mix-blend-multiply">
+          <img class="w-full h-full object-contain" src="{{ image.url }}" alt="{{ image.alt }}">
+        </div>
+      </div>
+    </div>
+  {% endif %}
+</header>

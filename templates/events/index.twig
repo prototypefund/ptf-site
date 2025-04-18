@@ -1,7 +1,7 @@
 {% extends "_layouts/layout.twig" %}
 
 {% block content %}
-  {% include "_modules/header" with {
+  {% include "_modules/headers/simple" with {
     headline: entry.headline|default(entry.title),
     intro: entry.intro,
     link: entry.genericLink,

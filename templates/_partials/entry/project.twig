@@ -16,7 +16,7 @@
         {% if image|length %}
           <div class="bg-gray-100 flex items-center justify-center aspect-square p-[1.25rem]">
             <div class="w-full mix-blend-multiply">
-              <img class="w-full h-full object-contain " src="{{ image.url }}" alt="{{ image.alt }}">
+              <img class="w-full h-full object-contain" src="{{ image.url }}" alt="{{ image.alt }}">
             </div>
           </div>
         {% else %}
@@ -28,8 +28,10 @@
 
       <div class="col-span-9">
         {% if inFunding|length %}
-          <div>
-            <div class="bg-pink inline-block rounded-sm uppercase text-ui-11 md:text-ui-13 px-[0.375rem] py-[0.1875rem] md:px-1 md:py-0.5 mb-1 md:mb-2">{{ "In Funding"|t }}</div>
+          <div class="mb-1 md:mb-2">
+            {% include "_modules/pill" with {
+              text: "In Funding"|t
+            } only %}
           </div>
         {% endif %}
 

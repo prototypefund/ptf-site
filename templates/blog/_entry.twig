@@ -1,82 +1,18 @@
 {% extends "_layouts/layout.twig" %}
 
-{% set blogIndex = craft.entries.section("blogIndex").one() %}
-
 {% set headline = entry.title %}
 {% set intro = entry.intro %}
 {% set text = entry.textEntryTypes %}
-{% set image = entry.mainImage.eagerly().one() %}
-{% set postDate = entry.postDate|date("short") %}
 {% set articleAuthor = entry.articleAuthor.one() %}
-{% set categories = entry.blogCategories.all() %}
 {% set nextReads = entry.nextReads.eagerly().all() %}
 
 {% if nextReads|length == 0 %}
   {% set nextReads =  craft.entries.section('blog').id('not ' ~ entry.id).limit(4).all() %}
 {% endif %}
 
-{% set pattern = [
-  'after:bg-pattern-br-gray',
-  'after:content-[\'\']',
-  'after:absolute',
-  'after:right-0',
-  'after:bottom-0',
-  'after:h-full',
-  'after:bg-no-repeat',
-  'after:bg-contain',
-  'after:bg-right-bottom',
-  'after:w-[50vw]',
-  'after:md:w-[40vw]',
-  'after:lg:w-[30vw]'
-]|join(' ') %}
-
 {% block content %}
   <article class="mb-[6.25rem] md:mb-14 last:mb-0">
-    <header class="{{ pattern }} relative md:grid md:grid-cols-12 lg:grid-cols-16 bg-gray-100 border-gray-400 border-b pt-2.5 pb-5 md:py-[3.75rem] px-2 md:px-5">
-      <div class="mb-[3.75rem] md:mb-0 md:col-span-6 lg:col-span-8 relative z-1">
-        {% if blogIndex|length %}
-          <div class="mb-6 font-surt uppercase text-ui-14 md:text-ui-16 tracking-wide">
-            <a class="inline-flex gap-[0.63rem] items-center justify-center text-gray-200 hover:text-gray-500 transition-colors py-[0.3125rem] before:mt-[-0.125rem] before:content-[''] before:bg-arrow-left before:h-[1.13rem] before:w-[1.13rem]" href="{{ blogIndex.url }}">
-              {{ "See all articles"|t }}
-            </a>
-          </div>
-        {% endif %}
-
-        <time class="block text-gray-500 mb-3 md:mb-3" datetime="{{ postDate|date('Y-m-d') }}">
-          {{ postDate|date('d/m/Y') }}
-        </time>
-
-        <h1 class="font-surt text-gray-200 text-head-22 md:text-head-38 uppercase mb-3 md:mb-4 last:mb-0">{{ entry.title }}</h1>
-
-        {% if categories|length %}
-          {% include "_modules/categories-list" with {
-            categories,
-            size: "large"
-          } only %}
-        {% endif %}
-      </div>
-
-      {% if image|length %}
-        {% set caption = [image.caption, image.credit]|filter(value => (value is not null)) %}
-
-        <figure class="md:col-start-8 md:col-span-5 lg:col-span-6 lg:col-start-11 relative z-1">
-          <div class="aspect-4/3">
-            <img class="block w-full h-full object-cover" src="{{ image.getUrl("blogTeaser") }}" alt="{{ image.alt }}">
-          </div>
-          {% if caption|length %}
-            <figcaption class="mt-1">
-              <ul class="flex flex-wrap gap-y-0.5">
-                {% for text in caption %}
-                  <li class="uppercase text-gray-500 text-body-12 md:text-body-13 after:pl-[0.3125rem] after:pr-1 after:content-['|'] after:text-gray-400 last:after:hidden">
-                    {{ text }}
-                  </li>
-                {% endfor %}
-              </ul>
-            </figcaption>
-          {% endif %}
-        </figure>
-      {% endif %}
-    </header>
+    {% include "_modules/headers/article" with { entry } only %}
 
     {% if intro|length or text|length %}
       <div class="{{ [

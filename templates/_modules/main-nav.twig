@@ -1,6 +1,3 @@
-{% set blogIndex = craft.entries.section("blogIndex").one() %}
-
-{% set homepage = craft.entries.section("homepage").one() %}
 {% set navLinks = navigation.navLinks.all() %}
 {% set matchedElement = craft.app.urlManager.matchedElement %}
 
@@ -190,7 +187,6 @@
                 {% if links|length %}
                   <li
                     class="{{ [
-                      'js-menu',
                       'p-2',
                       'w-1/5',
                       'border-r',
