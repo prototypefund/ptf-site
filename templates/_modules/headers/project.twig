@@ -1,0 +1,53 @@
+{% set inFunding = "inUsage" in entry.projectStatus %}
+{% set claim = entry.claim %}
+{% set dateUpdated = entry.dateUpdated %}
+
+{% set categories = entry.projectRounds.all()
+  |merge(entry.projectTopics.all())
+  |merge(entry.projectTechnologies.all())
+  |merge(entry.projectYearGroups.all())
+%}
+
+{% set pattern = [
+  'after:bg-pattern-br-gray',
+  'after:content-[\'\']',
+  'after:absolute',
+  'after:right-0',
+  'after:bottom-0',
+  'after:h-full',
+  'after:bg-no-repeat',
+  'after:bg-contain',
+  'after:bg-right-bottom',
+  'after:w-[50vw]',
+  'after:md:w-[40vw]',
+  'after:lg:w-[30vw]'
+]|join(' ') %}
+
+<header class="{{ pattern }} relative md:grid md:grid-cols-12 lg:grid-cols-16 border-gray-400 border-b pt-2.5 pb-5 md:py-[3.75rem] px-2 md:px-5">
+  <div class="mb-[3.75rem] md:mb-0 md:col-span-6 lg:col-span-8 relative z-1">
+    {% if inFunding|length %}
+      <div class="mb-1 md:mb-2">
+        {% include "_modules/pill" with {
+          text: "In Funding"|t
+        } only %}
+      </div>
+    {% endif %}
+
+    <h1 class="font-surt text-gray-200 text-head-22 md:text-head-38 uppercase mb-2.5 md:mb-3 last:mb-0">
+      <span class="text-rich-blue">{{ entry.title }}</span>{% if claim|length %}: {{ claim }}{% endif %}
+    </h1>
+
+    {% if categories|length %}
+      <div class="mb-2.5 md:mb-3">
+        {% include "_modules/categories-list" with {
+          categories,
+          size: "large"
+        } only %}
+      </div>
+    {% endif %}
+
+    <time class="block text-gray-200 mb-4 md:mb-5 text-ui-13 md:text-ui-14" datetime="{{ dateUpdated|date('Y-m-d') }}">
+      {{ "Last updated"|t }}: {{ dateUpdated|date("short") }}
+    </time>
+  </div>
+</header>

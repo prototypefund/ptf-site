@@ -10,6 +10,7 @@ return [
   "Home" => "Startseite",
   "Filter projects" => "Projekte filtern",
   "Filter by category" => "Nach Kategorie filtern",
+  "Last updated" => "Zuletzt aktualisiert",
   "Links" => "Links",
   "More articles" => "Mehr Artikel",
   "No projects found." => "Keine Projekte gefunden.",

@@ -1,12 +1,11 @@
 {% extends "_layouts/layout.twig" %}
 
 {% set articlesQuery = craft.entries.section("blog").relatedTo(category) %}
-{% set indexEntry = craft.entries.section("blogIndex").one() %}
 
 {% block content %}
   {% include "blog/_modules/overview-page" with {
     articlesQuery: articlesQuery,
-    indexEntry,
+    indexEntry: blogIndex,
     entry: category,
     title: "Matching Articles"|t
   } only %}
