@@ -31,6 +31,8 @@ return [
   "Register" => "Anmelden",
   "See all" => "Alle anzeigen",
   "See all articles" => "Alle Artikel anzeigen",
+  "See Demo Week" => "Siehe Demo-Woche",
+  "See Demo Day" => "Siehe Demo-Tag",
   "Switch to dark mode" => "Zum dunklen Modus wechseln",
   "Switch to light mode" => "Zum hellen Modus wechseln",
   "Only show currently funded projects" => "Nur aktuell geförderte Projekte anzeigen",

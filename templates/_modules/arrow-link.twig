@@ -1,0 +1,15 @@
+{% set target = target|default("_self") %}
+{% set arrow = arrow|default("left") %}
+
+{% set arrowStyles = {
+  left: "gap-[0.63rem] before:bg-arrow-left",
+  right: "gap-[2.5] before:bg-arrow-right before:order-1 border-x px-[0.63rem]"
+} %}
+
+{{ tag("a", {
+  class: "#{arrowStyles[arrow]} inline-flex gap-[0.63rem] items-center justify-center font-surt uppercase text-ui-14 md:text-ui-16 text-gray-200 hover:text-gray-500 tracking-wide transition-colors py-[0.3125rem] before:mt-[-0.125rem] before:content-[\"\"] before:h-[1.13rem] before:w-[1.13rem]",
+  href: url,
+  target: target,
+  rel: target == "_blank" ? "noopener noreferrer" : null,
+  text: text,
+}) }}

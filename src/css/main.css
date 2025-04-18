@@ -85,6 +85,7 @@
   --spacing: 8px;
 
   --background-image-arrow-left: url("/static/images/icons/arrow-left.svg");
+  --background-image-arrow-right: url("/static/images/icons/arrow-right.svg");
   --background-image-link-arrow: url("/static/images/icons/link-arrow.svg");
   --background-image-close: url("/static/images/icons/close.svg");
   --background-image-tick-white: url("/static/images/icons/tick-white.svg");

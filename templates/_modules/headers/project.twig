@@ -1,6 +1,21 @@
 {% set inFunding = "inUsage" in entry.projectStatus %}
 {% set claim = entry.claim %}
 {% set dateUpdated = entry.dateUpdated %}
+{% set projectLinks = entry.projectLinks %}
+
+{% set demoLink = projectLinks
+  |filter(item => item.name in [
+    "Demo Week",
+    "Demo Day",
+    "Demo-Woche",
+    "Demo-Tag"
+  ])
+  |first
+%}
+
+{% set remainingLinks = projectLinks
+  |filter(item => item != demoLink)
+%}
 
 {% set categories = entry.projectRounds.all()
   |merge(entry.projectTopics.all())
@@ -24,7 +39,7 @@
 ]|join(' ') %}
 
 <header class="{{ pattern }} relative md:grid md:grid-cols-12 lg:grid-cols-16 border-gray-400 border-b pt-2.5 pb-5 md:py-[3.75rem] px-2 md:px-5">
-  <div class="mb-[3.75rem] md:mb-0 md:col-span-6 lg:col-span-8 relative z-1">
+  <div class="mb-[3.75rem] md:mb-0 md:col-span-6 lg:col-span-10 relative z-1">
     {% if inFunding|length %}
       <div class="mb-1 md:mb-2">
         {% include "_modules/pill" with {
@@ -49,5 +64,29 @@
     <time class="block text-gray-200 mb-4 md:mb-5 text-ui-13 md:text-ui-14" datetime="{{ dateUpdated|date('Y-m-d') }}">
       {{ "Last updated"|t }}: {{ dateUpdated|date("short") }}
     </time>
+
+    {% if remainingLinks|length %}
+      <div class="mb-5 last:mb-0 max-w-64">
+        {% include "_modules/link-list" with {
+          links: remainingLinks
+            |map((link) => {
+              text: link.name,
+              url: link.linkURL,
+              target: "_blank"
+            })
+        } only %}
+      </div>
+    {% endif %}
+
+    {% if demoLink|length %}
+      <div class="mb-6">
+        {% include "_modules/arrow-link" with {
+          text: "See #{demoLink.name}"|t,
+          url: demoLink.linkURL,
+          target: "_blank",
+          arrow: "right"
+        } only %}
+      </div>
+    {% endif %}
   </div>
 </header>
