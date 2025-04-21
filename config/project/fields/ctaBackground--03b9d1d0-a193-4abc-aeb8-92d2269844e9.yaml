@@ -1,0 +1,33 @@
+columnSuffix: null
+handle: ctaBackground
+instructions: null
+name: 'CTA Background'
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Dark Magenta Background / Pink Pattern'
+        -
+          - value
+          - darkMagentaBackgroundPinkPattern
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Rich Blue Background / Pink Pattern'
+        -
+          - value
+          - richBlueBackgroundPinkPattern
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\RadioButtons

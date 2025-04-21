@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: ctaBanner
+instructions: null
+name: 'CTA Banner'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: 'Add a CTA Banner'
+  showCardsInGrid: false
+  showSiteMenu: false
+  sources:
+    - 'section:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

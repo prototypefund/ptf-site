@@ -1,4 +1,4 @@
-dateModified: 1745245477
+dateModified: 1745266047
 elementSources:
   craft\elements\Entry:
     -
@@ -50,6 +50,12 @@ elementSources:
       key: 'section:6e040108-27cc-4a4a-bca9-c5e3ab1bdc04' # Generic Pages
       type: native
     -
+      heading: 'Shared Data'
+      type: heading
+    -
+      key: 'section:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
+      type: native
+    -
       heading: People
       type: heading
     -
@@ -83,6 +89,8 @@ meta:
     1a0ed17a-7208-4b7e-894f-64506d5432d6: 'Events Index' # Events Index
     1bf40018-82e4-4e44-bbd6-6f49c132678d: Modules # Modules
     2b86894c-5b98-44d4-8ed6-88b2c8b5e601: 'Blog Index' # Blog Index
+    2d6b9ef4-4190-4cf7-9a92-b6f6b0fb7f61: 'CTA Banner' # CTA Banner
+    03b9d1d0-a193-4abc-aeb8-92d2269844e9: 'CTA Background' # CTA Background
     3d4c1a3f-6b2d-4919-a863-32877e6722ce: 'Project Year Groups' # Project Year Groups
     4b6ba907-43f2-494b-9816-24894f8de0da: Newsletter # Newsletter
     4e97404d-0992-4280-b87e-903b4fc471c5: Navigation # Navigation
@@ -112,6 +120,7 @@ meta:
     62efdaf8-a4e7-4149-bc72-3bd492681eba: 'Newsletter Side Title' # Newsletter Side Title
     69fb06a0-7361-46bd-a063-b293e6336a99: Description # Description
     72b63983-0825-4712-ab6f-b4d98ee4efd4: Standard # Standard
+    86ae11d6-820a-47e9-85d6-86f29718f1f8: 'Banner Text' # Banner Text
     91a7ad8a-d35b-4738-b71b-a18f899afc5d: 'Resize: width 2000px' # Resize: width 2000px
     98ac3e52-dafd-49ce-8852-a02e92879a39: 'Avatar (Small)' # Avatar (Small)
     137c86ac-e143-4792-b936-38c41302eccd: Fonts # Fonts
@@ -145,6 +154,7 @@ meta:
     ad6378ef-e24f-4541-9819-1a644a3dd8c4: 'Nav Links' # Nav Links
     af0bbe1c-3613-4775-8a01-965b68d4e56e: English # English
     af427185-4826-4e80-bd57-096797b92f4b: Project # Project
+    b2b9ea1c-a462-4794-bd6c-d9700c56f94c: 'CTA Banner' # CTA Banner
     b44bb4f4-87a6-47c4-ae20-f1594e9a775b: 'Blog Teaser' # Blog Teaser
     b99ee1fe-b466-49ac-8315-43d2af7587e1: Uploads # Uploads
     b629c55a-8642-44db-a823-26783a25058b: Footer # Footer
@@ -165,11 +175,13 @@ meta:
     d42896d4-04a6-4211-8d97-f265c27a3be1: 'Inclusive Sans – Semibold (Italic)' # Inclusive Sans – Semibold (Italic)
     d99528c4-136b-413c-9799-56fd20edd2c6: Headline # Headline
     da7ab602-1ed1-46b0-9e1c-5ec3a6e60c92: 'Project Teaser' # Project Teaser
+    dd6fd54d-11f2-4a62-8da7-d59718b15225: 'CTA Banner' # CTA Banner
     ddc3aedf-983b-4fa7-81eb-69fd761d71af: German # German
     de820dbc-bd7e-4a0f-9554-3d750480d2a4: Projects # Projects
     e30e243f-a8dc-43b7-b826-e4788906231f: Pronouns # Pronouns
     eb089684-4134-4cd9-a60d-4aaac63db8f4: Link # Link
     ed187804-9da6-4b7d-b983-1c751ac7a3ab: 'Tracking Body' # Tracking Body
+    ed498341-57c0-4a5d-bedd-9728b250d140: 'CTA Banners' # CTA Banners
     eec7038e-53af-4299-bf11-db14e0fbd073: 'Generic Page' # Generic Page
     f2fe1c5e-9903-41ca-a1b9-45815959a6ef: 'Newsletter Link Group' # Newsletter Link Group
     f4a87b3f-ed6d-49ce-8753-05dda85942a6: 'Project Status' # Project Status

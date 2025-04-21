@@ -1,13 +1,30 @@
 {% set target = target|default("_self") %}
 {% set arrow = arrow|default("left") %}
+{% set color = color|default("dark") %}
+
+{% set buttonStyles = {
+  dark: "text-gray-200 hover:bg-black hover:text-white",
+  light: "text-white hover:bg-white hover:text-black border-white"
+} %}
+
+{% set backgroundStyles = {
+  dark: {
+    left: "before:bg-arrow-left-black hover:before:bg-arrow-left-white",
+    right: "before:bg-arrow-right-black hover:before:bg-arrow-right-white"
+  },
+  light: {
+    left: "before:bg-arrow-left-white hover:before:bg-arrow-left-black",
+    right: "before:bg-arrow-right-white hover:before:bg-arrow-right-black"
+  }
+} %}
 
 {% set arrowStyles = {
-  left: "gap-[0.63rem] before:bg-arrow-left",
-  right: "gap-2.5 before:bg-arrow-right before:order-1 border-x px-[0.63rem]"
+  left: "gap-[0.63rem]",
+  right: "gap-2.5 before:order-1 border-x px-[0.63rem]"
 } %}
 
 {{ tag("a", {
-  class: "#{arrowStyles[arrow]} inline-flex gap-[0.63rem] items-center justify-center font-surt uppercase text-ui-14 md:text-ui-16 text-gray-200 hover:text-gray-500 tracking-wide transition-colors py-[0.3125rem] before:mt-[-0.125rem] before:content-[\"\"] before:h-[1.13rem] before:w-[1.13rem]",
+  class: "#{buttonStyles[color]} #{arrowStyles[arrow]} #{backgroundStyles[color][arrow]} px-0.5 inline-flex gap-[0.63rem] items-center justify-center font-surt uppercase text-ui-14 md:text-ui-16 tracking-wide transition-colors py-[0.3125rem] before:mt-[-0.125rem] before:content-[\"\"] before:h-[1.13rem] before:w-[1.13rem]",
   href: url,
   target: target,
   rel: target == "_blank" ? "noopener noreferrer" : null,

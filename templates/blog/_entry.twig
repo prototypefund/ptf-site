@@ -20,9 +20,11 @@
     {% endif %}
 
     {% if text|length %}
-      {% include "_rich-text/columns" with {
-        text
-      } only %}
+      <div class="first-of-type:mt-5 md:first-of-type:mt-10">
+        {% include "_rich-text/columns" with {
+          text
+        } only %}
+      </div>
     {% endif %}
 
     {% if articleAuthor|length %}

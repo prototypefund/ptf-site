@@ -22,6 +22,11 @@ settings:
         -
           - uid
           - c08345c7-f10a-42ce-b893-7f2e82a46fbb # Embed
+    -
+      __assoc__:
+        -
+          - uid
+          - b2b9ea1c-a462-4794-bd6c-d9700c56f94c # CTA Banner
   includeTableView: false
   maxEntries: null
   minEntries: null

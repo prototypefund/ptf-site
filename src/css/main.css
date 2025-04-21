@@ -86,8 +86,10 @@
   --font-surt: "Surt", Helvetica, Arial, sans-serif;
   --spacing: 8px;
 
-  --background-image-arrow-left: url("/static/images/icons/arrow-left.svg");
-  --background-image-arrow-right: url("/static/images/icons/arrow-right.svg");
+  --background-image-arrow-left-black: url("/static/images/icons/arrow-left-black.svg");
+  --background-image-arrow-left-white: url("/static/images/icons/arrow-left-white.svg");
+  --background-image-arrow-right-black: url("/static/images/icons/arrow-right-black.svg");
+  --background-image-arrow-right-white: url("/static/images/icons/arrow-right-white.svg");
   --background-image-link-arrow: url("/static/images/icons/link-arrow.svg");
   --background-image-close: url("/static/images/icons/close.svg");
   --background-image-tick-white: url("/static/images/icons/tick-white.svg");
@@ -100,6 +102,8 @@
   --background-image-pattern-tr-hot-pink: url("/static/images/patterns/bg-pattern-tr-hot-pink.svg");
   --background-image-pattern-tl-hot-pink: url("/static/images/patterns/bg-pattern-tl-hot-pink.svg");
   --background-image-pattern-br-hot-pink: url("/static/images/patterns/bg-pattern-br-hot-pink.svg");
+  --background-image-pattern-br-pink: url("/static/images/patterns/bg-pattern-br-pink.svg");
+  --background-image-pattern-bl-pink: url("/static/images/patterns/bg-pattern-bl-pink.svg");
   --background-image-pattern-br-gray-1: url("/static/images/patterns/bg-pattern-br-gray-1.svg");
   --background-image-pattern-br-gray-2: url("/static/images/patterns/bg-pattern-br-gray-2.svg");
   --background-image-pattern-newsletter: url("/static/images/patterns/bg-pattern-newsletter.svg");
