@@ -6,5 +6,6 @@
 
 {% include "_modules/side-heading" with {
   headline: entry.title,
-  content: content
+  content: content,
+  padding: padding|default(false)
 } only %}

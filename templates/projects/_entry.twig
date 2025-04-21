@@ -9,7 +9,7 @@
 {% set fundingAmount = entry.projectFundingAmount %}
 
 {% block content %}
-  <article class="mb-[6.25rem] md:mb-14 last:mb-0">
+  <article class="mb-10 last:mb-0">
     {% include "_modules/headers/project" with { entry } only %}
 
     {% if teamMembers|length or license|length or fundingAmount|length %}

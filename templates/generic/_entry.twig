@@ -9,7 +9,7 @@
     alignment: entry.headerAlignment.value
   } only %}
 
-  <div class="h-[50vw] text-gray-400 flex items-center justify-center">
-    Generic Page
+  <div class="mt-10">
+    {% include "_modules/modules" with { entry: entry } %}
   </div>
 {% endblock %}

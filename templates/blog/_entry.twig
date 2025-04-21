@@ -11,7 +11,7 @@
 {% endif %}
 
 {% block content %}
-  <article class="mb-[6.25rem] md:mb-14 last:mb-0">
+  <article class="mb-10 last:mb-0">
     {% include "_modules/headers/article" with { entry } only %}
 
     {% if intro|length %}
@@ -60,7 +60,7 @@
     {% endif %}
   </article>
 
-  <div class="mb-[6.25rem] md:mb-14 px-2 md:px-5">
+  <div class="mb-10 px-2 md:px-5">
     {% include "blog/_modules/next-reads" with {
       nextReads,
       blogIndex

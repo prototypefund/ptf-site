@@ -12,6 +12,16 @@ settings:
         -
           - uid
           - a05e468d-5063-4f3a-8ea3-aa240eebc1bf # Newsletter
+    -
+      __assoc__:
+        -
+          - uid
+          - 894e5185-035a-41d1-b272-0b6c1608aabf # Side Heading + Text
+    -
+      __assoc__:
+        -
+          - uid
+          - c08345c7-f10a-42ce-b893-7f2e82a46fbb # Embed
   includeTableView: false
   maxEntries: null
   minEntries: null

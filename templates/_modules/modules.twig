@@ -1,11 +1,17 @@
 {% if entry.modules %}
+  <div class="mb-10">
   {% for module in entry.modules.all() %}
     {% switch module.type %}
       {% case 'newsletter' %}
         {% include "_modules/blocks/newsletter" with {
           module: module
         } only %}
+      {% case 'embed' %}
+        {{ module.render({ padding: true }) }}
+      {% case 'sideHeadingText' %}
+        {{ module.render({ padding: true }) }}
       {% default %}
     {% endswitch %}
   {% endfor %}
+  </div>
 {% endif %}
