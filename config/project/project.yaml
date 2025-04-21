@@ -1,4 +1,4 @@
-dateModified: 1745009865
+dateModified: 1745266047
 elementSources:
   craft\elements\Entry:
     -
@@ -50,6 +50,12 @@ elementSources:
       key: 'section:6e040108-27cc-4a4a-bca9-c5e3ab1bdc04' # Generic Pages
       type: native
     -
+      heading: 'Shared Data'
+      type: heading
+    -
+      key: 'section:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
+      type: native
+    -
       heading: People
       type: heading
     -
@@ -83,10 +89,13 @@ meta:
     1a0ed17a-7208-4b7e-894f-64506d5432d6: 'Events Index' # Events Index
     1bf40018-82e4-4e44-bbd6-6f49c132678d: Modules # Modules
     2b86894c-5b98-44d4-8ed6-88b2c8b5e601: 'Blog Index' # Blog Index
+    2d6b9ef4-4190-4cf7-9a92-b6f6b0fb7f61: 'CTA Banner' # CTA Banner
+    03b9d1d0-a193-4abc-aeb8-92d2269844e9: 'CTA Background' # CTA Background
     3d4c1a3f-6b2d-4919-a863-32877e6722ce: 'Project Year Groups' # Project Year Groups
     4b6ba907-43f2-494b-9816-24894f8de0da: Newsletter # Newsletter
     4e97404d-0992-4280-b87e-903b4fc471c5: Navigation # Navigation
     5a2c3e10-bf78-4986-aecd-f75829889851: 'Project Topics' # Project Topics
+    5a633b8c-0848-4867-8990-245346e525e8: 'Project Funding Amount' # Project Funding Amount
     5bafc55c-8f31-4f9b-add0-49e9957e63a7: 'Footer Link Group' # Footer Link Group
     6c3461da-2d32-418a-803b-efe329a38c30: 'Article Author' # Article Author
     6ca70ace-9ae7-4dfa-a915-d1a24572619d: 'Footer Description' # Footer Description
@@ -95,6 +104,7 @@ meta:
     7e4dd8fe-6873-44a9-ada5-acf02698981d: 'Side Info' # Side Info
     7eb26dd5-1c10-45d1-a16b-85a148e4bf8a: 'Projects Index' # Projects Index
     8a18f61b-a93c-4302-8bde-b8f6ed6c0494: 'Inclusive Sans – Semibold' # Inclusive Sans – Semibold
+    8c706102-ac71-4054-b178-d266051a8ba8: 'Project Next Reads' # Project Next Reads
     8d8e3436-a20e-4222-a530-d52fa736ae4d: 'Project Technologies' # Project Technologies
     9a1aea15-6b42-4b96-b047-ee412bfabc78: Intro # Intro
     9c0f58c4-4b28-4aca-b80d-3b370bc38f9e: 'Next Reads' # Next Reads
@@ -104,11 +114,13 @@ meta:
     29d80674-cc17-4976-ad67-b3f611a07dc2: 'Events Index' # Events Index
     33c3763c-9f38-4c39-bebd-48bbec68e094: 'Header Alignment' # Header Alignment
     34dc108f-02bd-42cb-9481-0693c7bc32b4: 'Tracking Head' # Tracking Head
+    52ffa06e-5e33-4cd5-8821-d001532453b1: 'Embed Code' # Embed Code
     58b0cfc4-a7f2-491d-a49a-a29faaacedf3: 'Inclusive Sans – Regular' # Inclusive Sans – Regular
     62e3c2ea-24fd-42e2-a9ba-3602f1d6e2e8: 'Header Background' # Header Background
     62efdaf8-a4e7-4149-bc72-3bd492681eba: 'Newsletter Side Title' # Newsletter Side Title
     69fb06a0-7361-46bd-a063-b293e6336a99: Description # Description
     72b63983-0825-4712-ab6f-b4d98ee4efd4: Standard # Standard
+    86ae11d6-820a-47e9-85d6-86f29718f1f8: 'Banner Text' # Banner Text
     91a7ad8a-d35b-4738-b71b-a18f899afc5d: 'Resize: width 2000px' # Resize: width 2000px
     98ac3e52-dafd-49ce-8852-a02e92879a39: 'Avatar (Small)' # Avatar (Small)
     137c86ac-e143-4792-b936-38c41302eccd: Fonts # Fonts
@@ -119,6 +131,7 @@ meta:
     504f909d-20af-4a66-b4a5-46c966689b30: 'Resize: width 1000px' # Resize: width 1000px
     633b77bd-edb2-4812-ae43-7d61e39fd8fd: 'Main Footer Links' # Main Footer Links
     645eb55b-61e5-4ed2-bf31-caed18a16ffb: 'Blog Index' # Blog Index
+    704f68f7-7b03-4825-a337-ab9d195a33e6: 'Project License' # Project License
     824f9bd0-21d0-47fd-a48a-b8519da12b29: Quote # Quote
     894e5185-035a-41d1-b272-0b6c1608aabf: 'Side Heading + Text' # Side Heading + Text
     2965e0c7-feb2-4aa2-98d4-de16d458eb30: Categories # Categories
@@ -141,12 +154,14 @@ meta:
     ad6378ef-e24f-4541-9819-1a644a3dd8c4: 'Nav Links' # Nav Links
     af0bbe1c-3613-4775-8a01-965b68d4e56e: English # English
     af427185-4826-4e80-bd57-096797b92f4b: Project # Project
+    b2b9ea1c-a462-4794-bd6c-d9700c56f94c: 'CTA Banner' # CTA Banner
     b44bb4f4-87a6-47c4-ae20-f1594e9a775b: 'Blog Teaser' # Blog Teaser
     b99ee1fe-b466-49ac-8315-43d2af7587e1: Uploads # Uploads
     b629c55a-8642-44db-a823-26783a25058b: Footer # Footer
     bdc78be0-ab3b-4c52-9657-0eaaff1208e9: 'Blog Categories' # Blog Categories
     c0e7400b-5611-4a34-bc52-4cd0edc31e41: Sites # Sites
     c03eff61-59aa-491d-bfa0-db442637813a: Article # Article
+    c08345c7-f10a-42ce-b893-7f2e82a46fbb: Embed # Embed
     c8c2dcfa-75cb-423f-9565-b550807d0e7e: 'Resize: width 1500px' # Resize: width 1500px
     c85b9b92-e92c-448e-be1b-853494683b99: 'Project Technologies' # Project Technologies
     c86f2a45-9639-4151-93dc-21dce075b6f9: 'Link Group' # Link Group
@@ -160,11 +175,13 @@ meta:
     d42896d4-04a6-4211-8d97-f265c27a3be1: 'Inclusive Sans – Semibold (Italic)' # Inclusive Sans – Semibold (Italic)
     d99528c4-136b-413c-9799-56fd20edd2c6: Headline # Headline
     da7ab602-1ed1-46b0-9e1c-5ec3a6e60c92: 'Project Teaser' # Project Teaser
+    dd6fd54d-11f2-4a62-8da7-d59718b15225: 'CTA Banner' # CTA Banner
     ddc3aedf-983b-4fa7-81eb-69fd761d71af: German # German
     de820dbc-bd7e-4a0f-9554-3d750480d2a4: Projects # Projects
     e30e243f-a8dc-43b7-b826-e4788906231f: Pronouns # Pronouns
     eb089684-4134-4cd9-a60d-4aaac63db8f4: Link # Link
     ed187804-9da6-4b7d-b983-1c751ac7a3ab: 'Tracking Body' # Tracking Body
+    ed498341-57c0-4a5d-bedd-9728b250d140: 'CTA Banners' # CTA Banners
     eec7038e-53af-4299-bf11-db14e0fbd073: 'Generic Page' # Generic Page
     f2fe1c5e-9903-41ca-a1b9-45815959a6ef: 'Newsletter Link Group' # Newsletter Link Group
     f4a87b3f-ed6d-49ce-8753-05dda85942a6: 'Project Status' # Project Status

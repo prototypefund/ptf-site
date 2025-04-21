@@ -41,7 +41,7 @@
     {% endif %}
   </div>
 
-  <div class="px-2 md:px-5 mb-[6.25rem] md:mb-14">
+  <div class="px-2 md:px-5 mb-10">
     {% if projects|length %}
       {% include "blog/_modules/teasers-list" with { articles: projects } only %}
       {% include "_modules/pagination" with { pagination: pagination } only %}

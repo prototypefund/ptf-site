@@ -4,45 +4,26 @@
 {% set intro = entry.intro %}
 {% set text = entry.textEntryTypes %}
 {% set articleAuthor = entry.articleAuthor.one() %}
-{% set nextReads = entry.nextReads.eagerly().all() %}
-
-{% if nextReads|length == 0 %}
-  {% set nextReads =  craft.entries.section('blog').id('not ' ~ entry.id).limit(4).all() %}
-{% endif %}
 
 {% block content %}
-  <article class="mb-[6.25rem] md:mb-14 last:mb-0">
+  <article class="mb-10 last:mb-0">
     {% include "_modules/headers/article" with { entry } only %}
 
-    {% if intro|length or text|length %}
-      <div class="{{ [
-        'grid',
-        'px-2',
-        'mt-10',
-        'mb-10',
-        'md:px-5',
-        'md:grid-cols-16',
-        'md:[&>*]:col-start-6',
-        'md:[&>*]:col-span-11',
-        'md:[&>div:not(:first-of-type)]:col-span-16',
-        'md:[&>blockquote]:col-start-6',
-        'md:[&>blockquote]:col-span-10',
-        'lg:[&>*]:col-start-8',
-        'lg:[&>*]:col-span-8',
-      ]|join(' ') }}">
-        {% if intro|length %}
-          <div class="mb-[3.75rem]">
-            {% include "_rich-text/intro" with {
-              text: intro
-            } only %}
-          </div>
-        {% endif %}
-
-        {% if text|length %}
-          {% include "_rich-text/standard" with {
-            text
+    {% if intro|length %}
+      <div class="grid md:grid-cols-16 px-2 md:px-5 mt-5 md:mt-10 mb-[3.75rem]">
+        <div class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-8">
+          {% include "_rich-text/intro" with {
+            text: intro
           } only %}
-        {% endif %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if text|length %}
+      <div class="first-of-type:mt-5 md:first-of-type:mt-10">
+        {% include "_rich-text/columns" with {
+          text
+        } only %}
       </div>
     {% endif %}
 
@@ -76,12 +57,6 @@
     {% endif %}
   </article>
 
-  <div class="mb-[6.25rem] md:mb-14 px-2 md:px-5">
-    {% include "blog/_modules/next-reads" with {
-      nextReads,
-      blogIndex
-    } %}
-  </div>
-
-  {% include "_modules/modules" with { entry: entry } %}
+  {% include "blog/_modules/next-reads" with { entry: entry } only %}
+  {% include "_modules/modules" with { entry: entry } only %}
 {% endblock %}

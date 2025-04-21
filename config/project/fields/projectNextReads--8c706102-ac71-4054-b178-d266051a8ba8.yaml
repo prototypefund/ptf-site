@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: projectNextReads
+instructions: null
+name: 'Project Next Reads'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 4
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  sources:
+    - 'section:de820dbc-bd7e-4a0f-9554-3d750480d2a4' # Projects
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries
