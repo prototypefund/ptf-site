@@ -240,6 +240,22 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-04-21T14:19:39+00:00'
+            elementCondition: null
+            fieldUid: 8c706102-ac71-4054-b178-d266051a8ba8 # Project Next Reads
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bceb9e20-1ab1-4f07-94be-033b5295293e
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-04-18T14:23:11+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule

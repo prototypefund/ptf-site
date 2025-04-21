@@ -4,11 +4,6 @@
 {% set intro = entry.intro %}
 {% set text = entry.textEntryTypes %}
 {% set articleAuthor = entry.articleAuthor.one() %}
-{% set nextReads = entry.nextReads.eagerly().all() %}
-
-{% if nextReads|length == 0 %}
-  {% set nextReads =  craft.entries.section('blog').id('not ' ~ entry.id).limit(4).all() %}
-{% endif %}
 
 {% block content %}
   <article class="mb-10 last:mb-0">
@@ -60,12 +55,6 @@
     {% endif %}
   </article>
 
-  <div class="mb-10 px-2 md:px-5">
-    {% include "blog/_modules/next-reads" with {
-      nextReads,
-      blogIndex
-    } %}
-  </div>
-
-  {% include "_modules/modules" with { entry: entry } %}
+  {% include "blog/_modules/next-reads" with { entry: entry } only %}
+  {% include "_modules/modules" with { entry: entry } only %}
 {% endblock %}

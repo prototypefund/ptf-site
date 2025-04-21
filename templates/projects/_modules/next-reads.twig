@@ -1,0 +1,18 @@
+{% set nextReads = entry.projectNextReads.eagerly().all() %}
+
+{% if nextReads|length == 0 %}
+  {% set nextReads =  craft.entries.section('project').id('not ' ~ entry.id).limit(4).all() %}
+{% endif %}
+
+{% set content %}
+  {% include "projects/_modules/teasers-list" with { projects: nextReads } %}
+{% endset %}
+
+{% if nextReads|length %}
+    {% include "_modules/next-reads" with {
+    title: "More projects like this"|t,
+    seeAllText: "See all"|t,
+    entryLink: projectsIndex,
+    content: content,
+    } only %}
+{% endif %}
