@@ -1,0 +1,19 @@
+{% set caption = entry.caption %}
+
+{% set content %}
+  <figure>
+    <div class="relative overflow-hidden aspect-video [&>iframe]:size-full [&>iframe]:absolute [&>iframe]:top-0 [&>iframe]:left-0">
+      {{ entry.embedCode|raw }}
+    </div>
+    {% if caption|length %}
+      <figcaption class="mt-1 uppercase text-gray-500 text-body-12 md:text-body-13">
+        {{ caption }}
+      </figcaption>
+    {% endif %}
+  </figure>
+{% endset %}
+
+{% include "_modules/side-heading" with {
+  headline: entry.title,
+  content: content
+} only %}

@@ -20,6 +20,11 @@ settings:
         -
           - uid
           - 824f9bd0-21d0-47fd-a48a-b8519da12b29 # Quote
+    -
+      __assoc__:
+        -
+          - uid
+          - c08345c7-f10a-42ce-b893-7f2e82a46fbb # Embed
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false
