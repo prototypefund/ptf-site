@@ -14,36 +14,20 @@
   <article class="mb-[6.25rem] md:mb-14 last:mb-0">
     {% include "_modules/headers/article" with { entry } only %}
 
-    {% if intro|length or text|length %}
-      <div class="{{ [
-        'grid',
-        'px-2',
-        'mt-10',
-        'mb-10',
-        'md:px-5',
-        'md:grid-cols-16',
-        'md:[&>*]:col-start-6',
-        'md:[&>*]:col-span-11',
-        'md:[&>div:not(:first-of-type)]:col-span-16',
-        'md:[&>blockquote]:col-start-6',
-        'md:[&>blockquote]:col-span-10',
-        'lg:[&>*]:col-start-8',
-        'lg:[&>*]:col-span-8',
-      ]|join(' ') }}">
-        {% if intro|length %}
-          <div class="mb-[3.75rem]">
-            {% include "_rich-text/intro" with {
-              text: intro
-            } only %}
-          </div>
-        {% endif %}
-
-        {% if text|length %}
-          {% include "_rich-text/standard" with {
-            text
+    {% if intro|length %}
+      <div class="grid md:grid-cols-16 px-2 md:px-5 mt-5 md:mt-10 mb-[3.75rem]">
+        <div class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-8">
+          {% include "_rich-text/intro" with {
+            text: intro
           } only %}
-        {% endif %}
+        </div>
       </div>
+    {% endif %}
+
+    {% if text|length %}
+      {% include "_rich-text/columns" with {
+        text
+      } only %}
     {% endif %}
 
     {% if articleAuthor|length %}

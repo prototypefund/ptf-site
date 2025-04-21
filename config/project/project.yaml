@@ -1,4 +1,4 @@
-dateModified: 1745009865
+dateModified: 1745237767
 elementSources:
   craft\elements\Entry:
     -
@@ -87,6 +87,7 @@ meta:
     4b6ba907-43f2-494b-9816-24894f8de0da: Newsletter # Newsletter
     4e97404d-0992-4280-b87e-903b4fc471c5: Navigation # Navigation
     5a2c3e10-bf78-4986-aecd-f75829889851: 'Project Topics' # Project Topics
+    5a633b8c-0848-4867-8990-245346e525e8: 'Project Funding Amount' # Project Funding Amount
     5bafc55c-8f31-4f9b-add0-49e9957e63a7: 'Footer Link Group' # Footer Link Group
     6c3461da-2d32-418a-803b-efe329a38c30: 'Article Author' # Article Author
     6ca70ace-9ae7-4dfa-a915-d1a24572619d: 'Footer Description' # Footer Description
@@ -119,6 +120,7 @@ meta:
     504f909d-20af-4a66-b4a5-46c966689b30: 'Resize: width 1000px' # Resize: width 1000px
     633b77bd-edb2-4812-ae43-7d61e39fd8fd: 'Main Footer Links' # Main Footer Links
     645eb55b-61e5-4ed2-bf31-caed18a16ffb: 'Blog Index' # Blog Index
+    704f68f7-7b03-4825-a337-ab9d195a33e6: 'Project License' # Project License
     824f9bd0-21d0-47fd-a48a-b8519da12b29: Quote # Quote
     894e5185-035a-41d1-b272-0b6c1608aabf: 'Side Heading + Text' # Side Heading + Text
     2965e0c7-feb2-4aa2-98d4-de16d458eb30: Categories # Categories

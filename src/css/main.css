@@ -49,6 +49,8 @@
   --text-head-18--line-height: 1.2;
   --text-head-16: calc(16 / 16 * 1rem);
   --text-head-16--line-height: 1.2;
+  --text-head-14: calc(14 / 16 * 1rem);
+  --text-head-14--line-height: 1.2;
 
   --text-body-32: calc(32 / 16 * 1rem);
   --text-body-32--line-height: 1.4;
