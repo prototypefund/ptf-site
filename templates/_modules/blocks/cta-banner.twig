@@ -30,7 +30,7 @@
   } %}
 
   {% set defaultBackground = 'darkMagentaBackgroundPinkPattern' %}
-  {% set config = backgroundConfigs[background] ?? backgroundConfigs[defaultBackground] %}
+  {% set config = backgroundConfigs[background.value|default(defaultBackground)] %}
 
   {% set headerClass = "#{patternPositions} #{config.bgColor} #{config.pattern}" %}
 
