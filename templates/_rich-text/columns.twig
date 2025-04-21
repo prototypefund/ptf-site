@@ -13,6 +13,9 @@
   'lg:[&>*]:col-span-8',
 ]|join(' ') }}">
   {% include "_rich-text/standard" with {
-    text
+    text: text|replace({
+      "/<div class=\"col-xs-24\">/": "",
+      "/<\/div>$/": ""
+    })
   } only %}
 </div>
