@@ -13,7 +13,7 @@ settings:
   showCardsInGrid: false
   showSiteMenu: false
   sources:
-    - 'section:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Author
+    - 'section:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Authors
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

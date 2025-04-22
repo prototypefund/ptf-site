@@ -1,4 +1,4 @@
-dateModified: 1745266048
+dateModified: 1745326267
 elementSources:
   craft\elements\Entry:
     -
@@ -59,7 +59,7 @@ elementSources:
       heading: People
       type: heading
     -
-      key: 'section:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Author
+      key: 'section:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Authors
       type: native
 email:
   fromEmail: $EMAIL_SYSTEM_ADDRESS
@@ -150,7 +150,7 @@ meta:
     80466913-dc6f-46d5-8013-a55f3a7358da: Sponsors # Sponsors
     a05e468d-5063-4f3a-8ea3-aa240eebc1bf: Newsletter # Newsletter
     a06eff6a-35ff-45b1-9c02-c6ef2f3f948c: 'Project Rounds' # Project Rounds
-    a6babdad-fc37-48fb-ac86-088ea4129e1e: Author # Author
+    a6babdad-fc37-48fb-ac86-088ea4129e1e: Authors # Authors
     ad1324f8-1337-475f-8516-ab1e13543027: Intro # Intro
     ad6378ef-e24f-4541-9819-1a644a3dd8c4: 'Nav Links' # Nav Links
     af0bbe1c-3613-4775-8a01-965b68d4e56e: English # English
