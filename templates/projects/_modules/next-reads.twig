@@ -1,18 +1,47 @@
 {% set nextReads = entry.projectNextReads.eagerly().all() %}
 
-{% if nextReads|length == 0 %}
-  {% set nextReads =  craft.entries.section('project').id('not ' ~ entry.id).limit(4).all() %}
+{% if not nextReads|length %}
+  {% set topic = entry.projectTopics.one() %}
+  {% set technology = entry.projectTechnologies.one() %}
+  
+  {% set baseQuery = craft.entries.section('projects')
+    .id('not ' ~ entry.id)
+    .with([
+      'projectYearGroups',
+      'projectRounds',
+      'projectTopics',
+      'projectTechnologies'
+    ])
+    .limit(4)
+  %}
+
+  {% if topic and technology %}
+    {% set nextReads = baseQuery.relatedTo(['and', 
+      { targetElement: topic }, 
+      { targetElement: technology }
+    ]).all() %}
+    
+    {% if not nextReads|length %}
+      {% set nextReads = baseQuery.relatedTo({ targetElement: topic }).all() %}
+    {% endif %}
+  {% elseif topic %}
+    {% set nextReads = baseQuery.relatedTo({ targetElement: topic }).all() %}
+  {% endif %}
+  
+  {% if not nextReads|length %}
+    {% set nextReads = baseQuery.all() %}
+  {% endif %}
 {% endif %}
 
-{% set content %}
-  {% include "projects/_modules/teasers-list" with { projects: nextReads } %}
-{% endset %}
-
 {% if nextReads|length %}
-    {% include "_modules/next-reads" with {
+  {% set content %}
+    {% include "projects/_modules/teasers-list" with { projects: nextReads } %}
+  {% endset %}
+
+  {% include "_modules/next-reads" with {
     title: "More projects like this"|t,
     seeAllText: "See all"|t,
     entryLink: projectsIndex,
     content: content,
-    } only %}
+  } only %}
 {% endif %}

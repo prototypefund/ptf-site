@@ -3,9 +3,9 @@ enableVersioning: true
 entryTypes:
   -
     uid: f6ed0d5d-4ab8-418b-801e-b11f6cb309a5 # Author
-handle: author
+handle: authors
 maxAuthors: 1
-name: Author
+name: Authors
 previewTargets:
   -
     __assoc__:

@@ -1,59 +1,59 @@
 <svg width="100" height="300" viewBox="0 0 100 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="83.5" y="100" width="16.5" height="16.5" fill="#49BCF2"/>
-<rect x="50" y="100" width="16.5" height="16.5" fill="#49BCF2"/>
-<rect x="83.5" y="133.5" width="16.5" height="16.5" fill="#49BCF2"/>
-<rect x="66.5" y="116.5" width="17" height="17" fill="#49BCF2"/>
-<rect x="50" y="133.5" width="16.5" height="16.5" fill="#49BCF2"/>
-<rect width="50" height="50" transform="translate(50)" fill="#49BCF2"/>
-<rect width="8.5" height="8.5" fill="#49BCF2"/>
-<rect x="41.5" y="41.5" width="8.5" height="8.5" fill="#49BCF2"/>
-<rect x="8.5" y="8.5" width="8" height="8" fill="#49BCF2"/>
-<rect x="33.5" y="33.5" width="8" height="8" fill="#49BCF2"/>
-<rect x="33.5" width="8" height="8.5" fill="#49BCF2"/>
-<rect y="33.5" width="8.5" height="8" fill="#49BCF2"/>
-<rect x="41.5" y="8.5" width="8.5" height="8" fill="#49BCF2"/>
-<rect x="8.5" y="41.5" width="8" height="8.5" fill="#49BCF2"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M66.5 166.5H50V183.5H66.5V166.5ZM58.25 179C60.3211 179 62 177.321 62 175.25C62 173.179 60.3211 171.5 58.25 171.5C56.1789 171.5 54.5 173.179 54.5 175.25C54.5 177.321 56.1789 179 58.25 179Z" fill="#49BCF2"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M100 166.5H83.5V183.5H100V166.5ZM91.7502 179C93.8213 179 95.5002 177.321 95.5002 175.25C95.5002 173.179 93.8213 171.5 91.7502 171.5C89.6792 171.5 88.0002 173.179 88.0002 175.25C88.0002 177.321 89.6792 179 91.7502 179Z" fill="#49BCF2"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M83.5 183.5H66.5V200H83.5V183.5ZM75.25 195.5C77.3211 195.5 79 193.821 79 191.75C79 189.679 77.3211 188 75.25 188C73.1789 188 71.5 189.679 71.5 191.75C71.5 193.821 73.1789 195.5 75.25 195.5Z" fill="#49BCF2"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M83.5 150H66.5V166.5H83.5V150ZM75.25 162C77.3211 162 79 160.321 79 158.25C79 156.179 77.3211 154.5 75.25 154.5C73.1789 154.5 71.5 156.179 71.5 158.25C71.5 160.321 73.1789 162 75.25 162Z" fill="#49BCF2"/>
-<rect x="66.5" y="50" width="17" height="8.5" fill="#49BCF2"/>
-<rect x="91.5" y="50" width="8.5" height="8.5" fill="#49BCF2"/>
-<rect x="50" y="50" width="8.5" height="8.5" fill="#49BCF2"/>
-<rect x="66.5" y="66.5" width="17" height="17" fill="#49BCF2"/>
-<rect x="91.5" y="66.5" width="8.5" height="17" fill="#49BCF2"/>
-<rect x="91.5" y="91.5" width="8.5" height="8.5" fill="#49BCF2"/>
-<rect x="66.5" y="91.5" width="17" height="8.5" fill="#49BCF2"/>
-<rect x="58.5" y="58.5" width="8" height="8" fill="#49BCF2"/>
-<rect x="83.5" y="58.5" width="8" height="8" fill="#49BCF2"/>
-<rect x="83.5" y="83.5" width="8" height="8" fill="#49BCF2"/>
-<rect x="58.5" y="83.5" width="8" height="8" fill="#49BCF2"/>
-<rect x="50" y="66.5" width="8.5" height="17" fill="#49BCF2"/>
-<rect x="50" y="91.5" width="8.5" height="8.5" fill="#49BCF2"/>
-<circle cx="68.5" cy="256.5" r="2" fill="#49BCF2"/>
-<circle cx="62.5" cy="262.5" r="2" fill="#49BCF2"/>
-<circle cx="56.5" cy="268.5" r="2" fill="#49BCF2"/>
-<circle cx="68.5" cy="268.5" r="2" fill="#49BCF2"/>
-<circle cx="56.5" cy="256.5" r="2" fill="#49BCF2"/>
-<circle cx="93.5" cy="281.5" r="2" fill="#49BCF2"/>
-<circle cx="81.5" cy="281.5" r="2" fill="#49BCF2"/>
-<circle cx="93.5" cy="293.5" r="2" fill="#49BCF2"/>
-<circle cx="87.5" cy="287.5" r="2" fill="#49BCF2"/>
-<circle cx="81.5" cy="293.5" r="2" fill="#49BCF2"/>
-<circle cx="18.5" cy="156.5" r="2" fill="#49BCF2"/>
-<circle cx="12.5" cy="162.5" r="2" fill="#49BCF2"/>
-<circle cx="6.5" cy="168.5" r="2" fill="#49BCF2"/>
-<circle cx="18.5" cy="168.5" r="2" fill="#49BCF2"/>
-<circle cx="6.5" cy="156.5" r="2" fill="#49BCF2"/>
-<circle cx="43.5" cy="181.5" r="2" fill="#49BCF2"/>
-<circle cx="31.5" cy="181.5" r="2" fill="#49BCF2"/>
-<circle cx="43.5" cy="193.5" r="2" fill="#49BCF2"/>
-<circle cx="37.5" cy="187.5" r="2" fill="#49BCF2"/>
-<circle cx="31.5" cy="193.5" r="2" fill="#49BCF2"/>
-<rect x="50" y="200" width="8.5" height="25" fill="#49BCF2"/>
-<rect x="83.5" y="200" width="8" height="25" fill="#49BCF2"/>
-<rect x="66.5" y="200" width="9" height="25" fill="#49BCF2"/>
-<rect x="58.5" y="225" width="8" height="25" fill="#49BCF2"/>
-<rect x="91.5" y="225" width="8.5" height="25" fill="#49BCF2"/>
-<rect x="75.5" y="225" width="8" height="25" fill="#49BCF2"/>
+<rect x="83.5" y="100" width="16.5" height="16.5" fill="#33CCFF"/>
+<rect x="50" y="100" width="16.5" height="16.5" fill="#33CCFF"/>
+<rect x="83.5" y="133.5" width="16.5" height="16.5" fill="#33CCFF"/>
+<rect x="66.5" y="116.5" width="17" height="17" fill="#33CCFF"/>
+<rect x="50" y="133.5" width="16.5" height="16.5" fill="#33CCFF"/>
+<rect width="50" height="50" transform="translate(50)" fill="#33CCFF"/>
+<rect width="8.5" height="8.5" fill="#33CCFF"/>
+<rect x="41.5" y="41.5" width="8.5" height="8.5" fill="#33CCFF"/>
+<rect x="8.5" y="8.5" width="8" height="8" fill="#33CCFF"/>
+<rect x="33.5" y="33.5" width="8" height="8" fill="#33CCFF"/>
+<rect x="33.5" width="8" height="8.5" fill="#33CCFF"/>
+<rect y="33.5" width="8.5" height="8" fill="#33CCFF"/>
+<rect x="41.5" y="8.5" width="8.5" height="8" fill="#33CCFF"/>
+<rect x="8.5" y="41.5" width="8" height="8.5" fill="#33CCFF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M66.5 166.5H50V183.5H66.5V166.5ZM58.25 179C60.3211 179 62 177.321 62 175.25C62 173.179 60.3211 171.5 58.25 171.5C56.1789 171.5 54.5 173.179 54.5 175.25C54.5 177.321 56.1789 179 58.25 179Z" fill="#33CCFF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M100 166.5H83.5V183.5H100V166.5ZM91.7502 179C93.8213 179 95.5002 177.321 95.5002 175.25C95.5002 173.179 93.8213 171.5 91.7502 171.5C89.6792 171.5 88.0002 173.179 88.0002 175.25C88.0002 177.321 89.6792 179 91.7502 179Z" fill="#33CCFF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M83.5 183.5H66.5V200H83.5V183.5ZM75.25 195.5C77.3211 195.5 79 193.821 79 191.75C79 189.679 77.3211 188 75.25 188C73.1789 188 71.5 189.679 71.5 191.75C71.5 193.821 73.1789 195.5 75.25 195.5Z" fill="#33CCFF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M83.5 150H66.5V166.5H83.5V150ZM75.25 162C77.3211 162 79 160.321 79 158.25C79 156.179 77.3211 154.5 75.25 154.5C73.1789 154.5 71.5 156.179 71.5 158.25C71.5 160.321 73.1789 162 75.25 162Z" fill="#33CCFF"/>
+<rect x="66.5" y="50" width="17" height="8.5" fill="#33CCFF"/>
+<rect x="91.5" y="50" width="8.5" height="8.5" fill="#33CCFF"/>
+<rect x="50" y="50" width="8.5" height="8.5" fill="#33CCFF"/>
+<rect x="66.5" y="66.5" width="17" height="17" fill="#33CCFF"/>
+<rect x="91.5" y="66.5" width="8.5" height="17" fill="#33CCFF"/>
+<rect x="91.5" y="91.5" width="8.5" height="8.5" fill="#33CCFF"/>
+<rect x="66.5" y="91.5" width="17" height="8.5" fill="#33CCFF"/>
+<rect x="58.5" y="58.5" width="8" height="8" fill="#33CCFF"/>
+<rect x="83.5" y="58.5" width="8" height="8" fill="#33CCFF"/>
+<rect x="83.5" y="83.5" width="8" height="8" fill="#33CCFF"/>
+<rect x="58.5" y="83.5" width="8" height="8" fill="#33CCFF"/>
+<rect x="50" y="66.5" width="8.5" height="17" fill="#33CCFF"/>
+<rect x="50" y="91.5" width="8.5" height="8.5" fill="#33CCFF"/>
+<circle cx="68.5" cy="256.5" r="2" fill="#33CCFF"/>
+<circle cx="62.5" cy="262.5" r="2" fill="#33CCFF"/>
+<circle cx="56.5" cy="268.5" r="2" fill="#33CCFF"/>
+<circle cx="68.5" cy="268.5" r="2" fill="#33CCFF"/>
+<circle cx="56.5" cy="256.5" r="2" fill="#33CCFF"/>
+<circle cx="93.5" cy="281.5" r="2" fill="#33CCFF"/>
+<circle cx="81.5" cy="281.5" r="2" fill="#33CCFF"/>
+<circle cx="93.5" cy="293.5" r="2" fill="#33CCFF"/>
+<circle cx="87.5" cy="287.5" r="2" fill="#33CCFF"/>
+<circle cx="81.5" cy="293.5" r="2" fill="#33CCFF"/>
+<circle cx="18.5" cy="156.5" r="2" fill="#33CCFF"/>
+<circle cx="12.5" cy="162.5" r="2" fill="#33CCFF"/>
+<circle cx="6.5" cy="168.5" r="2" fill="#33CCFF"/>
+<circle cx="18.5" cy="168.5" r="2" fill="#33CCFF"/>
+<circle cx="6.5" cy="156.5" r="2" fill="#33CCFF"/>
+<circle cx="43.5" cy="181.5" r="2" fill="#33CCFF"/>
+<circle cx="31.5" cy="181.5" r="2" fill="#33CCFF"/>
+<circle cx="43.5" cy="193.5" r="2" fill="#33CCFF"/>
+<circle cx="37.5" cy="187.5" r="2" fill="#33CCFF"/>
+<circle cx="31.5" cy="193.5" r="2" fill="#33CCFF"/>
+<rect x="50" y="200" width="8.5" height="25" fill="#33CCFF"/>
+<rect x="83.5" y="200" width="8" height="25" fill="#33CCFF"/>
+<rect x="66.5" y="200" width="9" height="25" fill="#33CCFF"/>
+<rect x="58.5" y="225" width="8" height="25" fill="#33CCFF"/>
+<rect x="91.5" y="225" width="8.5" height="25" fill="#33CCFF"/>
+<rect x="75.5" y="225" width="8" height="25" fill="#33CCFF"/>
 </svg>

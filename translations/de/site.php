@@ -18,6 +18,7 @@ return [
   "Matching Articles" => "Passende Artikel",
   "Matching Projects" => "Passende Projekte",
   "More articles like this" => "Mehr Artikel wie dieser",
+  "More projects like this" => "Mehr Projekte wie dieses",
   "Open Readme on GitHub" => "Readme auf Github",
   "Our blog" => "Unser Blog",
   "Our projects" => "Unsere Projekte",
