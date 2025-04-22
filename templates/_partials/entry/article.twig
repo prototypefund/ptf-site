@@ -26,7 +26,7 @@
       <div class="col-span-3">
         <div class="aspect-4/3">
           {% if image|length %}
-            <img class="block w-full h-full object-cover" src="{{ image.getUrl("blogTeaser") }}">
+            <img class="block w-full h-full object-cover" src="{{ image.getUrl("blogTeaser") }}" alt="{{ image.altText }}">
           {% else %}
             <div class="bg-gray-100 h-full"></div>
           {% endif %}

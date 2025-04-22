@@ -37,32 +37,6 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            attribute: alt
-            class: null
-            cols: null
-            dateAdded: '2025-02-19T09:40:13+00:00'
-            disabled: false
-            elementCondition: null
-            id: null
-            includeInCards: false
-            instructions: null
-            label: null
-            name: null
-            orientation: null
-            placeholder: null
-            providesThumbs: false
-            readonly: false
-            requirable: true
-            required: false
-            rows: null
-            tip: null
-            title: null
-            type: craft\fieldlayoutelements\assets\AltField
-            uid: c70f2487-93f4-4e28-93b4-b204527c3030
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2025-04-07T08:17:29+00:00'
             elementCondition: null
             fieldUid: 183a1c32-7844-45ce-93f1-a991260eeadc # Caption
@@ -93,6 +67,54 @@ fieldLayouts:
             uid: addce637-1162-4b04-9b41-f84a4e16ffab
             userCondition: null
             warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-07T13:01:43+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 8568aee5-b9c2-428f-9927-d966235a4dce
+            userCondition: null
+          -
+            dateAdded: '2025-04-07T13:01:43+00:00'
+            elementCondition: null
+            fieldUid: 6913623b-fb1d-419a-a6a4-270a7ec28d8b # Alt Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: 'Use this field for alt text for now, we’ll migrate to Craft’s native field (sits below) later.'
+            type: craft\fieldlayoutelements\CustomField
+            uid: 02e9a363-c534-4ab1-8d4d-635ad2824d98
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            attribute: alt
+            class: null
+            cols: null
+            dateAdded: '2025-04-07T13:09:45+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            instructions: null
+            label: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: true
+            required: false
+            rows: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\assets\AltField
+            uid: e5c7bf55-0e4c-4711-825f-71e8109f9280
+            userCondition: null
+            warning: 'Don’t use this field yet'
             width: 100
         name: Content
         uid: b716d9f1-1e92-42c0-bf65-7e868c92a471

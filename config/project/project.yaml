@@ -1,4 +1,4 @@
-dateModified: 1745266047
+dateModified: 1745266048
 elementSources:
   craft\elements\Entry:
     -
@@ -143,6 +143,7 @@ meta:
     586087db-4dd7-43ba-929b-b3f7cef02ff8: 'Resize: width 0500px' # Resize: width 0500px
     711863fc-e341-4c43-b45b-dc33dc3c9c2b: Homepage # Homepage
     860851bc-5058-4f0d-8f3f-481df7e56099: 'Project Rounds' # Project Rounds
+    6913623b-fb1d-419a-a6a4-270a7ec28d8b: 'Alt Text' # Alt Text
     38533602-ed85-4c63-b7e3-819ae75ac47a: 'Surt – Regular' # Surt – Regular
     65570146-7afc-432e-9890-2cb116aa66ac: Link # Link
     67373325-a234-485a-a635-26dee1e7f325: 'Project Links' # Project Links
