@@ -1,0 +1,40 @@
+columnSuffix: null
+handle: modules
+instructions: null
+name: Modules
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - a05e468d-5063-4f3a-8ea3-aa240eebc1bf # Newsletter
+    -
+      __assoc__:
+        -
+          - uid
+          - 894e5185-035a-41d1-b272-0b6c1608aabf # Side Heading + Text
+    -
+      __assoc__:
+        -
+          - uid
+          - c08345c7-f10a-42ce-b893-7f2e82a46fbb # Embed
+    -
+      __assoc__:
+        -
+          - uid
+          - b2b9ea1c-a462-4794-bd6c-d9700c56f94c # CTA Banner
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

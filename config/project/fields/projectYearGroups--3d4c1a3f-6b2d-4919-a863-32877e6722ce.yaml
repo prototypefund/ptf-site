@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: projectYearGroups
+instructions: null
+name: 'Project Year Groups'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  source: 'group:5593a3e3-ad74-4e68-ad2d-36a6c8f1d95a' # Project Year Groups
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

@@ -1,22 +1,22 @@
-columnSuffix: goyaurwq
-handle: text
+columnSuffix: null
+handle: description
 instructions: null
-name: Text
+name: Description
 searchable: false
 settings:
-  availableTransforms: ''
+  availableTransforms: '*'
   availableVolumes: '*'
-  ckeConfig: 6fa1e10a-d063-4c10-a955-f1b3eda7e7ef # Standard
+  ckeConfig: c4438391-90e5-49b1-93bd-6fcbbd3aed62 # Simple
   createButtonLabel: null
   defaultTransform: null
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
-  showWordCount: true
+  showWordCount: false
   sourceEditingGroups:
     - __ADMINS__
   wordLimit: null
 translationKeyFormat: null
-translationMethod: site
+translationMethod: none
 type: craft\ckeditor\Field

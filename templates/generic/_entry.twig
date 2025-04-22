@@ -1,7 +1,15 @@
 {% extends "_layouts/layout.twig" %}
 
 {% block content %}
-  <div class="h-[50vw] text-[#CCC] flex items-center justify-center">
-    Generic Page
+  {% include "_modules/headers/simple" with {
+    headline: entry.headline|default(entry.title),
+    intro: entry.intro,
+    link: entry.genericLink,
+    background: entry.headerBackground.value,
+    alignment: entry.headerAlignment.value
+  } only %}
+
+  <div class="mt-10">
+    {% include "_modules/modules" with { entry: entry } %}
   </div>
 {% endblock %}

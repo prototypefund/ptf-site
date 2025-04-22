@@ -1,0 +1,92 @@
+fieldLayouts:
+  468bd0bf-54c2-4a1e-8c1b-640ec8ebb00e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-08T18:25:24+00:00'
+            elementCondition: null
+            fieldUid: 8898a317-df17-4cc9-9475-6376bc29fbd5 # Newsletter Headline
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fd799e7a-aa47-4897-b30f-751e1bfa0a15
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-08T18:42:31+00:00'
+            elementCondition: null
+            fieldUid: fc819c64-6715-4ac6-8573-d5c49ab5420e # Newsletter Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6c0b79bb-9a27-4d1f-b86a-d656da923018
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-08T18:25:24+00:00'
+            elementCondition: null
+            fieldUid: fdce3d41-b225-460c-85ea-1908f71ba724 # Newsletter Secondary Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a9ebd1f1-9e25-40d2-b5b3-cda425fc722d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-09T06:55:11+00:00'
+            elementCondition: null
+            fieldUid: 62efdaf8-a4e7-4149-bc72-3bd492681eba # Newsletter Side Title
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4f885406-89fc-44f1-9ef4-50800e1000f0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-09T07:08:04+00:00'
+            elementCondition: null
+            fieldUid: 358db54d-b951-4e0a-b4fa-c43aa2257acc # Newsletter Links
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d0303e29-eecb-4bd5-b6cc-a10b0a7a47fb
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 0805509b-97bc-4412-9831-c0e028efc23d
+        userCondition: null
+handle: newsletter
+name: Newsletter
+sortOrder: 3

@@ -1,0 +1,60 @@
+{% paginate articlesQuery.limit(14) as pagination, articles %}
+
+{% set headline = entry.headline|default(indexEntry.headline)|default(indexEntry.title) %}
+{% set intro = entry.intro|default(indexEntry.intro) %}
+{% set link = entry.genericLink|default(indexEntry.genericLink) %}
+{% set background = indexEntry.headerBackground.value %}
+{% set alignment = indexEntry.headerAlignment.value %}
+
+{% set allArticles = [{
+  title: "All Articles"|t,
+  url: indexEntry.url ~ "#list",
+  isActive: entry.id == indexEntry.id
+}] %}
+
+{% set categories = craft.categories.group("blogCategories").all()|map((category) => {
+  title: category.title,
+  url: category.url ~ "#list",
+  isActive: category.id == entry.id
+}) %}
+
+{% include "_modules/headers/simple" with {
+  headline,
+  intro,
+  link,
+  background,
+  alignment
+} only %}
+
+<div class="mt-5 md:mt-9 mb-5 px-2 md:px-5">
+  <h2 class="mb-3 md:mb-5 last:mb-0 font-surt text-head-22 md:text-head-28">
+    {{ title }} <span class=" text-rich-blue">[{{ articlesQuery.count() }}]</span>
+  </h2>
+
+  {% if categories|length %}
+    <div id="list">
+      <h3 class="text-body-16 text-gray-200 md:text-body-18 mb-2.5">
+        {{ "Filter by category"|t }}
+      </h3>
+
+      {% include "_modules/filters" with {
+        filters: allArticles|merge(categories)
+      } only %}
+    </div>
+  {% endif %}
+</div>
+
+<div class="px-2 md:px-5 mb-10">
+  {% if articles|length %}
+    {% include "blog/_modules/teasers-list" with { articles: articles } only %}
+    {% include "_modules/pagination" with { pagination: pagination } only %}
+  {% else %}
+    {{ "No articles found."|t }}
+  {% endif %}
+</div>
+
+{% if entry.modules.count() > 0 %}
+  {% include "_modules/modules" with { entry: entry } %}
+{% else %}
+  {% include "_modules/modules" with { entry: indexEntry } %}
+{% endif %}

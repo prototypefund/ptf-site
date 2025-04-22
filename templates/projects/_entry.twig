@@ -3,55 +3,62 @@
 {% set headline = entry.title %}
 {% set mainImage = entry.mainImage.eagerly().one() %}
 {% set claim = entry.claim %}
-{% set text = entry.text %}
-{% set rounds = entry.projectRounds.all() %}
+{% set text = entry.textEntryTypes %}
 {% set teamMembers = entry.projectTeamMembers %}
-{% set topics = entry.projectTopics.eagerly().all() %}
-{% set technologies = entry.projectTechnologies.eagerly().all() %}
-{% set links = entry.projectLinks %}
-{% set status = entry.projectStatus[0].label %}
-
+{% set license = entry.projectLicense %}
+{% set fundingAmount = entry.projectFundingAmount %}
 
 {% block content %}
-  <article class="max-w-4xl mx-auto px-2 md:px-4 lg:px-6 pb-2 md:pb-4 lg:pb-6">
-    <header class="mb-4">
-      {% include "_rich-text/standard" with { text: "<h1>#{headline}</h1>" } only %}
-      {% include "_rich-text/standard" with { text: "<p>#{claim}</p>" } only %}
-    </header>
+  <article class="mb-10 last:mb-0">
+    {% include "_modules/headers/project" with { entry } only %}
 
-    {% include "_rich-text/standard" with { text: text } only %}
+    {% if teamMembers|length or license|length or fundingAmount|length %}
+      <div class="grid md:grid-cols-16 mt-5 md:mt-10 px-2 md:px-5">
+        <h2 class="font-surt text-head-24 mb-5 md:hidden">{{ "About the project"|t }}</h2>
 
-    <aside class="my-4">
-      <p>{{ "Project Status: {status}"|t({"status": status}) }}</p>
-      <p>Rounds: {{ rounds|join(", ") }}</p>
-      <p>Topics: {{ topics|join(", ") }}</p>
-      <p>Technologies: {{ technologies|join(", ") }}</p>
-    </aside>
+        <div class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-8 border-b border-gray-400 md:border-none pb-5 md:pb-0">
+          {% if teamMembers|length %}
+            <div class="pt-1 mb-4 md:mb-5 last:mb-0 border-t border-gray-400">
+              <h4 class="uppercase text-head-14 md:text-head-16 text-gray-500 mb-1 md:mb-2">
+                {{ "Team Members"|t }}
+              </h4>
 
-    {% if teamMembers|length %}
-      <p class="my-4">
-        <strong>{{ "Team Members"|t }}:</strong> {{teamMembers}}
-      </p>
-    {% endif %}
+              <p class="text-body-18 md:text-body-20">{{ teamMembers }}</p>
+            </div>
+          {% endif %}
 
-    {% if links|length %}
-      <p class="my-4">
-        <strong>{{ "Links"|t }}:</strong>
-        <ul class="list-disc">
-          {% for link in links %}
-            <li>
-              <a class="text-link" href={{link.linkURL}}>{{ link.name }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </p>
-    {% endif %}
+          {% if license|length %}
+            <div class="pt-1 mb-4 md:mb-5 last:mb-0 border-t border-gray-400">
+              <h4 class="uppercase text-head-14 md:text-head-16 text-gray-500 mb-1 md:mb-2">
+                {{ "License"|t }}
+              </h4>
 
-    {% if mainImage %}
-      <div class="my-4">
-        {% include "_modules/figure" with { image: mainImage, size: "textCol" } only %}
+              <p class="text-body-18 md:text-body-20">{{ license }}</p>
+            </div>
+          {% endif %}
+
+          {% if fundingAmount|length %}
+            <div class="pt-1 mb-4 md:mb-5 last:mb-0 border-t border-gray-400">
+              <h4 class="uppercase text-head-14 md:text-head-16 text-gray-500 mb-1 md:mb-2">
+                {{ "Funding Amount"|t }}
+              </h4>
+
+              <p class="text-body-18 md:text-body-20">{{ fundingAmount }}</p>
+            </div>
+          {% endif %}
+        </div>
       </div>
     {% endif %}
 
+    {% if text|length %}
+      <div class="mt-5 md:mt-10">
+        {% include "_rich-text/columns" with {
+          text
+        } only %}
+      </div>
+    {% endif %}
   </article>
+
+  {% include "projects/_modules/next-reads" with { entry: entry } only %}
+  {% include "_modules/modules" with { entry: entry } %}
 {% endblock %}

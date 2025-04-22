@@ -1,0 +1,38 @@
+columnSuffix: goyaurwq
+handle: textEntryTypes
+instructions: null
+name: Text
+searchable: false
+settings:
+  availableTransforms: ''
+  availableVolumes: '*'
+  ckeConfig: 6fa1e10a-d063-4c10-a955-f1b3eda7e7ef # Standard (with Entry Types)
+  createButtonLabel: null
+  defaultTransform: null
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 894e5185-035a-41d1-b272-0b6c1608aabf # Side Heading + Text
+    -
+      __assoc__:
+        -
+          - uid
+          - 824f9bd0-21d0-47fd-a48a-b8519da12b29 # Quote
+    -
+      __assoc__:
+        -
+          - uid
+          - c08345c7-f10a-42ce-b893-7f2e82a46fbb # Embed
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: true
+  sourceEditingGroups:
+    - __ADMINS__
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: site
+type: craft\ckeditor\Field

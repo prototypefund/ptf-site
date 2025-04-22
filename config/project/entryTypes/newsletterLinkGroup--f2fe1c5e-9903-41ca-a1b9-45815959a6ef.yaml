@@ -1,0 +1,53 @@
+color: null
+fieldLayouts:
+  fd5b8ad4-3df1-423c-9e7a-eec103398f96:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-09T07:07:08+00:00'
+            elementCondition: null
+            fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # Link
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 85dcdf60-8ebc-4c42-b314-06f047c0b5e7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-09T07:13:49+00:00'
+            elementCondition: null
+            fieldUid: 7e4dd8fe-6873-44a9-ada5-acf02698981d # Side Info
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 83613d90-bbd0-4a68-8f6d-3410cfb88beb
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ba5080b6-a2be-4c53-b161-3a3d0117c6a1
+        userCondition: null
+handle: newsletterLinkGroup
+hasTitleField: false
+icon: null
+name: 'Newsletter Link Group'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

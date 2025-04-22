@@ -5,10 +5,18 @@
 @theme {
   --color-*: initial;
   --color-black: #000000;
+  --color-gray-600: #eaeaeb;
+  --color-gray-500: #4d4d4d;
   --color-gray-400: #aaaaaa;
+  --color-gray-300: #898989;
   --color-gray-200: #141414;
   --color-gray-100: #f5f5f5;
   --color-sky-blue: #49bcf2;
+  --color-rich-blue: #171be5;
+  --color-navy-blue: #1a0566;
+  --color-dark-magenta: #7d0e8c;
+  --color-pink: #ffd2f5;
+  --color-hot-pink: #eb13b9;
   --color-white: #ffffff;
 
   --breakpoint-xxs: 420px;
@@ -21,21 +29,37 @@
   --breakpoint-3xl: 2000px;
   --breakpoint-4xl: 2560px;
 
-  --text-head-88: calc(88 / 16 * 1rem);
-  --text-head-88--line-height: 1.2;
-  --text-head-64: calc(64 / 16 * 1rem);
-  --text-head-64--line-height: 1.2;
-  --text-head-56: calc(56 / 16 * 1rem);
-  --text-head-56--line-height: 1.2;
-  --text-head-48: calc(48 / 16 * 1rem);
-  --text-head-48--line-height: 1.2;
-  --text-head-40: calc(40 / 16 * 1rem);
-  --text-head-40--line-height: 1.2;
+  --text-head-62: calc(62 / 16 * 1rem);
+  --text-head-62--line-height: 1.2;
+  --text-head-46: calc(46 / 16 * 1rem);
+  --text-head-46--line-height: 1.2;
+  --text-head-38: calc(38 / 16 * 1rem);
+  --text-head-38--line-height: 1.2;
   --text-head-32: calc(32 / 16 * 1rem);
   --text-head-32--line-height: 1.2;
+  --text-head-28: calc(28 / 16 * 1rem);
+  --text-head-28--line-height: 1.2;
+  --text-head-24: calc(24 / 16 * 1rem);
+  --text-head-24--line-height: 1.2;
+  --text-head-22: calc(22 / 16 * 1rem);
+  --text-head-22--line-height: 1.4;
+  --text-head-20: calc(20 / 16 * 1rem);
+  --text-head-20--line-height: 1.2;
+  --text-head-18: calc(18 / 16 * 1rem);
+  --text-head-18--line-height: 1.2;
+  --text-head-16: calc(16 / 16 * 1rem);
+  --text-head-16--line-height: 1.2;
+  --text-head-14: calc(14 / 16 * 1rem);
+  --text-head-14--line-height: 1.2;
 
+  --text-body-32: calc(32 / 16 * 1rem);
+  --text-body-32--line-height: 1.4;
+  --text-body-28: calc(28 / 16 * 1rem);
+  --text-body-28--line-height: 1.5;
   --text-body-24: calc(24 / 16 * 1rem);
   --text-body-24--line-height: 1.5;
+  --text-body-22: calc(22 / 16 * 1rem);
+  --text-body-22--line-height: 1.5;
   --text-body-20: calc(20 / 16 * 1rem);
   --text-body-20--line-height: 1.5;
   --text-body-18: calc(18 / 16 * 1rem);
@@ -46,21 +70,43 @@
   --text-body-14--line-height: 1.5;
   --text-body-12: calc(12 / 16 * 1rem);
   --text-body-12--line-height: 1.5;
+  --text-body-13: calc(13 / 16 * 1rem);
+  --text-body-13--line-height: 1.5;
 
-  --text-ui-20: calc(20 / 16 * 1rem);
-  --text-ui-20--line-height: 1;
-  --text-ui-18: calc(18 / 16 * 1rem);
-  --text-ui-18--line-height: 1;
   --text-ui-16: calc(16 / 16 * 1rem);
   --text-ui-16--line-height: 1;
   --text-ui-14: calc(14 / 16 * 1rem);
   --text-ui-14--line-height: 1;
+  --text-ui-13: calc(13 / 16 * 1rem);
+  --text-ui-13--line-height: 1;
+  --text-ui-11: calc(11 / 16 * 1rem);
+  --text-ui-11--line-height: 1;
 
   --font-sans: "Inclusive Sans", Helvetica, Arial, sans-serif;
-  --font-sert: "Surt", Helvetica, Arial, sans-serif;
+  --font-surt: "Surt", Helvetica, Arial, sans-serif;
   --spacing: 8px;
 
+  --background-image-arrow-left-black: url("/static/images/icons/arrow-left-black.svg");
+  --background-image-arrow-left-white: url("/static/images/icons/arrow-left-white.svg");
+  --background-image-arrow-right-black: url("/static/images/icons/arrow-right-black.svg");
+  --background-image-arrow-right-white: url("/static/images/icons/arrow-right-white.svg");
   --background-image-link-arrow: url("/static/images/icons/link-arrow.svg");
+  --background-image-close: url("/static/images/icons/close.svg");
+  --background-image-tick-white: url("/static/images/icons/tick-white.svg");
+  --background-image-pattern-tr-sky-blue: url("/static/images/patterns/bg-pattern-tr-sky-blue.svg");
+  --background-image-pattern-tl-sky-blue: url("/static/images/patterns/bg-pattern-tl-sky-blue.svg");
+  --background-image-pattern-br-sky-blue: url("/static/images/patterns/bg-pattern-br-sky-blue.svg");
+  --background-image-pattern-tr-light-blue: url("/static/images/patterns/bg-pattern-tr-light-blue.svg");
+  --background-image-pattern-tl-light-blue: url("/static/images/patterns/bg-pattern-tl-light-blue.svg");
+  --background-image-pattern-br-light-blue: url("/static/images/patterns/bg-pattern-br-light-blue.svg");
+  --background-image-pattern-tr-hot-pink: url("/static/images/patterns/bg-pattern-tr-hot-pink.svg");
+  --background-image-pattern-tl-hot-pink: url("/static/images/patterns/bg-pattern-tl-hot-pink.svg");
+  --background-image-pattern-br-hot-pink: url("/static/images/patterns/bg-pattern-br-hot-pink.svg");
+  --background-image-pattern-br-pink: url("/static/images/patterns/bg-pattern-br-pink.svg");
+  --background-image-pattern-bl-pink: url("/static/images/patterns/bg-pattern-bl-pink.svg");
+  --background-image-pattern-br-gray-1: url("/static/images/patterns/bg-pattern-br-gray-1.svg");
+  --background-image-pattern-br-gray-2: url("/static/images/patterns/bg-pattern-br-gray-2.svg");
+  --background-image-pattern-newsletter: url("/static/images/patterns/bg-pattern-newsletter.svg");
 }
 
 @layer base {
@@ -69,7 +115,7 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-[#e5e7eb], currentColor);
+    border-color: var(--color-gray-200, currentColor);
   }
 
   html {
@@ -100,7 +146,7 @@
   button,
   textarea,
   select {
-    @apply accent-[#4b5563] dark:accent-[#e5e7eb];
+    @apply accent-gray-500 dark:accent-gray-200;
     font: inherit;
   }
 
@@ -113,7 +159,7 @@
   }
 
   :focus-visible {
-    @apply outline-hidden ring-8 dark:ring-4 ring-[#4b5563] dark:ring-[#e5e7eb];
+    @apply outline-hidden ring-8 dark:ring-4 ring-gray-500 dark:ring-gray-200;
   }
 
   @media print {
@@ -124,9 +170,5 @@
 }
 
 .text-link {
-  @apply underline hover:text-[#4b5563];
-}
-
-.button {
-  @apply relative leading-none inline-block align-middle overflow-hidden whitespace-nowrap text-ellipsis max-w-full text-white rounded-3xl mr-1.5 px-2.5 py-1.25 bg-[#4b5563] hover:bg-[#111827] decoration-0 active:bg-[#030712] dark:text-[#111827] dark:bg-[#6b7280] dark:hover:bg-[#e5e7eb] dark:active:bg-[#f3f4f6];
+  @apply underline hover:text-gray-500;
 }

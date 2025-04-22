@@ -1,0 +1,101 @@
+color: null
+fieldLayouts:
+  e6a05a6a-d419-4648-9885-15f3c568ba45:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-08T18:38:50+00:00'
+            elementCondition: null
+            fieldUid: 8898a317-df17-4cc9-9475-6376bc29fbd5 # Newsletter Headline
+            handle: null
+            includeInCards: false
+            instructions: 'Leave empty to use the default newsletter headline'
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 412356ff-22f2-401e-acb6-5cb0e5a04722
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-08T18:42:16+00:00'
+            elementCondition: null
+            fieldUid: fc819c64-6715-4ac6-8573-d5c49ab5420e # Newsletter Text
+            handle: null
+            includeInCards: false
+            instructions: 'Leave empty to use the default newsletter explanation text'
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0eca641b-265f-462e-a34a-f48b224b2f98
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-08T18:38:50+00:00'
+            elementCondition: null
+            fieldUid: fdce3d41-b225-460c-85ea-1908f71ba724 # Newsletter Secondary Text
+            handle: null
+            includeInCards: false
+            instructions: 'Leave empty to use the default newsletter disclaimer text'
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 02d5eaca-3c68-49ff-bfcc-17625e9a0961
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-09T06:56:12+00:00'
+            elementCondition: null
+            fieldUid: 62efdaf8-a4e7-4149-bc72-3bd492681eba # Newsletter Side Title
+            handle: null
+            includeInCards: false
+            instructions: 'Leave empty to use the default newsletter side title'
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a4f47c3c-1a44-4f65-8785-1c30eba702b5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-09T07:07:43+00:00'
+            elementCondition: null
+            fieldUid: 358db54d-b951-4e0a-b4fa-c43aa2257acc # Newsletter Links
+            handle: null
+            includeInCards: false
+            instructions: 'Leave empty to use the default newsletter links'
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c1c70b48-3964-4b5e-8a7f-deda60de2cdf
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 6b567ee4-a998-42d7-a48b-5ae641e2e020
+        userCondition: null
+handle: newsletter
+hasTitleField: false
+icon: null
+name: Newsletter
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

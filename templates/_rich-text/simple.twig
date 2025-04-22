@@ -1,5 +1,16 @@
+{% set size = size|default(null) %}
+
+{% switch size %}
+  {% case "small" %}
+    {% set sizeClasses = "text-body-12 md:text-body-14" %}
+  {% case "large" %}
+    {% set sizeClasses = "text-body-18 md:text-body-20" %}
+  {% default %}
+    {% set sizeClasses = "text-body-14 md:text-body-16" %}
+{% endswitch %}
+
 {{ text|retcon([
   ['removeEmpty', 'p'],
-  ['attr', 'a', { class: 'text-link'}],
-  ['attr', 'p', { class: 'mb-2 last:mb-0'}]
+  ["attr", "p", { class: "mb-2 last:mb-0 #{sizeClasses}"}],
+  ['attr', 'a', { class: 'border-gray-400 border-sky-blue border-b'}, false],
 ])|raw }}

@@ -1,33 +1,62 @@
 {% extends "_layouts/layout.twig" %}
 
 {% set headline = entry.title %}
-{% set text = entry.text %}
-
-{% set mainImage = entry.mainImage.eagerly().one() %}
-{% set authorName = entry.author.name %}
-{% set postDate = entry.postDate|date("short") %}
-
-{% set nextReads = entry.nextReads.eagerly().all() %}
-{% if nextReads|length == 0 %}
-  {% set nextReads =  craft.entries.section('blog').id('not ' ~ entry.id).limit(3).all() %}
-{% endif %}
-
+{% set intro = entry.intro %}
+{% set text = entry.textEntryTypes %}
+{% set articleAuthor = entry.articleAuthor.one() %}
 
 {% block content %}
-  <div class="max-w-4xl mx-auto px-2 md:px-4 lg:px-6 pb-2 md:pb-4 lg:pb-6">
-    <article>
-      {% include "_rich-text/standard" with { text: "<h1>#{ headline }</h1>" } only %}
-      <p class="mt-2 mb-4">Written by {{authorName}} on {{ postDate }}</p>
+  <article class="mb-10 last:mb-0">
+    {% include "_modules/headers/article" with { entry } only %}
 
-      {% if mainImage %}
-        <div class="my-4">
-          {% include "_modules/figure" with { image: mainImage, size: "textCol" } only %}
+    {% if intro|length %}
+      <div class="grid md:grid-cols-16 px-2 md:px-5 mt-5 md:mt-10 mb-[3.75rem]">
+        <div class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-8">
+          {% include "_rich-text/intro" with {
+            text: intro
+          } only %}
         </div>
-      {% endif %}
+      </div>
+    {% endif %}
 
-      {% include "_rich-text/standard" with { text: text } only %}
-    </article>
+    {% if text|length %}
+      <div class="first-of-type:mt-5 md:first-of-type:mt-10">
+        {% include "_rich-text/columns" with {
+          text
+        } only %}
+      </div>
+    {% endif %}
 
-    {% include "blog/_modules/next-reads" with { nextReads: nextReads } %}
-  </div>
+    {% if articleAuthor|length %}
+      {% set avatar = articleAuthor.avatar.eagerly().one() %}
+      {% set pronouns = articleAuthor.pronouns %}
+      {% set bio = articleAuthor.bio %}
+
+      <div class="grid px-2 md:grid-cols-16 md:px-5 border-gray-400 border-t md:border-t-0">
+        <div class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-8 pt-2.5 border-gray-400 border-t-0 md:border-t">
+          {% if avatar|length %}
+            <img class="mb-6 md:mb-[3.75rem]" src="{{ avatar.getUrl("avatarSmall") }}" alt="{{ avatar.alt }}">
+          {% endif %}
+
+          <div class="flex gap-2">
+            <h4 class="uppercase font-surt text-head-22 md:text-head-38 mb-3 md:mb-4">{{ articleAuthor.title  }}</h4>
+
+            {% if pronouns|length %}
+              <span class="uppercase font-surt text-head-16 md:text-head-22">{{ pronouns }}</span>
+            {% endif %}
+          </div>
+
+          {% if bio|length %}
+            {% include "_rich-text/simple" with {
+              text: bio,
+              size: "large"
+            } only %}
+          {% endif %}
+        </div>
+      </div>
+    {% endif %}
+  </article>
+
+  {% include "blog/_modules/next-reads" with { entry: entry } only %}
+  {% include "_modules/modules" with { entry: entry } only %}
 {% endblock %}

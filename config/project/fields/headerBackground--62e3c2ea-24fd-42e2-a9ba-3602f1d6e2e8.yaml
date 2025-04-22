@@ -1,0 +1,77 @@
+columnSuffix: null
+handle: headerBackground
+instructions: null
+name: 'Header Background'
+searchable: false
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Grey Background / Blue Pattern'
+        -
+          - value
+          - greyBackgroundBluePattern
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Grey Background / Pink Pattern'
+        -
+          - value
+          - greyBackgroundPinkPattern
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Sky Blue Background / Light Blue Pattern'
+        -
+          - value
+          - skyBlueBackgroundLightBluePattern
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Rich Blue Background / Pink Pattern'
+        -
+          - value
+          - richBlueBackgroundPinkPattern
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Dark Magenta Background / Blue Pattern'
+        -
+          - value
+          - darkMagentaBackgroundBluePattern
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Navy Blue Background / Pink Pattern'
+        -
+          - value
+          - navyBlueBackgroundPinkPattern
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\RadioButtons

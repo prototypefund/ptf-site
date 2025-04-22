@@ -1,4 +1,18 @@
-<aside class="my-4 border-t pt-4">
-  {% include "_rich-text/standard" with { text: "<h2>#{'Continue reading'|t}</h2>" } only %}
+{% set nextReads = entry.nextReads.eagerly().all() %}
+
+{% if nextReads|length == 0 %}
+  {% set nextReads =  craft.entries.section('blog').id('not ' ~ entry.id).limit(4).all() %}
+{% endif %}
+
+{% set content %}
   {% include "blog/_modules/teasers-list" with { articles: nextReads } %}
-</aside>
+{% endset %}
+
+{% if nextReads|length %}
+  {% include "_modules/next-reads" with {
+    title: "More articles like this"|t,
+    seeAllText: "See all"|t,
+    entryLink: blogIndex,
+    content: content,
+  } only %}
+{% endif %}

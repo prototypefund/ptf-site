@@ -1,0 +1,59 @@
+<svg width="240" height="320" viewBox="0 0 240 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="80" height="80" transform="translate(0 80)" fill="#EB13B9"/>
+<path d="M80 0H93.6V40H80V0Z" fill="#EB13B9"/>
+<path d="M133.6 0H146.4V40H133.6V0Z" fill="#EB13B9"/>
+<path d="M106.4 0H120.8V40H106.4V0Z" fill="#EB13B9"/>
+<path d="M93.6 40H106.4V80H93.6V40Z" fill="#EB13B9"/>
+<path d="M146.4 40H160V80H146.4V40Z" fill="#EB13B9"/>
+<path d="M120.8 40H133.6V80H120.8V40Z" fill="#EB13B9"/>
+<circle cx="189.6" cy="10.4" r="3.2" fill="#EB13B9"/>
+<circle cx="180" cy="20" r="3.2" fill="#EB13B9"/>
+<circle cx="170.4" cy="29.6" r="3.2" fill="#EB13B9"/>
+<circle cx="189.6" cy="29.6" r="3.2" fill="#EB13B9"/>
+<circle cx="170.4" cy="10.4" r="3.2" fill="#EB13B9"/>
+<circle cx="229.6" cy="50.4" r="3.2" fill="#EB13B9"/>
+<circle cx="210.4" cy="50.4" r="3.2" fill="#EB13B9"/>
+<circle cx="229.6" cy="69.6" r="3.2" fill="#EB13B9"/>
+<circle cx="220" cy="60" r="3.2" fill="#EB13B9"/>
+<circle cx="210.4" cy="69.6" r="3.2" fill="#EB13B9"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M26.4 186.4H0V213.6H26.4V186.4ZM13.2 206.4C16.5137 206.4 19.2 203.714 19.2 200.4C19.2 197.086 16.5137 194.4 13.2 194.4C9.88629 194.4 7.2 197.086 7.2 200.4C7.2 203.714 9.88629 206.4 13.2 206.4Z" fill="#EB13B9"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M80.0006 186.4H53.6006V213.6H80.0006V186.4ZM66.8006 206.4C70.1143 206.4 72.8006 203.714 72.8006 200.4C72.8006 197.087 70.1143 194.4 66.8006 194.4C63.4869 194.4 60.8006 197.087 60.8006 200.4C60.8006 203.714 63.4869 206.4 66.8006 206.4Z" fill="#EB13B9"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M53.5994 213.6H26.3994V240H53.5994V213.6ZM40.3994 232.8C43.7131 232.8 46.3994 230.114 46.3994 226.8C46.3994 223.486 43.7131 220.8 40.3994 220.8C37.0857 220.8 34.3994 223.486 34.3994 226.8C34.3994 230.114 37.0857 232.8 40.3994 232.8Z" fill="#EB13B9"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M53.5994 160H26.3994V186.4H53.5994V160ZM40.3994 179.2C43.7131 179.2 46.3994 176.514 46.3994 173.2C46.3994 169.886 43.7131 167.2 40.3994 167.2C37.0857 167.2 34.3994 169.886 34.3994 173.2C34.3994 176.514 37.0857 179.2 40.3994 179.2Z" fill="#EB13B9"/>
+<path d="M93.6 80H106.4V93.6H93.6V80Z" fill="#EB13B9"/>
+<path d="M133.6 80H146.4V93.6H133.6V80Z" fill="#EB13B9"/>
+<path d="M93.6 106.4H106.4V133.6H93.6V106.4Z" fill="#EB13B9"/>
+<path d="M80 93.6H93.6V106.4H80V93.6Z" fill="#EB13B9"/>
+<path d="M80 133.6H93.6V146.4H80V133.6Z" fill="#EB13B9"/>
+<path d="M106.4 93.6H133.6V106.4H106.4V93.6Z" fill="#EB13B9"/>
+<path d="M146.4 93.6H160V106.4H146.4V93.6Z" fill="#EB13B9"/>
+<path d="M146.4 133.6H160V146.4H146.4V133.6Z" fill="#EB13B9"/>
+<path d="M106.4 133.6H133.6V146.4H106.4V133.6Z" fill="#EB13B9"/>
+<path d="M133.6 106.4H146.4V133.6H133.6V106.4Z" fill="#EB13B9"/>
+<path d="M133.6 146.4H146.4V160H133.6V146.4Z" fill="#EB13B9"/>
+<path d="M93.6 146.4H106.4V160H93.6V146.4Z" fill="#EB13B9"/>
+<circle cx="109.6" cy="170.4" r="3.2" fill="#EB13B9"/>
+<circle cx="99.9998" cy="180" r="3.2" fill="#EB13B9"/>
+<circle cx="90.4002" cy="189.6" r="3.2" fill="#EB13B9"/>
+<circle cx="109.6" cy="189.6" r="3.2" fill="#EB13B9"/>
+<circle cx="90.4002" cy="170.4" r="3.2" fill="#EB13B9"/>
+<circle cx="149.6" cy="210.4" r="3.2" fill="#EB13B9"/>
+<circle cx="130.4" cy="210.4" r="3.2" fill="#EB13B9"/>
+<circle cx="149.6" cy="229.6" r="3.2" fill="#EB13B9"/>
+<circle cx="140" cy="220" r="3.2" fill="#EB13B9"/>
+<circle cx="130.4" cy="229.6" r="3.2" fill="#EB13B9"/>
+<rect y="240" width="13.6" height="13.6" fill="#EB13B9"/>
+<rect x="66.4004" y="306.4" width="13.6" height="13.6" fill="#EB13B9"/>
+<rect x="13.5996" y="253.6" width="12.8" height="12.8" fill="#EB13B9"/>
+<rect x="53.5996" y="293.6" width="12.8" height="12.8" fill="#EB13B9"/>
+<rect x="53.5996" y="240" width="12.8" height="13.6" fill="#EB13B9"/>
+<rect y="293.6" width="13.6" height="12.8" fill="#EB13B9"/>
+<rect x="66.4004" y="253.6" width="13.6" height="12.8" fill="#EB13B9"/>
+<rect x="13.5996" y="306.4" width="12.8" height="13.6" fill="#EB13B9"/>
+<rect width="13.6" height="40" fill="#EB13B9"/>
+<rect x="53.5996" width="12.8" height="40" fill="#EB13B9"/>
+<rect x="26.4004" width="14.4" height="40" fill="#EB13B9"/>
+<rect x="13.5996" y="40" width="12.8" height="40" fill="#EB13B9"/>
+<rect x="66.4004" y="40" width="13.6" height="40" fill="#EB13B9"/>
+<rect x="40.7998" y="40" width="12.8" height="40" fill="#EB13B9"/>
+</svg>

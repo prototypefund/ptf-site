@@ -1,0 +1,63 @@
+{% set newsletterHeadline = module.newsletterHeadline|default(newsletter.newsletterHeadline) %}
+{% set newsletterText = module.newsletterText|default(newsletter.newsletterText) %}
+{% set newsletterSecondaryText = module.newsletterSecondaryText|default(newsletter.newsletterSecondaryText) %}
+{% set newsletterSideTitle = module.newsletterSideTitle|default(newsletter.newsletterSideTitle) %}
+{% set newsletterLinks = module.newsletterLinks.all()|default(newsletter.newsletterLinks.all()) %}
+
+<div class="md:grid md:grid-cols-2 mb-10 last:mb-0 bg-gray-100 border-gray-400 border-t border-b">
+  <div class="relative border-gray-400 border-r after:bg-pattern-newsletter after:content-[''] after:absolute after:right-0 after:top-0 after:bottom-3 after:bg-no-repeat after:bg-right-top after:bg-contain after:h-[21.875rem] after:w-[6.25rem]">
+    <div class="pt-4 pl-2 pr-6 md:pl-3 md:pr-12 md:pt-4 mb-3 md:mb-[2.75rem] relative z-1">
+      <h4 class="font-surt text-head-24 mb-2">{{ newsletterHeadline }}</h4>
+
+      {% include "_rich-text/simple" with {
+        text: newsletterText
+      } only %}
+    </div>
+  </div>
+
+  <div class="border-gray-400 border-r md:order-2 relative z-1">
+    <div class="mb-[0.63rem] md:mb-2.5">
+      {% include "_modules/newsletter-form" only %}
+    </div>
+
+    <div class="pl-2 pr-6 md:pl-3 md:pr-12 mb-3 md:mb-0 md:pb-[3.875rem] text-gray-200">
+      {% include "_rich-text/simple" with {
+        text: newsletterSecondaryText,
+        size: "small"
+      } only %}
+    </div>
+  </div>
+
+  <div class="border-gray-400 border-t md:border-t-0 px-2 md:px-3 py-3 md:py-4">
+    {% if newsletterSideTitle %}
+      <h5 class="font-surt text-[1.25rem]">
+        {{ newsletterSideTitle }}
+      </h5>
+    {% endif %}
+  </div>
+
+  <ul class="border-gray-400 border-t md:order-3">
+    {% for linkGroup in newsletterLinks %}
+      {% set link = linkGroup.genericLink %}
+
+      {% if link|length %}
+        {% set isExternal = link.type == "url" %}
+        {% set sideInfo = linkGroup.sideInfo %}
+
+        <li class="py-[1.13rem] px-2 md:px-3 flex items-center md:h-[3.9375rem] border-gray-400 border-b last:border-0 first:!border-b">
+          {{ tag('a', {
+            class: 'text-gray-200',
+            href: link.value,
+            target: link.target,
+            rel: link.target == '_blank' ? 'noopener noreferrer' : null,
+            text: link.label,
+          }) }}
+
+          {% if sideInfo %}
+            <span class="ml-auto uppercase text-gray-500 text-body-13">{{ sideInfo }}</span>
+          {% endif %}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>

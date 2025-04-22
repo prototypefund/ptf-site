@@ -1,0 +1,11 @@
+{% set content %}
+  {% include "_rich-text/standard" with {
+    text: entry.text
+  } only %}
+{% endset %}
+
+{% include "_modules/side-heading" with {
+  headline: entry.title,
+  content: content,
+  padding: padding|default(false)
+} only %}

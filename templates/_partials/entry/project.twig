@@ -1,12 +1,56 @@
-{% set fallbackImageUrl = "https://prototypefund.de/wp-content/themes/prototypefund-theme-a11y/library/images/prototypefund-project-default-16-9.png" %}
-{% set imageUrl = (entry.mainImage.eagerly().one().getUrl("blogTeaser"))|default(fallbackImageUrl) %}
+{% set image = entry.mainImage.eagerly().one() %}
+{% set inFunding = "inUsage" in entry.projectStatus %}
+{% set claim = entry.claim %}
+{% set teamMembers = entry.projectTeamMembers %}
 
-<article class="col-span-3 md:col-span-1">
-  <a class="block" href="{{ entry.getUrl() }}">
-    <img class="mb-1 w-full aspect-4/3 bg-[#4b5563]" src="{{ imageUrl }}">
+{% set categories = entry.projectRounds.all()
+  |merge(entry.projectTopics.all())
+  |merge(entry.projectTechnologies.all())
+  |merge(entry.projectYearGroups.all())
+%}
 
-    <h3 class="text-body-24 font-bold mb-1">{{ entry.title }}</h3>
-    <h4 class="text-body-16 font-bold mb-1">{{ entry.claim }}</h4>
-    <p>{{ entry.text|striptags|truncate(120)|raw }}</p>
+<article class="border-gray-400 border-t mb-4 md:mb-5">
+  <a class="block pt-2 md:pt-2.5" href="{{ entry.getUrl() }}">
+    <div class="group grid grid-cols-11">
+      <div class="col-span-2 mr-2 md:mr-3.5">
+        {% if image|length %}
+          <div class="bg-gray-100 flex items-center justify-center aspect-square p-[1.25rem]">
+            <div class="w-full mix-blend-multiply">
+              <img class="w-full h-full object-contain" src="{{ image.url }}" alt="{{ image.alt }}">
+            </div>
+          </div>
+        {% else %}
+          <div class="aspect-square">
+            <img class="block w-full h-full object-cover" src="/static/images/patterns/project-fallback-pattern.svg">
+          </div>
+        {% endif %}
+      </div>
+
+      <div class="col-span-9">
+        {% if inFunding|length %}
+          <div class="mb-1 md:mb-2">
+            {% include "_modules/pill" with {
+              text: "In Funding"|t
+            } only %}
+          </div>
+        {% endif %}
+
+        <div class="mb-1 md:mb-1.5 last:mb-0">
+          <h4 class="inline uppercase font-surt text-head-16 md:text-head-22 tracking-[0.03em] group-hover:border-b-sky-blue group-hover:border-b-2">
+            <span class="text-rich-blue">{{ entry.title }}</span>{% if claim|length %}: {{ claim }}{% endif %}
+          </h4>
+        </div>
+
+        {% if teamMembers|length %}
+          <div class="text-body-12 md:text-body-14 mb-2 md:mb-2.5 last:mb-0">{{ teamMembers }}</div>
+        {% endif %}
+
+        {% if categories|length %}
+          {% include "_modules/categories-list" with {
+            categories
+          } only %}
+        {% endif %}
+      </div>
+    </div>
   </a>
 </article>

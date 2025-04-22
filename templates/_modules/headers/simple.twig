@@ -1,0 +1,110 @@
+{% set intro = intro|default(null) %}
+{% set link = link|default(null) %}
+{% set background = background|default(null) %}
+{% set alignment = alignment|default("left") %}
+
+{% set leftPatternPositions = [
+  'after:top-0',
+  'after:bg-right-top',
+  'after:w-[calc(15vw+16px)]',
+  'after:md:w-[calc(12vw+40px)]',
+  'after:lg:w-[calc(8vw+40px)]'
+  ]|join(' ')
+%}
+
+{% set centerPatternPositions = [
+  'after:bottom-0',
+  'after:bg-right-bottom',
+  'after:w-[calc(18vw+16px)]',
+  'after:md:w-[calc(18vw+40px)]',
+  'after:lg:w-[calc(13vw+40px)]',
+  'before:top-0',
+  'before:bg-top-left',
+  'before:w-[calc(18vw+16px)]',
+  'before:md:w-[calc(18vw+40px)]',
+  'before:lg:w-[calc(13vw+40px)]'
+]|join(' ') %}
+
+{% set patternStyles = {
+  skyBlue: {
+    left: "after:bg-pattern-tr-sky-blue #{leftPatternPositions}",
+    center: "after:bg-pattern-br-sky-blue before:bg-pattern-tl-sky-blue #{centerPatternPositions}"
+  },
+  hotPink: {
+    left: "after:bg-pattern-tr-hot-pink #{leftPatternPositions}",
+    center: "after:bg-pattern-br-hot-pink before:bg-pattern-tl-hot-pink #{centerPatternPositions}"
+  },
+  lightBlue: {
+    left: "after:bg-pattern-tr-light-blue #{leftPatternPositions}",
+    center: "after:bg-pattern-br-light-blue before:bg-pattern-tl-light-blue #{centerPatternPositions}"
+  }
+} %}
+
+{% set backgroundConfigs = {
+  greyBackgroundBluePattern: {
+    pattern: 'skyBlue',
+    bgColor: 'bg-gray-100 border-gray-400 border-b',
+    buttonStyle: 'hover:bg-black hover:text-white'
+  },
+  greyBackgroundPinkPattern: {
+    pattern: 'hotPink',
+    bgColor: 'bg-gray-100 border-gray-400 border-b',
+    buttonStyle: 'hover:bg-black hover:text-white'
+  },
+  skyBlueBackgroundLightBluePattern: {
+    pattern: 'lightBlue',
+    bgColor: 'bg-sky-blue',
+    buttonStyle: 'hover:bg-black hover:text-white'
+  },
+  richBlueBackgroundPinkPattern: {
+    pattern: 'hotPink',
+    bgColor: 'bg-rich-blue text-white',
+    buttonStyle: 'text-white hover:bg-white hover:text-black border-white'
+  },
+  darkMagentaBackgroundBluePattern: {
+    pattern: 'skyBlue',
+    bgColor: 'bg-dark-magenta text-white',
+    buttonStyle: 'text-white hover:bg-white hover:text-black border-white'
+  },
+  navyBlueBackgroundPinkPattern: {
+    pattern: 'hotPink',
+    bgColor: 'bg-navy-blue text-white',
+    buttonStyle: 'text-white hover:bg-white hover:text-black border-white'
+  }
+} %}
+
+{% set defaultBackground = 'greyBackgroundBluePattern' %}
+{% set config = backgroundConfigs[background] ?? backgroundConfigs[defaultBackground] %}
+
+{% set patternClasses = patternStyles[config.pattern][alignment] %}
+{% set headerClass = "#{patternClasses} #{config.bgColor}" %}
+{% set buttonClass = config.buttonStyle %}
+
+<header class="{{ headerClass }} {{ alignment == "left" ? "lg:py-[8.125rem]" : "lg:py-[6.25rem]" }} px-2 md:px-5 py-10 relative text-gray-200 before:content-[''] before:absolute before:left-0 before:h-full before:bg-no-repeat before:bg-contain after:content-[''] after:absolute after:right-0 after:h-full after:bg-no-repeat after:bg-contain">
+  <div class="{{ alignment == "left" ? "grid grid-cols-12 lg:grid-cols-16" : "text-center" }}">
+    <h1 class="{{ alignment == "left" ? "col-span-11 lg:col-span-7 xl:col-span-8 mb-3 lg:mb-0 md:pr-3 pr-0" : "mb-3 lg:mb-5" }} font-surt text-head-28 md:text-head-46 uppercase relative z-1">{{ headline }}</h1>
+
+    {% if intro|length or link|length %}
+      <div class="{{ alignment == "left" ? "col-span-11 lg:col-span-7 xl:col-start-9 xl:col-span-5" : "m-auto" }} max-w-64 relative z-1">
+        {% if intro|length %}
+          <div class="mb-6 last:mb-0">
+            {% include "_rich-text/simple" with {
+              text: intro,
+              size: "large"
+            } only %}
+          </div>
+        {% endif %}
+
+        {% if link|length %}
+          {{ tag('a', {
+            class: buttonClass ~ ' px-[0.625rem] py-1 md:py-[0.3125rem] uppercase border-l border-r font-surt text-ui-14 md:text-ui-16 transition-colors',
+            href: link.value,
+            target: link.target,
+            rel: link.target == '_blank' ? 'noopener noreferrer' : null,
+            text: link.label,
+          }) }}
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+</header>

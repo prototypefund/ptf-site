@@ -1,18 +1,202 @@
 {% extends "_layouts/layout.twig" %}
 
-{% set projectsQuery = craft.entries.section("projects").limit(20) %}
+{% set queryString = craft.app.request.queryString %}
+{% set params = {} %}
+
+{% if queryString %}
+  {% for pair in queryString|split('&') %}
+    {% if pair %}
+      {% set parts = pair|split('=') %}
+      {% set key = parts[0] %}
+
+      {% if key != "p" %}
+        {% set value = parts[1] is defined ? parts[1] : null %}
+
+        {% if params[key] is defined %}
+          {% set params = params|merge({ (key): params[key]|merge([value]) }) %}
+        {% else %}
+          {% set params = params|merge({ (key): [value] }) %}
+        {% endif %}
+      {% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+
+{% set projectsQuery = craft.entries.section("projects") %}
+
+{% set statusParams = params["status"]|default([]) %}
+{% set yearGroupParams = params["year-group"]|default([]) %}
+{% set roundParams = params["round"]|default([]) %}
+{% set topicParams = params["topic"]|default([]) %}
+{% set technologyParams = params["technology"]|default([]) %}
+
+{% set relations = [] %}
+
+{% if yearGroupParams|length %}
+  {% set relations = relations|merge([
+    { targetElement: craft.categories.group('projectYearGroups').slug(yearGroupParams) }
+  ]) %}
+{% endif %}
+
+{% if roundParams|length %}
+  {% set relations = relations|merge([
+    { targetElement: craft.categories.group('projectRounds').slug(roundParams) }
+  ]) %}
+{% endif %}
+
+{% if topicParams|length %}
+  {% set relations = relations|merge([
+    { targetElement: craft.categories.group('projectTopics').slug(topicParams) }
+  ]) %}
+{% endif %}
+
+{% if technologyParams|length %}
+  {% set relations = relations|merge([
+    { targetElement: craft.categories.group('projectTechnologies').slug(technologyParams) }
+  ]) %}
+{% endif %}
+
+{% if statusParams|length %}
+  {% set projectsQuery = projectsQuery.projectStatus(statusParams) %}
+{% endif %}
+
+{% if relations|length %}
+  {% set projectsQuery = projectsQuery.relatedTo(['and']|merge(relations)) %}
+{% endif %}
+
+{% set projectsQuery = projectsQuery
+  .with([
+    'projectYearGroups',
+    'projectRounds',
+    'projectTopics',
+    'projectTechnologies'
+  ])
+  .limit(20)
+%}
+
 {% paginate projectsQuery as pagination, projects %}
 
+{% set yearGroups = craft.categories.group("projectYearGroups").all() %}
+{% set rounds = craft.categories.group("projectRounds").all() %}
+{% set topics = craft.categories.group("projectTopics").all() %}
+{% set technologies = craft.categories.group("projectTechnologies").all() %}
+
 {% block content %}
-  <div class="max-w-4xl mx-auto px-2 md:px-4 lg:px-6 pb-2 md:pb-4 lg:pb-6">
-    {% include "_rich-text/standard" with { text: "<h1>#{'Our projects'|t}</h1>" } only %}
-    <div class="my-4">
-      {% if projects|length %}
-        {% include "projects/_modules/teasers-list" with { projects: projects } only %}
-      {% else %}
-        {% include "_rich-text/standard" with { text: "<p>#{'No entries yet. Create some in the CMS!'|t}</p>" } only %}
+  {% include "_modules/headers/simple" with {
+    headline: entry.headline|default(entry.title),
+    intro: entry.intro,
+    link: entry.genericLink,
+    background: entry.headerBackground.value,
+    alignment: entry.headerAlignment.value
+  } only %}
+
+  <div id="list" class="md:grid md:grid-cols-12 lg:grid-cols-16 mt-5 md:mt-9 mb-10 px-2 md:px-5">
+    <div class="hidden md:block md:col-span-3 lg:col-span-4">
+      <h2 class="mb-3 font-surt text-head-24">
+        {{ "Filter projects"|t }}
+      </h2>
+
+      <div class="mb-4 pt-[0.625rem] border-gray-400 border-t">
+        <h3 class="text-body-14 uppercase mb-2">
+          {{ "Funding status"|t }}
+        </h3>
+
+        {% include "projects/_modules/checkbox-filter" with {
+          key: "status",
+          value: "inUsage",
+          text: "Only show currently funded projects"|t,
+          params,
+        } only %}
+      </div>
+
+      {% if yearGroups|length %}
+        <div class="mb-4 pt-[0.625rem] border-gray-400 border-t">
+          <h3 class="text-body-14 uppercase mb-2">
+            {{ "Year Groups (from 2025)"|t }}
+          </h3>
+
+          {% include "projects/_modules/categories-filter" with {
+            key: "year-group",
+            categories: yearGroups,
+            params,
+          } only %}
+        </div>
+      {% endif %}
+
+      {% if rounds|length %}
+        <div class="mb-4 pt-[0.625rem] border-gray-400 border-t">
+          <h3 class="text-body-14 uppercase mb-2">
+            {{ "Rounds (2016 – 2025)"|t }}
+          </h3>
+
+          {% include "projects/_modules/categories-filter" with {
+            key: "round",
+            categories: rounds,
+            params,
+          } only %}
+        </div>
+      {% endif %}
+
+      {% if topics|length %}
+        <div class="mb-4 pt-[0.625rem] border-gray-400 border-t">
+          <h3 class="text-body-14 uppercase mb-2">
+            {{ "Topics"|t }}
+          </h3>
+
+          {% include "projects/_modules/categories-filter" with {
+            key: "topic",
+            categories: topics,
+            params,
+          } only %}
+        </div>
+      {% endif %}
+
+      {% if technologies|length %}
+        <div class="mb-4 pt-[0.625rem] border-gray-400 border-t">
+          <h3 class="text-body-14 uppercase mb-2">
+            {{ "Technologies"|t }}
+          </h3>
+
+          {% include "projects/_modules/categories-filter" with {
+            key: "technology",
+            categories: technologies,
+            params,
+          } only %}
+        </div>
       {% endif %}
     </div>
-    {% include "_modules/pagination" with { pagination: pagination } only %}
+
+    <div class="md:col-start-5 md:col-span-12 lg:col-start-6 lg:col-span-11">
+      <div class="mb-[1.875rem] md:mb-3 md:flex md:items-center">
+        <h2 class="font-surt text-head-20 md:text-head-24">
+          {{ params|length ? "Matching Projects"|t : "All Projects"|t }} <span class="text-rich-blue">[{{ projectsQuery.count() }}]</span>
+        </h2>
+
+        {% if params|length %}
+          <div class="hidden md:block ml-auto">
+            <a class="uppercase text-ui-16 flex items-center gap-[0.625rem] after:block after:content-[''] after:h-[1.125rem] after:w-[1.125rem] after:bg-close after:bg-center after:bg-no-repeat" href="{{ '/' ~ craft.app.request.pathInfo }}">
+              {{ "Reset filters"|t }}
+            </a>
+          </div>
+        {% endif %}
+      </div>
+
+      {% if projects|length %}
+        {% for project in projects %}
+          {{ project.render() }}
+        {% endfor %}
+
+        {% include "_modules/pagination" with {
+          pagination,
+          params
+        } only %}
+      {% else %}
+        <div class="border-gray-400 border-t mb-5 pt-2.5">
+         {{ "No projects found."|t }}
+        </div>
+      {% endif %}
+    </div>
   </div>
+
+  {% include "_modules/modules" with { entry: entry } %}
 {% endblock %}
