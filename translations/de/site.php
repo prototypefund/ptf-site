@@ -26,6 +26,7 @@ return [
   "Page not found" => "Seite nicht gefunden",
   "Project Status: {status}" => "Projekt-Status: {status}",
   "Projects" => "Projekte",
+  "Published on" => "Veröffentlicht am",
   "Return to homepage" => "Zurück zur Homepage",
   "Reset filters" => "Filter zurücksetzen",
   "Round: {round}" => "Runde: {round}",
