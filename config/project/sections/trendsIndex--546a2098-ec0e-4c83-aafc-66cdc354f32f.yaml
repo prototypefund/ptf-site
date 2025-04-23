@@ -1,0 +1,33 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 81982550-63ea-49d9-9142-e30783a4fd54 # Trends Index
+handle: trendsIndex
+maxAuthors: 1
+name: 'Trends Index'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  af0bbe1c-3613-4775-8a01-965b68d4e56e: # English
+    enabledByDefault: true
+    hasUrls: true
+    template: trends/index.twig
+    uriFormat: trend-research
+  ddc3aedf-983b-4fa7-81eb-69fd761d71af: # German
+    enabledByDefault: true
+    hasUrls: true
+    template: trends/index.twig
+    uriFormat: trendforschung
+type: single

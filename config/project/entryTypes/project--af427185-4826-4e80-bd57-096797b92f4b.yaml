@@ -106,6 +106,22 @@ fieldLayouts:
             uid: 1f1cb804-c1fe-413d-acad-56b16f0d75b6
             userCondition: null
           -
+            dateAdded: '2025-04-23T11:47:08+00:00'
+            elementCondition: null
+            fieldUid: f455cf70-e6e9-48c1-806f-753a2af85bea # Project Second Stage Funding
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c263ed50-7ff5-42c6-9025-ceb7ba46bd00
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-03-10T13:37:53+00:00'
             elementCondition: null
             fieldUid: f4a87b3f-ed6d-49ce-8753-05dda85942a6 # Project Status

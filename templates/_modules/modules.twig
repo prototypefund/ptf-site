@@ -2,6 +2,10 @@
   <div class="mb-10">
   {% for module in entry.modules.all() %}
     {% switch module.type %}
+      {% case 'blogTeasers' %}
+        {% include "_modules/blocks/blog-teasers" with {
+          module: module
+        } only %}
       {% case 'relatedCtaBanner' %}
         {% include "_modules/blocks/cta-banner" with {
           module: module

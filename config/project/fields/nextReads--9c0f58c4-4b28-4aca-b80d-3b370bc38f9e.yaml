@@ -1,6 +1,6 @@
 columnSuffix: null
 handle: nextReads
-instructions: 'Leave empty to always display the latest three articles automatically'
+instructions: 'Leave empty to always display the latest four articles automatically'
 name: 'Next Reads'
 searchable: false
 settings:

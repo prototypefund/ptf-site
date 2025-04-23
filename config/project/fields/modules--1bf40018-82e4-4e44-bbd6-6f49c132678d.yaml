@@ -32,6 +32,11 @@ settings:
         -
           - uid
           - a05e468d-5063-4f3a-8ea3-aa240eebc1bf # Newsletter
+    -
+      __assoc__:
+        -
+          - uid
+          - 54fc4092-6d81-499d-9360-5b73c81be367 # Blog Teasers
   includeTableView: false
   maxEntries: null
   minEntries: null

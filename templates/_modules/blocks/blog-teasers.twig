@@ -1,7 +1,7 @@
-{% set nextReads = entry.nextReads.eagerly().all() %}
+{% set nextReads = module.nextReads.eagerly().all() %}
 
 {% if nextReads|length == 0 %}
-  {% set nextReads =  craft.entries.section('blog').id('not ' ~ entry.id).limit(4).all() %}
+  {% set nextReads =  craft.entries.section('blog').limit(4).all() %}
 {% endif %}
 
 {% set content %}
@@ -10,7 +10,7 @@
 
 {% if nextReads|length %}
   {% include "_modules/next-reads" with {
-    heading: "More articles like this"|t,
+    heading: module.title|t,
     seeAllText: "See all"|t,
     entryLink: blogIndex,
     content: content,

@@ -1,0 +1,67 @@
+color: null
+fieldLayouts:
+  79c9559d-d92f-4ea9-8008-24ffccc84d20:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-04-23T11:22:08+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: Heading
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 40ecc9a6-945d-49f1-84a6-2348a8cbcd14
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-23T11:25:49+00:00'
+            elementCondition: null
+            fieldUid: 9c0f58c4-4b28-4aca-b80d-3b370bc38f9e # Next Reads
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Teasers
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7af2ed5c-2b7a-4e18-94a0-d62a7b373120
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 1ac475ac-2503-4f8e-92e6-05fc5e3f4d26
+        userCondition: null
+handle: blogTeasers
+hasTitleField: true
+icon: null
+name: 'Blog Teasers'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

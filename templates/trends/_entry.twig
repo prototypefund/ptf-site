@@ -1,0 +1,34 @@
+{% extends "_layouts/layout.twig" %}
+
+{% set intro = entry.intro %}
+{% set text = entry.textEntryTypes %}
+
+{% block content %}
+  <article class="mb-10 last:mb-0">
+    {% include "_modules/headers/simple" with {
+      headline: entry.headline|default(entry.title),
+      link: entry.genericLink,
+      background: entry.headerBackground.value
+    } only %}
+
+    {% if intro|length %}
+      <div class="grid md:grid-cols-16 px-2 md:px-5 mt-5 md:mt-10 mb-[3.75rem]">
+        <div class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-8">
+          {% include "_rich-text/intro" with {
+            text: intro
+          } only %}
+        </div>
+      </div>
+    {% endif %}
+
+    {% if text|length %}
+      <div class="first-of-type:mt-5 md:first-of-type:mt-10">
+        {% include "_rich-text/columns" with {
+          text
+        } only %}
+      </div>
+    {% endif %}
+  </article>
+
+  {% include "_modules/modules" with { entry: entry } only %}
+{% endblock %}
