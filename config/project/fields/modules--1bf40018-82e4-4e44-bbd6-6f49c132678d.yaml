@@ -11,12 +11,17 @@ settings:
       __assoc__:
         -
           - uid
-          - a05e468d-5063-4f3a-8ea3-aa240eebc1bf # Newsletter
+          - 894e5185-035a-41d1-b272-0b6c1608aabf # Side Heading + Text
     -
       __assoc__:
         -
           - uid
-          - 894e5185-035a-41d1-b272-0b6c1608aabf # Side Heading + Text
+          - b2b9ea1c-a462-4794-bd6c-d9700c56f94c # CTA Banner
+    -
+      __assoc__:
+        -
+          - uid
+          - 8760f57d-c660-4b7c-a052-940ebce3408c # People Grid
     -
       __assoc__:
         -
@@ -26,7 +31,7 @@ settings:
       __assoc__:
         -
           - uid
-          - b2b9ea1c-a462-4794-bd6c-d9700c56f94c # CTA Banner
+          - a05e468d-5063-4f3a-8ea3-aa240eebc1bf # Newsletter
   includeTableView: false
   maxEntries: null
   minEntries: null

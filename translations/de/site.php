@@ -6,6 +6,7 @@ return [
   "All Projects" => "Alle Projekte",
   "Blog" => "Blog",
   "Continue reading" => "Weiterlesen",
+  "Email" => "E-Mail",
   "Email address" => "E-Mail-Adresse",
   "Home" => "Startseite",
   "Filter projects" => "Projekte filtern",

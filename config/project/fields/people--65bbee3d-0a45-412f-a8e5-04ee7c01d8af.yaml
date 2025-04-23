@@ -1,13 +1,13 @@
 columnSuffix: null
-handle: articleAuthor
+handle: people
 instructions: null
-name: 'Article Author'
+name: People
 searchable: false
 settings:
   allowSelfRelations: false
   branchLimit: null
   maintainHierarchy: false
-  maxRelations: 1
+  maxRelations: null
   minRelations: null
   selectionLabel: null
   showCardsInGrid: false
