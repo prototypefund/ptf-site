@@ -1,12 +1,12 @@
 color: null
 fieldLayouts:
-  e80e6c57-cb9b-461d-b14c-add7b28f3e48:
+  119f7689-48c9-44a1-b181-a6a2248f4b62:
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-04-16T21:20:48+00:00'
+            dateAdded: '2025-04-23T08:37:05+00:00'
             elementCondition: null
             fieldUid: d13f787b-b91b-4821-8104-46e509830347 # Avatar
             handle: null
@@ -17,7 +17,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 15b958f9-a4d3-4882-800b-e2d2de380e28
+            uid: 7886ee19-1175-4868-baaa-9d69dc0cb823
             userCondition: null
             warning: null
             width: 100
@@ -26,7 +26,7 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-04-16T21:11:09+00:00'
+            dateAdded: '2025-04-23T08:33:55+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -47,12 +47,12 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 2253cfbb-2581-46e4-9289-0721429ef7fc
+            uid: 840f55f5-3705-4a16-94a8-47f0f0d100a1
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-16T21:15:02+00:00'
+            dateAdded: '2025-04-23T08:37:05+00:00'
             elementCondition: null
             fieldUid: e30e243f-a8dc-43b7-b826-e4788906231f # Pronouns
             handle: null
@@ -63,12 +63,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ce7adf0a-90f2-44fc-ab52-0c1ffbaa347a
+            uid: fe9512ee-b240-4aa6-ac41-8cd77274363b
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-22T18:20:57+00:00'
+            dateAdded: '2025-04-23T08:37:05+00:00'
             elementCondition: null
             fieldUid: 36d3151d-99ef-4672-9521-82f0e9b0646d # Role
             handle: null
@@ -79,12 +79,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e15942ea-c3c0-4584-b96a-cb94e8d778e4
+            uid: ffc585d3-6dd0-414c-885c-7f4115465b0b
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-16T21:16:45+00:00'
+            dateAdded: '2025-04-23T08:37:05+00:00'
             elementCondition: null
             fieldUid: 6848d2a0-5b5f-43f6-a0c7-22707ad5e028 # Bio
             handle: null
@@ -95,18 +95,18 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 3c70be4b-8f15-4562-b4f5-ab5dc71b5855
+            uid: 831d264f-f8b6-4414-99d1-d90fae7d16eb
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-22T13:24:18+00:00'
+            dateAdded: '2025-04-23T08:37:05+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
-            uid: 5af2eb15-2b0a-4ce1-816f-6fc31f85933e
+            uid: 3cfe5b06-8b06-4f45-a7ea-191c1c713c50
             userCondition: null
           -
-            dateAdded: '2025-04-22T18:00:45+00:00'
+            dateAdded: '2025-04-23T08:37:05+00:00'
             elementCondition: null
             fieldUid: 7bb4d517-5179-42f5-a2b7-0400280d5411 # Website
             handle: null
@@ -117,12 +117,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 4818e16b-90fb-41be-a796-38b95fb9568b
+            uid: 7291df43-3f41-445c-a275-631353344996
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-22T18:02:05+00:00'
+            dateAdded: '2025-04-23T08:37:05+00:00'
             elementCondition: null
             fieldUid: 7601873a-7197-47a0-9e66-c07512a11dd2 # Email
             handle: null
@@ -133,12 +133,12 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: dc727cd2-cc71-4f95-af59-e5e73a2b3ae3
+            uid: 430215a4-c6d2-4e76-a4b2-e0ea3916281c
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-22T13:31:00+00:00'
+            dateAdded: '2025-04-23T08:37:05+00:00'
             elementCondition: null
             fieldUid: f7486108-7a41-4ff3-83e8-34c2b334e19f # Links
             handle: null
@@ -149,17 +149,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0d195c86-0cf9-455e-b79a-ece82736be0b
+            uid: e84d99e8-3e6e-4000-b487-62219e1d5976
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 0d6a4d08-efc8-4e50-8a8f-8fd29c5b0803
+        uid: 87ababf1-7ffc-49b8-a946-cdf026ca4760
         userCondition: null
-handle: author
+handle: juror
 hasTitleField: true
 icon: user
-name: Author
+name: Juror
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

@@ -1,4 +1,4 @@
-dateModified: 1745346057
+dateModified: 1745397897
 elementSources:
   craft\elements\Entry:
     -
@@ -47,7 +47,18 @@ elementSources:
         - link
       type: native
     -
+      defaultSort:
+        - structure
+        - asc
+      defaultViewMode: ''
+      disabled: false
       key: 'section:6e040108-27cc-4a4a-bca9-c5e3ab1bdc04' # Generic Pages
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - authors
+        - link
       type: native
     -
       heading: 'Shared Data'
@@ -59,7 +70,24 @@ elementSources:
       heading: People
       type: heading
     -
+      key: 'section:a22a67ef-b1de-4d1d-b922-5ea14b3e8e1c' # Team
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
       key: 'section:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Authors
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
+    -
+      key: 'section:9b03faaf-18e7-4df7-b87c-282d1ead8ea3' # Jury
       type: native
 email:
   fromEmail: $EMAIL_SYSTEM_ADDRESS
@@ -88,12 +116,14 @@ meta:
     0f8a3079-62db-4270-ac53-6903c9b28557: 'Main Image' # Main Image
     1a0ed17a-7208-4b7e-894f-64506d5432d6: 'Events Index' # Events Index
     1bf40018-82e4-4e44-bbd6-6f49c132678d: Modules # Modules
+    2b8e8081-de20-479d-a37d-362dded4c944: Juror # Juror
     2b86894c-5b98-44d4-8ed6-88b2c8b5e601: 'Blog Index' # Blog Index
     2d6b9ef4-4190-4cf7-9a92-b6f6b0fb7f61: 'CTA Banner' # CTA Banner
     03b9d1d0-a193-4abc-aeb8-92d2269844e9: 'CTA Background' # CTA Background
     3d4c1a3f-6b2d-4919-a863-32877e6722ce: 'Project Year Groups' # Project Year Groups
     4b6ba907-43f2-494b-9816-24894f8de0da: Newsletter # Newsletter
     4e97404d-0992-4280-b87e-903b4fc471c5: Navigation # Navigation
+    4f4c5206-4b19-4476-ad5a-331b92869abd: 'Team Member' # Team Member
     5a2c3e10-bf78-4986-aecd-f75829889851: 'Project Topics' # Project Topics
     5a633b8c-0848-4867-8990-245346e525e8: 'Project Funding Amount' # Project Funding Amount
     5bafc55c-8f31-4f9b-add0-49e9957e63a7: 'Footer Link Group' # Footer Link Group
@@ -108,6 +138,7 @@ meta:
     8c706102-ac71-4054-b178-d266051a8ba8: 'Project Next Reads' # Project Next Reads
     8d8e3436-a20e-4222-a530-d52fa736ae4d: 'Project Technologies' # Project Technologies
     9a1aea15-6b42-4b96-b047-ee412bfabc78: Intro # Intro
+    9b03faaf-18e7-4df7-b87c-282d1ead8ea3: Jury # Jury
     9c0f58c4-4b28-4aca-b80d-3b370bc38f9e: 'Next Reads' # Next Reads
     13a0aaca-3bd8-4653-b163-69738ce277c3: Text # Text
     018c8387-bc84-4c1c-ae3a-186233bcf754: 'Secondary Footer Links' # Secondary Footer Links
@@ -156,6 +187,7 @@ meta:
     a05e468d-5063-4f3a-8ea3-aa240eebc1bf: Newsletter # Newsletter
     a06eff6a-35ff-45b1-9c02-c6ef2f3f948c: 'Project Rounds' # Project Rounds
     a6babdad-fc37-48fb-ac86-088ea4129e1e: Authors # Authors
+    a22a67ef-b1de-4d1d-b922-5ea14b3e8e1c: Team # Team
     ad1324f8-1337-475f-8516-ab1e13543027: Intro # Intro
     ad6378ef-e24f-4541-9819-1a644a3dd8c4: 'Nav Links' # Nav Links
     af0bbe1c-3613-4775-8a01-965b68d4e56e: English # English
