@@ -1,0 +1,47 @@
+{# 
+Translate "Published on"
+Add "Updated at": 26.06.2024
+ #}
+
+{% set postDate = entry.postDate|date("short") %}
+{% set teaserText = entry.teaserText %}
+
+  {% set pattern = [
+    'after:bg-pattern-br-gray-3',
+    'after:bottom-0',
+    'after:bg-right-bottom',
+    'after:w-[30vw]',
+    'after:md:w-[14vw]',
+    'after:lg:w-[14vw]'
+  ]|join(' ') %}
+
+<div class="{{ pattern }} border-t last:border-b border-gray-400 pt-4 md:pt-3 pb-4 md:pb-5 ml-[-16px] w-[calc(100%+32px)] md:ml-[-40px] md:w-[calc(100%+80px)] relative after:content-[''] after:absolute after:right-0 after:h-full after:bg-no-repeat after:bg-contain">
+  <div class="px-2 md:px-5 md:grid md:grid-cols-16">
+    <div class="md:col-span-5">
+      <h4 class="font-surt uppercase text-head-16 md:text-head-22 mb-[0.63rem] md:mb-2.5 last:mb-0">
+        {{ entry.title }}
+      </h4>
+
+      <time class="block text-gray-500 text-head-14 md:text-head-16 mb-3 md:mb-0" datetime="{{ postDate|date('Y-m-d') }}">
+        {{ "Published on"|t }} {{ postDate|date('d/m/Y') }}
+      </time>
+    </div>
+
+    <div class="md:col-span-9 md:col-start-7 lg:col-span-7 lg:col-start-7 mb-5 xl:mb-0">
+      {% if teaserText|length %}
+        {% include "_rich-text/simple" with {
+          text: teaserText
+        } only %}
+      {% endif %}
+    </div>
+
+    <div class="md:col-span-9 md:col-start-7 lg:col-span-7 lg:col-start-7 xl:col-span-3 xl:col-start-14 xl:text-right">
+      {% include "_modules/arrow-link" with {
+        text: "View report"|t,
+        url: entry.url,
+        arrow: "right",
+        color: "dark"
+      } only %}
+    </div>
+  </div>
+</div>

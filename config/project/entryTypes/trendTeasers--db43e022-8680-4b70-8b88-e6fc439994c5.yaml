@@ -1,0 +1,67 @@
+color: null
+fieldLayouts:
+  200a811d-ad03-4fdd-be59-9de333c1607e:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-04-23T13:26:41+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: Heading
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: fc6c8066-ddfa-464e-be04-bb99d6d3dcb2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-23T13:29:54+00:00'
+            elementCondition: null
+            fieldUid: 1590aac3-cf3a-4fa5-8836-8a95303284c2 # Teasers
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d16ea325-142f-466b-8a91-73fc5f87f3cd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 76e4c565-5ef7-42b1-a014-0806dce153a2
+        userCondition: null
+handle: trendTeasers
+hasTitleField: true
+icon: null
+name: 'Trend Teasers'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -1,4 +1,4 @@
-dateModified: 1745411592
+dateModified: 1745416415
 elementSources:
   craft\elements\Entry:
     -
@@ -153,6 +153,7 @@ meta:
     9b03faaf-18e7-4df7-b87c-282d1ead8ea3: Jury # Jury
     9c0f58c4-4b28-4aca-b80d-3b370bc38f9e: 'Next Reads' # Next Reads
     13a0aaca-3bd8-4653-b163-69738ce277c3: Text # Text
+    15f1ebd8-2e95-45e1-81f5-d39b6253762e: 'Teaser Text' # Teaser Text
     018c8387-bc84-4c1c-ae3a-186233bcf754: 'Secondary Footer Links' # Secondary Footer Links
     28f95d3d-986f-41ed-b23b-c2f3b747c2eb: Homepage # Homepage
     29d80674-cc17-4976-ad67-b3f611a07dc2: 'Events Index' # Events Index
@@ -183,6 +184,7 @@ meta:
     704f68f7-7b03-4825-a337-ab9d195a33e6: 'Project License' # Project License
     824f9bd0-21d0-47fd-a48a-b8519da12b29: Quote # Quote
     894e5185-035a-41d1-b272-0b6c1608aabf: 'Side Heading + Text' # Side Heading + Text
+    1590aac3-cf3a-4fa5-8836-8a95303284c2: Teasers # Teasers
     2965e0c7-feb2-4aa2-98d4-de16d458eb30: Categories # Categories
     3660aa23-c5a0-4865-b14d-5bd479e01996: Source # Source
     5593a3e3-ad74-4e68-ad2d-36a6c8f1d95a: 'Project Year Groups' # Project Year Groups
@@ -234,6 +236,7 @@ meta:
     d99528c4-136b-413c-9799-56fd20edd2c6: Headline # Headline
     da7ab602-1ed1-46b0-9e1c-5ec3a6e60c92: 'Project Teaser' # Project Teaser
     dad251bb-ffd5-4dc0-81fb-fe15629744ba: 'Ending Date' # Ending Date
+    db43e022-8680-4b70-8b88-e6fc439994c5: 'Trend Teasers' # Trend Teasers
     dd6fd54d-11f2-4a62-8da7-d59718b15225: 'CTA Banner' # CTA Banner
     ddc3aedf-983b-4fa7-81eb-69fd761d71af: German # German
     de820dbc-bd7e-4a0f-9554-3d750480d2a4: Projects # Projects

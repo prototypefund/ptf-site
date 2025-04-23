@@ -42,6 +42,11 @@ settings:
         -
           - uid
           - 54fc4092-6d81-499d-9360-5b73c81be367 # Blog Teasers
+    -
+      __assoc__:
+        -
+          - uid
+          - db43e022-8680-4b70-8b88-e6fc439994c5 # Trend Teasers
   includeTableView: false
   maxEntries: null
   minEntries: null

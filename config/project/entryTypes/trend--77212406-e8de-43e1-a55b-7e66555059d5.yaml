@@ -68,6 +68,28 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-04-23T13:53:35+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 18027daf-1cc4-4463-8582-f6b419c2a3a3
+            userCondition: null
+          -
+            dateAdded: '2025-04-23T13:53:35+00:00'
+            elementCondition: null
+            fieldUid: 15f1ebd8-2e95-45e1-81f5-d39b6253762e # Teaser Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5588639e-f68e-4a12-98ef-9e732cd465a7
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-04-23T11:07:02+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
