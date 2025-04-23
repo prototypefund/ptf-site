@@ -1,0 +1,67 @@
+color: null
+fieldLayouts:
+  50300f76-07b9-4e6d-9d60-0755012e9370:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-04-23T12:28:22+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: Heading
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 3ee229e2-736d-4e60-977d-84a950fea5d1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-23T12:30:25+00:00'
+            elementCondition: null
+            fieldUid: 8c706102-ac71-4054-b178-d266051a8ba8 # Project Next Reads
+            handle: null
+            includeInCards: false
+            instructions: 'Leave empty to always display the latest four projects automatically'
+            label: Teasers
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 466c8cec-436d-4d56-9f3b-ba562277aecd
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: f0040ac7-bfcf-4ecb-80a8-8cea98bf46f2
+        userCondition: null
+handle: projectTeasers
+hasTitleField: true
+icon: null
+name: 'Project Teasers'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

@@ -36,6 +36,11 @@ settings:
       __assoc__:
         -
           - uid
+          - cee93094-4951-4db3-af0c-29a87c1f2cf8 # Project Teasers
+    -
+      __assoc__:
+        -
+          - uid
           - 54fc4092-6d81-499d-9360-5b73c81be367 # Blog Teasers
   includeTableView: false
   maxEntries: null

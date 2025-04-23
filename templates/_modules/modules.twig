@@ -6,6 +6,10 @@
         {% include "_modules/blocks/blog-teasers" with {
           module: module
         } only %}
+      {% case 'projectTeasers' %}
+        {% include "_modules/blocks/project-teasers" with {
+          module: module
+        } only %}
       {% case 'relatedCtaBanner' %}
         {% include "_modules/blocks/cta-banner" with {
           module: module

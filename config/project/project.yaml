@@ -1,4 +1,4 @@
-dateModified: 1745410229
+dateModified: 1745411592
 elementSources:
   craft\elements\Entry:
     -
@@ -225,6 +225,7 @@ meta:
     c670b800-a19f-4ca2-a056-283204e59d5d: 'Credit / License' # Credit / License
     c63194ff-c47c-4c20-80b1-39bfedfc3b0f: 'Project Topics' # Project Topics
     c4438391-90e5-49b1-93bd-6fcbbd3aed62: Simple # Simple
+    cee93094-4951-4db3-af0c-29a87c1f2cf8: 'Project Teasers' # Project Teasers
     cff97bfa-6eb7-473b-97c0-cc3af58c0f64: 'Article ID' # Article ID
     d13f787b-b91b-4821-8104-46e509830347: Avatar # Avatar
     d26ba65b-dbab-4a12-b3e8-1ae7a4a2845d: Quote # Quote
