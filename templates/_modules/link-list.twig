@@ -1,15 +1,22 @@
-<ul class="grid grid-cols-2">
-  {% for link in links %}
-    {% set target = link.target %}
+{% set layout = layout|default("flex") %}
 
-    <li class="border-gray-400 border-b border-r {% if loop.index is odd %}border-l{% endif %} {% if loop.index in [1,2] %} border-t border-gray-400{% endif %}">
+{% set layoutStyles = {
+  flex: "flex flex-wrap [&>*]:w-1/2 [&>*]:last:odd:w-full",
+  grid: "grid grid-cols-2"
+} %}
+
+<ul class="{{ layoutStyles[layout] }}">
+  {% for link in links %}
+    {% set target = link.target|default("_self") %}
+
+    <li class="bg-white border-gray-400 border-b border-r odd:border-l first:border-t first:border-gray-400 [&:nth-child(2)]:border-t [&:nth-child(2)]:border-gray-400">
       <a
         class="group flex items-center gap-1.5 text-base md:text-[1.06rem] px-2 py-1.5 md:py-[0.88rem] hover:bg-gray-100 transition-colors after:ml-auto after:bg-link-arrow after:bg-no-repeat after:bg-cover after:content-[''] after:block after:h-2.5 after:w-2.5"
         href="{{ link.url }}"
         target="{{ target }}"
         {{ target == '_blank' ? 'rel="noopener noreferrer"' }}
       >
-        <span class="border-b-transparent border-b  group-hover:border-b-sky-blue group-hover:border-b">{{ link.text }}</span>
+        <span class="border-b-transparent border-b  group-hover:border-b-sky-blue group-hover:border-b">{{ link.label }}</span>
       </a>
     </li>
   {% endfor %}

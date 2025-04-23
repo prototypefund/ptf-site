@@ -12,6 +12,10 @@
         {% include "_modules/blocks/newsletter" with {
           module: module
         } only %}
+      {% case 'peopleGrid' %}
+        {% include "_modules/blocks/people-grid" with {
+          module: module
+        } only %}
       {% case 'sideHeadingText' %}
         {{ module.render({ padding: true }) }}
       {% default %}

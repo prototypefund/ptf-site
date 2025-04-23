@@ -1,0 +1,52 @@
+{% set people = module.people %}
+
+{% if people|length %}
+  <div class="border-y border-gray-400">
+    {% for person in people %}
+      {% set avatar = person.avatar.eagerly().one() %}
+      {% set website = person.website %}
+      {% set email = person.email %}
+      {% set links = person.links|map((link) => link.genericLink) %}
+
+      {% if email %}
+        {% set links = [{
+          label: "Email"|t,
+          url: "mailto:#{email}"
+        }]|merge(links) %}
+      {% endif %}
+
+      {% if website %}
+        {% set links = [{
+          label: "Website"|t,
+          url: website.url,
+          target: website.target
+        }]|merge(links) %}
+      {% endif %}
+    
+      <div class="grid grid-cols-1 md:grid-cols-16 md:px-5 not-first:border-t not-first:border-gray-400">
+        <div class="px-2 md:px-0 pt-5 py-[3.75rem] md:py-11 pr-12 md:col-span-8 order-2 md:order-none">
+          {% include "_modules/person-info" with {
+            person: person
+          } only %}
+        </div>
+
+        <div class="flex flex-col relative md:border-x md:border-gray-400 md:col-start-10 md:col-span-7">
+          <div class="md:h-full md:w-full">
+            {% if avatar|length %}
+              <img class="block w-full h-full object-cover" src="{{ avatar.getUrl("avatarLarge") }}" alt="{{ avatar.altText }}">
+            {% else %}
+              <div class="bg-gray-100 h-full"></div>
+            {% endif %}
+          </div>
+
+          <div class="md:absolute md:bottom-[-1px] md:left-[-1px] md:w-[calc(100%+2px)]">
+            {% include "_modules/link-list" with {
+              links: links,
+              layout: "flex"
+            } only %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}

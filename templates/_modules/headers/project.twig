@@ -71,10 +71,11 @@
         {% include "_modules/link-list" with {
           links: remainingLinks
             |map((link) => {
-              text: link.name,
+              label: link.name,
               url: link.linkURL,
               target: "_blank"
-            })
+            }),
+          layout: "grid"
         } only %}
       </div>
     {% endif %}

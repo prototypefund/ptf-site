@@ -38,20 +38,10 @@
             <img class="mb-6 md:mb-[3.75rem]" src="{{ avatar.getUrl("avatarSmall") }}" alt="{{ avatar.altText }}">
           {% endif %}
 
-          <div class="flex gap-2">
-            <h4 class="uppercase font-surt text-head-22 md:text-head-38 mb-3 md:mb-4">{{ articleAuthor.title  }}</h4>
-
-            {% if pronouns|length %}
-              <span class="uppercase font-surt text-head-16 md:text-head-22">{{ pronouns }}</span>
-            {% endif %}
-          </div>
-
-          {% if bio|length %}
-            {% include "_rich-text/simple" with {
-              text: bio,
-              size: "large"
-            } only %}
-          {% endif %}
+          {% include "_modules/person-info" with {
+            person: articleAuthor,
+            size: "large"
+          } only %}
         </div>
       </div>
     {% endif %}

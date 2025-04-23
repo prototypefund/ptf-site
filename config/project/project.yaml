@@ -1,4 +1,4 @@
-dateModified: 1745326267
+dateModified: 1745346057
 elementSources:
   craft\elements\Entry:
     -
@@ -101,6 +101,7 @@ meta:
     6ca70ace-9ae7-4dfa-a915-d1a24572619d: 'Footer Description' # Footer Description
     6e040108-27cc-4a4a-bca9-c5e3ab1bdc04: 'Generic Pages' # Generic Pages
     6fa1e10a-d063-4c10-a955-f1b3eda7e7ef: 'Standard (with Entry Types)' # Standard (with Entry Types)
+    7bb4d517-5179-42f5-a2b7-0400280d5411: Website # Website
     7e4dd8fe-6873-44a9-ada5-acf02698981d: 'Side Info' # Side Info
     7eb26dd5-1c10-45d1-a16b-85a148e4bf8a: 'Projects Index' # Projects Index
     8a18f61b-a93c-4302-8bde-b8f6ed6c0494: 'Inclusive Sans – Semibold' # Inclusive Sans – Semibold
@@ -114,10 +115,12 @@ meta:
     29d80674-cc17-4976-ad67-b3f611a07dc2: 'Events Index' # Events Index
     33c3763c-9f38-4c39-bebd-48bbec68e094: 'Header Alignment' # Header Alignment
     34dc108f-02bd-42cb-9481-0693c7bc32b4: 'Tracking Head' # Tracking Head
+    36d3151d-99ef-4672-9521-82f0e9b0646d: Role # Role
     52ffa06e-5e33-4cd5-8821-d001532453b1: 'Embed Code' # Embed Code
     58b0cfc4-a7f2-491d-a49a-a29faaacedf3: 'Inclusive Sans – Regular' # Inclusive Sans – Regular
     62e3c2ea-24fd-42e2-a9ba-3602f1d6e2e8: 'Header Background' # Header Background
     62efdaf8-a4e7-4149-bc72-3bd492681eba: 'Newsletter Side Title' # Newsletter Side Title
+    65bbee3d-0a45-412f-a8e5-04ee7c01d8af: People # People
     69fb06a0-7361-46bd-a063-b293e6336a99: Description # Description
     72b63983-0825-4712-ab6f-b4d98ee4efd4: Standard # Standard
     86ae11d6-820a-47e9-85d6-86f29718f1f8: 'Banner Text' # Banner Text
@@ -138,12 +141,14 @@ meta:
     3660aa23-c5a0-4865-b14d-5bd479e01996: Source # Source
     5593a3e3-ad74-4e68-ad2d-36a6c8f1d95a: 'Project Year Groups' # Project Year Groups
     6848d2a0-5b5f-43f6-a0c7-22707ad5e028: Bio # Bio
+    8760f57d-c660-4b7c-a052-940ebce3408c: 'People Grid' # People Grid
     8898a317-df17-4cc9-9475-6376bc29fbd5: 'Newsletter Headline' # Newsletter Headline
     53364b16-adc8-4b34-802f-054c272771c6: 'Projects Index' # Projects Index
     586087db-4dd7-43ba-929b-b3f7cef02ff8: 'Resize: width 0500px' # Resize: width 0500px
     711863fc-e341-4c43-b45b-dc33dc3c9c2b: Homepage # Homepage
     860851bc-5058-4f0d-8f3f-481df7e56099: 'Project Rounds' # Project Rounds
     6913623b-fb1d-419a-a6a4-270a7ec28d8b: 'Alt Text' # Alt Text
+    7601873a-7197-47a0-9e66-c07512a11dd2: Email # Email
     38533602-ed85-4c63-b7e3-819ae75ac47a: 'Surt – Regular' # Surt – Regular
     65570146-7afc-432e-9890-2cb116aa66ac: Link # Link
     67373325-a234-485a-a635-26dee1e7f325: 'Project Links' # Project Links
@@ -164,6 +169,7 @@ meta:
     c03eff61-59aa-491d-bfa0-db442637813a: Article # Article
     c08345c7-f10a-42ce-b893-7f2e82a46fbb: Embed # Embed
     c8c2dcfa-75cb-423f-9565-b550807d0e7e: 'Resize: width 1500px' # Resize: width 1500px
+    c32d4850-8999-46e0-aad2-c43b9d69e8bd: 'Avatar (Large)' # Avatar (Large)
     c85b9b92-e92c-448e-be1b-853494683b99: 'Project Technologies' # Project Technologies
     c86f2a45-9639-4151-93dc-21dce075b6f9: 'Link Group' # Link Group
     c670b800-a19f-4ca2-a056-283204e59d5d: 'Credit / License' # Credit / License
