@@ -1,7 +1,7 @@
 {% set people = module.people %}
 
 {% if people|length %}
-  <div class="border-y border-gray-400">
+  <div class="mb-10 last:mb-0 border-y border-gray-400">
     {% for person in people %}
       {% set avatar = person.avatar.eagerly().one() %}
       {% set website = person.website %}
