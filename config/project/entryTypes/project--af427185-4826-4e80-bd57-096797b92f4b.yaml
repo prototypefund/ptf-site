@@ -36,9 +36,9 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-24T10:19:19+00:00'
+            dateAdded: '2025-04-24T10:27:43+00:00'
             elementCondition: null
-            fieldUid: 818f2c60-45fc-462e-ba43-e852ce364665 # Claim
+            fieldUid: d99528c4-136b-413c-9799-56fd20edd2c6 # Headline
             handle: null
             includeInCards: false
             instructions: null
@@ -47,7 +47,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 3a38be2f-b498-4bf5-85f8-c9ea6a1e0d90
+            uid: 615fef52-0841-4f37-8268-a14f76679b46
             userCondition: null
             warning: null
             width: 100
