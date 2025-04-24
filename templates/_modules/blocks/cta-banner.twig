@@ -49,7 +49,7 @@
               {% include "_modules/button-link" with {
                 text: link.label,
                 url: link.url,
-                rel: link.target == '_blank' ? 'noopener noreferrer' : null,
+                target: link.target,
                 icon: "arrow",
                 iconAlignment: "right",
                 color: "light"
