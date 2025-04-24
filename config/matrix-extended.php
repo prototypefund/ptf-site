@@ -11,7 +11,7 @@
               'groups' => [
                 [
                   'label' => \Craft::t('app', 'Blocks'),
-                  'types' => ['sideHeadingText', 'linkList', 'peopleGrid', 'relatedCtaBanner', 'embed', 'newsletter'],
+                  'types' => ['sideHeadingText', 'linkList', 'peopleGrid', 'steps', 'relatedCtaBanner', 'embed', 'newsletter'],
                 ],
                 [
                   'label' => \Craft::t('app', 'Teasers'),

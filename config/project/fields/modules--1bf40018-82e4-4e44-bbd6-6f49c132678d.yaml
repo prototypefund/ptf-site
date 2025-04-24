@@ -52,6 +52,11 @@ settings:
         -
           - uid
           - dcc2d4f6-0aa9-41e6-9135-942fc9d3f8ad # Link List
+    -
+      __assoc__:
+        -
+          - uid
+          - 72564f6d-cb4e-40a8-b30c-99153000f278 # Steps
   includeTableView: false
   maxEntries: null
   minEntries: null
