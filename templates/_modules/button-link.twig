@@ -32,7 +32,7 @@
 {% set iconAlignment = iconAlignment == "right" ? "before:order-1" %}
 
 {{ tag("a", {
-  class: "#{buttonStyles[color]} #{iconAlignment} #{icon ? iconStyles[icon][color]} #{icon ? 'gap-2.5 before:mt-[-0.125rem] before:content-[\"\"] before:h-[1.13rem] before:w-[1.13rem]' } #{borderStyles} px-0.5 inline-flex items-center justify-center font-surt uppercase text-ui-14 md:text-ui-16 tracking-wide transition-colors py-[0.3125rem]",
+  class: "#{buttonStyles[color]} #{iconAlignment} #{icon ? iconStyles[icon][color]} #{icon ? 'gap-2.5 before:mt-[-0.125rem] before:content-[\"\"] before:h-[1.13rem] before:w-[1.13rem]' } #{borderStyles} px-0.5 inline-flex items-center justify-center font-surt uppercase text-ui-14 tracking-wide transition-colors py-[0.3125rem]",
   href: url,
   target: target,
   rel: target == "_blank" ? "noopener noreferrer" : null,
