@@ -32,6 +32,26 @@ settings:
         -
           - uid
           - a05e468d-5063-4f3a-8ea3-aa240eebc1bf # Newsletter
+    -
+      __assoc__:
+        -
+          - uid
+          - cee93094-4951-4db3-af0c-29a87c1f2cf8 # Project Teasers
+    -
+      __assoc__:
+        -
+          - uid
+          - 54fc4092-6d81-499d-9360-5b73c81be367 # Blog Teasers
+    -
+      __assoc__:
+        -
+          - uid
+          - db43e022-8680-4b70-8b88-e6fc439994c5 # Trend Teasers
+    -
+      __assoc__:
+        -
+          - uid
+          - dcc2d4f6-0aa9-41e6-9135-942fc9d3f8ad # Link List
   includeTableView: false
   maxEntries: null
   minEntries: null

@@ -1,4 +1,4 @@
-dateModified: 1745399431
+dateModified: 1745482760
 elementSources:
   craft\elements\Entry:
     -
@@ -15,7 +15,15 @@ elementSources:
         - link
       type: native
     -
+      defaultSort:
+        - title
+        - asc
+      defaultViewMode: ''
+      disabled: false
       key: singles
+      tableAttributes:
+        - status
+        - link
       type: native
     -
       heading: Pages
@@ -45,6 +53,9 @@ elementSources:
         - expiryDate
         - authors
         - link
+      type: native
+    -
+      key: 'section:539be7e4-0b10-472e-b4de-ec2fbea58c78' # Trends
       type: native
     -
       defaultSort:
@@ -116,10 +127,12 @@ meta:
     0f8a3079-62db-4270-ac53-6903c9b28557: 'Main Image' # Main Image
     1a0ed17a-7208-4b7e-894f-64506d5432d6: 'Events Index' # Events Index
     1bf40018-82e4-4e44-bbd6-6f49c132678d: Modules # Modules
+    1db838be-9fa8-4bea-9063-88e07757ad52: 'Link List Links' # Link List Links
     2b8e8081-de20-479d-a37d-362dded4c944: Juror # Juror
     2b86894c-5b98-44d4-8ed6-88b2c8b5e601: 'Blog Index' # Blog Index
     2d6b9ef4-4190-4cf7-9a92-b6f6b0fb7f61: 'CTA Banner' # CTA Banner
     03b9d1d0-a193-4abc-aeb8-92d2269844e9: 'CTA Background' # CTA Background
+    3b248e70-b3e8-4bc4-bdef-ff5deba55ac9: 'Second Stage Ending Date' # Second Stage Ending Date
     3d4c1a3f-6b2d-4919-a863-32877e6722ce: 'Project Year Groups' # Project Year Groups
     4b6ba907-43f2-494b-9816-24894f8de0da: Newsletter # Newsletter
     4e97404d-0992-4280-b87e-903b4fc471c5: Navigation # Navigation
@@ -141,6 +154,7 @@ meta:
     9b03faaf-18e7-4df7-b87c-282d1ead8ea3: Jury # Jury
     9c0f58c4-4b28-4aca-b80d-3b370bc38f9e: 'Next Reads' # Next Reads
     13a0aaca-3bd8-4653-b163-69738ce277c3: Text # Text
+    15f1ebd8-2e95-45e1-81f5-d39b6253762e: 'Teaser Text' # Teaser Text
     018c8387-bc84-4c1c-ae3a-186233bcf754: 'Secondary Footer Links' # Secondary Footer Links
     28f95d3d-986f-41ed-b23b-c2f3b747c2eb: Homepage # Homepage
     29d80674-cc17-4976-ad67-b3f611a07dc2: 'Events Index' # Events Index
@@ -148,6 +162,7 @@ meta:
     34dc108f-02bd-42cb-9481-0693c7bc32b4: 'Tracking Head' # Tracking Head
     36d3151d-99ef-4672-9521-82f0e9b0646d: Role # Role
     52ffa06e-5e33-4cd5-8821-d001532453b1: 'Embed Code' # Embed Code
+    54fc4092-6d81-499d-9360-5b73c81be367: 'Blog Teasers' # Blog Teasers
     58b0cfc4-a7f2-491d-a49a-a29faaacedf3: 'Inclusive Sans – Regular' # Inclusive Sans – Regular
     62e3c2ea-24fd-42e2-a9ba-3602f1d6e2e8: 'Header Background' # Header Background
     62efdaf8-a4e7-4149-bc72-3bd492681eba: 'Newsletter Side Title' # Newsletter Side Title
@@ -163,27 +178,34 @@ meta:
     358db54d-b951-4e0a-b4fa-c43aa2257acc: 'Newsletter Links' # Newsletter Links
     375cd22a-99b6-4667-8ca6-caf2572459ed: Blog # Blog
     504f909d-20af-4a66-b4a5-46c966689b30: 'Resize: width 1000px' # Resize: width 1000px
+    539be7e4-0b10-472e-b4de-ec2fbea58c78: Trends # Trends
+    546a2098-ec0e-4c83-aafc-66cdc354f32f: 'Trends Index' # Trends Index
     633b77bd-edb2-4812-ae43-7d61e39fd8fd: 'Main Footer Links' # Main Footer Links
     645eb55b-61e5-4ed2-bf31-caed18a16ffb: 'Blog Index' # Blog Index
     704f68f7-7b03-4825-a337-ab9d195a33e6: 'Project License' # Project License
     824f9bd0-21d0-47fd-a48a-b8519da12b29: Quote # Quote
     894e5185-035a-41d1-b272-0b6c1608aabf: 'Side Heading + Text' # Side Heading + Text
+    1590aac3-cf3a-4fa5-8836-8a95303284c2: Teasers # Teasers
     2965e0c7-feb2-4aa2-98d4-de16d458eb30: Categories # Categories
     3660aa23-c5a0-4865-b14d-5bd479e01996: Source # Source
     5593a3e3-ad74-4e68-ad2d-36a6c8f1d95a: 'Project Year Groups' # Project Year Groups
     6848d2a0-5b5f-43f6-a0c7-22707ad5e028: Bio # Bio
     8760f57d-c660-4b7c-a052-940ebce3408c: 'People Grid' # People Grid
     8898a317-df17-4cc9-9475-6376bc29fbd5: 'Newsletter Headline' # Newsletter Headline
+    36123ba7-7de9-48c0-a222-7aab3ad79da9: 'Start Date' # Start Date
     53364b16-adc8-4b34-802f-054c272771c6: 'Projects Index' # Projects Index
     586087db-4dd7-43ba-929b-b3f7cef02ff8: 'Resize: width 0500px' # Resize: width 0500px
     711863fc-e341-4c43-b45b-dc33dc3c9c2b: Homepage # Homepage
     860851bc-5058-4f0d-8f3f-481df7e56099: 'Project Rounds' # Project Rounds
+    02298633-6aff-40aa-9bf9-e8530102b352: Date # Date
     6913623b-fb1d-419a-a6a4-270a7ec28d8b: 'Alt Text' # Alt Text
     7601873a-7197-47a0-9e66-c07512a11dd2: Email # Email
     38533602-ed85-4c63-b7e3-819ae75ac47a: 'Surt – Regular' # Surt – Regular
     65570146-7afc-432e-9890-2cb116aa66ac: Link # Link
     67373325-a234-485a-a635-26dee1e7f325: 'Project Links' # Project Links
+    77212406-e8de-43e1-a55b-7e66555059d5: Trend # Trend
     80466913-dc6f-46d5-8013-a55f3a7358da: Sponsors # Sponsors
+    81982550-63ea-49d9-9142-e30783a4fd54: 'Trends Index' # Trends Index
     a05e468d-5063-4f3a-8ea3-aa240eebc1bf: Newsletter # Newsletter
     a06eff6a-35ff-45b1-9c02-c6ef2f3f948c: 'Project Rounds' # Project Rounds
     a6babdad-fc37-48fb-ac86-088ea4129e1e: Authors # Authors
@@ -207,6 +229,7 @@ meta:
     c670b800-a19f-4ca2-a056-283204e59d5d: 'Credit / License' # Credit / License
     c63194ff-c47c-4c20-80b1-39bfedfc3b0f: 'Project Topics' # Project Topics
     c4438391-90e5-49b1-93bd-6fcbbd3aed62: Simple # Simple
+    cee93094-4951-4db3-af0c-29a87c1f2cf8: 'Project Teasers' # Project Teasers
     cff97bfa-6eb7-473b-97c0-cc3af58c0f64: 'Article ID' # Article ID
     d13f787b-b91b-4821-8104-46e509830347: Avatar # Avatar
     d26ba65b-dbab-4a12-b3e8-1ae7a4a2845d: Quote # Quote
@@ -214,6 +237,10 @@ meta:
     d42896d4-04a6-4211-8d97-f265c27a3be1: 'Inclusive Sans – Semibold (Italic)' # Inclusive Sans – Semibold (Italic)
     d99528c4-136b-413c-9799-56fd20edd2c6: Headline # Headline
     da7ab602-1ed1-46b0-9e1c-5ec3a6e60c92: 'Project Teaser' # Project Teaser
+    dad251bb-ffd5-4dc0-81fb-fe15629744ba: 'Ending Date' # Ending Date
+    db2da9aa-6637-4df7-8df4-527aa118c61e: 'Link List Row' # Link List Row
+    db43e022-8680-4b70-8b88-e6fc439994c5: 'Trend Teasers' # Trend Teasers
+    dcc2d4f6-0aa9-41e6-9135-942fc9d3f8ad: 'Link List' # Link List
     dd6fd54d-11f2-4a62-8da7-d59718b15225: 'CTA Banner' # CTA Banner
     ddc3aedf-983b-4fa7-81eb-69fd761d71af: German # German
     de820dbc-bd7e-4a0f-9554-3d750480d2a4: Projects # Projects
@@ -222,11 +249,14 @@ meta:
     ed187804-9da6-4b7d-b983-1c751ac7a3ab: 'Tracking Body' # Tracking Body
     ed498341-57c0-4a5d-bedd-9728b250d140: 'CTA Banners' # CTA Banners
     eec7038e-53af-4299-bf11-db14e0fbd073: 'Generic Page' # Generic Page
+    f1c5c016-d5a6-471a-a030-91a4f9a88503: Subheading # Subheading
     f2fe1c5e-9903-41ca-a1b9-45815959a6ef: 'Newsletter Link Group' # Newsletter Link Group
     f4a87b3f-ed6d-49ce-8753-05dda85942a6: 'Project Status' # Project Status
+    f4ddd6a2-288b-4881-a762-884e48b3f1f1: 'Link List Text' # Link List Text
     f6ed0d5d-4ab8-418b-801e-b11f6cb309a5: Author # Author
     f81cb75d-92f5-44c4-89bd-673d8c8ee15c: 'Sponsors Headline' # Sponsors Headline
     f81e8821-286e-4e07-86f6-54880a45eafe: 'Project Team Members' # Project Team Members
+    f455cf70-e6e9-48c1-806f-753a2af85bea: 'Project Second Stage Funding' # Project Second Stage Funding
     f7486108-7a41-4ff3-83e8-34c2b334e19f: Links # Links
     fb0276f2-1481-401a-b813-05bac05b0218: Settings # Settings
     fc819c64-6715-4ac6-8573-d5c49ab5420e: 'Newsletter Text' # Newsletter Text
@@ -389,6 +419,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.1.1
+  matrix-extended:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.1.0
   retcon:
     edition: standard
     enabled: true

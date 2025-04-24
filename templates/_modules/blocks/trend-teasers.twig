@@ -1,0 +1,18 @@
+{% set nextReads = module.trendTeasers.eagerly().all() %}
+
+{% if nextReads|length == 0 %}
+  {% set nextReads =  craft.entries.section('trends').limit(4).all() %}
+{% endif %}
+
+{% set content %}
+  {% include "trends/_modules/teasers-list" with { trends: nextReads } %}
+{% endset %}
+
+{% if nextReads|length %}
+  {% include "_modules/next-reads" with {
+    heading: module.title|t,
+    seeAllText: "See all"|t,
+    entryLink: trendsIndex,
+    content: content,
+  } only %}
+{% endif %}

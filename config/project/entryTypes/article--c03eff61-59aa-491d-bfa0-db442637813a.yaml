@@ -54,6 +54,12 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-04-23T11:07:35+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 6efbff34-ce52-4e3e-9307-7388d7f27e29
+            userCondition: null
+          -
             dateAdded: '2025-04-16T11:30:43+00:00'
             elementCondition: null
             fieldUid: ad1324f8-1337-475f-8516-ab1e13543027 # Intro

@@ -1,19 +1,19 @@
 columnSuffix: null
-handle: nextReads
-instructions: 'Leave empty to always display the latest four articles automatically'
-name: 'Next Reads'
+handle: trendTeasers
+instructions: null
+name: Teasers
 searchable: false
 settings:
   allowSelfRelations: false
   branchLimit: null
   maintainHierarchy: false
-  maxRelations: 4
+  maxRelations: null
   minRelations: null
-  selectionLabel: 'Add entries as next reads'
+  selectionLabel: null
   showCardsInGrid: false
-  showSiteMenu: true
+  showSiteMenu: false
   sources:
-    - 'section:375cd22a-99b6-4667-8ca6-caf2572459ed' # Blog
+    - 'section:539be7e4-0b10-472e-b4de-ec2fbea58c78' # Trends
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list
