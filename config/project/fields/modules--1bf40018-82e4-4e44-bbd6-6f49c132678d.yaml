@@ -47,6 +47,11 @@ settings:
         -
           - uid
           - db43e022-8680-4b70-8b88-e6fc439994c5 # Trend Teasers
+    -
+      __assoc__:
+        -
+          - uid
+          - dcc2d4f6-0aa9-41e6-9135-942fc9d3f8ad # Link List
   includeTableView: false
   maxEntries: null
   minEntries: null

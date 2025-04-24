@@ -1,4 +1,4 @@
-dateModified: 1745416415
+dateModified: 1745482760
 elementSources:
   craft\elements\Entry:
     -
@@ -127,6 +127,7 @@ meta:
     0f8a3079-62db-4270-ac53-6903c9b28557: 'Main Image' # Main Image
     1a0ed17a-7208-4b7e-894f-64506d5432d6: 'Events Index' # Events Index
     1bf40018-82e4-4e44-bbd6-6f49c132678d: Modules # Modules
+    1db838be-9fa8-4bea-9063-88e07757ad52: 'Link List Links' # Link List Links
     2b8e8081-de20-479d-a37d-362dded4c944: Juror # Juror
     2b86894c-5b98-44d4-8ed6-88b2c8b5e601: 'Blog Index' # Blog Index
     2d6b9ef4-4190-4cf7-9a92-b6f6b0fb7f61: 'CTA Banner' # CTA Banner
@@ -196,6 +197,7 @@ meta:
     586087db-4dd7-43ba-929b-b3f7cef02ff8: 'Resize: width 0500px' # Resize: width 0500px
     711863fc-e341-4c43-b45b-dc33dc3c9c2b: Homepage # Homepage
     860851bc-5058-4f0d-8f3f-481df7e56099: 'Project Rounds' # Project Rounds
+    02298633-6aff-40aa-9bf9-e8530102b352: Date # Date
     6913623b-fb1d-419a-a6a4-270a7ec28d8b: 'Alt Text' # Alt Text
     7601873a-7197-47a0-9e66-c07512a11dd2: Email # Email
     38533602-ed85-4c63-b7e3-819ae75ac47a: 'Surt – Regular' # Surt – Regular
@@ -236,7 +238,9 @@ meta:
     d99528c4-136b-413c-9799-56fd20edd2c6: Headline # Headline
     da7ab602-1ed1-46b0-9e1c-5ec3a6e60c92: 'Project Teaser' # Project Teaser
     dad251bb-ffd5-4dc0-81fb-fe15629744ba: 'Ending Date' # Ending Date
+    db2da9aa-6637-4df7-8df4-527aa118c61e: 'Link List Row' # Link List Row
     db43e022-8680-4b70-8b88-e6fc439994c5: 'Trend Teasers' # Trend Teasers
+    dcc2d4f6-0aa9-41e6-9135-942fc9d3f8ad: 'Link List' # Link List
     dd6fd54d-11f2-4a62-8da7-d59718b15225: 'CTA Banner' # CTA Banner
     ddc3aedf-983b-4fa7-81eb-69fd761d71af: German # German
     de820dbc-bd7e-4a0f-9554-3d750480d2a4: Projects # Projects
@@ -245,8 +249,10 @@ meta:
     ed187804-9da6-4b7d-b983-1c751ac7a3ab: 'Tracking Body' # Tracking Body
     ed498341-57c0-4a5d-bedd-9728b250d140: 'CTA Banners' # CTA Banners
     eec7038e-53af-4299-bf11-db14e0fbd073: 'Generic Page' # Generic Page
+    f1c5c016-d5a6-471a-a030-91a4f9a88503: Subheading # Subheading
     f2fe1c5e-9903-41ca-a1b9-45815959a6ef: 'Newsletter Link Group' # Newsletter Link Group
     f4a87b3f-ed6d-49ce-8753-05dda85942a6: 'Project Status' # Project Status
+    f4ddd6a2-288b-4881-a762-884e48b3f1f1: 'Link List Text' # Link List Text
     f6ed0d5d-4ab8-418b-801e-b11f6cb309a5: Author # Author
     f81cb75d-92f5-44c4-89bd-673d8c8ee15c: 'Sponsors Headline' # Sponsors Headline
     f81e8821-286e-4e07-86f6-54880a45eafe: 'Project Team Members' # Project Team Members
@@ -413,6 +419,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.1.1
+  matrix-extended:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.1.0
   retcon:
     edition: standard
     enabled: true

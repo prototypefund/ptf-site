@@ -1,0 +1,28 @@
+columnSuffix: null
+handle: linkListLinks
+instructions: null
+name: 'Link List Links'
+searchable: false
+settings:
+  createButtonLabel: 'Add Link Item'
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - db2da9aa-6637-4df7-8df4-527aa118c61e # Link List Row
+        -
+          - name
+          - 'Link Item'
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
