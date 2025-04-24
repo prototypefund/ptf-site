@@ -6,22 +6,6 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-03-30T19:35:37+00:00'
-            elementCondition: null
-            fieldUid: 276edf74-a032-4834-b9ef-5783f0b823d4 # Project ID
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: b233697f-406c-4193-a93d-4e222afbe660
-            userCondition: null
-            warning: null
-            width: 100
-          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
@@ -52,18 +36,18 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-03-10T16:05:07+00:00'
+            dateAdded: '2025-04-24T10:19:19+00:00'
             elementCondition: null
-            fieldUid: 13a0aaca-3bd8-4653-b163-69738ce277c3 # Text
-            handle: claim
+            fieldUid: 818f2c60-45fc-462e-ba43-e852ce364665 # Claim
+            handle: null
             includeInCards: false
             instructions: null
-            label: Claim
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9c056411-67d4-492f-9f86-e7a9854e8601
+            uid: 3a38be2f-b498-4bf5-85f8-c9ea6a1e0d90
             userCondition: null
             warning: null
             width: 100
@@ -186,10 +170,10 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-21T12:12:27+00:00'
+            dateAdded: '2025-04-24T10:19:19+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
-            uid: 2d3ed17a-9c41-4cf9-864d-18e5e767ae5a
+            uid: 20bc7736-39fe-41b9-bb49-4982d62a07a8
             userCondition: null
           -
             dateAdded: '2025-04-03T14:30:50+00:00'
@@ -309,6 +293,44 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-04-21T12:12:27+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 2d3ed17a-9c41-4cf9-864d-18e5e767ae5a
+            userCondition: null
+          -
+            dateAdded: '2025-03-30T19:35:37+00:00'
+            elementCondition: null
+            fieldUid: 276edf74-a032-4834-b9ef-5783f0b823d4 # Project ID
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: b233697f-406c-4193-a93d-4e222afbe660
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-03-10T16:05:07+00:00'
+            elementCondition: null
+            fieldUid: 13a0aaca-3bd8-4653-b163-69738ce277c3 # Text
+            handle: claimOld
+            includeInCards: false
+            instructions: 'Will be deleted after import'
+            label: 'Claim (Old)'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9c056411-67d4-492f-9f86-e7a9854e8601
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 8a52f532-1397-4933-b88f-1800076947c0
         userCondition: null
@@ -331,13 +353,6 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2025-04-21T11:04:52+00:00'
-            elementCondition: null
-            heading: ''
-            type: craft\fieldlayoutelements\Heading
-            uid: 4b983e2c-f593-4bdd-a9e1-b2dd0e0bd603
-            userCondition: null
         name: SEO
         uid: 9559918d-3bf1-40fd-b2a8-19edb232c3fb
         userCondition: null

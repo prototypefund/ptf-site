@@ -1,4 +1,4 @@
-dateModified: 1745482760
+dateModified: 1745489959
 elementSources:
   craft\elements\Entry:
     -
@@ -183,6 +183,7 @@ meta:
     633b77bd-edb2-4812-ae43-7d61e39fd8fd: 'Main Footer Links' # Main Footer Links
     645eb55b-61e5-4ed2-bf31-caed18a16ffb: 'Blog Index' # Blog Index
     704f68f7-7b03-4825-a337-ab9d195a33e6: 'Project License' # Project License
+    818f2c60-45fc-462e-ba43-e852ce364665: Claim # Claim
     824f9bd0-21d0-47fd-a48a-b8519da12b29: Quote # Quote
     894e5185-035a-41d1-b272-0b6c1608aabf: 'Side Heading + Text' # Side Heading + Text
     1590aac3-cf3a-4fa5-8836-8a95303284c2: Teasers # Teasers

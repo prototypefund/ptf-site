@@ -1,6 +1,6 @@
 {% set image = entry.mainImage.eagerly().one() %}
 {% set inFunding = "inUsage" in entry.projectStatus %}
-{% set claim = entry.claim %}
+{% set claim = entry.claimOld %}
 {% set teamMembers = entry.projectTeamMembers %}
 
 {% set categories = entry.projectRounds.all()
