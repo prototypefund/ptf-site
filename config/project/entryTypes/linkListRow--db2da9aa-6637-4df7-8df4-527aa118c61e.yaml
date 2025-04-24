@@ -54,22 +54,6 @@ fieldLayouts:
           -
             dateAdded: '2025-04-23T21:53:26+00:00'
             elementCondition: null
-            fieldUid: 02298633-6aff-40aa-9bf9-e8530102b352 # Date
-            handle: null
-            includeInCards: false
-            instructions: 'Optional date'
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 1adcc6fa-fdef-4043-ac6c-2b9ed2945754
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            dateAdded: '2025-04-23T21:53:26+00:00'
-            elementCondition: null
             fieldUid: f4ddd6a2-288b-4881-a762-884e48b3f1f1 # Link List Text
             handle: null
             includeInCards: false

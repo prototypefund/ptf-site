@@ -46,7 +46,9 @@
 
 <div class="px-2 md:px-5 mb-10">
   {% if articles|length %}
-    {% include "blog/_modules/teasers-list" with { articles: articles } only %}
+    <div class="mb-4 md:mb-5">
+      {% include "blog/_modules/teasers-list" with { articles: articles } only %}
+    </div>
     {% include "_modules/pagination" with { pagination: pagination } only %}
   {% else %}
     {{ "No articles found."|t }}

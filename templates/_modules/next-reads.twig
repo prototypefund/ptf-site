@@ -1,8 +1,9 @@
 {% set seeAll %}
   {% if entryLink|length %}
-    <a class="uppercase font-surt text-ui-16 text-gray-200 border-gray-400 border-l border-r px-[0.63rem] py-[0.3rem] bg-white hover:bg-black hover:text-white transition-colors" href="{{ entryLink.url }}">
-      {{ seeAllText }}
-    </a>
+    {% include "_modules/button-link" with {
+      url: entryLink.url,
+      text: seeAllText
+    } only %}
   {% endif %}
 {% endset %}
 

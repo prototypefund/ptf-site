@@ -90,6 +90,10 @@
   --background-image-arrow-left-white: url("/static/images/icons/arrow-left-white.svg");
   --background-image-arrow-right-black: url("/static/images/icons/arrow-right-black.svg");
   --background-image-arrow-right-white: url("/static/images/icons/arrow-right-white.svg");
+  --background-image-download-black: url("/static/images/icons/download-black.svg");
+  --background-image-download-white: url("/static/images/icons/download-white.svg");
+  --background-image-link-black: url("/static/images/icons/link-black.svg");
+  --background-image-link-white: url("/static/images/icons/link-white.svg");
   --background-image-link-arrow: url("/static/images/icons/link-arrow.svg");
   --background-image-close: url("/static/images/icons/close.svg");
   --background-image-tick-white: url("/static/images/icons/tick-white.svg");
