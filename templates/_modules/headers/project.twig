@@ -82,11 +82,12 @@
 
     {% if demoLink|length %}
       <div class="mb-6">
-        {% include "_modules/arrow-link" with {
+        {% include "_modules/button-link" with {
           text: "See #{demoLink.name}"|t,
           url: demoLink.linkURL,
           target: "_blank",
-          arrow: "right"
+          icon: "arrow",
+          iconAlignment: "right"
         } only %}
       </div>
     {% endif %}

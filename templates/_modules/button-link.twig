@@ -1,0 +1,40 @@
+{% set target = target|default("_self") %}
+{% set icon = icon|default(null) %}
+{% set iconAlignment = iconAlignment|default("left") %}
+{% set color = color|default("dark") %}
+{% set border = border is not defined ? true : false %}
+
+{% set buttonStyles = {
+  dark: "text-gray-200 hover:bg-black hover:text-white",
+  light: "text-white hover:bg-white hover:text-black border-white"
+} %}
+
+{% set iconStyles = {
+  arrow: {
+    dark: iconAlignment == "right"
+     ? "before:bg-arrow-right-black hover:before:bg-arrow-right-white"
+     : "before:bg-arrow-left-black hover:before:bg-arrow-left-white",
+    light: iconAlignment == "right"
+     ? "before:bg-arrow-right-white hover:before:bg-arrow-right-black"
+     : "before:bg-arrow-left-white hover:before:bg-arrow-left-black",
+  },
+  link: {
+    dark: "before:bg-link-black hover:before:bg-link-white",
+    light: "before:bg-link-white hover:before:bg-link-black",
+  },
+  download: {
+    dark: "before:bg-download-black hover:before:bg-download-white",
+    light: "before:bg-download-white hover:before:bg-download-black",
+  },
+} %}
+
+{% set borderStyles = border ? "border-x px-[0.63rem] px-[0.63rem]" %}
+{% set iconAlignment = iconAlignment == "right" ? "before:order-1" %}
+
+{{ tag("a", {
+  class: "#{buttonStyles[color]} #{iconAlignment} #{icon ? iconStyles[icon][color]} #{icon ? 'gap-2.5 before:mt-[-0.125rem] before:content-[\"\"] before:h-[1.13rem] before:w-[1.13rem]' } #{borderStyles} px-0.5 inline-flex items-center justify-center font-surt uppercase text-ui-14 md:text-ui-16 tracking-wide transition-colors py-[0.3125rem]",
+  href: url,
+  target: target,
+  rel: target == "_blank" ? "noopener noreferrer" : null,
+  text: text,
+}) }}

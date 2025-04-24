@@ -46,11 +46,12 @@
 
           {% if link|length %}
             <div class="mb-1">
-              {% include "_modules/arrow-link" with {
+              {% include "_modules/button-link" with {
                 text: link.label,
                 url: link.url,
-                target: "_blank",
-                arrow: "right",
+                rel: link.target == '_blank' ? 'noopener noreferrer' : null,
+                icon: "arrow",
+                iconAlignment: "right",
                 color: "light"
               } only %}
             </div>

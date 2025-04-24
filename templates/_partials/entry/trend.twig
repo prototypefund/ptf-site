@@ -39,10 +39,11 @@
     </div>
 
     <div class="md:col-span-9 md:col-start-7 lg:col-span-7 lg:col-start-7 xl:col-span-3 xl:col-start-14 xl:text-right relative z-1">
-      {% include "_modules/arrow-link" with {
+      {% include "_modules/button-link" with {
         text: "View report"|t,
         url: entry.url,
-        arrow: "right",
+        icon: "arrow",
+        iconAlignment: "right",
         color: "dark"
       } only %}
     </div>

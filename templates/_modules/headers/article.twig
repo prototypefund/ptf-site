@@ -21,9 +21,11 @@
   <div class="mb-10 md:mb-0 md:col-span-6 lg:col-span-8 relative z-1">
     {% if blogIndex|length %}
       <div class="mb-6">
-        {% include "_modules/arrow-link" with {
+        {% include "_modules/button-link" with {
           url: blogIndex.url,
-          text: "See all articles"|t
+          text: "See all articles"|t,
+          icon: "arrow",
+          border: false
         } only %}
       </div>
     {% endif %}
