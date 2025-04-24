@@ -1,12 +1,25 @@
 {% extends "_layouts/layout.twig" %}
 
 {% set intro = entry.intro %}
+{% set postDate = entry.postDate %}
+{% set dateUpdated = entry.dateUpdated %}
 {% set text = entry.textEntryTypes %}
 
 {% block content %}
+  {% set content %}
+    <time class="block text-gray-500 text-body-18 md:text-body-20" datetime="{{ postDate|date('Y-m-d') }}">
+      {{ "Published on"|t }}: {{ postDate|date('d/m/Y') }}
+    </time>
+
+    <time class="block text-gray-500 text-body-18 md:text-body-20" datetime="{{ dateUpdated|date('Y-m-d') }}">
+      {{ "Last updated"|t }}: {{ dateUpdated|date('d/m/Y') }}
+    </time>
+  {% endset %}
+
   <article class="mb-10 last:mb-0">
     {% include "_modules/headers/simple" with {
       headline: entry.headline|default(entry.title),
+      subheadline: content|raw,
       link: entry.genericLink,
       background: entry.headerBackground.value
     } only %}
