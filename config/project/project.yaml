@@ -1,4 +1,4 @@
-dateModified: 1745491761
+dateModified: 1745525306
 elementSources:
   craft\elements\Entry:
     -
@@ -133,8 +133,10 @@ meta:
     2d6b9ef4-4190-4cf7-9a92-b6f6b0fb7f61: 'CTA Banner' # CTA Banner
     03b9d1d0-a193-4abc-aeb8-92d2269844e9: 'CTA Background' # CTA Background
     3b248e70-b3e8-4bc4-bdef-ff5deba55ac9: 'Second Stage Ending Date' # Second Stage Ending Date
+    03cbee0a-9ed8-464b-ae01-b638102841b4: 'Steps Text' # Steps Text
     3d4c1a3f-6b2d-4919-a863-32877e6722ce: 'Project Year Groups' # Project Year Groups
     4b6ba907-43f2-494b-9816-24894f8de0da: Newsletter # Newsletter
+    4ca0ade4-44d2-4594-8253-a909b0a44bb2: Steps # Steps
     4e97404d-0992-4280-b87e-903b4fc471c5: Navigation # Navigation
     4f4c5206-4b19-4476-ad5a-331b92869abd: 'Team Member' # Team Member
     5a2c3e10-bf78-4986-aecd-f75829889851: 'Project Topics' # Project Topics
@@ -194,6 +196,7 @@ meta:
     8898a317-df17-4cc9-9475-6376bc29fbd5: 'Newsletter Headline' # Newsletter Headline
     36123ba7-7de9-48c0-a222-7aab3ad79da9: 'Start Date' # Start Date
     53364b16-adc8-4b34-802f-054c272771c6: 'Projects Index' # Projects Index
+    72564f6d-cb4e-40a8-b30c-99153000f278: Steps # Steps
     586087db-4dd7-43ba-929b-b3f7cef02ff8: 'Resize: width 0500px' # Resize: width 0500px
     711863fc-e341-4c43-b45b-dc33dc3c9c2b: Homepage # Homepage
     860851bc-5058-4f0d-8f3f-481df7e56099: 'Project Rounds' # Project Rounds
@@ -227,11 +230,13 @@ meta:
     c86f2a45-9639-4151-93dc-21dce075b6f9: 'Link Group' # Link Group
     c670b800-a19f-4ca2-a056-283204e59d5d: 'Credit / License' # Credit / License
     c63194ff-c47c-4c20-80b1-39bfedfc3b0f: 'Project Topics' # Project Topics
+    c84399c0-dd2f-498b-adbf-528b801843c4: Step # Step
     c4438391-90e5-49b1-93bd-6fcbbd3aed62: Simple # Simple
     cee93094-4951-4db3-af0c-29a87c1f2cf8: 'Project Teasers' # Project Teasers
     cff97bfa-6eb7-473b-97c0-cc3af58c0f64: 'Article ID' # Article ID
     d13f787b-b91b-4821-8104-46e509830347: Avatar # Avatar
     d26ba65b-dbab-4a12-b3e8-1ae7a4a2845d: Quote # Quote
+    d94ae721-befb-4d87-921e-3152926fdd9e: 'Step Text' # Step Text
     d5397ea9-1d37-4f12-bf41-46082d130bd8: Image # Image
     d42896d4-04a6-4211-8d97-f265c27a3be1: 'Inclusive Sans – Semibold (Italic)' # Inclusive Sans – Semibold (Italic)
     d99528c4-136b-413c-9799-56fd20edd2c6: Headline # Headline

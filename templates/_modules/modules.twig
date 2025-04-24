@@ -18,6 +18,10 @@
         {% include "_modules/blocks/link-list" with {
           module: module
         } only %}
+      {% case 'steps' %}
+        {% include "_modules/blocks/steps" with {
+          module: module
+        } only %}
       {% case 'relatedCtaBanner' %}
         {% include "_modules/blocks/cta-banner" with {
           module: module
