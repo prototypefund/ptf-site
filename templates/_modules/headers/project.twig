@@ -68,7 +68,7 @@
 
     {% if remainingLinks|length %}
       <div class="mb-5 last:mb-0 max-w-64">
-        {% include "_modules/link-list" with {
+        {% include "_modules/button-links" with {
           links: remainingLinks
             |map((link) => {
               label: link.name,
