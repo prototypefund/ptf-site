@@ -70,7 +70,7 @@ fieldLayouts:
         name: Content
         uid: 3baa8b8b-cb0d-48da-bbbd-944b703792a9
         userCondition: null
-handle: linkList
+handle: relatedLinkList
 hasTitleField: true
 icon: null
 name: 'Link List'

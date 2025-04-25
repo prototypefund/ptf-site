@@ -4,25 +4,19 @@ instructions: null
 name: 'Link List Links'
 searchable: false
 settings:
-  createButtonLabel: 'Add Link Item'
-  defaultIndexViewMode: cards
-  entryTypes:
-    -
-      __assoc__:
-        -
-          - uid
-          - db2da9aa-6637-4df7-8df4-527aa118c61e # Link List Row
-        -
-          - name
-          - 'Link Item'
-  includeTableView: false
-  maxEntries: null
-  minEntries: null
-  pageSize: null
-  propagationKeyFormat: null
-  propagationMethod: all
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
   showCardsInGrid: false
-  viewMode: blocks
+  showSiteMenu: false
+  sources:
+    - 'section:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
 translationKeyFormat: null
-translationMethod: site
-type: craft\fields\Matrix
+translationMethod: none
+type: craft\fields\Entries
