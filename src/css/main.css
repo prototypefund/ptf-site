@@ -115,6 +115,13 @@
 }
 
 @layer base {
+  :root {
+    @view-transition {
+      navigation: auto;
+    }
+    interpolate-size: allow-keywords;
+  }
+
   *,
   ::after,
   ::before,
@@ -176,11 +183,4 @@
 
 .text-link {
   @apply underline hover:text-gray-500;
-}
-
-:root {
-  @view-transition {
-    navigation: auto;
-  }
-  interpolate-size: allow-keywords;
 }
