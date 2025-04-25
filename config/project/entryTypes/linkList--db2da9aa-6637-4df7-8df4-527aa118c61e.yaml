@@ -86,10 +86,10 @@ fieldLayouts:
         name: Content
         uid: 3b79882b-2902-4a9b-86ee-ec7a8c1a49a8
         userCondition: null
-handle: linkListRow
+handle: linkList
 hasTitleField: true
 icon: null
-name: 'Link List Row'
+name: 'Link List'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

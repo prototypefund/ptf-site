@@ -1,4 +1,4 @@
-dateModified: 1745573150
+dateModified: 1745582437
 elementSources:
   craft\elements\Entry:
     -
@@ -75,7 +75,21 @@ elementSources:
       heading: 'Shared Data'
       type: heading
     -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
       key: 'section:a805834b-57ba-4e15-8082-a5bf2c23d495' # FAQs
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
+    -
+      key: 'section:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
       type: native
     -
       key: 'section:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
@@ -136,7 +150,6 @@ meta:
     2d6b9ef4-4190-4cf7-9a92-b6f6b0fb7f61: 'CTA Banner' # CTA Banner
     03b9d1d0-a193-4abc-aeb8-92d2269844e9: 'CTA Background' # CTA Background
     3b248e70-b3e8-4bc4-bdef-ff5deba55ac9: 'Second Stage Ending Date' # Second Stage Ending Date
-    03cbee0a-9ed8-464b-ae01-b638102841b4: 'Steps Text' # Steps Text
     3d4c1a3f-6b2d-4919-a863-32877e6722ce: 'Project Year Groups' # Project Year Groups
     4b6ba907-43f2-494b-9816-24894f8de0da: Newsletter # Newsletter
     4ca0ade4-44d2-4594-8253-a909b0a44bb2: Steps # Steps
@@ -173,7 +186,6 @@ meta:
     62e3c2ea-24fd-42e2-a9ba-3602f1d6e2e8: 'Header Background' # Header Background
     62efdaf8-a4e7-4149-bc72-3bd492681eba: 'Newsletter Side Title' # Newsletter Side Title
     65bbee3d-0a45-412f-a8e5-04ee7c01d8af: People # People
-    69fb06a0-7361-46bd-a063-b293e6336a99: Description # Description
     72b63983-0825-4712-ab6f-b4d98ee4efd4: Standard # Standard
     86ae11d6-820a-47e9-85d6-86f29718f1f8: 'Banner Text' # Banner Text
     91a7ad8a-d35b-4738-b71b-a18f899afc5d: 'Resize: width 2000px' # Resize: width 2000px
@@ -198,7 +210,6 @@ meta:
     6848d2a0-5b5f-43f6-a0c7-22707ad5e028: Bio # Bio
     8760f57d-c660-4b7c-a052-940ebce3408c: 'People Grid' # People Grid
     8898a317-df17-4cc9-9475-6376bc29fbd5: 'Newsletter Headline' # Newsletter Headline
-    36123ba7-7de9-48c0-a222-7aab3ad79da9: 'Start Date' # Start Date
     53364b16-adc8-4b34-802f-054c272771c6: 'Projects Index' # Projects Index
     72564f6d-cb4e-40a8-b30c-99153000f278: Steps # Steps
     586087db-4dd7-43ba-929b-b3f7cef02ff8: 'Resize: width 0500px' # Resize: width 0500px
@@ -223,6 +234,7 @@ meta:
     af0bbe1c-3613-4775-8a01-965b68d4e56e: English # English
     af427185-4826-4e80-bd57-096797b92f4b: Project # Project
     b2b9ea1c-a462-4794-bd6c-d9700c56f94c: 'CTA Banner' # CTA Banner
+    b8ee6536-12a5-4426-b64d-b04a622f6dbf: 'Link Lists' # Link Lists
     b44bb4f4-87a6-47c4-ae20-f1594e9a775b: 'Blog Teaser' # Blog Teaser
     b99ee1fe-b466-49ac-8315-43d2af7587e1: Uploads # Uploads
     b629c55a-8642-44db-a823-26783a25058b: Footer # Footer
@@ -249,7 +261,7 @@ meta:
     d99528c4-136b-413c-9799-56fd20edd2c6: Headline # Headline
     da7ab602-1ed1-46b0-9e1c-5ec3a6e60c92: 'Project Teaser' # Project Teaser
     dad251bb-ffd5-4dc0-81fb-fe15629744ba: 'Ending Date' # Ending Date
-    db2da9aa-6637-4df7-8df4-527aa118c61e: 'Link List Row' # Link List Row
+    db2da9aa-6637-4df7-8df4-527aa118c61e: 'Link List' # Link List
     db43e022-8680-4b70-8b88-e6fc439994c5: 'Trend Teasers' # Trend Teasers
     dcc2d4f6-0aa9-41e6-9135-942fc9d3f8ad: 'Link List' # Link List
     dd6fd54d-11f2-4a62-8da7-d59718b15225: 'CTA Banner' # CTA Banner
