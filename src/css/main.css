@@ -115,10 +115,11 @@
 }
 
 @layer base {
+  @view-transition {
+    navigation: auto;
+  }
+
   :root {
-    @view-transition {
-      navigation: auto;
-    }
     interpolate-size: allow-keywords;
   }
 
