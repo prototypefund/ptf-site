@@ -6,6 +6,10 @@
         {% include "_modules/blocks/blog-teasers" with {
           module: module
         } only %}
+      {% case 'relatedFaqs' %}
+        {% include "_modules/blocks/faqs" with {
+          module: module
+        } only %}
       {% case 'projectTeasers' %}
         {% include "_modules/blocks/project-teasers" with {
           module: module
@@ -27,7 +31,7 @@
           module: module
         } only %}
       {% case 'embed' %}
-        {{ module.render({ padding: true }) }}
+        {{ module.render() }}
       {% case 'newsletter' %}
         {% include "_modules/blocks/newsletter" with {
           module: module
@@ -37,7 +41,7 @@
           module: module
         } only %}
       {% case 'sideHeadingText' %}
-        {{ module.render({ padding: true }) }}
+        {{ module.render() }}
       {% default %}
     {% endswitch %}
   {% endfor %}

@@ -1,0 +1,37 @@
+{% set faqs = module.faqs %}
+
+{% set content %}
+  {% for item in faqs %}
+    <details class="group border-gray-400 border-t last:border-b">
+      <summary class="cursor-pointer list-none font-surt text-head-16 md:text-head-20 pt-1 pb-[10px] md:pb-2.5 md:pt-2 flex">
+        <span class="pr-1.5 text-gray-300">{{ loop.index < 10 ? "0" }}{{ loop.index }}</span> {{ item.title }}
+        <div class="ml-auto pl-2 min-w-[28px] md:min-w-4 font-surt text-ui-12 md:text-ui-14 uppercase tracking-wide">
+          <div class="flex gap-[10px] items-center group-open:hidden">
+            See
+
+            <svg class="min-w-[18px]" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.5 9H9M9 9H13.5M9 9V4.5M9 9V13.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="hidden group-open:flex gap-[10px] items-center">
+            Hide
+
+            <svg class="min-w-[18px]" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.5 9H13.5" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </summary>
+      <div class="pb-3 md:pb-5">
+        {% include "_rich-text/standard" with {
+          text: item.text
+        } only %}
+      </div>
+    </details>
+  {% endfor %}
+{% endset %}
+
+{% include "_modules/side-heading" with {
+  headline: module.title,
+  content: content
+} only %}
