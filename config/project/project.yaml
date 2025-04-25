@@ -1,4 +1,4 @@
-dateModified: 1745525306
+dateModified: 1745573150
 elementSources:
   craft\elements\Entry:
     -
@@ -74,6 +74,9 @@ elementSources:
     -
       heading: 'Shared Data'
       type: heading
+    -
+      key: 'section:a805834b-57ba-4e15-8082-a5bf2c23d495' # FAQs
+      type: native
     -
       key: 'section:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
       type: native
@@ -163,6 +166,7 @@ meta:
     33c3763c-9f38-4c39-bebd-48bbec68e094: 'Header Alignment' # Header Alignment
     34dc108f-02bd-42cb-9481-0693c7bc32b4: 'Tracking Head' # Tracking Head
     36d3151d-99ef-4672-9521-82f0e9b0646d: Role # Role
+    052db112-993d-44ef-bb78-bfa504e8d2e0: FAQs # FAQs
     52ffa06e-5e33-4cd5-8821-d001532453b1: 'Embed Code' # Embed Code
     54fc4092-6d81-499d-9360-5b73c81be367: 'Blog Teasers' # Blog Teasers
     58b0cfc4-a7f2-491d-a49a-a29faaacedf3: 'Inclusive Sans – Regular' # Inclusive Sans – Regular
@@ -202,6 +206,7 @@ meta:
     860851bc-5058-4f0d-8f3f-481df7e56099: 'Project Rounds' # Project Rounds
     6913623b-fb1d-419a-a6a4-270a7ec28d8b: 'Alt Text' # Alt Text
     7601873a-7197-47a0-9e66-c07512a11dd2: Email # Email
+    17844487-59d2-4434-a5f4-3030d625da70: FAQs # FAQs
     38533602-ed85-4c63-b7e3-819ae75ac47a: 'Surt – Regular' # Surt – Regular
     65570146-7afc-432e-9890-2cb116aa66ac: Link # Link
     67373325-a234-485a-a635-26dee1e7f325: 'Project Links' # Project Links
@@ -212,6 +217,7 @@ meta:
     a06eff6a-35ff-45b1-9c02-c6ef2f3f948c: 'Project Rounds' # Project Rounds
     a6babdad-fc37-48fb-ac86-088ea4129e1e: Authors # Authors
     a22a67ef-b1de-4d1d-b922-5ea14b3e8e1c: Team # Team
+    a805834b-57ba-4e15-8082-a5bf2c23d495: FAQs # FAQs
     ad1324f8-1337-475f-8516-ab1e13543027: Intro # Intro
     ad6378ef-e24f-4541-9819-1a644a3dd8c4: 'Nav Links' # Nav Links
     af0bbe1c-3613-4775-8a01-965b68d4e56e: English # English
@@ -232,6 +238,7 @@ meta:
     c63194ff-c47c-4c20-80b1-39bfedfc3b0f: 'Project Topics' # Project Topics
     c84399c0-dd2f-498b-adbf-528b801843c4: Step # Step
     c4438391-90e5-49b1-93bd-6fcbbd3aed62: Simple # Simple
+    ced3c245-d70a-43bb-a15b-37fa5292066b: FAQ # FAQ
     cee93094-4951-4db3-af0c-29a87c1f2cf8: 'Project Teasers' # Project Teasers
     cff97bfa-6eb7-473b-97c0-cc3af58c0f64: 'Article ID' # Article ID
     d13f787b-b91b-4821-8104-46e509830347: Avatar # Avatar

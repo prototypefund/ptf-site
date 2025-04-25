@@ -1,0 +1,67 @@
+color: null
+fieldLayouts:
+  90bbf9dc-488e-4fdb-999f-7ec670575063:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-04-25T09:13:20+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: Heading
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 43bb6671-9c50-4382-9dde-e8faea66b06f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-25T09:19:28+00:00'
+            elementCondition: null
+            fieldUid: 052db112-993d-44ef-bb78-bfa504e8d2e0 # FAQs
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 489739f0-0f8d-431b-b941-5e1ef37071bf
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3f77782e-23e0-4664-9ac2-33b8b17baad3
+        userCondition: null
+handle: relatedFaqs
+hasTitleField: true
+icon: null
+name: FAQs
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

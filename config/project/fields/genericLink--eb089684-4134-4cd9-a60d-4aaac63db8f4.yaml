@@ -44,6 +44,7 @@ settings:
                 - singles
                 - 'section:375cd22a-99b6-4667-8ca6-caf2572459ed' # Blog
                 - 'section:de820dbc-bd7e-4a0f-9554-3d750480d2a4' # Projects
+                - 'section:539be7e4-0b10-472e-b4de-ec2fbea58c78' # Trends
                 - 'section:6e040108-27cc-4a4a-bca9-c5e3ab1bdc04' # Generic Pages
       -
         - url
