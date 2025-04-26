@@ -6,6 +6,10 @@
         {% include "_modules/blocks/blog-teasers" with {
           module: module
         } only %}
+      {% case 'relatedPublications' %}
+        {% include "_modules/blocks/publications" with {
+          module: module
+        } only %}
       {% case 'relatedFaqs' %}
         {% include "_modules/blocks/faqs" with {
           module: module

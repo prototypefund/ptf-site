@@ -1,0 +1,44 @@
+{% switch link.type %}
+  {% case 'asset' %}
+    {% set hasDefaultLabel = link.label in link.element.title %}
+
+    {% if hasDefaultLabel %}
+      {% switch link.element.extension %}
+        {% case 'pdf' %}
+          {% set linkText = "Open PDF"|t %}
+          {% set icon = "arrow" %}
+        {% default %}
+          {% set linkText = "Download File"|t %}
+          {% set icon = "download" %}
+      {% endswitch %}
+    {% else %}
+      {% set linkText = link.label %}
+      {% set icon = "download" %}
+    {% endif %}
+  {% case 'url' %}
+    {% set hasDefaultLabel = link.label in link.url %}
+    {% set icon = "link" %}
+
+    {% if hasDefaultLabel %}
+      {% set linkText = "Open link"|t %}
+    {% else %}
+      {% set linkText = link.label %}
+    {% endif %}
+  {% case 'entry' %}
+    {% set hasDefaultLabel = link.label in link.element.title %}
+    {% set icon = "arrow" %}
+
+    {% if hasDefaultLabel %}
+      {% set linkText = "Open link"|t %}
+    {% else %}
+      {% set linkText = link.label %}
+    {% endif %}
+{% endswitch %}
+
+{% include "_modules/button-link" with {
+  text: linkText,
+  url: link.url,
+  target: link.target,
+  icon: icon,
+  iconAlignment: "right"
+} only %}

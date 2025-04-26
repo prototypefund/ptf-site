@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: linkListText
+handle: description
 instructions: null
-name: 'Link List Text'
+name: Description
 searchable: false
 settings:
   availableTransforms: '*'

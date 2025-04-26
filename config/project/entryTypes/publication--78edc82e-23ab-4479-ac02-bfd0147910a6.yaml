@@ -1,6 +1,6 @@
 color: null
 fieldLayouts:
-  4188e4b6-c204-4849-8455-8c1771422db9:
+  d9147c00-4bee-46a5-aec5-ba65e88d2210:
     tabs:
       -
         elementCondition: null
@@ -10,14 +10,14 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2025-04-23T21:44:30+00:00'
+            dateAdded: '2025-04-25T12:14:00+00:00'
             disabled: false
             elementCondition: null
             id: null
             includeInCards: false
             inputType: null
             instructions: null
-            label: Heading
+            label: null
             max: null
             min: null
             name: null
@@ -31,65 +31,65 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: e97db3af-b257-4f5c-a1eb-a2ed86038ed3
+            uid: db5bc7d1-5ffd-41b7-954a-93ce6fe470f6
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-23T21:53:26+00:00'
+            dateAdded: '2025-04-25T12:21:54+00:00'
+            elementCondition: null
+            fieldUid: f7165950-84cb-4ae9-b955-b36db50e32e1 # Publication
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 02634f02-7885-409d-9db1-da2ce57b4fda
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-25T12:17:09+00:00'
+            elementCondition: null
+            fieldUid: 7eac1059-22fa-40a5-b327-b28832b8beb1 # Publication Cover
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c4633b32-fdd2-49ca-a61a-03061b005267
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-25T12:15:35+00:00'
             elementCondition: null
             fieldUid: f1c5c016-d5a6-471a-a030-91a4f9a88503 # Subheading
             handle: null
             includeInCards: false
-            instructions: 'Optional subheading'
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: ecc77a0d-999c-4b53-bb2e-f1b4b0780b15
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            dateAdded: '2025-04-23T21:53:26+00:00'
-            elementCondition: null
-            fieldUid: f4ddd6a2-288b-4881-a762-884e48b3f1f1 # Description
-            handle: null
-            includeInCards: false
             instructions: null
             label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 10c9cc27-5bc5-45d7-b099-bccfceb15669
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-04-23T21:53:26+00:00'
-            elementCondition: null
-            fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # Link
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: bbdc9289-cb80-4ccf-966e-e78661c43cb7
+            uid: 30c8574f-d9cf-4ac2-bc82-068dc0896444
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 3b79882b-2902-4a9b-86ee-ec7a8c1a49a8
+        uid: fdc4baaf-fb5a-4553-99cd-d24978a1da32
         userCondition: null
-handle: linkList
+handle: publication
 hasTitleField: true
 icon: null
-name: 'Link List'
+name: Publication
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

@@ -38,11 +38,11 @@ fieldLayouts:
           -
             dateAdded: '2025-04-23T21:37:41+00:00'
             elementCondition: null
-            fieldUid: f4ddd6a2-288b-4881-a762-884e48b3f1f1 # Link List Text
+            fieldUid: f4ddd6a2-288b-4881-a762-884e48b3f1f1 # Description
             handle: null
             includeInCards: false
             instructions: null
-            label: Text
+            label: null
             providesThumbs: false
             required: false
             tip: null

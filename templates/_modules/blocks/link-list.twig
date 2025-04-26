@@ -1,5 +1,5 @@
 {% set heading = module.title %}
-{% set text = module.linkListText %}
+{% set description = module.description %}
 {% set links = module.linkListLinks %}
 
 <div class="mb-10 md:px-5">
@@ -8,10 +8,10 @@
   </h4>
   
   <div class="md:grid md:grid-cols-16">
-    {% if text|length %}
+    {% if description|length %}
       <div class="px-2 md:px-0 md:col-span-5 mb-5 md:mb-0">
         {% include "_rich-text/simple" with {
-          text: text,
+          text: description,
           size: "medium"
         } only %}
       </div>
@@ -19,7 +19,7 @@
 
     {% for row in links %}
       {% set subheading = row.subheading %}
-      {% set text = row.linkListText %}
+      {% set description = row.description %}
       {% set link = row.genericLink %}
     
       <div class="px-2 md:px-0 border-t last:border-b border-gray-400 pt-2 pb-4 last:mb-0 md:col-span-10 md:col-start-7 lg:col-start-7 md:grid md:grid-cols-10">
@@ -28,10 +28,10 @@
             {{ row.title }}
           </h4>
 
-          {% if text|length %}
+          {% if description|length %}
             <div class="text-gray-500">
               {% include "_rich-text/simple" with {
-                text: text,
+                text: description,
                 size: "small",
               } only %}
             </div>

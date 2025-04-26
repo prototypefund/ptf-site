@@ -62,6 +62,11 @@ settings:
         -
           - uid
           - 17844487-59d2-4434-a5f4-3030d625da70 # FAQs
+    -
+      __assoc__:
+        -
+          - uid
+          - 53e61864-66a8-435a-aaea-d2ebb408d6aa # Publications
   includeTableView: false
   maxEntries: null
   minEntries: null
