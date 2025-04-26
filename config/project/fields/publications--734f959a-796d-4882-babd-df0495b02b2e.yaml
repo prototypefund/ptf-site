@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: publications
+instructions: null
+name: Publications
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  sources:
+    - 'section:4fd1e89f-c494-4e78-ae99-20dbd74e4f9b' # Publications
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

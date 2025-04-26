@@ -1,4 +1,4 @@
-dateModified: 1745582437
+dateModified: 1745615153
 elementSources:
   craft\elements\Entry:
     -
@@ -92,6 +92,9 @@ elementSources:
       key: 'section:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
       type: native
     -
+      key: 'section:4fd1e89f-c494-4e78-ae99-20dbd74e4f9b' # Publications
+      type: native
+    -
       key: 'section:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
       type: native
     -
@@ -155,6 +158,7 @@ meta:
     4ca0ade4-44d2-4594-8253-a909b0a44bb2: Steps # Steps
     4e97404d-0992-4280-b87e-903b4fc471c5: Navigation # Navigation
     4f4c5206-4b19-4476-ad5a-331b92869abd: 'Team Member' # Team Member
+    4fd1e89f-c494-4e78-ae99-20dbd74e4f9b: Publications # Publications
     5a2c3e10-bf78-4986-aecd-f75829889851: 'Project Topics' # Project Topics
     5a633b8c-0848-4867-8990-245346e525e8: 'Project Funding Amount' # Project Funding Amount
     5bafc55c-8f31-4f9b-add0-49e9957e63a7: 'Footer Link Group' # Footer Link Group
@@ -164,6 +168,7 @@ meta:
     6fa1e10a-d063-4c10-a955-f1b3eda7e7ef: 'Standard (with Entry Types)' # Standard (with Entry Types)
     7bb4d517-5179-42f5-a2b7-0400280d5411: Website # Website
     7e4dd8fe-6873-44a9-ada5-acf02698981d: 'Side Info' # Side Info
+    7eac1059-22fa-40a5-b327-b28832b8beb1: 'Publication Cover' # Publication Cover
     7eb26dd5-1c10-45d1-a16b-85a148e4bf8a: 'Projects Index' # Projects Index
     8a18f61b-a93c-4302-8bde-b8f6ed6c0494: 'Inclusive Sans – Semibold' # Inclusive Sans – Semibold
     8c706102-ac71-4054-b178-d266051a8ba8: 'Project Next Reads' # Project Next Reads
@@ -181,12 +186,14 @@ meta:
     36d3151d-99ef-4672-9521-82f0e9b0646d: Role # Role
     052db112-993d-44ef-bb78-bfa504e8d2e0: FAQs # FAQs
     52ffa06e-5e33-4cd5-8821-d001532453b1: 'Embed Code' # Embed Code
+    53e61864-66a8-435a-aaea-d2ebb408d6aa: Publications # Publications
     54fc4092-6d81-499d-9360-5b73c81be367: 'Blog Teasers' # Blog Teasers
     58b0cfc4-a7f2-491d-a49a-a29faaacedf3: 'Inclusive Sans – Regular' # Inclusive Sans – Regular
     62e3c2ea-24fd-42e2-a9ba-3602f1d6e2e8: 'Header Background' # Header Background
     62efdaf8-a4e7-4149-bc72-3bd492681eba: 'Newsletter Side Title' # Newsletter Side Title
     65bbee3d-0a45-412f-a8e5-04ee7c01d8af: People # People
     72b63983-0825-4712-ab6f-b4d98ee4efd4: Standard # Standard
+    78edc82e-23ab-4479-ac02-bfd0147910a6: Publication # Publication
     86ae11d6-820a-47e9-85d6-86f29718f1f8: 'Banner Text' # Banner Text
     91a7ad8a-d35b-4738-b71b-a18f899afc5d: 'Resize: width 2000px' # Resize: width 2000px
     98ac3e52-dafd-49ce-8852-a02e92879a39: 'Avatar (Small)' # Avatar (Small)
@@ -201,6 +208,7 @@ meta:
     633b77bd-edb2-4812-ae43-7d61e39fd8fd: 'Main Footer Links' # Main Footer Links
     645eb55b-61e5-4ed2-bf31-caed18a16ffb: 'Blog Index' # Blog Index
     704f68f7-7b03-4825-a337-ab9d195a33e6: 'Project License' # Project License
+    734f959a-796d-4882-babd-df0495b02b2e: Publications # Publications
     824f9bd0-21d0-47fd-a48a-b8519da12b29: Quote # Quote
     894e5185-035a-41d1-b272-0b6c1608aabf: 'Side Heading + Text' # Side Heading + Text
     1590aac3-cf3a-4fa5-8836-8a95303284c2: Teasers # Teasers
@@ -275,11 +283,12 @@ meta:
     f1c5c016-d5a6-471a-a030-91a4f9a88503: Subheading # Subheading
     f2fe1c5e-9903-41ca-a1b9-45815959a6ef: 'Newsletter Link Group' # Newsletter Link Group
     f4a87b3f-ed6d-49ce-8753-05dda85942a6: 'Project Status' # Project Status
-    f4ddd6a2-288b-4881-a762-884e48b3f1f1: 'Link List Text' # Link List Text
+    f4ddd6a2-288b-4881-a762-884e48b3f1f1: Description # Description
     f6ed0d5d-4ab8-418b-801e-b11f6cb309a5: Author # Author
     f81cb75d-92f5-44c4-89bd-673d8c8ee15c: 'Sponsors Headline' # Sponsors Headline
     f81e8821-286e-4e07-86f6-54880a45eafe: 'Project Team Members' # Project Team Members
     f455cf70-e6e9-48c1-806f-753a2af85bea: 'Project Second Stage Funding' # Project Second Stage Funding
+    f7165950-84cb-4ae9-b955-b36db50e32e1: Publication # Publication
     f7486108-7a41-4ff3-83e8-34c2b334e19f: Links # Links
     fb0276f2-1481-401a-b813-05bac05b0218: Settings # Settings
     fc819c64-6715-4ac6-8573-d5c49ab5420e: 'Newsletter Text' # Newsletter Text
