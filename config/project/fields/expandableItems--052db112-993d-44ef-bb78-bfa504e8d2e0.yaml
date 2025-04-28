@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: faqs
+handle: expandableItems
 instructions: null
-name: FAQs
+name: 'Expandable Items'
 searchable: false
 settings:
   allowSelfRelations: false
@@ -14,6 +14,7 @@ settings:
   showSiteMenu: false
   sources:
     - 'section:a805834b-57ba-4e15-8082-a5bf2c23d495' # FAQs
+    - 'section:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list

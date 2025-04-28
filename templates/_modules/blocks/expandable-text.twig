@@ -1,8 +1,8 @@
-{% set faqs = module.faqs %}
+{% set expandableItems = module.expandableItems %}
 
 {% set content %}
-  {% for item in faqs %}
-    <details class="group border-gray-400 border-t last:border-b">
+  {% for item in expandableItems %}
+    <details class="group border-gray-400 border-t last:border-b" open>
       <summary class="cursor-pointer list-none font-surt text-head-16 md:text-head-20 pt-1 pb-[10px] md:pb-2.5 md:pt-2 flex">
         <span class="pr-1.5 text-gray-300">{{ loop.index < 10 ? "0" }}{{ loop.index }}</span> {{ item.title }}
         <div class="ml-auto pl-2 min-w-[28px] md:min-w-4 font-surt text-ui-12 md:text-ui-14 uppercase tracking-wide">
@@ -23,6 +23,30 @@
         </div>
       </summary>
       <div class="pb-3 md:pb-5">
+        {% if item.type == "timeline" %}
+          {% set phases = item.phases %}
+
+          {% if phases|length %}
+            <div class="mb-3 md:mb-4 last:mb-0">
+              {% for phase in item.phases %}
+                <div class="mb-2.5 last:mb-0  pb-3 last:pb-0 last:md:pb-3 md:grid md:grid-cols-9 border-b border-gray-400 last:border-0">
+                  <div class="col-span-2 pr-3 text-gray-500 text-head-14 md:text-head-16 mb-1.5 md:mb-0">
+                    {{ phase.dates }}
+                  </div>
+
+                  <div class="col-span-7">
+                    <h5 class="font-surt text-head-16 md:text-head-20 mb-1 last:mb-0">{{ phase.title }}</h5>
+
+                    {% include "_rich-text/simple" with {
+                      text: phase.phaseText
+                    } only %}
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endif %}
+
         {% include "_rich-text/standard" with {
           text: item.text
         } only %}

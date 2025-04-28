@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: dates
+instructions: "For example: '01.11.2024 – \L01.01.2025' or 'April 2025'."
+name: Date(s)
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: null
+  code: false
+  initialRows: 4
+  multiline: false
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\PlainText
