@@ -3,6 +3,8 @@ enableVersioning: true
 entryTypes:
   -
     uid: eec7038e-53af-4299-bf11-db14e0fbd073 # Generic Page
+  -
+    uid: bc05e7ef-ab74-4604-95d9-d14a383ad33a # Basic Text Page
 handle: genericPages
 maxAuthors: 1
 name: 'Generic Pages'

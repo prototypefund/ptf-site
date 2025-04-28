@@ -1,4 +1,4 @@
-dateModified: 1745844508
+dateModified: 1745861117
 elementSources:
   craft\elements\Entry:
     -
@@ -253,6 +253,7 @@ meta:
     b44bb4f4-87a6-47c4-ae20-f1594e9a775b: 'Blog Teaser' # Blog Teaser
     b99ee1fe-b466-49ac-8315-43d2af7587e1: Uploads # Uploads
     b629c55a-8642-44db-a823-26783a25058b: Footer # Footer
+    bc05e7ef-ab74-4604-95d9-d14a383ad33a: 'Basic Text Page' # Basic Text Page
     bdc78be0-ab3b-4c52-9657-0eaaff1208e9: 'Blog Categories' # Blog Categories
     c0e7400b-5611-4a34-bc52-4cd0edc31e41: Sites # Sites
     c03eff61-59aa-491d-bfa0-db442637813a: Article # Article
