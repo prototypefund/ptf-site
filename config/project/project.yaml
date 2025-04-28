@@ -1,4 +1,4 @@
-dateModified: 1745828781
+dateModified: 1745838050
 elementSources:
   craft\elements\Entry:
     -
@@ -151,6 +151,7 @@ meta:
     1a0ed17a-7208-4b7e-894f-64506d5432d6: 'Events Index' # Events Index
     1bf40018-82e4-4e44-bbd6-6f49c132678d: Modules # Modules
     1db838be-9fa8-4bea-9063-88e07757ad52: 'Link List Links' # Link List Links
+    1f4132a7-2573-4ef2-9585-5323907ea4b4: Newsletter # Newsletter
     2b8e8081-de20-479d-a37d-362dded4c944: Juror # Juror
     2b86894c-5b98-44d4-8ed6-88b2c8b5e601: 'Blog Index' # Blog Index
     2d6b9ef4-4190-4cf7-9a92-b6f6b0fb7f61: 'CTA Banner' # CTA Banner
@@ -181,6 +182,7 @@ meta:
     9c0f58c4-4b28-4aca-b80d-3b370bc38f9e: 'Next Reads' # Next Reads
     13a0aaca-3bd8-4653-b163-69738ce277c3: Text # Text
     15f1ebd8-2e95-45e1-81f5-d39b6253762e: 'Teaser Text' # Teaser Text
+    16d093d2-5427-4466-a013-a3620b62ef69: Newsletter # Newsletter
     018c8387-bc84-4c1c-ae3a-186233bcf754: 'Secondary Footer Links' # Secondary Footer Links
     28f95d3d-986f-41ed-b23b-c2f3b747c2eb: Homepage # Homepage
     29d80674-cc17-4976-ad67-b3f611a07dc2: 'Events Index' # Events Index

@@ -1,0 +1,20 @@
+{% extends "_layouts/layout.twig" %}
+
+{% set content %}
+  Newsletter
+{% endset %}
+
+{% block content %}
+  {% include "_modules/headers/simple" with {
+    headline: entry.headline|default(entry.title),
+    intro: entry.intro,
+    content: content,
+    link: entry.genericLink,
+    background: entry.headerBackground.value,
+    alignment: entry.headerAlignment.value
+  } only %}
+
+  <div class="mt-10">
+    {% include "_modules/modules" with { entry: entry } %}
+  </div>
+{% endblock %}
