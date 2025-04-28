@@ -32,6 +32,17 @@ settings:
       __assoc__:
         -
           - label
+          - 'Grey Background / Grey Pattern'
+        -
+          - value
+          - greyBackgroundGreyPattern
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
           - 'Sky Blue Background / Light Blue Pattern'
         -
           - value

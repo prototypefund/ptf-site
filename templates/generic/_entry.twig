@@ -1,13 +1,30 @@
 {% extends "_layouts/layout.twig" %}
 
+{% set isBasicTextPage = entry.type == "basicTextPage" %}
+
+{% set alignment = isBasicTextPage
+  ? "center"
+  : entry.headerAlignment.value
+%}
+
+{% set text = entry.text|default(null) %}
+
 {% block content %}
   {% include "_modules/headers/simple" with {
     headline: entry.headline|default(entry.title),
     intro: entry.intro,
     link: entry.genericLink,
     background: entry.headerBackground.value,
-    alignment: entry.headerAlignment.value
+    alignment: alignment
   } only %}
+
+  {% if text|length %}
+    <div class="mt-5 md:mt-10 px-2 md:px-0 max-w-[680px] mx-auto">
+      {% include "_rich-text/standard" with {
+        text
+      } only %}
+    </div>
+  {% endif %}
 
   <div class="mt-10">
     {% include "_modules/modules" with { entry: entry } %}
