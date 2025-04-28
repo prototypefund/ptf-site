@@ -2,6 +2,7 @@
 
 {% set content %}
   {% for item in expandableItems %}
+    <details class="group border-gray-400 border-t last:border-b">
       <summary class="cursor-pointer list-none font-surt text-head-16 md:text-head-20 pt-1 pb-[10px] md:pb-2.5 md:pt-2 flex">
         <span class="pr-1.5 text-gray-300">{{ loop.index < 10 ? "0" }}{{ loop.index }}</span> {{ item.title }}
         <div class="ml-auto pl-2 min-w-[28px] md:min-w-4 font-surt text-ui-12 md:text-ui-14 uppercase tracking-wide">
