@@ -10,8 +10,8 @@
         {% include "_modules/blocks/publications" with {
           module: module
         } only %}
-      {% case 'relatedFaqs' %}
-        {% include "_modules/blocks/faqs" with {
+      {% case 'expandableText' %}
+        {% include "_modules/blocks/expandable-text" with {
           module: module
         } only %}
       {% case 'projectTeasers' %}

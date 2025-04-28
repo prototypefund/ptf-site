@@ -1,4 +1,4 @@
-dateModified: 1745615153
+dateModified: 1745828781
 elementSources:
   craft\elements\Entry:
     -
@@ -87,6 +87,9 @@ elementSources:
         - expiryDate
         - authors
         - link
+      type: native
+    -
+      key: 'section:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
       type: native
     -
       key: 'section:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
@@ -184,7 +187,7 @@ meta:
     33c3763c-9f38-4c39-bebd-48bbec68e094: 'Header Alignment' # Header Alignment
     34dc108f-02bd-42cb-9481-0693c7bc32b4: 'Tracking Head' # Tracking Head
     36d3151d-99ef-4672-9521-82f0e9b0646d: Role # Role
-    052db112-993d-44ef-bb78-bfa504e8d2e0: FAQs # FAQs
+    052db112-993d-44ef-bb78-bfa504e8d2e0: 'Expandable Items' # Expandable Items
     52ffa06e-5e33-4cd5-8821-d001532453b1: 'Embed Code' # Embed Code
     53e61864-66a8-435a-aaea-d2ebb408d6aa: Publications # Publications
     54fc4092-6d81-499d-9360-5b73c81be367: 'Blog Teasers' # Blog Teasers
@@ -209,6 +212,7 @@ meta:
     645eb55b-61e5-4ed2-bf31-caed18a16ffb: 'Blog Index' # Blog Index
     704f68f7-7b03-4825-a337-ab9d195a33e6: 'Project License' # Project License
     734f959a-796d-4882-babd-df0495b02b2e: Publications # Publications
+    747e573a-dea9-419c-9f81-e1778c7f1b13: 'Phase Text' # Phase Text
     824f9bd0-21d0-47fd-a48a-b8519da12b29: Quote # Quote
     894e5185-035a-41d1-b272-0b6c1608aabf: 'Side Heading + Text' # Side Heading + Text
     1590aac3-cf3a-4fa5-8836-8a95303284c2: Teasers # Teasers
@@ -225,7 +229,7 @@ meta:
     860851bc-5058-4f0d-8f3f-481df7e56099: 'Project Rounds' # Project Rounds
     6913623b-fb1d-419a-a6a4-270a7ec28d8b: 'Alt Text' # Alt Text
     7601873a-7197-47a0-9e66-c07512a11dd2: Email # Email
-    17844487-59d2-4434-a5f4-3030d625da70: FAQs # FAQs
+    17844487-59d2-4434-a5f4-3030d625da70: 'Expandable Text' # Expandable Text
     38533602-ed85-4c63-b7e3-819ae75ac47a: 'Surt – Regular' # Surt – Regular
     65570146-7afc-432e-9890-2cb116aa66ac: Link # Link
     67373325-a234-485a-a635-26dee1e7f325: 'Project Links' # Project Links
@@ -236,6 +240,7 @@ meta:
     a06eff6a-35ff-45b1-9c02-c6ef2f3f948c: 'Project Rounds' # Project Rounds
     a6babdad-fc37-48fb-ac86-088ea4129e1e: Authors # Authors
     a22a67ef-b1de-4d1d-b922-5ea14b3e8e1c: Team # Team
+    a6825d2c-f661-4fd6-ac6e-b7b06cf823ab: Date(s) # Date(s)
     a805834b-57ba-4e15-8082-a5bf2c23d495: FAQs # FAQs
     ad1324f8-1337-475f-8516-ab1e13543027: Intro # Intro
     ad6378ef-e24f-4541-9819-1a644a3dd8c4: 'Nav Links' # Nav Links
@@ -276,6 +281,7 @@ meta:
     ddc3aedf-983b-4fa7-81eb-69fd761d71af: German # German
     de820dbc-bd7e-4a0f-9554-3d750480d2a4: Projects # Projects
     e30e243f-a8dc-43b7-b826-e4788906231f: Pronouns # Pronouns
+    e52cab12-65a2-4958-badf-d0b2f39913d0: Timeline # Timeline
     eb089684-4134-4cd9-a60d-4aaac63db8f4: Link # Link
     ed187804-9da6-4b7d-b983-1c751ac7a3ab: 'Tracking Body' # Tracking Body
     ed498341-57c0-4a5d-bedd-9728b250d140: 'CTA Banners' # CTA Banners
@@ -287,7 +293,10 @@ meta:
     f6ed0d5d-4ab8-418b-801e-b11f6cb309a5: Author # Author
     f81cb75d-92f5-44c4-89bd-673d8c8ee15c: 'Sponsors Headline' # Sponsors Headline
     f81e8821-286e-4e07-86f6-54880a45eafe: 'Project Team Members' # Project Team Members
+    f379a383-dc25-494c-a93c-bd79b34bce36: Phase # Phase
     f455cf70-e6e9-48c1-806f-753a2af85bea: 'Project Second Stage Funding' # Project Second Stage Funding
+    f190999c-96f7-4cfe-900b-d5f76f8e8018: Phases # Phases
+    f1478917-bc75-4118-b7d9-7cd5fdae8872: Timelines # Timelines
     f7165950-84cb-4ae9-b955-b36db50e32e1: Publication # Publication
     f7486108-7a41-4ff3-83e8-34c2b334e19f: Links # Links
     fb0276f2-1481-401a-b813-05bac05b0218: Settings # Settings
