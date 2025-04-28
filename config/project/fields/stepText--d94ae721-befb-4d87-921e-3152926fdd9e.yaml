@@ -16,7 +16,7 @@ settings:
   showWordCount: true
   sourceEditingGroups:
     - __ADMINS__
-  wordLimit: 25
+  wordLimit: 30
 translationKeyFormat: null
 translationMethod: site
 type: craft\ckeditor\Field
