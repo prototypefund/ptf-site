@@ -109,7 +109,7 @@
           <div class="mb-5 last:mb-0">
             {% include "_modules/newsletter-form" only %}
 
-            <div class="text-gray-500">
+            <div class="{{ background in ["greyBackgroundBluePattern", "greyBackgroundPinkPattern", "skyBlueBackgroundLightBluePattern"] ? "text-gray-500" : "text-white" }}">
               {% include "_rich-text/simple" with {
                 text: newsletter.newsletterSecondaryText,
                 size: "small"
