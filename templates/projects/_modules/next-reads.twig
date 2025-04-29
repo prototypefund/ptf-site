@@ -40,7 +40,10 @@
 
   {% include "_modules/next-reads" with {
     heading: "More projects like this"|t,
-    seeAllText: "See all"|t,
+    sideLink: {
+      text: "Sell all"|t,
+      url: projectsIndex.url
+    },
     entryLink: projectsIndex,
     content: content,
   } only %}

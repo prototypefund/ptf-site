@@ -1,0 +1,37 @@
+{% set sideLink = module.sideLink %}
+{% set teasers = module.genericTeasers.all() %}
+
+{% set content %}
+  {% for teaser in teasers %}
+    {% set image = teaser.mainImage.one() %}
+    {% set link = teaser.genericLink %}
+
+    {{ teaser.title }}
+
+    {% if image %}
+      {{ image.url }}
+    {% endif %}
+
+    {% include "_rich-text/simple" with {
+      text: teaser.teaserText
+    } only %}
+
+    {% if link|length %}
+      {# We can use "_modules/button-link" here #}
+      {{ link }}
+    {% endif %}
+  {% endfor %}
+{% endset %}
+
+{% if teasers|length %}
+  {% include "_modules/next-reads" with {
+    heading: module.title|t,
+    sideLink: sideLink
+      ? {
+          text: sideLink.label,
+          url: sideLink.url
+        }
+      : null,
+    content: content,
+  } only %}
+{% endif %}

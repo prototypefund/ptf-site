@@ -6,12 +6,8 @@
         {% include "_modules/blocks/blog-teasers" with {
           module: module
         } only %}
-      {% case 'relatedPublications' %}
-        {% include "_modules/blocks/publications" with {
-          module: module
-        } only %}
-      {% case 'expandableText' %}
-        {% include "_modules/blocks/expandable-text" with {
+      {% case 'genericTeasers' %}
+        {% include "_modules/blocks/generic-teasers" with {
           module: module
         } only %}
       {% case 'projectTeasers' %}
@@ -20,6 +16,14 @@
         } only %}
       {% case 'trendTeasers' %}
         {% include "_modules/blocks/trend-teasers" with {
+          module: module
+        } only %}
+      {% case 'relatedPublications' %}
+        {% include "_modules/blocks/publications" with {
+          module: module
+        } only %}
+      {% case 'expandableText' %}
+        {% include "_modules/blocks/expandable-text" with {
           module: module
         } only %}
       {% case 'relatedLinkList' %}

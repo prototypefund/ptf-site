@@ -67,6 +67,11 @@ settings:
         -
           - uid
           - 53e61864-66a8-435a-aaea-d2ebb408d6aa # Publications
+    -
+      __assoc__:
+        -
+          - uid
+          - ca7069c8-f9a4-44e7-9b3e-21db114e4134 # Generic Teasers
   includeTableView: false
   maxEntries: null
   minEntries: null
