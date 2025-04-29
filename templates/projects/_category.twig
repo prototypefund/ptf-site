@@ -9,12 +9,14 @@
 
 {% set headline = category.headline|default(category.title) %}
 {% set intro = category.intro %}
+{% set secondaryText = category.secondaryText %}
 {% set link = category.genericLink %}
 
 {% block content %}
   {% include "_modules/headers/simple" with {
     headline,
     intro,
+    secondaryText: secondaryText,
     link,
     background: category.headerBackground.value,
     alignment: category.headerAlignment.value

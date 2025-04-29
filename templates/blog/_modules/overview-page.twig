@@ -2,6 +2,7 @@
 
 {% set headline = entry.headline|default(indexEntry.headline)|default(indexEntry.title) %}
 {% set intro = entry.intro|default(indexEntry.intro) %}
+{% set secondaryText = entry.secondaryText|default(indexEntry.secondaryText) %}
 {% set link = entry.genericLink|default(indexEntry.genericLink) %}
 {% set background = indexEntry.headerBackground.value %}
 {% set alignment = indexEntry.headerAlignment.value %}
@@ -21,6 +22,7 @@
 {% include "_modules/headers/simple" with {
   headline,
   intro,
+  secondaryText,
   link,
   background,
   alignment
