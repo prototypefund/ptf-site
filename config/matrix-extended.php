@@ -17,6 +17,10 @@
                   'label' => \Craft::t('app', 'Teasers'),
                   'types' => ['blogTeasers', 'projectTeasers', 'trendTeasers'],
                 ],
+                [
+                  'label' => \Craft::t('app', '⏳'),
+                  'types' => ['genericTeasers', 'statement'],
+                ],
               ],
           ]
       ]

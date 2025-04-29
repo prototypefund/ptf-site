@@ -1,8 +1,10 @@
+{% set sideLink = sideLink|default(null) %}
+
 {% set seeAll %}
-  {% if entryLink|length %}
+  {% if sideLink|length %}
     {% include "_modules/button-link" with {
-      url: entryLink.url,
-      text: seeAllText
+      url: sideLink.url,
+      text: sideLink.text
     } only %}
   {% endif %}
 {% endset %}

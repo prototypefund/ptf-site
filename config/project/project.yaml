@@ -1,4 +1,4 @@
-dateModified: 1745861117
+dateModified: 1745922170
 elementSources:
   craft\elements\Entry:
     -
@@ -175,6 +175,7 @@ meta:
     7eac1059-22fa-40a5-b327-b28832b8beb1: 'Publication Cover' # Publication Cover
     7eb26dd5-1c10-45d1-a16b-85a148e4bf8a: 'Projects Index' # Projects Index
     8a18f61b-a93c-4302-8bde-b8f6ed6c0494: 'Inclusive Sans – Semibold' # Inclusive Sans – Semibold
+    8ad973e9-d5d2-4385-b6cf-beb0a9ca03d2: Statement # Statement
     8c706102-ac71-4054-b178-d266051a8ba8: 'Project Next Reads' # Project Next Reads
     8d8e3436-a20e-4222-a530-d52fa736ae4d: 'Project Technologies' # Project Technologies
     9a1aea15-6b42-4b96-b047-ee412bfabc78: Intro # Intro
@@ -198,6 +199,7 @@ meta:
     62efdaf8-a4e7-4149-bc72-3bd492681eba: 'Newsletter Side Title' # Newsletter Side Title
     65bbee3d-0a45-412f-a8e5-04ee7c01d8af: People # People
     72b63983-0825-4712-ab6f-b4d98ee4efd4: Standard # Standard
+    78bf584a-2694-4dae-bbd5-5e5ba72a5d92: Teasers # Teasers
     78edc82e-23ab-4479-ac02-bfd0147910a6: Publication # Publication
     86ae11d6-820a-47e9-85d6-86f29718f1f8: 'Banner Text' # Banner Text
     91a7ad8a-d35b-4738-b71b-a18f899afc5d: 'Resize: width 2000px' # Resize: width 2000px
@@ -219,6 +221,7 @@ meta:
     894e5185-035a-41d1-b272-0b6c1608aabf: 'Side Heading + Text' # Side Heading + Text
     1590aac3-cf3a-4fa5-8836-8a95303284c2: Teasers # Teasers
     2965e0c7-feb2-4aa2-98d4-de16d458eb30: Categories # Categories
+    3445dc73-731c-4dd7-90f6-bc2e1d87679d: 'Generic Teaser' # Generic Teaser
     3660aa23-c5a0-4865-b14d-5bd479e01996: Source # Source
     5593a3e3-ad74-4e68-ad2d-36a6c8f1d95a: 'Project Year Groups' # Project Year Groups
     6848d2a0-5b5f-43f6-a0c7-22707ad5e028: Bio # Bio
@@ -266,6 +269,7 @@ meta:
     c63194ff-c47c-4c20-80b1-39bfedfc3b0f: 'Project Topics' # Project Topics
     c84399c0-dd2f-498b-adbf-528b801843c4: Step # Step
     c4438391-90e5-49b1-93bd-6fcbbd3aed62: Simple # Simple
+    ca7069c8-f9a4-44e7-9b3e-21db114e4134: 'Generic Teasers' # Generic Teasers
     ced3c245-d70a-43bb-a15b-37fa5292066b: FAQ # FAQ
     cee93094-4951-4db3-af0c-29a87c1f2cf8: 'Project Teasers' # Project Teasers
     cff97bfa-6eb7-473b-97c0-cc3af58c0f64: 'Article ID' # Article ID

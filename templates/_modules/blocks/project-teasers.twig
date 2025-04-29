@@ -11,7 +11,10 @@
 
   {% include "_modules/next-reads" with {
     heading: module.title,
-    seeAllText: "See all"|t,
+    sideLink: {
+      text: "See all"|t,
+      url: projectsIndex.url
+    },
     entryLink: projectsIndex,
     content: content,
   } only %}

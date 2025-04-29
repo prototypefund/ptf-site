@@ -1,0 +1,19 @@
+{% set heading = module.title %}
+{% set textColumnOne = module.textColumnOne %}
+{% set textColumnTwo = module.textColumnTwo %}
+
+{{ heading }}
+
+{% if textColumnOne|length %}
+  {% include "_rich-text/simple" with {
+    text: textColumnOne,
+    size: "medium"
+  } only %}
+{% endif %}
+
+{% if textColumnTwo|length %}
+  {% include "_rich-text/simple" with {
+    text: textColumnTwo,
+    size: "medium"
+  } only %}
+{% endif %}

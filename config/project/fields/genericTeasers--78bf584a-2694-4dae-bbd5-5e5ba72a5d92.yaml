@@ -1,0 +1,25 @@
+columnSuffix: null
+handle: genericTeasers
+instructions: null
+name: Teasers
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 3445dc73-731c-4dd7-90f6-bc2e1d87679d # Generic Teaser
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
