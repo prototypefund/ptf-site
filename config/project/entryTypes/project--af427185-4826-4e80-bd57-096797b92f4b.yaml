@@ -315,22 +315,6 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2025-03-10T16:05:07+00:00'
-            elementCondition: null
-            fieldUid: 13a0aaca-3bd8-4653-b163-69738ce277c3 # Text
-            handle: claimOld
-            includeInCards: false
-            instructions: 'Will be deleted after import'
-            label: 'Claim (Old)'
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 9c056411-67d4-492f-9f86-e7a9854e8601
-            userCondition: null
-            warning: null
-            width: 100
         name: Content
         uid: 8a52f532-1397-4933-b88f-1800076947c0
         userCondition: null
