@@ -1,4 +1,4 @@
-dateModified: 1745939634
+dateModified: 1745941238
 elementSources:
   craft\elements\Entry:
     -
@@ -219,6 +219,7 @@ meta:
     747e573a-dea9-419c-9f81-e1778c7f1b13: 'Phase Text' # Phase Text
     824f9bd0-21d0-47fd-a48a-b8519da12b29: Quote # Quote
     894e5185-035a-41d1-b272-0b6c1608aabf: 'Side Heading + Text' # Side Heading + Text
+    994e9c1d-7448-4401-bdc6-2657748b1205: Application # Application
     1590aac3-cf3a-4fa5-8836-8a95303284c2: Teasers # Teasers
     2965e0c7-feb2-4aa2-98d4-de16d458eb30: Categories # Categories
     3445dc73-731c-4dd7-90f6-bc2e1d87679d: 'Generic Teaser' # Generic Teaser
@@ -282,6 +283,7 @@ meta:
     dad251bb-ffd5-4dc0-81fb-fe15629744ba: 'Ending Date' # Ending Date
     db2da9aa-6637-4df7-8df4-527aa118c61e: 'Link List' # Link List
     db43e022-8680-4b70-8b88-e6fc439994c5: 'Trend Teasers' # Trend Teasers
+    db229da2-7471-4db0-a3ec-697da49531d1: Application # Application
     dcc2d4f6-0aa9-41e6-9135-942fc9d3f8ad: 'Link List' # Link List
     dd6fd54d-11f2-4a62-8da7-d59718b15225: 'CTA Banner' # CTA Banner
     ddc3aedf-983b-4fa7-81eb-69fd761d71af: German # German
