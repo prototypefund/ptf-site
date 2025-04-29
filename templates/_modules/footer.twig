@@ -45,7 +45,7 @@
           {% if sponsors|length %}
             <div class="flex flex-wrap gap-x-[2.8rem] gap-y-1.5">
               {% for sponsor in sponsors %}
-                <img src="{{ sponsor.url }}" alt="{{ sponsor.altText }}">
+                <img src="{{ sponsor.url }}" alt="{{ sponsor.alt }}">
               {% endfor %}
             </div>
           {% endif %}
