@@ -19,7 +19,7 @@
                 ],
                 [
                   'label' => \Craft::t('app', '⏳'),
-                  'types' => ['genericTeasers'],
+                  'types' => ['genericTeasers', 'statement'],
                 ],
               ],
           ]

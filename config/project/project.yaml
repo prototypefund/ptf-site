@@ -1,4 +1,4 @@
-dateModified: 1745920684
+dateModified: 1745922170
 elementSources:
   craft\elements\Entry:
     -
@@ -175,6 +175,7 @@ meta:
     7eac1059-22fa-40a5-b327-b28832b8beb1: 'Publication Cover' # Publication Cover
     7eb26dd5-1c10-45d1-a16b-85a148e4bf8a: 'Projects Index' # Projects Index
     8a18f61b-a93c-4302-8bde-b8f6ed6c0494: 'Inclusive Sans – Semibold' # Inclusive Sans – Semibold
+    8ad973e9-d5d2-4385-b6cf-beb0a9ca03d2: Statement # Statement
     8c706102-ac71-4054-b178-d266051a8ba8: 'Project Next Reads' # Project Next Reads
     8d8e3436-a20e-4222-a530-d52fa736ae4d: 'Project Technologies' # Project Technologies
     9a1aea15-6b42-4b96-b047-ee412bfabc78: Intro # Intro
