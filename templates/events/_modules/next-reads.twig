@@ -1,7 +1,14 @@
+{% set heading = "More events more like this"|t %}
 {% set nextReads = entry.eventNextReads.eagerly().all() %}
 
 {% if nextReads|length == 0 %}
-  {% set nextReads =  craft.entries.section('events').id('not ' ~ entry.id).limit(4).all() %}
+  {% set heading = "More upcoming events"|t %}
+  {% set nextReads = craft.entries.section('events')
+    .id('not ' ~ entry.id)
+    .date('>=' ~ now|date('Y-m-d'))
+    .orderBy('date')
+    .limit(4)
+  %}
 {% endif %}
 
 {% set content %}
