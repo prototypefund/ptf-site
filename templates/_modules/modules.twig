@@ -60,6 +60,10 @@
         {% include "_modules/blocks/people-grid" with {
           module: module
         } only %}
+      {% case 'textGrid' %}
+        {% include "_modules/blocks/text-grid" with {
+          module: module
+        } only %}
       {% case 'sideHeadingText' %}
         {{ module.render() }}
       {% default %}

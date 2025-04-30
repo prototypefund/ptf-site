@@ -1,4 +1,4 @@
-dateModified: 1746044426
+dateModified: 1746048642
 elementSources:
   craft\elements\Entry:
     -
@@ -188,7 +188,9 @@ meta:
     6e040108-27cc-4a4a-bca9-c5e3ab1bdc04: 'Generic Pages' # Generic Pages
     6fa1e10a-d063-4c10-a955-f1b3eda7e7ef: 'Standard (with Entry Types)' # Standard (with Entry Types)
     6faac0be-91b5-4747-95b9-2157c66c6246: Events # Events
+    7b3aeb54-f11e-44f1-baf0-a1a5182e0967: 'Announcement Bar' # Announcement Bar
     7bb4d517-5179-42f5-a2b7-0400280d5411: Website # Website
+    7cd0ec40-65a3-4af3-9c73-edd6ac3d4b12: 'Text Row' # Text Row
     7e4dd8fe-6873-44a9-ada5-acf02698981d: 'Side Info' # Side Info
     7eac1059-22fa-40a5-b327-b28832b8beb1: 'Publication Cover' # Publication Cover
     7eb26dd5-1c10-45d1-a16b-85a148e4bf8a: 'Projects Index' # Projects Index
@@ -249,6 +251,7 @@ meta:
     6848d2a0-5b5f-43f6-a0c7-22707ad5e028: Bio # Bio
     8760f57d-c660-4b7c-a052-940ebce3408c: 'People Grid' # People Grid
     8898a317-df17-4cc9-9475-6376bc29fbd5: 'Newsletter Headline' # Newsletter Headline
+    15140d29-2c87-492e-84f4-90eb738eb0d8: Columns # Columns
     53364b16-adc8-4b34-802f-054c272771c6: 'Projects Index' # Projects Index
     72564f6d-cb4e-40a8-b30c-99153000f278: Steps # Steps
     586087db-4dd7-43ba-929b-b3f7cef02ff8: 'Resize: width 0500px' # Resize: width 0500px
@@ -271,6 +274,7 @@ meta:
     a805834b-57ba-4e15-8082-a5bf2c23d495: FAQs # FAQs
     abb2edcb-afed-4766-9c25-594bf7d42262: Date # Date
     ac14f0ca-4155-4f2f-ad58-f2648062e062: Event # Event
+    acfeb71e-c3fa-40d8-8b68-3fa03b22cf0a: 'Text Grid' # Text Grid
     ad1324f8-1337-475f-8516-ab1e13543027: Intro # Intro
     ad6378ef-e24f-4541-9819-1a644a3dd8c4: 'Nav Links' # Nav Links
     af0bbe1c-3613-4775-8a01-965b68d4e56e: English # English
@@ -297,6 +301,8 @@ meta:
     ced3c245-d70a-43bb-a15b-37fa5292066b: FAQ # FAQ
     cee93094-4951-4db3-af0c-29a87c1f2cf8: 'Project Teasers' # Project Teasers
     cff97bfa-6eb7-473b-97c0-cc3af58c0f64: 'Article ID' # Article ID
+    d7c13ef6-9822-4fd8-83f3-ddcd61ea3184: Rows # Rows
+    d7dfca16-25e6-43de-8bf1-4afdf802a486: 'Announcement Text' # Announcement Text
     d9abc0f0-98c8-45d7-aa77-d9f8fbe83f7a: Time # Time
     d13f787b-b91b-4821-8104-46e509830347: Avatar # Avatar
     d26ba65b-dbab-4a12-b3e8-1ae7a4a2845d: Quote # Quote
@@ -313,6 +319,7 @@ meta:
     dd6fd54d-11f2-4a62-8da7-d59718b15225: 'CTA Banner' # CTA Banner
     ddc3aedf-983b-4fa7-81eb-69fd761d71af: German # German
     de820dbc-bd7e-4a0f-9554-3d750480d2a4: Projects # Projects
+    e0be08b6-634c-4eed-aa9a-175b6bc828c1: 'Enable Announcement Bar' # Enable Announcement Bar
     e3e7a426-21c5-4767-b047-739432c7f60a: Timeline # Timeline
     e30e243f-a8dc-43b7-b826-e4788906231f: Pronouns # Pronouns
     e52cab12-65a2-4958-badf-d0b2f39913d0: Timeline # Timeline

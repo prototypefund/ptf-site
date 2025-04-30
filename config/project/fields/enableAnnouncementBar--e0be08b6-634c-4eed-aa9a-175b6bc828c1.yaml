@@ -1,0 +1,12 @@
+columnSuffix: null
+handle: enableAnnouncementBar
+instructions: null
+name: 'Enable Announcement Bar'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

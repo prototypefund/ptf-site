@@ -87,6 +87,11 @@ settings:
         -
           - uid
           - e3e7a426-21c5-4767-b047-739432c7f60a # Timeline
+    -
+      __assoc__:
+        -
+          - uid
+          - acfeb71e-c3fa-40d8-8b68-3fa03b22cf0a # Text Grid
   includeTableView: false
   maxEntries: null
   minEntries: null
