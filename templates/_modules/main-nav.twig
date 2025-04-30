@@ -211,9 +211,6 @@
                           'eventsIndex': 'event',
                         } %}
 
-                        {{ navLinkHandle }}
-                        {{ matchedElementHandle }}
-
                         {% if sectionMap[navLinkHandle] is defined and sectionMap[navLinkHandle] == matchedElementHandle %}
                           {% set isActive = 'active' %}
                         {% elseif matchedElementUrl == navLink.url %}
