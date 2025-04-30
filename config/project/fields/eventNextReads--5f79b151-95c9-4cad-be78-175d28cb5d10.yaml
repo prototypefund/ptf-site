@@ -1,6 +1,6 @@
 columnSuffix: null
 handle: eventNextReads
-instructions: null
+instructions: 'Leave empty to always display the latest three upcoming events automatically'
 name: 'Event Next Reads'
 searchable: false
 settings:

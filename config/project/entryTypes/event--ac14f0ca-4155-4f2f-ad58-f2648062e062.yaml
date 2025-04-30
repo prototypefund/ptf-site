@@ -171,7 +171,7 @@ fieldLayouts:
             fieldUid: 5f79b151-95c9-4cad-be78-175d28cb5d10 # Event Next Reads
             handle: null
             includeInCards: false
-            instructions: 'Leave empty to always display the latest three upcoming events automatically'
+            instructions: null
             label: null
             providesThumbs: false
             required: false

@@ -16,7 +16,7 @@ fieldLayouts:
             id: null
             includeInCards: false
             inputType: null
-            instructions: 'If blank, defaults to related timeline headline/title'
+            instructions: null
             label: Heading
             max: null
             min: null
@@ -25,7 +25,7 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            required: false
+            required: true
             size: null
             step: null
             tip: null
