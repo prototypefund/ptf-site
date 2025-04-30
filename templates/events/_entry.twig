@@ -1,1 +1,9 @@
-{{ entry.title }}
+{% extends "_layouts/layout.twig" %}
+
+{% block content %}
+  <article class="mb-10 last:mb-0">
+    {# {% include "_modules/headers/article" with { entry } only %} #}
+  </article>
+
+  {% include "_modules/modules" with { entry: entry } only %}
+{% endblock %}

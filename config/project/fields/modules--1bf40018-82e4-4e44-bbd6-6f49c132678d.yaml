@@ -77,6 +77,11 @@ settings:
         -
           - uid
           - 8ad973e9-d5d2-4385-b6cf-beb0a9ca03d2 # Statement
+    -
+      __assoc__:
+        -
+          - uid
+          - e3e7a426-21c5-4767-b047-739432c7f60a # Timeline
   includeTableView: false
   maxEntries: null
   minEntries: null

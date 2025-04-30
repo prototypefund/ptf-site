@@ -1,0 +1,16 @@
+{% set timeline = module.timeline.one() %}
+{% set headline = module.title|default(timeline.headline)|default(timeline.title) %}
+
+{% set content %}
+  {% if timeline|length %}
+    {% include "_modules/timeline" with {
+      phases: timeline.phases,
+      text: timeline.text
+    } only %}
+  {% endif %}
+{% endset %}
+
+{% include "_modules/side-heading" with {
+  headline: headline,
+  content: content
+} only %}

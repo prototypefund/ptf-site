@@ -42,6 +42,10 @@
         {% include "_modules/blocks/cta-banner" with {
           module: module
         } only %}
+      {% case 'relatedTimeline' %}
+        {% include "_modules/blocks/timeline" with {
+          module: module
+        } only %}
       {% case 'embed' %}
         {{ module.render() }}
       {% case 'newsletter' %}

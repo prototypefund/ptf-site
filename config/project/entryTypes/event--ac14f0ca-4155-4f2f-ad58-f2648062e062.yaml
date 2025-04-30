@@ -35,8 +35,116 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-04-30T12:18:17+00:00'
+            elementCondition: null
+            fieldUid: 0f8a3079-62db-4270-ac53-6903c9b28557 # Main Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e9528ad9-acb2-490f-a6a9-48558e2bac8e
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-30T12:18:17+00:00'
+            elementCondition: null
+            fieldUid: abb2edcb-afed-4766-9c25-594bf7d42262 # Date
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 00bcbf07-02f4-47ed-8ccc-a156f6188287
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2025-04-30T12:19:28+00:00'
+            elementCondition: null
+            fieldUid: d9abc0f0-98c8-45d7-aa77-d9f8fbe83f7a # Time
+            handle: startTime
+            includeInCards: false
+            instructions: null
+            label: 'Start Time'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8d6f49b8-c8a5-41c5-b4dc-f596f5c8f9c3
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2025-04-30T12:19:28+00:00'
+            elementCondition: null
+            fieldUid: d9abc0f0-98c8-45d7-aa77-d9f8fbe83f7a # Time
+            handle: endTime
+            includeInCards: false
+            instructions: null
+            label: 'End Time'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 0febd2ea-1e8c-42c7-a7c4-89c1814834e6
+            userCondition: null
+            warning: null
+            width: 25
+          -
+            dateAdded: '2025-04-30T12:18:17+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 1c0ce24e-14e9-41eb-b42e-29968391d31f
+            userCondition: null
+          -
+            dateAdded: '2025-04-30T12:20:50+00:00'
+            elementCondition: null
+            fieldUid: 1bf40018-82e4-4e44-bbd6-6f49c132678d # Modules
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 74b1dc68-9be6-4270-87b9-e5749611904b
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 310ced3d-aefd-4a59-8fa1-4dce010b2244
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-30T12:18:17+00:00'
+            elementCondition: null
+            fieldUid: 0d857c68-7bb1-4ce7-b61f-671446aa8bb3 # SEO
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7314eee7-40d6-43e7-bdda-03449889f769
+            userCondition: null
+            warning: null
+            width: 100
+        name: SEO
+        uid: f16b19d1-1d53-431e-b436-600c41bef74a
         userCondition: null
 handle: event
 hasTitleField: true

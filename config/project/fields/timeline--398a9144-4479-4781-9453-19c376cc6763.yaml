@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: timeline
+instructions: null
+name: Timeline
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  sources:
+    - 'section:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries
