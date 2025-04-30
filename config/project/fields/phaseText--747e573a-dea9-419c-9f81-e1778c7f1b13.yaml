@@ -18,5 +18,5 @@ settings:
     - __ADMINS__
   wordLimit: null
 translationKeyFormat: null
-translationMethod: none
+translationMethod: site
 type: craft\ckeditor\Field
