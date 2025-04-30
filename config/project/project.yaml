@@ -1,4 +1,4 @@
-dateModified: 1746019839
+dateModified: 1746021335
 elementSources:
   craft\elements\Entry:
     -
@@ -182,6 +182,7 @@ meta:
     5bafc55c-8f31-4f9b-add0-49e9957e63a7: 'Footer Link Group' # Footer Link Group
     6c3461da-2d32-418a-803b-efe329a38c30: 'Article Author' # Article Author
     6ca70ace-9ae7-4dfa-a915-d1a24572619d: 'Footer Description' # Footer Description
+    6da63526-25ff-45c2-b4f7-543c359ec775: Location # Location
     6e040108-27cc-4a4a-bca9-c5e3ab1bdc04: 'Generic Pages' # Generic Pages
     6fa1e10a-d063-4c10-a955-f1b3eda7e7ef: 'Standard (with Entry Types)' # Standard (with Entry Types)
     6faac0be-91b5-4747-95b9-2157c66c6246: Events # Events

@@ -1,6 +1,8 @@
-{% set postDate = entry.postDate|date("short") %}
-{% set categories = entry.blogCategories.all() %}
-{% set image = entry.mainImage.eagerly().one() %}
+{% set date = date|date("short")|default(null) %}
+{% set times = times|default([]) %}
+{% set categories = categories|default([]) %}
+{% set image = image|default(null) %}
+{% set backLink = backLink|default(null) %}
 
 {% set pattern = [
   'after:bg-pattern-br-gray-1',
@@ -19,24 +21,28 @@
 
 <header class="{{ pattern }} relative md:grid md:grid-cols-12 lg:grid-cols-16 bg-gray-100 border-gray-400 border-b pt-2.5 pb-5 md:py-[3.75rem] px-2 md:px-5">
   <div class="mb-10 md:mb-0 md:col-span-6 lg:col-span-8 relative z-1">
-    {% if blogIndex|length %}
+    {% if backLink|length %}
       <div class="mb-6">
         {% include "_modules/button-link" with {
-          url: blogIndex.url,
-          text: "See all articles"|t,
+          url: backLink.url,
+          text: backLink.text,
           icon: "arrow",
           border: false
         } only %}
       </div>
     {% endif %}
 
-    <time class="block text-gray-500 mb-3" datetime="{{ postDate|date('Y-m-d') }}">
-      {{ postDate|date('d/m/Y') }}
+    <time class="block mb-3 md:text-head-18" datetime="{{ date|date('Y-m-d') }}">
+      {{ date|date('d/m/Y') }}{% if times|length %}<span class="border-l border-gray-400 ml-1.5 pl-1.5">{{ times|map((time) => time|date('H:i'))|join("-") }}</span>{% endif %}
     </time>
 
     <h1 class="font-surt text-gray-200 text-head-22 md:text-head-38 uppercase mb-3 md:mb-4 last:mb-0">
-      {{ entry.title }}
+      {{ headline }}
     </h1>
+
+    {% if text|length %}
+      <p class="text-body-20">{{ text }}</p>
+    {% endif %}
 
     {% if categories|length %}
       {% include "_modules/categories-list" with {

@@ -60,7 +60,7 @@ fieldLayouts:
             instructions: null
             label: null
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 00bcbf07-02f4-47ed-8ccc-a156f6188287
@@ -99,6 +99,22 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 25
+          -
+            dateAdded: '2025-04-30T13:50:22+00:00'
+            elementCondition: null
+            fieldUid: 6da63526-25ff-45c2-b4f7-543c359ec775 # Location
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 04b520b4-9654-4e9a-ad98-ae5045080185
+            userCondition: null
+            warning: null
+            width: 100
           -
             dateAdded: '2025-04-30T12:18:17+00:00'
             elementCondition: null

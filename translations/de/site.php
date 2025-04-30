@@ -34,6 +34,7 @@ return [
   "Register" => "Anmelden",
   "See all" => "Alle anzeigen",
   "See all articles" => "Alle Artikel anzeigen",
+  "See all events" => "Alle Veranstaltungen anzeigen",
   "See Demo Week" => "Siehe Demo-Woche",
   "See Demo Day" => "Siehe Demo-Tag",
   "Switch to dark mode" => "Zum dunklen Modus wechseln",
