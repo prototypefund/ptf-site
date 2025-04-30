@@ -1,19 +1,27 @@
 {% extends "_layouts/layout.twig" %}
 
+{% set date %}
+  {% include "_modules/date-time" with {
+    date: entry.date,
+    startTime: entry.startTime,
+    endTime: entry.endTime
+  } only %}
+{% endset %}
+
 {% block content %}
   <article class="mb-10 last:mb-0">
-    {% include "_modules/headers/article" with {
+    {% include "_modules/headers/image" with {
       headline: entry.title,
       image: entry.mainImage.eagerly().one(),
       backLink: {
         text: "See all events"|t,
         url: eventsIndex.url
       },
-      date: entry.date,
-      times: [entry.startTime, entry.endTime]|filter(time => time is not empty),
+      date: date,
       text: entry.location,
     } only %}
   </article>
 
   {% include "_modules/modules" with { entry: entry } only %}
+  {% include "events/_modules/next-reads" with { entry: entry } only %}
 {% endblock %}

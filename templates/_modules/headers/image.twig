@@ -1,5 +1,6 @@
-{% set date = date|date("short")|default(null) %}
+{% set date = date|default(null) %}
 {% set times = times|default([]) %}
+{% set text = text|default(null) %}
 {% set categories = categories|default([]) %}
 {% set image = image|default(null) %}
 {% set backLink = backLink|default(null) %}
@@ -32,9 +33,11 @@
       </div>
     {% endif %}
 
-    <time class="block mb-3 md:text-head-18" datetime="{{ date|date('Y-m-d') }}">
-      {{ date|date('d/m/Y') }}{% if times|length %}<span class="border-l border-gray-400 ml-1.5 pl-1.5">{{ times|map((time) => time|date('H:i'))|join("-") }}</span>{% endif %}
-    </time>
+    {% if date|length %}
+      <div class="mb-3">
+        {{ date|raw }}
+      </div>
+    {% endif %}
 
     <h1 class="font-surt text-gray-200 text-head-22 md:text-head-38 uppercase mb-3 md:mb-4 last:mb-0">
       {{ headline }}

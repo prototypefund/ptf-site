@@ -1,0 +1,33 @@
+{% set location = entry.location %}
+{% set teaserText = entry.teaserText %}
+{% set image = entry.mainImage.eagerly().one() %}
+
+<article class="border-t border-gray-400 md:pt-3 md:py-6">
+  <a href="{{ entry.url }}">
+    <div class="mb-1.5">
+      {% include "_modules/date-time" with {
+        date: entry.date,
+        startTime: entry.startTime,
+        endTime: entry.endTime
+      } only %}
+    </div>
+
+    {% if location|length %}
+      <p class="text-gray-500">{{ location }}</p>
+    {% endif %}
+
+    <h4 class="font-surt md:text-head-28 uppercase">
+      {{ entry.title }}
+    </h4>
+
+    {% if teaserText|length %}
+      {% include "_rich-text/simple" with {
+        text: teaserText
+      } only %}
+    {% endif %}
+
+    {% if image|length %}
+      <img src="{{ image.url }}" alt="{{ image.alt }}">
+    {% endif %}
+  </a>
+</article>

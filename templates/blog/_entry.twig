@@ -4,17 +4,22 @@
 {% set text = entry.textEntryTypes %}
 {% set articleAuthor = entry.articleAuthor.one() %}
 
+{% set date %}
+  {% include "_modules/date-time" with {
+    date: entry.date
+  } only %}
+{% endset %}
+
 {% block content %}
-  {{ dump([entry.startTime, entry.endTime]) }}
   <article class="mb-10 last:mb-0">
-    {% include "_modules/headers/article" with {
+    {% include "_modules/headers/image" with {
       headline: entry.title,
       image: entry.mainImage.eagerly().one(),
       backLink: {
         text: "See all articles"|t,
         url: blogIndex.url
       },
-      date: entry.postDate,
+      date: date,
       categories: entry.blogCategories.all()
     } only %}
 

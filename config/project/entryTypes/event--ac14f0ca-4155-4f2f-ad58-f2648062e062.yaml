@@ -122,6 +122,28 @@ fieldLayouts:
             uid: 1c0ce24e-14e9-41eb-b42e-29968391d31f
             userCondition: null
           -
+            dateAdded: '2025-04-30T14:28:59+00:00'
+            elementCondition: null
+            fieldUid: 15f1ebd8-2e95-45e1-81f5-d39b6253762e # Teaser Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 07ccf1a6-672f-4755-88d8-a9c4a5d30887
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-30T14:28:59+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: d268b376-e856-4d12-87be-c60ad9797582
+            userCondition: null
+          -
             dateAdded: '2025-04-30T12:20:50+00:00'
             elementCondition: null
             fieldUid: 1bf40018-82e4-4e44-bbd6-6f49c132678d # Modules
@@ -134,6 +156,28 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 74b1dc68-9be6-4270-87b9-e5749611904b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-30T14:10:01+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 8e28384f-3d13-4562-b5e5-fc7919794644
+            userCondition: null
+          -
+            dateAdded: '2025-04-30T14:10:01+00:00'
+            elementCondition: null
+            fieldUid: 5f79b151-95c9-4cad-be78-175d28cb5d10 # Event Next Reads
+            handle: null
+            includeInCards: false
+            instructions: 'Leave empty to always display the latest four upcoming events automatically'
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6958691e-fa64-4c8d-a1a4-3eb21da6133c
             userCondition: null
             warning: null
             width: 100

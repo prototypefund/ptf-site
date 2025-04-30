@@ -1,0 +1,21 @@
+{% set nextReads = entry.eventNextReads.eagerly().all() %}
+
+{% if nextReads|length == 0 %}
+  {% set nextReads =  craft.entries.section('events').id('not ' ~ entry.id).limit(4).all() %}
+{% endif %}
+
+{% set content %}
+  {% include "events/_modules/teasers-list" with { events: nextReads } %}
+{% endset %}
+
+{% if nextReads|length %}
+  {% include "_modules/next-reads" with {
+    heading: "More upcoming events"|t,
+    sideLink: {
+      text: "See all"|t,
+      url: eventsIndex.url
+    },
+    entryLink: eventsIndex,
+    content: content,
+  } only %}
+{% endif %}
