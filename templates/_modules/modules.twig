@@ -22,10 +22,10 @@
         {% include "_modules/blocks/publications" with {
           module: module
         } only %}
-      {# {% case 'statement' %}
+      {% case 'statement' %}
         {% include "_modules/blocks/statement" with {
           module: module
-        } only %} #}
+        } only %}
       {% case 'expandableText' %}
         {% include "_modules/blocks/expandable-text" with {
           module: module
