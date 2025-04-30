@@ -20,6 +20,8 @@ return [
   "Matching Projects" => "Passende Projekte",
   "More articles like this" => "Mehr Artikel wie dieser",
   "More projects like this" => "Mehr Projekte wie dieses",
+  "More events more like this" => "Mehr Veranstaltungen wie diese",
+  "More upcoming events" => "Mehr bevorstehende Veranstaltungen",
   "Open Readme on GitHub" => "Readme auf Github",
   "Our blog" => "Unser Blog",
   "Our projects" => "Unsere Projekte",

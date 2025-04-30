@@ -1,5 +1,4 @@
 {% set timeline = module.timeline.one() %}
-{% set headline = module.title|default(timeline.headline)|default(timeline.title) %}
 
 {% set content %}
   {% if timeline|length %}
@@ -11,6 +10,6 @@
 {% endset %}
 
 {% include "_modules/side-heading" with {
-  headline: headline,
+  headline: module.title,
   content: content
 } only %}
