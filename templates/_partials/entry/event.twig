@@ -2,32 +2,42 @@
 {% set teaserText = entry.teaserText %}
 {% set image = entry.mainImage.eagerly().one() %}
 
-<article class="border-t border-gray-400 md:pt-3 md:py-6">
+<article class="border-t border-0 md:last:border-b border-gray-400 pt-1 md:pt-3 md:py-6">
   <a href="{{ entry.url }}">
-    <div class="mb-1.5">
-      {% include "_modules/date-time" with {
-        date: entry.date,
-        startTime: entry.startTime,
-        endTime: entry.endTime
-      } only %}
+    <div class="md:grid md:grid-cols-16">
+      <div class="mb-4 md:mb-0 md:col-span-4 md:pr-4">
+        <div class="mb-1 md:mb-1.5">
+          {% include "_modules/date-time" with {
+            date: entry.date,
+            startTime: entry.startTime,
+            endTime: entry.endTime
+          } only %}
+        </div>
+
+        {% if location|length %}
+          <p class="text-gray-500">{{ location }}</p>
+        {% endif %}
+      </div>
+
+      <div class="md:col-span-7 md:pr-4 mb-3 md:mb-0">
+        <h4 class="font-surt text-head-22 md:text-head-28 uppercase mb-1 md:mb-3">
+          {{ entry.title }}
+        </h4>
+
+        {% if teaserText|length %}
+          {% include "_rich-text/simple" with {
+            text: teaserText
+          } only %}
+        {% endif %}
+      </div>
+
+      {% if image|length %}
+        <div class="col-start-13 col-span-4">
+          <div class="aspect-4/3">
+            <img class="block w-full h-full object-cover" src="{{ image.getUrl("blogTeaser") }}" alt="{{ image.alt }}">
+          </div>
+        </div>
+      {% endif %}
     </div>
-
-    {% if location|length %}
-      <p class="text-gray-500">{{ location }}</p>
-    {% endif %}
-
-    <h4 class="font-surt md:text-head-28 uppercase">
-      {{ entry.title }}
-    </h4>
-
-    {% if teaserText|length %}
-      {% include "_rich-text/simple" with {
-        text: teaserText
-      } only %}
-    {% endif %}
-
-    {% if image|length %}
-      <img src="{{ image.url }}" alt="{{ image.alt }}">
-    {% endif %}
   </a>
 </article>
