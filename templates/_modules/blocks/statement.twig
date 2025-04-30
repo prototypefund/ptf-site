@@ -3,7 +3,7 @@
 {% set textColumnTwo = module.textColumnTwo %}
 
   {% set patternBottom = [
-    'after:bg-pattern-br-gray-3',
+    'after:bg-pattern-bl-light-gray-1',
     'after:min-w-12',
     'after:min-h-12',
     'after:w-[15vw]',
@@ -17,11 +17,12 @@
   ]|join(' ') %}
 
   {% set patternTop = [
-    'before:bg-pattern-br-gray-3',
+    'before:bg-pattern-tr-light-gray-1',
+    'before:bg-top-right',
     'before:min-w-12',
-    'before:min-h-12',
+    'before:min-h-16',
     'before:w-[15vw]',
-    'before:h-[15vw]',
+    'before:h-[20vw]',
     "before:content-['']",
     "before:absolute",
     "before:bg-no-repeat",
