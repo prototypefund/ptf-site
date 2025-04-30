@@ -10,6 +10,10 @@
         {# {% include "_modules/blocks/generic-teasers" with {
           module: module
         } only %} #}
+      {% case 'eventTeasers' %}
+        {% include "_modules/blocks/event-teasers" with {
+          module: module
+        } only %}
       {% case 'projectTeasers' %}
         {% include "_modules/blocks/project-teasers" with {
           module: module

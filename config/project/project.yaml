@@ -1,4 +1,4 @@
-dateModified: 1746027515
+dateModified: 1746042927
 elementSources:
   craft\elements\Entry:
     -
@@ -173,6 +173,7 @@ meta:
     3b248e70-b3e8-4bc4-bdef-ff5deba55ac9: 'Second Stage Ending Date' # Second Stage Ending Date
     3d4c1a3f-6b2d-4919-a863-32877e6722ce: 'Project Year Groups' # Project Year Groups
     4b6ba907-43f2-494b-9816-24894f8de0da: Newsletter # Newsletter
+    4bfc6f18-1241-4dd1-be73-a95290f1a887: 'Event Teasers' # Event Teasers
     4ca0ade4-44d2-4594-8253-a909b0a44bb2: Steps # Steps
     4e97404d-0992-4280-b87e-903b4fc471c5: Navigation # Navigation
     4f4c5206-4b19-4476-ad5a-331b92869abd: 'Team Member' # Team Member
