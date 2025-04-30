@@ -1,3 +1,6 @@
+{# Event mobile padding #}
+{# Event teaser #}
+
 {% set location = entry.location %}
 {% set teaserText = entry.teaserText %}
 {% set image = entry.mainImage.eagerly().one() %}
@@ -32,7 +35,7 @@
       </div>
 
       {% if image|length %}
-        <div class="col-start-13 col-span-4">
+        <div class="col-start-13 col-span-4 mb-5 md:mb-0">
           <div class="aspect-4/3">
             <img class="block w-full h-full object-cover" src="{{ image.getUrl("blogTeaser") }}" alt="{{ image.alt }}">
           </div>
