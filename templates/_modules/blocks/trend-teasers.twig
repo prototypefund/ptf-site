@@ -10,7 +10,7 @@
 
 {% if nextReads|length %}
   {% include "_modules/next-reads" with {
-    heading: module.title|t,
+    heading: module.title,
     sideLink: {
       text: "See all"|t,
       url: trendsIndex.url

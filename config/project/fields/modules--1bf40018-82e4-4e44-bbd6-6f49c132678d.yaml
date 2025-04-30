@@ -51,6 +51,16 @@ settings:
       __assoc__:
         -
           - uid
+          - 4bfc6f18-1241-4dd1-be73-a95290f1a887 # Event Teasers
+    -
+      __assoc__:
+        -
+          - uid
+          - ca7069c8-f9a4-44e7-9b3e-21db114e4134 # Generic Teasers
+    -
+      __assoc__:
+        -
+          - uid
           - dcc2d4f6-0aa9-41e6-9135-942fc9d3f8ad # Link List
     -
       __assoc__:
@@ -71,12 +81,12 @@ settings:
       __assoc__:
         -
           - uid
-          - ca7069c8-f9a4-44e7-9b3e-21db114e4134 # Generic Teasers
+          - 8ad973e9-d5d2-4385-b6cf-beb0a9ca03d2 # Statement
     -
       __assoc__:
         -
           - uid
-          - 8ad973e9-d5d2-4385-b6cf-beb0a9ca03d2 # Statement
+          - e3e7a426-21c5-4767-b047-739432c7f60a # Timeline
   includeTableView: false
   maxEntries: null
   minEntries: null

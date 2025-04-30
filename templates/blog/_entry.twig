@@ -4,9 +4,24 @@
 {% set text = entry.textEntryTypes %}
 {% set articleAuthor = entry.articleAuthor.one() %}
 
+{% set date %}
+  {% include "_modules/date-time" with {
+    date: entry.date
+  } only %}
+{% endset %}
+
 {% block content %}
   <article class="mb-10 last:mb-0">
-    {% include "_modules/headers/article" with { entry } only %}
+    {% include "_modules/headers/image" with {
+      headline: entry.title,
+      image: entry.mainImage.eagerly().one(),
+      backLink: {
+        text: "See all articles"|t,
+        url: blogIndex.url
+      },
+      date: date,
+      categories: entry.blogCategories.all()
+    } only %}
 
     {% if intro|length %}
       <div class="grid md:grid-cols-16 px-2 md:px-5 mt-5 md:mt-10 mb-[3.75rem]">
