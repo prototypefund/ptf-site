@@ -72,7 +72,7 @@ permissions:
   - 'deletepeerentrydrafts:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Authors
   - 'deletepeerentrydrafts:a805834b-57ba-4e15-8082-a5bf2c23d495' # FAQs
   - 'deletepeerentrydrafts:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
-  - 'deletepeerentrydrafts:db229da2-7471-4db0-a3ec-697da49531d1' # Application
+  - 'deletepeerentrydrafts:db229da2-7471-4db0-a3ec-697da49531d1'
   - 'deletepeerentrydrafts:de820dbc-bd7e-4a0f-9554-3d750480d2a4' # Projects
   - 'deletepeerentrydrafts:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
   - 'deletepeerentrydrafts:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
@@ -113,7 +113,7 @@ permissions:
   - 'saveentries:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Authors
   - 'saveentries:a805834b-57ba-4e15-8082-a5bf2c23d495' # FAQs
   - 'saveentries:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
-  - 'saveentries:db229da2-7471-4db0-a3ec-697da49531d1' # Application
+  - 'saveentries:db229da2-7471-4db0-a3ec-697da49531d1'
   - 'saveentries:de820dbc-bd7e-4a0f-9554-3d750480d2a4' # Projects
   - 'saveentries:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
   - 'saveentries:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
@@ -150,7 +150,7 @@ permissions:
   - 'savepeerentrydrafts:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Authors
   - 'savepeerentrydrafts:a805834b-57ba-4e15-8082-a5bf2c23d495' # FAQs
   - 'savepeerentrydrafts:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
-  - 'savepeerentrydrafts:db229da2-7471-4db0-a3ec-697da49531d1' # Application
+  - 'savepeerentrydrafts:db229da2-7471-4db0-a3ec-697da49531d1'
   - 'savepeerentrydrafts:de820dbc-bd7e-4a0f-9554-3d750480d2a4' # Projects
   - 'savepeerentrydrafts:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
   - 'savepeerentrydrafts:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
@@ -207,7 +207,7 @@ permissions:
   - 'viewentries:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Authors
   - 'viewentries:a805834b-57ba-4e15-8082-a5bf2c23d495' # FAQs
   - 'viewentries:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
-  - 'viewentries:db229da2-7471-4db0-a3ec-697da49531d1' # Application
+  - 'viewentries:db229da2-7471-4db0-a3ec-697da49531d1'
   - 'viewentries:de820dbc-bd7e-4a0f-9554-3d750480d2a4' # Projects
   - 'viewentries:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
   - 'viewentries:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
@@ -244,7 +244,7 @@ permissions:
   - 'viewpeerentrydrafts:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Authors
   - 'viewpeerentrydrafts:a805834b-57ba-4e15-8082-a5bf2c23d495' # FAQs
   - 'viewpeerentrydrafts:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
-  - 'viewpeerentrydrafts:db229da2-7471-4db0-a3ec-697da49531d1' # Application
+  - 'viewpeerentrydrafts:db229da2-7471-4db0-a3ec-697da49531d1'
   - 'viewpeerentrydrafts:de820dbc-bd7e-4a0f-9554-3d750480d2a4' # Projects
   - 'viewpeerentrydrafts:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
   - 'viewpeerentrydrafts:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
