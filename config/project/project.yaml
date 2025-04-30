@@ -1,4 +1,4 @@
-dateModified: 1746009158
+dateModified: 1746014912
 elementSources:
   craft\elements\Entry:
     -
@@ -55,6 +55,9 @@ elementSources:
         - link
       type: native
     -
+      key: 'section:6faac0be-91b5-4747-95b9-2157c66c6246' # Events
+      type: native
+    -
       key: 'section:539be7e4-0b10-472e-b4de-ec2fbea58c78' # Trends
       type: native
     -
@@ -89,7 +92,18 @@ elementSources:
         - link
       type: native
     -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
       key: 'section:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - authors
+        - link
       type: native
     -
       key: 'section:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
@@ -170,6 +184,7 @@ meta:
     6ca70ace-9ae7-4dfa-a915-d1a24572619d: 'Footer Description' # Footer Description
     6e040108-27cc-4a4a-bca9-c5e3ab1bdc04: 'Generic Pages' # Generic Pages
     6fa1e10a-d063-4c10-a955-f1b3eda7e7ef: 'Standard (with Entry Types)' # Standard (with Entry Types)
+    6faac0be-91b5-4747-95b9-2157c66c6246: Events # Events
     7bb4d517-5179-42f5-a2b7-0400280d5411: Website # Website
     7e4dd8fe-6873-44a9-ada5-acf02698981d: 'Side Info' # Side Info
     7eac1059-22fa-40a5-b327-b28832b8beb1: 'Publication Cover' # Publication Cover
@@ -251,6 +266,7 @@ meta:
     a6825d2c-f661-4fd6-ac6e-b7b06cf823ab: Date(s) # Date(s)
     a805834b-57ba-4e15-8082-a5bf2c23d495: FAQs # FAQs
     abb2edcb-afed-4766-9c25-594bf7d42262: Date # Date
+    ac14f0ca-4155-4f2f-ad58-f2648062e062: Event # Event
     ad1324f8-1337-475f-8516-ab1e13543027: Intro # Intro
     ad6378ef-e24f-4541-9819-1a644a3dd8c4: 'Nav Links' # Nav Links
     af0bbe1c-3613-4775-8a01-965b68d4e56e: English # English
