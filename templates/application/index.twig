@@ -42,16 +42,20 @@
       headline: "Funding"|t,
       columns: [
         { title: "Initial funding period"|t, text: initialFundingStart|date ~ " – " ~ initialFundingEnd|date },
-        { title: "Funding Amount"|t, text: initialFundingAmount },
-      ]
+        initialFundingAmount|length
+          ? { title: "Funding Amount"|t, text: initialFundingAmount }
+          : null,
+      ]|filter(column => column is not empty)
     } only %}
 
     {% include "_modules/phase" with {
       headline: "Second stage funding"|t,
       columns: [
         { title: "Second stage funding period"|t, text: secondStageFundingStart|date ~ " – " ~ secondStageFundingEnd|date },
-        { title: "Funding amount"|t, text: secondStageFundingAmount },
-      ]
+        secondStageFundingAmount|length
+          ? { title: "Funding amount"|t, text: secondStageFundingAmount }
+          : null,
+      ]|filter(column => column is not empty)
     } only %}
 
     <div class="mb-5 md:mb-[60px] last:mb-0">

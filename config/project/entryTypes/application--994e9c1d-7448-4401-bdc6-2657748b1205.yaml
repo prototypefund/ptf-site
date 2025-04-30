@@ -169,7 +169,7 @@ fieldLayouts:
             instructions: null
             label: 'Application Date (Start)'
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 7cc455ba-6b3b-4afe-9c4f-220999910bde
@@ -185,7 +185,7 @@ fieldLayouts:
             instructions: null
             label: 'Application Date (End)'
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 9027a720-a01b-438e-ab13-5f803e3f1445
@@ -201,7 +201,7 @@ fieldLayouts:
             instructions: null
             label: 'Selection Phase (Start)'
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 67403530-faa9-4b1c-82f9-cb9e99f70e3a
@@ -217,7 +217,7 @@ fieldLayouts:
             instructions: null
             label: 'Selection Phase (End)'
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: bc0ded4a-b573-4d91-89db-f14ef1d79183
@@ -240,7 +240,7 @@ fieldLayouts:
             instructions: null
             label: 'Initial Funding (Start)'
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: b0e12bef-6ed6-4e56-8cc4-78bddea86502
@@ -256,7 +256,7 @@ fieldLayouts:
             instructions: null
             label: 'Initial Funding (End)'
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 606b4154-5aa6-4dd3-bfbe-0231a38e3d1c
@@ -295,7 +295,7 @@ fieldLayouts:
             instructions: null
             label: 'Second Stage Funding (Start)'
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 557725d6-7d80-4089-96a6-0b20ee235d1a
@@ -311,7 +311,7 @@ fieldLayouts:
             instructions: null
             label: 'Second Stage Funding (End)'
             providesThumbs: false
-            required: false
+            required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 22053f9a-b885-418a-b16a-c58cc02bc137
