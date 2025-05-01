@@ -1,0 +1,147 @@
+color: null
+fieldLayouts:
+  f3f56269-666e-4552-833d-8887eebde95b:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-05-01T09:05:07+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: c7799634-73d0-4c1b-9210-caf0ec333e95
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-01T09:09:03+00:00'
+            elementCondition: null
+            fieldUid: abb2edcb-afed-4766-9c25-594bf7d42262 # Date
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8555c6ad-7bee-4e60-a7d5-098ea5e0e96a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-01T09:09:03+00:00'
+            elementCondition: null
+            fieldUid: d9abc0f0-98c8-45d7-aa77-d9f8fbe83f7a # Time
+            handle: startTime
+            includeInCards: false
+            instructions: null
+            label: 'Start Time'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a29fcee0-d04b-4e61-9fc9-250ad7cb98f3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-01T09:09:03+00:00'
+            elementCondition: null
+            fieldUid: d9abc0f0-98c8-45d7-aa77-d9f8fbe83f7a # Time
+            handle: endTime
+            includeInCards: false
+            instructions: null
+            label: 'End Time'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aed507e2-b90d-4e2a-8791-aab0b194a7d5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-01T09:09:03+00:00'
+            elementCondition: null
+            fieldUid: 6da63526-25ff-45c2-b4f7-543c359ec775 # Location
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 12c2e753-eb16-49fa-a5d6-2fe91881c2e1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-01T09:09:03+00:00'
+            elementCondition: null
+            fieldUid: c5f55fcf-63a3-46ab-8990-2d967de34b7d # Spakers
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a74aaa07-0206-452c-afae-264dce817929
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-01T09:11:22+00:00'
+            elementCondition: null
+            fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # Link
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4e0db78b-0d2a-4f72-8b10-199fc0880c16
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 3c90ad7d-c567-473f-b516-f2976490a0e0
+        userCondition: null
+handle: talk
+hasTitleField: true
+icon: null
+name: Talk
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

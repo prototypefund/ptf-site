@@ -1,4 +1,4 @@
-dateModified: 1746051403
+dateModified: 1746092470
 elementSources:
   craft\elements\Entry:
     -
@@ -58,6 +58,9 @@ elementSources:
       key: 'section:6faac0be-91b5-4747-95b9-2157c66c6246' # Events
       type: native
     -
+      key: 'section:8e8c94a1-92b5-4b37-84ed-670e13da4f61' # Talks
+      type: native
+    -
       key: 'section:539be7e4-0b10-472e-b4de-ec2fbea58c78' # Trends
       type: native
     -
@@ -106,7 +109,18 @@ elementSources:
         - link
       type: native
     -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
       key: 'section:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - authors
+        - link
       type: native
     -
       key: 'section:4fd1e89f-c494-4e78-ae99-20dbd74e4f9b' # Publications
@@ -159,6 +173,7 @@ fs:
     url: '@web/uploads'
 meta:
   __names__:
+    0a7d996f-dc9c-416e-ab72-2d475eaa550b: Talk # Talk
     0b9eb562-64e5-4b3c-9478-8cefd24e8039: Text # Text
     0d857c68-7bb1-4ce7-b61f-671446aa8bb3: SEO # SEO
     0f8a3079-62db-4270-ac53-6903c9b28557: 'Main Image' # Main Image
@@ -198,6 +213,7 @@ meta:
     8ad973e9-d5d2-4385-b6cf-beb0a9ca03d2: Statement # Statement
     8c706102-ac71-4054-b178-d266051a8ba8: 'Project Next Reads' # Project Next Reads
     8d8e3436-a20e-4222-a530-d52fa736ae4d: 'Project Technologies' # Project Technologies
+    8e8c94a1-92b5-4b37-84ed-670e13da4f61: Talks # Talks
     9a1aea15-6b42-4b96-b047-ee412bfabc78: Intro # Intro
     9b03faaf-18e7-4df7-b87c-282d1ead8ea3: Jury # Jury
     9c0f58c4-4b28-4aca-b80d-3b370bc38f9e: 'Next Reads' # Next Reads
@@ -209,6 +225,7 @@ meta:
     29d80674-cc17-4976-ad67-b3f611a07dc2: 'Events Index' # Events Index
     33c3763c-9f38-4c39-bebd-48bbec68e094: 'Header Alignment' # Header Alignment
     34dc108f-02bd-42cb-9481-0693c7bc32b4: 'Tracking Head' # Tracking Head
+    35a4b3c3-5eef-4146-8fcc-2652e9582ec4: 'Past Events Index' # Past Events Index
     36d3151d-99ef-4672-9521-82f0e9b0646d: Role # Role
     052db112-993d-44ef-bb78-bfa504e8d2e0: 'Expandable Items' # Expandable Items
     52ffa06e-5e33-4cd5-8821-d001532453b1: 'Embed Code' # Embed Code
@@ -262,6 +279,7 @@ meta:
     67373325-a234-485a-a635-26dee1e7f325: 'Project Links' # Project Links
     77212406-e8de-43e1-a55b-7e66555059d5: Trend # Trend
     80466913-dc6f-46d5-8013-a55f3a7358da: Sponsors # Sponsors
+    80923105-ebb3-433d-ab36-1026a9f76aea: 'Past Events Index' # Past Events Index
     81982550-63ea-49d9-9142-e30783a4fd54: 'Trends Index' # Trends Index
     a05e468d-5063-4f3a-8ea3-aa240eebc1bf: Newsletter # Newsletter
     a06eff6a-35ff-45b1-9c02-c6ef2f3f948c: 'Project Rounds' # Project Rounds
@@ -286,6 +304,7 @@ meta:
     c0e7400b-5611-4a34-bc52-4cd0edc31e41: Sites # Sites
     c03eff61-59aa-491d-bfa0-db442637813a: Article # Article
     c08345c7-f10a-42ce-b893-7f2e82a46fbb: Embed # Embed
+    c5f55fcf-63a3-46ab-8990-2d967de34b7d: Spakers # Spakers
     c8c2dcfa-75cb-423f-9565-b550807d0e7e: 'Resize: width 1500px' # Resize: width 1500px
     c32d4850-8999-46e0-aad2-c43b9d69e8bd: 'Avatar (Large)' # Avatar (Large)
     c85b9b92-e92c-448e-be1b-853494683b99: 'Project Technologies' # Project Technologies

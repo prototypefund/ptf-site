@@ -1,0 +1,33 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 35a4b3c3-5eef-4146-8fcc-2652e9582ec4 # Past Events Index
+handle: pastEventsIndex
+maxAuthors: 1
+name: 'Past Events Index'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  af0bbe1c-3613-4775-8a01-965b68d4e56e: # English
+    enabledByDefault: true
+    hasUrls: true
+    template: events/_past.twig
+    uriFormat: events/past-events
+  ddc3aedf-983b-4fa7-81eb-69fd761d71af: # German
+    enabledByDefault: true
+    hasUrls: true
+    template: events/_past.twig
+    uriFormat: events/vergangene-events
+type: single
