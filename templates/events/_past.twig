@@ -1,0 +1,43 @@
+{% extends "_layouts/layout.twig" %}
+
+{% set pastEventQuery = craft.entries.section('events')
+  .date('<' ~ now|date('Y-m-d'))
+  .orderBy('date desc')
+%}
+
+{% paginate pastEventQuery.limit(6) as pagination, events %}
+
+{% block content %}
+  {% include "_modules/headers/simple" with {
+    headline: entry.headline|default(entry.title),
+    intro: entry.intro,
+    secondaryText: entry.secondaryText,
+    link: entry.genericLink,
+    background: entry.headerBackground.value,
+    alignment: entry.headerAlignment.value
+  } only %}
+
+  {% if events|length %}
+    {% set content %}
+      {% include "events/_modules/teasers-list" with { events: events } %}
+      <div class="mt-5">
+        {% include "_modules/pagination" with { pagination: pagination } only %}
+      </div>
+    {% endset %}
+
+    <div class="mt-10">
+      {% include "_modules/next-reads" with {
+        heading: "Past events"|t,
+        sideLink: {
+          text: "See upcoming events"|t,
+          url: eventsIndex.url
+        },
+        content: content,
+      } only %}
+    </div>
+  {% endif %}
+
+  <div class="mt-10">
+    {% include "_modules/modules" with { entry: entry } %}
+  </div>
+{% endblock %}

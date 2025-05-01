@@ -1,5 +1,24 @@
 {% extends "_layouts/layout.twig" %}
 
+{% set upcomingEvents = craft.entries.section('events')
+  .date('>=' ~ now|date('Y-m-d'))
+  .orderBy('date')
+  .all()
+%}
+
+{% set upcomingTalks = craft.entries.section('talks')
+  .date('>=' ~ now|date('Y-m-d'))
+  .orderBy('date')
+  .all()
+%}
+
+{% set pastTalks = craft.entries.section('talks')
+  .date('<' ~ now|date('Y-m-d'))
+  .orderBy('date desc')
+  .limit(4)
+  .all()
+%}
+
 {% block content %}
   {% include "_modules/headers/simple" with {
     headline: entry.headline|default(entry.title),
@@ -10,7 +29,56 @@
     alignment: entry.headerAlignment.value
   } only %}
 
-  <div class="h-[50vw] text-gray-400 flex items-center justify-center">
-    Events Index
+  {% if upcomingEvents|length %}
+    {% set content %}
+      {% include "events/_modules/teasers-list" with { events: upcomingEvents } %}
+    {% endset %}
+
+    <div class="mt-10">
+      {% include "_modules/next-reads" with {
+        heading: "Upcoming events"|t,
+        sideLink: {
+          text: "See past events"|t,
+          url: pastEventsIndex.url
+        },
+        entryLink: eventsIndex,
+        content: content,
+      } only %}
+    </div>
+  {% endif %}
+
+  {# {% if upcomingTalks|length %}
+    {% set content %}
+      {{ upcomingTalks|length }}
+    {% endset %}
+
+    <div class="mt-10">
+      {% include "_modules/next-reads" with {
+        heading: "Upcoming talks"|t,
+        entryLink: eventsIndex,
+        content: content,
+      } only %}
+    </div>
+  {% endif %}
+
+  {% if pastTalks|length %}
+    {% set content %}
+      {{ pastTalks|length }}
+    {% endset %}
+
+    <div class="mt-10">
+      {% include "_modules/next-reads" with {
+        heading: "Past talks"|t,
+        sideLink: {
+          text: "See all"|t,
+          url: "https://www.example.com"
+        },
+        content: content,
+      } only %}
+    </div>
+  {% endif %} #}
+
+  <div class="mt-10">
+    {% include "_modules/modules" with { entry: entry } %}
   </div>
 {% endblock %}

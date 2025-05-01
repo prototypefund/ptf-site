@@ -206,12 +206,12 @@
                         {% set matchedElementUrl = matchedElement.url|default(null) %}
 
                         {% set sectionMap = {
-                          'blogIndex': 'blog',
-                          'projectsIndex': 'projects',
-                          'eventsIndex': 'events',
+                          'blogIndex': ['blog'],
+                          'projectsIndex': ['projects'],
+                          'eventsIndex': ['events', 'pastEventsIndex']
                         } %}
 
-                        {% if sectionMap[navLinkHandle] is defined and sectionMap[navLinkHandle] == matchedElementHandle %}
+                        {% if sectionMap[navLinkHandle] is defined and matchedElementHandle in sectionMap[navLinkHandle] %}
                           {% set isActive = 'active' %}
                         {% elseif matchedElementUrl == navLink.url %}
                           {% set isActive = 'active' %}
