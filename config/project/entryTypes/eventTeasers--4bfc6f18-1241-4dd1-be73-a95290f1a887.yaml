@@ -1,6 +1,6 @@
 color: null
 fieldLayouts:
-  32b8b6ef-dd58-471a-8b72-182c8f00a037:
+  5ce099ae-1fb1-4076-b4dd-6916f4401115:
     tabs:
       -
         elementCondition: null
@@ -10,13 +10,14 @@ fieldLayouts:
             autocomplete: false
             autocorrect: true
             class: null
+            dateAdded: '2025-04-30T19:53:34+00:00'
             disabled: false
             elementCondition: null
             id: null
             includeInCards: false
             inputType: null
             instructions: null
-            label: null
+            label: Heading
             max: null
             min: null
             name: null
@@ -24,57 +25,43 @@ fieldLayouts:
             placeholder: null
             providesThumbs: false
             readonly: false
-            requirable: false
+            required: true
             size: null
             step: null
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 18222ee3-6b69-47b0-ab68-7266c8340d1d
+            uid: 2234c8e9-66b1-4597-bdbd-05b1002710a3
             userCondition: null
             warning: null
             width: 100
           -
+            dateAdded: '2025-04-30T19:55:17+00:00'
             elementCondition: null
-            fieldUid: 5cf4a4ac-85fa-4da7-891a-d5d9bf1bf1d4
+            fieldUid: 5f79b151-95c9-4cad-be78-175d28cb5d10 # Event Next Reads
             handle: null
-            includeInCards: true
+            includeInCards: false
             instructions: null
-            label: Image
-            providesThumbs: true
-            required: true
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 46eef7b7-6005-4ebe-91a3-75d20b0025c0
-            userCondition: null
-            warning: null
-            width: 25
-          -
-            elementCondition: null
-            fieldUid: 9cc566a2-cf3f-44d6-82d7-7882f61e176e
-            handle: null
-            includeInCards: true
-            instructions: null
-            label: Caption
+            label: Teasers
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 0dc97059-a2e4-45db-997b-f0dc5ea6450a
+            uid: 920c7d4d-8028-4863-a278-c0f45fd06640
             userCondition: null
             warning: null
-            width: 75
+            width: 100
         name: Content
-        uid: c31c048a-d0dd-492f-b1c7-0fefa9051287
+        uid: 54efe15b-1c31-477f-a314-8bd6928a8209
         userCondition: null
-handle: image
-hasTitleField: false
-icon: image
-name: Image
+handle: eventTeasers
+hasTitleField: true
+icon: null
+name: 'Event Teasers'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: ''
+titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site

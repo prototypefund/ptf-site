@@ -26,7 +26,7 @@
             {% set figure = entry.mainImage[0] %}
             <![CDATA[
               <figure>
-                <img src="{{ figure.image[0].getUrl("w1000") }}" alt="{{ figure.image[0].altText }}">
+                <img src="{{ figure.image[0].getUrl("w1000") }}" alt="{{ figure.image[0].alt }}">
                 {% if figure.caption|length %}
                   <figcaption>{{ figure.caption|raw }}</figcaption>
                 {% endif %}

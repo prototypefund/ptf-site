@@ -75,22 +75,6 @@ fieldLayouts:
             uid: 8568aee5-b9c2-428f-9927-d966235a4dce
             userCondition: null
           -
-            dateAdded: '2025-04-07T13:01:43+00:00'
-            elementCondition: null
-            fieldUid: 6913623b-fb1d-419a-a6a4-270a7ec28d8b # Alt Text
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: 'Use this field for alt text for now, we’ll migrate to Craft’s native field (sits below) later.'
-            type: craft\fieldlayoutelements\CustomField
-            uid: 02e9a363-c534-4ab1-8d4d-635ad2824d98
-            userCondition: null
-            warning: null
-            width: 100
-          -
             attribute: alt
             class: null
             cols: null
@@ -114,7 +98,7 @@ fieldLayouts:
             type: craft\fieldlayoutelements\assets\AltField
             uid: e5c7bf55-0e4c-4711-825f-71e8109f9280
             userCondition: null
-            warning: 'Don’t use this field yet'
+            warning: null
             width: 100
         name: Content
         uid: b716d9f1-1e92-42c0-bf65-7e868c92a471

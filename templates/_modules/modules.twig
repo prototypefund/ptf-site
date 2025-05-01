@@ -10,6 +10,10 @@
         {# {% include "_modules/blocks/generic-teasers" with {
           module: module
         } only %} #}
+      {% case 'eventTeasers' %}
+        {% include "_modules/blocks/event-teasers" with {
+          module: module
+        } only %}
       {% case 'projectTeasers' %}
         {% include "_modules/blocks/project-teasers" with {
           module: module
@@ -42,6 +46,10 @@
         {% include "_modules/blocks/cta-banner" with {
           module: module
         } only %}
+      {% case 'relatedTimeline' %}
+        {% include "_modules/blocks/timeline" with {
+          module: module
+        } only %}
       {% case 'embed' %}
         {{ module.render() }}
       {% case 'newsletter' %}
@@ -50,6 +58,10 @@
         } only %}
       {% case 'peopleGrid' %}
         {% include "_modules/blocks/people-grid" with {
+          module: module
+        } only %}
+      {% case 'textGrid' %}
+        {% include "_modules/blocks/text-grid" with {
           module: module
         } only %}
       {% case 'sideHeadingText' %}

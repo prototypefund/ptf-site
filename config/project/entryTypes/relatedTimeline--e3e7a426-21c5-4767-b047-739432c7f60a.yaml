@@ -1,0 +1,67 @@
+color: null
+fieldLayouts:
+  cd8572db-bf4d-44f2-b87d-46aab8ad910c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-04-30T12:45:46+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: Heading
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 59988b6e-cc90-4c29-a9bd-65f110cf510a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-30T12:47:51+00:00'
+            elementCondition: null
+            fieldUid: 398a9144-4479-4781-9453-19c376cc6763 # Timeline
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8f175542-ae02-411a-9104-77cfecba333b
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 9b5fdd04-63df-4f40-b797-b5e8d39153a5
+        userCondition: null
+handle: relatedTimeline
+hasTitleField: true
+icon: null
+name: Timeline
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

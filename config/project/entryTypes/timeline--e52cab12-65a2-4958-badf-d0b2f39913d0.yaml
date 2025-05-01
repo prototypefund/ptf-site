@@ -36,6 +36,22 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-04-30T12:36:26+00:00'
+            elementCondition: null
+            fieldUid: d99528c4-136b-413c-9799-56fd20edd2c6 # Headline
+            handle: null
+            includeInCards: false
+            instructions: 'Overrides the title'
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4bbe6996-45ce-4486-b5c8-9669ab96bcb4
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-04-26T15:59:59+00:00'
             elementCondition: null
             fieldUid: f190999c-96f7-4cfe-900b-d5f76f8e8018 # Phases

@@ -25,7 +25,7 @@
 
 {% if teasers|length %}
   {% include "_modules/next-reads" with {
-    heading: module.title|t,
+    heading: module.title,
     sideLink: sideLink
       ? {
           text: sideLink.label,

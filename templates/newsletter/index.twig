@@ -8,6 +8,7 @@
   {% include "_modules/headers/simple" with {
     headline: entry.headline|default(entry.title),
     intro: entry.intro,
+    secondaryText: entry.secondaryText,
     content: content,
     link: entry.genericLink,
     background: entry.headerBackground.value,

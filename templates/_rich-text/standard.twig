@@ -1,14 +1,14 @@
 {% set size = size|default(null) %}
 
 {{ text|retcon([
-  ["change", "body > h1", "body > h2"],
+["change", "body > h1", "body > h2"],
   ["removeEmpty", "body > p, body > h1, body > h2, body > h3, body > h4, body > h5, body > h6"],
 
   ["attr", "body > h2, body > h3, body > h4, body > h5, body > h6", { class: "font-surt [p+&]:mt-5 [ul+&]:mt-5 [ol+&]:mt-5 [blockquote+&]:mt-5 [figure+&]:mt-5 mb-2.5 last:mb-0" }, false],
   ["attr", "body > h2", { class: "text-body-28 md:text-body-32" }, false],
   ["attr", "body > h3", { class: "text-body-22 md:text-body-24" }, false],
   ["attr", "body > h4", { class: "text-body-20 md:text-body-22" }, false],
-  ["attr", "body > h5", { class: "text-body-18 md:text-body-20" }, false],
+  ["attr", "body > h5", { class: "font-surt text-head-18 md:text-head-22 uppercase" }, false],
 
   ["attr", "body > hr", { class: "my-[3.75rem] md:mt-5 border-gray-400"}, false],
   

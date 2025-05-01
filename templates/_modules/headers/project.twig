@@ -1,5 +1,5 @@
 {% set inFunding = "inUsage" in entry.projectStatus %}
-{% set claim = entry.claimOld %}
+{% set claim = entry.headline %}
 {% set dateUpdated = entry.dateUpdated %}
 {% set image = entry.mainImage.eagerly().one() %}
 {% set projectLinks = entry.projectLinks %}
@@ -97,7 +97,7 @@
     <div class="w-[14.31rem] ml-auto md:w-auto md:col-start-8 md:col-span-5 lg:col-span-4 lg:col-start-13 relative z-1">
       <div class="bg-gray-100 flex items-center justify-center aspect-square p-[1.25rem]">
         <div class="w-full mix-blend-multiply">
-          <img class="w-full h-full object-contain" src="{{ image.url }}" alt="{{ image.altText }}">
+          <img class="w-full h-full object-contain" src="{{ image.url }}" alt="{{ image.alt }}">
         </div>
       </div>
     </div>

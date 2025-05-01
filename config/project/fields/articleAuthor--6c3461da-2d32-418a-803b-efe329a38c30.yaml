@@ -14,8 +14,6 @@ settings:
   showSiteMenu: false
   sources:
     - 'section:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Authors
-    - 'section:9b03faaf-18e7-4df7-b87c-282d1ead8ea3' # Jury
-    - 'section:a22a67ef-b1de-4d1d-b922-5ea14b3e8e1c' # Team
   targetSiteId: null
   validateRelatedElements: false
   viewMode: list
