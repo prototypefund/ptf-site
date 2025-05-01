@@ -1,5 +1,7 @@
 {% extends "_layouts/layout.twig" %}
 
+{# Add count to next-reads #}
+
 {% set upcomingEvents = craft.entries.section('events')
   .date('>=' ~ now|date('Y-m-d'))
   .orderBy('date')
