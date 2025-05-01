@@ -1,0 +1,26 @@
+{% set nextReads = module.talkTeasers.eagerly().all() %}
+
+{% if nextReads|length == 0 %}
+  {% set nextReads = craft.entries.section('talks')
+    .date('>=' ~ now|date('Y-m-d'))
+    .orderBy('date')
+    .limit(3)
+  %}
+{% endif %}
+
+{% set content %}
+  {% for talk in nextReads %}
+    {{ talk.render() }}
+  {% endfor %}
+{% endset %}
+
+{% if nextReads|length %}
+  {% include "_modules/next-reads" with {
+    heading: module.title,
+    sideLink: {
+      text: "See all"|t,
+      url: eventsIndex.url
+    },
+    content: content,
+  } only %}
+{% endif %}

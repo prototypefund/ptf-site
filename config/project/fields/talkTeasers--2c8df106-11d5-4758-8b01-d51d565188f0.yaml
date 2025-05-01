@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: talkTeasers
+instructions: 'Leave empty to always display the latest four upcoming talks automatically'
+name: 'Talk Teasers'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  sources:
+    - 'section:8e8c94a1-92b5-4b37-84ed-670e13da4f61' # Talks
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries
