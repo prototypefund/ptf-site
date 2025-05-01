@@ -28,6 +28,7 @@
     <div class="mt-10">
       {% include "_modules/next-reads" with {
         heading: "Past events"|t,
+        count: pastEventQuery.count(),
         sideLink: {
           text: "See upcoming events"|t,
           url: eventsIndex.url

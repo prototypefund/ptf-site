@@ -1,11 +1,8 @@
 {% extends "_layouts/layout.twig" %}
 
-{# Add count to next-reads #}
-
 {% set upcomingEvents = craft.entries.section('events')
   .date('>=' ~ now|date('Y-m-d'))
   .orderBy('date')
-  .all()
 %}
 
 {% set upcomingTalks = craft.entries.section('talks')
@@ -39,6 +36,7 @@
     <div class="mt-10">
       {% include "_modules/next-reads" with {
         heading: "Upcoming events"|t,
+        count: upcomingEvents.count(),
         sideLink: {
           text: "See past events"|t,
           url: pastEventsIndex.url

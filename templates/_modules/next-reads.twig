@@ -1,4 +1,5 @@
 {% set sideLink = sideLink|default(null) %}
+{% set count = count|default(null) %}
 
 {% set seeAll %}
   {% if sideLink|length %}
@@ -12,7 +13,7 @@
 <div class="mb-10 px-2 md:px-5">
   <div class="flex items-center mb-2.5 md:mb-5">
     <h4 class="font-surt text-head-22 md:text-head-32">
-      {{ heading }}
+      {{ heading }}{% if count is not empty %}<span class="text-rich-blue"> [{{ count }}]</span>{% endif %}
     </h4>
     {% if sideLink|length %}
       <div class="hidden sm:block sm:ml-auto">
