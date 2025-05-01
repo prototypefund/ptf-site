@@ -38,17 +38,21 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 mt-6 md:mt-23 gap-0 md:gap-11">
       {% if textColumnOne|length %}
-        {% include "_rich-text/simple" with {
-          text: textColumnOne,
-          size: "medium"
-        } only %}
+        <div>
+          {% include "_rich-text/simple" with {
+            text: textColumnOne,
+            size: "medium"
+          } only %}
+        </div>
       {% endif %}
 
       {% if textColumnTwo|length %}
-        {% include "_rich-text/simple" with {
-          text: textColumnTwo,
-          size: "medium"
-        } only %}
+        <div>
+          {% include "_rich-text/simple" with {
+            text: textColumnTwo,
+            size: "medium"
+          } only %}
+        </div>
       {% endif %}
     </div>
   </div>
