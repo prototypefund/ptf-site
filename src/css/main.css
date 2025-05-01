@@ -36,6 +36,8 @@
   --text-head-46--line-height: 1.2;
   --text-head-38: calc(38 / 16 * 1rem);
   --text-head-38--line-height: 1.2;
+  --text-head-36: calc(36 / 16 * 1rem);
+  --text-head-36--line-height: 1.2;
   --text-head-32: calc(32 / 16 * 1rem);
   --text-head-32--line-height: 1.2;
   --text-head-28: calc(28 / 16 * 1rem);
@@ -117,6 +119,8 @@
   --background-image-pattern-br-gray-2: url("/static/images/patterns/bg-pattern-br-gray-2.svg");
   --background-image-pattern-br-gray-3: url("/static/images/patterns/bg-pattern-br-gray-3.svg");
   --background-image-pattern-br-gray-4: url("/static/images/patterns/bg-pattern-br-gray-4.svg");
+  --background-image-pattern-bl-light-gray-1: url("/static/images/patterns/bg-pattern-bl-light-gray-1.svg");
+  --background-image-pattern-tr-light-gray-1: url("/static/images/patterns/bg-pattern-tr-light-gray-1.svg");
   --background-image-pattern-newsletter: url("/static/images/patterns/bg-pattern-newsletter.svg");
 }
 

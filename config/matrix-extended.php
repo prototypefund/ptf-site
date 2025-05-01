@@ -11,7 +11,7 @@
               'groups' => [
                 [
                   'label' => \Craft::t('app', 'Blocks'),
-                  'types' => ['sideHeadingText', 'textGrid', 'relatedLinkList', 'expandableText', 'relatedTimeline', 'relatedPublications', 'peopleGrid', 'steps', 'relatedCtaBanner', 'embed', 'newsletter'],
+                  'types' => ['sideHeadingText', 'textGrid', 'relatedLinkList', 'expandableText', 'relatedTimeline', 'relatedPublications', 'peopleGrid', 'steps', 'statement', 'relatedCtaBanner', 'embed', 'newsletter'],
                 ],
                 [
                   'label' => \Craft::t('app', 'Teasers'),
@@ -19,7 +19,7 @@
                 ],
                 [
                   'label' => \Craft::t('app', '⏳'),
-                  'types' => ['genericTeasers', 'statement'],
+                  'types' => ['genericTeasers'],
                 ],
               ],
           ]
