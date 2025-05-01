@@ -5,7 +5,14 @@
   .orderBy('date desc')
 %}
 
-{% paginate pastEventQuery.limit(6) as pagination, events %}
+{% paginate pastEventQuery.limit(6) as pastEventPagination, events %}
+
+{% set pastTalksQuery = craft.entries.section('talks')
+  .date('<' ~ now|date('Y-m-d'))
+  .orderBy('date desc')
+%}
+
+{% paginate pastTalksQuery.limit(4) as pastTalksPagination, talks %}
 
 {% block content %}
   {% include "_modules/headers/simple" with {
@@ -21,7 +28,7 @@
     {% set content %}
       {% include "events/_modules/teasers-list" with { events: events } %}
       <div class="mt-5">
-        {% include "_modules/pagination" with { pagination: pagination } only %}
+        {% include "_modules/pagination" with { pagination: pastEventPagination } only %}
       </div>
     {% endset %}
 
@@ -33,6 +40,23 @@
           text: "See upcoming events"|t,
           url: eventsIndex.url
         },
+        content: content,
+      } only %}
+    </div>
+  {% endif %}
+
+  {% if talks|length %}
+    {% set content %}
+      {% for talk in talks %}
+        {{ talk.render() }}
+      {% endfor %}
+      {% include "_modules/pagination" with { pagination: pastTalksPagination } only %}
+    {% endset %}
+
+    <div class="mt-10">
+      {% include "_modules/next-reads" with {
+        heading: "Past talks"|t,
+        count: pastTalksQuery.count(),
         content: content,
       } only %}
     </div>

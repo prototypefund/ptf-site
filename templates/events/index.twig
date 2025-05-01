@@ -8,14 +8,12 @@
 {% set upcomingTalks = craft.entries.section('talks')
   .date('>=' ~ now|date('Y-m-d'))
   .orderBy('date')
-  .all()
 %}
 
 {% set pastTalks = craft.entries.section('talks')
   .date('<' ~ now|date('Y-m-d'))
   .orderBy('date desc')
   .limit(4)
-  .all()
 %}
 
 {% block content %}
@@ -46,14 +44,17 @@
     </div>
   {% endif %}
 
-  {# {% if upcomingTalks|length %}
+  {% if upcomingTalks|length %}
     {% set content %}
-      {{ upcomingTalks|length }}
+      {% for talk in upcomingTalks %}
+        {{ talk.render() }}
+      {% endfor %}
     {% endset %}
 
     <div class="mt-10">
       {% include "_modules/next-reads" with {
         heading: "Upcoming talks"|t,
+        count: upcomingEvents.count(),
         content: content,
       } only %}
     </div>
@@ -61,20 +62,23 @@
 
   {% if pastTalks|length %}
     {% set content %}
-      {{ pastTalks|length }}
+      {% for talk in pastTalks %}
+        {{ talk.render() }}
+      {% endfor %}
     {% endset %}
 
     <div class="mt-10">
       {% include "_modules/next-reads" with {
         heading: "Past talks"|t,
+        count: pastTalks.count(),
         sideLink: {
           text: "See all"|t,
-          url: "https://www.example.com"
+          url: pastEventsIndex.url
         },
         content: content,
       } only %}
     </div>
-  {% endif %} #}
+  {% endif %}
 
   <div class="mt-10">
     {% include "_modules/modules" with { entry: entry } %}

@@ -1,4 +1,4 @@
-dateModified: 1746092470
+dateModified: 1746099862
 elementSources:
   craft\elements\Entry:
     -
@@ -304,7 +304,7 @@ meta:
     c0e7400b-5611-4a34-bc52-4cd0edc31e41: Sites # Sites
     c03eff61-59aa-491d-bfa0-db442637813a: Article # Article
     c08345c7-f10a-42ce-b893-7f2e82a46fbb: Embed # Embed
-    c5f55fcf-63a3-46ab-8990-2d967de34b7d: Spakers # Spakers
+    c5f55fcf-63a3-46ab-8990-2d967de34b7d: Speakers # Speakers
     c8c2dcfa-75cb-423f-9565-b550807d0e7e: 'Resize: width 1500px' # Resize: width 1500px
     c32d4850-8999-46e0-aad2-c43b9d69e8bd: 'Avatar (Large)' # Avatar (Large)
     c85b9b92-e92c-448e-be1b-853494683b99: 'Project Technologies' # Project Technologies
