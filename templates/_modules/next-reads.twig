@@ -14,7 +14,7 @@
     <h4 class="font-surt text-head-22 md:text-head-32">
       {{ heading }}
     </h4>
-    {% if blogIndex|length %}
+    {% if sideLink|length %}
       <div class="hidden sm:block sm:ml-auto">
         {{ seeAll }}
       </div>
@@ -23,7 +23,9 @@
 
   {{ content|raw }}
 
-  <div class="flex justify-center sm:hidden">
-    {{ seeAll }}
-  </div>
+  {% if sideLink|length %}
+    <div class="flex justify-center sm:hidden">
+      {{ seeAll }}
+    </div>
+  {% endif %}
 </div>
