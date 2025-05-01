@@ -1,7 +1,7 @@
-{% set nextReads = module.eventNextReads.eagerly().all() %}
+{% set nextReads = module.talkTeasers.eagerly().all() %}
 
 {% if nextReads|length == 0 %}
-  {% set nextReads = craft.entries.section('events')
+  {% set nextReads = craft.entries.section('talks')
     .date('>=' ~ now|date('Y-m-d'))
     .orderBy('date')
     .limit(3)
@@ -9,7 +9,9 @@
 {% endif %}
 
 {% set content %}
-  {% include "events/_modules/teasers-list" with { events: nextReads } %}
+  {% for talk in nextReads %}
+    {{ talk.render() }}
+  {% endfor %}
 {% endset %}
 
 {% if nextReads|length %}

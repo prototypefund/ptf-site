@@ -102,7 +102,7 @@ fieldLayouts:
           -
             dateAdded: '2025-05-01T09:09:03+00:00'
             elementCondition: null
-            fieldUid: c5f55fcf-63a3-46ab-8990-2d967de34b7d # Spakers
+            fieldUid: c5f55fcf-63a3-46ab-8990-2d967de34b7d # Speakers
             handle: null
             includeInCards: false
             instructions: null

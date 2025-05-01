@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: spakers
+handle: speakers
 instructions: null
-name: Spakers
+name: Speakers
 searchable: false
 settings:
   byteLimit: null

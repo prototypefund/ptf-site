@@ -61,6 +61,11 @@ settings:
       __assoc__:
         -
           - uid
+          - 3443991a-aefd-4589-ab8f-68fd0f785ea1 # Talk Teasers
+    -
+      __assoc__:
+        -
+          - uid
           - dcc2d4f6-0aa9-41e6-9135-942fc9d3f8ad # Link List
     -
       __assoc__:
