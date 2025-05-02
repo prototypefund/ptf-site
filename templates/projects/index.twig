@@ -24,11 +24,12 @@
 
 {% set projectsQuery = craft.entries.section("projects") %}
 
-{% set statusParams = params["status"]|default([]) %}
 {% set yearGroupParams = params["year-group"]|default([]) %}
 {% set roundParams = params["round"]|default([]) %}
 {% set topicParams = params["topic"]|default([]) %}
 {% set technologyParams = params["technology"]|default([]) %}
+{% set licenseParams = params["license"]|default([]) %}
+{% set statusParams = params["status"]|default([]) %}
 
 {% set relations = [] %}
 
@@ -56,6 +57,12 @@
   ]) %}
 {% endif %}
 
+{% if licenseParams|length %}
+  {% set relations = relations|merge([
+    { targetElement: craft.categories.group('projectLicenses').slug(licenseParams) }
+  ]) %}
+{% endif %}
+
 {% if statusParams|length %}
   {% set projectsQuery = projectsQuery.projectStatus(statusParams) %}
 {% endif %}
@@ -80,6 +87,7 @@
 {% set rounds = craft.categories.group("projectRounds").all() %}
 {% set topics = craft.categories.group("projectTopics").all() %}
 {% set technologies = craft.categories.group("projectTechnologies").all() %}
+{% set licenses = craft.categories.group("projectLicenses").all() %}
 
 {% block content %}
   {% include "_modules/headers/simple" with {
@@ -161,6 +169,20 @@
           {% include "projects/_modules/categories-filter" with {
             key: "technology",
             categories: technologies,
+            params,
+          } only %}
+        </div>
+      {% endif %}
+
+      {% if licenses|length %}
+        <div class="mb-4 pt-[0.625rem] border-gray-400 border-t">
+          <h3 class="text-body-14 uppercase mb-2">
+            {{ "Licenses"|t }}
+          </h3>
+
+          {% include "projects/_modules/categories-filter" with {
+            key: "license",
+            categories: licenses,
             params,
           } only %}
         </div>
