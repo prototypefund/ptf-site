@@ -1,4 +1,4 @@
-dateModified: 1746185993
+dateModified: 1746187409
 elementSources:
   craft\elements\Entry:
     -
@@ -182,6 +182,7 @@ meta:
     0a7d996f-dc9c-416e-ab72-2d475eaa550b: Talk # Talk
     0b9eb562-64e5-4b3c-9478-8cefd24e8039: Text # Text
     0d857c68-7bb1-4ce7-b61f-671446aa8bb3: SEO # SEO
+    0e9ca8fc-3503-4942-bf20-ba2ce515307f: 'Project Licenses' # Project Licenses
     0f8a3079-62db-4270-ac53-6903c9b28557: 'Main Image' # Main Image
     1a0ed17a-7208-4b7e-894f-64506d5432d6: 'Events Index' # Events Index
     1bf40018-82e4-4e44-bbd6-6f49c132678d: Modules # Modules
@@ -190,6 +191,7 @@ meta:
     1f4132a7-2573-4ef2-9585-5323907ea4b4: Newsletter # Newsletter
     2b8e8081-de20-479d-a37d-362dded4c944: Juror # Juror
     2b86894c-5b98-44d4-8ed6-88b2c8b5e601: 'Blog Index' # Blog Index
+    2c6d48c3-1f95-478e-ac4f-41e02dc90eb8: 'Project Licenses' # Project Licenses
     2c8df106-11d5-4758-8b01-d51d565188f0: 'Talk Teasers' # Talk Teasers
     2d6b9ef4-4190-4cf7-9a92-b6f6b0fb7f61: 'CTA Banner' # CTA Banner
     03b9d1d0-a193-4abc-aeb8-92d2269844e9: 'CTA Background' # CTA Background
@@ -262,7 +264,6 @@ meta:
     546a2098-ec0e-4c83-aafc-66cdc354f32f: 'Trends Index' # Trends Index
     633b77bd-edb2-4812-ae43-7d61e39fd8fd: 'Main Footer Links' # Main Footer Links
     645eb55b-61e5-4ed2-bf31-caed18a16ffb: 'Blog Index' # Blog Index
-    704f68f7-7b03-4825-a337-ab9d195a33e6: 'Project License' # Project License
     734f959a-796d-4882-babd-df0495b02b2e: Publications # Publications
     747e573a-dea9-419c-9f81-e1778c7f1b13: 'Phase Text' # Phase Text
     824f9bd0-21d0-47fd-a48a-b8519da12b29: Quote # Quote

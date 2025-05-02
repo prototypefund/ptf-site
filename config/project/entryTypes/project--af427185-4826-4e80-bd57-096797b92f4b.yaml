@@ -138,22 +138,6 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-21T12:13:01+00:00'
-            elementCondition: null
-            fieldUid: 704f68f7-7b03-4825-a337-ab9d195a33e6 # Project License
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: fbc9fc63-a39b-428d-8ce7-c4cab2d964cb
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2025-04-21T12:16:07+00:00'
             elementCondition: null
             fieldUid: 5a633b8c-0848-4867-8990-245346e525e8 # Project Funding Amount
@@ -220,6 +204,22 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: d6cf108c-ba1b-47f5-919b-e5f8f8f55077
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-02T11:53:35+00:00'
+            elementCondition: null
+            fieldUid: 0e9ca8fc-3503-4942-bf20-ba2ce515307f # Project Licenses
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7f35c083-3c1d-45f5-bb51-5c330f8d5ea0
             userCondition: null
             warning: null
             width: 100
