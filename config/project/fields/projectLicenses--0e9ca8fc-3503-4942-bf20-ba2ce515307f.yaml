@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: projectLicenses
+instructions: null
+name: 'Project Licenses'
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  source: 'group:2c6d48c3-1f95-478e-ac4f-41e02dc90eb8' # Project Licenses
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories
