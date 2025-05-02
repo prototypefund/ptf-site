@@ -2,6 +2,8 @@
 
 {% block content %}
   <div class="h-[50vw] text-gray-400 flex items-center justify-center">
-    Homepage
+    Homepage header
   </div>
+
+  {% include "_modules/modules" with { entry: entry } only %}
 {% endblock %}
