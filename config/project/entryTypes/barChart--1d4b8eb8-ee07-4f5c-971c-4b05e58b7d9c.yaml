@@ -1,0 +1,83 @@
+color: null
+fieldLayouts:
+  8219643c-7b68-4e84-bc08-b7cd3adeb078:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-05-01T13:02:02+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 6c3fc8c3-34a7-4b32-90dd-aeeb0cd852bb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-01T13:05:24+00:00'
+            elementCondition: null
+            fieldUid: 62bd293d-8f1c-49bc-bd74-5fc98d9eefba # Data
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e2dc24ae-278d-4a41-be0c-967460584726
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-01T13:05:24+00:00'
+            elementCondition: null
+            fieldUid: 183a1c32-7844-45ce-93f1-a991260eeadc # Caption
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 41c0d04e-22bb-49a8-adaf-f21901d0d120
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: b279ef00-a42d-4e25-9001-2db622f90b19
+        userCondition: null
+handle: barChart
+hasTitleField: true
+icon: null
+name: 'Bar Chart'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
