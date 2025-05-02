@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: charts
+instructions: null
+name: Charts
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  sources:
+    - 'section:e84ef096-91d0-41ed-8a5c-6afffcfc2ed6' # Bar Charts
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

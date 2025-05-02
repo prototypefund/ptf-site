@@ -1,0 +1,27 @@
+{% set charts = entry.charts.all() %}
+
+{% if charts|length %}
+  <div class="mb-3 md:mb-4 last:mb-0 {{ charts|length > 1 ? "lg:grid lg:grid-cols-2 lg:gap-5" }}">
+    {% for chart in charts %}
+      {% set caption = chart.caption %}
+      {% set data = chart.data
+        |filter((item) => item.value is not empty)
+        |map((item) => {
+          name: item.name,
+          value: item.value
+        })
+        |json_encode
+      %}
+
+      <div>
+        <div class="aspect-4/2 mb-[10px]">
+          <bar-chart data-chart='{{ data }}'></bar-chart>
+        </div>
+        
+        {% if caption|length %}
+          <p class="text-body-12">{{ caption }}</p>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}

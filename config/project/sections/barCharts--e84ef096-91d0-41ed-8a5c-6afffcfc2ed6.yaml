@@ -1,0 +1,33 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 1d4b8eb8-ee07-4f5c-971c-4b05e58b7d9c # Bar Chart
+handle: barCharts
+maxAuthors: 1
+name: 'Bar Charts'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  af0bbe1c-3613-4775-8a01-965b68d4e56e: # English
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+  ddc3aedf-983b-4fa7-81eb-69fd761d71af: # German
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: channel
