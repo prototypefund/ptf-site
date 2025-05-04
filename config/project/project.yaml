@@ -1,4 +1,4 @@
-dateModified: 1746187409
+dateModified: 1746358818
 elementSources:
   craft\elements\Entry:
     -
@@ -196,6 +196,7 @@ meta:
     2d6b9ef4-4190-4cf7-9a92-b6f6b0fb7f61: 'CTA Banner' # CTA Banner
     03b9d1d0-a193-4abc-aeb8-92d2269844e9: 'CTA Background' # CTA Background
     3b248e70-b3e8-4bc4-bdef-ff5deba55ac9: 'Second Stage Ending Date' # Second Stage Ending Date
+    3bc48eb6-2461-44a5-bd0d-4638e9f3c14c: 'Alt Text' # Alt Text
     3d4c1a3f-6b2d-4919-a863-32877e6722ce: 'Project Year Groups' # Project Year Groups
     4b6ba907-43f2-494b-9816-24894f8de0da: Newsletter # Newsletter
     4bfc6f18-1241-4dd1-be73-a95290f1a887: 'Event Teasers' # Event Teasers
