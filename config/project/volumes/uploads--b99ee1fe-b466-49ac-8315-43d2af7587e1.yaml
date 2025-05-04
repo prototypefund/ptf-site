@@ -69,6 +69,22 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-05-04T11:39:13+00:00'
+            elementCondition: null
+            fieldUid: 3bc48eb6-2461-44a5-bd0d-4638e9f3c14c # Alt Text
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Temp Alt Text'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bd8230bc-dfb2-4898-94a9-0790be90bc16
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-04-07T13:01:43+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
