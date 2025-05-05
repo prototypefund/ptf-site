@@ -41,7 +41,6 @@
       {% set link = linkGroup.genericLink %}
 
       {% if link|length %}
-        {% set isExternal = link.type == "url" %}
         {% set sideInfo = linkGroup.sideInfo %}
 
         <li class="text-head-16 md:text-head-18 py-[1.13rem] px-2 md:px-3 flex items-center md:h-[3.9375rem] border-[#5d5190d9] border-b last:border-0 first:!border-b">
