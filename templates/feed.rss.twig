@@ -10,7 +10,7 @@
     <pubDate>{{ now|rss }}</pubDate>
     <lastBuildDate>{{ now|rss }}</lastBuildDate>
 
-    {% set entries = craft.entries().section('blog').with(["mainImage.image:image", "nextReads"]).limit(10).all() %}
+    {% set entries = craft.entries().section('blog').limit(10).all() %}
 
     {% for entry in entries %}
       <item>
@@ -20,15 +20,15 @@
         <author>{{ entry.author.email }} ({{ seomatic.site.siteName }})</author>
         <guid>{{ entry.url }}</guid>
         <description>
-          {% set nextReads = entry.nextReads %}
+          {% set nextReads = entry.nextReads.eagerly().all() %}
+          {% set mainImage = entry.mainImage.eagerly().one() %}
 
-          {% if entry.mainImage|length %}
-            {% set figure = entry.mainImage[0] %}
+          {% if mainImage %}
             <![CDATA[
               <figure>
-                <img src="{{ figure.image[0].getUrl("w1000") }}" alt="{{ figure.image[0].alt }}">
-                {% if figure.caption|length %}
-                  <figcaption>{{ figure.caption|raw }}</figcaption>
+                <img src="{{ mainImage.getUrl("w1000") }}" alt="{{ mainImage.alt }}">
+                {% if mainImage.caption|length %}
+                  <figcaption>{{ mainImage.caption|raw }}</figcaption>
                 {% endif %}
               </figure>
             ]]>
