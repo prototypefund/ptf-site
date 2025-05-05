@@ -33,12 +33,34 @@
 
     <div class="mt-10">
       {% include "_modules/next-reads" with {
-        heading: "Upcoming events"|t,
+        heading: "Upcoming Events"|t,
         count: upcomingEvents.count(),
         sideLink: {
           text: "See past events"|t,
           url: pastEventsIndex.url
         },
+        content: content,
+      } only %}
+    </div>
+  {% else %}
+    {% set pastEvents = craft.entries.section('events')
+      .date('<' ~ now|date('Y-m-d'))
+      .orderBy('date desc')
+      .limit(4)
+    %}
+
+    {% set content %}
+      {% include "events/_modules/teasers-list" with { events: pastEvents } %}
+    {% endset %}
+
+    <div class="mt-10">
+      {% include "_modules/next-reads" with {
+        heading: "Past Events"|t,
+        count: pastEvents.count(),
+        sideLink: pastEvents.count() > pastEvents.limit ? {
+          text: "See all"|t,
+          url: pastEventsIndex.url
+        } : null,
         content: content,
       } only %}
     </div>
@@ -53,8 +75,8 @@
 
     <div class="mt-10">
       {% include "_modules/next-reads" with {
-        heading: "Upcoming talks"|t,
-        count: upcomingEvents.count(),
+        heading: "Upcoming Talks and Conferences"|t,
+        count: upcomingTalks.count(),
         content: content,
       } only %}
     </div>
@@ -69,11 +91,11 @@
 
     <div class="mt-10">
       {% include "_modules/next-reads" with {
-        heading: "Past talks"|t,
+        heading: "Past Talks"|t,
         count: pastTalks.count(),
         sideLink: {
           text: "See all"|t,
-          url: pastEventsIndex.url
+          url: pastEventsIndex.url ~ "#past-talks"
         },
         content: content,
       } only %}

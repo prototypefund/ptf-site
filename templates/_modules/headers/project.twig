@@ -2,7 +2,10 @@
 {% set claim = entry.headline %}
 {% set dateUpdated = entry.dateUpdated %}
 {% set image = entry.mainImage.eagerly().one() %}
-{% set projectLinks = entry.projectLinks %}
+{% set projectLinks = entry.projectLinks
+  |default([])
+  |filter(item => item.name is not empty and item.linkURL is not empty)
+%}
 
 {% set demoLink = projectLinks
   |filter(item => item.name in [

@@ -138,6 +138,44 @@ fieldLayouts:
             uid: a49e2656-bb0f-474d-9bfb-d632cfb30395
             userCondition: null
           -
+            dateAdded: '2025-05-05T21:56:58+00:00'
+            elementCondition: null
+            fieldUid: d99528c4-136b-413c-9799-56fd20edd2c6 # Headline
+            handle: issuesHeading
+            includeInCards: false
+            instructions: null
+            label: 'Issues Heading'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c1458f97-1eef-4d14-aee1-82a88ab9ebe1
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-05T21:58:14+00:00'
+            elementCondition: null
+            fieldUid: f4ddd6a2-288b-4881-a762-884e48b3f1f1 # Description
+            handle: issuesDescription
+            includeInCards: false
+            instructions: null
+            label: 'Issues Description'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 09762da9-92c2-4568-881f-5a94fbee64a2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-05T21:56:58+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: daa1f6ff-8200-45fd-bbfc-7fae48dc5e28
+            userCondition: null
+          -
             dateAdded: '2025-04-28T10:57:11+00:00'
             elementCondition: null
             fieldUid: 1bf40018-82e4-4e44-bbd6-6f49c132678d # Modules

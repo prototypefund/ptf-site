@@ -1,5 +1,27 @@
 {% extends "_layouts/layout.twig" %}
 
+{% set issuesHeading = entry.issuesHeading %}
+{% set issuesDescription = entry.issuesDescription %}
+{% set linkListLinks = [] %}
+
+{% for linkGroup in newsletter.newsletterLinks.all() %}
+  {% set link = linkGroup.genericLink %}
+  {% set sideInfo = linkGroup.sideInfo %}
+
+  {% if link|length %}
+    {% set linkListLinks = [{
+      title: link.label,
+      subheading: linkGroup.sideInfo,
+      genericLink: {
+        label: "See"|t,
+        type: link.type,
+        url: link.url,
+        target: link.target
+      },
+    }]|merge(linkListLinks) %}
+  {% endif %}
+{% endfor %}
+
 {% set content %}
   Newsletter
 {% endset %}
@@ -16,6 +38,16 @@
   } only %}
 
   <div class="mt-10">
+    {% if issuesHeading|length and issuesDescription|length %}
+      {% include "_modules/blocks/link-list" with {
+        module: {
+          title: issuesHeading,
+          description: issuesDescription,
+          linkListLinks: linkListLinks
+        }
+      } only %}
+    {% endif %}
+
     {% include "_modules/modules" with { entry: entry } %}
   </div>
 {% endblock %}
