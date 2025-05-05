@@ -2,30 +2,31 @@
 {% set itemClasses = "text-body-16 text-[#898989] hover:text-gray-200 px-[0.63rem] transition-colors" %}
 {% set spacerClasses = "" %}
 {% set activeClasses = "!text-gray-200 border-gray-400 border-x" %}
+{% set appendUrl = appendUrl|default("") %}
 
 {% if pagination.totalPages > 1 %}
   <div class="flex flex-row justify-center items-center py-[0.625rem] md:py-2.5">
     {% apply spaceless %}
       {% if pagination.currentPage > offset + 1 %}
-        <a class="{{ itemClasses }}" href="{{ pagination.firstUrl }}">1</a>
+        <a class="{{ itemClasses }}" href="{{ pagination.firstUrl ~ appendUrl }}">1</a>
       {% endif %}
       {% if pagination.currentPage > (offset + 2) %}
         <span class="{{ itemClasses }} {{ spacerClasses }}">…</span>
       {% endif %}
       {% for page, url in pagination.getPrevUrls(offset) %}
-        <a class="{{ itemClasses }}" href="{{ url }}">{{ page }}</a>
+        <a class="{{ itemClasses }}" href="{{ url ~ appendUrl }}">{{ page }}</a>
       {% endfor %}
       <span class="{{ itemClasses }} {{ activeClasses }}">
         {{ pagination.currentPage }}
       </span>
       {% for page, url in pagination.getNextUrls(offset) %}
-        <a class="{{ itemClasses }}" href="{{ url }}">{{ page }}</a>
+        <a class="{{ itemClasses }}" href="{{ url ~ appendUrl }}">{{ page }}</a>
       {% endfor %}
       {% if pagination.totalPages > pagination.currentPage + (offset + 1) %}
         <span class="{{ itemClasses }} {{ spacerClasses }}">…</span>
       {% endif %}
       {% if pagination.totalPages > pagination.currentPage + offset %}
-        <a class="{{ itemClasses }}" href="{{ pagination.lastUrl }}">
+        <a class="{{ itemClasses }}" href="{{ pagination.lastUrl ~ appendUrl }}">
           {{ pagination.totalPages }}
         </a>
       {% endif %}

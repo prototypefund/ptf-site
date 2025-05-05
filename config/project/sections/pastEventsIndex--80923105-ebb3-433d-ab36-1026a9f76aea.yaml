@@ -29,5 +29,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: events/_past.twig
-    uriFormat: events/vergangene-events
+    uriFormat: events/vergangene-veranstaltungen
 type: single

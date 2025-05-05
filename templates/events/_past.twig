@@ -34,10 +34,10 @@
 
     <div class="mt-10">
       {% include "_modules/next-reads" with {
-        heading: "Past events"|t,
+        heading: "Past Events"|t,
         count: pastEventQuery.count(),
         sideLink: {
-          text: "See upcoming events"|t,
+          text: "See Upcoming Events"|t,
           url: eventsIndex.url
         },
         content: content,
@@ -50,12 +50,15 @@
       {% for talk in talks %}
         {{ talk.render() }}
       {% endfor %}
-      {% include "_modules/pagination" with { pagination: pastTalksPagination } only %}
+      {% include "_modules/pagination" with {
+        pagination: pastTalksPagination,
+        appendUrl: "#past-talks"
+      } only %}
     {% endset %}
 
-    <div class="mt-10">
+    <div id="past-talks" class="mt-10">
       {% include "_modules/next-reads" with {
-        heading: "Past talks"|t,
+        heading: "Past Talks"|t,
         count: pastTalksQuery.count(),
         content: content,
       } only %}
