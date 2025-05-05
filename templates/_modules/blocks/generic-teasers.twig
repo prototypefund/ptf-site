@@ -5,21 +5,31 @@
   {% for teaser in teasers %}
     {% set image = teaser.mainImage.one() %}
     {% set link = teaser.genericLink %}
+      <div class="grid grid-cols-1 md:grid-cols-16 border-t border-gray-400 px-2 md:px-0 py-3 md:py-0 md:mb-8 group">
+        <div class="flex flex-col relative md:col-span-7 md:group-even:col-start-10">
+          <div class="md:h-full md:w-full">
+            {% if image %}
+              <img class="block w-full h-full object-cover" src="{{ image.url }}" alt="{{ image.alt }}">
+            {% endif %}
+          </div>
+        </div>
 
-    {{ teaser.title }}
+        <div class="md:col-span-8 md:col-start-9 md:group-even:order-first md:group-even:col-start-1">
+          <h2 class="font-surt uppercase text-head-22 md:text-head-28 mt-5 mb-3">{{ teaser.title }}</h2>
+          {% include "_rich-text/simple" with {
+            text: teaser.teaserText
+          } only %}
 
-    {% if image %}
-      {{ image.url }}
-    {% endif %}
-
-    {% include "_rich-text/simple" with {
-      text: teaser.teaserText
-    } only %}
-
-    {% if link|length %}
-      {# We can use "_modules/button-link" here #}
-      {{ link }}
-    {% endif %}
+          {% if link|length %}
+            <div class="mt-5 md:mt-8">
+              {% include "_modules/button-link" with {
+                url: link.url,
+                text: link.label
+              } only %}
+            </div>
+          {% endif %}
+        </div>
+      </div>
   {% endfor %}
 {% endset %}
 
@@ -35,3 +45,7 @@
     content: content,
   } only %}
 {% endif %}
+
+
+
+
