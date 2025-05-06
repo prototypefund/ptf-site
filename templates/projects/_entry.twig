@@ -9,7 +9,7 @@
 {% set teamMembers = entry.projectTeamMembers %}
 {% set licenses = entry.projectLicenses %}
 {% set fundingAmount = entry.projectFundingAmount %}
-{% set fundingStatus = macros.inFunding(entry)|boolean %}
+{% set fundingStatus = macros.fundingStatus(entry) %}
 
 {% block content %}
   <article class="mb-10 last:mb-0">
