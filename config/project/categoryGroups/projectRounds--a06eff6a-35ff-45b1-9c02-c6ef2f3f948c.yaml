@@ -36,34 +36,56 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-23T11:34:53+00:00'
+            dateAdded: '2025-05-06T10:50:27+00:00'
             elementCondition: null
-            fieldUid: dad251bb-ffd5-4dc0-81fb-fe15629744ba # Ending Date
-            handle: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 853ddb80-0ea9-46d2-a801-81b7d620d20b
+            userCondition: null
+          -
+            dateAdded: '2025-05-06T10:50:27+00:00'
+            elementCondition: null
+            fieldUid: abb2edcb-afed-4766-9c25-594bf7d42262 # Date
+            handle: startDate
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Start Date'
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: ffeaad60-4b64-4962-9678-eca072924385
+            uid: 7a788034-6299-4fc5-9df2-59870a677a9d
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-04-23T11:38:55+00:00'
+            dateAdded: '2025-05-06T10:50:27+00:00'
             elementCondition: null
-            fieldUid: 3b248e70-b3e8-4bc4-bdef-ff5deba55ac9 # Second Stage Ending Date
-            handle: null
+            fieldUid: abb2edcb-afed-4766-9c25-594bf7d42262 # Date
+            handle: endDateRegular
             includeInCards: false
             instructions: null
-            label: null
+            label: 'End Date – Regular'
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 8fecbd0e-d372-48ad-b04e-4bad892d26b5
+            uid: 4415c20f-681d-4ece-8fd5-77ab72d69b8c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-06T10:50:27+00:00'
+            elementCondition: null
+            fieldUid: abb2edcb-afed-4766-9c25-594bf7d42262 # Date
+            handle: endDateSecondStage
+            includeInCards: false
+            instructions: null
+            label: 'End Date – Second Stage'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4b56048f-f63b-429f-b51d-6784c629012f
             userCondition: null
             warning: null
             width: 100

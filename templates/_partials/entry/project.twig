@@ -1,3 +1,5 @@
+{% import '_macros' as macros %}
+
 {% set image = entry.mainImage.eagerly().one() %}
 {% set inFunding = "inUsage" in entry.projectStatus %}
 {% set claim = entry.headline %}
@@ -27,10 +29,10 @@
       </div>
 
       <div class="col-span-9">
-        {% if inFunding|length %}
+        {% if macros.inFunding(entry)|boolean %}
           <div class="mb-1 md:mb-2">
             {% include "_modules/pill" with {
-              text: "In Funding"|t
+              entry: entry
             } only %}
           </div>
         {% endif %}

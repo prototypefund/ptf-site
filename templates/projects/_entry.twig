@@ -1,3 +1,5 @@
+{% import '_macros' as macros %}
+
 {% extends "_layouts/layout.twig" %}
 
 {% set headline = entry.title %}
@@ -7,6 +9,7 @@
 {% set teamMembers = entry.projectTeamMembers %}
 {% set licenses = entry.projectLicenses %}
 {% set fundingAmount = entry.projectFundingAmount %}
+{% set fundingStatus = macros.inFunding(entry)|boolean %}
 
 {% block content %}
   <article class="mb-10 last:mb-0">
@@ -44,6 +47,32 @@
               </h4>
 
               <p class="text-body-18 md:text-body-20">{{ fundingAmount }}</p>
+            </div>
+          {% endif %}
+
+          {% if fundingStatus|length %}
+            {% set round = entry.projectRounds.one() %}
+            {% set startDate = round.startDate|default(null) %}
+            {% set endDateRegular = round.endDateRegular|default(null) %}
+            {% set endDateSecondStage = round.endDateSecondStage|default(null) %}
+            
+            <div class="pt-1 mb-4 md:mb-5 last:mb-0 border-t border-gray-400">
+              <h4 class="uppercase text-head-14 md:text-head-16 text-gray-500 mb-1 md:mb-2">
+                {{ "Funding Info"|t }}
+              </h4>
+
+              <p class="text-body-18 md:text-body-20">
+                {% switch fundingStatus %}
+                  {% case 'inDuration' %}
+                    {{ 'Since {startDate}'|t(params = { startDate: startDate|date('d/m/Y') }) }}
+                  {% case 'completed' %}
+                    {{ startDate|date('d/m/Y') }} – {{ endDateRegular|date('d/m/Y') }}
+                  {% case 'inDurationWithSecondStage' %}
+                    {{ 'Since {startDate}, currently in Second Stage'|t(params = { startDate: startDate|date('d/m/Y') }) }}
+                  {% case 'completedWithSecondStage' %}
+                    {{ '{startDate} –  {endDateSecondStage} (incl. Second Stage)'|t(params = { startDate: startDate|date('d/m/Y'), endDateSecondStage: endDateSecondStage|date('d/m/Y') }) }}
+                {% endswitch %}
+              </a>
             </div>
           {% endif %}
         </div>
