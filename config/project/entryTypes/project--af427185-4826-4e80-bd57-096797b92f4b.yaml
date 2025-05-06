@@ -84,6 +84,28 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-05-06T10:51:31+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: ced56376-a993-46c6-be2e-a64b82b1e171
+            userCondition: null
+          -
+            dateAdded: '2025-05-06T10:51:31+00:00'
+            elementCondition: null
+            fieldUid: 5664191c-7a44-4eea-8f68-0ebeab8bbb41 # Second Stage
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 328f3a97-0c4b-4a1c-938d-4b9620eed933
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-04-21T11:04:52+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule

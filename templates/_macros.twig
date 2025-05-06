@@ -9,3 +9,32 @@
   {% set imageSizes = [500, 1000, 1500, 2000] %}
   {{ imageSizes|reduce((carry, v) => "#{carry}, #{image.getUrl('w'~v)} #{v}w", "") }}
 {% endapply %}{% endmacro %}
+
+{% macro fundingStatus(entry) %}{% apply spaceless %}
+  {% set currentDate = now %}
+  {% set round = entry.projectRounds.one() %}
+  {% set secondStage = entry.secondStage|default(false) %}
+
+  {% if round|length %}
+    {% set startDate = round.startDate|default(null) %}
+    {% set endDateRegular = round.endDateRegular|default(null) %}
+    {% set endDateSecondStage = round.endDateSecondStage|default(null) %}
+
+    {% if startDate %}
+      {% if currentDate <= endDateRegular %}
+        {{ "inDuration" }}
+      {% elseif endDateRegular <= currentDate and not secondStage|length %}
+        {{ "completed" }}
+      {% elseif endDateRegular < currentDate <= endDateSecondStage and secondStage|length %}
+        {{ "inDurationWithSecondStage" }}
+      {% elseif currentDate < endDateSecondStage and secondStage|length %}
+        {{ "completedWithSecondStage" }}
+      {% endif %}
+    {% endif %}
+  {% endif %}
+{% endapply %}{% endmacro %}
+
+{% macro inFunding(entry) %}{% apply spaceless %}
+  {{ _self.fundingStatus(entry) in ["inDuration", "inDurationWithSecondStage"] }}
+{% endapply %}{% endmacro %}
+

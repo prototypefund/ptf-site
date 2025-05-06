@@ -1,4 +1,4 @@
-dateModified: 1746524562
+dateModified: 1746528691
 elementSources:
   craft\elements\Entry:
     -
@@ -195,7 +195,6 @@ meta:
     2c8df106-11d5-4758-8b01-d51d565188f0: 'Talk Teasers' # Talk Teasers
     2d6b9ef4-4190-4cf7-9a92-b6f6b0fb7f61: 'CTA Banner' # CTA Banner
     03b9d1d0-a193-4abc-aeb8-92d2269844e9: 'CTA Background' # CTA Background
-    3b248e70-b3e8-4bc4-bdef-ff5deba55ac9: 'Second Stage Ending Date' # Second Stage Ending Date
     3bc48eb6-2461-44a5-bd0d-4638e9f3c14c: 'Alt Text' # Alt Text
     3d4c1a3f-6b2d-4919-a863-32877e6722ce: 'Project Year Groups' # Project Year Groups
     4b6ba907-43f2-494b-9816-24894f8de0da: Newsletter # Newsletter
@@ -286,6 +285,7 @@ meta:
     860851bc-5058-4f0d-8f3f-481df7e56099: 'Project Rounds' # Project Rounds
     01991296-4d23-4e54-8e00-2f61d7a524c8: Editors # Editors
     3443991a-aefd-4589-ab8f-68fd0f785ea1: 'Talk Teasers' # Talk Teasers
+    5664191c-7a44-4eea-8f68-0ebeab8bbb41: 'Second Stage' # Second Stage
     7601873a-7197-47a0-9e66-c07512a11dd2: Email # Email
     17844487-59d2-4434-a5f4-3030d625da70: 'Expandable Text' # Expandable Text
     38533602-ed85-4c63-b7e3-819ae75ac47a: 'Surt – Regular' # Surt – Regular
@@ -341,7 +341,6 @@ meta:
     d42896d4-04a6-4211-8d97-f265c27a3be1: 'Inclusive Sans – Semibold (Italic)' # Inclusive Sans – Semibold (Italic)
     d99528c4-136b-413c-9799-56fd20edd2c6: Headline # Headline
     da7ab602-1ed1-46b0-9e1c-5ec3a6e60c92: 'Project Teaser' # Project Teaser
-    dad251bb-ffd5-4dc0-81fb-fe15629744ba: 'Ending Date' # Ending Date
     db2da9aa-6637-4df7-8df4-527aa118c61e: 'Link List' # Link List
     db43e022-8680-4b70-8b88-e6fc439994c5: 'Trend Teasers' # Trend Teasers
     dcc2d4f6-0aa9-41e6-9135-942fc9d3f8ad: 'Link List' # Link List
