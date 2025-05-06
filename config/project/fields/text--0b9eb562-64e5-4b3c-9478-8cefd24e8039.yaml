@@ -15,6 +15,11 @@ settings:
         -
           - uid
           - 62872793-9d0f-4ffe-a713-748f5c9c6605 # Charts
+    -
+      __assoc__:
+        -
+          - uid
+          - d26039c6-3f56-4e09-a666-c1fd8f160bee # Image Columns
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false

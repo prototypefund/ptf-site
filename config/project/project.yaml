@@ -1,4 +1,4 @@
-dateModified: 1746482294
+dateModified: 1746524562
 elementSources:
   craft\elements\Entry:
     -
@@ -268,6 +268,7 @@ meta:
     734f959a-796d-4882-babd-df0495b02b2e: Publications # Publications
     747e573a-dea9-419c-9f81-e1778c7f1b13: 'Phase Text' # Phase Text
     824f9bd0-21d0-47fd-a48a-b8519da12b29: Quote # Quote
+    861f15c4-66e5-4a20-8b69-3bca664a1602: Images # Images
     894e5185-035a-41d1-b272-0b6c1608aabf: 'Side Heading + Text' # Side Heading + Text
     1590aac3-cf3a-4fa5-8836-8a95303284c2: Teasers # Teasers
     2965e0c7-feb2-4aa2-98d4-de16d458eb30: Categories # Categories
@@ -336,6 +337,7 @@ meta:
     d13f787b-b91b-4821-8104-46e509830347: Avatar # Avatar
     d26ba65b-dbab-4a12-b3e8-1ae7a4a2845d: Quote # Quote
     d94ae721-befb-4d87-921e-3152926fdd9e: 'Step Text' # Step Text
+    d26039c6-3f56-4e09-a666-c1fd8f160bee: 'Image Columns' # Image Columns
     d42896d4-04a6-4211-8d97-f265c27a3be1: 'Inclusive Sans – Semibold (Italic)' # Inclusive Sans – Semibold (Italic)
     d99528c4-136b-413c-9799-56fd20edd2c6: Headline # Headline
     da7ab602-1ed1-46b0-9e1c-5ec3a6e60c92: 'Project Teaser' # Project Teaser
