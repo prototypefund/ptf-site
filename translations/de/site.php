@@ -18,6 +18,7 @@ return [
   "{startDate} –  {endDateSecondStage} (incl. Second Stage)" => "{startDate} –  {endDateSecondStage} (inkl. Second Stage)",
   "Filter projects" => "Projekte filtern",
   "Filter by category" => "Nach Kategorie filtern",
+  "In Funding" => "Aktuell Gefördert",
   "Last updated" => "Zuletzt aktualisiert",
   "Links" => "Links",
   "More articles" => "Mehr Artikel",
