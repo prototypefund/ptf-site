@@ -5,15 +5,16 @@
 @theme {
   --color-*: initial;
   --color-black: #000000;
-  --color-gray-600: #eaeaeb;
-  --color-gray-500: #4d4d4d;
-  --color-gray-400: #aaaaaa;
-  --color-gray-300: #898989;
-  --color-gray-200: #141414;
+  --color-gray-900: #141414;
+  --color-gray-800: #4d4d4d;
+  --color-gray-700: #737373;
+  --color-gray-600: #aaaaaa;
+  --color-gray-200: #eaeaeb;
   --color-gray-100: #f5f5f5;
   --color-sky-blue: #33ccff;
   --color-rich-blue: #171be5;
   --color-navy-blue: #1a0566;
+  --color-navy-blue-100: #5d5190d9;
   --color-light-blue: #adeaf7;
   --color-dark-magenta: #7d0e8c;
   --color-pink: #ffd2f5;
@@ -138,7 +139,7 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
+    border-color: var(--color-gray-900, currentColor);
   }
 
   html {
@@ -169,7 +170,7 @@
   button,
   textarea,
   select {
-    @apply accent-gray-500 dark:accent-gray-200;
+    @apply accent-gray-800 dark:accent-gray-900;
     font: inherit;
   }
 
@@ -182,7 +183,7 @@
   }
 
   :focus-visible {
-    @apply outline-hidden ring-8 dark:ring-4 ring-gray-500 dark:ring-gray-200;
+    @apply outline-hidden ring-8 dark:ring-4 ring-gray-800 dark:ring-gray-900;
   }
 
   @media print {
@@ -193,5 +194,5 @@
 }
 
 .text-link {
-  @apply underline hover:text-gray-500;
+  @apply underline hover:text-gray-800;
 }

@@ -15,6 +15,6 @@
 
 {% set url = '/' ~ craft.app.request.pathInfo ~ '?' ~ newParams ~ '#list' %}
 
-<a class="{{ isActive ? 'before:bg-black before:bg-tick-white' : 'before:bg-gray-600' }} flex gap-[10px] items-center text-head-16 before:rounded-[2px] before:block before:content-[''] before:h-[18px] before:w-[18px] before:bg-no-repeat before:bg-center" href="{{ url }}">
+<a class="{{ isActive ? 'before:bg-black before:bg-tick-white' : 'before:bg-gray-200' }} flex gap-[10px] items-center text-head-16 before:rounded-[2px] before:block before:content-[''] before:h-[18px] before:w-[18px] before:bg-no-repeat before:bg-center" href="{{ url }}">
   {{ text }}
 </a>

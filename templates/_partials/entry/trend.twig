@@ -12,7 +12,7 @@
     'after:xl:w-[11vw]'
   ]|join(' ') %}
 
-<div class="{{ pattern }} border-t last:border-b border-gray-400 pt-4 md:pt-3 pb-4 md:pb-5 ml-[-16px] w-[calc(100%+32px)] md:ml-[-40px] md:w-[calc(100%+80px)] relative after:content-[''] after:absolute after:right-0 after:h-full after:bg-no-repeat after:bg-contain">
+<div class="{{ pattern }} border-t last:border-b border-gray-600 pt-4 md:pt-3 pb-4 md:pb-5 ml-[-16px] w-[calc(100%+32px)] md:ml-[-40px] md:w-[calc(100%+80px)] relative after:content-[''] after:absolute after:right-0 after:h-full after:bg-no-repeat after:bg-contain">
   <div class="px-2 md:px-5 md:grid md:grid-cols-16">
     <div class="md:col-span-5 relative z-1">
       <h4 class="font-surt uppercase text-head-16 md:text-head-22 mb-[10px] md:mb-2.5 last:mb-0 break-words">
@@ -20,11 +20,11 @@
       </h4>
 
       <div class="mb-3 md:mb-0">
-        <time class="block text-gray-500 text-body-14 md:text-body-16" datetime="{{ postDate|date('Y-m-d') }}">
+        <time class="block text-gray-800 text-body-14 md:text-body-16" datetime="{{ postDate|date('Y-m-d') }}">
           {{ "Published on"|t }}: {{ postDate|date('d/m/Y') }}
         </time>
 
-        <time class="block text-gray-500 text-body-14 md:text-body-16 mb-3" datetime="{{ dateUpdated|date('Y-m-d') }}">
+        <time class="block text-gray-800 text-body-14 md:text-body-16 mb-3" datetime="{{ dateUpdated|date('Y-m-d') }}">
           {{ "Last updated"|t }}: {{ dateUpdated|date('d/m/Y') }}
         </time>
       </div>

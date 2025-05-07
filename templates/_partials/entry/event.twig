@@ -2,7 +2,7 @@
 {% set teaserText = entry.teaserText %}
 {% set image = entry.mainImage.eagerly().one() %}
 
-<article class="border-t border-0 md:last:border-b border-gray-400 pt-1 md:pt-3 md:py-6">
+<article class="border-t border-0 md:last:border-b border-gray-600 pt-1 md:pt-3 md:py-6">
   <a href="{{ entry.url }}">
     <div class="md:grid md:grid-cols-16">
       <div class="mb-4 md:mb-0 md:col-span-4 md:pr-4">
@@ -15,7 +15,7 @@
         </div>
 
         {% if location|length %}
-          <p class="text-gray-500">{{ location }}</p>
+          <p class="text-gray-800">{{ location }}</p>
         {% endif %}
       </div>
 

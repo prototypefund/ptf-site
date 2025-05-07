@@ -2,7 +2,7 @@
 
 <ul class="flex gap-1 flex-wrap">
   {% for filter in filters %}
-    <a class="rounded-[2px] border px-1 py-0.5 text-body-14 text-gray-200 {{ filter.isActive ? "bg-gray-200 text-white border-gray-200" : "hover:bg-gray-100 border-gray-400" }} active:bg-gray-200 active:text-white active:border-gray-200 transition-colors" href="{{ filter.url }}">
+    <a class="rounded-[2px] border px-1 py-0.5 text-body-14 text-gray-900 {{ filter.isActive ? "bg-gray-900 text-white border-gray-900" : "hover:bg-gray-100 border-gray-600" }} active:bg-gray-900 active:text-white active:border-gray-900 transition-colors" href="{{ filter.url }}">
       {{ filter.title }}
     </a>
   {% endfor %}

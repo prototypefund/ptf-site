@@ -35,7 +35,7 @@
             'p-2',
             'h-[60px]',
             'border-b',
-            'border-gray-400',
+            'border-gray-600',
             'md:h-auto',
             'md:py-[11px]',
             'lg:px-3'
@@ -50,7 +50,7 @@
               'flex',
               'items-center',
               'cursor-pointer',
-              'text-gray-200',
+              'text-gray-900',
               'ml-auto',
               'md:hidden'
             ]|join(' ') }}">
@@ -90,13 +90,13 @@
             '[.menu-open_&]:md:block',
             'lg:overflow-visible'
           ]|join(' ') }}">
-            <ul class="md:flex md:border-gray-400 md:border-b">
+            <ul class="md:flex md:border-gray-600 md:border-b">
               {% for linkGroup in navLinks %}
                 {% set links = linkGroup.links %}
 
                 <li class="{{ [
                   'border-b',
-                  'border-gray-400',
+                  'border-gray-600',
                   'last:border-b-0',
                   'md:w-1/5',
                   'md:border-b-0',
@@ -112,8 +112,8 @@
                       'px-3',
                       'py-1',
                       'text-[15px]',
-                      'text-gray-200',
-                      'border-gray-400',
+                      'text-gray-900',
+                      'border-gray-600',
                       'border-b',
                       'md:p-1.5',
                       'md:text-body-14',
@@ -139,7 +139,7 @@
                               'px-1',
                               'py-0.5',
                               'text-body-16',
-                              'text-gray-200'
+                              'text-gray-900'
                             ] 
                             |merge(isExternal ? [
                               'after:ml-auto',
@@ -172,7 +172,7 @@
                 '-z-10',
                 'w-full',
                 'border-b',
-                'border-gray-400',
+                'border-gray-600',
                 'bg-white',
                 'opacity-0',
                 'transition-opacity',
@@ -192,7 +192,7 @@
                       'border-r',
                       'text-body-16',
                       'leading-[1]',
-                      'border-gray-400',
+                      'border-gray-600',
                       'last:border-r-0'
                     ]|join(' ') }}">
                     <ul>
@@ -223,7 +223,7 @@
                               'flex',
                               'px-1',
                               'py-[8px]',
-                              'text-gray-200',
+                              'text-gray-900',
                             ]|merge(isExternal ? [
                               'after:ml-auto',
                               'after:block',
@@ -272,7 +272,7 @@
             'gap-2.5',
             'justify-end',
             'p-2',
-            'border-gray-400',
+            'border-gray-600',
             'border-t',
             'md:hidden',
             '[.menu-open_&]:flex',
