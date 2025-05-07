@@ -32,6 +32,8 @@
   {% case 'entry' %}
     {% set hasDefaultLabel = link.label in link.element.title %}
     {% set text = hasDefaultLabel ? "Open link"|t : link.label %}
+  {% default %}
+    {% set text = link.label %}
 {% endswitch %}
 
 {% include "_modules/button" with {
