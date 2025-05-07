@@ -48,7 +48,7 @@
       {% include "blog/_modules/teasers-list" with { articles: projects } only %}
       {% include "_modules/pagination" with { pagination: pagination } only %}
     {% else %}
-      {{ "No projects found."|t }}
+      <p class="text-body-20">{{ "No projects found."|t }}</p>
     {% endif %}
   </div>
 

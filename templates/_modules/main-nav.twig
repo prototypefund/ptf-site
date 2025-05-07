@@ -37,7 +37,6 @@
             'border-b',
             'border-gray-600',
             'md:h-auto',
-            'md:py-[11px]',
             'lg:px-3'
           ]|join(' ') }}">
           <a class="block" href="{{ homepage.url }}">
@@ -120,7 +119,7 @@
                       'md:text-left',
                       'md:border-b-0',
                       'lg:px-3',
-                      'lg:py-[14px]',
+                      'lg:py-1.5',
                       'lg:text-body-16',
                     ]|join(' ') }}">
                     {{ linkGroup.title }}
@@ -224,8 +223,10 @@
                               'px-1',
                               'py-[8px]',
                               'text-gray-900',
+                              'relative',
                             ]|merge(isExternal ? [
-                              'after:ml-auto',
+                              'after:absolute',
+                              'after:right-0',
                               'after:block',
                               'after:h-2.5',
                               'after:w-2.5',

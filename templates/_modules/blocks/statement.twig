@@ -36,9 +36,9 @@
   <div class="relative z-10">
     <h2 class="font-surt text-center text-head-22 md:text-head-36 uppercase max-w-[1020px] mx-auto">{{ heading }}</h2>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 mt-6 md:mt-23 gap-0 md:gap-11">
+    <div class="md:grid md:grid-cols-16 mt-6 md:mt-23">
       {% if textColumnOne|length %}
-        <div>
+        <div class="md:col-start-2 md:col-span-7 md:pr-3.5">
           {% include "_rich-text/simple" with {
             text: textColumnOne,
             size: "medium"
@@ -47,7 +47,7 @@
       {% endif %}
 
       {% if textColumnTwo|length %}
-        <div>
+        <div class="md:col-start-9 md:col-span-7 md:pl-3.5">
           {% include "_rich-text/simple" with {
             text: textColumnTwo,
             size: "medium"

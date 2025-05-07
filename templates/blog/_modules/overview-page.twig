@@ -53,7 +53,7 @@
     </div>
     {% include "_modules/pagination" with { pagination: pagination } only %}
   {% else %}
-    {{ "No articles found."|t }}
+    <p class="text-body-20">{{ "No articles found."|t }}</p>
   {% endif %}
 </div>
 

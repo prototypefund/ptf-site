@@ -6,7 +6,7 @@
 {% set sponsorsHeadline = footer.sponsorsHeadline %}
 {% set sponsors = footer.sponsors.all() %}
 
-<footer class="bg-gray-100">
+<footer class="bg-gray-100 mt-[60px] md:mt-18">
   <div class="md:grid md:grid-cols-3 border-gray-600 border-t border-b">
     <div class="pt-5 px-2 md:px-3 pb-2.5 md:pb-3 text-gray-900 border-gray-600 md:border-r last:md:border-r-0">
       <a class="inline-block mb-3 last:mb-0" href="{{ homepage.url  }}">
@@ -21,7 +21,7 @@
     </div>
 
     <div class="pt-2.5 md:pt-5 pb-2.5 md:pb-3 border-gray-600 border-t md:border-t-0 md:border-r last:md:border-r-0">
-      <h4 class="px-2 md:px-3 pb-2 md:pb-3 uppercase font-bold text-body-16 text-gray-900">{{ newsletterHeadline }}</h4>
+      <h4 class="px-2 md:px-3 pb-2 md:pb-3 uppercase text-body-16 text-gray-900">{{ newsletterHeadline }}</h4>
 
       <div class="mb-2.5">
         {% include "_modules/newsletter-form" only %}

@@ -1,3 +1,5 @@
+{% set url = link.url|default(null) %}
+{% set target = link.target|default(null) %}
 {% set icon = icon is not defined ? true : icon %}
 {% set color = color|default("dark") %}
 
@@ -27,17 +29,19 @@
         {% set text = hasDefaultLabel ? "Download File"|t : link.label %}
     {% endswitch %}
   {% case 'url' %}
-    {% set hasDefaultLabel = link.label in link.url %}
+    {% set hasDefaultLabel = link.label in link.value %}
     {% set text = hasDefaultLabel ? "Open link"|t : link.label %}
   {% case 'entry' %}
     {% set hasDefaultLabel = link.label in link.element.title %}
     {% set text = hasDefaultLabel ? "Open link"|t : link.label %}
+  {% default %}
+    {% set text = link.label %}
 {% endswitch %}
 
 {% include "_modules/button" with {
   text: text,
-  url: link.url,
-  target: link.target,
+  url: url,
+  target: target,
   icon: icon,
   iconAlignment: "right",
   color: color,
