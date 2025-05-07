@@ -33,11 +33,11 @@
             'flex',
             'items-center',
             'p-2',
-            'h-[3.75rem]',
+            'h-[60px]',
             'border-b',
-            'border-gray-400',
+            'border-gray-600',
             'md:h-auto',
-            'md:py-[0.69rem]',
+            'md:py-[11px]',
             'lg:px-3'
           ]|join(' ') }}">
           <a class="block" href="{{ homepage.url }}">
@@ -50,7 +50,7 @@
               'flex',
               'items-center',
               'cursor-pointer',
-              'text-gray-200',
+              'text-gray-900',
               'ml-auto',
               'md:hidden'
             ]|join(' ') }}">
@@ -90,13 +90,13 @@
             '[.menu-open_&]:md:block',
             'lg:overflow-visible'
           ]|join(' ') }}">
-            <ul class="md:flex md:border-gray-400 md:border-b">
+            <ul class="md:flex md:border-gray-600 md:border-b">
               {% for linkGroup in navLinks %}
                 {% set links = linkGroup.links %}
 
                 <li class="{{ [
                   'border-b',
-                  'border-gray-400',
+                  'border-gray-600',
                   'last:border-b-0',
                   'md:w-1/5',
                   'md:border-b-0',
@@ -111,16 +111,16 @@
                       'text-center',
                       'px-3',
                       'py-1',
-                      'text-[0.9375rem]',
-                      'text-gray-200',
-                      'border-gray-400',
+                      'text-[15px]',
+                      'text-gray-900',
+                      'border-gray-600',
                       'border-b',
                       'md:p-1.5',
                       'md:text-body-14',
                       'md:text-left',
                       'md:border-b-0',
                       'lg:px-3',
-                      'lg:py-[0.875rem]',
+                      'lg:py-[14px]',
                       'lg:text-body-16',
                     ]|join(' ') }}">
                     {{ linkGroup.title }}
@@ -139,7 +139,7 @@
                               'px-1',
                               'py-0.5',
                               'text-body-16',
-                              'text-gray-200'
+                              'text-gray-900'
                             ] 
                             |merge(isExternal ? [
                               'after:ml-auto',
@@ -172,7 +172,7 @@
                 '-z-10',
                 'w-full',
                 'border-b',
-                'border-gray-400',
+                'border-gray-600',
                 'bg-white',
                 'opacity-0',
                 'transition-opacity',
@@ -192,7 +192,7 @@
                       'border-r',
                       'text-body-16',
                       'leading-[1]',
-                      'border-gray-400',
+                      'border-gray-600',
                       'last:border-r-0'
                     ]|join(' ') }}">
                     <ul>
@@ -217,13 +217,13 @@
                           {% set isActive = 'active' %}
                         {% endif %}
 
-                        <li class="mb-[0.38rem] last:mb-0">
+                        <li class="mb-[6px] last:mb-0">
                           <a class="{{ [
                               'group/link',
                               'flex',
                               'px-1',
-                              'py-[0.5rem]',
-                              'text-gray-200',
+                              'py-[8px]',
+                              'text-gray-900',
                             ]|merge(isExternal ? [
                               'after:ml-auto',
                               'after:block',
@@ -244,11 +244,11 @@
                                 'text-black',
                                 'sm:after:content-[\'\']',
                                 'sm:after:absolute',
-                                'sm:after:bottom-[-0.25rem]',
+                                'sm:after:bottom-[-4px]',
                                 'sm:after:left-0',
                                 'sm:after:w-0',
                                 'sm:group-hover/link:after:w-full',
-                                'sm:after:h-[0.0625rem]',
+                                'sm:after:h-[1px]',
                                 'sm:after:transition-all',
                                 'sm:after:bg-sky-blue',
                                 isActive ? 'sm:after:w-full' : ''
@@ -272,7 +272,7 @@
             'gap-2.5',
             'justify-end',
             'p-2',
-            'border-gray-400',
+            'border-gray-600',
             'border-t',
             'md:hidden',
             '[.menu-open_&]:flex',

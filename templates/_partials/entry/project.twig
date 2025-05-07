@@ -10,12 +10,12 @@
   |merge(entry.projectYearGroups.all())
 %}
 
-<article class="border-gray-400 border-t mb-4 md:mb-5">
+<article class="border-gray-600 border-t mb-4 md:mb-5">
   <a class="block pt-2 md:pt-2.5" href="{{ entry.getUrl() }}">
     <div class="group grid grid-cols-11">
       <div class="col-span-2 mr-2 md:mr-3.5">
         {% if image|length %}
-          <div class="bg-gray-100 flex items-center justify-center aspect-square p-[1.25rem]">
+          <div class="bg-gray-100 flex items-center justify-center aspect-square p-[20px]">
             <div class="w-full mix-blend-multiply">
               <img class="w-full h-full object-contain" src="{{ image.url }}" alt="{{ image.alt }}">
             </div>

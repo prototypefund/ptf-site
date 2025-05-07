@@ -1,17 +1,17 @@
 {% set images = entry.images.eagerly().all() %}
 
-<div class="my-[3.75rem] md:mt-6 {{ images|length > 1 ? "lg:grid lg:grid-cols-2 lg:gap-5" }}">
+<div class="my-[60px] md:mt-6 {{ images|length > 1 ? "lg:grid lg:grid-cols-2 lg:gap-5" }}">
   {% for image in images %}
     {% set caption = [image.caption, image.credit]|filter(value => (value is not null)) %}
 
-    <figure class="mb-[3.75rem] last:mb-0 lg:mb-0">
+    <figure class="mb-[60px] last:mb-0 lg:mb-0">
       <img class="w-full" src="{{ image.getUrl("w1000") }}" alt="{{ image.alt }}">
 
       {% if caption|length %}
         <figcaption class="mt-1">
           <ul class="flex flex-wrap gap-y-0.5">
             {% for text in caption %}
-              <li class="uppercase text-gray-500 text-body-12 md:text-body-13 after:pl-[0.3125rem] after:pr-1 after:content-['|'] after:text-gray-400 last:after:hidden">
+              <li class="uppercase text-gray-800 text-body-12 md:text-body-13 after:pl-[5px] after:pr-1 after:content-['|'] after:text-gray-600 last:after:hidden">
                 {{ text }}
               </li>
             {% endfor %}

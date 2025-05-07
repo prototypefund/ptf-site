@@ -5,7 +5,7 @@
 {% set border = border is not defined ? true : false %}
 
 {% set buttonStyles = {
-  dark: "text-gray-200 hover:bg-black hover:text-white",
+  dark: "text-gray-900 hover:bg-black hover:text-white",
   light: "text-white hover:bg-white hover:text-black border-white"
 } %}
 
@@ -28,11 +28,11 @@
   },
 } %}
 
-{% set borderStyles = border ? "border-x px-[0.63rem]" %}
+{% set borderStyles = border ? "border-x px-[10px]" %}
 {% set iconAlignment = iconAlignment == "right" ? "before:order-1" %}
 
 {{ tag("a", {
-  class: "#{buttonStyles[color]} #{iconAlignment} #{icon ? iconStyles[icon][color]} #{icon ? 'gap-2.5 before:mt-[-0.125rem] before:content-[\"\"] before:h-[1.13rem] before:w-[1.13rem]' } #{borderStyles} px-0.5 inline-flex items-center justify-center font-surt uppercase text-ui-14 tracking-wide transition-colors py-[0.3125rem]",
+  class: "#{buttonStyles[color]} #{iconAlignment} #{icon ? iconStyles[icon][color]} #{icon ? 'gap-2.5 before:mt-[-2px] before:content-[\"\"] before:h-[18px] before:w-[18px]' } #{borderStyles} px-0.5 inline-flex items-center justify-center font-surt uppercase text-ui-14 tracking-wide transition-colors py-[5px]",
   href: url,
   target: target,
   rel: target == "_blank" ? "noopener noreferrer" : null,

@@ -1,5 +1,5 @@
 {% set times = [startTime|default(null), endTime|default(null)]|filter(time => time is not empty) %}
 
 <time class="block text-head-18" datetime="{{ date|date('Y-m-d') }}">
-  {{ date|date('d/m/Y') }}{% if times|length %}<span class="border-l border-gray-400 ml-1.5 pl-1.5">{{ times|map((time) => time|date('H:i'))|join("-") }}</span>{% endif %}
+  {{ date|date('d/m/Y') }}{% if times|length %}<span class="border-l border-gray-600 ml-1.5 pl-1.5">{{ times|map((time) => time|date('H:i'))|join("-") }}</span>{% endif %}
 </time>

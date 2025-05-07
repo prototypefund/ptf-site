@@ -50,17 +50,17 @@
 {% set backgroundConfigs = {
   greyBackgroundBluePattern: {
     pattern: 'skyBlue',
-    bgColor: 'bg-gray-100 border-gray-400 border-b',
+    bgColor: 'bg-gray-100 border-gray-600 border-b',
     buttonStyle: 'hover:bg-black hover:text-white'
   },
   greyBackgroundPinkPattern: {
     pattern: 'hotPink',
-    bgColor: 'bg-gray-100 border-gray-400 border-b',
+    bgColor: 'bg-gray-100 border-gray-600 border-b',
     buttonStyle: 'hover:bg-black hover:text-white'
   },
   greyBackgroundGreyPattern: {
     pattern: 'gray',
-    bgColor: 'bg-gray-100 border-gray-400 border-b',
+    bgColor: 'bg-gray-100 border-gray-600 border-b',
     buttonStyle: 'hover:bg-black hover:text-white'
   },
   skyBlueBackgroundLightBluePattern: {
@@ -92,13 +92,13 @@
 {% set headerClass = "#{patternClasses} #{config.bgColor}" %}
 {% set buttonClass = config.buttonStyle %}
 
-<header class="{{ headerClass }} {{ alignment == "left" ? "lg:py-[8.125rem]" : "lg:py-[6.25rem]" }} px-2 md:px-5 py-10 relative text-gray-200 before:content-[''] before:absolute before:left-0 before:h-full before:bg-no-repeat before:bg-contain after:content-[''] after:absolute after:right-0 after:h-full after:bg-no-repeat after:bg-contain">
+<header class="{{ headerClass }} {{ alignment == "left" ? "lg:py-[130px]" : "lg:py-[100px]" }} px-2 md:px-5 py-10 relative text-gray-900 before:content-[''] before:absolute before:left-0 before:h-full before:bg-no-repeat before:bg-contain after:content-[''] after:absolute after:right-0 after:h-full after:bg-no-repeat after:bg-contain">
   <div class="{{ alignment == "left" ? "grid grid-cols-12 lg:grid-cols-16" : "text-center" }}">
     <div class="{{ alignment == "left" ? "col-span-11 lg:col-span-7 xl:col-span-8 mb-3 lg:mb-0 md:pr-3 pr-0" : "mb-3 lg:mb-5" }} relative z-1">
       <h1 class="font-surt text-head-28 md:text-head-46 uppercase">{{ headline }}</h1>
 
       {% if subheadline %}
-        <div class="mt-5 md:mt-[3.75rem]">
+        <div class="mt-5 md:mt-[60px]">
           {{ subheadline }}
         </div>
       {% endif %}
@@ -123,7 +123,7 @@
           <div class="mb-5 last:mb-0">
             {% include "_modules/newsletter-form" only %}
 
-            <div class="{{ background in ["greyBackgroundBluePattern", "greyBackgroundPinkPattern", "greyBackgroundGreyPattern", "skyBlueBackgroundLightBluePattern"] ? "text-gray-500" : "text-white" }}">
+            <div class="{{ background in ["greyBackgroundBluePattern", "greyBackgroundPinkPattern", "greyBackgroundGreyPattern", "skyBlueBackgroundLightBluePattern"] ? "text-gray-800" : "text-white" }}">
               {% include "_rich-text/simple" with {
                 text: newsletter.newsletterSecondaryText,
                 size: "small"
@@ -133,12 +133,12 @@
         {% endif %}
 
         {% if secondaryText|length %}
-          <p class="{{ background in ["greyBackgroundBluePattern", "greyBackgroundPinkPattern", "greyBackgroundGreyPattern", "skyBlueBackgroundLightBluePattern"] ? "text-gray-500" : "text-white" }} md:mb-1.5 text-body-16 md:text-body-18">{{ secondaryText }}</p>
+          <p class="{{ background in ["greyBackgroundBluePattern", "greyBackgroundPinkPattern", "greyBackgroundGreyPattern", "skyBlueBackgroundLightBluePattern"] ? "text-gray-800" : "text-white" }} md:mb-1.5 text-body-16 md:text-body-18">{{ secondaryText }}</p>
         {% endif %}
 
         {% if link|length %}
           {{ tag('a', {
-            class: buttonClass ~ ' px-[0.625rem] py-1 md:py-[0.3125rem] uppercase border-l border-r font-surt text-ui-14 md:text-ui-16 transition-colors',
+            class: buttonClass ~ ' px-[10px] py-1 md:py-[5px] uppercase border-l border-r font-surt text-ui-14 md:text-ui-16 transition-colors',
             href: link.value,
             target: link.target,
             rel: link.target == '_blank' ? 'noopener noreferrer' : null,
