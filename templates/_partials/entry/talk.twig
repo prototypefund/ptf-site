@@ -26,47 +26,9 @@
     </div>
 
     {% if link|length %}
-      {% set linkText = null %}
-
-      {% switch link.type %}
-        {% case 'asset' %}
-          {% set hasDefaultLabel = link.label in link.element.title %}
-
-            {% switch link.element.extension %}
-              {% case 'pdf' %}
-                {% set linkText = hasDefaultLabel ? "Open PDF"|t : link.label %}
-                {% set icon = "arrow" %}
-              {% default %}
-                {% set linkText = hasDefaultLabel ? "Download File"|t : link.label %}
-                {% set icon = "download" %}
-            {% endswitch %}
-        {% case 'url' %}
-          {% set hasDefaultLabel = link.label in link.url %}
-          {% set icon = "link" %}
-
-          {% if hasDefaultLabel %}
-            {% set linkText = "Open link"|t %}
-          {% else %}
-            {% set linkText = link.label %}
-          {% endif %}
-        {% case 'entry' %}
-          {% set hasDefaultLabel = link.label in link.element.title %}
-          {% set icon = "arrow" %}
-
-          {% if hasDefaultLabel %}
-            {% set linkText = "Open link"|t %}
-          {% else %}
-            {% set linkText = link.label %}
-          {% endif %}
-      {% endswitch %}
-
       <div class="md:col-span-9 md:col-start-5 xl:col-span-3 xl:col-start-14 text-right md:text-left xl:text-right">
-        {% include "_modules/button-link" with {
-          text: linkText,
-          url: link.url,
-          target: link.target,
-          icon: icon,
-          iconAlignment: "right"
+        {% include "_modules/button-generic-link" with {
+          link: link
         } only %}
       </div>
     {% endif %}

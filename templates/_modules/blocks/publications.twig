@@ -43,7 +43,7 @@
 
         {% if publication|length %}
           <div class="md:col-span-9 md:col-start-1 xl:col-span-3 text-right md:text-left xl:text-right">
-            {% include "_modules/button-link" with {
+            {% include "_modules/button" with {
               text: "Open PDF"|t,
               url: publication.url,
               icon: "arrow",

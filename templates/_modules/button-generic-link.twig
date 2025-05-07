@@ -1,0 +1,44 @@
+{% set icon = icon is not defined ? true : icon %}
+{% set color = color|default("dark") %}
+
+{% if icon %}
+  {% switch link.type %}
+    {% case 'asset' %}
+      {% switch link.element.extension %}
+        {% case 'pdf' %}
+          {% set icon = "arrow" %}
+        {% default %}
+          {% set icon = "download" %}
+      {% endswitch %}
+    {% case 'url' %}
+      {% set icon = "link" %}
+    {% case 'entry' %}
+      {% set icon = "arrow" %}
+  {% endswitch %}
+{% endif %}
+
+{% switch link.type %}
+  {% case 'asset' %}
+    {% set hasDefaultLabel = link.label in link.element.title %}
+    {% switch link.element.extension %}
+      {% case 'pdf' %}
+        {% set text = hasDefaultLabel ? "Open PDF"|t : link.label %}
+      {% default %}
+        {% set text = hasDefaultLabel ? "Download File"|t : link.label %}
+    {% endswitch %}
+  {% case 'url' %}
+    {% set hasDefaultLabel = link.label in link.url %}
+    {% set text = hasDefaultLabel ? "Open link"|t : link.label %}
+  {% case 'entry' %}
+    {% set hasDefaultLabel = link.label in link.element.title %}
+    {% set text = hasDefaultLabel ? "Open link"|t : link.label %}
+{% endswitch %}
+
+{% include "_modules/button" with {
+  text: text,
+  url: link.url,
+  target: link.target,
+  icon: icon,
+  iconAlignment: "right",
+  color: color,
+} only %}

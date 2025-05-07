@@ -86,7 +86,7 @@
 
     {% if demoLink|length %}
       <div class="mb-6">
-        {% include "_modules/button-link" with {
+        {% include "_modules/button" with {
           text: "See #{demoLink.name}"|t,
           url: demoLink.linkURL,
           target: "_blank",

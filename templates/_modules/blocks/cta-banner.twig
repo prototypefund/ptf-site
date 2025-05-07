@@ -46,12 +46,8 @@
 
           {% if link|length %}
             <div class="mb-1">
-              {% include "_modules/button-link" with {
-                text: link.label,
-                url: link.url,
-                target: link.target,
-                icon: "arrow",
-                iconAlignment: "right",
+              {% include "_modules/button-generic-link" with {
+                link: link,
                 color: "light"
               } only %}
             </div>
