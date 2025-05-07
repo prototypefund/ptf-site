@@ -37,6 +37,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-24T10:27:43+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: d99528c4-136b-413c-9799-56fd20edd2c6 # Headline
             handle: null
@@ -53,6 +54,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-07T08:20:44+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 0f8a3079-62db-4270-ac53-6903c9b28557 # Main Image
             handle: null
@@ -69,6 +71,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-10T13:39:21+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 67373325-a234-485a-a635-26dee1e7f325 # Project Links
             handle: null
@@ -91,6 +94,7 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-05-06T10:51:31+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 5664191c-7a44-4eea-8f68-0ebeab8bbb41 # Second Stage
             handle: null
@@ -112,39 +116,8 @@ fieldLayouts:
             uid: 1f1cb804-c1fe-413d-acad-56b16f0d75b6
             userCondition: null
           -
-            dateAdded: '2025-04-23T11:47:08+00:00'
-            elementCondition: null
-            fieldUid: f455cf70-e6e9-48c1-806f-753a2af85bea
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: c263ed50-7ff5-42c6-9025-ceb7ba46bd00
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-03-10T13:37:53+00:00'
-            elementCondition: null
-            fieldUid: f4a87b3f-ed6d-49ce-8753-05dda85942a6 # Project Status
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: d3ba407b-6545-4d06-be17-d106237c836c
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2025-03-10T13:43:06+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: f81e8821-286e-4e07-86f6-54880a45eafe # Project Team Members
             handle: null
@@ -161,6 +134,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-21T12:16:07+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 5a633b8c-0848-4867-8990-245346e525e8 # Project Funding Amount
             handle: null
@@ -183,6 +157,7 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-04-03T14:30:50+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 860851bc-5058-4f0d-8f3f-481df7e56099 # Project Rounds
             handle: null
@@ -199,6 +174,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-03-10T13:44:06+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 5a2c3e10-bf78-4986-aecd-f75829889851 # Project Topics
             handle: null
@@ -215,6 +191,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-03T14:29:07+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: c85b9b92-e92c-448e-be1b-853494683b99 # Project Technologies
             handle: null
@@ -231,6 +208,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-05-02T11:53:35+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 0e9ca8fc-3503-4942-bf20-ba2ce515307f # Project Licenses
             handle: null
@@ -247,6 +225,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-10T15:44:22+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 3d4c1a3f-6b2d-4919-a863-32877e6722ce # Project Year Groups
             handle: null
@@ -263,6 +242,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-21T14:19:39+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 8c706102-ac71-4054-b178-d266051a8ba8 # Project Next Reads
             handle: null
@@ -285,6 +265,7 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-03-10T13:27:17+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 13a0aaca-3bd8-4653-b163-69738ce277c3 # Text
             handle: null
@@ -301,6 +282,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-21T11:04:52+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 1bf40018-82e4-4e44-bbd6-6f49c132678d # Modules
             handle: null
@@ -323,6 +305,7 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-03-30T19:35:37+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 276edf74-a032-4834-b9ef-5783f0b823d4 # Project ID
             handle: null
@@ -337,6 +320,23 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-03-10T13:37:53+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: f4a87b3f-ed6d-49ce-8753-05dda85942a6 # Project Status
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d3ba407b-6545-4d06-be17-d106237c836c
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 8a52f532-1397-4933-b88f-1800076947c0
         userCondition: null
@@ -345,6 +345,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-03-10T13:27:17+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 0d857c68-7bb1-4ce7-b61f-671446aa8bb3 # SEO
             handle: null
