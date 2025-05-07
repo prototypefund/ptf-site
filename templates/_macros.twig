@@ -12,13 +12,13 @@
 
 {% macro fundingStatus(entry) %}{% apply spaceless %}
   {% set currentDate = now %}
-  {% set round = entry.projectRounds.one() %}
+  {% set category = entry.projectRounds.one()|default(entry.projectYearGroups.one()) %}
   {% set secondStage = entry.secondStage|default(false) %}
 
-  {% if round|length %}
-    {% set startDate = round.startDate|default(null) %}
-    {% set endDateRegular = round.endDateRegular|default(null) %}
-    {% set endDateSecondStage = round.endDateSecondStage|default(null) %}
+  {% if category|length %}
+    {% set startDate = category.startDate|default(null) %}
+    {% set endDateRegular = category.endDateRegular|default(null) %}
+    {% set endDateSecondStage = category.endDateSecondStage|default(null) %}
 
     {% if startDate %}
       {% if currentDate <= endDateRegular %}
