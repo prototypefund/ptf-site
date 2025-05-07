@@ -1,4 +1,4 @@
-dateModified: 1746622812
+dateModified: 1746642070
 elementSources:
   craft\elements\Entry:
     -
@@ -358,7 +358,6 @@ meta:
     eec7038e-53af-4299-bf11-db14e0fbd073: 'Generic Page' # Generic Page
     f1c5c016-d5a6-471a-a030-91a4f9a88503: Subheading # Subheading
     f2fe1c5e-9903-41ca-a1b9-45815959a6ef: 'Newsletter Link Group' # Newsletter Link Group
-    f4a87b3f-ed6d-49ce-8753-05dda85942a6: 'Project Status' # Project Status
     f4ddd6a2-288b-4881-a762-884e48b3f1f1: Description # Description
     f6ed0d5d-4ab8-418b-801e-b11f6cb309a5: Author # Author
     f81cb75d-92f5-44c4-89bd-673d8c8ee15c: 'Sponsors Headline' # Sponsors Headline
