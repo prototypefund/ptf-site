@@ -61,6 +61,6 @@
     {% endif %}
   </article>
 
-  {% include "blog/_modules/next-reads" with { entry: entry } only %}
   {% include "_modules/modules" with { entry: entry } only %}
+  {% include "blog/_modules/next-reads" with { entry: entry } only %}
 {% endblock %}

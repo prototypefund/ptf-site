@@ -88,6 +88,6 @@
     {% endif %}
   </article>
 
-  {% include "projects/_modules/next-reads" with { entry: entry } only %}
   {% include "_modules/modules" with { entry: entry } %}
+  {% include "projects/_modules/next-reads" with { entry: entry } only %}
 {% endblock %}
