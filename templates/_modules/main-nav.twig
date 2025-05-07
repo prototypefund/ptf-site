@@ -33,11 +33,11 @@
             'flex',
             'items-center',
             'p-2',
-            'h-[3.75rem]',
+            'h-[60px]',
             'border-b',
             'border-gray-400',
             'md:h-auto',
-            'md:py-[0.69rem]',
+            'md:py-[11px]',
             'lg:px-3'
           ]|join(' ') }}">
           <a class="block" href="{{ homepage.url }}">
@@ -111,7 +111,7 @@
                       'text-center',
                       'px-3',
                       'py-1',
-                      'text-[0.9375rem]',
+                      'text-[15px]',
                       'text-gray-200',
                       'border-gray-400',
                       'border-b',
@@ -120,7 +120,7 @@
                       'md:text-left',
                       'md:border-b-0',
                       'lg:px-3',
-                      'lg:py-[0.875rem]',
+                      'lg:py-[14px]',
                       'lg:text-body-16',
                     ]|join(' ') }}">
                     {{ linkGroup.title }}
@@ -217,12 +217,12 @@
                           {% set isActive = 'active' %}
                         {% endif %}
 
-                        <li class="mb-[0.38rem] last:mb-0">
+                        <li class="mb-[6px] last:mb-0">
                           <a class="{{ [
                               'group/link',
                               'flex',
                               'px-1',
-                              'py-[0.5rem]',
+                              'py-[8px]',
                               'text-gray-200',
                             ]|merge(isExternal ? [
                               'after:ml-auto',
@@ -244,11 +244,11 @@
                                 'text-black',
                                 'sm:after:content-[\'\']',
                                 'sm:after:absolute',
-                                'sm:after:bottom-[-0.25rem]',
+                                'sm:after:bottom-[-4px]',
                                 'sm:after:left-0',
                                 'sm:after:w-0',
                                 'sm:group-hover/link:after:w-full',
-                                'sm:after:h-[0.0625rem]',
+                                'sm:after:h-[1px]',
                                 'sm:after:transition-all',
                                 'sm:after:bg-sky-blue',
                                 isActive ? 'sm:after:w-full' : ''

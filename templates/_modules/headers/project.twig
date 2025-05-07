@@ -43,7 +43,7 @@
   'after:lg:w-[25vw]'
 ]|join(' ') %}
 
-<header class="{{ pattern }} relative md:grid md:grid-cols-12 lg:grid-cols-16 border-gray-400 border-b pt-2.5 pb-5 md:py-[3.75rem] px-2 md:px-5">
+<header class="{{ pattern }} relative md:grid md:grid-cols-12 lg:grid-cols-16 border-gray-400 border-b pt-2.5 pb-5 md:py-[60px] px-2 md:px-5">
   <div class="mb-10 md:mb-0 md:col-span-6 lg:col-span-10 relative z-1">
     {% if macros.inFunding(entry)|boolean %}
       <div class="mb-1 md:mb-2">
@@ -98,8 +98,8 @@
   </div>
 
   {% if image|length %}
-    <div class="w-[14.31rem] ml-auto md:w-auto md:col-start-8 md:col-span-5 lg:col-span-4 lg:col-start-13 relative z-1">
-      <div class="bg-gray-100 flex items-center justify-center aspect-square p-[1.25rem]">
+    <div class="w-[223px] ml-auto md:w-auto md:col-start-8 md:col-span-5 lg:col-span-4 lg:col-start-13 relative z-1">
+      <div class="bg-gray-100 flex items-center justify-center aspect-square p-[20px]">
         <div class="w-full mix-blend-multiply">
           <img class="w-full h-full object-contain" src="{{ image.url }}" alt="{{ image.alt }}">
         </div>

@@ -16,7 +16,7 @@
       {% endif %}
     
       <div class="grid grid-cols-1 md:grid-cols-16 md:px-5 not-first:border-t not-first:border-gray-400">
-        <div class="px-2 md:px-0 pt-5 py-[3.75rem] md:py-11 pr-12 md:col-span-8 order-2 md:order-none">
+        <div class="px-2 md:px-0 pt-5 py-[60px] md:py-11 pr-12 md:col-span-8 order-2 md:order-none">
           {% include "_modules/person-info" with {
             person: person
           } only %}
@@ -27,7 +27,7 @@
             {% if avatar|length %}
               <img class="block w-full h-full object-cover" src="{{ avatar.getUrl("avatarLarge") }}" alt="{{ avatar.alt }}">
             {% else %}
-              <div class="bg-gray-100 h-full"></div>
+              <div class="bg00 h-full"></div>
             {% endif %}
           </div>
 

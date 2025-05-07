@@ -24,7 +24,7 @@
     } only %}
 
     {% if intro|length %}
-      <div class="grid md:grid-cols-16 px-2 md:px-5 mt-5 md:mt-10 mb-[3.75rem]">
+      <div class="grid md:grid-cols-16 px-2 md:px-5 mt-5 md:mt-10 mb-[60px]">
         <div class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-9">
           {% include "_rich-text/intro" with {
             text: intro
@@ -49,7 +49,7 @@
       <div class="grid px-2 md:grid-cols-16 md:px-5 border-gray-400 border-t md:border-t-0">
         <div class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-8 pt-2.5 border-gray-400 border-t-0 md:border-t">
           {% if avatar|length %}
-            <img class="mb-6 md:mb-[3.75rem]" src="{{ avatar.getUrl("avatarSmall") }}" alt="{{ avatar.alt }}">
+            <img class="mb-6 md:mb-[60px]" src="{{ avatar.getUrl("avatarSmall") }}" alt="{{ avatar.alt }}">
           {% endif %}
 
           {% include "_modules/person-info" with {

@@ -43,7 +43,7 @@
           {% endif %}
 
           {% if sponsors|length %}
-            <div class="flex flex-wrap gap-x-[2.8rem] gap-y-1.5">
+            <div class="flex flex-wrap gap-x-[44px] gap-y-1.5">
               {% for sponsor in sponsors %}
                 <img src="{{ sponsor.url }}" alt="{{ sponsor.alt }}">
               {% endfor %}
@@ -65,7 +65,7 @@
               {% set navLink = link.genericLink %}
               {% set isExternal = navLink.type == "url" %}
 
-              <li class="py-[0.25rem] mb-[0.38rem] md:py-0 md:mb-1 last:mb-0">
+              <li class="py-[4px] mb-[6px] md:py-0 md:mb-1 last:mb-0">
                 {{ tag('a', {
                   class: "flex after:ml-auto text-gray-200 #{isExternal ? 'after:bg-link-arrow after:bg-no-repeat after:bg-cover after:content-[\'\'] after:block after:h-2.5 after:w-2.5'}",
                   href: navLink.value,

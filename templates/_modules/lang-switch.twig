@@ -22,9 +22,9 @@
   }]) %}
 {% endfor %}
 
-<div class="inline-flex gap-[0.125rem] uppercase text-ui-14 border-gray-400 border rounded-sm p-[0.1875rem]">
+<div class="inline-flex gap-[2px] uppercase text-ui-14 border-gray-400 border rounded-sm p-[3px]">
   {% for link in languageLinks %}
-    <a class="rounded-[0.13rem] px-1 py-0.5 md:py-[0.125rem] md:px-[0.4375rem] transition-colors {{ link.current ? "bg-black text-white" : "text-gray-200 hover:bg-gray-100" }}" href="{{ link.url }}" tabindex="0">
+    <a class="rounded-[2px] px-1 py-0.5 md:py-[2px] md:px-[7px] transition-colors {{ link.current ? "bg-black text-white" : "text-gray-200 hover:bg-gray-100" }}" href="{{ link.url }}" tabindex="0">
       {{ link.countryCode }}
     </a>
   {% endfor %}
