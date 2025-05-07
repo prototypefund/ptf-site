@@ -14,7 +14,7 @@
 
 {% if role|length or website|length %}
   <p class="mb-3 md:mb-4 last:mb-0 text-head-18 md:text-head-20">
-    {{ role }}{% if role|length and website|length %}, {% endif %}{% if website|length %}<a class="border-b-sky-blue border-b-2" href="{{ website.url }}">{{ website.url|replace({"https://": "", "www.": ""}) }}</a>{% endif %}
+    {{ role }}{% if role|length and website|length %}, {% endif %}{% if website|length %}<a class="underline decoration-sky-blue hover:bg-light-blue" href="{{ website.url }}">{{ website.url|replace({"https://": "", "www.": ""}) }}</a>{% endif %}
   </p>
 {% endif %}
 
