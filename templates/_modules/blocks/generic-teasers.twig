@@ -22,9 +22,8 @@
 
           {% if link|length %}
             <div class="mt-5 md:mt-8">
-              {% include "_modules/button" with {
-                url: link.url,
-                text: link.label
+              {% include "_modules/button-generic-link" with {
+                link: link
               } only %}
             </div>
           {% endif %}
