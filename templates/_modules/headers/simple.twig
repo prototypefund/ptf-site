@@ -51,37 +51,37 @@
   greyBackgroundBluePattern: {
     pattern: 'skyBlue',
     bgColor: 'bg-gray-100 border-gray-600 border-b',
-    buttonStyle: 'hover:bg-black hover:text-white'
+    buttonColor: 'dark'
   },
   greyBackgroundPinkPattern: {
     pattern: 'hotPink',
     bgColor: 'bg-gray-100 border-gray-600 border-b',
-    buttonStyle: 'hover:bg-black hover:text-white'
+    buttonColor: 'dark'
   },
   greyBackgroundGreyPattern: {
     pattern: 'gray',
     bgColor: 'bg-gray-100 border-gray-600 border-b',
-    buttonStyle: 'hover:bg-black hover:text-white'
+    buttonColor: 'dark'
   },
   skyBlueBackgroundLightBluePattern: {
     pattern: 'lightBlue',
     bgColor: 'bg-sky-blue',
-    buttonStyle: 'hover:bg-black hover:text-white'
+    buttonColor: 'dark'
   },
   richBlueBackgroundPinkPattern: {
     pattern: 'hotPink',
     bgColor: 'bg-rich-blue text-white',
-    buttonStyle: 'text-white hover:bg-white hover:text-black border-white'
+    buttonColor: 'light'
   },
   darkMagentaBackgroundBluePattern: {
     pattern: 'skyBlue',
     bgColor: 'bg-dark-magenta text-white',
-    buttonStyle: 'text-white hover:bg-white hover:text-black border-white'
+    buttonColor: 'light'
   },
   navyBlueBackgroundPinkPattern: {
     pattern: 'hotPink',
     bgColor: 'bg-navy-blue text-white',
-    buttonStyle: 'text-white hover:bg-white hover:text-black border-white'
+    buttonColor: 'light'
   }
 } %}
 
@@ -90,7 +90,6 @@
 
 {% set patternClasses = patternStyles[config.pattern][alignment] %}
 {% set headerClass = "#{patternClasses} #{config.bgColor}" %}
-{% set buttonClass = config.buttonStyle %}
 
 <header class="{{ headerClass }} {{ alignment == "left" ? "lg:py-[130px]" : "lg:py-[100px]" }} px-2 md:px-5 py-10 relative text-gray-900 before:content-[''] before:absolute before:left-0 before:h-full before:bg-no-repeat before:bg-contain after:content-[''] after:absolute after:right-0 after:h-full after:bg-no-repeat after:bg-contain">
   <div class="{{ alignment == "left" ? "grid grid-cols-12 lg:grid-cols-16" : "text-center" }}">
@@ -137,13 +136,11 @@
         {% endif %}
 
         {% if link|length %}
-          {{ tag('a', {
-            class: buttonClass ~ ' px-[10px] py-1 md:py-[5px] uppercase border-l border-r font-surt text-ui-14 md:text-ui-16 transition-colors',
-            href: link.value,
-            target: link.target,
-            rel: link.target == '_blank' ? 'noopener noreferrer' : null,
-            text: link.label,
-          }) }}
+          {% include "_modules/button-generic-link" with {
+            link: link,
+            icon: false,
+            color: config.buttonColor
+          } only %}
         {% endif %}
       </div>
     {% endif %}

@@ -3,7 +3,7 @@
 
 {% set seeAll %}
   {% if sideLink|length %}
-    {% include "_modules/button-link" with {
+    {% include "_modules/button" with {
       url: sideLink.url,
       text: sideLink.text
     } only %}
