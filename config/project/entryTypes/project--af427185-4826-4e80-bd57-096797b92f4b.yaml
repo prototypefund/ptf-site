@@ -114,7 +114,7 @@ fieldLayouts:
           -
             dateAdded: '2025-04-23T11:47:08+00:00'
             elementCondition: null
-            fieldUid: f455cf70-e6e9-48c1-806f-753a2af85bea # Project Second Stage Funding
+            fieldUid: f455cf70-e6e9-48c1-806f-753a2af85bea
             handle: null
             includeInCards: false
             instructions: null
