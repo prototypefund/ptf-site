@@ -27,7 +27,7 @@
         {{ "completed" }}
       {% elseif endDateRegular < currentDate <= endDateSecondStage and secondStage|length %}
         {{ "inDurationWithSecondStage" }}
-      {% elseif currentDate < endDateSecondStage and secondStage|length %}
+      {% elseif currentDate > endDateSecondStage and secondStage|length %}
         {{ "completedWithSecondStage" }}
       {% endif %}
     {% endif %}

@@ -1,7 +1,6 @@
 {% import '_macros' as macros %}
 
 {% set image = entry.mainImage.eagerly().one() %}
-{% set inFunding = "inUsage" in entry.projectStatus %}
 {% set claim = entry.headline %}
 {% set teamMembers = entry.projectTeamMembers %}
 

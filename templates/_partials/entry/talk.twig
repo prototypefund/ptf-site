@@ -32,19 +32,14 @@
         {% case 'asset' %}
           {% set hasDefaultLabel = link.label in link.element.title %}
 
-          {% if hasDefaultLabel %}
             {% switch link.element.extension %}
               {% case 'pdf' %}
-                {% set linkText = "Open PDF"|t %}
+                {% set linkText = hasDefaultLabel ? "Open PDF"|t : link.label %}
                 {% set icon = "arrow" %}
               {% default %}
-                {% set linkText = "Download File"|t %}
+                {% set linkText = hasDefaultLabel ? "Download File"|t : link.label %}
                 {% set icon = "download" %}
             {% endswitch %}
-          {% else %}
-            {% set linkText = link.label %}
-            {% set icon = "download" %}
-          {% endif %}
         {% case 'url' %}
           {% set hasDefaultLabel = link.label in link.url %}
           {% set icon = "link" %}

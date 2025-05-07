@@ -29,7 +29,7 @@
 {% set topicParams = params["topic"]|default([]) %}
 {% set technologyParams = params["technology"]|default([]) %}
 {% set licenseParams = params["license"]|default([]) %}
-{% set statusParams = params["status"]|default([]) %}
+{# {% set statusParams = params["status"]|default([]) %} #}
 
 {% set relations = [] %}
 
@@ -63,9 +63,9 @@
   ]) %}
 {% endif %}
 
-{% if statusParams|length %}
+{# {% if statusParams|length %}
   {% set projectsQuery = projectsQuery.projectStatus(statusParams) %}
-{% endif %}
+{% endif %} #}
 
 {% if relations|length %}
   {% set projectsQuery = projectsQuery.relatedTo(['and']|merge(relations)) %}
