@@ -2,7 +2,7 @@
 
 {% set content %}
   <figure>
-    <div class="relative overflow-hidden aspect-video [&>iframe]:size-full [&>iframe]:absolute [&>iframe]:top-0 [&>iframe]:left-0">
+    <div class="relative overflow-hidden [&>iframe]:size-full [&>iframe]:absolute [&>iframe]:top-0 [&>iframe]:left-0">
       {{ entry.embedCode|raw }}
     </div>
     {% if caption|length %}
