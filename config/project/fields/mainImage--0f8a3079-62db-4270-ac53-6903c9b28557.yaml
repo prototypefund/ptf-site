@@ -11,10 +11,11 @@ settings:
     - image
     - video
   branchLimit: null
+  defaultPlacement: end
   defaultUploadLocationSource: 'volume:b99ee1fe-b466-49ac-8315-43d2af7587e1' # Uploads
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
-  maxRelations: null
+  maxRelations: 1
   minRelations: null
   previewMode: full
   restrictFiles: true

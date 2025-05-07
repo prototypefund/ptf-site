@@ -7,6 +7,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-04-16T21:20:48+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: d13f787b-b91b-4821-8104-46e509830347 # Avatar
             handle: null
@@ -53,6 +54,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-16T21:15:02+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: e30e243f-a8dc-43b7-b826-e4788906231f # Pronouns
             handle: null
@@ -69,6 +71,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-22T18:20:57+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 36d3151d-99ef-4672-9521-82f0e9b0646d # Role
             handle: null
@@ -85,6 +88,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-16T21:16:45+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 6848d2a0-5b5f-43f6-a0c7-22707ad5e028 # Bio
             handle: null
@@ -107,6 +111,7 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-04-22T18:00:45+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 7bb4d517-5179-42f5-a2b7-0400280d5411 # Website
             handle: null
@@ -123,6 +128,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-22T18:02:05+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 7601873a-7197-47a0-9e66-c07512a11dd2 # Email
             handle: null
@@ -139,6 +145,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-22T13:31:00+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: f7486108-7a41-4ff3-83e8-34c2b334e19f # Links
             handle: null
@@ -158,7 +165,7 @@ fieldLayouts:
         userCondition: null
 handle: author
 hasTitleField: true
-icon: user
+icon: null
 name: Author
 showSlugField: true
 showStatusField: true

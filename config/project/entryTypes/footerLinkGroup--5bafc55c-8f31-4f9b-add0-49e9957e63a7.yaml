@@ -7,6 +7,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-04-03T10:15:31+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: f7486108-7a41-4ff3-83e8-34c2b334e19f # Links
             handle: null
@@ -26,7 +27,7 @@ fieldLayouts:
         userCondition: null
 handle: footerLinkGroup
 hasTitleField: false
-icon: link
+icon: null
 name: 'Footer Link Group'
 showSlugField: false
 showStatusField: false
