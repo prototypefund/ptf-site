@@ -2,8 +2,6 @@
 
 {% if nextReads|length == 0 %}
   {% set nextReads = craft.entries.section('talks')
-    .date('>=' ~ now|date('Y-m-d'))
-    .orderBy('date')
     .limit(3)
   %}
 {% endif %}
