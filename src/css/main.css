@@ -20,6 +20,7 @@
   --color-pink: #ffd2f5;
   --color-hot-pink: #eb13b9;
   --color-white: #ffffff;
+  --color-highlighting-yellow: #fafd6f;
 
   --breakpoint-xxs: 420px;
   --breakpoint-xs: 576px;
@@ -183,7 +184,7 @@
   }
 
   :focus-visible {
-    @apply ring-8 ring-gray-800 outline-hidden dark:ring-4 dark:ring-gray-900;
+    @apply ring-highlighting-yellow ring-8 outline-hidden;
   }
 
   @media print {

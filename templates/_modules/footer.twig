@@ -8,12 +8,15 @@
   footer.newsletterSecondaryText|default(newsletter.newsletterSecondaryText)
 %}
 {% set sponsorsHeadline = footer.sponsorsHeadline %}
-{% set sponsors = footer.sponsors.all() %}
+{% set sponsorsLight = footer.sponsorsLight.all() %}
+{% set sponsorsDark = footer.sponsorsDark.all() %}
 
-<footer class="mt-[60px] bg-gray-100 md:mt-18">
-  <div class="border-t border-b border-gray-600 md:grid md:grid-cols-3">
+<footer class="mt-[60px] bg-gray-100 md:mt-18 dark:bg-gray-900">
+  <div
+    class="border-t border-b border-gray-600 md:grid md:grid-cols-3 dark:border-[#575757]"
+  >
     <div
-      class="border-gray-600 px-2 pt-5 pb-2.5 md:border-r md:px-3 md:pb-3 last:md:border-r-0"
+      class="border-gray-600 px-2 pt-5 pb-2.5 md:border-r md:px-3 md:pb-3 last:md:border-r-0 dark:border-[#575757]"
     >
       <a class="mb-3 inline-block last:mb-0" href="{{ homepage.url }}">
         <svg
@@ -24,10 +27,10 @@
           xmlns="http://www.w3.org/2000/svg"
         >
           <path
+            class="fill-black dark:fill-white"
             fill-rule="evenodd"
             clip-rule="evenodd"
             d="M16.089 0H111.973L137.049 46.6227L116.058 83.3858L100.442 97.5827L62.2412 104.659L62.2412 135.172L75.8407 140.81V154.836L59.7517 168H0V153.476L13.5995 142.35V33.2715L0 27.6333V13.1637L16.089 0ZM72.8432 152.627H18.1228V142.813L31.7222 137.174V18.8941L18.1228 13.2559V2.99754H110.182L133.622 46.5793L113.903 81.1144L76.124 89.3631H59.2437L59.2437 137.174L72.8432 142.813V152.627ZM75.9371 15.1752L100.922 27.4067L109.701 46.5396L100.938 62.9006L75.9163 76.4946L59.2437 72.7498V18.999L75.9371 15.1752ZM86.656 67.2485L91.2286 58.8077L83.5184 42.0039L62.2412 31.5876V70.3508L75.4746 73.3232L86.656 67.2485Z"
-            fill="black"
           />
         </svg>
       </a>
@@ -38,9 +41,11 @@
     </div>
 
     <div
-      class="border-t border-gray-600 pt-2.5 pb-2.5 md:border-t-0 md:border-r md:pt-5 md:pb-3 last:md:border-r-0"
+      class="border-t border-gray-600 pt-2.5 pb-2.5 md:border-t-0 md:border-r md:pt-5 md:pb-3 last:md:border-r-0 dark:border-[#575757]"
     >
-      <h4 class="text-body-16 px-2 pb-2 uppercase md:px-3 md:pb-3">
+      <h4
+        class="text-body-16 md:text-body-18 px-2 pb-2 uppercase md:px-3 md:pb-3"
+      >
         {{ newsletterHeadline }}
       </h4>
 
@@ -48,7 +53,7 @@
         {% include "_modules/newsletter-form" only %}
       </div>
 
-      <div class="px-2 md:px-3">
+      <div class="px-2 md:px-3 dark:text-gray-600">
         {% include "_rich-text/simple" with {
           text: newsletterSecondaryText,
           size: "small"
@@ -56,18 +61,29 @@
       </div>
     </div>
 
-    {% if (sponsorsHeadline|length) or (sponsors|length) %}
+    {% if
+      (sponsorsHeadline|length)
+        or (sponsorsLight|length)
+        or (sponsorsDark|length) %}
       <div
-        class="flex border-t border-gray-600 p-2 md:border-t-0 md:border-r md:p-3 last:md:border-r-0"
+        class="flex border-t border-gray-600 p-2 md:border-t-0 md:border-r md:p-3 last:md:border-r-0 dark:border-[#575757]"
       >
         <div class="mt-auto">
           {% if sponsorsHeadline|length %}
             <h4 class="text-body-14 mb-3 last:mb-0">{{ sponsorsHeadline }}</h4>
           {% endif %}
 
-          {% if sponsors|length %}
-            <div class="flex flex-wrap gap-x-[44px] gap-y-1.5">
-              {% for sponsor in sponsors %}
+          {% if sponsorsLight|length %}
+            <div class="flex flex-wrap gap-x-[44px] gap-y-1.5 dark:hidden">
+              {% for sponsor in sponsorsLight %}
+                <img src="{{ sponsor.url }}" alt="{{ sponsor.alt }}" />
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          {% if sponsorsDark|length %}
+            <div class="hidden flex-wrap gap-x-[44px] gap-y-1.5 dark:flex">
+              {% for sponsor in sponsorsDark %}
                 <img src="{{ sponsor.url }}" alt="{{ sponsor.alt }}" />
               {% endfor %}
             </div>
@@ -79,14 +95,14 @@
 
   {% if mainFooterLinks|length %}
     <div
-      class="text-body-16 md:text-body-18 border-b border-gray-600 md:grid md:grid-cols-3"
+      class="text-body-16 md:text-body-18 border-b border-gray-600 md:grid md:grid-cols-3 dark:border-[#575757]"
     >
       {% for linkGroup in mainFooterLinks %}
         {% set links = linkGroup.links %}
 
         {% if links|length %}
           <ul
-            class="border-t border-gray-600 p-2 first:border-t-0 md:border-t-0 md:border-r md:p-3 last:md:border-r-0"
+            class="border-t border-gray-600 p-2 first:border-t-0 md:border-t-0 md:border-r md:p-3 last:md:border-r-0 dark:border-[#575757]"
           >
             {% for link in links %}
               {% set navLink = link.genericLink %}
@@ -123,7 +139,9 @@
   {% endif %}
 
   {% if secondaryFooterLinks|length %}
-    <div class="text-body-14 border-b border-gray-600 p-2 md:p-3">
+    <div
+      class="text-body-14 border-b border-gray-600 p-2 md:p-3 dark:border-[#575757]"
+    >
       <ul class="flex flex-wrap gap-x-3 gap-y-1.5 md:gap-x-6">
         {% for link in secondaryFooterLinks %}
           {% set navLink = link.genericLink %}

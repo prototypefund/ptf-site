@@ -71,9 +71,13 @@
           <aside class="ml-auto hidden md:block">
             {% include "_modules/lang-switch.twig" %}
 
-            {# <display-toggle class="hidden" data-light-mode-label="{{ "Switch to light mode"|t }}" data-dark-mode-label="{{ "Switch to dark mode"|t }}">
-              <button class="inline-block text-link cursor-pointer"></button>
-            </display-toggle> #}
+            <display-toggle
+              class="hidden"
+              data-light-mode-label="{{ "Switch to light mode"|t }}"
+              data-dark-mode-label="{{ "Switch to dark mode"|t }}"
+            >
+              <button class="text-link inline-block cursor-pointer"></button>
+            </display-toggle>
           </aside>
         </div>
 
