@@ -4,14 +4,14 @@
 <main-nav>
   <header
     data-header
-    class="relative z-2 bg-white md:z-auto [&.menu-open]:fixed [&.menu-open]:h-[100dvh] [&.menu-open]:w-full [&.menu-open]:lg:static [&.menu-open]:lg:h-auto [&.menu-open]:lg:bg-transparent"
+    class="relative z-2 bg-white md:z-auto dark:bg-gray-900 [&.menu-open]:fixed [&.menu-open]:h-[100dvh] [&.menu-open]:w-full [&.menu-open]:lg:static [&.menu-open]:lg:h-auto [&.menu-open]:lg:bg-transparent"
   >
     <div
       class="overflow-visible [.menu-open_&]:h-full [.menu-open_&]:max-h-full [.menu-open_&]:lg:h-auto"
     >
       <nav class="flex h-full flex-col overflow-visible">
         <div
-          class="flex h-[60px] items-center border-b border-gray-600 p-2 md:h-auto lg:px-3"
+          class="flex h-[60px] items-center border-b border-gray-600 p-2 md:h-auto lg:px-3 dark:border-[#575757]"
         >
           <a class="block" href="{{ homepage.url }}">
             {% include "_modules/logo" only %}
@@ -32,20 +32,20 @@
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
+                class="stroke-black dark:stroke-white"
                 d="M8 11H24"
-                stroke="black"
                 stroke-width="1.5"
                 stroke-linecap="round"
               />
               <path
+                class="stroke-black dark:stroke-white"
                 d="M8 16H24"
-                stroke="black"
                 stroke-width="1.5"
                 stroke-linecap="round"
               />
               <path
+                class="stroke-black dark:stroke-white"
                 d="M8 21H24"
-                stroke="black"
                 stroke-width="1.5"
                 stroke-linecap="round"
               />
@@ -60,24 +60,27 @@
               xmlns="http://www.w3.org/2000/svg"
             >
               <path
+                class="stroke-black dark:stroke-white"
                 d="M10.1616 21.6762L21.8378 10M10.1617 10.3238L21.838 22"
-                stroke="black"
                 stroke-width="1.5"
                 stroke-linecap="round"
               />
             </svg>
           </button>
 
-          <aside class="ml-auto hidden md:block">
-            {% include "_modules/lang-switch.twig" %}
-
+          <aside class="ml-auto hidden md:flex md:gap-2">
             <display-toggle
-              class="hidden"
-              data-light-mode-label="{{ "Switch to light mode"|t }}"
-              data-dark-mode-label="{{ "Switch to dark mode"|t }}"
+              data-light-mode-label="{{ "Light"|t }} {{ "mode"|t }}"
+              data-dark-mode-label="{{ "Dark"|t }} {{ "mode"|t }}"
             >
-              <button class="text-link inline-block cursor-pointer"></button>
+              <button
+                class="text-ui-14 bg-moon dark:bg-sun h-3.5 cursor-pointer rounded-[20px] border border-gray-600 bg-[position:calc(100%-12px)_center] bg-no-repeat px-1.5 py-0.5 pr-4 dark:border-[#929292]"
+              >
+
+              </button>
             </display-toggle>
+
+            {% include "_modules/lang-switch.twig" %}
           </aside>
         </div>
 
@@ -85,15 +88,17 @@
           <div
             class="group hidden overflow-y-auto md:block lg:overflow-visible [.menu-open_&]:block [.menu-open_&]:md:block"
           >
-            <ul class="md:flex md:border-b md:border-gray-600">
+            <ul
+              class="md:flex md:border-b md:border-gray-600 dark:border-[#575757]"
+            >
               {% for linkGroup in navLinks %}
                 {% set links = linkGroup.links %}
 
                 <li
-                  class="border-b border-gray-600 last:border-b-0 md:w-1/5 md:border-r md:border-b-0 md:last:border-r-0"
+                  class="border-b border-gray-600 last:border-b-0 md:w-1/5 md:border-r md:border-b-0 md:last:border-r-0 dark:border-[#575757]"
                 >
                   <span
-                    class="md:text-body-14 lg:text-body-16 block cursor-pointer border-b border-gray-600 px-3 py-1 text-center text-[15px] uppercase md:border-b-0 md:p-1.5 md:text-left lg:px-3 lg:py-1.5"
+                    class="md:text-body-14 lg:text-body-16 block cursor-pointer border-b border-gray-600 px-3 py-1 text-center text-[15px] uppercase md:border-b-0 md:p-1.5 md:text-left lg:px-3 lg:py-1.5 dark:border-[#575757]"
                   >
                     {{ linkGroup.title }}
                   </span>
@@ -130,14 +135,14 @@
             </ul>
 
             <ul
-              class="absolute -z-10 hidden w-full border-b border-gray-600 bg-white opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:z-2 group-hover:opacity-100 md:flex"
+              class="absolute -z-10 hidden w-full border-b border-gray-600 bg-white opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:z-2 group-hover:opacity-100 md:flex dark:border-[#575757] dark:bg-gray-900"
             >
               {% for linkGroup in navLinks %}
                 {% set links = linkGroup.links %}
 
                 {% if links|length %}
                   <li
-                    class="text-body-16 w-1/5 border-r border-gray-600 p-2 leading-[1] last:border-r-0"
+                    class="text-body-16 w-1/5 border-r border-gray-600 p-2 leading-[1] last:border-r-0 dark:border-[#575757]"
                   >
                     <ul>
                       {% for link in links %}
@@ -206,7 +211,7 @@
         {% endif %}
 
         <aside
-          class="hidden justify-end gap-2.5 border-t border-gray-600 p-2 md:hidden [.menu-open_&]:flex [.menu-open_&]:md:hidden"
+          class="hidden justify-end gap-2.5 border-t border-gray-600 p-2 md:hidden dark:border-[#575757] [.menu-open_&]:flex [.menu-open_&]:md:hidden"
         >
           {% include "_modules/lang-switch.twig" %}
         </aside>
