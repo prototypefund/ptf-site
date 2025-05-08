@@ -1,10 +1,11 @@
 {% set meta = [entry.location, entry.speakers] %}
 {% set link = entry.genericLink %}
 
-<article
-  class="border-t md:last:border-b border-gray-600 pt-2 pb-3 md:pt-3 md:py-6"
->
-  <div class="md:grid md:grid-cols-16">
+<article class="border-t md:last:border-b border-gray-600">
+  <a
+    class="block group md:grid md:grid-cols-16 pt-2 pb-3 md:pt-3 md:py-6"
+    href="{{ link.url }}"
+  >
     <div class="mb-4 md:mb-0 md:col-span-4 md:pr-4">
       <div class="mb-1 md:mb-1.5">
         {% include "_modules/date-time" with {
@@ -36,9 +37,14 @@
         class="md:col-span-9 md:col-start-5 xl:col-span-3 xl:col-start-14 text-right md:text-left xl:text-right"
       >
         {% include "_modules/button-generic-link" with {
-          link: link
+          link: {
+            label: link.label,
+            type: link.type,
+            element: link.element|default(null),
+            value: link.value|default(null)
+          }
         } only %}
       </div>
     {% endif %}
-  </div>
+  </a>
 </article>
