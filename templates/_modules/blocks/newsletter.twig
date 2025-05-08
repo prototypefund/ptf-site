@@ -43,18 +43,19 @@
       {% if link|length %}
         {% set sideInfo = linkGroup.sideInfo %}
 
-        <li class="text-head-16 md:text-head-18 py-[18px] px-2 md:px-3 flex items-center md:h-[63px] border-navy-blue-100 border-b last:border-0 first:!border-b">
-          {{ tag('a', {
-            class: 'text-white',
-            href: link.value,
-            target: link.target,
-            rel: link.target == '_blank' ? 'noopener noreferrer' : null,
-            text: link.label,
-          }) }}
+        <li class="text-head-16 md:text-head-18 md:h-[63px] border-navy-blue-100 border-b last:border-0 first:!border-b">
+          <a
+            class="flex items-center text-white py-[18px] px-2 md:px-3 h-full hover:bg-navy-blue-100 transition-colors"
+            href="{{ link.url }}"
+            target="{{ link.target }}"
+            {{ link.target == '_blank' ? 'rel="noopener noreferrer"' : '' }}
+          >
+            {{ link.label }}
 
-          {% if sideInfo %}
-            <span class="ml-auto uppercase text-body-13 opacity-70">{{ sideInfo }}</span>
-          {% endif %}
+            {% if sideInfo %}
+              <span class="ml-auto uppercase text-body-13 opacity-70">{{ sideInfo }}</span>
+            {% endif %}
+          </a>
         </li>
       {% endif %}
     {% endfor %}
