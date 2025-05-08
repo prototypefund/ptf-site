@@ -1,77 +1,77 @@
 {% if entry.modules %}
   <div class="mb-10">
-  {% for module in entry.modules.all() %}
-    {% switch module.type %}
-      {% case 'blogTeasers' %}
-        {% include "_modules/blocks/blog-teasers" with {
-          module: module
-        } only %}
-      {% case 'genericTeasers' %}
-        {% include "_modules/blocks/generic-teasers" with {
-          module: module
-        } only %}
-      {% case 'eventTeasers' %}
-        {% include "_modules/blocks/event-teasers" with {
-          module: module
-        } only %}
-      {% case 'projectTeasers' %}
-        {% include "_modules/blocks/project-teasers" with {
-          module: module
-        } only %}
-      {% case 'talkTeasers' %}
-        {% include "_modules/blocks/talk-teasers" with {
-          module: module
-        } only %}
-      {% case 'trendTeasers' %}
-        {% include "_modules/blocks/trend-teasers" with {
-          module: module
-        } only %}
-      {% case 'relatedPublications' %}
-        {% include "_modules/blocks/publications" with {
-          module: module
-        } only %}
-      {% case 'statement' %}
-        {% include "_modules/blocks/statement" with {
-          module: module
-        } only %}
-      {% case 'expandableText' %}
-        {% include "_modules/blocks/expandable-text" with {
-          module: module
-        } only %}
-      {% case 'relatedLinkList' %}
-        {% include "_modules/blocks/link-list" with {
-          module: module
-        } only %}
-      {% case 'steps' %}
-        {% include "_modules/blocks/steps" with {
-          module: module
-        } only %}
-      {% case 'relatedCtaBanner' %}
-        {% include "_modules/blocks/cta-banner" with {
-          module: module
-        } only %}
-      {% case 'relatedTimeline' %}
-        {% include "_modules/blocks/timeline" with {
-          module: module
-        } only %}
-      {% case 'embed' %}
-        {{ module.render() }}
-      {% case 'newsletter' %}
-        {% include "_modules/blocks/newsletter" with {
-          module: module
-        } only %}
-      {% case 'peopleGrid' %}
-        {% include "_modules/blocks/people-grid" with {
-          module: module
-        } only %}
-      {% case 'textGrid' %}
-        {% include "_modules/blocks/text-grid" with {
-          module: module
-        } only %}
-      {% case 'sideHeadingText' %}
-        {{ module.render() }}
-      {% default %}
-    {% endswitch %}
-  {% endfor %}
+    {% for module in entry.modules.all() %}
+      {% switch module.type %}
+        {% case "blogTeasers" %}
+          {% include "_modules/blocks/blog-teasers" with {
+            module: module
+          } only %}
+        {% case "genericTeasers" %}
+          {% include "_modules/blocks/generic-teasers" with {
+            module: module
+          } only %}
+        {% case "eventTeasers" %}
+          {% include "_modules/blocks/event-teasers" with {
+            module: module
+          } only %}
+        {% case "projectTeasers" %}
+          {% include "_modules/blocks/project-teasers" with {
+            module: module
+          } only %}
+        {% case "talkTeasers" %}
+          {% include "_modules/blocks/talk-teasers" with {
+            module: module
+          } only %}
+        {% case "trendTeasers" %}
+          {% include "_modules/blocks/trend-teasers" with {
+            module: module
+          } only %}
+        {% case "relatedPublications" %}
+          {% include "_modules/blocks/publications" with {
+            module: module
+          } only %}
+        {% case "statement" %}
+          {% include "_modules/blocks/statement" with {
+            module: module
+          } only %}
+        {% case "expandableText" %}
+          {% include "_modules/blocks/expandable-text" with {
+            module: module
+          } only %}
+        {% case "relatedLinkList" %}
+          {% include "_modules/blocks/link-list" with {
+            module: module
+          } only %}
+        {% case "steps" %}
+          {% include "_modules/blocks/steps" with {
+            module: module
+          } only %}
+        {% case "relatedCtaBanner" %}
+          {% include "_modules/blocks/cta-banner" with {
+            module: module
+          } only %}
+        {% case "relatedTimeline" %}
+          {% include "_modules/blocks/timeline" with {
+            module: module
+          } only %}
+        {% case "embed" %}
+          {{ module.render() }}
+        {% case "newsletter" %}
+          {% include "_modules/blocks/newsletter" with {
+            module: module
+          } only %}
+        {% case "peopleGrid" %}
+          {% include "_modules/blocks/people-grid" with {
+            module: module
+          } only %}
+        {% case "textGrid" %}
+          {% include "_modules/blocks/text-grid" with {
+            module: module
+          } only %}
+        {% case "sideHeadingText" %}
+          {{ module.render() }}
+        {% default %}
+      {% endswitch %}
+    {% endfor %}
   </div>
 {% endif %}

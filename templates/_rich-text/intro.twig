@@ -1,6 +1,32 @@
-{{ text|retcon([
-  ["removeEmpty", "p"],
-  ["attr", "p", { class: "font-surt text-navy-blue text-body-20 md:text-head-22 mb-[1em] last:mb-0"}, false],
-  ["attr", "a", { class: "underline decoration-sky-blue hover:bg-light-blue"}, false],
-  ["attr", ".highlighted", { class: "bg-sky-blue"}]
-])|raw }}
+{{
+  text
+    |retcon(
+      [
+        ["removeEmpty", "p"],
+        [
+          "attr",
+          "p",
+          {
+            class: "font-surt text-navy-blue text-body-20 md:text-head-22 mb-[1em] last:mb-0"
+          },
+          false
+        ],
+        [
+          "attr",
+          "a",
+          {
+            class: "underline decoration-sky-blue hover:bg-light-blue"
+          },
+          false
+        ],
+        [
+          "attr",
+          ".highlighted",
+          {
+            class: "bg-sky-blue"
+          }
+        ]
+      ]
+    )
+    |raw
+}}

@@ -1,9 +1,17 @@
 {% extends "_layouts/layout.twig" %}
 
 {% block content %}
-  <article class="max-w-4xl mx-auto px-2 md:px-4 lg:px-6 pb-2 md:pb-4 lg:pb-6 mt-6">
+  <article
+    class="max-w-4xl mx-auto px-2 md:px-4 lg:px-6 pb-2 md:pb-4 lg:pb-6 mt-6"
+  >
     <h1 class="text-head-32 mb-0.5">{{ "404!"|t }}</h1>
-    <p class="text-body-16 mb-0.5">{{ "Page not found"|t }}</p>
-    <p><a class="text-link" href="{{ homepage.getUrl() }}">{{ "Return to homepage"|t }}</a></p>
+    <p class="text-body-16 mb-0.5">
+      {{ "Page not found"|t }}
+    </p>
+    <p>
+      <a class="text-link" href="{{ homepage.getUrl() }}">
+        {{ "Return to homepage"|t }}
+      </a>
+    </p>
   </article>
 {% endblock %}

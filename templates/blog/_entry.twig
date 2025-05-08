@@ -46,10 +46,18 @@
       {% set pronouns = articleAuthor.pronouns %}
       {% set bio = articleAuthor.bio %}
 
-      <div class="grid px-2 md:grid-cols-16 md:px-5 border-gray-600 border-t md:border-t-0">
-        <div class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-8 pt-2.5 border-gray-600 border-t-0 md:border-t">
+      <div
+        class="grid px-2 md:grid-cols-16 md:px-5 border-gray-600 border-t md:border-t-0"
+      >
+        <div
+          class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-8 pt-2.5 border-gray-600 border-t-0 md:border-t"
+        >
           {% if avatar|length %}
-            <img class="mb-6 md:mb-[60px]" src="{{ avatar.getUrl("avatarSmall") }}" alt="{{ avatar.alt }}">
+            <img
+              class="mb-6 md:mb-[60px]"
+              src="{{ avatar.getUrl("avatarSmall") }}"
+              alt="{{ avatar.alt }}"
+            />
           {% endif %}
 
           {% include "_modules/person-info" with {
@@ -61,6 +69,10 @@
     {% endif %}
   </article>
 
-  {% include "_modules/modules" with { entry: entry } only %}
-  {% include "blog/_modules/next-reads" with { entry: entry } only %}
+  {% include "_modules/modules" with {
+    entry: entry
+  } only %}
+  {% include "blog/_modules/next-reads" with {
+    entry: entry
+  } only %}
 {% endblock %}

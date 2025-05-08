@@ -1,15 +1,17 @@
 {% extends "_layouts/layout.twig" %}
 
-{% set pastEventQuery = craft.entries.section('events')
-  .date('<' ~ now|date('Y-m-d'))
-  .orderBy('date desc')
+{% set pastEventQuery =
+  craft.entries.section("events").date("<" ~ (now|date("Y-m-d"))).orderBy(
+    "date desc"
+  )
 %}
 
 {% paginate pastEventQuery.limit(6) as pastEventPagination, events %}
 
-{% set pastTalksQuery = craft.entries.section('talks')
-  .date('<' ~ now|date('Y-m-d'))
-  .orderBy('date desc')
+{% set pastTalksQuery =
+  craft.entries.section("talks").date("<" ~ (now|date("Y-m-d"))).orderBy(
+    "date desc"
+  )
 %}
 
 {% paginate pastTalksQuery.limit(4) as pastTalksPagination, talks %}
@@ -26,9 +28,13 @@
 
   {% if events|length %}
     {% set content %}
-      {% include "events/_modules/teasers-list" with { events: events } %}
+      {% include "events/_modules/teasers-list" with {
+        events: events
+      } %}
       <div class="mt-5">
-        {% include "_modules/pagination" with { pagination: pastEventPagination } only %}
+        {% include "_modules/pagination" with {
+          pagination: pastEventPagination
+        } only %}
       </div>
     {% endset %}
 
@@ -40,7 +46,7 @@
           text: "See Upcoming Events"|t,
           url: eventsIndex.url
         },
-        content: content,
+        content: content
       } only %}
     </div>
   {% endif %}
@@ -60,12 +66,14 @@
       {% include "_modules/next-reads" with {
         heading: "Past Talks"|t,
         count: pastTalksQuery.count(),
-        content: content,
+        content: content
       } only %}
     </div>
   {% endif %}
 
   <div class="mt-10">
-    {% include "_modules/modules" with { entry: entry } %}
+    {% include "_modules/modules" with {
+      entry: entry
+    } %}
   </div>
 {% endblock %}

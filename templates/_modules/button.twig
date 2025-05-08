@@ -13,20 +13,20 @@
 {% set iconStyles = {
   arrow: {
     dark: iconAlignment == "right"
-     ? "before:bg-arrow-right-black hover:before:bg-arrow-right-white group-hover:before:bg-arrow-right-white"
-     : "before:bg-arrow-left-black hover:before:bg-arrow-left-white group-hover:before:bg-arrow-left-white",
+      ? "before:bg-arrow-right-black hover:before:bg-arrow-right-white group-hover:before:bg-arrow-right-white"
+      : "before:bg-arrow-left-black hover:before:bg-arrow-left-white group-hover:before:bg-arrow-left-white",
     light: iconAlignment == "right"
-     ? "before:bg-arrow-right-white hover:before:bg-arrow-right-black group-hover:before:bg-arrow-right-black"
-     : "before:bg-arrow-left-white hover:before:bg-arrow-left-black group-hover:before:bg-arrow-left-black",
+      ? "before:bg-arrow-right-white hover:before:bg-arrow-right-black group-hover:before:bg-arrow-right-black"
+      : "before:bg-arrow-left-white hover:before:bg-arrow-left-black group-hover:before:bg-arrow-left-black"
   },
   link: {
     dark: "before:bg-link-black hover:before:bg-link-white group-hover:before:bg-link-white",
-    light: "before:bg-link-white hover:before:bg-link-black group-hover:before:bg-link-black",
+    light: "before:bg-link-white hover:before:bg-link-black group-hover:before:bg-link-black"
   },
   download: {
     dark: "before:bg-download-black hover:before:bg-download-white group-hover:before:bg-download-white",
-    light: "before:bg-download-white hover:before:bg-download-black group-hover:before:bg-download-black",
-  },
+    light: "before:bg-download-white hover:before:bg-download-black group-hover:before:bg-download-black"
+  }
 } %}
 
 {% set borderStyles = border ? "border-x px-[10px]" %}
@@ -36,16 +36,23 @@
 
 {% set props = url
   ? {
-      href: url,
-      target: target,
-      rel: target == "_blank" ? "noopener noreferrer" : null,
-      text: text
-    }
+    href: url,
+    target: target,
+    rel: target == "_blank" ? "noopener noreferrer" : null,
+    text: text
+  }
   : {
-      text: text
-    }
+    text: text
+  }
 %}
 
-{{ tag(tag, {
-  class: "#{buttonStyles[color]} #{iconAlignmentStyles} #{icon ? iconStyles[icon][color]} #{icon ? 'gap-2.5 before:mt-[-2px] before:content-[\"\"] before:h-[18px] before:w-[18px]' } #{borderStyles} px-0.5 inline-flex items-center justify-center font-surt uppercase text-ui-14 tracking-wider transition-colors py-[5px]",
-}|merge(props)) }}
+{{
+  tag(
+    tag,
+    {
+      class: "#{buttonStyles[color]} #{iconAlignmentStyles} #{icon
+        ? iconStyles[icon][color]} #{icon
+        ? 'gap-2.5 before:mt-[-2px] before:content-[""] before:h-[18px] before:w-[18px]'} #{borderStyles} px-0.5 inline-flex items-center justify-center font-surt uppercase text-ui-14 tracking-wider transition-colors py-[5px]"
+    }|merge(props)
+  )
+}}

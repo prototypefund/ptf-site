@@ -1,30 +1,54 @@
 {% set currentElement = craft.app.urlManager.matchedElement %}
-{% set sites = craft.app.getSites().getGroupById(currentSite.groupId).getSites() %}
+{% set sites =
+  craft.app.getSites().getGroupById(currentSite.groupId).getSites()
+%}
 {% set languageLinks = [] %}
 
 {% for site in sites|filter(site => site.baseUrl is not empty) %}
   {% set url = site.getBaseUrl() %}
   {% if currentElement %}
-    {% set otherLocaleElement = craft.app.getElements().getElementById(currentElement.id, currentElement.className(), site.id) %}
+    {% set otherLocaleElement =
+      craft.app.getElements().getElementById(
+        currentElement.id,
+        currentElement.className(),
+        site.id
+      )
+    %}
     {% if otherLocaleElement and otherLocaleElement.enabledForSite %}
       {% set url = otherLocaleElement.url %}
     {% endif %}
   {% else %}
-    {% set url = siteUrl('', '', 'https', site.id) %}
+    {% set url = siteUrl("", "", "https", site.id) %}
   {% endif %}
 
-  {% set languageLinks = languageLinks|merge([{
-    url: url,
-    countryCode: site.language|split('-')|last|lower,
-    current: site.id == currentSite.id ? true : false,
-    language: site.language,
-    languageName: site.name
-  }]) %}
+  {% set languageLinks =
+    languageLinks|merge(
+      [
+        {
+          url: url,
+          countryCode: site.language|split("-")|last|lower,
+          current: site.id == currentSite.id ? true : false,
+          language: site.language,
+          languageName: site.name
+        }
+      ]
+    )
+  %}
 {% endfor %}
 
-<div class="inline-flex gap-[2px] uppercase text-ui-14 border-gray-600 border rounded-sm p-[3px]">
+<div
+  class="inline-flex gap-[2px] uppercase text-ui-14 border-gray-600 border rounded-sm p-[3px]"
+>
   {% for link in languageLinks %}
-    <a class="rounded-[2px] px-1 py-0.5 md:py-[2px] md:px-[7px] transition-colors {{ link.current ? "bg-black text-white" : "hover:bg-gray-100" }}" href="{{ link.url }}" tabindex="0">
+    <a
+      class="rounded-[2px] px-1 py-0.5 md:py-[2px] md:px-[7px] transition-colors {{
+      link.current
+        ? "bg-black text-white"
+        : "hover:bg-gray-100"
+      }}"
+      href="{{ link.url }}"
+      tabindex="0"
+    >
       {{ link.countryCode }}
     </a>
   {% endfor %}

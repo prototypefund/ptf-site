@@ -2,10 +2,7 @@
 
 {% set isBasicTextPage = entry.type == "basicTextPage" %}
 
-{% set alignment = isBasicTextPage
-  ? "center"
-  : entry.headerAlignment.value
-%}
+{% set alignment = isBasicTextPage ? "center" : entry.headerAlignment.value %}
 
 {% set text = entry.text|default(null) %}
 
@@ -28,6 +25,8 @@
   {% endif %}
 
   <div class="mt-10">
-    {% include "_modules/modules" with { entry: entry } %}
+    {% include "_modules/modules" with {
+      entry: entry
+    } %}
   </div>
 {% endblock %}

@@ -1,12 +1,14 @@
 {% set nextReads = module.projectNextReads.eagerly().all() %}
 
-{% if nextReads|length == 0 %}
-  {% set nextReads =  craft.entries.section('projects').limit(4).all() %}
+{% if (nextReads|length) == 0 %}
+  {% set nextReads = craft.entries.section("projects").limit(4).all() %}
 {% endif %}
 
 {% if nextReads|length %}
   {% set content %}
-    {% include "projects/_modules/teasers-list" with { projects: nextReads } %}
+    {% include "projects/_modules/teasers-list" with {
+      projects: nextReads
+    } %}
   {% endset %}
 
   {% include "_modules/next-reads" with {
@@ -15,6 +17,6 @@
       text: "See all"|t,
       url: projectsIndex.url
     },
-    content: content,
+    content: content
   } only %}
 {% endif %}

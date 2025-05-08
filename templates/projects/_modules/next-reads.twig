@@ -3,31 +3,50 @@
 {% if not nextReads|length %}
   {% set topic = entry.projectTopics.one() %}
   {% set technology = entry.projectTechnologies.one() %}
-  
-  {% set baseQuery = craft.entries.section('projects')
-    .id('not ' ~ entry.id)
-    .with([
-      'projectYearGroups',
-      'projectRounds',
-      'projectTopics',
-      'projectTechnologies'
-    ])
-    .limit(4)
+
+  {% set baseQuery =
+    craft.entries.section("projects").id("not " ~ entry.id).with(
+      [
+        "projectYearGroups",
+        "projectRounds",
+        "projectTopics",
+        "projectTechnologies"
+      ]
+    ).limit(
+      4
+    )
   %}
 
   {% if topic and technology %}
-    {% set nextReads = baseQuery.relatedTo(['and', 
-      { targetElement: topic }, 
-      { targetElement: technology }
-    ]).all() %}
-    
+    {% set nextReads =
+      baseQuery.relatedTo(
+        [
+          "and",
+          {
+            targetElement: topic
+          },
+          {
+            targetElement: technology
+          }
+        ]
+      ).all()
+    %}
+
     {% if not nextReads|length %}
-      {% set nextReads = baseQuery.relatedTo({ targetElement: topic }).all() %}
+      {% set nextReads =
+        baseQuery.relatedTo({
+          targetElement: topic
+        }).all()
+      %}
     {% endif %}
   {% elseif topic %}
-    {% set nextReads = baseQuery.relatedTo({ targetElement: topic }).all() %}
+    {% set nextReads =
+      baseQuery.relatedTo({
+        targetElement: topic
+      }).all()
+    %}
   {% endif %}
-  
+
   {% if not nextReads|length %}
     {% set nextReads = baseQuery.all() %}
   {% endif %}
@@ -35,7 +54,9 @@
 
 {% if nextReads|length %}
   {% set content %}
-    {% include "projects/_modules/teasers-list" with { projects: nextReads } %}
+    {% include "projects/_modules/teasers-list" with {
+      projects: nextReads
+    } %}
   {% endset %}
 
   {% include "_modules/next-reads" with {
@@ -44,6 +65,6 @@
       text: "See all"|t,
       url: projectsIndex.url
     },
-    content: content,
+    content: content
   } only %}
 {% endif %}

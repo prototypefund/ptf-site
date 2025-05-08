@@ -3,45 +3,62 @@
 {% if ctaBanner|length %}
   {% set bannerText = ctaBanner.bannerText %}
   {% set link = ctaBanner.genericLink %}
-  {% set background = ctaBanner.ctaBackground|default("darkMagentaBackgroundPinkPattern") %}
+  {% set background =
+    ctaBanner.ctaBackground|default("darkMagentaBackgroundPinkPattern")
+  %}
 
-  {% set patternPositions = [
-    'after:bottom-0',
-    'after:bg-right-bottom',
-    'after:w-[18vw]',
-    'after:md:w-[14vw]',
-    'after:lg:w-[10vw]',
-    'before:bottom-0',
-    'before:bg-bottom-left',
-    'before:w-[18vw]',
-    'before:md:w-[14vw]',
-    'before:lg:w-[10vw]'
-  ]|join(' ') %}
+  {% set patternPositions =
+    [
+      "after:bottom-0",
+      "after:bg-right-bottom",
+      "after:w-[18vw]",
+      "after:md:w-[14vw]",
+      "after:lg:w-[10vw]",
+      "before:bottom-0",
+      "before:bg-bottom-left",
+      "before:w-[18vw]",
+      "before:md:w-[14vw]",
+      "before:lg:w-[10vw]"
+    ]|join(" ")
+  %}
 
   {% set backgroundConfigs = {
     darkMagentaBackgroundPinkPattern: {
-      pattern: 'after:bg-pattern-br-pink before:bg-pattern-bl-pink',
-      bgColor: 'bg-dark-magenta'
+      pattern: "after:bg-pattern-br-pink before:bg-pattern-bl-pink",
+      bgColor: "bg-dark-magenta"
     },
     richBlueBackgroundPinkPattern: {
-      pattern: 'after:bg-pattern-br-pink before:bg-pattern-bl-pink',
-      bgColor: 'bg-rich-blue'
+      pattern: "after:bg-pattern-br-pink before:bg-pattern-bl-pink",
+      bgColor: "bg-rich-blue"
     }
   } %}
 
-  {% set defaultBackground = 'darkMagentaBackgroundPinkPattern' %}
-  {% set config = backgroundConfigs[background.value|default(defaultBackground)] %}
+  {% set defaultBackground = "darkMagentaBackgroundPinkPattern" %}
+  {% set config =
+    backgroundConfigs[background.value|default(defaultBackground)]
+  %}
 
-  {% set headerClass = "#{patternPositions} #{config.bgColor} #{config.pattern}" %}
+  {% set headerClass = "#{patternPositions} #{config.bgColor} #{config.pattern}"
+  %}
 
   <div class="px-2 md:px-5 mb-10 last:mb-0">
-    <div class="{{ headerClass }} px-2 md:px-0 relative text-white md:grid md:grid-cols-16 py-9 before:content-[''] before:absolute before:left-0 before:h-full before:bg-no-repeat before:bg-contain after:content-[''] after:absolute after:right-0 after:h-full after:bg-no-repeat after:bg-contain">
-      <h4 class="z-1 md:col-start-2 md:col-span-7 uppercase font-surt text-head-22 md:text-head-38 mb-3 md:mb-0">{{ ctaBanner.title }}</h4>
+    <div
+      class="{{
+      headerClass
+      }} px-2 md:px-0 relative text-white md:grid md:grid-cols-16 py-9 before:content-[''] before:absolute before:left-0 before:h-full before:bg-no-repeat before:bg-contain after:content-[''] after:absolute after:right-0 after:h-full after:bg-no-repeat after:bg-contain"
+    >
+      <h4
+        class="z-1 md:col-start-2 md:col-span-7 uppercase font-surt text-head-22 md:text-head-38 mb-3 md:mb-0"
+      >
+        {{ ctaBanner.title }}
+      </h4>
 
-      {% if bannerText|length or link|length %}
+      {% if (bannerText|length) or (link|length) %}
         <div class="z-1 md:col-span-5">
           {% if bannerText|length %}
-            <p class="text-body-16 md:text-body-20 mb-5 last:mb-0">{{ bannerText }}</p>
+            <p class="text-body-16 md:text-body-20 mb-5 last:mb-0">
+              {{ bannerText }}
+            </p>
           {% endif %}
 
           {% if link|length %}

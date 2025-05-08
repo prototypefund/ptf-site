@@ -1,4 +1,6 @@
-<div class="md:grid md:grid-cols-2 md:gap-x-5 md:[&>*:nth-last-child(-n+2)]:mb-0">
+<div
+  class="md:grid md:grid-cols-2 md:gap-x-5 md:[&>*:nth-last-child(-n+2)]:mb-0"
+>
   {% for project in projects %}
     {{ project.render() }}
   {% endfor %}

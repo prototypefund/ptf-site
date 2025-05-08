@@ -18,10 +18,14 @@
         url: eventsIndex.url
       },
       date: date,
-      text: entry.location,
+      text: entry.location
     } only %}
   </article>
 
-  {% include "_modules/modules" with { entry: entry } only %}
-  {% include "events/_modules/next-reads" with { entry: entry } only %}
+  {% include "_modules/modules" with {
+    entry: entry
+  } only %}
+  {% include "events/_modules/next-reads" with {
+    entry: entry
+  } only %}
 {% endblock %}

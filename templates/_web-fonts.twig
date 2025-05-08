@@ -6,52 +6,33 @@
 
 <style>
   {% if inclusiveSansRegular|length %}
-    @font-face {
-      font-family: "Inclusive Sans";
-      src: url("{{ inclusiveSansRegular.url }}") format("woff2");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
+    @font-face { font-family: "Inclusive Sans"; src: url("{{
+      inclusiveSansRegular.url
+    }}") format("woff2"); font-weight: 400; font-style: normal; font-display:
+    swap; }
   {% endif %}
 
   {% if inclusiveSansSemibold|length %}
-    @font-face {
-      font-family: "Inclusive Sans";
-      src: url("{{ inclusiveSansSemibold.url }}") format("woff2");
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-    }
+    @font-face { font-family: "Inclusive Sans"; src: url("{{
+      inclusiveSansSemibold.url
+    }}") format("woff2"); font-weight: 700; font-style: normal; font-display:
+    swap; }
   {% endif %}
 
   {% if inclusiveSansSemiboldItalic|length %}
-    @font-face {
-      font-family: "Inclusive Sans";
-      src: url("{{ inclusiveSansSemiboldItalic.url }}") format("woff2");
-      font-weight: 700;
-      font-style: italic;
-      font-display: swap;
-    }
+    @font-face { font-family: "Inclusive Sans"; src: url("{{
+      inclusiveSansSemiboldItalic.url
+    }}") format("woff2"); font-weight: 700; font-style: italic; font-display:
+    swap; }
   {% endif %}
 
   {% if surtRegular|length %}
-    @font-face {
-      font-family: "Surt";
-      src: url("{{ surtRegular.url }}") format("woff");
-      font-weight: 400;
-      font-style: normal;
-      font-display: swap;
-    }
+    @font-face { font-family: "Surt"; src: url("{{ surtRegular.url }}")
+    format("woff"); font-weight: 400; font-style: normal; font-display: swap; }
   {% endif %}
 
   {% if surtBold|length %}
-    @font-face {
-      font-family: "Surt";
-      src: url("{{ surtBold.url }}") format("woff2");
-      font-weight: 700;
-      font-style: normal;
-      font-display: swap;
-    }
+    @font-face { font-family: "Surt"; src: url("{{ surtBold.url }}")
+    format("woff2"); font-weight: 700; font-style: normal; font-display: swap; }
   {% endif %}
 </style>

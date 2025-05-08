@@ -1,18 +1,30 @@
-{% macro sizes(size) %}{% apply spaceless %}
+{% macro sizes(size) %}
+  {% apply spaceless %}
   {% set sizes = {
     textCol: "(min-width: 1024px) 800px, 100vw"
   } %}
   {{ sizes[size] }}
-{% endapply %}{% endmacro %}
+  {% endapply %}
+{% endmacro %}
 
-{% macro srcSet(image) %}{% apply spaceless %}
+{% macro srcSet(image) %}
+  {% apply spaceless %}
   {% set imageSizes = [500, 1000, 1500, 2000] %}
-  {{ imageSizes|reduce((carry, v) => "#{carry}, #{image.getUrl('w'~v)} #{v}w", "") }}
-{% endapply %}{% endmacro %}
+  {{
+    imageSizes|reduce(
+      (carry, v) => "#{carry}, #{image.getUrl("w" ~ v)} #{v}w",
+      ""
+    )
+  }}
+  {% endapply %}
+{% endmacro %}
 
-{% macro fundingStatus(entry) %}{% apply spaceless %}
+{% macro fundingStatus(entry) %}
+  {% apply spaceless %}
   {% set currentDate = now %}
-  {% set category = entry.projectRounds.one()|default(entry.projectYearGroups.one()) %}
+  {% set category =
+    entry.projectRounds.one()|default(entry.projectYearGroups.one())
+  %}
   {% set secondStage = entry.secondStage|default(false) %}
 
   {% if category|length %}
@@ -25,16 +37,22 @@
         {{ "inDuration" }}
       {% elseif endDateRegular <= currentDate and not secondStage|length %}
         {{ "completed" }}
-      {% elseif endDateRegular < currentDate and currentDate <= endDateSecondStage and secondStage|length %}
+      {% elseif
+        endDateRegular < currentDate
+          and currentDate <= endDateSecondStage
+          and (secondStage|length) %}
         {{ "inDurationWithSecondStage" }}
-      {% elseif currentDate > endDateSecondStage and secondStage|length %}
+      {% elseif currentDate > endDateSecondStage and (secondStage|length) %}
         {{ "completedWithSecondStage" }}
       {% endif %}
     {% endif %}
   {% endif %}
-{% endapply %}{% endmacro %}
+  {% endapply %}
+{% endmacro %}
 
-{% macro inFunding(entry) %}{% apply spaceless %}
-  {{ _self.fundingStatus(entry) in ["inDuration", "inDurationWithSecondStage"] }}
-{% endapply %}{% endmacro %}
-
+{% macro inFunding(entry) %}
+  {% apply spaceless %}
+  {{ _self.fundingStatus(entry)
+    in ["inDuration", "inDurationWithSecondStage"] }}
+  {% endapply %}
+{% endmacro %}

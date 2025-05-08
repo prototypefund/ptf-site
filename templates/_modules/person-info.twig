@@ -5,16 +5,33 @@
 {% set size = size|default("medium") %}
 
 <div class="flex gap-2">
-  <h4 class="uppercase font-surt text-head-22 md:text-head-38 mb-3 md:mb-4">{{ person.title  }}</h4>
+  <h4 class="uppercase font-surt text-head-22 md:text-head-38 mb-3 md:mb-4">
+    {{ person.title }}
+  </h4>
 
   {% if pronouns|length %}
-    <span class="uppercase font-surt text-head-16 md:text-head-22">{{ pronouns }}</span>
+    <span class="uppercase font-surt text-head-16 md:text-head-22">
+      {{ pronouns }}
+    </span>
   {% endif %}
 </div>
 
-{% if role|length or website|length %}
+{% if (role|length) or (website|length) %}
   <p class="mb-3 md:mb-4 last:mb-0 text-head-18 md:text-head-20">
-    {{ role }}{% if role|length and website|length %}, {% endif %}{% if website|length %}<a class="underline decoration-sky-blue hover:bg-light-blue" href="{{ website.url }}">{{ website.url|replace({"https://": "", "www.": ""}) }}</a>{% endif %}
+    {{ role }}{% if (role|length) and (website|length) %}, {% endif %}
+    {% if website|length %}
+      <a
+        class="underline decoration-sky-blue hover:bg-light-blue"
+        href="{{ website.url }}"
+      >
+        {{
+          website.url|replace({
+            "https://": "",
+            "www.": ""
+          })
+        }}
+      </a>
+    {% endif %}
   </p>
 {% endif %}
 

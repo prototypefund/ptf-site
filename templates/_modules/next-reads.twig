@@ -13,7 +13,9 @@
 <div class="mb-10 px-2 md:px-5">
   <div class="flex items-center mb-2.5 md:mb-5">
     <h4 class="font-surt text-head-22 md:text-head-32 max-w-2/5">
-      {{ heading }}{% if count is not empty %}<span class="text-rich-blue"> [{{ count }}]</span>{% endif %}
+      {{ heading }}{% if count is not empty %}
+        <span class="text-rich-blue">[{{ count }}]</span>
+      {% endif %}
     </h4>
     {% if sideLink|length %}
       <div class="hidden sm:block sm:ml-auto">

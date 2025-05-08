@@ -12,48 +12,7 @@
 
     {% set entries = craft.entries().section('blog').limit(10).all() %}
 
-    {% for entry in entries %}
-      <item>
-        <title>{{ entry.title }}</title>
-        <link>{{ entry.url }}</link>
-        <pubDate>{{ entry.postDate|rss }}</pubDate>
-        <author>{{ entry.author.email }} ({{ seomatic.site.siteName }})</author>
-        <guid>{{ entry.url }}</guid>
-        <description>
-          {% set nextReads = entry.nextReads.eagerly().all() %}
-          {% set mainImage = entry.mainImage.eagerly().one() %}
 
-          {% if mainImage %}
-            <![CDATA[
-              <figure>
-                <img src="{{ mainImage.getUrl("w1000") }}" alt="{{ mainImage.alt }}">
-                {% if mainImage.caption|length %}
-                  <figcaption>{{ mainImage.caption|raw }}</figcaption>
-                {% endif %}
-              </figure>
-            ]]>
-          {% endif %}
-
-          <![CDATA[
-              {% include "_rich-text/rss" with {text: entry.text } only %}
-          ]]>
-
-          {% if nextReads|length %}
-            <![CDATA[
-              <hr>
-              <p><strong>{{ "More articles" |t}}</strong></p>
-            ]]>
-            <![CDATA[
-              <ul>
-                {% for article in nextReads %}
-                  <li><a href="{{ article.getUrl() }}">{{ article.title }}</a></li>
-                {% endfor %}
-              </ul>
-            ]]>
-          {% endif %}
-        </description>
-      </item>
-    {% endfor %}
   </channel>
 </rss>
 {% endapply %}

@@ -6,27 +6,30 @@
 {% set background = background|default("greyBackgroundBluePattern") %}
 {% set alignment = alignment|default("left") %}
 
-{% set leftPatternPositions = [
-  'after:top-0',
-  'after:bg-right-top',
-  'after:w-[calc(15vw+16px)]',
-  'after:md:w-[calc(12vw+40px)]',
-  'after:lg:w-[calc(8vw+40px)]'
-  ]|join(' ')
+{% set leftPatternPositions =
+  [
+    "after:top-0",
+    "after:bg-right-top",
+    "after:w-[calc(15vw+16px)]",
+    "after:md:w-[calc(12vw+40px)]",
+    "after:lg:w-[calc(8vw+40px)]"
+  ]|join(" ")
 %}
 
-{% set centerPatternPositions = [
-  'after:bottom-0',
-  'after:bg-right-bottom',
-  'after:w-[calc(18vw+16px)]',
-  'after:md:w-[calc(18vw+40px)]',
-  'after:lg:w-[calc(13vw+40px)]',
-  'before:top-0',
-  'before:bg-top-left',
-  'before:w-[calc(18vw+16px)]',
-  'before:md:w-[calc(18vw+40px)]',
-  'before:lg:w-[calc(13vw+40px)]'
-]|join(' ') %}
+{% set centerPatternPositions =
+  [
+    "after:bottom-0",
+    "after:bg-right-bottom",
+    "after:w-[calc(18vw+16px)]",
+    "after:md:w-[calc(18vw+40px)]",
+    "after:lg:w-[calc(13vw+40px)]",
+    "before:top-0",
+    "before:bg-top-left",
+    "before:w-[calc(18vw+16px)]",
+    "before:md:w-[calc(18vw+40px)]",
+    "before:lg:w-[calc(13vw+40px)]"
+  ]|join(" ")
+%}
 
 {% set patternStyles = {
   skyBlue: {
@@ -44,57 +47,79 @@
   gray: {
     left: "after:bg-pattern-tr-gray #{leftPatternPositions}",
     center: "after:bg-pattern-br-gray-4 before:bg-pattern-tl-gray #{centerPatternPositions}"
-  },
+  }
 } %}
 
 {% set backgroundConfigs = {
   greyBackgroundBluePattern: {
-    pattern: 'skyBlue',
-    bgColor: 'bg-gray-100 border-gray-600 border-b',
-    buttonColor: 'dark'
+    pattern: "skyBlue",
+    bgColor: "bg-gray-100 border-gray-600 border-b",
+    buttonColor: "dark"
   },
   greyBackgroundPinkPattern: {
-    pattern: 'hotPink',
-    bgColor: 'bg-gray-100 border-gray-600 border-b',
-    buttonColor: 'dark'
+    pattern: "hotPink",
+    bgColor: "bg-gray-100 border-gray-600 border-b",
+    buttonColor: "dark"
   },
   greyBackgroundGreyPattern: {
-    pattern: 'gray',
-    bgColor: 'bg-gray-100 border-gray-600 border-b',
-    buttonColor: 'dark'
+    pattern: "gray",
+    bgColor: "bg-gray-100 border-gray-600 border-b",
+    buttonColor: "dark"
   },
   skyBlueBackgroundLightBluePattern: {
-    pattern: 'lightBlue',
-    bgColor: 'bg-sky-blue',
-    buttonColor: 'dark'
+    pattern: "lightBlue",
+    bgColor: "bg-sky-blue",
+    buttonColor: "dark"
   },
   richBlueBackgroundPinkPattern: {
-    pattern: 'hotPink',
-    bgColor: 'bg-rich-blue text-white',
-    buttonColor: 'light'
+    pattern: "hotPink",
+    bgColor: "bg-rich-blue text-white",
+    buttonColor: "light"
   },
   darkMagentaBackgroundBluePattern: {
-    pattern: 'skyBlue',
-    bgColor: 'bg-dark-magenta text-white',
-    buttonColor: 'light'
+    pattern: "skyBlue",
+    bgColor: "bg-dark-magenta text-white",
+    buttonColor: "light"
   },
   navyBlueBackgroundPinkPattern: {
-    pattern: 'hotPink',
-    bgColor: 'bg-navy-blue text-white',
-    buttonColor: 'light'
+    pattern: "hotPink",
+    bgColor: "bg-navy-blue text-white",
+    buttonColor: "light"
   }
 } %}
 
-{% set defaultBackground = 'greyBackgroundBluePattern' %}
-{% set config = backgroundConfigs[background] ?? backgroundConfigs[defaultBackground] %}
+{% set defaultBackground = "greyBackgroundBluePattern" %}
+{% set config = backgroundConfigs[background]
+  ?? backgroundConfigs[defaultBackground]
+%}
 
 {% set patternClasses = patternStyles[config.pattern][alignment] %}
 {% set headerClass = "#{patternClasses} #{config.bgColor}" %}
 
-<header class="{{ headerClass }} {{ alignment == "left" ? "lg:py-[130px]" : "lg:py-[100px]" }} px-2 md:px-5 py-10 relative before:content-[''] before:absolute before:left-0 before:h-full before:bg-no-repeat before:bg-contain after:content-[''] after:absolute after:right-0 after:h-full after:bg-no-repeat after:bg-contain">
-  <div class="{{ alignment == "left" ? "grid grid-cols-12 lg:grid-cols-16" : "text-center" }}">
-    <div class="{{ alignment == "left" ? "col-span-11 lg:col-span-7 xl:col-span-8 mb-3 lg:mb-0 md:pr-4 pr-0 md:max-w-[600px]" : "mb-3 lg:mb-5 md:max-w-[680px] md:mx-auto" }} relative z-1">
-      <h1 class="font-surt text-head-28 md:text-head-46 uppercase">{{ headline }}</h1>
+<header
+  class="{{ headerClass }} {{
+  alignment == "left"
+    ? "lg:py-[130px]"
+    : "lg:py-[100px]"
+  }} px-2 md:px-5 py-10 relative before:content-[''] before:absolute before:left-0 before:h-full before:bg-no-repeat before:bg-contain after:content-[''] after:absolute after:right-0 after:h-full after:bg-no-repeat after:bg-contain"
+>
+  <div
+    class="{{
+    alignment == "left"
+      ? "grid grid-cols-12 lg:grid-cols-16"
+      : "text-center"
+    }}"
+  >
+    <div
+      class="{{
+      alignment == "left"
+        ? "col-span-11 lg:col-span-7 xl:col-span-8 mb-3 lg:mb-0 md:pr-4 pr-0 md:max-w-[600px]"
+        : "mb-3 lg:mb-5 md:max-w-[680px] md:mx-auto"
+      }} relative z-1"
+    >
+      <h1 class="font-surt text-head-28 md:text-head-46 uppercase">
+        {{ headline }}
+      </h1>
 
       {% if subheadline %}
         <div class="mt-5 md:mt-[60px]">
@@ -103,12 +128,18 @@
       {% endif %}
     </div>
 
-    {% if intro|length
-      or content|length
-      or secondaryText|length
-      or link|length
-    %}
-      <div class="{{ alignment == "left" ? "col-span-11 lg:col-span-7 xl:col-start-9 xl:col-span-5" : "m-auto" }} max-w-64 relative z-1">
+    {% if
+      (intro|length)
+        or (content|length)
+        or (secondaryText|length)
+        or (link|length) %}
+      <div
+        class="{{
+        alignment == "left"
+          ? "col-span-11 lg:col-span-7 xl:col-start-9 xl:col-span-5"
+          : "m-auto"
+        }} max-w-64 relative z-1"
+      >
         {% if intro|length %}
           <div class="mb-5 last:mb-0">
             {% include "_rich-text/simple" with {
@@ -122,7 +153,19 @@
           <div class="mb-5 last:mb-0">
             {% include "_modules/newsletter-form" only %}
 
-            <div class="{{ background in ["greyBackgroundBluePattern", "greyBackgroundPinkPattern", "greyBackgroundGreyPattern", "skyBlueBackgroundLightBluePattern"] ? "text-gray-800" : "text-white" }}">
+            <div
+              class="{{
+              background
+                in [
+                  "greyBackgroundBluePattern",
+                  "greyBackgroundPinkPattern",
+                  "greyBackgroundGreyPattern",
+                  "skyBlueBackgroundLightBluePattern"
+                ]
+                ? "text-gray-800"
+                : "text-white"
+              }}"
+            >
               {% include "_rich-text/simple" with {
                 text: newsletter.newsletterSecondaryText,
                 size: "small"
@@ -132,7 +175,21 @@
         {% endif %}
 
         {% if secondaryText|length %}
-          <p class="{{ background in ["greyBackgroundBluePattern", "greyBackgroundPinkPattern", "greyBackgroundGreyPattern", "skyBlueBackgroundLightBluePattern"] ? "text-gray-800" : "text-white" }} md:mb-1.5 text-body-16 md:text-body-18">{{ secondaryText }}</p>
+          <p
+            class="{{
+            background
+              in [
+                "greyBackgroundBluePattern",
+                "greyBackgroundPinkPattern",
+                "greyBackgroundGreyPattern",
+                "skyBlueBackgroundLightBluePattern"
+              ]
+              ? "text-gray-800"
+              : "text-white"
+            }} md:mb-1.5 text-body-16 md:text-body-18"
+          >
+            {{ secondaryText }}
+          </p>
         {% endif %}
 
         {% if link|length %}

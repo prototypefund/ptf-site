@@ -3,13 +3,19 @@
 {% if phases|length %}
   <div class="mb-3 md:mb-4 last:mb-0 border-t border-gray-600 pt-2.5">
     {% for phase in phases %}
-      <div class="mb-2.5 last:mb-0  pb-3 last:pb-0 last:md:pb-3 md:grid md:grid-cols-9 border-b border-gray-600 last:border-0">
-        <div class="col-span-2 pr-3 text-gray-800 text-head-14 md:text-head-16 mb-1.5 md:mb-0">
+      <div
+        class="mb-2.5 last:mb-0 pb-3 last:pb-0 last:md:pb-3 md:grid md:grid-cols-9 border-b border-gray-600 last:border-0"
+      >
+        <div
+          class="col-span-2 pr-3 text-gray-800 text-head-14 md:text-head-16 mb-1.5 md:mb-0"
+        >
           {{ phase.dates }}
         </div>
 
         <div class="col-span-7">
-          <h5 class="font-surt text-head-16 md:text-head-20 mb-1 last:mb-0">{{ phase.title }}</h5>
+          <h5 class="font-surt text-head-16 md:text-head-20 mb-1 last:mb-0">
+            {{ phase.title }}
+          </h5>
 
           {% include "_rich-text/simple" with {
             text: phase.phaseText
