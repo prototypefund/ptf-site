@@ -18,6 +18,7 @@
   --color-light-blue: #adeaf7;
   --color-dark-magenta: #7d0e8c;
   --color-pink: #ffd2f5;
+  --color-light-pink: #f2aae2;
   --color-hot-pink: #eb13b9;
   --color-white: #ffffff;
   --color-highlighting-yellow: #fafd6f;
@@ -104,7 +105,9 @@
   --background-image-link-black: url("/static/images/icons/link-black.svg");
   --background-image-link-white: url("/static/images/icons/link-white.svg");
   --background-image-link-arrow: url("/static/images/icons/link-arrow.svg");
+  --background-image-link-arrow-white: url("/static/images/icons/link-arrow-white.svg");
   --background-image-close: url("/static/images/icons/close.svg");
+  --background-image-close-white: url("/static/images/icons/close-white.svg");
   --background-image-tick-white: url("/static/images/icons/tick-white.svg");
   --background-image-pattern-tr-sky-blue: url("/static/images/patterns/bg-pattern-tr-sky-blue.svg");
   --background-image-pattern-tl-sky-blue: url("/static/images/patterns/bg-pattern-tl-sky-blue.svg");
@@ -126,7 +129,9 @@
   --background-image-pattern-bl-light-gray: url("/static/images/patterns/bg-pattern-bl-light-gray.svg");
   --background-image-pattern-tr-light-gray: url("/static/images/patterns/bg-pattern-tr-light-gray.svg");
   --background-image-pattern-bl-dark-gray: url("/static/images/patterns/bg-pattern-bl-dark-gray.svg");
-  --background-image-pattern-tr-dark-gray: url("/static/images/patterns/bg-pattern-tr-dark-gray.svg");
+  --background-image-pattern-br-dark-gray: url("/static/images/patterns/bg-pattern-br-dark-gray.svg");
+  --background-image-pattern-tr-dark-gray-1: url("/static/images/patterns/bg-pattern-tr-dark-gray-1.svg");
+  --background-image-pattern-tr-dark-gray-2: url("/static/images/patterns/bg-pattern-tr-dark-gray-2.svg");
   --background-image-pattern-newsletter: url("/static/images/patterns/bg-pattern-newsletter.svg");
 }
 

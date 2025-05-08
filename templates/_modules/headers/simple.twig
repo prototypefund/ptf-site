@@ -41,11 +41,11 @@
     center: "after:bg-pattern-br-hot-pink before:bg-pattern-tl-hot-pink #{centerPatternPositions}"
   },
   lightBlue: {
-    left: "after:bg-pattern-tr-light-blue #{leftPatternPositions}",
-    center: "after:bg-pattern-br-light-blue before:bg-pattern-tl-light-blue #{centerPatternPositions}"
+    left: "text-gray-900 after:bg-pattern-tr-light-blue #{leftPatternPositions}",
+    center: "text-gray-900 after:bg-pattern-br-light-blue before:bg-pattern-tl-light-blue #{centerPatternPositions}"
   },
   gray: {
-    left: "after:bg-pattern-tr-gray #{leftPatternPositions}",
+    left: "after:bg-pattern-tr-gray dark:after:bg-pattern-tr-dark-gray-2 #{leftPatternPositions}",
     center: "after:bg-pattern-br-gray-4 before:bg-pattern-tl-gray #{centerPatternPositions}"
   }
 } %}
@@ -53,17 +53,17 @@
 {% set backgroundConfigs = {
   greyBackgroundBluePattern: {
     pattern: "skyBlue",
-    bgColor: "bg-gray-100 border-gray-600 border-b",
+    bgColor: "bg-gray-100 dark:bg-[#1F1F1F] border-gray-600 border-b dark:border-[#575757]",
     buttonColor: "dark"
   },
   greyBackgroundPinkPattern: {
     pattern: "hotPink",
-    bgColor: "bg-gray-100 border-gray-600 border-b",
+    bgColor: "bg-gray-100 dark:bg-[#1F1F1F] border-gray-600 border-b dark:border-[#575757]",
     buttonColor: "dark"
   },
   greyBackgroundGreyPattern: {
     pattern: "gray",
-    bgColor: "bg-gray-100 border-gray-600 border-b",
+    bgColor: "bg-gray-100 dark:bg-[#1F1F1F] border-gray-600 border-b dark:border-[#575757]",
     buttonColor: "dark"
   },
   skyBlueBackgroundLightBluePattern: {
@@ -151,7 +151,9 @@
 
         {% if content|length %}
           <div class="mb-5 last:mb-0">
-            {% include "_modules/newsletter-form" only %}
+            {% include "_modules/newsletter-form" with {
+              darkMode: false
+            } only %}
 
             <div
               class="{{
@@ -196,7 +198,8 @@
           {% include "_modules/button-generic-link" with {
             link: link,
             icon: false,
-            color: config.buttonColor
+            color: config.buttonColor,
+            darkMode: background not in ["skyBlueBackgroundLightBluePattern"]
           } only %}
         {% endif %}
       </div>

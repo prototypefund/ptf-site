@@ -11,7 +11,7 @@
     |merge(entry.projectYearGroups.all())
 %}
 
-<article class="mb-4 border-t border-gray-600 md:mb-5">
+<article class="mb-4 border-t border-gray-600 md:mb-5 dark:border-[#575757]">
   <a class="block pt-2 md:pt-2.5" href="{{ entry.getUrl() }}">
     <div class="group grid grid-cols-11">
       <div class="col-span-2 mr-2 md:mr-3.5">
@@ -50,8 +50,9 @@
           <h4
             class="font-surt text-head-16 md:text-head-22 group-hover:decoration-sky-blue inline tracking-[0.03em] uppercase group-hover:underline"
           >
-            <span class="text-rich-blue">{{ entry.title }}</span>{% if
-              claim|length %}
+            <span class="text-rich-blue dark:text-sky-blue">
+              {{ entry.title }}
+            </span>{% if claim|length %}
               : {{ claim }}
             {% endif %}
           </h4>

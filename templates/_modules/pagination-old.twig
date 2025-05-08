@@ -2,10 +2,12 @@
 
 {% set offset = 1 %}
 {% set itemClasses =
-  "text-body-16 text-gray-700 hover:text-gray-900 px-[10px] transition-colors"
+  "text-body-16 text-gray-700 hover:text-gray-900 px-[10px] transition-colors dark:text-[#898989] dark:hover:text-white"
 %}
 {% set spacerClasses = "" %}
-{% set activeClasses = "!text-gray-900 border-gray-600 border-x" %}
+{% set activeClasses =
+  "!text-gray-900 border-gray-600 border-x dark:!text-white dark:border-[#575757]"
+%}
 
 {% if pagination.totalPages > 1 %}
   <div class="flex flex-row items-center justify-center">
