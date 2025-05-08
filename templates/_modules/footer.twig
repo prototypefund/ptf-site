@@ -10,12 +10,12 @@
 {% set sponsorsHeadline = footer.sponsorsHeadline %}
 {% set sponsors = footer.sponsors.all() %}
 
-<footer class="bg-gray-100 mt-[60px] md:mt-18">
-  <div class="md:grid md:grid-cols-3 border-gray-600 border-t border-b">
+<footer class="mt-[60px] bg-gray-100 md:mt-18">
+  <div class="border-t border-b border-gray-600 md:grid md:grid-cols-3">
     <div
-      class="pt-5 px-2 md:px-3 pb-2.5 md:pb-3 border-gray-600 md:border-r last:md:border-r-0"
+      class="border-gray-600 px-2 pt-5 pb-2.5 md:border-r md:px-3 md:pb-3 last:md:border-r-0"
     >
-      <a class="inline-block mb-3 last:mb-0" href="{{ homepage.url }}">
+      <a class="mb-3 inline-block last:mb-0" href="{{ homepage.url }}">
         <svg
           width="56"
           height="70"
@@ -38,9 +38,9 @@
     </div>
 
     <div
-      class="pt-2.5 md:pt-5 pb-2.5 md:pb-3 border-gray-600 border-t md:border-t-0 md:border-r last:md:border-r-0"
+      class="border-t border-gray-600 pt-2.5 pb-2.5 md:border-t-0 md:border-r md:pt-5 md:pb-3 last:md:border-r-0"
     >
-      <h4 class="px-2 md:px-3 pb-2 md:pb-3 uppercase text-body-16">
+      <h4 class="text-body-16 px-2 pb-2 uppercase md:px-3 md:pb-3">
         {{ newsletterHeadline }}
       </h4>
 
@@ -58,11 +58,11 @@
 
     {% if (sponsorsHeadline|length) or (sponsors|length) %}
       <div
-        class="flex p-2 md:p-3 border-gray-600 border-t md:border-t-0 md:border-r last:md:border-r-0"
+        class="flex border-t border-gray-600 p-2 md:border-t-0 md:border-r md:p-3 last:md:border-r-0"
       >
         <div class="mt-auto">
           {% if sponsorsHeadline|length %}
-            <h4 class="mb-3 last:mb-0 text-body-14">{{ sponsorsHeadline }}</h4>
+            <h4 class="text-body-14 mb-3 last:mb-0">{{ sponsorsHeadline }}</h4>
           {% endif %}
 
           {% if sponsors|length %}
@@ -79,25 +79,25 @@
 
   {% if mainFooterLinks|length %}
     <div
-      class="md:grid md:grid-cols-3 text-body-16 md:text-body-18 border-b border-gray-600"
+      class="text-body-16 md:text-body-18 border-b border-gray-600 md:grid md:grid-cols-3"
     >
       {% for linkGroup in mainFooterLinks %}
         {% set links = linkGroup.links %}
 
         {% if links|length %}
           <ul
-            class="p-2 md:p-3 border-gray-600 border-t first:border-t-0 md:border-t-0 md:border-r last:md:border-r-0"
+            class="border-t border-gray-600 p-2 first:border-t-0 md:border-t-0 md:border-r md:p-3 last:md:border-r-0"
           >
             {% for link in links %}
               {% set navLink = link.genericLink %}
               {% set isExternal = navLink.type == "url" %}
 
               {% if navLink.label %}
-                <li class="py-[4px] mb-[6px] md:py-0 md:mb-1 last:mb-0">
+                <li class="mb-[6px] py-[4px] last:mb-0 md:mb-1 md:py-0">
                   <a
                     class="relative flex after:ml-auto {{
                     isExternal
-                      ? "after:bg-link-arrow after:bg-no-repeat after:bg-cover after:content-[''] after:absolute after:right-0 after:h-2.5 after:w-2.5"
+                      ? "after:bg-link-arrow after:absolute after:right-0 after:h-2.5 after:w-2.5 after:bg-cover after:bg-no-repeat after:content-['']"
                     }}"
                     href="{{ navLink.url }}"
                     target="{{ navLink.target }}"
@@ -108,7 +108,7 @@
                     }}
                   >
                     <span
-                      class="relative sm:after:content-[''] sm:after:absolute sm:after:bottom-[-4px] sm:after:left-0 sm:after:w-0 sm:hover:after:w-full sm:after:h-[1px] sm:after:transition-all sm:after:bg-sky-blue"
+                      class="sm:after:bg-sky-blue relative sm:after:absolute sm:after:bottom-[-4px] sm:after:left-0 sm:after:h-[1px] sm:after:w-0 sm:after:transition-all sm:after:content-[''] sm:hover:after:w-full"
                     >
                       {{ navLink.label }}
                     </span>
@@ -123,8 +123,8 @@
   {% endif %}
 
   {% if secondaryFooterLinks|length %}
-    <div class="p-2 md:p-3 text-body-14 border-b border-gray-600">
-      <ul class="flex flex-wrap gap-y-1.5 gap-x-3 md:gap-x-6">
+    <div class="text-body-14 border-b border-gray-600 p-2 md:p-3">
+      <ul class="flex flex-wrap gap-x-3 gap-y-1.5 md:gap-x-6">
         {% for link in secondaryFooterLinks %}
           {% set navLink = link.genericLink %}
 
@@ -140,7 +140,7 @@
                 }}
               >
                 <span
-                  class="relative sm:after:content-[''] sm:after:absolute sm:after:bottom-[-4px] sm:after:left-0 sm:after:w-0 sm:hover:after:w-full sm:after:h-[1px] sm:after:transition-all sm:after:bg-sky-blue"
+                  class="sm:after:bg-sky-blue relative sm:after:absolute sm:after:bottom-[-4px] sm:after:left-0 sm:after:h-[1px] sm:after:w-0 sm:after:transition-all sm:after:content-[''] sm:hover:after:w-full"
                 >
                   {{ navLink.label }}
                 </span>

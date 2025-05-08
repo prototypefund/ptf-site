@@ -15,29 +15,29 @@
 %}
 
 <a
-  class="block group {{
+  class="group block {{
   pattern
-  }} border-t last:border-b border-gray-600 pt-4 md:pt-3 pb-4 md:pb-5 ml-[-16px] w-[calc(100%+32px)] md:ml-[-40px] md:w-[calc(100%+80px)] relative after:content-[''] after:absolute after:right-0 after:h-full after:bg-no-repeat after:bg-contain"
+  }} relative ml-[-16px] w-[calc(100%+32px)] border-t border-gray-600 pt-4 pb-4 after:absolute after:right-0 after:h-full after:bg-contain after:bg-no-repeat after:content-[''] last:border-b md:ml-[-40px] md:w-[calc(100%+80px)] md:pt-3 md:pb-5"
   href="{{ entry.url }}"
 >
-  <div class="px-2 md:px-5 md:grid md:grid-cols-16">
-    <div class="md:col-span-5 relative z-1">
+  <div class="px-2 md:grid md:grid-cols-16 md:px-5">
+    <div class="relative z-1 md:col-span-5">
       <h4
-        class="font-surt uppercase text-head-16 md:text-head-22 mb-[10px] md:mb-2.5 last:mb-0 break-words"
+        class="font-surt text-head-16 md:text-head-22 mb-[10px] break-words uppercase last:mb-0 md:mb-2.5"
       >
         {{ entry.title }}
       </h4>
 
       <div class="mb-3 md:mb-0">
         <time
-          class="block text-gray-800 text-body-14 md:text-body-16"
+          class="text-body-14 md:text-body-16 block text-gray-800"
           datetime="{{ postDate|date("Y-m-d") }}"
         >
           {{ "Published on"|t }}: {{ postDate|date("d/m/Y") }}
         </time>
 
         <time
-          class="block text-gray-800 text-body-14 md:text-body-16 mb-3"
+          class="text-body-14 md:text-body-16 mb-3 block text-gray-800"
           datetime="{{ dateUpdated|date("Y-m-d") }}"
         >
           {{ "Last updated"|t }}: {{ dateUpdated|date("d/m/Y") }}
@@ -46,7 +46,7 @@
     </div>
 
     <div
-      class="md:col-span-9 md:col-start-7 lg:col-span-7 lg:col-start-7 mb-5 xl:mb-0 relative z-1"
+      class="relative z-1 mb-5 md:col-span-9 md:col-start-7 lg:col-span-7 lg:col-start-7 xl:mb-0"
     >
       {% if teaserText|length %}
         {% include "_rich-text/simple" with {
@@ -56,7 +56,7 @@
     </div>
 
     <div
-      class="md:col-span-9 md:col-start-7 lg:col-span-7 lg:col-start-7 xl:col-span-3 xl:col-start-14 xl:text-right relative z-1"
+      class="relative z-1 md:col-span-9 md:col-start-7 lg:col-span-7 lg:col-start-7 xl:col-span-3 xl:col-start-14 xl:text-right"
     >
       {% include "_modules/button" with {
         text: "View report"|t,

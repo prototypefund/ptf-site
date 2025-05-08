@@ -1,13 +1,13 @@
 {% set filters = filters|default([]) %}
 
-<ul class="flex gap-1 flex-wrap">
+<ul class="flex flex-wrap gap-1">
   {% for filter in filters %}
     <a
-      class="rounded-[2px] border px-1 py-0.5 text-body-14 {{
+      class="text-body-14 rounded-[2px] border px-1 py-0.5 {{
       filter.isActive
-        ? "bg-gray-900 text-white border-gray-900"
+        ? "bg-gray-900 border-gray-900 text-white"
         : "hover:bg-gray-100 border-gray-600"
-      }} active:bg-gray-900 active:text-white active:border-gray-900 transition-colors"
+      }} transition-colors active:border-gray-900 active:bg-gray-900 active:text-white"
       href="{{ filter.url }}"
     >
       {{ filter.title }}

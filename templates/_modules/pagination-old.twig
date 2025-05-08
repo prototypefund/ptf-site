@@ -8,7 +8,7 @@
 {% set activeClasses = "!text-gray-900 border-gray-600 border-x" %}
 
 {% if pagination.totalPages > 1 %}
-  <div class="flex flex-row justify-center items-center">
+  <div class="flex flex-row items-center justify-center">
     {% apply spaceless %}
     {% if pagination.currentPage > offset + 1 %}
       <a

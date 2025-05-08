@@ -183,7 +183,7 @@
   }
 
   :focus-visible {
-    @apply outline-hidden ring-8 dark:ring-4 ring-gray-800 dark:ring-gray-900;
+    @apply ring-8 ring-gray-800 outline-hidden dark:ring-4 dark:ring-gray-900;
   }
 
   @media print {

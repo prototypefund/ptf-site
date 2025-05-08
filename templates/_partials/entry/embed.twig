@@ -3,13 +3,13 @@
 {% set content %}
   <figure>
     <div
-      class="relative overflow-hidden [&>iframe]:size-full [&>iframe]:absolute [&>iframe]:top-0 [&>iframe]:left-0"
+      class="relative overflow-hidden [&>iframe]:absolute [&>iframe]:top-0 [&>iframe]:left-0 [&>iframe]:size-full"
     >
       {{ entry.embedCode|raw }}
     </div>
     {% if caption|length %}
       <figcaption
-        class="mt-1 uppercase text-gray-800 text-body-12 md:text-body-13"
+        class="text-body-12 md:text-body-13 mt-1 text-gray-800 uppercase"
       >
         {{ caption }}
       </figcaption>

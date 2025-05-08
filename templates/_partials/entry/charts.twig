@@ -2,7 +2,7 @@
 
 {% if charts|length %}
   <div
-    class="mb-3 md:mb-4 last:mb-0 {{
+    class="mb-3 last:mb-0 md:mb-4 {{
     (charts|length) > 1
       ? "lg:grid lg:grid-cols-2 lg:gap-5"
     }}"
@@ -22,7 +22,7 @@
       %}
 
       <div>
-        <div class="aspect-4/2 mb-[10px]">
+        <div class="mb-[10px] aspect-4/2">
           <bar-chart data-chart="{{ data }}"></bar-chart>
         </div>
 

@@ -4,14 +4,14 @@
 <main-nav>
   <header
     data-header
-    class="bg-white z-2 relative md:z-auto [&.menu-open]:fixed [&.menu-open]:h-[100dvh] [&.menu-open]:w-full [&.menu-open]:lg:static [&.menu-open]:lg:h-auto [&.menu-open]:lg:bg-transparent"
+    class="relative z-2 bg-white md:z-auto [&.menu-open]:fixed [&.menu-open]:h-[100dvh] [&.menu-open]:w-full [&.menu-open]:lg:static [&.menu-open]:lg:h-auto [&.menu-open]:lg:bg-transparent"
   >
     <div
       class="overflow-visible [.menu-open_&]:h-full [.menu-open_&]:max-h-full [.menu-open_&]:lg:h-auto"
     >
-      <nav class="flex flex-col h-full overflow-visible">
+      <nav class="flex h-full flex-col overflow-visible">
         <div
-          class="flex items-center p-2 h-[60px] border-b border-gray-600 md:h-auto lg:px-3"
+          class="flex h-[60px] items-center border-b border-gray-600 p-2 md:h-auto lg:px-3"
         >
           <a class="block" href="{{ homepage.url }}">
             {% include "_modules/logo" only %}
@@ -19,7 +19,7 @@
 
           <button
             data-sandwich
-            class="flex items-center cursor-pointer ml-auto md:hidden"
+            class="ml-auto flex cursor-pointer items-center md:hidden"
           >
             <span class="sr-only">Toggle menu</span>
 
@@ -79,17 +79,17 @@
 
         {% if navLinks|length %}
           <div
-            class="group hidden overflow-y-auto md:block [.menu-open_&]:block [.menu-open_&]:md:block lg:overflow-visible"
+            class="group hidden overflow-y-auto md:block lg:overflow-visible [.menu-open_&]:block [.menu-open_&]:md:block"
           >
             <ul class="md:flex md:border-b md:border-gray-600">
               {% for linkGroup in navLinks %}
                 {% set links = linkGroup.links %}
 
                 <li
-                  class="border-b border-gray-600 last:border-b-0 md:w-1/5 md:border-b-0 md:border-r md:last:border-r-0"
+                  class="border-b border-gray-600 last:border-b-0 md:w-1/5 md:border-r md:border-b-0 md:last:border-r-0"
                 >
                   <span
-                    class="block cursor-pointer uppercase text-center px-3 py-1 text-[15px] border-gray-600 border-b md:p-1.5 md:text-body-14 md:text-left md:border-b-0 lg:px-3 lg:py-1.5 lg:text-body-16"
+                    class="md:text-body-14 lg:text-body-16 block cursor-pointer border-b border-gray-600 px-3 py-1 text-center text-[15px] uppercase md:border-b-0 md:p-1.5 md:text-left lg:px-3 lg:py-1.5"
                   >
                     {{ linkGroup.title }}
                   </span>
@@ -102,9 +102,9 @@
 
                         <li>
                           <a
-                            class="flex px-1 py-0.5 text-body-16 {{
+                            class="text-body-16 flex px-1 py-0.5 {{
                             isExternal
-                              ? "after:ml-auto after:block after:h-2.5 after:w-2.5 after:bg-link-arrow after:bg-cover after:bg-no-repeat after:content-['']"
+                              ? "after:ml-auto after:bg-link-arrow after:block after:h-2.5 after:w-2.5 after:bg-cover after:bg-no-repeat after:content-['']"
                               : ""
                             }}"
                             href="{{ navLink.value }}"
@@ -126,14 +126,14 @@
             </ul>
 
             <ul
-              class="hidden absolute -z-10 w-full border-b border-gray-600 bg-white opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:opacity-100 group-hover:z-2 md:flex"
+              class="absolute -z-10 hidden w-full border-b border-gray-600 bg-white opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:z-2 group-hover:opacity-100 md:flex"
             >
               {% for linkGroup in navLinks %}
                 {% set links = linkGroup.links %}
 
                 {% if links|length %}
                   <li
-                    class="p-2 w-1/5 border-r text-body-16 leading-[1] border-gray-600 last:border-r-0"
+                    class="text-body-16 w-1/5 border-r border-gray-600 p-2 leading-[1] last:border-r-0"
                   >
                     <ul>
                       {% for link in links %}
@@ -168,9 +168,9 @@
 
                         <li class="mb-[6px] last:mb-0">
                           <a
-                            class="group/link flex px-1 py-[8px] relative {{
+                            class="group/link relative flex px-1 py-[8px] {{
                             isExternal
-                              ? "after:absolute after:right-0 after:block after:h-2.5 after:w-2.5 after:bg-link-arrow after:bg-cover after:bg-no-repeat after:content-['']"
+                              ? "after:absolute after:bg-link-arrow after:right-0 after:block after:h-2.5 after:w-2.5 after:bg-cover after:bg-no-repeat after:content-['']"
                               : ""
                             }}"
                             href="{{ navLink.value }}"
@@ -182,7 +182,7 @@
                             }}"
                           >
                             <span
-                              class="relative sm:after:content-[''] sm:after:absolute sm:after:bottom-[-4px] sm:after:left-0 sm:after:w-0 sm:group-hover/link:after:w-full sm:after:h-[1px] sm:after:transition-all sm:after:bg-sky-blue {{
+                              class="sm:after:bg-sky-blue relative sm:after:absolute sm:after:bottom-[-4px] sm:after:left-0 sm:after:h-[1px] sm:after:w-0 sm:after:transition-all sm:after:content-[''] sm:group-hover/link:after:w-full {{
                               isActive
                                 ? "sm:after:w-full"
                                 : ""
@@ -202,7 +202,7 @@
         {% endif %}
 
         <aside
-          class="hidden gap-2.5 justify-end p-2 border-gray-600 border-t md:hidden [.menu-open_&]:flex [.menu-open_&]:md:hidden"
+          class="hidden justify-end gap-2.5 border-t border-gray-600 p-2 md:hidden [.menu-open_&]:flex [.menu-open_&]:md:hidden"
         >
           {% include "_modules/lang-switch.twig" %}
         </aside>

@@ -37,11 +37,11 @@
 {% endfor %}
 
 <div
-  class="inline-flex gap-[2px] uppercase text-ui-14 border-gray-600 border rounded-sm p-[3px]"
+  class="text-ui-14 inline-flex gap-[2px] rounded-sm border border-gray-600 p-[3px] uppercase"
 >
   {% for link in languageLinks %}
     <a
-      class="rounded-[2px] px-1 py-0.5 md:py-[2px] md:px-[7px] transition-colors {{
+      class="rounded-[2px] px-1 py-0.5 transition-colors md:px-[7px] md:py-[2px] {{
       link.current
         ? "bg-black text-white"
         : "hover:bg-gray-100"

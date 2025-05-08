@@ -4,19 +4,19 @@
   {% for item in expandableItems %}
     {% set title = item.headline|default(item.title) %}
 
-    <details class="group border-gray-600 border-t last:border-b">
+    <details class="group border-t border-gray-600 last:border-b">
       <summary
-        class="cursor-pointer list-none font-surt text-head-16 md:text-head-20 pt-1 pb-[10px] md:pb-2.5 md:pt-2 flex items-center"
+        class="font-surt text-head-16 md:text-head-20 flex cursor-pointer list-none items-center pt-1 pb-[10px] md:pt-2 md:pb-2.5"
       >
         <span class="pr-1.5 text-gray-700 tabular-nums">
           {{ loop.index < 10 ? "0" }}{{ loop.index }}
         </span>
         {{ title }}
         <div
-          class="ml-auto pl-2 min-w-[28px] md:min-w-4 font-surt text-ui-12 md:text-ui-14 uppercase tracking-wide"
+          class="font-surt text-ui-12 md:text-ui-14 ml-auto min-w-[28px] pl-2 tracking-wide uppercase md:min-w-4"
         >
           <div
-            class="flex gap-[10px] items-center group-open:hidden translate-y-[2px]"
+            class="flex translate-y-[2px] items-center gap-[10px] group-open:hidden"
           >
             <span class="pt-[2px]">{{ "Reveal"|t }}</span>
 
@@ -38,7 +38,7 @@
             </svg>
           </div>
           <div
-            class="hidden group-open:flex gap-[10px] items-center translate-y-[2px]"
+            class="hidden translate-y-[2px] items-center gap-[10px] group-open:flex"
           >
             <span class="pt-[2px]">{{ "Hide"|t }}</span>
 

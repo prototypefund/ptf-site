@@ -2,17 +2,17 @@
   {% for row in module.rows %}
     {% set columns = row.columns %}
 
-    <div class="mb-5 md:mb-[60px] last:mb-0">
-      <h2 class="font-surt text-head-18 md:text-head-22 uppercase mb-2.5">
+    <div class="mb-5 last:mb-0 md:mb-[60px]">
+      <h2 class="font-surt text-head-18 md:text-head-22 mb-2.5 uppercase">
         {{ row.title }}
       </h2>
 
       {% if columns|length %}
         <div class="md:grid md:grid-cols-2 md:gap-5">
           {% for column in row.columns %}
-            <div class="mb-2.5 md:mb-0 last:mb-0">
+            <div class="mb-2.5 last:mb-0 md:mb-0">
               <h3
-                class="uppercase text-[15px] md:text-head-16 pt-1 mb-1 md:mb-2 border-t border-gray-600"
+                class="md:text-head-16 mb-1 border-t border-gray-600 pt-1 text-[15px] uppercase md:mb-2"
               >
                 {{ column.title }}
               </h3>
@@ -27,7 +27,7 @@
     </div>
   {% endfor %}
 
-  <div class="mb-5 md:mb-[60px] last:mb-0">
+  <div class="mb-5 last:mb-0 md:mb-[60px]">
     {% include "_rich-text/standard" with {
       text: module.text
     } only %}

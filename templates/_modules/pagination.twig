@@ -7,7 +7,7 @@
 {% set appendUrl = appendUrl|default("") %}
 
 {% if pagination.totalPages > 1 %}
-  <div class="flex flex-row justify-center items-center py-[10px] md:py-2.5">
+  <div class="flex flex-row items-center justify-center py-[10px] md:py-2.5">
     {% apply spaceless %}
     {% if pagination.currentPage > offset + 1 %}
       <a class="{{ itemClasses }}" href="{{ pagination.firstUrl ~ appendUrl }}">

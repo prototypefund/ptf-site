@@ -24,8 +24,8 @@
     } only %}
 
     {% if intro|length %}
-      <div class="grid md:grid-cols-16 px-2 md:px-5 mt-5 md:mt-10 mb-[60px]">
-        <div class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-9">
+      <div class="mt-5 mb-[60px] grid px-2 md:mt-10 md:grid-cols-16 md:px-5">
+        <div class="md:col-span-11 md:col-start-6 lg:col-span-9 lg:col-start-8">
           {% include "_rich-text/intro" with {
             text: intro
           } only %}
@@ -47,10 +47,10 @@
       {% set bio = articleAuthor.bio %}
 
       <div
-        class="grid px-2 md:grid-cols-16 md:px-5 border-gray-600 border-t md:border-t-0"
+        class="grid border-t border-gray-600 px-2 md:grid-cols-16 md:border-t-0 md:px-5"
       >
         <div
-          class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-8 pt-2.5 border-gray-600 border-t-0 md:border-t"
+          class="border-t-0 border-gray-600 pt-2.5 md:col-span-11 md:col-start-6 md:border-t lg:col-span-8 lg:col-start-8"
         >
           {% if avatar|length %}
             <img

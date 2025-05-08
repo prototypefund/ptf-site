@@ -9,9 +9,9 @@
 <ul class="flex flex-wrap gap-y-0.5">
   {% for category in categories %}
     <li
-      class="uppercase text-gray-800 {{
+      class="text-gray-800 uppercase {{
       textSize[size]
-      }} after:pl-[5px] after:pr-1 after:content-['|'] after:text-gray-600 last:after:hidden"
+      }} after:pr-1 after:pl-[5px] after:text-gray-600 after:content-['|'] last:after:hidden"
     >
       {{ category.title }}
     </li>
