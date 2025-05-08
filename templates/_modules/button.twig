@@ -6,7 +6,7 @@
 {% set border = border is not defined ? true : false %}
 
 {% set buttonStyles = {
-  dark: "hover:bg-black hover:text-white group-hover:bg-black group-hover:text-white",
+  dark: "group-hover:bg-black group-hover:text-white hover:bg-black hover:text-white dark:group-hover:bg-white dark:group-hover:text-black dark:hover:bg-white dark:hover:text-black",
   light: "text-white hover:bg-white hover:text-black group-hover:bg-white group-hover:text-black border-white"
 } %}
 
@@ -29,7 +29,7 @@
   }
 } %}
 
-{% set borderStyles = border ? "border-x px-[10px]" %}
+{% set borderStyles = border ? "border-x dark:border-white px-[10px]" %}
 {% set iconAlignmentStyles = iconAlignment == "right" ? "before:order-1" %}
 
 {% set tag = url ? "a" : "span" %}
@@ -56,3 +56,7 @@
     }|merge(props)
   )
 }}
+
+<div
+  class="group-hover:bg-black group-hover:text-white hover:bg-black hover:text-white dark:group-hover:bg-white dark:group-hover:text-black dark:hover:bg-white dark:hover:text-black"
+></div>
