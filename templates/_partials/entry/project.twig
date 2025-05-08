@@ -11,17 +11,17 @@
     |merge(entry.projectYearGroups.all())
 %}
 
-<article class="border-gray-600 border-t mb-4 md:mb-5">
+<article class="mb-4 border-t border-gray-600 md:mb-5">
   <a class="block pt-2 md:pt-2.5" href="{{ entry.getUrl() }}">
     <div class="group grid grid-cols-11">
       <div class="col-span-2 mr-2 md:mr-3.5">
         {% if image|length %}
           <div
-            class="bg-gray-100 flex items-center justify-center aspect-square p-[20px]"
+            class="flex aspect-square items-center justify-center bg-gray-100 p-[20px]"
           >
             <div class="w-full mix-blend-multiply">
               <img
-                class="w-full h-full object-contain"
+                class="h-full w-full object-contain"
                 src="{{ image.url }}"
                 alt="{{ image.alt }}"
               />
@@ -30,7 +30,7 @@
         {% else %}
           <div class="aspect-square">
             <img
-              class="block w-full h-full object-cover"
+              class="block h-full w-full object-cover"
               src="/static/images/patterns/project-fallback-pattern.svg"
             />
           </div>
@@ -46,9 +46,9 @@
           </div>
         {% endif %}
 
-        <div class="mb-1 md:mb-1.5 last:mb-0">
+        <div class="mb-1 last:mb-0 md:mb-1.5">
           <h4
-            class="inline uppercase font-surt text-head-16 md:text-head-22 tracking-[0.03em] group-hover:underline group-hover:decoration-sky-blue"
+            class="font-surt text-head-16 md:text-head-22 group-hover:decoration-sky-blue inline tracking-[0.03em] uppercase group-hover:underline"
           >
             <span class="text-rich-blue">{{ entry.title }}</span>{% if
               claim|length %}
@@ -58,7 +58,7 @@
         </div>
 
         {% if teamMembers|length %}
-          <div class="text-body-12 md:text-body-14 mb-2 md:mb-2.5 last:mb-0">
+          <div class="text-body-12 md:text-body-14 mb-2 last:mb-0 md:mb-2.5">
             {{ teamMembers }}
           </div>
         {% endif %}

@@ -15,15 +15,15 @@
 %}
 
 <div
-  class="md:grid md:grid-cols-2 mb-10 last:mb-0 bg-navy-blue border-navy-blue-100 border-t border-b text-white"
+  class="bg-navy-blue border-navy-blue-100 mb-10 border-t border-b text-white last:mb-0 md:grid md:grid-cols-2"
 >
   <div
-    class="relative border-navy-blue-100 border-r after:bg-pattern-newsletter after:content-[''] after:absolute after:right-0 after:top-0 after:bottom-3 after:bg-no-repeat after:bg-right-top after:bg-contain after:h-[350px] after:w-[100px]"
+    class="border-navy-blue-100 after:bg-pattern-newsletter relative border-r after:absolute after:top-0 after:right-0 after:bottom-3 after:h-[350px] after:w-[100px] after:bg-contain after:bg-right-top after:bg-no-repeat after:content-['']"
   >
     <div
-      class="pt-4 pl-2 pr-6 md:pl-3 md:pr-12 md:pt-4 mb-3 md:mb-[44px] relative z-1"
+      class="relative z-1 mb-3 pt-4 pr-6 pl-2 md:mb-[44px] md:pt-4 md:pr-12 md:pl-3"
     >
-      <h4 class="font-surt text-head-22 leading-[1.3] uppercase mb-2">
+      <h4 class="font-surt text-head-22 mb-2 leading-[1.3] uppercase">
         {{ newsletterHeadline }}
       </h4>
 
@@ -33,13 +33,13 @@
     </div>
   </div>
 
-  <div class="border-navy-blue-100 border-r md:order-2 relative z-1">
+  <div class="border-navy-blue-100 relative z-1 border-r md:order-2">
     <div class="mb-[10px] md:mb-2.5">
       {% include "_modules/newsletter-form" only %}
     </div>
 
     <div
-      class="pl-2 pr-6 md:pl-3 md:pr-12 mb-3 md:mb-0 md:pb-[62px] opacity-70"
+      class="mb-3 pr-6 pl-2 opacity-70 md:mb-0 md:pr-12 md:pb-[62px] md:pl-3"
     >
       {% include "_rich-text/simple" with {
         text: newsletterSecondaryText,
@@ -49,7 +49,7 @@
   </div>
 
   <div
-    class="border-navy-blue-100 border-t md:border-t-0 px-2 md:px-3 py-3 md:py-4"
+    class="border-navy-blue-100 border-t px-2 py-3 md:border-t-0 md:px-3 md:py-4"
   >
     {% if newsletterSideTitle %}
       <h5 class="font-surt text-[20px]">{{ newsletterSideTitle }}</h5>
@@ -64,10 +64,10 @@
         {% set sideInfo = linkGroup.sideInfo %}
 
         <li
-          class="text-head-16 md:text-head-18 md:h-[63px] border-navy-blue-100 border-b last:border-0 first:!border-b"
+          class="text-head-16 md:text-head-18 border-navy-blue-100 border-b first:!border-b last:border-0 md:h-[63px]"
         >
           <a
-            class="flex items-center text-white py-[18px] px-2 md:px-3 h-full hover:bg-navy-blue-100 transition-colors"
+            class="hover:bg-navy-blue-100 flex h-full items-center px-2 py-[18px] text-white transition-colors md:px-3"
             href="{{ link.url }}"
             target="{{ link.target }}"
             {{ link.target == "_blank" ? 'rel="noopener noreferrer"' : "" }}
@@ -75,7 +75,7 @@
             {{ link.label }}
 
             {% if sideInfo %}
-              <span class="ml-auto uppercase text-body-13 opacity-70">
+              <span class="text-body-13 ml-auto uppercase opacity-70">
                 {{ sideInfo }}
               </span>
             {% endif %}

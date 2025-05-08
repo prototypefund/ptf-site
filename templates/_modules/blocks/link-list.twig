@@ -4,14 +4,14 @@
 
 <div class="mb-10 md:px-5">
   <h4
-    class="px-2 md:px-0 font-surt text-head-22 md:text-head-32 mb-3 md:mb-5 max-w-2/5"
+    class="font-surt text-head-22 md:text-head-32 mb-3 max-w-2/5 px-2 md:mb-5 md:px-0"
   >
     {{ heading }}
   </h4>
 
   <div class="md:grid md:grid-cols-16">
     {% if description|length %}
-      <div class="px-2 md:px-0 md:col-span-5 mb-5 md:mb-0">
+      <div class="mb-5 px-2 md:col-span-5 md:mb-0 md:px-0">
         {% include "_rich-text/simple" with {
           text: description,
           size: "medium"
@@ -26,12 +26,12 @@
 
       {% if link|length %}
         <a
-          class="group px-2 md:px-0 border-t last:border-b border-gray-600 pt-2 pb-4 last:mb-0 md:col-span-10 md:col-start-7 lg:col-start-7 md:grid md:grid-cols-10"
+          class="group border-t border-gray-600 px-2 pt-2 pb-4 last:mb-0 last:border-b md:col-span-10 md:col-start-7 md:grid md:grid-cols-10 md:px-0 lg:col-start-7"
           href="{{ link.url }}"
         >
-          <div class="mb-3 xl:mb-0 md:col-span-9 lg:col-span-7">
+          <div class="mb-3 md:col-span-9 lg:col-span-7 xl:mb-0">
             <h4
-              class="font-surt uppercase text-head-16 md:text-head-18 leading-[1.3] mb-1 last:mb-0"
+              class="font-surt text-head-16 md:text-head-18 mb-1 leading-[1.3] uppercase last:mb-0"
             >
               {{ row.title }}
             </h4>
@@ -53,7 +53,7 @@
           </div>
 
           <div
-            class="md:col-span-9 md:col-start-1 xl:col-span-3 text-right md:text-left xl:text-right"
+            class="text-right md:col-span-9 md:col-start-1 md:text-left xl:col-span-3 xl:text-right"
           >
             {% include "_modules/button-generic-link" with {
               link: {

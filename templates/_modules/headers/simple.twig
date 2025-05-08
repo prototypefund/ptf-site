@@ -101,7 +101,7 @@
   alignment == "left"
     ? "lg:py-[130px]"
     : "lg:py-[100px]"
-  }} px-2 md:px-5 py-10 relative before:content-[''] before:absolute before:left-0 before:h-full before:bg-no-repeat before:bg-contain after:content-[''] after:absolute after:right-0 after:h-full after:bg-no-repeat after:bg-contain"
+  }} relative px-2 py-10 before:absolute before:left-0 before:h-full before:bg-contain before:bg-no-repeat before:content-[''] after:absolute after:right-0 after:h-full after:bg-contain after:bg-no-repeat after:content-[''] md:px-5"
 >
   <div
     class="{{
@@ -113,8 +113,8 @@
     <div
       class="{{
       alignment == "left"
-        ? "col-span-11 lg:col-span-7 xl:col-span-8 mb-3 lg:mb-0 md:pr-4 pr-0 md:max-w-[600px]"
-        : "mb-3 lg:mb-5 md:max-w-[680px] md:mx-auto"
+        ? "col-span-11 mb-3 pr-0 md:pr-4 lg:col-span-7 lg:mb-0 xl:col-span-8 md:max-w-[600px]"
+        : "mb-3 md:max-w-[680px] lg:mb-5 md:mx-auto"
       }} relative z-1"
     >
       <h1 class="font-surt text-head-28 md:text-head-46 uppercase">
@@ -138,7 +138,7 @@
         alignment == "left"
           ? "col-span-11 lg:col-span-7 xl:col-start-9 xl:col-span-5"
           : "m-auto"
-        }} max-w-64 relative z-1"
+        }} relative z-1 max-w-64"
       >
         {% if intro|length %}
           <div class="mb-5 last:mb-0">
@@ -186,7 +186,7 @@
               ]
               ? "text-gray-800"
               : "text-white"
-            }} md:mb-1.5 text-body-16 md:text-body-18"
+            }} text-body-16 md:text-body-18 md:mb-1.5"
           >
             {{ secondaryText }}
           </p>

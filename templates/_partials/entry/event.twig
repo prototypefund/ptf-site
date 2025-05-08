@@ -3,11 +3,11 @@
 {% set image = entry.mainImage.eagerly().one() %}
 
 <article
-  class="border-t border-0 md:last:border-b border-gray-600 pt-1 md:pt-3 md:py-6"
+  class="border-0 border-t border-gray-600 pt-1 md:py-6 md:pt-3 md:last:border-b"
 >
   <a href="{{ entry.url }}">
     <div class="md:grid md:grid-cols-16">
-      <div class="mb-4 md:mb-0 md:col-span-4 md:pr-4">
+      <div class="mb-4 md:col-span-4 md:mb-0 md:pr-4">
         <div class="mb-1 md:mb-1.5">
           {% include "_modules/date-time" with {
             date: entry.date,
@@ -23,9 +23,9 @@
         {% endif %}
       </div>
 
-      <div class="md:col-span-7 md:pr-4 mb-3 md:mb-0">
+      <div class="mb-3 md:col-span-7 md:mb-0 md:pr-4">
         <h4
-          class="font-surt text-head-22 md:text-head-28 uppercase mb-1 md:mb-3"
+          class="font-surt text-head-22 md:text-head-28 mb-1 uppercase md:mb-3"
         >
           {{ entry.title }}
         </h4>
@@ -38,10 +38,10 @@
       </div>
 
       {% if image|length %}
-        <div class="col-start-13 col-span-4 mb-5 md:mb-0">
+        <div class="col-span-4 col-start-13 mb-5 md:mb-0">
           <div class="aspect-4/3">
             <img
-              class="block w-full h-full object-cover"
+              class="block h-full w-full object-cover"
               src="{{ image.getUrl("blogTeaser") }}"
               alt="{{ image.alt }}"
             />

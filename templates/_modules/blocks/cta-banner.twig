@@ -41,14 +41,14 @@
   {% set headerClass = "#{patternPositions} #{config.bgColor} #{config.pattern}"
   %}
 
-  <div class="px-2 md:px-5 mb-10 last:mb-0">
+  <div class="mb-10 px-2 last:mb-0 md:px-5">
     <div
       class="{{
       headerClass
-      }} px-2 md:px-0 relative text-white md:grid md:grid-cols-16 py-9 before:content-[''] before:absolute before:left-0 before:h-full before:bg-no-repeat before:bg-contain after:content-[''] after:absolute after:right-0 after:h-full after:bg-no-repeat after:bg-contain"
+      }} relative px-2 py-9 text-white before:absolute before:left-0 before:h-full before:bg-contain before:bg-no-repeat before:content-[''] after:absolute after:right-0 after:h-full after:bg-contain after:bg-no-repeat after:content-[''] md:grid md:grid-cols-16 md:px-0"
     >
       <h4
-        class="z-1 md:col-start-2 md:col-span-7 uppercase font-surt text-head-22 md:text-head-38 mb-3 md:mb-0"
+        class="font-surt text-head-22 md:text-head-38 z-1 mb-3 uppercase md:col-span-7 md:col-start-2 md:mb-0"
       >
         {{ ctaBanner.title }}
       </h4>

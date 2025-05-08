@@ -22,8 +22,8 @@
     alignment: category.headerAlignment.value
   } only %}
 
-  <div class="mt-5 md:mt-9 mb-5 px-2 md:px-5">
-    <h2 class="mb-3 md:mb-5 last:mb-0 font-surt text-head-22 md:text-head-28">
+  <div class="mt-5 mb-5 px-2 md:mt-9 md:px-5">
+    <h2 class="font-surt text-head-22 md:text-head-28 mb-3 last:mb-0 md:mb-5">
       {{ "Artikel"|t }}
       <span class="text-rich-blue">[{{ projectsQuery.count() }}]</span>
     </h2>
@@ -46,7 +46,7 @@
     {% endif %}
   </div>
 
-  <div class="px-2 md:px-5 mb-10">
+  <div class="mb-10 px-2 md:px-5">
     {% if projects|length %}
       {% include "blog/_modules/teasers-list" with {
         articles: projects

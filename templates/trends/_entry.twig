@@ -8,14 +8,14 @@
 {% block content %}
   {% set content %}
     <time
-      class="block text-gray-800 text-body-18 md:text-body-20"
+      class="text-body-18 md:text-body-20 block text-gray-800"
       datetime="{{ postDate|date("Y-m-d") }}"
     >
       {{ "Published on"|t }}: {{ postDate|date("d/m/Y") }}
     </time>
 
     <time
-      class="block text-gray-800 text-body-18 md:text-body-20"
+      class="text-body-18 md:text-body-20 block text-gray-800"
       datetime="{{ dateUpdated|date("Y-m-d") }}"
     >
       {{ "Last updated"|t }}: {{ dateUpdated|date("d/m/Y") }}
@@ -31,9 +31,9 @@
     } only %}
 
     {% if intro|length %}
-      <div class="grid md:grid-cols-16 px-2 md:px-5 mt-5 md:mt-10 mb-[60px]">
+      <div class="mt-5 mb-[60px] grid px-2 md:mt-10 md:grid-cols-16 md:px-5">
         <div
-          class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-98"
+          class="md:col-span-11 md:col-start-6 lg:col-span-98 lg:col-start-8"
         >
           {% include "_rich-text/intro" with {
             text: intro
