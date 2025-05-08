@@ -53,7 +53,7 @@
       </div>
     {% endif %}
 
-    <h1 class="font-surt text-gray-900 text-head-22 md:text-head-38 uppercase mb-2.5 md:mb-3 last:mb-0 break-words">
+    <h1 class="font-surt text-head-22 md:text-head-38 uppercase mb-2.5 md:mb-3 last:mb-0 break-words">
       <span class="text-rich-blue">{{ entry.title }}</span>{% if claim|length %}: {{ claim }}{% endif %}
     </h1>
 
@@ -66,7 +66,7 @@
       </div>
     {% endif %}
 
-    <time class="block text-gray-900 mb-4 md:mb-5 text-ui-13 md:text-ui-14" datetime="{{ dateUpdated|date('Y-m-d') }}">
+    <time class="block mb-4 md:mb-5 text-ui-13 md:text-ui-14" datetime="{{ dateUpdated|date('Y-m-d') }}">
       {{ "Last updated"|t }}: {{ dateUpdated|date("short") }}
     </time>
 
