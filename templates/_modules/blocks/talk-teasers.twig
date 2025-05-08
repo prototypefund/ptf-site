@@ -1,9 +1,7 @@
 {% set nextReads = module.talkTeasers.eagerly().all() %}
 
-{% if nextReads|length == 0 %}
-  {% set nextReads = craft.entries.section('talks')
-    .limit(3)
-  %}
+{% if (nextReads|length) == 0 %}
+  {% set nextReads = craft.entries.section("talks").limit(3) %}
 {% endif %}
 
 {% set content %}
@@ -19,6 +17,6 @@
       text: "See all"|t,
       url: eventsIndex.url
     },
-    content: content,
+    content: content
   } only %}
 {% endif %}

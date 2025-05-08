@@ -1,13 +1,14 @@
-{% import '_macros' as macros %}
+{% import "_macros" as macros %}
 
 {% set image = entry.mainImage.eagerly().one() %}
 {% set claim = entry.headline %}
 {% set teamMembers = entry.projectTeamMembers %}
 
-{% set categories = entry.projectRounds.all()
-  |merge(entry.projectTopics.all())
-  |merge(entry.projectTechnologies.all())
-  |merge(entry.projectYearGroups.all())
+{% set categories =
+  entry.projectRounds.all()
+    |merge(entry.projectTopics.all())
+    |merge(entry.projectTechnologies.all())
+    |merge(entry.projectYearGroups.all())
 %}
 
 <article class="border-gray-600 border-t mb-4 md:mb-5">
@@ -15,14 +16,23 @@
     <div class="group grid grid-cols-11">
       <div class="col-span-2 mr-2 md:mr-3.5">
         {% if image|length %}
-          <div class="bg-gray-100 flex items-center justify-center aspect-square p-[20px]">
+          <div
+            class="bg-gray-100 flex items-center justify-center aspect-square p-[20px]"
+          >
             <div class="w-full mix-blend-multiply">
-              <img class="w-full h-full object-contain" src="{{ image.url }}" alt="{{ image.alt }}">
+              <img
+                class="w-full h-full object-contain"
+                src="{{ image.url }}"
+                alt="{{ image.alt }}"
+              />
             </div>
           </div>
         {% else %}
           <div class="aspect-square">
-            <img class="block w-full h-full object-cover" src="/static/images/patterns/project-fallback-pattern.svg">
+            <img
+              class="block w-full h-full object-cover"
+              src="/static/images/patterns/project-fallback-pattern.svg"
+            />
           </div>
         {% endif %}
       </div>
@@ -37,13 +47,20 @@
         {% endif %}
 
         <div class="mb-1 md:mb-1.5 last:mb-0">
-          <h4 class="inline uppercase font-surt text-head-16 md:text-head-22 tracking-[0.03em] group-hover:underline group-hover:decoration-sky-blue">
-            <span class="text-rich-blue">{{ entry.title }}</span>{% if claim|length %}: {{ claim }}{% endif %}
+          <h4
+            class="inline uppercase font-surt text-head-16 md:text-head-22 tracking-[0.03em] group-hover:underline group-hover:decoration-sky-blue"
+          >
+            <span class="text-rich-blue">{{ entry.title }}</span>{% if
+              claim|length %}
+              : {{ claim }}
+            {% endif %}
           </h4>
         </div>
 
         {% if teamMembers|length %}
-          <div class="text-body-12 md:text-body-14 mb-2 md:mb-2.5 last:mb-0">{{ teamMembers }}</div>
+          <div class="text-body-12 md:text-body-14 mb-2 md:mb-2.5 last:mb-0">
+            {{ teamMembers }}
+          </div>
         {% endif %}
 
         {% if categories|length %}

@@ -1,40 +1,52 @@
-{% import '_macros' as macros %}
+{% import "_macros" as macros %}
 
 {% set offset = 1 %}
-{% set itemClasses = "text-body-16 text-gray-700 hover:text-gray-900 px-[10px] transition-colors" %}
+{% set itemClasses =
+  "text-body-16 text-gray-700 hover:text-gray-900 px-[10px] transition-colors"
+%}
 {% set spacerClasses = "" %}
 {% set activeClasses = "!text-gray-900 border-gray-600 border-x" %}
 
 {% if pagination.totalPages > 1 %}
   <div class="flex flex-row justify-center items-center">
     {% apply spaceless %}
-      {% if pagination.currentPage > offset + 1 %}
-        <a class="{{ itemClasses }}" href="{{ _self.getUrl(pagination.firstUrl) }}">1</a>
-      {% endif %}
-      {% if pagination.currentPage > (offset + 2) %}
-        <span class="{{ itemClasses }} {{ spacerClasses }}">…</span>
-      {% endif %}
-      {% for page, url in pagination.getPrevUrls(offset) %}
-        <a class="{{ itemClasses }}" href="{{ _self.getUrl(url) }}">{{ page }}</a>
-      {% endfor %}
-      <span class="{{ itemClasses }} {{ activeClasses }}">
-        {{ pagination.currentPage }}
-      </span>
-      {% for page, url in pagination.getNextUrls(offset) %}
-        <a class="{{ itemClasses }}" href="{{ _self.getUrl(url) }}">{{ page }}</a>
-      {% endfor %}
-      {% if pagination.totalPages > pagination.currentPage + (offset + 1) %}
-        <span class="{{ itemClasses }} {{ spacerClasses }}">…</span>
-      {% endif %}
-      {% if pagination.totalPages > pagination.currentPage + offset %}
-        <a class="{{ itemClasses }}" href="{{ _self.getUrl(pagination.lastUrl) }}">
-          {{ pagination.totalPages }}
-        </a>
-      {% endif %}
+    {% if pagination.currentPage > offset + 1 %}
+      <a
+        class="{{ itemClasses }}"
+        href="{{ _self.getUrl(pagination.firstUrl) }}"
+      >
+        1
+      </a>
+    {% endif %}
+    {% if pagination.currentPage > offset + 2 %}
+      <span class="{{ itemClasses }} {{ spacerClasses }}">…</span>
+    {% endif %}
+    {% for page, url in pagination.getPrevUrls(offset) %}
+      <a class="{{ itemClasses }}" href="{{ _self.getUrl(url) }}">{{ page }}</a>
+    {% endfor %}
+    <span class="{{ itemClasses }} {{ activeClasses }}">
+      {{ pagination.currentPage }}
+    </span>
+    {% for page, url in pagination.getNextUrls(offset) %}
+      <a class="{{ itemClasses }}" href="{{ _self.getUrl(url) }}">{{ page }}</a>
+    {% endfor %}
+    {% if pagination.totalPages > pagination.currentPage + offset + 1 %}
+      <span class="{{ itemClasses }} {{ spacerClasses }}">…</span>
+    {% endif %}
+    {% if pagination.totalPages > pagination.currentPage + offset %}
+      <a
+        class="{{ itemClasses }}"
+        href="{{ _self.getUrl(pagination.lastUrl) }}"
+      >
+        {{ pagination.totalPages }}
+      </a>
+    {% endif %}
     {% endapply %}
   </div>
 {% endif %}
 
-{% macro getUrl(url) %}{% apply spaceless %}
-  {{ url|split('?')|first ~ '?' ~ craft.app.request.queryString }}
-{% endapply %}{% endmacro %}
+{% macro getUrl(url) %}
+  {% apply spaceless %}
+  {{ (url|split("?")|first) ~ "?" ~ craft.app.request.queryString }}
+  {% endapply %}
+{% endmacro %}

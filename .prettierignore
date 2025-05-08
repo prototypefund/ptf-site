@@ -8,6 +8,7 @@ composer.lock
 storage/
 web/cpresources/
 web/static/dist/
+web/uploads/
+templates/feed.rss.twig
 
 .ddev/
-

@@ -6,32 +6,48 @@
       {% set avatar = person.avatar.eagerly().one() %}
       {% set website = person.website %}
       {% set email = person.email %}
-      {% set links = person.links|map((link) => link.genericLink) %}
+      {% set links = person.links|map(link => link.genericLink) %}
 
       {% if email %}
-        {% set links = [{
-          label: "Email"|t,
-          url: "mailto:#{email}"
-        }]|merge(links) %}
+        {% set links =
+          [
+            {
+              label: "Email"|t,
+              url: "mailto:#{email}"
+            }
+          ]|merge(links)
+        %}
       {% endif %}
-    
-      <div class="grid grid-cols-1 md:grid-cols-16 md:px-5 not-first:border-t not-first:border-gray-600">
-        <div class="px-2 md:px-0 pt-5 py-[60px] md:py-11 pr-12 md:col-span-8 order-2 md:order-none">
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-16 md:px-5 not-first:border-t not-first:border-gray-600"
+      >
+        <div
+          class="px-2 md:px-0 pt-5 py-[60px] md:py-11 pr-12 md:col-span-8 order-2 md:order-none"
+        >
           {% include "_modules/person-info" with {
             person: person
           } only %}
         </div>
 
-        <div class="flex flex-col relative md:border-x md:border-gray-600 md:col-start-10 md:col-span-7">
+        <div
+          class="flex flex-col relative md:border-x md:border-gray-600 md:col-start-10 md:col-span-7"
+        >
           <div class="md:h-full md:w-full">
             {% if avatar|length %}
-              <img class="block w-full h-full object-cover" src="{{ avatar.getUrl("avatarLarge") }}" alt="{{ avatar.alt }}">
+              <img
+                class="block w-full h-full object-cover"
+                src="{{ avatar.getUrl("avatarLarge") }}"
+                alt="{{ avatar.alt }}"
+              />
             {% else %}
               <div class="bg00 h-full"></div>
             {% endif %}
           </div>
 
-          <div class="md:absolute md:bottom-[-1px] md:left-[-1px] md:w-[calc(100%+2px)]">
+          <div
+            class="md:absolute md:bottom-[-1px] md:left-[-1px] md:w-[calc(100%+2px)]"
+          >
             {% include "_modules/button-links" with {
               links: links,
               layout: "flex"

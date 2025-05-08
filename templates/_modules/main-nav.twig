@@ -4,72 +4,71 @@
 <main-nav>
   <header
     data-header
-    class="{{ [
-      'bg-white',
-      'z-2',
-      'relative',
-      'md:z-auto',
-      '[&.menu-open]:fixed',
-      '[&.menu-open]:h-[100dvh]',
-      '[&.menu-open]:w-full',
-      '[&.menu-open]:lg:static',
-      '[&.menu-open]:lg:h-auto',
-      '[&.menu-open]:lg:bg-transparent',
-    ]|join(' ') }}">
-    <div class="{{ [
-      'overflow-visible',
-      '[.menu-open_&]:h-full',
-      '[.menu-open_&]:max-h-full',
-      '[.menu-open_&]:lg:h-auto',
-    ]|join(' ') }}">
-      <nav class="{{ [
-        'flex',
-        'flex-col',
-        'h-full',
-        'overflow-visible',
-      ]|join(' ') }}">
+    class="bg-white z-2 relative md:z-auto [&.menu-open]:fixed [&.menu-open]:h-[100dvh] [&.menu-open]:w-full [&.menu-open]:lg:static [&.menu-open]:lg:h-auto [&.menu-open]:lg:bg-transparent"
+  >
+    <div
+      class="overflow-visible [.menu-open_&]:h-full [.menu-open_&]:max-h-full [.menu-open_&]:lg:h-auto"
+    >
+      <nav class="flex flex-col h-full overflow-visible">
         <div
-          class="{{ [
-            'flex',
-            'items-center',
-            'p-2',
-            'h-[60px]',
-            'border-b',
-            'border-gray-600',
-            'md:h-auto',
-            'lg:px-3'
-          ]|join(' ') }}">
+          class="flex items-center p-2 h-[60px] border-b border-gray-600 md:h-auto lg:px-3"
+        >
           <a class="block" href="{{ homepage.url }}">
             {% include "_modules/logo" only %}
           </a>
 
           <button
             data-sandwich
-            class="{{ [
-              'flex',
-              'items-center',
-              'cursor-pointer',
-              'ml-auto',
-              'md:hidden'
-            ]|join(' ') }}">
+            class="flex items-center cursor-pointer ml-auto md:hidden"
+          >
             <span class="sr-only">Toggle menu</span>
 
             <svg
               class="[.menu-open_&]:hidden"
-              width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M8 11H24" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M8 16H24" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M8 21H24" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M8 11H24"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M8 16H24"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
+              <path
+                d="M8 21H24"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
             </svg>
 
             <svg
               class="hidden [.menu-open_&]:block"
-              width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10.1616 21.6762L21.8378 10M10.1617 10.3238L21.838 22" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+              width="32"
+              height="32"
+              viewBox="0 0 32 32"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10.1616 21.6762L21.8378 10M10.1617 10.3238L21.838 22"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round"
+              />
             </svg>
           </button>
 
-          <aside class="hidden md:block ml-auto">
+          <aside class="ml-auto hidden md:block">
             {% include "_modules/lang-switch.twig" %}
 
             {# <display-toggle class="hidden" data-light-mode-label="{{ "Switch to light mode"|t }}" data-dark-mode-label="{{ "Switch to dark mode"|t }}">
@@ -79,80 +78,45 @@
         </div>
 
         {% if navLinks|length %}
-          <div class="{{ [
-            'group',
-            'hidden',
-            'overflow-y-auto',
-            'md:block',
-            '[.menu-open_&]:block',
-            '[.menu-open_&]:md:block',
-            'lg:overflow-visible'
-          ]|join(' ') }}">
-            <ul class="md:flex md:border-gray-600 md:border-b">
+          <div
+            class="group hidden overflow-y-auto md:block [.menu-open_&]:block [.menu-open_&]:md:block lg:overflow-visible"
+          >
+            <ul class="md:flex md:border-b md:border-gray-600">
               {% for linkGroup in navLinks %}
                 {% set links = linkGroup.links %}
 
-                <li class="{{ [
-                  'border-b',
-                  'border-gray-600',
-                  'last:border-b-0',
-                  'md:w-1/5',
-                  'md:border-b-0',
-                  'md:border-r',
-                  'md:last:border-r-0'
-                ]|join(' ') }}">
+                <li
+                  class="border-b border-gray-600 last:border-b-0 md:w-1/5 md:border-b-0 md:border-r md:last:border-r-0"
+                >
                   <span
-                    class="{{ [
-                      'block',
-                      'cursor-pointer',
-                      'uppercase',
-                      'text-center',
-                      'px-3',
-                      'py-1',
-                      'text-[15px]',
-                      'border-gray-600',
-                      'border-b',
-                      'md:p-1.5',
-                      'md:text-body-14',
-                      'md:text-left',
-                      'md:border-b-0',
-                      'lg:px-3',
-                      'lg:py-1.5',
-                      'lg:text-body-16',
-                    ]|join(' ') }}">
+                    class="block cursor-pointer uppercase text-center px-3 py-1 text-[15px] border-gray-600 border-b md:p-1.5 md:text-body-14 md:text-left md:border-b-0 lg:px-3 lg:py-1.5 lg:text-body-16"
+                  >
                     {{ linkGroup.title }}
                   </span>
 
                   {% if links|length %}
-                    <ul class="md:hidden p-1">
+                    <ul class="p-1 md:hidden">
                       {% for link in links %}
                         {% set navLink = link.genericLink %}
                         {% set isExternal = navLink.type == "url" %}
 
                         <li>
-                          {{ tag('a', {
-                            class: [
-                              'flex',
-                              'px-1',
-                              'py-0.5',
-                              'text-body-16'
-                            ] 
-                            |merge(isExternal ? [
-                              'after:ml-auto',
-                              'after:block',
-                              'after:h-2.5',
-                              'after:w-2.5',
-                              'after:bg-link-arrow',
-                              'after:bg-cover',
-                              'after:bg-no-repeat',
-                              "after:content-['']"
-                            ] : [])
-                            |join(' '),
-                            href: navLink.value,
-                            target: navLink.target,
-                            rel: navLink.target == '_blank' ? 'noopener noreferrer' : null,
-                            text: navLink.label,
-                          }) }}
+                          <a
+                            class="flex px-1 py-0.5 text-body-16 {{
+                            isExternal
+                              ? "after:ml-auto after:block after:h-2.5 after:w-2.5 after:bg-link-arrow after:bg-cover after:bg-no-repeat after:content-['']"
+                              : ""
+                            }}"
+                            href="{{ navLink.value }}"
+                            target="{{ navLink.target }}"
+                            rel="{{
+                            navLink.target == "_blank"
+                              ? "noopener noreferrer"
+                              : ""
+                            }}"
+                          >
+                            {{ navLink.label }}
+                          </a>
                         </li>
                       {% endfor %}
                     </ul>
@@ -162,93 +126,68 @@
             </ul>
 
             <ul
-              class="{{ [
-                'hidden',
-                'absolute',
-                '-z-10',
-                'w-full',
-                'border-b',
-                'border-gray-600',
-                'bg-white',
-                'opacity-0',
-                'transition-opacity',
-                'group-focus-within:opacity-100',
-                'group-hover:opacity-100',
-                'group-hover:z-2',
-                'md:flex'
-              ]|join(' ') }}">
+              class="hidden absolute -z-10 w-full border-b border-gray-600 bg-white opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:opacity-100 group-hover:z-2 md:flex"
+            >
               {% for linkGroup in navLinks %}
                 {% set links = linkGroup.links %}
 
                 {% if links|length %}
                   <li
-                    class="{{ [
-                      'p-2',
-                      'w-1/5',
-                      'border-r',
-                      'text-body-16',
-                      'leading-[1]',
-                      'border-gray-600',
-                      'last:border-r-0'
-                    ]|join(' ') }}">
+                    class="p-2 w-1/5 border-r text-body-16 leading-[1] border-gray-600 last:border-r-0"
+                  >
                     <ul>
                       {% for link in links %}
                         {% set navLink = link.genericLink %}
                         {% set isExternal = navLink.type == "url" %}
-                        {% set isActive = '' %}
+                        {% set isActive = "" %}
 
-                        {% set navLinkHandle = navLink.element.section.handle|default(null) %}
-                        {% set matchedElementHandle = matchedElement.section.handle|default(null) %}
-                        {% set matchedElementUrl = matchedElement.url|default(null) %}
+                        {% set navLinkHandle =
+                          navLink.element.section.handle|default(null)
+                        %}
+                        {% set matchedElementHandle =
+                          matchedElement.section.handle|default(null)
+                        %}
+                        {% set matchedElementUrl =
+                          matchedElement.url|default(null)
+                        %}
 
                         {% set sectionMap = {
-                          'blogIndex': ['blog'],
-                          'projectsIndex': ['projects'],
-                          'eventsIndex': ['events', 'pastEventsIndex']
+                          blogIndex: ["blog"],
+                          projectsIndex: ["projects"],
+                          eventsIndex: ["events", "pastEventsIndex"]
                         } %}
 
-                        {% if sectionMap[navLinkHandle] is defined and matchedElementHandle in sectionMap[navLinkHandle] %}
-                          {% set isActive = 'active' %}
+                        {% if
+                          sectionMap[navLinkHandle] is defined
+                            and matchedElementHandle
+                              in sectionMap[navLinkHandle] %}
+                          {% set isActive = "active" %}
                         {% elseif matchedElementUrl == navLink.url %}
-                          {% set isActive = 'active' %}
+                          {% set isActive = "active" %}
                         {% endif %}
 
                         <li class="mb-[6px] last:mb-0">
-                          <a class="{{ [
-                              'group/link',
-                              'flex',
-                              'px-1',
-                              'py-[8px]',
-                              'relative',
-                            ]|merge(isExternal ? [
-                              'after:absolute',
-                              'after:right-0',
-                              'after:block',
-                              'after:h-2.5',
-                              'after:w-2.5',
-                              'after:bg-link-arrow',
-                              'after:bg-cover',
-                              'after:bg-no-repeat',
-                              "after:content-['']" 
-                            ] : [])|join(' ') }}"
+                          <a
+                            class="group/link flex px-1 py-[8px] relative {{
+                            isExternal
+                              ? "after:absolute after:right-0 after:block after:h-2.5 after:w-2.5 after:bg-link-arrow after:bg-cover after:bg-no-repeat after:content-['']"
+                              : ""
+                            }}"
                             href="{{ navLink.value }}"
                             target="{{ navLink.target }}"
-                            {{ navLink.target == '_blank' ? 'rel="noopener noreferrer"' : '' }}
+                            rel="{{
+                            navLink.target == "_blank"
+                              ? "noopener noreferrer"
+                              : ""
+                            }}"
                           >
                             <span
-                              class="{{ [
-                                'relative',
-                                'sm:after:content-[\'\']',
-                                'sm:after:absolute',
-                                'sm:after:bottom-[-4px]',
-                                'sm:after:left-0',
-                                'sm:after:w-0',
-                                'sm:group-hover/link:after:w-full',
-                                'sm:after:h-[1px]',
-                                'sm:after:transition-all',
-                                'sm:after:bg-sky-blue',
-                                isActive ? 'sm:after:w-full' : ''
-                              ]|join(' ') }}">
+                              class="relative sm:after:content-[''] sm:after:absolute sm:after:bottom-[-4px] sm:after:left-0 sm:after:w-0 sm:group-hover/link:after:w-full sm:after:h-[1px] sm:after:transition-all sm:after:bg-sky-blue {{
+                              isActive
+                                ? "sm:after:w-full"
+                                : ""
+                              }}"
+                            >
                               {{ navLink.label }}
                             </span>
                           </a>
@@ -263,17 +202,8 @@
         {% endif %}
 
         <aside
-          class="{{ [
-            'hidden',
-            'gap-2.5',
-            'justify-end',
-            'p-2',
-            'border-gray-600',
-            'border-t',
-            'md:hidden',
-            '[.menu-open_&]:flex',
-            '[.menu-open_&]:md:hidden',
-          ]|join(' ') }}">
+          class="hidden gap-2.5 justify-end p-2 border-gray-600 border-t md:hidden [.menu-open_&]:flex [.menu-open_&]:md:hidden"
+        >
           {% include "_modules/lang-switch.twig" %}
         </aside>
       </nav>

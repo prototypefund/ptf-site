@@ -24,7 +24,8 @@
 
   <div class="mt-5 md:mt-9 mb-5 px-2 md:px-5">
     <h2 class="mb-3 md:mb-5 last:mb-0 font-surt text-head-22 md:text-head-28">
-      {{ "Artikel"|t }} <span class=" text-rich-blue">[{{ projectsQuery.count() }}]</span>
+      {{ "Artikel"|t }}
+      <span class="text-rich-blue">[{{ projectsQuery.count() }}]</span>
     </h2>
 
     {% if categories|length %}
@@ -34,10 +35,12 @@
         </h3>
 
         {% include "_modules/filters" with {
-          filters: categories|map((c) => c|merge({
-            url: c.url ~ "#list",
-            isActive: c.id == category.id
-          }))
+          filters: categories|map(
+            c => c|merge({
+              url: c.url ~ "#list",
+              isActive: c.id == category.id
+            })
+          )
         } only %}
       </div>
     {% endif %}
@@ -45,17 +48,26 @@
 
   <div class="px-2 md:px-5 mb-10">
     {% if projects|length %}
-      {% include "blog/_modules/teasers-list" with { articles: projects } only %}
-      {% include "_modules/pagination" with { pagination: pagination } only %}
+      {% include "blog/_modules/teasers-list" with {
+        articles: projects
+      } only %}
+      {% include "_modules/pagination" with {
+        pagination: pagination
+      } only %}
     {% else %}
-      <p class="text-body-20">{{ "No projects found."|t }}</p>
+      <p class="text-body-20">
+        {{ "No projects found."|t }}
+      </p>
     {% endif %}
   </div>
 
   {% if category.modules.count() > 0 %}
-    {% include "_modules/modules" with { entry: category } %}
+    {% include "_modules/modules" with {
+      entry: category
+    } %}
   {% else %}
-    {% include "_modules/modules" with { entry: indexEntry } %}
+    {% include "_modules/modules" with {
+      entry: indexEntry
+    } %}
   {% endif %}
 {% endblock %}
-

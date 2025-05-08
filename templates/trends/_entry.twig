@@ -7,12 +7,18 @@
 
 {% block content %}
   {% set content %}
-    <time class="block text-gray-800 text-body-18 md:text-body-20" datetime="{{ postDate|date('Y-m-d') }}">
-      {{ "Published on"|t }}: {{ postDate|date('d/m/Y') }}
+    <time
+      class="block text-gray-800 text-body-18 md:text-body-20"
+      datetime="{{ postDate|date("Y-m-d") }}"
+    >
+      {{ "Published on"|t }}: {{ postDate|date("d/m/Y") }}
     </time>
 
-    <time class="block text-gray-800 text-body-18 md:text-body-20" datetime="{{ dateUpdated|date('Y-m-d') }}">
-      {{ "Last updated"|t }}: {{ dateUpdated|date('d/m/Y') }}
+    <time
+      class="block text-gray-800 text-body-18 md:text-body-20"
+      datetime="{{ dateUpdated|date("Y-m-d") }}"
+    >
+      {{ "Last updated"|t }}: {{ dateUpdated|date("d/m/Y") }}
     </time>
   {% endset %}
 
@@ -26,7 +32,9 @@
 
     {% if intro|length %}
       <div class="grid md:grid-cols-16 px-2 md:px-5 mt-5 md:mt-10 mb-[60px]">
-        <div class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-98">
+        <div
+          class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-98"
+        >
           {% include "_rich-text/intro" with {
             text: intro
           } only %}
@@ -43,5 +51,7 @@
     {% endif %}
   </article>
 
-  {% include "_modules/modules" with { entry: entry } only %}
+  {% include "_modules/modules" with {
+    entry: entry
+  } only %}
 {% endblock %}

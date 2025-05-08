@@ -1,13 +1,31 @@
-{% set newsletterHeadline = module.newsletterHeadline|default(newsletter.newsletterHeadline) %}
-{% set newsletterText = module.newsletterText|default(newsletter.newsletterText) %}
-{% set newsletterSecondaryText = module.newsletterSecondaryText|default(newsletter.newsletterSecondaryText) %}
-{% set newsletterSideTitle = module.newsletterSideTitle|default(newsletter.newsletterSideTitle) %}
-{% set newsletterLinks = module.newsletterLinks.all()|default(newsletter.newsletterLinks.all()) %}
+{% set newsletterHeadline =
+  module.newsletterHeadline|default(newsletter.newsletterHeadline)
+%}
+{% set newsletterText =
+  module.newsletterText|default(newsletter.newsletterText)
+%}
+{% set newsletterSecondaryText =
+  module.newsletterSecondaryText|default(newsletter.newsletterSecondaryText)
+%}
+{% set newsletterSideTitle =
+  module.newsletterSideTitle|default(newsletter.newsletterSideTitle)
+%}
+{% set newsletterLinks =
+  module.newsletterLinks.all()|default(newsletter.newsletterLinks.all())
+%}
 
-<div class="md:grid md:grid-cols-2 mb-10 last:mb-0 bg-navy-blue border-navy-blue-100 border-t border-b text-white">
-  <div class="relative border-navy-blue-100 border-r after:bg-pattern-newsletter after:content-[''] after:absolute after:right-0 after:top-0 after:bottom-3 after:bg-no-repeat after:bg-right-top after:bg-contain after:h-[350px] after:w-[100px]">
-    <div class="pt-4 pl-2 pr-6 md:pl-3 md:pr-12 md:pt-4 mb-3 md:mb-[44px] relative z-1">
-      <h4 class="font-surt text-head-22 leading-[1.3] uppercase mb-2">{{ newsletterHeadline }}</h4>
+<div
+  class="md:grid md:grid-cols-2 mb-10 last:mb-0 bg-navy-blue border-navy-blue-100 border-t border-b text-white"
+>
+  <div
+    class="relative border-navy-blue-100 border-r after:bg-pattern-newsletter after:content-[''] after:absolute after:right-0 after:top-0 after:bottom-3 after:bg-no-repeat after:bg-right-top after:bg-contain after:h-[350px] after:w-[100px]"
+  >
+    <div
+      class="pt-4 pl-2 pr-6 md:pl-3 md:pr-12 md:pt-4 mb-3 md:mb-[44px] relative z-1"
+    >
+      <h4 class="font-surt text-head-22 leading-[1.3] uppercase mb-2">
+        {{ newsletterHeadline }}
+      </h4>
 
       {% include "_rich-text/simple" with {
         text: newsletterText
@@ -20,7 +38,9 @@
       {% include "_modules/newsletter-form" only %}
     </div>
 
-    <div class="pl-2 pr-6 md:pl-3 md:pr-12 mb-3 md:mb-0 md:pb-[62px] opacity-70">
+    <div
+      class="pl-2 pr-6 md:pl-3 md:pr-12 mb-3 md:mb-0 md:pb-[62px] opacity-70"
+    >
       {% include "_rich-text/simple" with {
         text: newsletterSecondaryText,
         size: "small"
@@ -28,11 +48,11 @@
     </div>
   </div>
 
-  <div class="border-navy-blue-100 border-t md:border-t-0 px-2 md:px-3 py-3 md:py-4">
+  <div
+    class="border-navy-blue-100 border-t md:border-t-0 px-2 md:px-3 py-3 md:py-4"
+  >
     {% if newsletterSideTitle %}
-      <h5 class="font-surt text-[20px]">
-        {{ newsletterSideTitle }}
-      </h5>
+      <h5 class="font-surt text-[20px]">{{ newsletterSideTitle }}</h5>
     {% endif %}
   </div>
 
@@ -43,17 +63,21 @@
       {% if link|length %}
         {% set sideInfo = linkGroup.sideInfo %}
 
-        <li class="text-head-16 md:text-head-18 md:h-[63px] border-navy-blue-100 border-b last:border-0 first:!border-b">
+        <li
+          class="text-head-16 md:text-head-18 md:h-[63px] border-navy-blue-100 border-b last:border-0 first:!border-b"
+        >
           <a
             class="flex items-center text-white py-[18px] px-2 md:px-3 h-full hover:bg-navy-blue-100 transition-colors"
             href="{{ link.url }}"
             target="{{ link.target }}"
-            {{ link.target == '_blank' ? 'rel="noopener noreferrer"' : '' }}
+            {{ link.target == "_blank" ? 'rel="noopener noreferrer"' : "" }}
           >
             {{ link.label }}
 
             {% if sideInfo %}
-              <span class="ml-auto uppercase text-body-13 opacity-70">{{ sideInfo }}</span>
+              <span class="ml-auto uppercase text-body-13 opacity-70">
+                {{ sideInfo }}
+              </span>
             {% endif %}
           </a>
         </li>

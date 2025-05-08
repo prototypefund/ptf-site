@@ -9,16 +9,20 @@
   {% set sideInfo = linkGroup.sideInfo %}
 
   {% if link|length %}
-    {% set linkListLinks = [{
-      title: link.label,
-      subheading: linkGroup.sideInfo,
-      genericLink: {
-        label: "See"|t,
-        type: link.type,
-        url: link.url,
-        target: link.target
-      },
-    }]|merge(linkListLinks) %}
+    {% set linkListLinks =
+      [
+        {
+          title: link.label,
+          subheading: linkGroup.sideInfo,
+          genericLink: {
+            label: "See"|t,
+            type: link.type,
+            url: link.url,
+            target: link.target
+          }
+        }
+      ]|merge(linkListLinks)
+    %}
   {% endif %}
 {% endfor %}
 
@@ -38,7 +42,7 @@
   } only %}
 
   <div class="mt-10">
-    {% if issuesHeading|length and issuesDescription|length %}
+    {% if (issuesHeading|length) and (issuesDescription|length) %}
       {% include "_modules/blocks/link-list" with {
         module: {
           title: issuesHeading,
@@ -48,6 +52,8 @@
       } only %}
     {% endif %}
 
-    {% include "_modules/modules" with { entry: entry } %}
+    {% include "_modules/modules" with {
+      entry: entry
+    } %}
   </div>
 {% endblock %}

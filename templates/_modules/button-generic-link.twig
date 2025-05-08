@@ -5,33 +5,33 @@
 
 {% if icon %}
   {% switch link.type %}
-    {% case 'asset' %}
+    {% case "asset" %}
       {% switch link.element.extension %}
-        {% case 'pdf' %}
+        {% case "pdf" %}
           {% set icon = "arrow" %}
         {% default %}
           {% set icon = "download" %}
       {% endswitch %}
-    {% case 'url' %}
+    {% case "url" %}
       {% set icon = "link" %}
-    {% case 'entry' %}
+    {% case "entry" %}
       {% set icon = "arrow" %}
   {% endswitch %}
 {% endif %}
 
 {% switch link.type %}
-  {% case 'asset' %}
+  {% case "asset" %}
     {% set hasDefaultLabel = link.label in link.element.title %}
     {% switch link.element.extension %}
-      {% case 'pdf' %}
+      {% case "pdf" %}
         {% set text = hasDefaultLabel ? "Open PDF"|t : link.label %}
       {% default %}
         {% set text = hasDefaultLabel ? "Download File"|t : link.label %}
     {% endswitch %}
-  {% case 'url' %}
+  {% case "url" %}
     {% set hasDefaultLabel = link.label in link.value %}
     {% set text = hasDefaultLabel ? "Open link"|t : link.label %}
-  {% case 'entry' %}
+  {% case "entry" %}
     {% set hasDefaultLabel = link.label in link.element.title %}
     {% set text = hasDefaultLabel ? "Open link"|t : link.label %}
   {% default %}
@@ -44,5 +44,5 @@
   target: target,
   icon: icon,
   iconAlignment: "right",
-  color: color,
+  color: color
 } only %}

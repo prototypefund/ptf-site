@@ -11,8 +11,27 @@
     {% set sizeClasses = "text-body-14 md:text-body-16" %}
 {% endswitch %}
 
-{{ text|retcon([
-  ['removeEmpty', 'p'],
-  ["attr", "p", { class: "mb-2 last:mb-0 #{sizeClasses}"}],
-  ['attr', 'a', { class: 'underline decoration-sky-blue hover:bg-light-blue'}, false],
-])|raw }}
+{{
+  text
+    |retcon(
+      [
+        ["removeEmpty", "p"],
+        [
+          "attr",
+          "p",
+          {
+            class: "mb-2 last:mb-0 #{sizeClasses}"
+          }
+        ],
+        [
+          "attr",
+          "a",
+          {
+            class: "underline decoration-sky-blue hover:bg-light-blue"
+          },
+          false
+        ]
+      ]
+    )
+    |raw
+}}

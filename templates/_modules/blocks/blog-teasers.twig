@@ -1,11 +1,13 @@
 {% set nextReads = module.nextReads.eagerly().all() %}
 
-{% if nextReads|length == 0 %}
-  {% set nextReads =  craft.entries.section('blog').limit(4).all() %}
+{% if (nextReads|length) == 0 %}
+  {% set nextReads = craft.entries.section("blog").limit(4).all() %}
 {% endif %}
 
 {% set content %}
-  {% include "blog/_modules/teasers-list" with { articles: nextReads } %}
+  {% include "blog/_modules/teasers-list" with {
+    articles: nextReads
+  } %}
 {% endset %}
 
 {% if nextReads|length %}
@@ -15,6 +17,6 @@
       text: "See all"|t,
       url: blogIndex.url
     },
-    content: content,
+    content: content
   } only %}
 {% endif %}

@@ -1,4 +1,4 @@
-{% import '_macros' as macros %}
+{% import "_macros" as macros %}
 
 {% extends "_layouts/layout.twig" %}
 
@@ -13,66 +13,111 @@
 
 {% block content %}
   <article class="mb-10 last:mb-0">
-    {% include "_modules/headers/project" with { entry } only %}
+    {% include "_modules/headers/project" with {
+      entry
+    } only %}
 
-    {% if teamMembers|length or licenses|length or fundingAmount|length %}
+    {% if (teamMembers|length) or (licenses|length) or (fundingAmount|length) %}
       <div class="grid md:grid-cols-16 mt-5 md:mt-10 px-2 md:px-5">
-        <h2 class="font-surt text-head-24 mb-5 md:hidden">{{ "About the project"|t }}</h2>
+        <h2 class="font-surt text-head-24 mb-5 md:hidden">
+          {{ "About the project"|t }}
+        </h2>
 
-        <div class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-8 border-b border-gray-600 md:border-none pb-5 md:pb-0">
+        <div
+          class="md:col-start-6 md:col-span-11 lg:col-start-8 lg:col-span-8 border-b border-gray-600 md:border-none pb-5 md:pb-0"
+        >
           {% if teamMembers|length %}
             <div class="pt-1 mb-4 md:mb-5 last:mb-0 border-t border-gray-600">
-              <h4 class="uppercase text-head-14 md:text-head-16 text-gray-800 mb-1 md:mb-2">
+              <h4
+                class="uppercase text-head-14 md:text-head-16 text-gray-800 mb-1 md:mb-2"
+              >
                 {{ "Team Members"|t }}
               </h4>
 
-              <p class="text-body-18 md:text-body-20">{{ teamMembers }}</p>
+              <p class="text-body-18 md:text-body-20">
+                {{ teamMembers }}
+              </p>
             </div>
           {% endif %}
 
           {% if licenses|length %}
             <div class="pt-1 mb-4 md:mb-5 last:mb-0 border-t border-gray-600">
-              <h4 class="uppercase text-head-14 md:text-head-16 text-gray-800 mb-1 md:mb-2">
-                {{ licenses|length > 1 ? "Licenses"|t : "License"|t }}
+              <h4
+                class="uppercase text-head-14 md:text-head-16 text-gray-800 mb-1 md:mb-2"
+              >
+                {{ (licenses|length) > 1 ? "Licenses"|t : "License"|t }}
               </h4>
 
-              <p class="text-body-18 md:text-body-20">{{ licenses|join(", ") }}</p>
+              <p class="text-body-18 md:text-body-20">
+                {{ licenses|join(", ") }}
+              </p>
             </div>
           {% endif %}
 
           {% if fundingAmount|length %}
             <div class="pt-1 mb-4 md:mb-5 last:mb-0 border-t border-gray-600">
-              <h4 class="uppercase text-head-14 md:text-head-16 text-gray-800 mb-1 md:mb-2">
+              <h4
+                class="uppercase text-head-14 md:text-head-16 text-gray-800 mb-1 md:mb-2"
+              >
                 {{ "Funding Amount"|t }}
               </h4>
 
-              <p class="text-body-18 md:text-body-20">{{ fundingAmount }}</p>
+              <p class="text-body-18 md:text-body-20">
+                {{ fundingAmount }}
+              </p>
             </div>
           {% endif %}
 
           {% if fundingStatus|length %}
-            {% set category = entry.projectRounds.one()|default(entry.projectYearGroups.one()) %}
+            {% set category =
+              entry.projectRounds.one()|default(entry.projectYearGroups.one())
+            %}
             {% set startDate = category.startDate|default(null) %}
             {% set endDateRegular = category.endDateRegular|default(null) %}
-            {% set endDateSecondStage = category.endDateSecondStage|default(null) %}
-            
+            {% set endDateSecondStage =
+              category.endDateSecondStage|default(null)
+            %}
+
             <div class="pt-1 mb-4 md:mb-5 last:mb-0 border-t border-gray-600">
-              <h4 class="uppercase text-head-14 md:text-head-16 text-gray-800 mb-1 md:mb-2">
+              <h4
+                class="uppercase text-head-14 md:text-head-16 text-gray-800 mb-1 md:mb-2"
+              >
                 {{ "Funding period"|t }}
               </h4>
 
               <p class="text-body-18 md:text-body-20">
                 {% switch fundingStatus %}
-                  {% case 'inDuration' %}
-                    {{ 'In funding since {startDate}'|t(params = { startDate: startDate|date('d/m/Y') }) }}
-                  {% case 'completed' %}
-                    {{ startDate|date('d/m/Y') }} – {{ endDateRegular|date('d/m/Y') }}
-                  {% case 'inDurationWithSecondStage' %}
-                    {{ 'In funding since {startDate}, currently in Second Stage'|t(params = { startDate: startDate|date('d/m/Y') }) }}
-                  {% case 'completedWithSecondStage' %}
-                    {{ '{startDate} –  {endDateSecondStage} (incl. Second Stage)'|t(params = { startDate: startDate|date('d/m/Y'), endDateSecondStage: endDateSecondStage|date('d/m/Y') }) }}
+                  {% case "inDuration" %}
+                    {{
+                      "In funding since {startDate}"|t(
+                        params: {
+                          startDate: startDate|date("d/m/Y")
+                        }
+                      )
+                    }}
+                  {% case "completed" %}
+                    {{ startDate|date("d/m/Y") }} – {{
+                      endDateRegular|date("d/m/Y")
+                    }}
+                  {% case "inDurationWithSecondStage" %}
+                    {{
+                      "In funding since {startDate}, currently in Second Stage"|t(
+                        params: {
+                          startDate: startDate|date("d/m/Y")
+                        }
+                      )
+                    }}
+                  {% case "completedWithSecondStage" %}
+                    {{
+                      "{startDate} –  {endDateSecondStage} (incl. Second Stage)"|t(
+                        params: {
+                          startDate: startDate|date("d/m/Y"),
+                          endDateSecondStage: endDateSecondStage|date("d/m/Y")
+                        }
+                      )
+                    }}
                 {% endswitch %}
-              </a>
+              </p>
             </div>
           {% endif %}
         </div>
@@ -88,6 +133,10 @@
     {% endif %}
   </article>
 
-  {% include "_modules/modules" with { entry: entry } %}
-  {% include "projects/_modules/next-reads" with { entry: entry } only %}
+  {% include "_modules/modules" with {
+    entry: entry
+  } %}
+  {% include "projects/_modules/next-reads" with {
+    entry: entry
+  } only %}
 {% endblock %}

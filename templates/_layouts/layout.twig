@@ -1,26 +1,49 @@
-{% set baseUrl = alias('@web') ~ '/' %}
-{% header "Link: <#{baseUrl}>; rel=dns-prefetch;,<#{baseUrl}>; rel=preconnect; crossorigin;" %}
+{% set baseUrl = alias("@web") ~ "/" %}
+{% header "Link: <#{baseUrl}>; rel=dns-prefetch;,<#{baseUrl}>; rel=preconnect; crossorigin;"
+%}
 
 <!DOCTYPE html>
-<html lang="{{ craft.app.language |slice(0,2) }}" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+<html
+  lang="{{ craft.app.language|slice(0, 2) }}"
+  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#"
+>
   <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="dns-prefetch" href="{{ baseUrl }}">
-    <link rel="preconnect" href="{{ baseUrl }}" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <link rel="dns-prefetch" href="{{ baseUrl }}" />
+    <link rel="preconnect" href="{{ baseUrl }}" crossorigin="anonymous" />
 
-    <link rel="alternate" type="application/rss+xml" href="{{ url('feed.rss') }}">
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      href="{{ url("feed.rss") }}"
+    />
 
-    <meta name="theme-color" content="#28313d">
-    <link rel="apple-touch-icon" sizes="180x180" href="/static/images/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicons/favicon-16x16.png">
-    <link rel="manifest" href="/static/images/favicons/site.webmanifest">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#28313d">
+    <meta name="theme-color" content="#28313d" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/static/images/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/static/images/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/static/images/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/static/images/favicons/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#28313d" />
 
     <script type="speculationrules">
-      { "prerender": [{ "where": { "href_matches": "/*" }, "eagerness": "conservative" }] }
+      { "prerender": [{ "where": { "href_matches": "/*" }, "eagerness":
+      "conservative" }] }
     </script>
 
     {% include "_web-fonts" only %}
@@ -29,20 +52,21 @@
       {{ extraHead }}
     {% endif %}
 
-    {{ craft.vite.script(
-      "src/js/main.js",
-      false,
-    ) }}
+    {{ craft.vite.script("src/js/main.js", false) }}
 
     {{ settings.trackingHead|raw }}
     {{ head() }}
   </head>
 
-  <body class="antialiased bg-white text-gray-900 selection:bg-gray-800 selection:text-white dark:bg-gray-900 dark:text-white dark:selection:text-gray-800 dark:selection:bg-white">
+  <body
+    class="bg-white text-gray-900 antialiased selection:bg-gray-800 selection:text-white dark:bg-gray-900 dark:text-white dark:selection:bg-white dark:selection:text-gray-800"
+  >
     {% include "_modules/main-nav" only %}
     {% include "_modules/announcement-bar" %}
     <main>
-      {% block content %}{% endblock %}
+      {% block content %}
+
+      {% endblock %}
     </main>
     {% include "_modules/footer" only %}
     {{ settings.trackingBody|raw }}

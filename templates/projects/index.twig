@@ -4,18 +4,26 @@
 {% set params = {} %}
 
 {% if queryString %}
-  {% for pair in queryString|split('&') %}
+  {% for pair in queryString|split("&") %}
     {% if pair %}
-      {% set parts = pair|split('=') %}
+      {% set parts = pair|split("=") %}
       {% set key = parts[0] %}
 
       {% if key != "p" %}
         {% set value = parts[1] is defined ? parts[1] : null %}
 
         {% if params[key] is defined %}
-          {% set params = params|merge({ (key): params[key]|merge([value]) }) %}
+          {% set params =
+            params|merge({
+              (key): params[key]|merge([value])
+            })
+          %}
         {% else %}
-          {% set params = params|merge({ (key): [value] }) %}
+          {% set params =
+            params|merge({
+              (key): [value]
+            })
+          %}
         {% endif %}
       {% endif %}
     {% endif %}
@@ -34,33 +42,73 @@
 {% set relations = [] %}
 
 {% if yearGroupParams|length %}
-  {% set relations = relations|merge([
-    { targetElement: craft.categories.group('projectYearGroups').slug(yearGroupParams) }
-  ]) %}
+  {% set relations =
+    relations|merge(
+      [
+        {
+          targetElement: craft.categories.group("projectYearGroups").slug(
+            yearGroupParams
+          )
+        }
+      ]
+    )
+  %}
 {% endif %}
 
 {% if roundParams|length %}
-  {% set relations = relations|merge([
-    { targetElement: craft.categories.group('projectRounds').slug(roundParams) }
-  ]) %}
+  {% set relations =
+    relations|merge(
+      [
+        {
+          targetElement: craft.categories.group("projectRounds").slug(
+            roundParams
+          )
+        }
+      ]
+    )
+  %}
 {% endif %}
 
 {% if topicParams|length %}
-  {% set relations = relations|merge([
-    { targetElement: craft.categories.group('projectTopics').slug(topicParams) }
-  ]) %}
+  {% set relations =
+    relations|merge(
+      [
+        {
+          targetElement: craft.categories.group("projectTopics").slug(
+            topicParams
+          )
+        }
+      ]
+    )
+  %}
 {% endif %}
 
 {% if technologyParams|length %}
-  {% set relations = relations|merge([
-    { targetElement: craft.categories.group('projectTechnologies').slug(technologyParams) }
-  ]) %}
+  {% set relations =
+    relations|merge(
+      [
+        {
+          targetElement: craft.categories.group("projectTechnologies").slug(
+            technologyParams
+          )
+        }
+      ]
+    )
+  %}
 {% endif %}
 
 {% if licenseParams|length %}
-  {% set relations = relations|merge([
-    { targetElement: craft.categories.group('projectLicenses').slug(licenseParams) }
-  ]) %}
+  {% set relations =
+    relations|merge(
+      [
+        {
+          targetElement: craft.categories.group("projectLicenses").slug(
+            licenseParams
+          )
+        }
+      ]
+    )
+  %}
 {% endif %}
 
 {# {% if statusParams|length %}
@@ -68,17 +116,20 @@
 {% endif %} #}
 
 {% if relations|length %}
-  {% set projectsQuery = projectsQuery.relatedTo(['and']|merge(relations)) %}
+  {% set projectsQuery = projectsQuery.relatedTo(["and"]|merge(relations)) %}
 {% endif %}
 
-{% set projectsQuery = projectsQuery
-  .with([
-    'projectYearGroups',
-    'projectRounds',
-    'projectTopics',
-    'projectTechnologies'
-  ])
-  .limit(20)
+{% set projectsQuery =
+  projectsQuery.with(
+    [
+      "projectYearGroups",
+      "projectRounds",
+      "projectTopics",
+      "projectTechnologies"
+    ]
+  ).limit(
+    20
+  )
 %}
 
 {% paginate projectsQuery as pagination, projects %}
@@ -99,11 +150,12 @@
     alignment: entry.headerAlignment.value
   } only %}
 
-  <div id="list" class="md:grid md:grid-cols-12 lg:grid-cols-16 mt-5 md:mt-9 mb-10 px-2 md:px-5">
+  <div
+    id="list"
+    class="md:grid md:grid-cols-12 lg:grid-cols-16 mt-5 md:mt-9 mb-10 px-2 md:px-5"
+  >
     <div class="hidden md:block md:col-span-3 lg:col-span-4">
-      <h2 class="mb-3 font-surt text-head-24">
-        {{ "Filter projects"|t }}
-      </h2>
+      <h2 class="mb-3 font-surt text-head-24">{{ "Filter projects"|t }}</h2>
 
       {# <div class="mb-4 pt-[10px] border-gray-600 border-t">
         <h3 class="text-body-14 uppercase mb-2">
@@ -127,7 +179,7 @@
           {% include "projects/_modules/categories-filter" with {
             key: "year-group",
             categories: yearGroups,
-            params,
+            params
           } only %}
         </div>
       {% endif %}
@@ -141,49 +193,43 @@
           {% include "projects/_modules/categories-filter" with {
             key: "round",
             categories: rounds,
-            params,
+            params
           } only %}
         </div>
       {% endif %}
 
       {% if topics|length %}
         <div class="mb-4 pt-[10px] border-gray-600 border-t">
-          <h3 class="text-body-14 uppercase mb-2">
-            {{ "Topics"|t }}
-          </h3>
+          <h3 class="text-body-14 uppercase mb-2">{{ "Topics"|t }}</h3>
 
           {% include "projects/_modules/categories-filter" with {
             key: "topic",
             categories: topics,
-            params,
+            params
           } only %}
         </div>
       {% endif %}
 
       {% if technologies|length %}
         <div class="mb-4 pt-[10px] border-gray-600 border-t">
-          <h3 class="text-body-14 uppercase mb-2">
-            {{ "Technologies"|t }}
-          </h3>
+          <h3 class="text-body-14 uppercase mb-2">{{ "Technologies"|t }}</h3>
 
           {% include "projects/_modules/categories-filter" with {
             key: "technology",
             categories: technologies,
-            params,
+            params
           } only %}
         </div>
       {% endif %}
 
       {% if licenses|length %}
         <div class="mb-4 pt-[10px] border-gray-600 border-t">
-          <h3 class="text-body-14 uppercase mb-2">
-            {{ "Licenses"|t }}
-          </h3>
+          <h3 class="text-body-14 uppercase mb-2">{{ "Licenses"|t }}</h3>
 
           {% include "projects/_modules/categories-filter" with {
             key: "license",
             categories: licenses,
-            params,
+            params
           } only %}
         </div>
       {% endif %}
@@ -192,12 +238,16 @@
     <div class="md:col-start-5 md:col-span-12 lg:col-start-6 lg:col-span-11">
       <div class="mb-[30px] md:mb-3 md:flex md:items-center">
         <h2 class="font-surt text-head-20 md:text-head-24">
-          {{ params|length ? "Matching Projects"|t : "All Projects"|t }} <span class="text-rich-blue">[{{ projectsQuery.count() }}]</span>
+          {{ params|length ? "Matching Projects"|t : "All Projects"|t }}
+          <span class="text-rich-blue">[{{ projectsQuery.count() }}]</span>
         </h2>
 
         {% if params|length %}
           <div class="hidden md:block ml-auto">
-            <a class="uppercase text-ui-16 flex items-center gap-[10px] after:block after:content-[''] after:h-[18px] after:w-[18px] after:bg-close after:bg-center after:bg-no-repeat" href="{{ '/' ~ craft.app.request.pathInfo }}">
+            <a
+              class="uppercase text-ui-16 flex items-center gap-[10px] after:block after:content-[''] after:h-[18px] after:w-[18px] after:bg-close after:bg-center after:bg-no-repeat"
+              href="{{ "/" ~ craft.app.request.pathInfo }}"
+            >
               {{ "Reset filters"|t }}
             </a>
           </div>
@@ -215,11 +265,15 @@
         } only %}
       {% else %}
         <div class="border-gray-600 border-t mb-5 pt-2.5">
-        <p class="text-body-20">{{ "No projects found."|t }}</p>
+          <p class="text-body-20">
+            {{ "No projects found."|t }}
+          </p>
         </div>
       {% endif %}
     </div>
   </div>
 
-  {% include "_modules/modules" with { entry: entry } %}
+  {% include "_modules/modules" with {
+    entry: entry
+  } %}
 {% endblock %}
