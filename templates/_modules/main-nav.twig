@@ -69,17 +69,7 @@
           </button>
 
           <aside class="ml-auto hidden md:flex md:gap-2">
-            <display-toggle
-              data-light-mode-label="{{ "Light"|t }} {{ "mode"|t }}"
-              data-dark-mode-label="{{ "Dark"|t }} {{ "mode"|t }}"
-            >
-              <button
-                class="text-ui-14 bg-moon dark:bg-sun h-3.5 cursor-pointer rounded-[20px] border border-gray-600 bg-[position:calc(100%-12px)_center] bg-no-repeat px-1.5 py-0.5 pr-4 dark:border-[#929292]"
-              >
-
-              </button>
-            </display-toggle>
-
+            {% include "_modules/display-toggle.twig" %}
             {% include "_modules/lang-switch.twig" %}
           </aside>
         </div>
@@ -213,6 +203,7 @@
         <aside
           class="hidden justify-end gap-2.5 border-t border-gray-600 p-2 md:hidden dark:border-[#575757] [.menu-open_&]:flex [.menu-open_&]:md:hidden"
         >
+          {% include "_modules/display-toggle.twig" %}
           {% include "_modules/lang-switch.twig" %}
         </aside>
       </nav>
