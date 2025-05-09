@@ -7,7 +7,7 @@
 
 {% set pattern =
   [
-    "after:bg-pattern-br-gray-1",
+    "after:bg-pattern-br-gray-1 dark:after:bg-pattern-br-dark-gray-3",
     "after:content-['']",
     "after:absolute",
     "after:right-0",
@@ -87,7 +87,7 @@
           <ul class="flex flex-wrap gap-y-0.5">
             {% for text in caption %}
               <li
-                class="text-body-12 md:text-body-13 text-gray-800 uppercase after:pr-1 after:pl-[5px] after:text-gray-600 after:content-['|'] last:after:hidden"
+                class="text-body-12 md:text-body-13 text-gray-800 uppercase after:pr-1 after:pl-[5px] after:text-gray-600 after:content-['|'] last:after:hidden dark:text-gray-600 dark:after:text-[#575757]"
               >
                 {{ text }}
               </li>

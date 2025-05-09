@@ -129,7 +129,9 @@
   --background-image-pattern-bl-light-gray: url("/static/images/patterns/bg-pattern-bl-light-gray.svg");
   --background-image-pattern-tr-light-gray: url("/static/images/patterns/bg-pattern-tr-light-gray.svg");
   --background-image-pattern-bl-dark-gray: url("/static/images/patterns/bg-pattern-bl-dark-gray.svg");
-  --background-image-pattern-br-dark-gray: url("/static/images/patterns/bg-pattern-br-dark-gray.svg");
+  --background-image-pattern-br-dark-gray-1: url("/static/images/patterns/bg-pattern-br-dark-gray-1.svg");
+  --background-image-pattern-br-dark-gray-2: url("/static/images/patterns/bg-pattern-br-dark-gray-2.svg");
+  --background-image-pattern-br-dark-gray-3: url("/static/images/patterns/bg-pattern-br-dark-gray-3.svg");
   --background-image-pattern-tr-dark-gray-1: url("/static/images/patterns/bg-pattern-tr-dark-gray-1.svg");
   --background-image-pattern-tr-dark-gray-2: url("/static/images/patterns/bg-pattern-tr-dark-gray-2.svg");
   --background-image-pattern-newsletter: url("/static/images/patterns/bg-pattern-newsletter.svg");
