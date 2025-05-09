@@ -16,18 +16,26 @@
 {% set iconStyles = {
   arrow: {
     dark: iconAlignment == "right"
-      ? "before:bg-arrow-right-black hover:before:bg-arrow-right-white group-hover:before:bg-arrow-right-white dark:before:bg-arrow-right-white dark:hover:before:bg-arrow-right-black dark:group-hover:before:bg-arrow-right-black"
-      : "before:bg-arrow-left-black hover:before:bg-arrow-left-white group-hover:before:bg-arrow-left-white",
+      ? "before:bg-arrow-right-black hover:before:bg-arrow-right-white group-hover:before:bg-arrow-right-white "
+        ~ (darkMode
+          ? "dark:before:bg-arrow-right-white dark:hover:before:bg-arrow-right-black dark:group-hover:before:bg-arrow-right-black")
+      : "before:bg-arrow-left-black hover:before:bg-arrow-left-white group-hover:before:bg-arrow-left-white "
+        ~ (darkMode
+          ? "dark:before:bg-arrow-left-white dark:hover:before:bg-arrow-left-black dark:group-hover:before:bg-arrow-left-black"),
     light: iconAlignment == "right"
       ? "before:bg-arrow-right-white hover:before:bg-arrow-right-black group-hover:before:bg-arrow-right-black"
       : "before:bg-arrow-left-white hover:before:bg-arrow-left-black group-hover:before:bg-arrow-left-black"
   },
   link: {
-    dark: "before:bg-link-black hover:before:bg-link-white group-hover:before:bg-link-white dark:before:bg-link-white dark:hover:before:bg-link-black dark:group-hover:before:bg-link-black",
+    dark: "before:bg-link-black hover:before:bg-link-white group-hover:before:bg-link-white "
+      ~ (darkMode
+        ? "dark:before:bg-link-white dark:hover:before:bg-link-black dark:group-hover:before:bg-link-black"),
     light: "before:bg-link-white hover:before:bg-link-black group-hover:before:bg-link-black"
   },
   download: {
-    dark: "before:bg-download-black hover:before:bg-download-white group-hover:before:bg-download-white dark:before:bg-download-white dark:hover:before:bg-download-black dark:group-hover:before:bg-download-black",
+    dark: "before:bg-download-black hover:before:bg-download-white group-hover:before:bg-download-white "
+      ~ (darkMode
+        ? "dark:before:bg-download-white dark:hover:before:bg-download-black dark:group-hover:before:bg-download-black"),
     light: "before:bg-download-white hover:before:bg-download-black group-hover:before:bg-download-black"
   }
 } %}
@@ -61,7 +69,3 @@
     }|merge(props)
   )
 }}
-
-<div
-  class="group-hover:bg-black group-hover:text-white hover:bg-black hover:text-white dark:group-hover:bg-white dark:group-hover:text-black dark:hover:bg-white dark:hover:text-black"
-></div>
