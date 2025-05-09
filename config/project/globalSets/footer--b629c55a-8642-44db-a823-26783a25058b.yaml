@@ -6,6 +6,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-04-01T13:24:48+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 6ca70ace-9ae7-4dfa-a915-d1a24572619d # Footer Description
             handle: null
@@ -22,6 +23,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-01T12:29:22+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 633b77bd-edb2-4812-ae43-7d61e39fd8fd # Main Footer Links
             handle: null
@@ -38,6 +40,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-01T12:57:57+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 018c8387-bc84-4c1c-ae3a-186233bcf754 # Secondary Footer Links
             handle: null
@@ -54,6 +57,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-01T13:11:42+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 8898a317-df17-4cc9-9475-6376bc29fbd5 # Newsletter Headline
             handle: null
@@ -70,6 +74,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-01T13:11:42+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: fdce3d41-b225-460c-85ea-1908f71ba724 # Newsletter Secondary Text
             handle: null
@@ -86,6 +91,7 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-01T13:04:13+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: f81cb75d-92f5-44c4-89bd-673d8c8ee15c # Sponsors Headline
             handle: null
@@ -102,17 +108,35 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-01T13:04:13+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 80466913-dc6f-46d5-8013-a55f3a7358da # Sponsors
-            handle: null
+            handle: sponsorsLight
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Sponsors (Light)'
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 1b21dedc-7373-4297-abde-c7ae1478b00b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-08T12:11:08+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: 80466913-dc6f-46d5-8013-a55f3a7358da # Sponsors
+            handle: sponsorsDark
+            includeInCards: false
+            instructions: null
+            label: 'Sponsors (Dark)'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8d6b9aa9-dd4a-44d2-83c0-b960a9db2f6a
             userCondition: null
             warning: null
             width: 100

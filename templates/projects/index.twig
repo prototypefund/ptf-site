@@ -155,10 +155,10 @@
     class="mt-5 mb-10 px-2 md:mt-9 md:grid md:grid-cols-12 md:px-5 lg:grid-cols-16"
   >
     <div class="hidden md:col-span-3 md:block lg:col-span-4">
-      <h2 class="font-surt text-head-24 mb-3">{{ "Filter projects"|t }}</h2>
+      <h2 class="font-surt text-head-24 mb-5">{{ "Filter projects"|t }}</h2>
 
-      {# <div class="mb-4 pt-[10px] border-gray-600 border-t">
-        <h3 class="text-body-14 uppercase mb-2">
+      {# <div class="mb-4 pt-[10px] border-gray-600 dark:border-[#575757] border-t">
+        <h3 class="md:text-body-16 mb-2 text-[15px] text-gray-800 uppercase dark:text-white">
           {{ "Funding status"|t }}
         </h3>
 
@@ -171,8 +171,12 @@
       </div> #}
 
       {% if yearGroups|length %}
-        <div class="mb-4 border-t border-gray-600 pt-[10px]">
-          <h3 class="text-body-14 mb-2 uppercase">
+        <div
+          class="mb-4 border-t border-gray-600 pt-[10px] dark:border-[#575757]"
+        >
+          <h3
+            class="md:text-body-16 mb-2 text-[15px] text-gray-800 uppercase dark:text-white"
+          >
             {{ "Year Groups (from 2025)"|t }}
           </h3>
 
@@ -185,8 +189,12 @@
       {% endif %}
 
       {% if rounds|length %}
-        <div class="mb-4 border-t border-gray-600 pt-[10px]">
-          <h3 class="text-body-14 mb-2 uppercase">
+        <div
+          class="mb-4 border-t border-gray-600 pt-[10px] dark:border-[#575757]"
+        >
+          <h3
+            class="md:text-body-16 mb-2 text-[15px] text-gray-800 uppercase dark:text-white"
+          >
             {{ "Rounds (2016 – 2025)"|t }}
           </h3>
 
@@ -199,8 +207,14 @@
       {% endif %}
 
       {% if topics|length %}
-        <div class="mb-4 border-t border-gray-600 pt-[10px]">
-          <h3 class="text-body-14 mb-2 uppercase">{{ "Topics"|t }}</h3>
+        <div
+          class="mb-4 border-t border-gray-600 pt-[10px] dark:border-[#575757]"
+        >
+          <h3
+            class="md:text-body-16 mb-2 text-[15px] text-gray-800 uppercase dark:text-white"
+          >
+            {{ "Topics"|t }}
+          </h3>
 
           {% include "projects/_modules/categories-filter" with {
             key: "topic",
@@ -211,8 +225,14 @@
       {% endif %}
 
       {% if technologies|length %}
-        <div class="mb-4 border-t border-gray-600 pt-[10px]">
-          <h3 class="text-body-14 mb-2 uppercase">{{ "Technologies"|t }}</h3>
+        <div
+          class="mb-4 border-t border-gray-600 pt-[10px] dark:border-[#575757]"
+        >
+          <h3
+            class="md:text-body-16 mb-2 text-[15px] text-gray-800 uppercase dark:text-white"
+          >
+            {{ "Technologies"|t }}
+          </h3>
 
           {% include "projects/_modules/categories-filter" with {
             key: "technology",
@@ -223,8 +243,14 @@
       {% endif %}
 
       {% if licenses|length %}
-        <div class="mb-4 border-t border-gray-600 pt-[10px]">
-          <h3 class="text-body-14 mb-2 uppercase">{{ "Licenses"|t }}</h3>
+        <div
+          class="mb-4 border-t border-gray-600 pt-[10px] dark:border-[#575757]"
+        >
+          <h3
+            class="md:text-body-16 mb-2 text-[15px] text-gray-800 uppercase dark:text-white"
+          >
+            {{ "Licenses"|t }}
+          </h3>
 
           {% include "projects/_modules/categories-filter" with {
             key: "license",
@@ -236,16 +262,18 @@
     </div>
 
     <div class="md:col-span-12 md:col-start-5 lg:col-span-11 lg:col-start-6">
-      <div class="mb-[30px] md:mb-3 md:flex md:items-center">
+      <div class="mb-[30px] md:mb-5 md:flex md:items-center">
         <h2 class="font-surt text-head-20 md:text-head-24">
           {{ params|length ? "Matching Projects"|t : "All Projects"|t }}
-          <span class="text-rich-blue">[{{ projectsQuery.count() }}]</span>
+          <span class="text-rich-blue dark:text-sky-blue">
+            [{{ projectsQuery.count() }}]
+          </span>
         </h2>
 
         {% if params|length %}
           <div class="ml-auto hidden md:block">
             <a
-              class="text-ui-16 after:bg-close flex items-center gap-[10px] uppercase after:block after:h-[18px] after:w-[18px] after:bg-center after:bg-no-repeat after:content-['']"
+              class="text-ui-16 after:bg-close dark:after:bg-close-white flex items-center gap-[10px] uppercase after:block after:h-[18px] after:w-[18px] after:bg-center after:bg-no-repeat after:content-['']"
               href="{{ "/" ~ craft.app.request.pathInfo }}"
             >
               {{ "Reset filters"|t }}
@@ -264,7 +292,7 @@
           params
         } only %}
       {% else %}
-        <div class="mb-5 border-t border-gray-600 pt-2.5">
+        <div class="mb-5 border-t border-gray-600 pt-2.5 dark:border-[#575757]">
           <p class="text-body-20">
             {{ "No projects found."|t }}
           </p>

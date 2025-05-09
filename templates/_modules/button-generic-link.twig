@@ -2,6 +2,7 @@
 {% set target = link.target|default(null) %}
 {% set icon = icon is not defined ? true : icon %}
 {% set color = color|default("dark") %}
+{% set darkMode = darkMode is not defined ? true : darkMode %}
 
 {% if icon %}
   {% switch link.type %}
@@ -44,5 +45,6 @@
   target: target,
   icon: icon,
   iconAlignment: "right",
-  color: color
+  color: color,
+  darkMode: darkMode
 } only %}

@@ -25,7 +25,9 @@
   <div class="mt-5 mb-5 px-2 md:mt-9 md:px-5">
     <h2 class="font-surt text-head-22 md:text-head-28 mb-3 last:mb-0 md:mb-5">
       {{ "Artikel"|t }}
-      <span class="text-rich-blue">[{{ projectsQuery.count() }}]</span>
+      <span class="text-rich-blue dark:text-sky-blue">
+        [{{ projectsQuery.count() }}]
+      </span>
     </h2>
 
     {% if categories|length %}

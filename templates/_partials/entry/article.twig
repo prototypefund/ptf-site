@@ -2,12 +2,12 @@
 {% set categories = entry.blogCategories.all() %}
 {% set postDate = entry.postDate %}
 
-<article class="mb-4 border-t border-gray-600 md:mb-0">
+<article class="mb-4 border-t border-gray-600 md:mb-0 dark:border-[#575757]">
   <a class="block pt-2.5" href="{{ entry.getUrl() }}">
     <div class="group mb-3 grid grid-cols-8 gap-3 md:mb-0">
       <div class="col-span-5 flex flex-col">
         <time
-          class="text-ui-14 md:text-ui-16 mb-1 text-gray-800 md:mb-2"
+          class="text-ui-14 md:text-ui-16 mb-1 text-gray-800 md:mb-2 dark:text-gray-600"
           datetime="{{ postDate|date("Y-m-d") }}"
         >
           {{ postDate|date("d/m/Y") }}
