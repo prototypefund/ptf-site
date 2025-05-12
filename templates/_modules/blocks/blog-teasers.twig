@@ -6,6 +6,7 @@
 
 {% set content %}
   {% include "blog/_modules/teasers-list" with {
+    featured: module.nextReadsFeatured.one(),
     articles: nextReads
   } %}
 {% endset %}
