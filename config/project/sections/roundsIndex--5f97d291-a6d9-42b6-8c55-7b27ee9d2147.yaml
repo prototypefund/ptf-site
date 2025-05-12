@@ -1,0 +1,33 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 31fe4ba9-d166-4836-acfc-6bd876c0a0ff # Rounds Index
+handle: roundsIndex
+maxAuthors: 1
+name: 'Rounds Index'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  af0bbe1c-3613-4775-8a01-965b68d4e56e: # English
+    enabledByDefault: true
+    hasUrls: true
+    template: rounds/index.twig
+    uriFormat: rounds
+  ddc3aedf-983b-4fa7-81eb-69fd761d71af: # German
+    enabledByDefault: true
+    hasUrls: true
+    template: rounds/index.twig
+    uriFormat: runden
+type: single
