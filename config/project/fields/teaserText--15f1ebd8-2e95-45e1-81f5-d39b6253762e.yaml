@@ -2,13 +2,15 @@ columnSuffix: null
 handle: teaserText
 instructions: null
 name: 'Teaser Text'
-searchable: false
+searchable: true
 settings:
   availableTransforms: '*'
   availableVolumes: '*'
+  characterLimit: null
   ckeConfig: c4438391-90e5-49b1-93bd-6fcbbd3aed62 # Simple
   createButtonLabel: null
   defaultTransform: null
+  fullGraphqlData: false
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false

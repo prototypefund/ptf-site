@@ -51,6 +51,8 @@ return [
   "Round: {round}" => "Runde: {round}",
   "Rounds (2016 – 2025)" => "Runden (2016 – 2025)",
   "Register" => "Anmelden",
+  "Search" => "Suchen",
+  "Search term" => "Suchebegriff",
   "See" => "Ansehen",
   "See all" => "Alle anzeigen",
   "See all articles" => "Alle Artikel anzeigen",
