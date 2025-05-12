@@ -1,17 +1,34 @@
 {% extends "_layouts/layout.twig" %}
 
 {% block content %}
-  <article
-    class="mx-auto mt-6 max-w-4xl px-2 pb-2 md:px-4 md:pb-4 lg:px-6 lg:pb-6"
-  >
-    <h1 class="text-head-32 mb-0.5">{{ "404!"|t }}</h1>
-    <p class="text-body-16 mb-0.5">
-      {{ "Page not found"|t }}
-    </p>
-    <p>
-      <a class="text-link" href="{{ homepage.getUrl() }}">
-        {{ "Return to homepage"|t }}
-      </a>
-    </p>
+  <article>
+    <header
+      class="after:bg-pattern-br-hot-pink before:bg-pattern-tl-hot-pink bg-navy-blue relative flex items-center justify-center px-2 py-10 text-white before:absolute before:top-0 before:left-0 before:h-full before:w-[calc(18vw+16px)] before:bg-contain before:bg-top-left before:bg-no-repeat before:content-[''] after:absolute after:right-0 after:bottom-0 after:h-full after:w-[calc(18vw+16px)] after:bg-contain after:bg-right-bottom after:bg-no-repeat after:content-[''] md:h-[calc(100vh-150px)] md:px-5 before:md:w-[calc(18vw+40px)] after:md:w-[calc(18vw+40px)] lg:py-[100px] before:lg:w-[calc(13vw+40px)] after:lg:w-[calc(13vw+40px)]"
+    >
+      <div class="text-center">
+        <div class="relative z-1 mb-3 md:mx-auto md:max-w-[680px] lg:mb-5">
+          <h1 class="font-surt text-head-28 md:text-head-46 uppercase">
+            404: {{ "Page not found!"|t }}
+          </h1>
+        </div>
+        <div class="relative z-1 m-auto max-w-64">
+          <div class="mb-5 last:mb-0">
+            {% include "_rich-text/simple" with {
+              text: "<p>"
+                ~ ("The page you’re looking for doesn’t exist or has been moved. Please go back to the homepage."|t)
+                ~ "</p>",
+              size: "large"
+            } only %}
+          </div>
+
+          {% include "_modules/button" with {
+            url: homepage.url,
+            text: "Go back home"|t,
+            icon: "arrow",
+            iconAlignment: "right"
+          } only %}
+        </div>
+      </div>
+    </header>
   </article>
 {% endblock %}
