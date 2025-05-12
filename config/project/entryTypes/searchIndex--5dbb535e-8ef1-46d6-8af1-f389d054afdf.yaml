@@ -152,7 +152,7 @@ fieldLayouts:
         name: SEO
         uid: 2f58145c-c3ae-4029-b246-d545106e367a
         userCondition: null
-handle: search
+handle: searchIndex
 hasTitleField: true
 icon: null
 name: Search

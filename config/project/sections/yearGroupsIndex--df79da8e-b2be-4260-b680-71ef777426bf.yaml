@@ -2,10 +2,10 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 5dbb535e-8ef1-46d6-8af1-f389d054afdf # Search
-handle: search
+    uid: 8042936f-727d-4d5e-a1ae-0db7cabde8a8 # Year Groups Index
+handle: yearGroupsIndex
 maxAuthors: 1
-name: Search
+name: 'Year Groups Index'
 previewTargets:
   -
     __assoc__:
@@ -23,11 +23,11 @@ siteSettings:
   af0bbe1c-3613-4775-8a01-965b68d4e56e: # English
     enabledByDefault: true
     hasUrls: true
-    template: search/index.twig
-    uriFormat: search
+    template: year-groups/index.twig
+    uriFormat: year-groups
   ddc3aedf-983b-4fa7-81eb-69fd761d71af: # German
     enabledByDefault: true
     hasUrls: true
-    template: search/index.twig
-    uriFormat: search
+    template: year-groups/index.twig
+    uriFormat: jahrgaenge
 type: single
