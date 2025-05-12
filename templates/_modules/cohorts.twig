@@ -1,8 +1,8 @@
-{% set limit = limit|default(-1) %}
+{% set projectLimit = projectLimit|default(null) %}
 
 {% for category in cohorts %}
   {% set projects =
-    craft.entries.section("projects").relatedTo(category).limit(limit)
+    craft.entries.section("projects").relatedTo(category).limit(projectLimit)
   %}
 
   {% set currentDate = now %}
@@ -73,7 +73,7 @@
             cohort: category.title
           }
         ),
-        sideLink: (limit|length) > 0 and (projects|length) > 4
+        sideLink: (projectLimit|length) > 0 and (projects|length) > 4
           ? {
             text: "See all"|t,
             url: category.url
