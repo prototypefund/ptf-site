@@ -10,6 +10,8 @@
   {% set endDateRegular = category.endDateRegular|default(null) %}
   {% set endDateSecondStage = category.endDateSecondStage|default(null) %}
 
+  {% set link = category.genericLink|default(null) %}
+
   <div class="mb-5 border-b border-gray-600 md:mb-10 dark:border-[#575757]">
     <div class="mb-10 grid px-2 md:grid-cols-16 md:items-start md:px-5">
       <div
@@ -56,6 +58,12 @@
               {{ projects|length }}
             </p>
           </div>
+
+          {% if link|length %}
+            {% include "_modules/button-generic-link" with {
+              link: link
+            } only %}
+          {% endif %}
         </div>
       </div>
     </div>
