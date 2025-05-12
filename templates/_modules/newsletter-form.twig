@@ -5,22 +5,16 @@
   method="post"
   action="https://te917244a.emailsys1a.net/172/4365/50b2a37e1e/subscribe/form.html"
 >
-  <input
-    class="text-body-18 w-full border-t border-b border-gray-600 bg-white px-2 py-[18px] pr-[153px] text-gray-900 placeholder:text-gray-900 md:h-8 md:px-3 {{
-    darkMode
-      ? "dark:text-white dark:border-[#575757] dark:bg-[#1F1F1F] dark:placeholder:text-gray-600"
-    }}"
-    type="email"
-    name="email"
-    placeholder="{{ "Email address"|t }}"
-    required
-  />
-  <input
-    class="font-surt text-ui-14 absolute top-[50%] right-2 translate-y-[-50%] cursor-pointer border-r border-l border-gray-600 bg-white px-[10px] py-[5px] tracking-wider text-gray-900 uppercase transition-colors hover:bg-black hover:text-white md:right-3 {{
-    darkMode
-      ? "dark:bg-[#1F1F1F] dark:text-white dark:hover:bg-white dark:hover:text-black"
-    }}"
-    type="submit"
-    value="{{ "Register"|t }}"
-  />
+  {% include "_modules/input-text" with {
+    type: "email",
+    name: "email",
+    placeholder: "Email address"|t,
+    required: true,
+    darkMode: darkMode
+  } only %}
+
+  {% include "_modules/input-submit" with {
+    value: "Register"|t,
+    darkMode: darkMode
+  } only %}
 </form>

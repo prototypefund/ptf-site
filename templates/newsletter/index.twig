@@ -1,5 +1,6 @@
 {% extends "_layouts/layout.twig" %}
 
+{% set background = entry.headerBackground.value %}
 {% set issuesHeading = entry.issuesHeading %}
 {% set issuesDescription = entry.issuesDescription %}
 {% set linkListLinks = [] %}
@@ -27,7 +28,28 @@
 {% endfor %}
 
 {% set content %}
-  Newsletter
+  {% include "_modules/newsletter-form" with {
+    darkMode: false
+  } only %}
+
+  <div
+    class="{{
+    background
+      in [
+        "greyBackgroundBluePattern",
+        "greyBackgroundPinkPattern",
+        "greyBackgroundGreyPattern",
+        "skyBlueBackgroundLightBluePattern"
+      ]
+      ? "text-gray-800"
+      : "text-white"
+    }}"
+  >
+    {% include "_rich-text/simple" with {
+      text: newsletter.newsletterSecondaryText,
+      size: "small"
+    } only %}
+  </div>
 {% endset %}
 
 {% block content %}
@@ -37,7 +59,7 @@
     secondaryText: entry.secondaryText,
     content: content,
     link: entry.genericLink,
-    background: entry.headerBackground.value,
+    background: background,
     alignment: entry.headerAlignment.value
   } only %}
 

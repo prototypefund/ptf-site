@@ -68,9 +68,10 @@
             </svg>
           </button>
 
-          <aside class="ml-auto hidden md:flex md:gap-2">
+          <aside class="ml-auto hidden md:flex md:items-center md:gap-2">
             {% include "_modules/display-toggle.twig" %}
             {% include "_modules/lang-switch.twig" %}
+            {% include "_modules/search.twig" %}
           </aside>
         </div>
 
@@ -201,10 +202,11 @@
         {% endif %}
 
         <aside
-          class="hidden justify-end gap-2.5 border-t border-gray-600 p-2 md:hidden dark:border-[#575757] [.menu-open_&]:flex [.menu-open_&]:md:hidden"
+          class="hidden items-center justify-end gap-2.5 border-t border-gray-600 p-2 md:hidden dark:border-[#575757] [.menu-open_&]:flex [.menu-open_&]:md:hidden"
         >
           {% include "_modules/display-toggle.twig" %}
           {% include "_modules/lang-switch.twig" %}
+          {% include "_modules/search.twig" %}
         </aside>
       </nav>
     </div>

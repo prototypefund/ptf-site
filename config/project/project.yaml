@@ -1,4 +1,4 @@
-dateModified: 1746706268
+dateModified: 1747059740
 elementSources:
   craft\elements\Entry:
     -
@@ -58,9 +58,6 @@ elementSources:
       key: 'section:6faac0be-91b5-4747-95b9-2157c66c6246' # Events
       type: native
     -
-      key: 'section:8e8c94a1-92b5-4b37-84ed-670e13da4f61' # Talks
-      type: native
-    -
       key: 'section:539be7e4-0b10-472e-b4de-ec2fbea58c78' # Trends
       type: native
     -
@@ -101,6 +98,20 @@ elementSources:
       defaultViewMode: ''
       disabled: false
       key: 'section:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:8e8c94a1-92b5-4b37-84ed-670e13da4f61' # Talks
       tableAttributes:
         - status
         - postDate
@@ -206,6 +217,7 @@ meta:
     5a2c3e10-bf78-4986-aecd-f75829889851: 'Project Topics' # Project Topics
     5a633b8c-0848-4867-8990-245346e525e8: 'Project Funding Amount' # Project Funding Amount
     5bafc55c-8f31-4f9b-add0-49e9957e63a7: 'Footer Link Group' # Footer Link Group
+    5dbb535e-8ef1-46d6-8af1-f389d054afdf: Search # Search
     5f79b151-95c9-4cad-be78-175d28cb5d10: 'Event Next Reads' # Event Next Reads
     6c3461da-2d32-418a-803b-efe329a38c30: 'Article Author' # Article Author
     6ca70ace-9ae7-4dfa-a915-d1a24572619d: 'Footer Description' # Footer Description
@@ -248,6 +260,7 @@ meta:
     62efdaf8-a4e7-4149-bc72-3bd492681eba: 'Newsletter Side Title' # Newsletter Side Title
     65bbee3d-0a45-412f-a8e5-04ee7c01d8af: People # People
     72b63983-0825-4712-ab6f-b4d98ee4efd4: Standard # Standard
+    74b62005-8687-4f36-bcd6-d5d1b601bf41: Search # Search
     78bf584a-2694-4dae-bbd5-5e5ba72a5d92: Teasers # Teasers
     78edc82e-23ab-4479-ac02-bfd0147910a6: Publication # Publication
     86ae11d6-820a-47e9-85d6-86f29718f1f8: 'Banner Text' # Banner Text
