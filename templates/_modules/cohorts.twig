@@ -1,4 +1,4 @@
-{% set limit = limit|default(-1) %}
+{% set limit = limit|default(null) %}
 
 {% for category in cohorts %}
   {% set projects =

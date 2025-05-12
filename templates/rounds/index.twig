@@ -1,5 +1,9 @@
 {% extends "_layouts/layout.twig" %}
 
+{% set roundsQuery = craft.categories.group("projectRounds") %}
+
+{% paginate roundsQuery.limit(4) as pagination, rounds %}
+
 {% block content %}
   {% include "_modules/headers/simple" with {
     headline: entry.headline|default(entry.title),
@@ -12,8 +16,12 @@
 
   <div class="mt-10">
     {% include "_modules/cohorts" with {
-      cohorts: craft.categories.group("projectRounds").all(),
+      cohorts: rounds,
       limit: 4
+    } only %}
+
+    {% include "_modules/pagination" with {
+      pagination: pagination
     } only %}
 
     {% include "_modules/modules" with {
