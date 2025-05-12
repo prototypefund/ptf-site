@@ -11,6 +11,10 @@
   } only %}
 
   <div class="mt-10">
+    {% include "_modules/cohorts" with {
+      cohorts: [category]
+    } only %}
+
     {% include "_modules/modules" with {
       entry: category
     } %}
