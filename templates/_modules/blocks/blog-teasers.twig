@@ -1,12 +1,19 @@
+{% set featured = module.nextReadsFeatured.one() %}
 {% set nextReads = module.nextReads.eagerly().all() %}
 
 {% if (nextReads|length) == 0 %}
-  {% set nextReads = craft.entries.section("blog").limit(4).all() %}
+  {% if featured %}
+    {% set nextReads =
+      craft.entries.section("blog").id(["not", featured.id]).limit(4).all()
+    %}
+  {% else %}
+    {% set nextReads = craft.entries.section("blog").limit(4).all() %}
+  {% endif %}
 {% endif %}
 
 {% set content %}
   {% include "blog/_modules/teasers-list" with {
-    featured: module.nextReadsFeatured.one(),
+    featured: featured,
     articles: nextReads
   } %}
 {% endset %}
