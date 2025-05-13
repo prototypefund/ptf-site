@@ -54,37 +54,44 @@
   greyBackgroundBluePattern: {
     pattern: "skyBlue",
     bgColor: "bg-gray-100 dark:bg-[#1F1F1F] border-gray-600 border-b dark:border-[#575757]",
-    buttonColor: "dark"
+    buttonColor: "dark",
+    secondaryTextColor: "text-gray-800 dark:text-white"
   },
   greyBackgroundPinkPattern: {
     pattern: "hotPink",
     bgColor: "bg-gray-100 dark:bg-[#1F1F1F] border-gray-600 border-b dark:border-[#575757]",
-    buttonColor: "dark"
+    buttonColor: "dark",
+    secondaryTextColor: "text-gray-800 dark:text-white"
   },
   greyBackgroundGreyPattern: {
     pattern: "gray",
     bgColor: "bg-gray-100 dark:bg-[#1F1F1F] border-gray-600 border-b dark:border-[#575757]",
-    buttonColor: "dark"
+    buttonColor: "dark",
+    secondaryTextColor: "text-gray-800 dark:text-white"
   },
   skyBlueBackgroundLightBluePattern: {
     pattern: "lightBlue",
     bgColor: "bg-sky-blue",
-    buttonColor: "dark"
+    buttonColor: "dark",
+    secondaryTextColor: ""
   },
   richBlueBackgroundPinkPattern: {
     pattern: "hotPink",
     bgColor: "bg-rich-blue text-white",
-    buttonColor: "light"
+    buttonColor: "light",
+    secondaryTextColor: "text-gray-800 dark:text-white"
   },
   darkMagentaBackgroundBluePattern: {
     pattern: "skyBlue",
     bgColor: "bg-dark-magenta text-white",
-    buttonColor: "light"
+    buttonColor: "light",
+    secondaryTextColor: "text-gray-800 dark:text-white"
   },
   navyBlueBackgroundPinkPattern: {
     pattern: "hotPink",
     bgColor: "bg-navy-blue text-white",
-    buttonColor: "light"
+    buttonColor: "light",
+    secondaryTextColor: "text-gray-800 dark:text-white"
   }
 } %}
 
@@ -158,15 +165,7 @@
         {% if secondaryText|length %}
           <p
             class="{{
-            background
-              in [
-                "greyBackgroundBluePattern",
-                "greyBackgroundPinkPattern",
-                "greyBackgroundGreyPattern",
-                "skyBlueBackgroundLightBluePattern"
-              ]
-              ? "text-gray-800"
-              : "text-white"
+            config.secondaryTextColor
             }} text-body-16 md:text-body-18 md:mb-1.5"
           >
             {{ secondaryText }}
