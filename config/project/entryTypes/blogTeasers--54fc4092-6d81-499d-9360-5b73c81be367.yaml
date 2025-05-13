@@ -36,7 +36,25 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-05-12T10:48:07+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: b2bad2a6-6c5f-4d98-b29f-c19b52094245 # Next Reads Featured
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Featured
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: a3cebd6b-d6ec-4fed-b5f0-4dfbf925944e
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-04-23T11:25:49+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 9c0f58c4-4b28-4aca-b80d-3b370bc38f9e # Next Reads
             handle: null

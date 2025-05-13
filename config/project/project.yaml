@@ -1,4 +1,4 @@
-dateModified: 1747090428
+dateModified: 1747090429
 elementSources:
   craft\elements\Entry:
     -
@@ -326,6 +326,7 @@ meta:
     af0bbe1c-3613-4775-8a01-965b68d4e56e: English # English
     af427185-4826-4e80-bd57-096797b92f4b: Project # Project
     b2b9ea1c-a462-4794-bd6c-d9700c56f94c: 'CTA Banner' # CTA Banner
+    b2bad2a6-6c5f-4d98-b29f-c19b52094245: 'Next Reads Featured' # Next Reads Featured
     b8ee6536-12a5-4426-b64d-b04a622f6dbf: 'Link Lists' # Link Lists
     b44bb4f4-87a6-47c4-ae20-f1594e9a775b: 'Blog Teaser' # Blog Teaser
     b99ee1fe-b466-49ac-8315-43d2af7587e1: Uploads # Uploads
