@@ -144,16 +144,26 @@
                         {% set navLinkHandle =
                           navLink.element.section.handle|default(null)
                         %}
-                        {% set matchedElementHandle =
-                          matchedElement.section.handle|default(null)
+
+                        {% set matchedElementHandle = matchedElement.section.handle
+                          ?? attribute(matchedElement.group ?? {}, "handle")
+                          ?? null
                         %}
+
                         {% set matchedElementUrl =
                           matchedElement.url|default(null)
                         %}
 
                         {% set sectionMap = {
-                          blogIndex: ["blog"],
-                          projectsIndex: ["projects"],
+                          blogIndex: ["blog", "blogCategories"],
+                          projectsIndex: [
+                            "projects",
+                            "projectTechnologies",
+                            "projectTopics",
+                            "projectLicenses"
+                          ],
+                          roundsIndex: ["projectRounds"],
+                          yearGroupsIndex: ["projectYearGroups"],
                           eventsIndex: ["events", "pastEventsIndex"],
                           trendsIndex: ["trends"]
                         } %}
