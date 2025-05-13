@@ -1,0 +1,21 @@
+{% set required = required|default(false) %}
+{% set isSearch = type == "search" %}
+
+<div
+  class="relative {{
+  isSearch
+    ? "before:content-[''] before:bg-search-input before:absolute before:top-[50%] before:left-2 before:h-3 before:w-3 before:translate-y-[-50%] md:before:left-3"
+  }}"
+>
+  <input
+    class="text-body-18 w-full appearance-none border border-gray-600 bg-white px-2 py-[18px] pr-[153px] text-gray-900 placeholder:text-gray-700 md:h-8 md:px-3 {{
+    darkMode
+      ? "dark:text-white dark:border-[#575757] dark:bg-[#1F1F1F] dark:placeholder:text-gray-600"
+    }} {{ isSearch ? "px-5 md:px-7" }}"
+    type="{{ type }}"
+    name="{{ name }}"
+    placeholder="{{ placeholder }}"
+    value="{{ value|default("") }}"
+    {{ required|length ? "required" }}
+  />
+</div>

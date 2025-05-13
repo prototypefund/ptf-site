@@ -1,0 +1,146 @@
+{% extends "_layouts/layout.twig" %}
+
+{% set searchParam = craft.app.request.getParam("q") %}
+
+{% set allResults =
+  craft.entries.section(
+    ["blog", "projects", "events", "trends", "genericPages"]
+  ).search(
+    "title:" ~ searchParam ~ " OR teaserText:" ~ searchParam
+  ).all()
+%}
+
+{% set content %}
+  <form class="relative mb-2.5">
+    {% include "_modules/input-text" with {
+      type: "search",
+      name: "q",
+      placeholder: "Search term"|t,
+      value: searchParam,
+      darkMode: false
+    } only %}
+
+    {% include "_modules/input-submit" with {
+      value: "Search"|t,
+      darkMode: false
+    } only %}
+  </form>
+{% endset %}
+
+{% block content %}
+  {% include "_modules/headers/simple" with {
+    headline: entry.headline|default(entry.title),
+    intro: entry.intro,
+    secondaryText: entry.secondaryText,
+    content: content,
+    background: entry.headerBackground.value,
+    alignment: "center"
+  } only %}
+
+  {% if searchParam|length %}
+    <div class="mt-5 mb-5 px-2 md:mt-9 md:px-5">
+      <h2 class="font-surt text-head-22 md:text-head-28 pb-3">
+        {{ "Search results for" ~ " '" ~ searchParam ~ "'" }}
+        <span class="text-rich-blue dark:text-sky-blue">
+          [{{ allResults|length }}]
+        </span>
+      </h2>
+
+      {% if allResults|length %}
+        {% for result in allResults %}
+          {% set teaserText =
+            result.teaserText
+              |default(result.textEntryTypes)
+              |default(result.intro)
+              |default(null)
+          %}
+
+          {% if teaserText is empty %}
+            {% set sideHeadingText =
+              result.modules.type("sideHeadingText").one()
+            %}
+            {% if sideHeadingText|length %}
+              {% set teaserText = sideHeadingText.title ~ ": "
+                ~ sideHeadingText.text
+              %}
+            {% endif %}
+          {% endif %}
+
+          <a
+            class="group grid border-t border-gray-600 px-2 pt-3 pb-8 md:grid-cols-16 dark:border-[#575757]"
+            href="{{ result.url }}"
+          >
+            <div class="mb-5 md:col-span-13 xl:mb-0">
+              <div class="mb-1.5">
+                {% switch result.type %}
+                  {% case "article" %}
+                    {% include "_modules/pill" with {
+                      text: "News"|t,
+                      color: "gray"
+                    } only %}
+                  {% case "project" %}
+                    {% include "_modules/pill" with {
+                      text: "Project"|t,
+                      color: "gray"
+                    } only %}
+                  {% case "event" %}
+                    {% include "_modules/pill" with {
+                      text: "Event"|t,
+                      color: "gray"
+                    } only %}
+                  {% case "trend" %}
+                    {% include "_modules/pill" with {
+                      text: "Trend"|t,
+                      color: "gray"
+                    } only %}
+                  {% case "genericPage" %}
+                    {% include "_modules/pill" with {
+                      text: "Page"|t,
+                      color: "gray"
+                    } only %}
+                  {% default %}
+                    hi
+                {% endswitch %}
+              </div>
+
+              <h4
+                class="font-surt text-head-16 md:text-head-22 mb-[10px] break-words uppercase last:mb-0 md:mb-2.5"
+              >
+                {{ result.title }}
+              </h4>
+
+              {% if teaserText|length %}
+                <div class="text-gray-800 dark:text-gray-600">
+                  {% include "_rich-text/simple" with {
+                    text: "<p>" ~ (teaserText|striptags|truncate(310)) ~ "</p>"
+                  } only %}
+                </div>
+              {% endif %}
+            </div>
+
+            <div
+              class="md:col-span-9 md:col-start-1 md:text-left xl:col-span-3 xl:text-right"
+            >
+              {% include "_modules/button" with {
+                text: "See"|t,
+                icon: "arrow",
+                iconAlignment: "right",
+                color: "dark"
+              } only %}
+            </div>
+          </a>
+        {% endfor %}
+      {% else %}
+        <p class="text-body-20 text-gray-800 dark:text-gray-600">
+          {{ "No matching results found. Try adjusting your search entry."|t }}
+        </p>
+      {% endif %}
+    </div>
+  {% else %}
+    <div class="mt-10">
+      {% include "_modules/modules" with {
+        entry: entry
+      } %}
+    </div>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,33 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  -
+    uid: 5dbb535e-8ef1-46d6-8af1-f389d054afdf # Search
+handle: searchIndex
+maxAuthors: 1
+name: 'Search Index'
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  af0bbe1c-3613-4775-8a01-965b68d4e56e: # English
+    enabledByDefault: true
+    hasUrls: true
+    template: search/index.twig
+    uriFormat: search
+  ddc3aedf-983b-4fa7-81eb-69fd761d71af: # German
+    enabledByDefault: true
+    hasUrls: true
+    template: search/index.twig
+    uriFormat: search
+type: single

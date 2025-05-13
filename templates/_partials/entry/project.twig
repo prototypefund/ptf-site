@@ -41,7 +41,7 @@
         {% if macros.inFunding(entry)|boolean %}
           <div class="mb-1 md:mb-2">
             {% include "_modules/pill" with {
-              entry: entry
+              text: "In Funding"|t
             } only %}
           </div>
         {% endif %}

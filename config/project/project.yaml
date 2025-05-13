@@ -1,4 +1,4 @@
-dateModified: 1747046887
+dateModified: 1747090429
 elementSources:
   craft\elements\Entry:
     -
@@ -58,9 +58,6 @@ elementSources:
       key: 'section:6faac0be-91b5-4747-95b9-2157c66c6246' # Events
       type: native
     -
-      key: 'section:8e8c94a1-92b5-4b37-84ed-670e13da4f61' # Talks
-      type: native
-    -
       key: 'section:539be7e4-0b10-472e-b4de-ec2fbea58c78' # Trends
       type: native
     -
@@ -101,6 +98,20 @@ elementSources:
       defaultViewMode: ''
       disabled: false
       key: 'section:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
+      tableAttributes:
+        - status
+        - postDate
+        - expiryDate
+        - authors
+        - link
+      type: native
+    -
+      defaultSort:
+        - postDate
+        - desc
+      defaultViewMode: ''
+      disabled: false
+      key: 'section:8e8c94a1-92b5-4b37-84ed-670e13da4f61' # Talks
       tableAttributes:
         - status
         - postDate
@@ -206,7 +217,9 @@ meta:
     5a2c3e10-bf78-4986-aecd-f75829889851: 'Project Topics' # Project Topics
     5a633b8c-0848-4867-8990-245346e525e8: 'Project Funding Amount' # Project Funding Amount
     5bafc55c-8f31-4f9b-add0-49e9957e63a7: 'Footer Link Group' # Footer Link Group
+    5dbb535e-8ef1-46d6-8af1-f389d054afdf: Search # Search
     5f79b151-95c9-4cad-be78-175d28cb5d10: 'Event Next Reads' # Event Next Reads
+    5f97d291-a6d9-42b6-8c55-7b27ee9d2147: 'Rounds Index' # Rounds Index
     6c3461da-2d32-418a-803b-efe329a38c30: 'Article Author' # Article Author
     6ca70ace-9ae7-4dfa-a915-d1a24572619d: 'Footer Description' # Footer Description
     6da63526-25ff-45c2-b4f7-543c359ec775: Location # Location
@@ -234,6 +247,7 @@ meta:
     018c8387-bc84-4c1c-ae3a-186233bcf754: 'Secondary Footer Links' # Secondary Footer Links
     28f95d3d-986f-41ed-b23b-c2f3b747c2eb: Homepage # Homepage
     29d80674-cc17-4976-ad67-b3f611a07dc2: 'Events Index' # Events Index
+    31fe4ba9-d166-4836-acfc-6bd876c0a0ff: 'Rounds Index' # Rounds Index
     33c3763c-9f38-4c39-bebd-48bbec68e094: 'Header Alignment' # Header Alignment
     34dc108f-02bd-42cb-9481-0693c7bc32b4: 'Tracking Head' # Tracking Head
     35a4b3c3-5eef-4146-8fcc-2652e9582ec4: 'Past Events Index' # Past Events Index
@@ -248,6 +262,7 @@ meta:
     62efdaf8-a4e7-4149-bc72-3bd492681eba: 'Newsletter Side Title' # Newsletter Side Title
     65bbee3d-0a45-412f-a8e5-04ee7c01d8af: People # People
     72b63983-0825-4712-ab6f-b4d98ee4efd4: Standard # Standard
+    74b62005-8687-4f36-bcd6-d5d1b601bf41: 'Search Index' # Search Index
     78bf584a-2694-4dae-bbd5-5e5ba72a5d92: Teasers # Teasers
     78edc82e-23ab-4479-ac02-bfd0147910a6: Publication # Publication
     86ae11d6-820a-47e9-85d6-86f29718f1f8: 'Banner Text' # Banner Text
@@ -287,6 +302,7 @@ meta:
     3443991a-aefd-4589-ab8f-68fd0f785ea1: 'Talk Teasers' # Talk Teasers
     5664191c-7a44-4eea-8f68-0ebeab8bbb41: 'Second Stage' # Second Stage
     7601873a-7197-47a0-9e66-c07512a11dd2: Email # Email
+    8042936f-727d-4d5e-a1ae-0db7cabde8a8: 'Year Groups Index' # Year Groups Index
     17844487-59d2-4434-a5f4-3030d625da70: 'Expandable Text' # Expandable Text
     38533602-ed85-4c63-b7e3-819ae75ac47a: 'Surt – Regular' # Surt – Regular
     62872793-9d0f-4ffe-a713-748f5c9c6605: Charts # Charts
@@ -348,6 +364,7 @@ meta:
     dd6fd54d-11f2-4a62-8da7-d59718b15225: 'CTA Banner' # CTA Banner
     ddc3aedf-983b-4fa7-81eb-69fd761d71af: German # German
     de820dbc-bd7e-4a0f-9554-3d750480d2a4: Projects # Projects
+    df79da8e-b2be-4260-b680-71ef777426bf: 'Year Groups Index' # Year Groups Index
     e0be08b6-634c-4eed-aa9a-175b6bc828c1: 'Enable Announcement Bar' # Enable Announcement Bar
     e3e7a426-21c5-4767-b047-739432c7f60a: Timeline # Timeline
     e30e243f-a8dc-43b7-b826-e4788906231f: Pronouns # Pronouns
