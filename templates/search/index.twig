@@ -73,7 +73,7 @@
           {% endif %}
 
           <a
-            class="group border-gray grid border-t px-2 pt-3 pb-8 md:grid-cols-16 dark:border-gray-600"
+            class="group border-gray grid border-t px-2 pt-3 pb-8 md:grid-cols-16 dark:border-gray-500"
             href="{{ result.url }}"
           >
             <div class="mb-5 md:col-span-13 xl:mb-0">
@@ -116,7 +116,7 @@
               </h4>
 
               {% if teaserText|length %}
-                <div class="dark:text-gray text-gray-700">
+                <div class="dark:text-gray text-gray-600">
                   {% include "_rich-text/simple" with {
                     text: "<p>" ~ (teaserText|striptags|truncate(310)) ~ "</p>"
                   } only %}
@@ -137,7 +137,7 @@
           </a>
         {% endfor %}
       {% else %}
-        <p class="text-body-20 dark:text-gray text-gray-700">
+        <p class="text-body-20 dark:text-gray text-gray-600">
           {{ "No matching results found. Try adjusting your search entry."|t }}
         </p>
       {% endif %}
