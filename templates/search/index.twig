@@ -40,7 +40,13 @@
   {% if searchParam|length %}
     <div class="mt-5 mb-5 px-2 md:mt-9 md:px-5">
       <h2 class="font-surt text-head-22 md:text-head-28 pb-3">
-        {{ "Search results for" ~ " '" ~ searchParam ~ "'" }}
+        {{
+          "Search results for {searchParam}"|t(
+            params: {
+              searchParam: searchParam
+            }
+          )
+        }}
         <span class="text-rich-blue dark:text-sky-blue">
           [{{ allResults|length }}]
         </span>
