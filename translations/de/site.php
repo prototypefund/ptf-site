@@ -50,8 +50,8 @@ return [
   "Reveal" => "Anzeigen",
   "Rounds (2016 – 2025)" => "Runden (2016 – 2025)",
   "Search" => "Suchen",
-  "Search term" => "Suchebegriff",
   "Search results for {searchParam}" => "Suchergebnisse für {searchParam}",
+  "Search term" => "Suchebegriff",
   "See" => "Ansehen",
   "See all" => "Alle anzeigen",
   "See all articles" => "Alle Artikel anzeigen",
@@ -66,8 +66,8 @@ return [
   "Topics" => "Themen",
   "Upcoming Events" => "Bevorstehende Veranstaltungen",
   "Upcoming Talks and Conferences" => "Bevorstehende Vorträge und Konferenzen",
-  "Year Groups (from 2025)" => "Jahrgänge (ab 2025)",
   "View report" => "Bericht anzeigen",
+  "Year Groups (from 2025)" => "Jahrgänge (ab 2025)",
   "mode" => "modus",
   "{startDate} – {endDateSecondStage} (incl. Second Stage)" => "{startDate} –  {endDateSecondStage} (inkl. Second Stage)"
 ];
