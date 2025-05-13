@@ -1,12 +1,14 @@
+{% set featured = featured|default(null) %}
+
 <div class="md:grid md:grid-cols-2 md:gap-x-5 md:gap-y-[60px]">
   {% if featured %}
-    {% set article = featured %}
     {{
-      article.render({
+      featured.render({
         featured: true
       })
     }}
   {% endif %}
+
   {% for article in articles %}
     {{ article.render() }}
   {% endfor %}

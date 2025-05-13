@@ -1,4 +1,4 @@
-{% set featured = module.nextReadsFeatured.one() %}
+{% set featured = module.nextReadsFeatured.one()|default(null) %}
 {% set nextReads = module.nextReads.eagerly().all() %}
 
 {% if (nextReads|length) == 0 %}
