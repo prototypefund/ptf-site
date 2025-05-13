@@ -13,10 +13,10 @@
 
 <footer class="mt-[60px] bg-gray-100 md:mt-18 dark:bg-gray-900">
   <div
-    class="border-t border-b border-gray-400 md:grid md:grid-cols-3 dark:border-gray-600"
+    class="border-gray border-t border-b md:grid md:grid-cols-3 dark:border-gray-600"
   >
     <div
-      class="border-gray-400 px-2 pt-5 pb-2.5 md:border-r md:px-3 md:pb-3 last:md:border-r-0 dark:border-gray-600"
+      class="border-gray px-2 pt-5 pb-2.5 md:border-r md:px-3 md:pb-3 last:md:border-r-0 dark:border-gray-600"
     >
       <a class="mb-3 inline-block last:mb-0" href="{{ homepage.url }}">
         <svg
@@ -41,7 +41,7 @@
     </div>
 
     <div
-      class="border-t border-gray-400 pt-2.5 pb-2.5 md:border-t-0 md:border-r md:pt-5 md:pb-3 last:md:border-r-0 dark:border-gray-600"
+      class="border-gray border-t pt-2.5 pb-2.5 md:border-t-0 md:border-r md:pt-5 md:pb-3 last:md:border-r-0 dark:border-gray-600"
     >
       <h4
         class="text-body-16 md:text-body-18 px-2 pb-2 uppercase md:px-3 md:pb-3"
@@ -53,7 +53,7 @@
         {% include "_modules/newsletter-form" only %}
       </div>
 
-      <div class="px-2 md:px-3 dark:text-gray-400">
+      <div class="dark:text-gray px-2 md:px-3">
         {% include "_rich-text/simple" with {
           text: newsletterSecondaryText,
           size: "small"
@@ -66,7 +66,7 @@
         or (sponsorsLight|length)
         or (sponsorsDark|length) %}
       <div
-        class="flex border-t border-gray-400 p-2 md:border-t-0 md:border-r md:p-3 last:md:border-r-0 dark:border-gray-600"
+        class="border-gray flex border-t p-2 md:border-t-0 md:border-r md:p-3 last:md:border-r-0 dark:border-gray-600"
       >
         <div class="mt-auto">
           {% if sponsorsHeadline|length %}
@@ -95,14 +95,14 @@
 
   {% if mainFooterLinks|length %}
     <div
-      class="text-body-16 md:text-body-18 border-b border-gray-400 md:grid md:grid-cols-3 dark:border-gray-600"
+      class="text-body-16 md:text-body-18 border-gray border-b md:grid md:grid-cols-3 dark:border-gray-600"
     >
       {% for linkGroup in mainFooterLinks %}
         {% set links = linkGroup.links %}
 
         {% if links|length %}
           <ul
-            class="border-t border-gray-400 p-2 first:border-t-0 md:border-t-0 md:border-r md:p-3 last:md:border-r-0 dark:border-gray-600"
+            class="border-gray border-t p-2 first:border-t-0 md:border-t-0 md:border-r md:p-3 last:md:border-r-0 dark:border-gray-600"
           >
             {% for link in links %}
               {% set navLink = link.genericLink %}
@@ -140,7 +140,7 @@
 
   {% if secondaryFooterLinks|length %}
     <div
-      class="text-body-14 border-b border-gray-400 p-2 md:p-3 dark:border-gray-600"
+      class="text-body-14 border-gray border-b p-2 md:p-3 dark:border-gray-600"
     >
       <ul class="flex flex-wrap gap-x-3 gap-y-1.5 md:gap-x-6">
         {% for link in secondaryFooterLinks %}

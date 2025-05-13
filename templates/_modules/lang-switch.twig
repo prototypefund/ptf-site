@@ -37,14 +37,14 @@
 {% endfor %}
 
 <div
-  class="text-ui-14 inline-flex h-4 gap-[2px] rounded-sm border border-gray-400 p-[3px] uppercase md:h-3.5 dark:border-gray-500"
+  class="text-ui-14 border-gray inline-flex h-4 gap-[2px] rounded-sm border p-[3px] uppercase md:h-3.5 dark:border-gray-500"
 >
   {% for link in languageLinks %}
     <a
       class="rounded-[2px] px-1 py-0.5 transition-colors md:px-[7px] md:py-[2px] {{
       link.current
         ? "bg-gray-900 text-white dark:bg-white dark:text-gray-900"
-        : "hover:bg-gray-300 dark:hover:bg-gray-400 dark:hover:text-gray-900"
+        : "hover:bg-gray-300 dark:hover:bg-gray dark:hover:text-gray-900"
       }}"
       href="{{ link.url }}"
       tabindex="0"

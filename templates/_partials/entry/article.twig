@@ -4,7 +4,7 @@
 {% set featured = featured|default(false) %}
 
 <article
-  class="mb-4 border-t border-gray-400 md:mb-0 {{
+  class="border-gray mb-4 border-t md:mb-0 {{
   featured
     ? "md:col-span-full"
   }} dark:border-gray-600"
@@ -23,7 +23,7 @@
         }} flex flex-col"
       >
         <time
-          class="text-ui-14 md:text-ui-16 mb-1 text-gray-700 md:mb-2 dark:text-gray-400"
+          class="text-ui-14 md:text-ui-16 dark:text-gray mb-1 text-gray-700 md:mb-2"
           datetime="{{ postDate|date("Y-m-d") }}"
         >
           {{ postDate|date("d/m/Y") }}

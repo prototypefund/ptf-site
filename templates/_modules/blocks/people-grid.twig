@@ -1,7 +1,7 @@
 {% set people = module.people %}
 
 {% if people|length %}
-  <div class="mb-10 border-y border-gray-400 last:mb-0 dark:border-gray-600">
+  <div class="border-gray mb-10 border-y last:mb-0 dark:border-gray-600">
     {% for person in people %}
       {% set avatar = person.avatar.eagerly().one() %}
       {% set website = person.website %}
@@ -20,7 +20,7 @@
       {% endif %}
 
       <div
-        class="grid grid-cols-1 not-first:border-t not-first:border-gray-400 md:grid-cols-16 md:px-5 dark:border-gray-600"
+        class="not-first:border-gray grid grid-cols-1 not-first:border-t md:grid-cols-16 md:px-5 dark:border-gray-600"
       >
         <div
           class="order-2 px-2 py-[60px] pt-5 pr-12 md:order-none md:col-span-8 md:px-0 md:py-11"
@@ -31,7 +31,7 @@
         </div>
 
         <div
-          class="relative flex flex-col md:col-span-7 md:col-start-10 md:border-x md:border-gray-400 dark:md:border-gray-600"
+          class="md:border-gray relative flex flex-col md:col-span-7 md:col-start-10 md:border-x dark:md:border-gray-600"
         >
           <div class="md:h-full md:w-full">
             {% if avatar|length %}

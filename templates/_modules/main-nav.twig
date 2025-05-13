@@ -11,7 +11,7 @@
     >
       <nav class="flex h-full flex-col overflow-visible">
         <div
-          class="flex h-[60px] items-center border-b border-gray-400 p-2 md:h-auto lg:px-3 dark:border-gray-600"
+          class="border-gray flex h-[60px] items-center border-b p-2 md:h-auto lg:px-3 dark:border-gray-600"
         >
           <a class="block" href="{{ homepage.url }}">
             {% include "_modules/logo" only %}
@@ -79,17 +79,15 @@
           <div
             class="group hidden overflow-y-auto md:block lg:overflow-visible [.menu-open_&]:block [.menu-open_&]:md:block"
           >
-            <ul
-              class="md:flex md:border-b md:border-gray-400 dark:border-gray-600"
-            >
+            <ul class="md:border-gray md:flex md:border-b dark:border-gray-600">
               {% for linkGroup in navLinks %}
                 {% set links = linkGroup.links %}
 
                 <li
-                  class="border-b border-gray-400 last:border-b-0 md:w-1/5 md:border-r md:border-b-0 md:last:border-r-0 dark:border-gray-600"
+                  class="border-gray border-b last:border-b-0 md:w-1/5 md:border-r md:border-b-0 md:last:border-r-0 dark:border-gray-600"
                 >
                   <span
-                    class="md:text-body-14 lg:text-body-16 block cursor-pointer border-b border-gray-400 px-3 py-1 text-center text-[15px] uppercase md:border-b-0 md:p-1.5 md:text-left lg:px-3 lg:py-1.5 dark:border-gray-600"
+                    class="md:text-body-14 lg:text-body-16 border-gray block cursor-pointer border-b px-3 py-1 text-center text-[15px] uppercase md:border-b-0 md:p-1.5 md:text-left lg:px-3 lg:py-1.5 dark:border-gray-600"
                   >
                     {{ linkGroup.title }}
                   </span>
@@ -126,14 +124,14 @@
             </ul>
 
             <ul
-              class="absolute -z-10 hidden w-full border-b border-gray-400 bg-white opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:z-2 group-hover:opacity-100 md:flex dark:border-gray-600 dark:bg-gray-900"
+              class="border-gray absolute -z-10 hidden w-full border-b bg-white opacity-0 transition-opacity group-focus-within:opacity-100 group-hover:z-2 group-hover:opacity-100 md:flex dark:border-gray-600 dark:bg-gray-900"
             >
               {% for linkGroup in navLinks %}
                 {% set links = linkGroup.links %}
 
                 {% if links|length %}
                   <li
-                    class="text-body-16 w-1/5 border-r border-gray-400 p-2 leading-[1] last:border-r-0 dark:border-gray-600"
+                    class="text-body-16 border-gray w-1/5 border-r p-2 leading-[1] last:border-r-0 dark:border-gray-600"
                   >
                     <ul>
                       {% for link in links %}
@@ -213,7 +211,7 @@
         {% endif %}
 
         <aside
-          class="hidden items-center justify-end gap-2.5 border-t border-gray-400 p-2 md:hidden dark:border-gray-600 [.menu-open_&]:flex [.menu-open_&]:md:hidden"
+          class="border-gray hidden items-center justify-end gap-2.5 border-t p-2 md:hidden dark:border-gray-600 [.menu-open_&]:flex [.menu-open_&]:md:hidden"
         >
           {% include "_modules/display-toggle.twig" %}
           {% include "_modules/lang-switch.twig" %}
