@@ -43,7 +43,6 @@ return [
   "Past Events" => "Vergangene Veranstaltungen",
   "Past Talks" => "Vergangene Vorträge",
   "Project" => "Projekt",
-  "Project Status: {status}" => "Projekt-Status: {status}",
   "Projects from {cohort}" => "Projekte aus {cohort}",
   "Published on" => "Veröffentlicht am",
   "Register" => "Anmelden",
@@ -68,7 +67,7 @@ return [
   "Upcoming Events" => "Bevorstehende Veranstaltungen",
   "Upcoming Talks and Conferences" => "Bevorstehende Vorträge und Konferenzen",
   "Year Groups (from 2025)" => "Jahrgänge (ab 2025)",
-  "View resport" => "Bericht anzeigen",
+  "View report" => "Bericht anzeigen",
   "mode" => "modus",
   "{startDate} – {endDateSecondStage} (incl. Second Stage)" => "{startDate} –  {endDateSecondStage} (inkl. Second Stage)"
 ];
