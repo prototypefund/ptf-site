@@ -3,7 +3,7 @@
 {% set image = entry.mainImage.eagerly().one() %}
 
 <article
-  class="border-0 border-t border-gray-600 pt-1 md:py-6 md:pt-3 md:last:border-b dark:border-[#575757]"
+  class="border-0 border-t border-gray-400 pt-1 md:py-6 md:pt-3 md:last:border-b dark:border-gray-600"
 >
   <a href="{{ entry.url }}">
     <div class="md:grid md:grid-cols-16">
@@ -17,7 +17,7 @@
         </div>
 
         {% if location|length %}
-          <p class="text-gray-800 dark:text-gray-600">
+          <p class="text-gray-700 dark:text-gray-400">
             {{ location }}
           </p>
         {% endif %}

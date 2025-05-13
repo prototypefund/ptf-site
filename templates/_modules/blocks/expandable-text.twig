@@ -5,12 +5,12 @@
     {% set title = item.headline|default(item.title) %}
 
     <details
-      class="group border-t border-gray-600 last:border-b dark:border-[#575757]"
+      class="group border-t border-gray-400 last:border-b dark:border-gray-600"
     >
       <summary
         class="font-surt text-head-16 md:text-head-20 flex cursor-pointer list-none items-center pt-1 pb-[10px] md:pt-2 md:pb-2.5"
       >
-        <span class="pr-1.5 text-gray-700 tabular-nums dark:text-[#494949]">
+        <span class="pr-1.5 text-gray-500 tabular-nums dark:text-[#494949]">
           {{ loop.index < 10 ? "0" }}{{ loop.index }}
         </span>
         {{ title }}

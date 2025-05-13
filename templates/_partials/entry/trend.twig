@@ -17,7 +17,7 @@
 <a
   class="group block {{
   pattern
-  }} relative ml-[-16px] w-[calc(100%+32px)] border-t border-gray-600 pt-4 pb-4 after:absolute after:right-0 after:h-full after:bg-contain after:bg-no-repeat after:content-[''] last:border-b md:ml-[-40px] md:w-[calc(100%+80px)] md:pt-3 md:pb-5 dark:border-[#575757]"
+  }} relative ml-[-16px] w-[calc(100%+32px)] border-t border-gray-400 pt-4 pb-4 after:absolute after:right-0 after:h-full after:bg-contain after:bg-no-repeat after:content-[''] last:border-b md:ml-[-40px] md:w-[calc(100%+80px)] md:pt-3 md:pb-5 dark:border-gray-600"
   href="{{ entry.url }}"
 >
   <div class="px-2 md:grid md:grid-cols-16 md:px-5">
@@ -30,14 +30,14 @@
 
       <div class="mb-3 md:mb-0">
         <time
-          class="text-body-14 md:text-body-16 block text-gray-800 dark:text-gray-600"
+          class="text-body-14 md:text-body-16 block text-gray-700 dark:text-gray-400"
           datetime="{{ postDate|date("Y-m-d") }}"
         >
           {{ "Published on"|t }}: {{ postDate|date("d/m/Y") }}
         </time>
 
         <time
-          class="text-body-14 md:text-body-16 mb-3 block text-gray-800 dark:text-gray-600"
+          class="text-body-14 md:text-body-16 mb-3 block text-gray-700 dark:text-gray-400"
           datetime="{{ dateUpdated|date("Y-m-d") }}"
         >
           {{ "Last updated"|t }}: {{ dateUpdated|date("d/m/Y") }}

@@ -10,10 +10,10 @@
     {% set target = link.target|default("_self") %}
 
     <li
-      class="border-r border-b border-gray-600 bg-white first:border-t first:border-gray-600 odd:border-l dark:border-[#575757] [&:nth-child(2)]:border-t [&:nth-child(2)]:border-gray-600"
+      class="border-r border-b border-gray-400 bg-white first:border-t first:border-gray-400 odd:border-l dark:border-gray-600 [&:nth-child(2)]:border-t [&:nth-child(2)]:border-gray-400"
     >
       <a
-        class="group after:bg-link-arrow dark:after:bg-link-arrow-white flex items-center gap-1.5 px-2 py-1.5 text-base transition-colors after:ml-auto after:block after:h-2.5 after:w-2.5 after:bg-cover after:bg-no-repeat after:content-[''] hover:bg-gray-100 md:py-[14px] md:text-[17px] dark:bg-gray-900 dark:hover:bg-[#1F1F1F]"
+        class="group after:bg-link-arrow dark:after:bg-link-arrow-white flex items-center gap-1.5 px-2 py-1.5 text-base transition-colors after:ml-auto after:block after:h-2.5 after:w-2.5 after:bg-cover after:bg-no-repeat after:content-[''] hover:bg-gray-100 md:py-[14px] md:text-[17px] dark:bg-gray-900 dark:hover:bg-gray-800"
         href="{{ link.url }}"
         target="{{ target }}"
         {{ target == "_blank" ? 'rel="noopener noreferrer"' }}

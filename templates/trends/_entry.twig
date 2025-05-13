@@ -8,14 +8,14 @@
 {% block content %}
   {% set content %}
     <time
-      class="text-body-18 md:text-body-20 block text-gray-800"
+      class="text-body-18 md:text-body-20 block text-gray-700"
       datetime="{{ postDate|date("Y-m-d") }}"
     >
       {{ "Published on"|t }}: {{ postDate|date("d/m/Y") }}
     </time>
 
     <time
-      class="text-body-18 md:text-body-20 block text-gray-800"
+      class="text-body-18 md:text-body-20 block text-gray-700"
       datetime="{{ dateUpdated|date("Y-m-d") }}"
     >
       {{ "Last updated"|t }}: {{ dateUpdated|date("d/m/Y") }}
