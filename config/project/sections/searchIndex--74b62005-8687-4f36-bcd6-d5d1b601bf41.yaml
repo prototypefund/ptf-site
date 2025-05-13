@@ -29,5 +29,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: search/index.twig
-    uriFormat: search
+    uriFormat: suche
 type: single
