@@ -10,5 +10,6 @@ web/cpresources/
 web/static/dist/
 web/uploads/
 templates/feed.twig
+templates/_macros.twig
 
 .ddev/

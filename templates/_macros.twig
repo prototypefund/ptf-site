@@ -43,12 +43,9 @@
   }}
 {% endmacro %}
 
-{% macro fundingStatus(entry) %}
-  {% apply spaceless %}
+{% macro fundingStatus(entry) %}{% apply spaceless %}
   {% set currentDate = now %}
-  {% set category =
-    entry.projectRounds.one()|default(entry.projectYearGroups.one())
-  %}
+  {% set category = entry.projectRounds.one()|default(entry.projectYearGroups.one()) %}
   {% set secondStage = entry.secondStage|default(false) %}
 
   {% if category|length %}
@@ -61,22 +58,15 @@
         {{ "inDuration" }}
       {% elseif endDateRegular <= currentDate and not secondStage|length %}
         {{ "completed" }}
-      {% elseif
-        endDateRegular < currentDate
-          and currentDate <= endDateSecondStage
-          and (secondStage|length) %}
+      {% elseif endDateRegular < currentDate and currentDate <= endDateSecondStage and secondStage|length %}
         {{ "inDurationWithSecondStage" }}
-      {% elseif currentDate > endDateSecondStage and (secondStage|length) %}
+      {% elseif currentDate > endDateSecondStage and secondStage|length %}
         {{ "completedWithSecondStage" }}
       {% endif %}
     {% endif %}
   {% endif %}
-  {% endapply %}
-{% endmacro %}
+{% endapply %}{% endmacro %}
 
-{% macro inFunding(entry) %}
-  {% apply spaceless %}
-  {{ _self.fundingStatus(entry)
-    in ["inDuration", "inDurationWithSecondStage"] }}
-  {% endapply %}
-{% endmacro %}
+{% macro inFunding(entry) %}{% apply spaceless %}
+  {{ _self.fundingStatus(entry) in ["inDuration", "inDurationWithSecondStage"] }}
+{% endapply %}{% endmacro %}
