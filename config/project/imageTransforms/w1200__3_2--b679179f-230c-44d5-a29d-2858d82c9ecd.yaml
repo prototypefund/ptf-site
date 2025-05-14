@@ -1,11 +1,11 @@
 fill: null
 format: null
-handle: w1500
-height: null
+handle: w1200__3_2
+height: 800
 interlace: none
-mode: fit
-name: w1500
+mode: crop
+name: '3/2: w1200'
 position: center-center
 quality: null
 upscale: false
-width: 1500
+width: 1200

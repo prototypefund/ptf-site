@@ -1,11 +1,11 @@
 fill: null
 format: null
-handle: projectTeaser
-height: 170
+handle: w800__4_3
+height: 600
 interlace: none
 mode: crop
-name: 'Project Teaser'
+name: '4/3: w800'
 position: center-center
 quality: null
 upscale: false
-width: 170
+width: 800

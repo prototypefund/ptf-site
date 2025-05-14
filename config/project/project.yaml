@@ -1,4 +1,4 @@
-dateModified: 1747149969
+dateModified: 1747244120
 elementSources:
   craft\elements\Entry:
     -
@@ -205,6 +205,7 @@ meta:
     2c6d48c3-1f95-478e-ac4f-41e02dc90eb8: 'Project Licenses' # Project Licenses
     2c8df106-11d5-4758-8b01-d51d565188f0: 'Talk Teasers' # Talk Teasers
     2d6b9ef4-4190-4cf7-9a92-b6f6b0fb7f61: 'CTA Banner' # CTA Banner
+    2dae0a42-be0f-40ca-bddb-0d02be719e26: '5/4: w800' # 5/4: w800
     03b9d1d0-a193-4abc-aeb8-92d2269844e9: 'CTA Background' # CTA Background
     3bc48eb6-2461-44a5-bd0d-4638e9f3c14c: 'Alt Text' # Alt Text
     3d4c1a3f-6b2d-4919-a863-32877e6722ce: 'Project Year Groups' # Project Year Groups
@@ -217,6 +218,7 @@ meta:
     5a2c3e10-bf78-4986-aecd-f75829889851: 'Project Topics' # Project Topics
     5a633b8c-0848-4867-8990-245346e525e8: 'Project Funding Amount' # Project Funding Amount
     5bafc55c-8f31-4f9b-add0-49e9957e63a7: 'Footer Link Group' # Footer Link Group
+    5bc4069a-ab98-412d-b924-e02887e903b3: '4/3: w2000' # 4/3: w2000
     5dbb535e-8ef1-46d6-8af1-f389d054afdf: Search # Search
     5f79b151-95c9-4cad-be78-175d28cb5d10: 'Event Next Reads' # Event Next Reads
     5f97d291-a6d9-42b6-8c55-7b27ee9d2147: 'Rounds Index' # Rounds Index
@@ -230,11 +232,13 @@ meta:
     7bb4d517-5179-42f5-a2b7-0400280d5411: Website # Website
     7cd0ec40-65a3-4af3-9c73-edd6ac3d4b12: 'Text Row' # Text Row
     7e4dd8fe-6873-44a9-ada5-acf02698981d: 'Side Info' # Side Info
+    7e9e1e86-3f4e-4d20-850c-19e356949194: '4/3: w1600' # 4/3: w1600
     7eac1059-22fa-40a5-b327-b28832b8beb1: 'Publication Cover' # Publication Cover
     7eb26dd5-1c10-45d1-a16b-85a148e4bf8a: 'Projects Index' # Projects Index
     8a18f61b-a93c-4302-8bde-b8f6ed6c0494: 'Inclusive Sans – Semibold' # Inclusive Sans – Semibold
     8ad973e9-d5d2-4385-b6cf-beb0a9ca03d2: Statement # Statement
     8c706102-ac71-4054-b178-d266051a8ba8: 'Project Next Reads' # Project Next Reads
+    8d4ed15c-dd0c-4e96-ae25-ff97b2b6bf03: w300 # w300
     8d8e3436-a20e-4222-a530-d52fa736ae4d: 'Project Technologies' # Project Technologies
     8e8c94a1-92b5-4b37-84ed-670e13da4f61: Talks # Talks
     9a1aea15-6b42-4b96-b047-ee412bfabc78: Intro # Intro
@@ -261,24 +265,25 @@ meta:
     62e3c2ea-24fd-42e2-a9ba-3602f1d6e2e8: 'Header Background' # Header Background
     62efdaf8-a4e7-4149-bc72-3bd492681eba: 'Newsletter Side Title' # Newsletter Side Title
     65bbee3d-0a45-412f-a8e5-04ee7c01d8af: People # People
+    67b4e70e-1a4a-49b5-ab41-3f48a1b32513: '4/3: w800' # 4/3: w800
     72b63983-0825-4712-ab6f-b4d98ee4efd4: Standard # Standard
     74b62005-8687-4f36-bcd6-d5d1b601bf41: 'Search Index' # Search Index
     78bf584a-2694-4dae-bbd5-5e5ba72a5d92: Teasers # Teasers
     78edc82e-23ab-4479-ac02-bfd0147910a6: Publication # Publication
     86ae11d6-820a-47e9-85d6-86f29718f1f8: 'Banner Text' # Banner Text
-    91a7ad8a-d35b-4738-b71b-a18f899afc5d: 'Resize: width 2000px' # Resize: width 2000px
-    98ac3e52-dafd-49ce-8852-a02e92879a39: 'Avatar (Small)' # Avatar (Small)
+    91a7ad8a-d35b-4738-b71b-a18f899afc5d: w2000 # w2000
     137c86ac-e143-4792-b936-38c41302eccd: Fonts # Fonts
     183a1c32-7844-45ce-93f1-a991260eeadc: Caption # Caption
     276edf74-a032-4834-b9ef-5783f0b823d4: 'Project ID' # Project ID
     358db54d-b951-4e0a-b4fa-c43aa2257acc: 'Newsletter Links' # Newsletter Links
     375cd22a-99b6-4667-8ca6-caf2572459ed: Blog # Blog
     398a9144-4479-4781-9453-19c376cc6763: Timeline # Timeline
-    504f909d-20af-4a66-b4a5-46c966689b30: 'Resize: width 1000px' # Resize: width 1000px
+    504f909d-20af-4a66-b4a5-46c966689b30: w1200 # w1200
     539be7e4-0b10-472e-b4de-ec2fbea58c78: Trends # Trends
     546a2098-ec0e-4c83-aafc-66cdc354f32f: 'Trends Index' # Trends Index
     633b77bd-edb2-4812-ae43-7d61e39fd8fd: 'Main Footer Links' # Main Footer Links
     645eb55b-61e5-4ed2-bf31-caed18a16ffb: 'Blog Index' # Blog Index
+    646fed4b-fc85-4ed3-8082-aace0ad37228: '4/3: w1200' # 4/3: w1200
     734f959a-796d-4882-babd-df0495b02b2e: Publications # Publications
     747e573a-dea9-419c-9f81-e1778c7f1b13: 'Phase Text' # Phase Text
     824f9bd0-21d0-47fd-a48a-b8519da12b29: Quote # Quote
@@ -288,6 +293,7 @@ meta:
     2965e0c7-feb2-4aa2-98d4-de16d458eb30: Categories # Categories
     3445dc73-731c-4dd7-90f6-bc2e1d87679d: 'Generic Teaser' # Generic Teaser
     3660aa23-c5a0-4865-b14d-5bd479e01996: Source # Source
+    4014ee8b-e895-4a22-a40b-ddece7bb3bcc: '3/2: w2000' # 3/2: w2000
     5593a3e3-ad74-4e68-ad2d-36a6c8f1d95a: 'Project Year Groups' # Project Year Groups
     6848d2a0-5b5f-43f6-a0c7-22707ad5e028: Bio # Bio
     8760f57d-c660-4b7c-a052-940ebce3408c: 'People Grid' # People Grid
@@ -295,7 +301,7 @@ meta:
     15140d29-2c87-492e-84f4-90eb738eb0d8: Columns # Columns
     53364b16-adc8-4b34-802f-054c272771c6: 'Projects Index' # Projects Index
     72564f6d-cb4e-40a8-b30c-99153000f278: Steps # Steps
-    586087db-4dd7-43ba-929b-b3f7cef02ff8: 'Resize: width 0500px' # Resize: width 0500px
+    586087db-4dd7-43ba-929b-b3f7cef02ff8: w800 # w800
     711863fc-e341-4c43-b45b-dc33dc3c9c2b: Homepage # Homepage
     860851bc-5058-4f0d-8f3f-481df7e56099: 'Project Rounds' # Project Rounds
     01991296-4d23-4e54-8e00-2f61d7a524c8: Editors # Editors
@@ -318,6 +324,7 @@ meta:
     a22a67ef-b1de-4d1d-b922-5ea14b3e8e1c: Team # Team
     a6825d2c-f661-4fd6-ac6e-b7b06cf823ab: Date(s) # Date(s)
     a805834b-57ba-4e15-8082-a5bf2c23d495: FAQs # FAQs
+    aa5a4279-2914-491e-8808-8010bd65fbf9: '3/2: w1600' # 3/2: w1600
     abb2edcb-afed-4766-9c25-594bf7d42262: Date # Date
     ac14f0ca-4155-4f2f-ad58-f2648062e062: Event # Event
     acfeb71e-c3fa-40d8-8b68-3fa03b22cf0a: 'Text Grid' # Text Grid
@@ -328,19 +335,21 @@ meta:
     b2b9ea1c-a462-4794-bd6c-d9700c56f94c: 'CTA Banner' # CTA Banner
     b2bad2a6-6c5f-4d98-b29f-c19b52094245: 'Next Reads Featured' # Next Reads Featured
     b8ee6536-12a5-4426-b64d-b04a622f6dbf: 'Link Lists' # Link Lists
-    b44bb4f4-87a6-47c4-ae20-f1594e9a775b: 'Blog Teaser' # Blog Teaser
+    b46f826b-dfdb-409c-b483-08cf751ab744: '5/4: w2000' # 5/4: w2000
     b99ee1fe-b466-49ac-8315-43d2af7587e1: Uploads # Uploads
     b629c55a-8642-44db-a823-26783a25058b: Footer # Footer
+    b679179f-230c-44d5-a29d-2858d82c9ecd: '3/2: w1200' # 3/2: w1200
     bc05e7ef-ab74-4604-95d9-d14a383ad33a: 'Basic Text Page' # Basic Text Page
     bdc78be0-ab3b-4c52-9657-0eaaff1208e9: 'Blog Categories' # Blog Categories
+    bf0cda56-d723-4b47-898e-f74730a328b2: '3/2: w800' # 3/2: w800
     c0e7400b-5611-4a34-bc52-4cd0edc31e41: Sites # Sites
     c03eff61-59aa-491d-bfa0-db442637813a: Article # Article
     c08345c7-f10a-42ce-b893-7f2e82a46fbb: Embed # Embed
     c5f55fcf-63a3-46ab-8990-2d967de34b7d: Speakers # Speakers
-    c8c2dcfa-75cb-423f-9565-b550807d0e7e: 'Resize: width 1500px' # Resize: width 1500px
-    c32d4850-8999-46e0-aad2-c43b9d69e8bd: 'Avatar (Large)' # Avatar (Large)
+    c8c2dcfa-75cb-423f-9565-b550807d0e7e: w1500 # w1500
     c85b9b92-e92c-448e-be1b-853494683b99: 'Project Technologies' # Project Technologies
     c86f2a45-9639-4151-93dc-21dce075b6f9: 'Link Group' # Link Group
+    c94fde1d-e39d-42fe-b771-7e2a22535e6c: '5/4: w1600' # 5/4: w1600
     c670b800-a19f-4ca2-a056-283204e59d5d: 'Credit / License' # Credit / License
     c63194ff-c47c-4c20-80b1-39bfedfc3b0f: 'Project Topics' # Project Topics
     c84399c0-dd2f-498b-adbf-528b801843c4: Step # Step
@@ -349,6 +358,7 @@ meta:
     ced3c245-d70a-43bb-a15b-37fa5292066b: FAQ # FAQ
     cee93094-4951-4db3-af0c-29a87c1f2cf8: 'Project Teasers' # Project Teasers
     cff97bfa-6eb7-473b-97c0-cc3af58c0f64: 'Article ID' # Article ID
+    d4c24b33-4a46-4c55-980e-c1d4af12f9bf: '5/4: w1200' # 5/4: w1200
     d7c13ef6-9822-4fd8-83f3-ddcd61ea3184: Rows # Rows
     d9abc0f0-98c8-45d7-aa77-d9f8fbe83f7a: Time # Time
     d13f787b-b91b-4821-8104-46e509830347: Avatar # Avatar
@@ -357,7 +367,6 @@ meta:
     d26039c6-3f56-4e09-a666-c1fd8f160bee: 'Image Columns' # Image Columns
     d42896d4-04a6-4211-8d97-f265c27a3be1: 'Inclusive Sans – Semibold (Italic)' # Inclusive Sans – Semibold (Italic)
     d99528c4-136b-413c-9799-56fd20edd2c6: Headline # Headline
-    da7ab602-1ed1-46b0-9e1c-5ec3a6e60c92: 'Project Teaser' # Project Teaser
     db2da9aa-6637-4df7-8df4-527aa118c61e: 'Link List' # Link List
     db43e022-8680-4b70-8b88-e6fc439994c5: 'Trend Teasers' # Trend Teasers
     dcc2d4f6-0aa9-41e6-9135-942fc9d3f8ad: 'Link List' # Link List

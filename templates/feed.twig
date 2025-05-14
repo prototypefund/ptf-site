@@ -14,6 +14,7 @@
     {% set entries = craft.entries().section(['blog', 'projects', 'trends']).limit(10).all() %}
 
     {% for entry in entries %}
+      type: {{ entry.type }}
       <item>
         <title>{{ entry.title }}</title>
         <link>{{ entry.url }}</link>
@@ -29,7 +30,7 @@
           {% if mainImage %}
             <![CDATA[
               <figure>
-                <img src="{{ mainImage.getUrl("w1000") }}" alt="{{ mainImage.alt }}">
+                <img src="{{ mainImage.getUrl("w800__4_3") }}" alt="{{ mainImage.alt }}">
                 {% if mainImage.caption|length %}
                   <figcaption>{{ mainImage.caption|raw }}</figcaption>
                 {% endif %}

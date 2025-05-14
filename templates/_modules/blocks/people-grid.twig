@@ -1,3 +1,5 @@
+{% import "_macros" as macros %}
+
 {% set context = context|default("web") %}
 {% set people = module.people %}
 
@@ -39,7 +41,8 @@
               {% if avatar|length %}
                 <img
                   class="block h-full w-full object-cover"
-                  src="{{ avatar.getUrl("avatarLarge") }}"
+                  src="{{ avatar.getUrl("w1600__5_4") }}"
+                  srcSet="{{ macros.srcSetFiveByFour(avatar) }}"
                   alt="{{ avatar.alt }}"
                 />
               {% else %}
@@ -85,7 +88,7 @@
     } only %}
 
     {% if avatar|length %}
-      <img src="{{ avatar.getUrl("avatarLarge") }}" alt="{{ avatar.alt }}" />
+      <img src="{{ image.getUrl("w1800__4_3") }}" alt="{{ avatar.alt }}" />
     {% endif %}
   {% endfor %}
 {% endset %}
