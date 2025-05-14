@@ -212,6 +212,14 @@
       content: " (" attr(href) ")";
     }
   }
+
+  details::details-content {
+    @apply overflow-hidden transition-[block-size,content-visibility] [transition-behavior:allow-discrete] duration-600 [block-size:0];
+  }
+
+  details[open]::details-content {
+    @apply [transition-behavior:allow-discrete] [block-size:auto];
+  }
 }
 
 .text-link {
