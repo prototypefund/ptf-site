@@ -105,7 +105,7 @@
       {% endif %}
 
       {% if link|length %}
-        {{ link.getLink() }}
+        {{ link.getLink()|default(null) }}
       {% endif %}
     {% endif %}
   {% endfor %}
