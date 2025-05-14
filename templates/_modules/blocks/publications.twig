@@ -25,7 +25,7 @@
       {% set subheading = item.subheading %}
 
       <a
-        class="group block border-t border-gray-600 px-2 pt-2 pb-4 last:mb-0 last:border-b md:col-span-10 md:col-start-7 md:grid md:grid-cols-10 md:px-0 lg:col-start-7 dark:border-[#575757]"
+        class="group border-gray block border-t px-2 pt-2 pb-4 last:mb-0 last:border-b md:col-span-10 md:col-start-7 md:grid md:grid-cols-10 md:px-0 lg:col-start-7 dark:border-gray-500"
         href="{{ publication.url }}"
       >
         <div class="mb-3 flex gap-3 md:col-span-9 lg:col-span-7 xl:mb-0">
@@ -48,7 +48,7 @@
 
             {% if subheading|length %}
               <p
-                class="text-body-12 md:text-body-14 text-gray-800 dark:text-gray-600"
+                class="text-body-12 md:text-body-14 dark:text-gray text-gray-600"
               >
                 {{ subheading }}
               </p>

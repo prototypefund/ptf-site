@@ -1,9 +1,7 @@
 {% set meta = [entry.location, entry.speakers] %}
 {% set link = entry.genericLink %}
 
-<article
-  class="border-t border-gray-600 md:last:border-b dark:border-[#575757]"
->
+<article class="border-gray border-t md:last:border-b dark:border-gray-500">
   <a
     class="group block pt-2 pb-3 md:grid md:grid-cols-16 md:py-6 md:pt-3"
     href="{{ link.url }}"
@@ -23,10 +21,10 @@
         {{ entry.title }}
       </h4>
 
-      <ul class="text-body-18 flex text-gray-800 dark:text-gray-600">
+      <ul class="text-body-18 dark:text-gray flex text-gray-600">
         {% for item in meta %}
           <li
-            class="flex flex-nowrap items-center pl-1.5 before:mr-1.5 before:h-[15px] before:w-[1px] before:bg-gray-600 before:content-[''] first:pl-0 first:before:hidden dark:before:bg-[#575757]"
+            class="before:bg-gray flex flex-nowrap items-center pl-1.5 before:mr-1.5 before:h-[15px] before:w-[1px] before:content-[''] first:pl-0 first:before:hidden dark:before:bg-gray-500"
           >
             {{ item }}
           </li>

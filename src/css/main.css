@@ -6,9 +6,13 @@
   --color-*: initial;
   --color-black: #000000;
   --color-gray-900: #141414;
-  --color-gray-800: #4d4d4d;
-  --color-gray-700: #737373;
-  --color-gray-600: #aaaaaa;
+  --color-gray-800: #1f1f1f;
+  --color-gray-700: #494949;
+  --color-gray-600: #4d4d4d;
+  --color-gray-500: #575757;
+  --color-gray-400: #737373;
+  --color-gray: #aaaaaa;
+  --color-gray-300: #dbdbdb;
   --color-gray-200: #eaeaeb;
   --color-gray-100: #f5f5f5;
   --color-sky-blue: #33ccff;
@@ -187,7 +191,7 @@
   button,
   textarea,
   select {
-    @apply accent-gray-800 dark:accent-gray-900;
+    @apply accent-gray-600 dark:accent-gray-900;
     font: inherit;
   }
 
@@ -211,5 +215,5 @@
 }
 
 .text-link {
-  @apply underline hover:text-gray-800;
+  @apply underline hover:text-gray-600;
 }

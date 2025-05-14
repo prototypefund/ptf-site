@@ -157,8 +157,8 @@
     <div class="hidden md:col-span-3 md:block lg:col-span-4">
       <h2 class="font-surt text-head-24 mb-5">{{ "Filter projects"|t }}</h2>
 
-      {# <div class="mb-4 pt-[10px] border-gray-600 dark:border-[#575757] border-t">
-        <h3 class="md:text-body-16 mb-2 text-[15px] text-gray-800 uppercase dark:text-white">
+      {# <div class="mb-4 pt-[10px] border-gray dark:border-gray-500 border-t">
+        <h3 class="md:text-body-16 mb-2 text-[15px] text-gray-600 uppercase dark:text-white">
           {{ "Funding status"|t }}
         </h3>
 
@@ -171,11 +171,9 @@
       </div> #}
 
       {% if yearGroups|length %}
-        <div
-          class="mb-4 border-t border-gray-600 pt-[10px] dark:border-[#575757]"
-        >
+        <div class="border-gray mb-4 border-t pt-[10px] dark:border-gray-500">
           <h3
-            class="md:text-body-16 mb-2 text-[15px] text-gray-800 uppercase dark:text-white"
+            class="md:text-body-16 mb-2 text-[15px] text-gray-600 uppercase dark:text-white"
           >
             {{ "Year Groups (from 2025)"|t }}
           </h3>
@@ -189,11 +187,9 @@
       {% endif %}
 
       {% if rounds|length %}
-        <div
-          class="mb-4 border-t border-gray-600 pt-[10px] dark:border-[#575757]"
-        >
+        <div class="border-gray mb-4 border-t pt-[10px] dark:border-gray-500">
           <h3
-            class="md:text-body-16 mb-2 text-[15px] text-gray-800 uppercase dark:text-white"
+            class="md:text-body-16 mb-2 text-[15px] text-gray-600 uppercase dark:text-white"
           >
             {{ "Rounds (2016 – 2025)"|t }}
           </h3>
@@ -207,11 +203,9 @@
       {% endif %}
 
       {% if topics|length %}
-        <div
-          class="mb-4 border-t border-gray-600 pt-[10px] dark:border-[#575757]"
-        >
+        <div class="border-gray mb-4 border-t pt-[10px] dark:border-gray-500">
           <h3
-            class="md:text-body-16 mb-2 text-[15px] text-gray-800 uppercase dark:text-white"
+            class="md:text-body-16 mb-2 text-[15px] text-gray-600 uppercase dark:text-white"
           >
             {{ "Topics"|t }}
           </h3>
@@ -225,11 +219,9 @@
       {% endif %}
 
       {% if technologies|length %}
-        <div
-          class="mb-4 border-t border-gray-600 pt-[10px] dark:border-[#575757]"
-        >
+        <div class="border-gray mb-4 border-t pt-[10px] dark:border-gray-500">
           <h3
-            class="md:text-body-16 mb-2 text-[15px] text-gray-800 uppercase dark:text-white"
+            class="md:text-body-16 mb-2 text-[15px] text-gray-600 uppercase dark:text-white"
           >
             {{ "Technologies"|t }}
           </h3>
@@ -243,11 +235,9 @@
       {% endif %}
 
       {% if licenses|length %}
-        <div
-          class="mb-4 border-t border-gray-600 pt-[10px] dark:border-[#575757]"
-        >
+        <div class="border-gray mb-4 border-t pt-[10px] dark:border-gray-500">
           <h3
-            class="md:text-body-16 mb-2 text-[15px] text-gray-800 uppercase dark:text-white"
+            class="md:text-body-16 mb-2 text-[15px] text-gray-600 uppercase dark:text-white"
           >
             {{ "Licenses"|t }}
           </h3>
@@ -292,7 +282,7 @@
           params
         } only %}
       {% else %}
-        <div class="mb-5 border-t border-gray-600 pt-2.5 dark:border-[#575757]">
+        <div class="border-gray mb-5 border-t pt-2.5 dark:border-gray-500">
           <p class="text-body-20">
             {{ "No projects found."|t }}
           </p>

@@ -51,7 +51,7 @@ return [
   "Rounds (2016 – 2025)" => "Runden (2016 – 2025)",
   "Search" => "Suchen",
   "Search results for {searchParam}" => "Suchergebnisse für {searchParam}",
-  "Search term" => "Suchebegriff",
+  "Search term" => "Suchbegriff",
   "See" => "Ansehen",
   "See all" => "Alle anzeigen",
   "See all articles" => "Alle Artikel anzeigen",
