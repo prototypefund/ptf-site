@@ -1,3 +1,5 @@
+{% import "_macros" as macros %}
+
 {% set context = context|default("web") %}
 {% set sideLink = module.sideLink %}
 {% set teasers = module.genericTeasers.all() %}
@@ -17,7 +19,8 @@
             {% if image %}
               <img
                 class="block h-full w-full object-cover"
-                src="{{ image.url }}"
+                src="{{ image.getUrl("w1600__4_3") }}"
+                srcSet="{{ macros.srcSetFourByThree(image) }}"
                 alt="{{ image.alt }}"
               />
             {% endif %}
@@ -74,7 +77,7 @@
     {% if image %}
       <img
         class="block h-full w-full object-cover"
-        src="{{ image.url }}"
+        src="{{ image.getUrl("w800__4_3") }}"
         alt="{{ image.alt }}"
       />
     {% endif %}

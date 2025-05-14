@@ -8,15 +8,39 @@
 {% endmacro %}
 
 {% macro srcSet(image) %}
-  {% apply spaceless %}
-  {% set imageSizes = [500, 1000, 1500, 2000] %}
   {{
-    imageSizes|reduce(
+    [300, 800, 1200, 1500, 2000]|reduce(
       (carry, v) => "#{carry}, #{image.getUrl("w" ~ v)} #{v}w",
       ""
     )
   }}
-  {% endapply %}
+{% endmacro %}
+
+{% macro srcSetThreeByTwo(image) %}
+  {{
+    [800, 1200, 1600, 2000]|reduce(
+      (carry, v) => "#{carry}, #{image.getUrl("w" ~ v ~ "__3_2")} #{v}w",
+      ""
+    )
+  }}
+{% endmacro %}
+
+{% macro srcSetFourByThree(image) %}
+  {{
+    [800, 1200, 1600, 2000]|reduce(
+      (carry, v) => "#{carry}, #{image.getUrl("w" ~ v ~ "__4_3")} #{v}w",
+      ""
+    )
+  }}
+{% endmacro %}
+
+{% macro srcSetFiveByFour(image) %}
+  {{
+    [800, 1200, 1600, 2000]|reduce(
+      (carry, v) => "#{carry}, #{image.getUrl("w" ~ v ~ "__5_4")} #{v}w",
+      ""
+    )
+  }}
 {% endmacro %}
 
 {% macro fundingStatus(entry) %}

@@ -1,3 +1,5 @@
+{% import "_macros" as macros %}
+
 {% set date = date|default(null) %}
 {% set times = times|default([]) %}
 {% set text = text|default(null) %}
@@ -78,7 +80,8 @@
       <div class="aspect-4/3">
         <img
           class="block h-full w-full object-cover"
-          src="{{ image.getUrl("blogTeaser") }}"
+          src="{{ image.getUrl("w1200__4_3") }}"
+          srcSet="{{ macros.srcSetFourByThree(image) }}"
           alt="{{ image.alt }}"
         />
       </div>

@@ -4,7 +4,7 @@ handle: w2000
 height: null
 interlace: none
 mode: fit
-name: 'Resize: width 2000px'
+name: w2000
 position: center-center
 quality: null
 upscale: false

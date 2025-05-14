@@ -1,3 +1,4 @@
+{% import "_macros" as macros %}
 {% extends "_layouts/layout.twig" %}
 
 {% set intro = entry.intro %}
@@ -42,7 +43,7 @@
     {% endif %}
 
     {% if articleAuthor|length %}
-      {% set avatar = articleAuthor.avatar.eagerly().one() %}
+      {% set image = articleAuthor.avatar.eagerly().one() %}
       {% set pronouns = articleAuthor.pronouns %}
       {% set bio = articleAuthor.bio %}
 
@@ -52,11 +53,12 @@
         <div
           class="border-gray border-t-0 pt-2.5 md:col-span-11 md:col-start-6 md:border-t lg:col-span-8 lg:col-start-8"
         >
-          {% if avatar|length %}
+          {% if image|length %}
             <img
-              class="mb-6 md:mb-[60px]"
-              src="{{ avatar.getUrl("avatarSmall") }}"
-              alt="{{ avatar.alt }}"
+              class="mb-6 max-w-[170px] md:mb-[60px]"
+              src="{{ image.getUrl("w800__5_4") }}"
+              srcSet="{{ macros.srcSetFiveByFour(image) }}"
+              alt="{{ image.alt }}"
             />
           {% endif %}
 

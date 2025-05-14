@@ -1,11 +1,11 @@
 fill: null
 format: null
-handle: blogTeaser
-height: 450
+handle: w800
+height: null
 interlace: none
-mode: crop
-name: 'Blog Teaser'
+mode: fit
+name: w800
 position: center-center
 quality: null
 upscale: false
-width: 600
+width: 800

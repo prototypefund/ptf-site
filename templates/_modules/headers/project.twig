@@ -120,7 +120,8 @@
         <div class="w-full mix-blend-multiply">
           <img
             class="h-full w-full object-contain"
-            src="{{ image.url }}"
+            src="{{ image.getUrl("w1200") }}"
+            srcSet="{{ macros.srcSet(image) }}"
             alt="{{ image.alt }}"
           />
         </div>

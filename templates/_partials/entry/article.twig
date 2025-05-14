@@ -1,3 +1,5 @@
+{% import "_macros" as macros %}
+
 {% set image = entry.mainImage.eagerly().one() %}
 {% set categories = entry.blogCategories.all() %}
 {% set postDate = entry.postDate %}
@@ -55,7 +57,12 @@
           {% if image|length %}
             <img
               class="block h-full w-full object-cover"
-              src="{{ image.getUrl("blogTeaser") }}"
+              src="{{
+              featured
+                ? image.getUrl("w2000__4_3")
+                : image.getUrl("w800__4_3")
+              }}"
+              srcSet="{{ macros.srcSetFourByThree(image) }}"
               alt="{{ image.alt }}"
             />
           {% else %}

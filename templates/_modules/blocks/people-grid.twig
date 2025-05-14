@@ -1,3 +1,5 @@
+{% import "_macros" as macros %}
+
 {% set context = context|default("web") %}
 {% set people = module.people %}
 
@@ -5,7 +7,7 @@
   {% if people|length %}
     <div class="border-gray mb-10 border-y last:mb-0 dark:border-gray-500">
       {% for person in people %}
-        {% set avatar = person.avatar.eagerly().one() %}
+        {% set image = person.avatar.eagerly().one() %}
         {% set website = person.website %}
         {% set email = person.email %}
         {% set links = person.links|map(link => link.genericLink) %}
@@ -36,11 +38,12 @@
             class="md:border-gray relative flex flex-col md:col-span-7 md:col-start-10 md:border-x dark:md:border-gray-500"
           >
             <div class="md:h-full md:w-full">
-              {% if avatar|length %}
+              {% if image|length %}
                 <img
                   class="block h-full w-full object-cover"
-                  src="{{ avatar.getUrl("avatarLarge") }}"
-                  alt="{{ avatar.alt }}"
+                  src="{{ image.getUrl("w1600__5_4") }}"
+                  srcSet="{{ macros.srcSetFiveByFour(image) }}"
+                  alt="{{ image.alt }}"
                 />
               {% else %}
                 <div class="bg00 h-full"></div>
@@ -64,7 +67,7 @@
 
 {% set rss %}
   {% for person in people %}
-    {% set avatar = person.avatar.eagerly().one() %}
+    {% set image = person.avatar.eagerly().one() %}
     {% set website = person.website %}
     {% set email = person.email %}
     {% set links = person.links|map(link => link.genericLink) %}
@@ -84,8 +87,8 @@
       person: person
     } only %}
 
-    {% if avatar|length %}
-      <img src="{{ avatar.getUrl("avatarLarge") }}" alt="{{ avatar.alt }}" />
+    {% if image|length %}
+      <img src="{{ image.getUrl("w1600__4_3") }}" alt="{{ image.alt }}" />
     {% endif %}
   {% endfor %}
 {% endset %}

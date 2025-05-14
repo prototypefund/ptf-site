@@ -1,3 +1,5 @@
+{% import "_macros" as macros %}
+
 {% set location = entry.location %}
 {% set teaserText = entry.teaserText %}
 {% set image = entry.mainImage.eagerly().one() %}
@@ -39,10 +41,11 @@
 
       {% if image|length %}
         <div class="col-span-4 col-start-13 mb-5 md:mb-0">
-          <div class="aspect-4/3">
+          <div class="aspect-3/2">
             <img
               class="block h-full w-full object-cover"
-              src="{{ image.getUrl("blogTeaser") }}"
+              src="{{ image.getUrl("w800__3_2") }}"
+              srcSet="{{ macros.srcSetThreeByTwo(image) }}"
               alt="{{ image.alt }}"
             />
           </div>

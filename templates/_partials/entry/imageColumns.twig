@@ -1,3 +1,5 @@
+{% import "_macros" as macros %}
+
 {% set images = entry.images.eagerly().all() %}
 
 <div
@@ -14,7 +16,8 @@
     <figure class="mb-[60px] last:mb-0 lg:mb-0">
       <img
         class="w-full"
-        src="{{ image.getUrl("w1000") }}"
+        src="{{ image.getUrl("w1200") }}"
+        srcSet="{{ macros.srcSet(image) }}"
         alt="{{ image.alt }}"
       />
 
