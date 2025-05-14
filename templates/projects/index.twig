@@ -37,7 +37,39 @@
 {% set topicParams = params["topic"]|default([]) %}
 {% set technologyParams = params["technology"]|default([]) %}
 {% set licenseParams = params["license"]|default([]) %}
-{# {% set statusParams = params["status"]|default([]) %} #}
+{% set inFundingParam =
+  (craft.app.request.getParam("status") == "inFunding")|default(false)
+%}
+
+{% if inFundingParam|length %}
+  {% set projectsWithoutSecondStage =
+    craft.entries.section("projects").with(["projectRounds"]).relatedTo({
+      targetElement: craft.categories().group("projectRounds").endDateRegular(
+        [">= " ~ (now|date("Y-m-d"))]
+      )
+    }).all()
+  %}
+
+  {% set projectsWithSecondStage =
+    projectsQuery.with(["projectRounds"]).secondStage(true).relatedTo({
+      targetElement: craft.categories().group("projectRounds").endDateRegular(
+        ["< " ~ (now|date("Y-m-d"))]
+      ).endDateSecondStage(
+        [">= " ~ (now|date("Y-m-d"))]
+      )
+    }).all()
+  %}
+
+  {% set uniqueIds =
+    projectsWithSecondStage
+      |merge(projectsWithoutSecondStage)
+      |map(project => project.id)
+      |unique
+      |values
+  %}
+
+  {% set projectsQuery = projectsQuery.id(uniqueIds) %}
+{% endif %}
 
 {% set relations = [] %}
 
@@ -111,10 +143,6 @@
   %}
 {% endif %}
 
-{# {% if statusParams|length %}
-  {% set projectsQuery = projectsQuery.projectStatus(statusParams) %}
-{% endif %} #}
-
 {% if relations|length %}
   {% set projectsQuery = projectsQuery.relatedTo(["and"]|merge(relations)) %}
 {% endif %}
@@ -157,18 +185,20 @@
     <div class="hidden md:col-span-3 md:block lg:col-span-4">
       <h2 class="font-surt text-head-24 mb-5">{{ "Filter projects"|t }}</h2>
 
-      {# <div class="mb-4 pt-[10px] border-gray dark:border-gray-500 border-t">
-        <h3 class="md:text-body-16 mb-2 text-[15px] text-gray-600 uppercase dark:text-white">
+      <div class="border-gray mb-4 border-t pt-[10px] dark:border-gray-500">
+        <h3
+          class="md:text-body-16 mb-2 text-[15px] text-gray-600 uppercase dark:text-white"
+        >
           {{ "Funding status"|t }}
         </h3>
 
         {% include "projects/_modules/checkbox-filter" with {
           key: "status",
-          value: "inUsage",
+          value: "inFunding",
           text: "Only show currently funded projects"|t,
-          params,
+          params
         } only %}
-      </div> #}
+      </div>
 
       {% if yearGroups|length %}
         <div class="border-gray mb-4 border-t pt-[10px] dark:border-gray-500">
