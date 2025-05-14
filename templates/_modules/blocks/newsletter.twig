@@ -1,93 +1,103 @@
-{% set newsletterHeadline =
-  module.newsletterHeadline|default(newsletter.newsletterHeadline)
-%}
-{% set newsletterText =
-  module.newsletterText|default(newsletter.newsletterText)
-%}
-{% set newsletterSecondaryText =
-  module.newsletterSecondaryText|default(newsletter.newsletterSecondaryText)
-%}
-{% set newsletterSideTitle =
-  module.newsletterSideTitle|default(newsletter.newsletterSideTitle)
-%}
-{% set newsletterLinks =
-  module.newsletterLinks.all()|default(newsletter.newsletterLinks.all())
-%}
+{% set context = context|default("web") %}
 
-<div
-  class="bg-navy-blue dark:bg-rich-blue border-navy-blue-100 mb-10 border-t border-b text-white last:mb-0 md:grid md:grid-cols-2 dark:border-[rgba(255,255,255,0.4)]"
->
+{% set web %}
+  {% set newsletterHeadline =
+    module.newsletterHeadline|default(newsletter.newsletterHeadline)
+  %}
+  {% set newsletterText =
+    module.newsletterText|default(newsletter.newsletterText)
+  %}
+  {% set newsletterSecondaryText =
+    module.newsletterSecondaryText|default(newsletter.newsletterSecondaryText)
+  %}
+  {% set newsletterSideTitle =
+    module.newsletterSideTitle|default(newsletter.newsletterSideTitle)
+  %}
+  {% set newsletterLinks =
+    module.newsletterLinks.all()|default(newsletter.newsletterLinks.all())
+  %}
+
   <div
-    class="border-navy-blue-100 after:bg-pattern-newsletter relative border-r after:absolute after:top-0 after:right-0 after:bottom-3 after:h-[350px] after:w-[100px] after:bg-contain after:bg-right-top after:bg-no-repeat after:content-[''] dark:dark:border-[rgba(255,255,255,0.4)]"
+    class="bg-navy-blue dark:bg-rich-blue border-navy-blue-100 mb-10 border-t border-b text-white last:mb-0 md:grid md:grid-cols-2 dark:border-[rgba(255,255,255,0.4)]"
   >
     <div
-      class="relative z-1 mb-3 pt-4 pr-6 pl-2 md:mb-[44px] md:pt-4 md:pr-12 md:pl-3"
+      class="border-navy-blue-100 after:bg-pattern-newsletter relative border-r after:absolute after:top-0 after:right-0 after:bottom-3 after:h-[350px] after:w-[100px] after:bg-contain after:bg-right-top after:bg-no-repeat after:content-[''] dark:dark:border-[rgba(255,255,255,0.4)]"
     >
-      <h4 class="font-surt text-head-22 mb-2 leading-[1.3] uppercase">
-        {{ newsletterHeadline }}
-      </h4>
+      <div
+        class="relative z-1 mb-3 pt-4 pr-6 pl-2 md:mb-[44px] md:pt-4 md:pr-12 md:pl-3"
+      >
+        <h4 class="font-surt text-head-22 mb-2 leading-[1.3] uppercase">
+          {{ newsletterHeadline }}
+        </h4>
 
-      {% include "_rich-text/simple" with {
-        text: newsletterText
-      } only %}
-    </div>
-  </div>
-
-  <div
-    class="border-navy-blue-100 relative z-1 border-r md:order-2 dark:border-[rgba(255,255,255,0.4)]"
-  >
-    <div class="mb-[10px] ml-[-1px] md:mr-[-1px] md:mb-2.5">
-      {% include "_modules/newsletter-form" with {
-        darkMode: false
-      } only %}
+        {% include "_rich-text/simple" with {
+          text: newsletterText
+        } only %}
+      </div>
     </div>
 
     <div
-      class="mb-3 pr-6 pl-2 opacity-70 md:mb-0 md:pr-12 md:pb-[62px] md:pl-3"
+      class="border-navy-blue-100 relative z-1 border-r md:order-2 dark:border-[rgba(255,255,255,0.4)]"
     >
-      {% include "_rich-text/simple" with {
-        text: newsletterSecondaryText,
-        size: "small"
-      } only %}
+      <div class="mb-[10px] ml-[-1px] md:mr-[-1px] md:mb-2.5">
+        {% include "_modules/newsletter-form" with {
+          darkMode: false
+        } only %}
+      </div>
+
+      <div
+        class="mb-3 pr-6 pl-2 opacity-70 md:mb-0 md:pr-12 md:pb-[62px] md:pl-3"
+      >
+        {% include "_rich-text/simple" with {
+          text: newsletterSecondaryText,
+          size: "small"
+        } only %}
+      </div>
     </div>
-  </div>
 
-  <div
-    class="border-navy-blue-100 border-t px-2 py-3 md:border-t-0 md:px-3 md:py-4 dark:border-[rgba(255,255,255,0.4)]"
-  >
-    {% if newsletterSideTitle %}
-      <h5 class="font-surt text-[20px]">{{ newsletterSideTitle }}</h5>
-    {% endif %}
-  </div>
-
-  <ul
-    class="border-navy-blue-100 border-t md:order-3 dark:border-[rgba(255,255,255,0.4)]"
-  >
-    {% for linkGroup in newsletterLinks %}
-      {% set link = linkGroup.genericLink %}
-
-      {% if link|length %}
-        {% set sideInfo = linkGroup.sideInfo %}
-
-        <li
-          class="text-head-14 md:text-head-16 border-navy-blue-100 border-b first:!border-b last:border-0 md:h-[63px] dark:border-[rgba(255,255,255,0.4)]"
-        >
-          <a
-            class="hover:bg-navy-blue-100 flex h-full items-center px-2 py-[18px] text-white uppercase transition-colors md:px-3 dark:border-[rgba(255,255,255,0.4)] dark:hover:bg-[rgba(255,255,255,0.1)]"
-            href="{{ link.url }}"
-            target="{{ link.target }}"
-            {{ link.target == "_blank" ? 'rel="noopener noreferrer"' : "" }}
-          >
-            {{ link.label }}
-
-            {% if sideInfo %}
-              <span class="text-body-13 ml-auto uppercase opacity-70">
-                {{ sideInfo }}
-              </span>
-            {% endif %}
-          </a>
-        </li>
+    <div
+      class="border-navy-blue-100 border-t px-2 py-3 md:border-t-0 md:px-3 md:py-4 dark:border-[rgba(255,255,255,0.4)]"
+    >
+      {% if newsletterSideTitle %}
+        <h5 class="font-surt text-[20px]">{{ newsletterSideTitle }}</h5>
       {% endif %}
-    {% endfor %}
-  </ul>
-</div>
+    </div>
+
+    <ul
+      class="border-navy-blue-100 border-t md:order-3 dark:border-[rgba(255,255,255,0.4)]"
+    >
+      {% for linkGroup in newsletterLinks %}
+        {% set link = linkGroup.genericLink %}
+
+        {% if link|length %}
+          {% set sideInfo = linkGroup.sideInfo %}
+
+          <li
+            class="text-head-14 md:text-head-16 border-navy-blue-100 border-b first:!border-b last:border-0 md:h-[63px] dark:border-[rgba(255,255,255,0.4)]"
+          >
+            <a
+              class="hover:bg-navy-blue-100 flex h-full items-center px-2 py-[18px] text-white uppercase transition-colors md:px-3 dark:border-[rgba(255,255,255,0.4)] dark:hover:bg-[rgba(255,255,255,0.1)]"
+              href="{{ link.url }}"
+              target="{{ link.target }}"
+              {{ link.target == "_blank" ? 'rel="noopener noreferrer"' : "" }}
+            >
+              {{ link.label }}
+
+              {% if sideInfo %}
+                <span class="text-body-13 ml-auto uppercase opacity-70">
+                  {{ sideInfo }}
+                </span>
+              {% endif %}
+            </a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+{% endset %}
+
+{% switch context %}
+  {% case "rss" %}
+  {% default %}
+    {{ web }}
+{% endswitch %}

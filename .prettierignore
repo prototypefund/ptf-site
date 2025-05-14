@@ -9,6 +9,6 @@ storage/
 web/cpresources/
 web/static/dist/
 web/uploads/
-templates/feed.rss.twig
+templates/feed.twig
 
 .ddev/

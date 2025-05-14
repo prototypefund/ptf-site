@@ -1,40 +1,59 @@
-{% set content %}
-  {% for row in module.rows %}
-    {% set columns = row.columns %}
+{% set context = context|default("web") %}
+
+{% set web %}
+  {% set content %}
+    {% for row in module.rows %}
+      {% set columns = row.columns %}
+
+      <div class="mb-5 last:mb-0 md:mb-[60px]">
+        <h3 class="font-surt text-head-18 md:text-head-22 mb-2.5 uppercase">
+          {{ row.title }}
+        </h3>
+
+        {% if columns|length %}
+          <div class="md:grid md:grid-cols-2 md:gap-5">
+            {% for column in row.columns %}
+              <div class="mb-2.5 last:mb-0 md:mb-0">
+                <h4
+                  class="md:text-head-16 border-gray dark:text-gray mb-1 border-t pt-1 text-[15px] text-gray-600 uppercase md:mb-2 dark:border-gray-500"
+                >
+                  {{ column.title }}
+                </h4>
+
+                <p class="text-head-18 md:text-head-20">
+                  {{ column.text }}
+                </p>
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+    {% endfor %}
 
     <div class="mb-5 last:mb-0 md:mb-[60px]">
-      <h2 class="font-surt text-head-18 md:text-head-22 mb-2.5 uppercase">
-        {{ row.title }}
-      </h2>
-
-      {% if columns|length %}
-        <div class="md:grid md:grid-cols-2 md:gap-5">
-          {% for column in row.columns %}
-            <div class="mb-2.5 last:mb-0 md:mb-0">
-              <h3
-                class="md:text-head-16 border-gray dark:text-gray mb-1 border-t pt-1 text-[15px] text-gray-600 uppercase md:mb-2 dark:border-gray-500"
-              >
-                {{ column.title }}
-              </h3>
-
-              <p class="text-head-18 md:text-head-20">
-                {{ column.text }}
-              </p>
-            </div>
-          {% endfor %}
-        </div>
-      {% endif %}
+      {% include "_rich-text/standard" with {
+        text: module.text
+      } only %}
     </div>
-  {% endfor %}
+  {% endset %}
 
-  <div class="mb-5 last:mb-0 md:mb-[60px]">
-    {% include "_rich-text/standard" with {
-      text: module.text
-    } only %}
-  </div>
+  {% include "_modules/side-heading" with {
+    headline: module.title,
+    content: content
+  } only %}
 {% endset %}
 
-{% include "_modules/side-heading" with {
-  headline: module.title,
-  content: content
-} only %}
+{% set rss %}
+  <h2>{{ module.title }}</h2>
+  {{ content }}
+  {% include "_rich-text/standard" with {
+    text: module.text
+  } only %}
+{% endset %}
+
+{% switch context %}
+  {% case "rss" %}
+    {{ rss }}
+  {% default %}
+    {{ web }}
+{% endswitch %}

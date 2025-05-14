@@ -1,15 +1,33 @@
+{% set context = context|default("web") %}
 {% set timeline = module.timeline.one() %}
 
-{% set content %}
-  {% if timeline|length %}
-    {% include "_modules/timeline" with {
-      phases: timeline.phases,
-      text: timeline.text
-    } only %}
-  {% endif %}
+{% set web %}
+  {% set content %}
+    {% if timeline|length %}
+      {% include "_modules/timeline" with {
+        phases: timeline.phases,
+        text: timeline.text
+      } only %}
+    {% endif %}
+  {% endset %}
+
+  {% include "_modules/side-heading" with {
+    headline: module.title,
+    content: content
+  } only %}
 {% endset %}
 
-{% include "_modules/side-heading" with {
-  headline: module.title,
-  content: content
-} only %}
+{% set rss %}
+  <h2>{{ module.title }}</h2>
+  {% include "_modules/timeline" with {
+    phases: timeline.phases,
+    text: timeline.text
+  } only %}
+{% endset %}
+
+{% switch context %}
+  {% case "rss" %}
+    {{ rss }}
+  {% default %}
+    {{ web }}
+{% endswitch %}

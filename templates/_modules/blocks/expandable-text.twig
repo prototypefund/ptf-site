@@ -1,85 +1,112 @@
+{% set context = context|default("web") %}
 {% set expandableItems = module.expandableItems %}
 
-{% set content %}
-  {% for item in expandableItems %}
-    {% set title = item.headline|default(item.title) %}
+{% set web %}
+  {% set content %}
+    {% for item in expandableItems %}
+      {% set title = item.headline|default(item.title) %}
 
-    <details
-      class="group border-gray border-t last:border-b dark:border-gray-500"
-    >
-      <summary
-        class="font-surt text-head-16 md:text-head-20 flex cursor-pointer list-none items-center pt-1 pb-[10px] md:pt-2 md:pb-2.5"
+      <details
+        class="group border-gray border-t last:border-b dark:border-gray-500"
       >
-        <span class="pr-1.5 text-gray-400 tabular-nums dark:text-gray-700">
-          {{ loop.index < 10 ? "0" }}{{ loop.index }}
-        </span>
-        {{ title }}
-        <div
-          class="font-surt text-ui-12 md:text-ui-14 ml-auto min-w-[28px] pl-2 tracking-wide uppercase md:min-w-4"
+        <summary
+          class="font-surt text-head-16 md:text-head-20 flex cursor-pointer list-none items-center pt-1 pb-[10px] md:pt-2 md:pb-2.5"
         >
+          <span class="pr-1.5 text-gray-400 tabular-nums dark:text-gray-700">
+            {{ loop.index < 10 ? "0" }}{{ loop.index }}
+          </span>
+          {{ title }}
           <div
-            class="flex translate-y-[2px] items-center gap-[10px] group-open:hidden"
+            class="font-surt text-ui-12 md:text-ui-14 ml-auto min-w-[28px] pl-2 tracking-wide uppercase md:min-w-4"
           >
-            <span class="pt-[2px]">{{ "Reveal"|t }}</span>
-
-            <svg
-              class="min-w-[18px]"
-              width="18"
-              height="18"
-              viewBox="0 0 18 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+            <div
+              class="flex translate-y-[2px] items-center gap-[10px] group-open:hidden"
             >
-              <path
-                class="stroke-black dark:stroke-white"
-                d="M4.5 9H9M9 9H13.5M9 9V4.5M9 9V13.5"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
-          </div>
-          <div
-            class="hidden translate-y-[2px] items-center gap-[10px] group-open:flex"
-          >
-            <span class="pt-[2px]">{{ "Hide"|t }}</span>
+              <span class="pt-[2px]">{{ "Reveal"|t }}</span>
 
-            <svg
-              class="min-w-[18px]"
-              width="18"
-              height="18"
-              viewBox="0 0 18 18"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
+              <svg
+                class="min-w-[18px]"
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="stroke-black dark:stroke-white"
+                  d="M4.5 9H9M9 9H13.5M9 9V4.5M9 9V13.5"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div
+              class="hidden translate-y-[2px] items-center gap-[10px] group-open:flex"
             >
-              <path
-                class="stroke-black dark:stroke-white"
-                d="M4.5 9H13.5"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+              <span class="pt-[2px]">{{ "Hide"|t }}</span>
+
+              <svg
+                class="min-w-[18px]"
+                width="18"
+                height="18"
+                viewBox="0 0 18 18"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  class="stroke-black dark:stroke-white"
+                  d="M4.5 9H13.5"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
           </div>
+        </summary>
+        <div class="pb-3 md:pb-5 [&>*]:border-t-0 [&>*]:pt-0">
+          {% if item.type == "timeline" %}
+            {% include "_modules/timeline" with {
+              phases: item.phases,
+              text: item.text
+            } only %}
+          {% else %}
+            {% include "_rich-text/standard" with {
+              text: item.text
+            } only %}
+          {% endif %}
         </div>
-      </summary>
-      <div class="pb-3 md:pb-5 [&>*]:border-t-0 [&>*]:pt-0">
-        {% if item.type == "timeline" %}
-          {% include "_modules/timeline" with {
-            phases: item.phases,
-            text: item.text
-          } only %}
-        {% else %}
-          {% include "_rich-text/standard" with {
-            text: item.text
-          } only %}
-        {% endif %}
-      </div>
-    </details>
+      </details>
+    {% endfor %}
+  {% endset %}
+
+  {% include "_modules/side-heading" with {
+    headline: module.title,
+    content: content
+  } only %}
+{% endset %}
+
+{% set rss %}
+  <h2>{{ module.title }}</h2>
+  {% for item in expandableItems %}
+    <h3>{{ item.headline|default(item.title) }}</h3>
+    {% if item.type == "timeline" %}
+      {% include "_modules/timeline" with {
+        phases: item.phases,
+        text: item.text
+      } only %}
+    {% else %}
+      {% include "_rich-text/standard" with {
+        text: item.text
+      } only %}
+    {% endif %}
   {% endfor %}
 {% endset %}
 
-{% include "_modules/side-heading" with {
-  headline: module.title,
-  content: content
-} only %}
+{% switch context %}
+  {% case "rss" %}
+    {{ rss }}
+  {% default %}
+    {{ web }}
+{% endswitch %}

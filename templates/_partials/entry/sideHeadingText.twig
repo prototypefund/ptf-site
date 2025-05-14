@@ -1,10 +1,28 @@
-{% set content %}
+{% set context = context|default("web") %}
+
+{% set web %}
+  {% set content %}
+    {% include "_rich-text/standard" with {
+      text: entry.text
+    } only %}
+  {% endset %}
+
+  {% include "_modules/side-heading" with {
+    headline: entry.title,
+    content: content
+  } only %}
+{% endset %}
+
+{% set rss %}
+  <h2>{{ entry.title }}</h2>
   {% include "_rich-text/standard" with {
     text: entry.text
   } only %}
 {% endset %}
 
-{% include "_modules/side-heading" with {
-  headline: entry.title,
-  content: content
-} only %}
+{% switch context %}
+  {% case "rss" %}
+    {{ rss }}
+  {% default %}
+    {{ web }}
+{% endswitch %}

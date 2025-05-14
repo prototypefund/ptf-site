@@ -1,75 +1,101 @@
+{% set context = context|default("web") %}
+
 {% if entry.modules %}
   <div class="mb-10">
     {% for module in entry.modules.all() %}
       {% switch module.type %}
         {% case "blogTeasers" %}
           {% include "_modules/blocks/blog-teasers" with {
-            module: module
+            module: module,
+            context: context
           } only %}
         {% case "genericTeasers" %}
           {% include "_modules/blocks/generic-teasers" with {
-            module: module
+            module: module,
+            context: context
           } only %}
         {% case "eventTeasers" %}
           {% include "_modules/blocks/event-teasers" with {
-            module: module
+            module: module,
+            context: context
           } only %}
         {% case "projectTeasers" %}
           {% include "_modules/blocks/project-teasers" with {
-            module: module
+            module: module,
+            context: context
           } only %}
         {% case "talkTeasers" %}
           {% include "_modules/blocks/talk-teasers" with {
-            module: module
+            module: module,
+            context: context
           } only %}
         {% case "trendTeasers" %}
           {% include "_modules/blocks/trend-teasers" with {
-            module: module
+            module: module,
+            context: context
           } only %}
         {% case "relatedPublications" %}
           {% include "_modules/blocks/publications" with {
-            module: module
+            module: module,
+            context: context
           } only %}
         {% case "statement" %}
           {% include "_modules/blocks/statement" with {
-            module: module
+            module: module,
+            context: context
           } only %}
         {% case "expandableText" %}
           {% include "_modules/blocks/expandable-text" with {
-            module: module
+            module: module,
+            context: context
           } only %}
         {% case "relatedLinkList" %}
           {% include "_modules/blocks/link-list" with {
-            module: module
+            module: module,
+            context: context
           } only %}
         {% case "steps" %}
           {% include "_modules/blocks/steps" with {
-            module: module
+            module: module,
+            context: context
           } only %}
         {% case "relatedCtaBanner" %}
           {% include "_modules/blocks/cta-banner" with {
-            module: module
+            module: module,
+            context: context
           } only %}
         {% case "relatedTimeline" %}
           {% include "_modules/blocks/timeline" with {
-            module: module
+            module: module,
+            context: context
           } only %}
         {% case "embed" %}
-          {{ module.render() }}
+          {{
+            module.render({
+              context: context
+            })
+          }}
         {% case "newsletter" %}
           {% include "_modules/blocks/newsletter" with {
-            module: module
+            module: module,
+            context: context
           } only %}
         {% case "peopleGrid" %}
           {% include "_modules/blocks/people-grid" with {
-            module: module
+            module: module,
+            context: context
           } only %}
         {% case "textGrid" %}
           {% include "_modules/blocks/text-grid" with {
-            module: module
+            module: module,
+            context: context
           } only %}
         {% case "sideHeadingText" %}
-          {{ module.render() }}
+          {{
+            module.render({
+              context: context
+            })
+          }}
         {% default %}
       {% endswitch %}
     {% endfor %}

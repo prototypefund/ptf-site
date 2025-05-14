@@ -1,70 +1,96 @@
+{% set context = context|default("web") %}
 {% set heading = module.title %}
 {% set textColumnOne = module.textColumnOne %}
 {% set textColumnTwo = module.textColumnTwo %}
 
-{% set patternBottom =
-  [
-    "after:bg-pattern-bl-light-gray dark:after:bg-pattern-bl-dark-gray",
-    "after:min-w-12",
-    "after:min-h-12",
-    "after:w-[15vw]",
-    "after:h-[15vw]",
-    "after:content-['']",
-    "after:absolute",
-    "after:bg-no-repeat",
-    "after:bg-contain",
-    "after:left-0",
-    "after:bottom-0"
-  ]|join(" ")
-%}
+{% set web %}
+  {% set patternBottom =
+    [
+      "after:bg-pattern-bl-light-gray dark:after:bg-pattern-bl-dark-gray",
+      "after:min-w-12",
+      "after:min-h-12",
+      "after:w-[15vw]",
+      "after:h-[15vw]",
+      "after:content-['']",
+      "after:absolute",
+      "after:bg-no-repeat",
+      "after:bg-contain",
+      "after:left-0",
+      "after:bottom-0"
+    ]|join(" ")
+  %}
 
-{% set patternTop =
-  [
-    "before:bg-pattern-tr-light-gray dark:before:bg-pattern-tr-dark-gray-1",
-    "before:bg-top-right",
-    "before:min-w-12",
-    "before:min-h-16",
-    "before:w-[15vw]",
-    "before:h-[20vw]",
-    "before:content-['']",
-    "before:absolute",
-    "before:bg-no-repeat",
-    "before:bg-contain",
-    "before:right-0",
-    "before:top-0"
-  ]|join(" ")
-%}
+  {% set patternTop =
+    [
+      "before:bg-pattern-tr-light-gray dark:before:bg-pattern-tr-dark-gray-1",
+      "before:bg-top-right",
+      "before:min-w-12",
+      "before:min-h-16",
+      "before:w-[15vw]",
+      "before:h-[20vw]",
+      "before:content-['']",
+      "before:absolute",
+      "before:bg-no-repeat",
+      "before:bg-contain",
+      "before:right-0",
+      "before:top-0"
+    ]|join(" ")
+  %}
 
-<section
-  class="{{ patternBottom }} {{
-  patternTop
-  }} relative mb-10 bg-gray-100 px-2 py-12.5 last:mb-0 md:px-5 dark:bg-gray-800"
->
-  <div class="relative">
-    <h2
-      class="font-surt text-head-22 md:text-head-36 mx-auto max-w-[1020px] text-center uppercase"
-    >
-      {{ heading }}
-    </h2>
+  <section
+    class="{{ patternBottom }} {{
+    patternTop
+    }} relative mb-10 bg-gray-100 px-2 py-12.5 last:mb-0 md:px-5 dark:bg-gray-800"
+  >
+    <div class="relative">
+      <h2
+        class="font-surt text-head-22 md:text-head-36 mx-auto max-w-[1020px] text-center uppercase"
+      >
+        {{ heading }}
+      </h2>
 
-    <div class="mt-6 md:mt-23 md:grid md:grid-cols-16">
-      {% if textColumnOne|length %}
-        <div class="md:col-span-7 md:col-start-2 md:pr-3.5">
-          {% include "_rich-text/simple" with {
-            text: textColumnOne,
-            size: "medium"
-          } only %}
-        </div>
-      {% endif %}
+      <div class="mt-6 md:mt-23 md:grid md:grid-cols-16">
+        {% if textColumnOne|length %}
+          <div class="md:col-span-7 md:col-start-2 md:pr-3.5">
+            {% include "_rich-text/simple" with {
+              text: textColumnOne,
+              size: "medium"
+            } only %}
+          </div>
+        {% endif %}
 
-      {% if textColumnTwo|length %}
-        <div class="md:col-span-7 md:col-start-9 md:pl-3.5">
-          {% include "_rich-text/simple" with {
-            text: textColumnTwo,
-            size: "medium"
-          } only %}
-        </div>
-      {% endif %}
+        {% if textColumnTwo|length %}
+          <div class="md:col-span-7 md:col-start-9 md:pl-3.5">
+            {% include "_rich-text/simple" with {
+              text: textColumnTwo,
+              size: "medium"
+            } only %}
+          </div>
+        {% endif %}
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+{% endset %}
+
+{% set rss %}
+  <h2>{{ heading }}</h2>
+  {% if textColumnOne|length %}
+    {% include "_rich-text/simple" with {
+      text: textColumnOne,
+      size: "medium"
+    } only %}
+  {% endif %}
+  {% if textColumnTwo|length %}
+    {% include "_rich-text/simple" with {
+      text: textColumnTwo,
+      size: "medium"
+    } only %}
+  {% endif %}
+{% endset %}
+
+{% switch context %}
+  {% case "rss" %}
+    {{ rss }}
+  {% default %}
+    {{ web }}
+{% endswitch %}
