@@ -43,16 +43,24 @@
 
 {% if inFundingParam|length %}
   {% set projectsWithoutSecondStage =
-    craft.entries.section("projects").with(["projectRounds"]).relatedTo({
-      targetElement: craft.categories().group("projectRounds").endDateRegular(
+    craft.entries.section("projects").with(
+      ["projectRounds", "projectYearGroups"]
+    ).relatedTo({
+      targetElement: craft.categories().group(
+        ["projectRounds", "projectYearGroups"]
+      ).endDateRegular(
         [">= " ~ (now|date("Y-m-d"))]
       )
     }).all()
   %}
 
   {% set projectsWithSecondStage =
-    projectsQuery.with(["projectRounds"]).secondStage(true).relatedTo({
-      targetElement: craft.categories().group("projectRounds").endDateRegular(
+    projectsQuery.with(["projectRounds", "projectYearGroups"]).secondStage(
+      true
+    ).relatedTo({
+      targetElement: craft.categories().group(
+        ["projectRounds", "projectYearGroups"]
+      ).endDateRegular(
         ["< " ~ (now|date("Y-m-d"))]
       ).endDateSecondStage(
         [">= " ~ (now|date("Y-m-d"))]
