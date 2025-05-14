@@ -90,7 +90,7 @@
 {% set rss %}
   <h2>{{ module.title }}</h2>
   {% for item in expandableItems %}
-    <h3>{{ item.headline|default(item.title) }}</h2>
+    <h3>{{ item.headline|default(item.title) }}</h3>
     {% if item.type == "timeline" %}
       {% include "_modules/timeline" with {
         phases: item.phases,
