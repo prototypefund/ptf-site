@@ -1,29 +1,50 @@
+{% set context = context|default("web") %}
 {% set heading = module.title %}
 {% set steps = module.steps %}
 
-<div class="mb-10 px-2 md:px-5">
-  <h4 class="font-surt text-head-22 md:text-head-32 mb-3 md:mb-5">
-    {{ heading }}
-  </h4>
+{% set web %}
+  <div class="mb-10 px-2 md:px-5">
+    <h4 class="font-surt text-head-22 md:text-head-32 mb-3 md:mb-5">
+      {{ heading }}
+    </h4>
 
-  {% if steps|length %}
-    <div class="border-gray border-y md:flex dark:border-gray-500">
-      {% for step in steps %}
-        <div
-          class="border-gray border-r border-b border-l px-2 py-3 last:border-r last:border-b-0 md:w-1/3 md:border-r-0 md:border-b-0 md:px-2.5 md:py-4 dark:border-gray-500"
-        >
-          <h5
-            class="font-surt text-head-22 md:text-head-38 text-rich-blue dark:text-sky-blue mb-14 md:mb-15"
+    {% if steps|length %}
+      <div class="border-gray border-y md:flex dark:border-gray-500">
+        {% for step in steps %}
+          <div
+            class="border-gray border-r border-b border-l px-2 py-3 last:border-r last:border-b-0 md:w-1/3 md:border-r-0 md:border-b-0 md:px-2.5 md:py-4 dark:border-gray-500"
           >
-            0{{ loop.index }}
-          </h5>
+            <h5
+              class="font-surt text-head-22 md:text-head-38 text-rich-blue dark:text-sky-blue mb-14 md:mb-15"
+            >
+              0{{ loop.index }}
+            </h5>
 
-          {% include "_rich-text/simple" with {
-            text: step.stepText,
-            size: "large"
-          } only %}
-        </div>
-      {% endfor %}
-    </div>
-  {% endif %}
-</div>
+            {% include "_rich-text/simple" with {
+              text: step.stepText,
+              size: "large"
+            } only %}
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+{% endset %}
+
+{% set rss %}
+  <h2>{{ module.title }}</h2>
+  {% for step in steps %}
+    <h3>0{{ loop.index }}</h3>
+    {% include "_rich-text/simple" with {
+      text: step.stepText,
+      size: "large"
+    } only %}
+  {% endfor %}
+{% endset %}
+
+{% switch context %}
+  {% case "rss" %}
+    {{ rss }}
+  {% default %}
+    {{ web }}
+{% endswitch %}

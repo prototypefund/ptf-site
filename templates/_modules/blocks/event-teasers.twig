@@ -1,3 +1,4 @@
+{% set context = context|default("web") %}
 {% set nextReads = module.eventNextReads.eagerly().all() %}
 
 {% if (nextReads|length) == 0 %}
@@ -10,19 +11,27 @@
   %}
 {% endif %}
 
-{% set content %}
-  {% include "events/_modules/teasers-list" with {
-    events: nextReads
-  } %}
+{% set web %}
+  {% set content %}
+    {% include "events/_modules/teasers-list" with {
+      events: nextReads
+    } %}
+  {% endset %}
+
+  {% if nextReads|length %}
+    {% include "_modules/next-reads" with {
+      heading: module.title,
+      sideLink: {
+        text: "See all"|t,
+        url: eventsIndex.url
+      },
+      content: content
+    } only %}
+  {% endif %}
 {% endset %}
 
-{% if nextReads|length %}
-  {% include "_modules/next-reads" with {
-    heading: module.title,
-    sideLink: {
-      text: "See all"|t,
-      url: eventsIndex.url
-    },
-    content: content
-  } only %}
-{% endif %}
+{% switch context %}
+  {% case "rss" %}
+  {% default %}
+    {{ web }}
+{% endswitch %}

@@ -1,22 +1,31 @@
+{% set context = context|default("web") %}
 {% set nextReads = module.projectNextReads.eagerly().all() %}
 
 {% if (nextReads|length) == 0 %}
   {% set nextReads = craft.entries.section("projects").limit(4).all() %}
 {% endif %}
 
-{% if nextReads|length %}
-  {% set content %}
-    {% include "projects/_modules/teasers-list" with {
-      projects: nextReads
-    } %}
-  {% endset %}
+{% set web %}
+  {% if nextReads|length %}
+    {% set content %}
+      {% include "projects/_modules/teasers-list" with {
+        projects: nextReads
+      } %}
+    {% endset %}
 
-  {% include "_modules/next-reads" with {
-    heading: module.title,
-    sideLink: {
-      text: "See all"|t,
-      url: projectsIndex.url
-    },
-    content: content
-  } only %}
-{% endif %}
+    {% include "_modules/next-reads" with {
+      heading: module.title,
+      sideLink: {
+        text: "See all"|t,
+        url: projectsIndex.url
+      },
+      content: content
+    } only %}
+  {% endif %}
+{% endset %}
+
+{% switch context %}
+  {% case "rss" %}
+  {% default %}
+    {{ web }}
+{% endswitch %}

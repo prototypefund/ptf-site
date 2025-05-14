@@ -1,30 +1,39 @@
+{% set context = context|default("web") %}
 {% set featured = module.nextReadsFeatured.one()|default(null) %}
 {% set nextReads = module.nextReads.eagerly().all() %}
 
-{% if (nextReads|length) == 0 %}
-  {% if featured %}
-    {% set nextReads =
-      craft.entries.section("blog").id(["not", featured.id]).limit(4).all()
-    %}
-  {% else %}
-    {% set nextReads = craft.entries.section("blog").limit(4).all() %}
+{% set web %}
+  {% if (nextReads|length) == 0 %}
+    {% if featured %}
+      {% set nextReads =
+        craft.entries.section("blog").id(["not", featured.id]).limit(4).all()
+      %}
+    {% else %}
+      {% set nextReads = craft.entries.section("blog").limit(4).all() %}
+    {% endif %}
   {% endif %}
-{% endif %}
 
-{% set content %}
-  {% include "blog/_modules/teasers-list" with {
-    featured: featured,
-    articles: nextReads
-  } %}
+  {% set content %}
+    {% include "blog/_modules/teasers-list" with {
+      featured: featured,
+      articles: nextReads
+    } %}
+  {% endset %}
+
+  {% if nextReads|length %}
+    {% include "_modules/next-reads" with {
+      heading: module.title,
+      sideLink: {
+        text: "See all"|t,
+        url: blogIndex.url
+      },
+      content: content
+    } only %}
+  {% endif %}
 {% endset %}
 
-{% if nextReads|length %}
-  {% include "_modules/next-reads" with {
-    heading: module.title,
-    sideLink: {
-      text: "See all"|t,
-      url: blogIndex.url
-    },
-    content: content
-  } only %}
-{% endif %}
+{% switch context %}
+  {% case "rss" %}
+  {% default %}
+    {{ web }}
+{% endswitch %}

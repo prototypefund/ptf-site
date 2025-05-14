@@ -1,23 +1,43 @@
+{% set context = context|default("web") %}
 {% set caption = entry.caption %}
 
-{% set content %}
-  <figure>
-    <div
-      class="relative overflow-hidden [&>iframe]:absolute [&>iframe]:top-0 [&>iframe]:left-0 [&>iframe]:size-full"
-    >
-      {{ entry.embedCode|raw }}
-    </div>
-    {% if caption|length %}
-      <figcaption
-        class="text-body-12 md:text-body-13 dark:text-gray mt-1 text-gray-600 uppercase"
+{% set web %}
+  {% set content %}
+    <figure>
+      <div
+        class="relative overflow-hidden [&>iframe]:absolute [&>iframe]:top-0 [&>iframe]:left-0 [&>iframe]:size-full"
       >
-        {{ caption }}
-      </figcaption>
-    {% endif %}
+        {{ entry.embedCode|raw }}
+      </div>
+      {% if caption|length %}
+        <figcaption
+          class="text-body-12 md:text-body-13 dark:text-gray mt-1 text-gray-600 uppercase"
+        >
+          {{ caption }}
+        </figcaption>
+      {% endif %}
+    </figure>
+  {% endset %}
+
+  {% include "_modules/side-heading" with {
+    headline: entry.title,
+    content: content
+  } only %}
+{% endset %}
+
+{% set rss %}
+  <h2>{{ entry.title }}</h2>
+  <figure>
+    {{ entry.embedCode|raw }}
+    <figcaption>
+      {{ caption }}
+    </figcaption>
   </figure>
 {% endset %}
 
-{% include "_modules/side-heading" with {
-  headline: entry.title,
-  content: content
-} only %}
+{% switch context %}
+  {% case "rss" %}
+    {{ rss }}
+  {% default %}
+    {{ web }}
+{% endswitch %}

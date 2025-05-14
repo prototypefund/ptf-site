@@ -1,60 +1,98 @@
+{% set context = context|default("web") %}
 {% set people = module.people %}
 
-{% if people|length %}
-  <div class="border-gray mb-10 border-y last:mb-0 dark:border-gray-500">
-    {% for person in people %}
-      {% set avatar = person.avatar.eagerly().one() %}
-      {% set website = person.website %}
-      {% set email = person.email %}
-      {% set links = person.links|map(link => link.genericLink) %}
+{% set web %}
+  {% if people|length %}
+    <div class="border-gray mb-10 border-y last:mb-0 dark:border-gray-500">
+      {% for person in people %}
+        {% set avatar = person.avatar.eagerly().one() %}
+        {% set website = person.website %}
+        {% set email = person.email %}
+        {% set links = person.links|map(link => link.genericLink) %}
 
-      {% if email %}
-        {% set links =
-          [
-            {
-              label: "Email"|t,
-              url: "mailto:#{email}"
-            }
-          ]|merge(links)
-        %}
-      {% endif %}
-
-      <div
-        class="not-first:border-gray grid grid-cols-1 not-first:border-t md:grid-cols-16 md:px-5 dark:border-gray-500"
-      >
-        <div
-          class="order-2 px-2 py-[60px] pt-5 pr-12 md:order-none md:col-span-8 md:px-0 md:py-11"
-        >
-          {% include "_modules/person-info" with {
-            person: person
-          } only %}
-        </div>
+        {% if email %}
+          {% set links =
+            [
+              {
+                label: "Email"|t,
+                url: "mailto:#{email}"
+              }
+            ]|merge(links)
+          %}
+        {% endif %}
 
         <div
-          class="md:border-gray relative flex flex-col md:col-span-7 md:col-start-10 md:border-x dark:md:border-gray-500"
+          class="not-first:border-gray grid grid-cols-1 not-first:border-t md:grid-cols-16 md:px-5 dark:border-gray-500"
         >
-          <div class="md:h-full md:w-full">
-            {% if avatar|length %}
-              <img
-                class="block h-full w-full object-cover"
-                src="{{ avatar.getUrl("avatarLarge") }}"
-                alt="{{ avatar.alt }}"
-              />
-            {% else %}
-              <div class="bg00 h-full"></div>
-            {% endif %}
+          <div
+            class="order-2 px-2 py-[60px] pt-5 pr-12 md:order-none md:col-span-8 md:px-0 md:py-11"
+          >
+            {% include "_modules/person-info" with {
+              person: person
+            } only %}
           </div>
 
           <div
-            class="md:absolute md:bottom-[-1px] md:left-[-1px] md:w-[calc(100%+2px)]"
+            class="md:border-gray relative flex flex-col md:col-span-7 md:col-start-10 md:border-x dark:md:border-gray-500"
           >
-            {% include "_modules/button-links" with {
-              links: links,
-              layout: "flex"
-            } only %}
+            <div class="md:h-full md:w-full">
+              {% if avatar|length %}
+                <img
+                  class="block h-full w-full object-cover"
+                  src="{{ avatar.getUrl("avatarLarge") }}"
+                  alt="{{ avatar.alt }}"
+                />
+              {% else %}
+                <div class="bg00 h-full"></div>
+              {% endif %}
+            </div>
+
+            <div
+              class="md:absolute md:bottom-[-1px] md:left-[-1px] md:w-[calc(100%+2px)]"
+            >
+              {% include "_modules/button-links" with {
+                links: links,
+                layout: "flex"
+              } only %}
+            </div>
           </div>
         </div>
-      </div>
-    {% endfor %}
-  </div>
-{% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endset %}
+
+{% set rss %}
+  {% for person in people %}
+    {% set avatar = person.avatar.eagerly().one() %}
+    {% set website = person.website %}
+    {% set email = person.email %}
+    {% set links = person.links|map(link => link.genericLink) %}
+
+    {% if email %}
+      {% set links =
+        [
+          {
+            label: "Email"|t,
+            url: "mailto:#{email}"
+          }
+        ]|merge(links)
+      %}
+    {% endif %}
+
+    {% include "_modules/person-info" with {
+      person: person
+    } only %}
+
+    {% if avatar|length %}
+      <img src="{{ avatar.getUrl("avatarLarge") }}" alt="{{ avatar.alt }}" />
+    {% endif %}
+  {% endfor %}
+{% endset %}
+
+{% switch context %}
+  {% case "rss" %}
+    {{ rss }}
+  {% default %}
+    {{ web }}
+{% endswitch %}

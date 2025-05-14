@@ -1,73 +1,119 @@
+{% set context = context|default("web") %}
 {% set heading = module.title %}
 {% set description = module.description %}
 {% set links = module.linkListLinks %}
 
-<div class="mb-10 md:px-5">
-  <h4
-    class="font-surt text-head-22 md:text-head-32 mb-3 max-w-2/5 px-2 md:mb-5 md:px-0"
-  >
-    {{ heading }}
-  </h4>
+{% set web %}
+  <div class="mb-10 md:px-5">
+    <h4
+      class="font-surt text-head-22 md:text-head-32 mb-3 max-w-2/5 px-2 md:mb-5 md:px-0"
+    >
+      {{ heading }}
+    </h4>
 
-  <div class="md:grid md:grid-cols-16">
-    {% if description|length %}
-      <div class="mb-5 px-2 md:col-span-5 md:mb-0 md:px-0">
+    <div class="md:grid md:grid-cols-16">
+      {% if description|length %}
+        <div class="mb-5 px-2 md:col-span-5 md:mb-0 md:px-0">
+          {% include "_rich-text/simple" with {
+            text: description,
+            size: "medium"
+          } only %}
+        </div>
+      {% endif %}
+
+      {% for row in links %}
+        {% set subheading = row.subheading %}
+        {% set description = row.description|default(null) %}
+        {% set link = row.genericLink %}
+
+        {% if link|length %}
+          <a
+            class="group border-gray border-t px-2 pt-2 pb-4 last:mb-0 last:border-b md:col-span-10 md:col-start-7 md:grid md:grid-cols-10 md:px-0 lg:col-start-7 dark:border-gray-500"
+            href="{{ link.url }}"
+          >
+            <div class="mb-3 md:col-span-9 lg:col-span-7 xl:mb-0">
+              <h4
+                class="font-surt text-head-16 md:text-head-18 mb-1 leading-[1.3] uppercase last:mb-0"
+              >
+                {{ row.title }}
+              </h4>
+
+              {% if subheading|length %}
+                <p
+                  class="text-body-12 md:text-body-14 dark:text-gray mb-1 text-gray-600"
+                >
+                  {{ subheading }}
+                </p>
+              {% endif %}
+
+              {% if description|length %}
+                <div class="dark:text-gray text-gray-600">
+                  {% include "_rich-text/simple" with {
+                    text: description,
+                    size: "small"
+                  } only %}
+                </div>
+              {% endif %}
+            </div>
+
+            <div
+              class="text-right md:col-span-9 md:col-start-1 md:text-left xl:col-span-3 xl:text-right"
+            >
+              {% include "_modules/button-generic-link" with {
+                link: {
+                  label: link.label,
+                  type: link.type,
+                  element: link.element|default(null),
+                  value: link.value|default(null)
+                }
+              } only %}
+            </div>
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% endset %}
+
+{% set rss %}
+  <h2>{{ heading }}</h2>
+  {% if description|length %}
+    {% include "_rich-text/simple" with {
+      text: description,
+      size: "medium"
+    } only %}
+  {% endif %}
+  {% for row in links %}
+    {% set subheading = row.subheading %}
+    {% set description = row.description|default(null) %}
+    {% set link = row.genericLink %}
+
+    {% if link|length %}
+      <h4>{{ row.title }}</h4>
+
+      {% if subheading|length %}
+        <p>
+          {{ subheading }}
+        </p>
+      {% endif %}
+
+      {% if description|length %}
         {% include "_rich-text/simple" with {
           text: description,
-          size: "medium"
+          size: "small"
         } only %}
-      </div>
-    {% endif %}
-
-    {% for row in links %}
-      {% set subheading = row.subheading %}
-      {% set description = row.description|default(null) %}
-      {% set link = row.genericLink %}
+      {% endif %}
 
       {% if link|length %}
-        <a
-          class="group border-gray border-t px-2 pt-2 pb-4 last:mb-0 last:border-b md:col-span-10 md:col-start-7 md:grid md:grid-cols-10 md:px-0 lg:col-start-7 dark:border-gray-500"
-          href="{{ link.url }}"
-        >
-          <div class="mb-3 md:col-span-9 lg:col-span-7 xl:mb-0">
-            <h4
-              class="font-surt text-head-16 md:text-head-18 mb-1 leading-[1.3] uppercase last:mb-0"
-            >
-              {{ row.title }}
-            </h4>
-
-            {% if subheading|length %}
-              <p
-                class="text-body-12 md:text-body-14 dark:text-gray mb-1 text-gray-600"
-              >
-                {{ subheading }}
-              </p>
-            {% endif %}
-
-            {% if description|length %}
-              <div class="dark:text-gray text-gray-600">
-                {% include "_rich-text/simple" with {
-                  text: description,
-                  size: "small"
-                } only %}
-              </div>
-            {% endif %}
-          </div>
-
-          <div
-            class="text-right md:col-span-9 md:col-start-1 md:text-left xl:col-span-3 xl:text-right"
-          >
-            {% include "_modules/button-generic-link" with {
-              link: {
-                label: link.label,
-                type: link.type,
-                element: link.element|default(null),
-                value: link.value|default(null)
-              }
-            } only %}
-          </div>
-        </a>
+        {{ link.getLink() }}
       {% endif %}
-    {% endfor %}
-  </div>
-</div>
+    {% endif %}
+  {% endfor %}
+{% endset %}
+
+{% switch context %}
+  {% case "rss" %}
+    {{ rss }}
+  {% default %}
+    {{ web }}
+{% endswitch %}
