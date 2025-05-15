@@ -55,7 +55,9 @@
   %}
 
   {% set projectsWithSecondStage =
-    projectsQuery.with(["projectRounds", "projectYearGroups"]).secondStage(
+    craft.entries.section("projects").with(
+      ["projectRounds", "projectYearGroups"]
+    ).secondStage(
       true
     ).relatedTo({
       targetElement: craft.categories().group(
