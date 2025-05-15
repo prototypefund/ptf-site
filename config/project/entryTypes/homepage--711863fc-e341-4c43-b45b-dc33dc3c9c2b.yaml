@@ -36,6 +36,40 @@ fieldLayouts:
             warning: null
             width: 100
           -
+            dateAdded: '2025-05-15T14:56:17+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: f4ddd6a2-288b-4881-a762-884e48b3f1f1 # Description
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9fe1be39-6f43-4ab8-ae31-f029b5ca2f87
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-05-15T14:59:20+00:00'
+            editCondition: null
+            elementCondition: null
+            fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # Link
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8a7ff0e5-b084-40f7-b321-8f7b46012fb8
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-05-02T11:39:53+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
@@ -43,6 +77,7 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-05-02T11:39:53+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 1bf40018-82e4-4e44-bbd6-6f49c132678d # Modules
             handle: null
@@ -65,6 +100,7 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-02-19T09:40:13+00:00'
+            editCondition: null
             elementCondition: null
             fieldUid: 0d857c68-7bb1-4ce7-b61f-671446aa8bb3 # SEO
             handle: null

@@ -1,5 +1,8 @@
 {% extends "_layouts/layout.twig" %}
 
+{% set description = entry.description %}
+{% set link = entry.genericLink %}
+
 {% set currentLanguage =
   craft.app.sites.currentSite.language|split("-")|last|lower
 %}
@@ -50,14 +53,27 @@
         </p>
       </text-animation>
 
-      <div
-        class="left-0 max-w-[449px] lg:absolute lg:bottom-0 lg:w-[449px] lg:max-w-none"
-      >
-        {% include "_rich-text/simple" with {
-          text: "<p>The Prototype Fund is the first low-threshold funding program for free developers in Germany who develop innovative open source software from society and for society.</p>",
-          size: "large"
-        } only %}
-      </div>
+      {% if (description|length) or (link|length) %}
+        <div
+          class="left-0 max-w-[489px] lg:absolute lg:bottom-0 lg:w-[489px] lg:max-w-none"
+        >
+          {% if description|length %}
+            <div class="mb-6">
+              {% include "_rich-text/simple" with {
+                text: description,
+                size: "large"
+              } only %}
+            </div>
+          {% endif %}
+
+          {% if link|length %}
+            {% include "_modules/button-generic-link" with {
+              link: link,
+              color: "light"
+            } only %}
+          {% endif %}
+        </div>
+      {% endif %}
     </div>
   </div>
 
