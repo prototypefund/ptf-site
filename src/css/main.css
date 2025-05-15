@@ -220,6 +220,17 @@
   details[open]::details-content {
     @apply [transition-behavior:allow-discrete] [block-size:auto];
   }
+
+  text-animation span {
+    border-right: 0.05em solid #eb13b9;
+    animation: caret 1s steps(1) infinite;
+  }
+
+  @keyframes caret {
+    50% {
+      border-color: transparent;
+    }
+  }
 }
 
 .text-link {

@@ -1,8 +1,80 @@
 {% extends "_layouts/layout.twig" %}
 
+{% set description = entry.description %}
+{% set link = entry.genericLink %}
+
+{% set currentLanguage =
+  craft.app.sites.currentSite.language|split("-")|last|lower
+%}
+
+{% set textConfig = {
+  de: [
+    {
+      text: "Ideen Erproben",
+      sizeStyles: "h-[102px] w-[235px] md:h-[162px] md:w-[480px] lg:h-auto xl:w-[590px]"
+    },
+    {
+      text: "Offenheit Schaffen",
+      sizeStyles: "h-[102px] w-[243px] md:h-[162px] md:w-[475px] xl:h-[202px] xl:w-[590px]"
+    }
+  ],
+  en: [
+    {
+      text: "Exploring ideas",
+      sizeStyles: "h-[102px] w-[280px] md:h-[162px] md:w-[480px] lg:h-auto xl:w-[590px]"
+    },
+    {
+      text: "Fostering openness",
+      sizeStyles: "h-[102px] w-[243px] md:h-[162px] md:w-[475px] xl:h-[202px] xl:w-[590px]"
+    }
+  ]
+} %}
+
 {% block content %}
-  <div class="text-gray flex h-[50vw] items-center justify-center">
-    Homepage header
+  <div
+    class="bg-rich-blue dark:bg-navy-blue px-2 py-5 text-white md:px-5 md:py-[60px] lg:h-[calc(100vh-146px)] lg:min-h-[700px]"
+  >
+    <div class="relative h-full">
+      <text-animation>
+        <p
+          class="font-surt mb-[60px] text-[40px] leading-[1.3] uppercase md:text-[80px] md:leading-[1] lg:mb-0 xl:text-[100px] {{
+          textConfig[currentLanguage][0].sizeStyles
+          }}"
+        >
+          {{ textConfig[currentLanguage][0].text }}
+        </p>
+
+        <p
+          class="font-surt mb-10 ml-auto text-right text-[40px] leading-[1.3] uppercase md:mb-[60px] md:text-[80px] md:leading-[1] lg:absolute lg:right-0 lg:bottom-0 lg:mb-0 xl:text-[100px] {{
+          textConfig[currentLanguage][1].sizeStyles
+          }}"
+        >
+          {{ textConfig[currentLanguage][1].text }}
+        </p>
+      </text-animation>
+
+      {% if (description|length) or (link|length) %}
+        <div
+          class="left-0 max-w-[489px] lg:absolute lg:bottom-0 lg:w-[489px] lg:max-w-none"
+        >
+          {% if description|length %}
+            <div class="mb-6">
+              {% include "_rich-text/simple" with {
+                text: description,
+                size: "large"
+              } only %}
+            </div>
+          {% endif %}
+
+          {% if link|length %}
+            {% include "_modules/button-generic-link" with {
+              link: link,
+              color: "light"
+            } only %}
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
   </div>
 
   {% include "_modules/modules" with {
