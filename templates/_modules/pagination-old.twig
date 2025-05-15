@@ -9,6 +9,8 @@
   "!text-gray-900 border-gray border-x dark:!text-white dark:border-gray-500"
 %}
 
+{% set params = params|default(params) %}
+
 {% if pagination.totalPages > 1 %}
   <div class="flex flex-row items-center justify-center">
     {% apply spaceless %}
@@ -24,13 +26,17 @@
       <span class="{{ itemClasses }} {{ spacerClasses }}">…</span>
     {% endif %}
     {% for page, url in pagination.getPrevUrls(offset) %}
-      <a class="{{ itemClasses }}" href="{{ _self.getUrl(url) }}">{{ page }}</a>
+      <a class="{{ itemClasses }}" href="{{ _self.getUrl(url, params) }}">
+        {{ page }}
+      </a>
     {% endfor %}
     <span class="{{ itemClasses }} {{ activeClasses }}">
       {{ pagination.currentPage }}
     </span>
     {% for page, url in pagination.getNextUrls(offset) %}
-      <a class="{{ itemClasses }}" href="{{ _self.getUrl(url) }}">{{ page }}</a>
+      <a class="{{ itemClasses }}" href="{{ _self.getUrl(url, params) }}">
+        {{ page }}
+      </a>
     {% endfor %}
     {% if pagination.totalPages > pagination.currentPage + offset + 1 %}
       <span class="{{ itemClasses }} {{ spacerClasses }}">…</span>
@@ -38,7 +44,7 @@
     {% if pagination.totalPages > pagination.currentPage + offset %}
       <a
         class="{{ itemClasses }}"
-        href="{{ _self.getUrl(pagination.lastUrl) }}"
+        href="{{ _self.getUrl(pagination.lastUrl, params) }}"
       >
         {{ pagination.totalPages }}
       </a>
@@ -47,8 +53,16 @@
   </div>
 {% endif %}
 
-{% macro getUrl(url) %}
+{% macro getUrl(url, params) %}
   {% apply spaceless %}
-  {{ (url|split("?")|first) ~ "?" ~ craft.app.request.queryString }}
+  {{ url|split("?")[0]
+    ~ (params|length
+      ? "?"
+        ~ (params
+          |map((values, k) => values|map(value => k ~ "=" ~ value))
+          |reduce((carry, item) => carry|merge(item), [])
+          |join("&")
+          |raw)
+      : "") }}
   {% endapply %}
 {% endmacro %}
