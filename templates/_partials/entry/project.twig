@@ -24,6 +24,7 @@
                 class="h-full w-full object-contain"
                 src="{{ image.url }}"
                 alt="{{ image.alt }}"
+                loading="lazy"
               />
             </div>
           </div>
@@ -32,6 +33,7 @@
             <img
               class="block h-full w-full object-cover"
               src="/static/images/patterns/project-fallback-pattern.svg"
+              loading="lazy"
             />
           </div>
         {% endif %}

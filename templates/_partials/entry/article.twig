@@ -56,7 +56,7 @@
         <div class="aspect-4/3">
           {% if image|length %}
             <img
-              class="block h-full w-full object-cover"
+              class="block aspect-4/3 h-full w-full object-cover"
               src="{{
               featured
                 ? image.getUrl("w2000__4_3")
@@ -64,6 +64,7 @@
               }}"
               srcSet="{{ macros.srcSetFourByThree(image) }}"
               alt="{{ image.alt }}"
+              loading="lazy"
             />
           {% else %}
             <div class="h-full bg-gray-100"></div>

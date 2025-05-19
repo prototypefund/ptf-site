@@ -39,5 +39,3 @@ export class TextAnimation extends HTMLElement {
     return new Promise((resolve) => setTimeout(resolve, ms));
   }
 }
-
-customElements.define("text-animation", TextAnimation);

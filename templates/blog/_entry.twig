@@ -55,7 +55,7 @@
         >
           {% if image|length %}
             <img
-              class="mb-6 max-w-[170px] md:mb-[60px]"
+              class="mb-6 aspect-5/4 max-w-[170px] md:mb-[60px]"
               src="{{ image.getUrl("w800__5_4") }}"
               srcSet="{{ macros.srcSetFiveByFour(image) }}"
               alt="{{ image.alt }}"
