@@ -4,16 +4,18 @@
 {% set website = person.website %}
 {% set size = size|default("medium") %}
 
-<div class="flex gap-2">
+<div class="">
   <h4 class="font-surt text-head-22 md:text-head-38 mb-3 uppercase md:mb-4">
     {{ person.title }}
-  </h4>
 
-  {% if pronouns|length %}
-    <span class="font-surt text-head-16 md:text-head-22 uppercase">
-      {{ pronouns }}
-    </span>
-  {% endif %}
+    {% if pronouns|length %}
+      <span
+        class="text-head-16 md:text-head-22 mt-[3px] ml-1 inline-block align-top md:mt-[2px]"
+      >
+        {{ pronouns }}
+      </span>
+    {% endif %}
+  </h4>
 </div>
 
 {% if (role|length) or (website|length) %}
