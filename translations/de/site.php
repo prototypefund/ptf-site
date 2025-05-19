@@ -62,7 +62,7 @@ return [
   "See Upcoming Events" => "Zu den zukünftigen Veranstaltungen",
   "Team Members" => "Team-Mitglieder",
   "Technologies" => "Technologien",
-  "The page you’re looking for doesn’t exist or has been moved. Please go back to the homepage." => "Die Seite, die Sie suchen, existiert nicht oder wurde verschoben. Bitte kehren Sie zur Startseite zurück.",
+  "The page you’re looking for doesn’t exist or has been moved. Please go back to the homepage." => "Die Seite, die du suchst, existiert nicht oder wurde verschoben. Bitte kehre zur Startseite zurück.",
   "Topics" => "Themen",
   "Upcoming Events" => "Bevorstehende Veranstaltungen",
   "Upcoming Talks and Conferences" => "Bevorstehende Vorträge und Konferenzen",
