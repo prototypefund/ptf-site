@@ -53,9 +53,11 @@
 
   {% if talks|length %}
     {% set content %}
-      {% for talk in talks %}
-        {{ talk.render() }}
-      {% endfor %}
+      <div class="mb-2.5 md:mb-0">
+        {% for talk in talks %}
+          {{ talk.render() }}
+        {% endfor %}
+      </div>
       {% include "_modules/pagination" with {
         pagination: pastTalksPagination,
         appendUrl: "#past-talks"

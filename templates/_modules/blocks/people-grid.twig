@@ -27,7 +27,7 @@
           class="not-first:border-gray grid grid-cols-1 not-first:border-t md:grid-cols-16 md:px-5 dark:border-gray-500"
         >
           <div
-            class="order-2 px-2 py-[60px] pt-5 pr-12 md:order-none md:col-span-8 md:px-0 md:py-11"
+            class="order-2 px-2 py-[50px] pt-5 md:order-none md:col-span-8 md:px-0 md:py-11 md:pr-12"
           >
             {% include "_modules/person-info" with {
               person: person
@@ -40,7 +40,7 @@
             <div class="md:h-full md:w-full">
               {% if image|length %}
                 <img
-                  class="block aspect-5/4 h-full w-full object-cover"
+                  class="block h-full w-full object-cover"
                   src="{{ image.getUrl("w1600__5_4") }}"
                   srcSet="{{ macros.srcSetFiveByFour(image) }}"
                   alt="{{ image.alt }}"

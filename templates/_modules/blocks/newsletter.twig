@@ -59,7 +59,9 @@
       class="border-navy-blue-100 border-t px-2 py-3 md:border-t-0 md:px-3 md:py-4 dark:border-[rgba(255,255,255,0.4)]"
     >
       {% if newsletterSideTitle %}
-        <h5 class="font-surt text-[20px]">{{ newsletterSideTitle }}</h5>
+        <h5 class="font-surt text-head-16 md:text-head-20">
+          {{ newsletterSideTitle }}
+        </h5>
       {% endif %}
     </div>
 
@@ -73,7 +75,7 @@
           {% set sideInfo = linkGroup.sideInfo %}
 
           <li
-            class="text-head-14 md:text-head-16 border-navy-blue-100 border-b first:!border-b last:border-0 md:h-[63px] dark:border-[rgba(255,255,255,0.4)]"
+            class="md:text-head-16 border-navy-blue-100 border-b text-[15px] first:!border-b last:border-0 md:h-[63px] dark:border-[rgba(255,255,255,0.4)]"
           >
             <a
               class="hover:bg-navy-blue-100 flex h-full items-center px-2 py-[18px] text-white uppercase transition-colors md:px-3 dark:border-[rgba(255,255,255,0.4)] dark:hover:bg-[rgba(255,255,255,0.1)]"
@@ -84,7 +86,7 @@
               {{ link.label }}
 
               {% if sideInfo %}
-                <span class="text-body-13 ml-auto uppercase opacity-70">
+                <span class="text-body-13 ml-auto normal-case opacity-70">
                   {{ sideInfo }}
                 </span>
               {% endif %}
