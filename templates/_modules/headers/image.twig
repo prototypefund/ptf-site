@@ -79,10 +79,11 @@
     >
       <div class="aspect-4/3">
         <img
-          class="block h-full w-full object-cover"
+          class="block aspect-4/3 h-full w-full object-cover"
           src="{{ image.getUrl("w1200__4_3") }}"
           srcSet="{{ macros.srcSetFourByThree(image) }}"
           alt="{{ image.alt }}"
+          loading="lazy"
         />
       </div>
       {% if caption|length %}
