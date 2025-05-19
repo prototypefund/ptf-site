@@ -27,7 +27,7 @@ return [
   "Light" => "Heller",
   "Matching Articles" => "Passende Artikel",
   "Matching Projects" => "Passende Projekte",
-  "More articles like this" => "Mehr Artikel wie dieser",
+  "More articles" => "Weitere Artikel",
   "More events more like this" => "Mehr Veranstaltungen wie diese",
   "More projects like this" => "Mehr Projekte wie dieses",
   "More upcoming events" => "Mehr bevorstehende Veranstaltungen",
