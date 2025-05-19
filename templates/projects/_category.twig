@@ -1,6 +1,8 @@
 {% extends "_layouts/layout.twig" %}
 
-{% set projectsQuery = craft.entries.section("projects").relatedTo(category) %}
+{% set projectsQuery =
+  craft.entries.section("projects").orderBy("title ASC").relatedTo(category)
+%}
 {% set indexEntry = craft.entries.section("projectsIndex").one() %}
 
 {% paginate projectsQuery.limit(14) as pagination, projects %}
