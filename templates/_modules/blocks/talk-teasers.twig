@@ -7,9 +7,11 @@
 
 {% set web %}
   {% set content %}
-    {% for talk in nextReads %}
-      {{ talk.render() }}
-    {% endfor %}
+    <div class="mb-2.5 md:mb-0">
+      {% for talk in nextReads %}
+        {{ talk.render() }}
+      {% endfor %}
+    </div>
   {% endset %}
 
   {% if nextReads|length %}

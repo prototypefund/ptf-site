@@ -49,9 +49,13 @@
         {{ heading }}
       </h2>
 
-      <div class="mt-6 md:mt-23 md:grid md:grid-cols-16">
+      <div
+        class="mt-6 text-center md:mt-23 md:grid md:grid-cols-16 md:text-left"
+      >
         {% if textColumnOne|length %}
-          <div class="md:col-span-7 md:col-start-2 md:pr-3.5">
+          <div
+            class="mb-3 last:mb-0 md:col-span-7 md:col-start-2 md:mb-0 md:pr-3.5"
+          >
             {% include "_rich-text/simple" with {
               text: textColumnOne,
               size: "medium"

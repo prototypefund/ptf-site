@@ -80,9 +80,11 @@
 
   {% if upcomingTalks|length %}
     {% set content %}
-      {% for talk in upcomingTalks %}
-        {{ talk.render() }}
-      {% endfor %}
+      <div class="mb-2.5 md:mb-0">
+        {% for talk in upcomingTalks %}
+          {{ talk.render() }}
+        {% endfor %}
+      </div>
     {% endset %}
 
     <div class="mt-10">
@@ -96,9 +98,11 @@
 
   {% if pastTalks|length %}
     {% set content %}
-      {% for talk in pastTalks %}
-        {{ talk.render() }}
-      {% endfor %}
+      <div class="mb-2.5 md:mb-0">
+        {% for talk in pastTalks %}
+          {{ talk.render() }}
+        {% endfor %}
+      </div>
     {% endset %}
 
     <div class="mt-10">
