@@ -7,7 +7,7 @@
 <time class="text-head-18 flex" datetime="{{ date|date("Y-m-d") }}">
   {{ date|date("d/m/Y") }}{% if times|length %}
     <span
-      class="before:bg-gray flex items-center pl-1.5 before:mr-1.5 before:h-[15px] before:w-[1px] before:content-['']"
+      class="before:bg-gray flex items-center pl-1.5 before:mr-1.5 before:h-[15px] before:w-[1px] before:content-[''] dark:before:bg-gray-500"
     >
       {{ times|map(time => time|date("H:i"))|join("-") }}
     </span>
