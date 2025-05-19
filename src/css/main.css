@@ -42,25 +42,25 @@
   --text-head-46: calc(46 / 16 * 1rem);
   --text-head-46--line-height: 1.2;
   --text-head-38: calc(38 / 16 * 1rem);
-  --text-head-38--line-height: 1.2;
+  --text-head-38--line-height: 1.3;
   --text-head-36: calc(36 / 16 * 1rem);
-  --text-head-36--line-height: 1.2;
+  --text-head-36--line-height: 1.3;
   --text-head-32: calc(32 / 16 * 1rem);
-  --text-head-32--line-height: 1.2;
+  --text-head-32--line-height: 1.3;
   --text-head-28: calc(28 / 16 * 1rem);
-  --text-head-28--line-height: 1.2;
+  --text-head-28--line-height: 1.3;
   --text-head-24: calc(24 / 16 * 1rem);
-  --text-head-24--line-height: 1.2;
+  --text-head-24--line-height: 1.3;
   --text-head-22: calc(22 / 16 * 1rem);
   --text-head-22--line-height: 1.4;
   --text-head-20: calc(20 / 16 * 1rem);
-  --text-head-20--line-height: 1.2;
+  --text-head-20--line-height: 1.4;
   --text-head-18: calc(18 / 16 * 1rem);
-  --text-head-18--line-height: 1.2;
+  --text-head-18--line-height: 1.35;
   --text-head-16: calc(16 / 16 * 1rem);
-  --text-head-16--line-height: 1.2;
+  --text-head-16--line-height: 1.3;
   --text-head-14: calc(14 / 16 * 1rem);
-  --text-head-14--line-height: 1.2;
+  --text-head-14--line-height: 1.35;
 
   --text-body-32: calc(32 / 16 * 1rem);
   --text-body-32--line-height: 1.4;
@@ -71,7 +71,7 @@
   --text-body-22: calc(22 / 16 * 1rem);
   --text-body-22--line-height: 1.5;
   --text-body-20: calc(20 / 16 * 1rem);
-  --text-body-20--line-height: 1.5;
+  --text-body-20--line-height: 1.44;
   --text-body-18: calc(18 / 16 * 1rem);
   --text-body-18--line-height: 1.5;
   --text-body-16: calc(16 / 16 * 1rem);
@@ -222,7 +222,7 @@
   }
 
   text-animation span {
-    border-right: 0.05em solid #eb13b9;
+    @apply border-hot-pink border-r-[0.05em];
     animation: caret 1s steps(1) infinite;
   }
 
