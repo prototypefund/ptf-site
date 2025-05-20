@@ -23,7 +23,7 @@ export class MainNav extends HTMLElement {
     });
 
     links.addEventListener("touchend", () => {
-      header.classList.remove("group-menu-open");
+      links.classList.remove("group-menu-open");
     });
 
     document.onkeydown = function (event) {
