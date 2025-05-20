@@ -14,7 +14,9 @@
 <article class="border-gray mb-4 border-t md:mb-5 dark:border-gray-500">
   <a class="block pt-2 md:pt-2.5" href="{{ entry.getUrl() }}">
     <div class="group flex lg:grid lg:grid-cols-11">
-      <div class="mr-2 w-[86px] md:mr-3.5 lg:col-span-2 lg:w-auto">
+      <div
+        class="mr-2 w-[86px] min-w-[86px] shrink-0 md:mr-3.5 lg:col-span-2 lg:w-auto"
+      >
         {% if image|length %}
           <div
             class="flex aspect-square items-center justify-center bg-gray-100 p-[10px] md:p-2.5"

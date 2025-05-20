@@ -221,6 +221,10 @@
     @apply [transition-behavior:allow-discrete] [block-size:auto];
   }
 
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
   text-animation span {
     @apply border-hot-pink border-r-[0.05em];
     animation: caret 1s steps(1) infinite;
