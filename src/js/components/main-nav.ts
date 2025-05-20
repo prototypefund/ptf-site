@@ -7,8 +7,9 @@ export class MainNav extends HTMLElement {
     const header = this.querySelector("[data-header]");
     const menu = this.querySelector("[data-sandwich]");
     const links = this.querySelector("[data-links]");
+    const linkGroups = this.querySelector("[data-link-groups]");
 
-    if (!header || !menu || !links) {
+    if (!header || !menu || !links || !linkGroups) {
       return;
     }
 
@@ -18,7 +19,7 @@ export class MainNav extends HTMLElement {
       header.classList.toggle("menu-open");
     });
 
-    links.addEventListener("touchstart", (e) => {
+    linkGroups.addEventListener("touchstart", (e) => {
       e.stopPropagation();
       links.classList.toggle("group-menu-open");
     });

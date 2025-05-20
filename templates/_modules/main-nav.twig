@@ -80,7 +80,10 @@
             data-links
             class="group hidden overflow-y-auto md:block lg:overflow-visible [.menu-open_&]:block [.menu-open_&]:md:block"
           >
-            <ul class="md:border-gray md:flex md:border-b dark:border-gray-500">
+            <ul
+              class="md:border-gray md:flex md:border-b dark:border-gray-500"
+              data-link-groups
+            >
               {% for linkGroup in navLinks %}
                 {% set links = linkGroup.links %}
 
