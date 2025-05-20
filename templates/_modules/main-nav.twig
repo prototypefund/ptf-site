@@ -77,6 +77,7 @@
 
         {% if navLinks|length %}
           <div
+            data-links
             class="group hidden overflow-y-auto md:block lg:overflow-visible [.menu-open_&]:block [.menu-open_&]:md:block"
           >
             <ul class="md:border-gray md:flex md:border-b dark:border-gray-500">
@@ -124,7 +125,7 @@
             </ul>
 
             <ul
-              class="border-gray absolute -z-10 hidden w-full border-b bg-white opacity-0 transition-opacity group-focus-within:z-2 group-focus-within:opacity-100 group-hover:z-2 group-hover:opacity-100 md:flex dark:border-gray-500 dark:bg-gray-900"
+              class="border-gray absolute -z-10 hidden w-full border-b bg-white opacity-0 transition-opacity group-focus-within:z-2 group-focus-within:opacity-100 group-hover:z-2 group-hover:opacity-100 md:flex dark:border-gray-500 dark:bg-gray-900 [.group-menu-open_&]:z-2 [.group-menu-open_&]:opacity-100"
             >
               {% for linkGroup in navLinks %}
                 {% set links = linkGroup.links %}

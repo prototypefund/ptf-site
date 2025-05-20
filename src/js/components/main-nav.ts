@@ -6,8 +6,9 @@ export class MainNav extends HTMLElement {
   connectedCallback() {
     const header = this.querySelector("[data-header]");
     const menu = this.querySelector("[data-sandwich]");
+    const links = this.querySelector("[data-links]");
 
-    if (!header || !menu) {
+    if (!header || !menu || !links) {
       return;
     }
 
@@ -15,6 +16,14 @@ export class MainNav extends HTMLElement {
       const menuOpening = !header.classList.contains("menu-open");
       menuOpening ? lockPageScroll() : unlockPageScroll();
       header.classList.toggle("menu-open");
+    });
+
+    links.addEventListener("touchstart", () => {
+      links.classList.add("group-menu-open");
+    });
+
+    links.addEventListener("touchend", () => {
+      header.classList.remove("group-menu-open");
     });
 
     document.onkeydown = function (event) {
