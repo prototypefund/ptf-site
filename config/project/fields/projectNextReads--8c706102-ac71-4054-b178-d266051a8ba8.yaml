@@ -6,12 +6,15 @@ searchable: false
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
-  maxRelations: 4
+  maxRelations: null
   minRelations: null
   selectionLabel: null
   showCardsInGrid: false
   showSiteMenu: false
+  showUnpermittedEntries: true
+  showUnpermittedSections: true
   sources:
     - 'section:de820dbc-bd7e-4a0f-9554-3d750480d2a4' # Projects
   targetSiteId: null

@@ -6,12 +6,15 @@ searchable: false
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
-  maxRelations: 4
+  maxRelations: null
   minRelations: null
   selectionLabel: 'Add entries as next reads'
   showCardsInGrid: false
   showSiteMenu: true
+  showUnpermittedEntries: true
+  showUnpermittedSections: true
   sources:
     - 'section:375cd22a-99b6-4667-8ca6-caf2572459ed' # Blog
   targetSiteId: null
