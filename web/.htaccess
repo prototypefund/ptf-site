@@ -5,6 +5,15 @@
     RewriteCond %{HTTP:X-Forwarded-Proto} !https
     RewriteRule ^(.*)$ https://%{SERVER_NAME}%{REQUEST_URI} [R,L]
 
+    # Redirect ptf-stage.frb.io to https://staging.prototypefund.de/
+    RewriteCond %{HTTP_HOST} ^ptf\-stage\.frb\.io$
+    RewriteRule ^(.*)$ https://staging.prototypefund.de/$1 [R=301,L]
+
+    # Uncomment after DNS switch!
+    # # Redirect ptf-prod.frb.io to https://www.prototypefund.de/$1
+    # RewriteCond %{HTTP_HOST} ^ptf\-prod\.frb\.io$
+    # RewriteRule ^(.*)$ https://www.prototypefund.de/$1 [R=301,L]
+
     # Send would-be 404 requests to Craft
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteCond %{REQUEST_FILENAME} !-d
