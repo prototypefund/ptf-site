@@ -39,6 +39,22 @@ settings:
             -
               - type
               - url
+      -
+        - col3
+        -
+          __assoc__:
+            -
+              - heading
+              - 'Link Email'
+            -
+              - handle
+              - linkEmail
+            -
+              - width
+              - ''
+            -
+              - type
+              - email
   defaults:
     -
       __assoc__:
@@ -47,6 +63,9 @@ settings:
           - ''
         -
           - col2
+          - ''
+        -
+          - col3
           - ''
   maxRows: null
   minRows: null

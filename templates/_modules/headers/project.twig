@@ -3,11 +3,22 @@
 {% set claim = entry.headline %}
 {% set dateUpdated = entry.dateUpdated %}
 {% set image = entry.mainImage.eagerly().one() %}
-{% set projectLinks =
-  entry.projectLinks
-    |default([])
-    |filter(item => item.name is not empty and item.linkURL is not empty)
-%}
+{% set projectLinks = [] %}
+
+{% for item in entry.projectLinks %}
+  {% if item.linkEmail|length %}
+    {% set projectLinks =
+      [
+        {
+          name: item.name,
+          linkURL: "mailto:#{item.linkEmail}"
+        }
+      ]|merge(projectLinks)
+    %}
+  {% elseif item.linkURL|length %}
+    {% set projectLinks = [item]|merge(projectLinks) %}
+  {% endif %}
+{% endfor %}
 
 {% set demoLink =
   projectLinks
