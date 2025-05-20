@@ -13,8 +13,8 @@
 
 <article class="border-gray mb-4 border-t md:mb-5 dark:border-gray-500">
   <a class="block pt-2 md:pt-2.5" href="{{ entry.getUrl() }}">
-    <div class="group flex md:grid md:grid-cols-11">
-      <div class="mr-2 w-[86px] md:col-span-2 md:mr-3.5 md:w-auto">
+    <div class="group flex lg:grid lg:grid-cols-11">
+      <div class="mr-2 w-[86px] md:mr-3.5 lg:col-span-2 lg:w-auto">
         {% if image|length %}
           <div
             class="flex aspect-square items-center justify-center bg-gray-100 p-[10px] md:p-2.5"
@@ -39,7 +39,7 @@
         {% endif %}
       </div>
 
-      <div class="flex-1 md:col-span-9">
+      <div class="flex-1 lg:col-span-9">
         {% if macros.inFunding(entry)|boolean %}
           <div class="mb-1 md:mb-2">
             {% include "_modules/pill" with {
