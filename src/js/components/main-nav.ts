@@ -18,12 +18,17 @@ export class MainNav extends HTMLElement {
       header.classList.toggle("menu-open");
     });
 
-    links.addEventListener("touchstart", () => {
-      links.classList.add("group-menu-open");
+    links.addEventListener("touchstart", (e) => {
+      e.stopPropagation();
+      links.classList.toggle("group-menu-open");
     });
 
-    links.addEventListener("touchend", () => {
-      links.classList.remove("group-menu-open");
+    document.addEventListener("touchstart", (e) => {
+      const target = e.target as HTMLElement;
+
+      if (target && !links.contains(target)) {
+        links.classList.remove("group-menu-open");
+      }
     });
 
     document.onkeydown = function (event) {
