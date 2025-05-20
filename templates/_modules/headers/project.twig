@@ -8,15 +8,17 @@
 {% for item in entry.projectLinks %}
   {% if item.linkEmail|length %}
     {% set projectLinks =
-      [
-        {
-          name: item.name,
-          linkURL: "mailto:#{item.linkEmail}"
-        }
-      ]|merge(projectLinks)
+      projectLinks|merge(
+        [
+          {
+            name: item.name,
+            linkURL: "mailto:#{item.linkEmail}"
+          }
+        ]
+      )
     %}
   {% elseif item.linkURL|length %}
-    {% set projectLinks = [item]|merge(projectLinks) %}
+    {% set projectLinks = projectLinks|merge([item]) %}
   {% endif %}
 {% endfor %}
 
