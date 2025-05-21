@@ -22,7 +22,7 @@
         <author>{{ entry.author.email }} ({{ seomatic.site.siteName }})</author>
         <guid>{{ entry.url }}</guid>
         <description>
-          {% set nextReads = entry.nextReads.eagerly().all()|default(entry.projectNextReads.eagerly().all()|default(null)) %}
+          {% set nextReads = entry.nextReads.all()|default(entry.projectNextReads.all()|default(null)) %}
           {% set mainImage = entry.mainImage.eagerly().one()|default(null) %}
           {% set text = entry.textEntryTypes|default(null) %}
           {% set modules = entry.modules|default([]) %}

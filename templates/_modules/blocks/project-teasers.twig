@@ -1,5 +1,5 @@
 {% set context = context|default("web") %}
-{% set nextReads = module.projectNextReads.eagerly().all() %}
+{% set nextReads = module.projectNextReads.all() %}
 
 {% if (nextReads|length) == 0 %}
   {% set nextReads = craft.entries.section("projects").limit(4).all() %}

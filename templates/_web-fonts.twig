@@ -1,8 +1,10 @@
-{% set inclusiveSansRegular = fonts.inclusiveSansRegular.one() %}
-{% set inclusiveSansSemibold = fonts.inclusiveSansSemibold.one() %}
-{% set inclusiveSansSemiboldItalic = fonts.inclusiveSansSemiboldItalic.one() %}
-{% set surtRegular = fonts.surtRegular.one() %}
-{% set surtBold = fonts.surtBold.one() %}
+{% set inclusiveSansRegular = fonts.inclusiveSansRegular.eagerly().one() %}
+{% set inclusiveSansSemibold = fonts.inclusiveSansSemibold.eagerly().one() %}
+{% set inclusiveSansSemiboldItalic =
+  fonts.inclusiveSansSemiboldItalic.eagerly().one()
+%}
+{% set surtRegular = fonts.surtRegular.eagerly().one() %}
+{% set surtBold = fonts.surtBold.eagerly().one() %}
 
 <style>
   {% if inclusiveSansRegular|length %}

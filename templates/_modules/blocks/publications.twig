@@ -24,8 +24,8 @@
       {% endif %}
 
       {% for item in publications %}
-        {% set publication = item.publication.one() %}
-        {% set image = item.publicationCover.one() %}
+        {% set publication = item.publication.eagerly().one() %}
+        {% set image = item.publicationCover.eagerly().one() %}
         {% set subheading = item.subheading %}
 
         <a
@@ -87,8 +87,8 @@
     } only %}
   {% endif %}
   {% for item in publications %}
-    {% set publication = item.publication.one() %}
-    {% set image = item.publicationCover.one() %}
+    {% set publication = item.publication.eagerly().one() %}
+    {% set image = item.publicationCover.eagerly().one() %}
     {% set subheading = item.subheading %}
 
     {% if (image|length) and (publication|length) %}

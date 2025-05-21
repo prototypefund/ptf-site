@@ -63,7 +63,7 @@
 
           {% if teaserText is empty %}
             {% set sideHeadingText =
-              result.modules.type("sideHeadingText").one()
+              result.modules.type("sideHeadingText").eagerly().one()
             %}
             {% if sideHeadingText|length %}
               {% set teaserText = sideHeadingText.title ~ ": "

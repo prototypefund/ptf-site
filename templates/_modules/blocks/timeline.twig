@@ -1,5 +1,5 @@
 {% set context = context|default("web") %}
-{% set timeline = module.timeline.one() %}
+{% set timeline = module.timeline.eagerly().one() %}
 
 {% set web %}
   {% set content %}

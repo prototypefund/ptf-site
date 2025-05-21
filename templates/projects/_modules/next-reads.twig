@@ -1,8 +1,8 @@
-{% set nextReads = entry.projectNextReads.eagerly().all() %}
+{% set nextReads = entry.projectNextReads.all() %}
 
 {% if not nextReads|length %}
-  {% set topic = entry.projectTopics.one() %}
-  {% set technology = entry.projectTechnologies.one() %}
+  {% set topic = entry.projectTopics.eagerly().one() %}
+  {% set technology = entry.projectTechnologies.eagerly().one() %}
 
   {% set baseQuery =
     craft.entries.section("projects").id("not " ~ entry.id).with(

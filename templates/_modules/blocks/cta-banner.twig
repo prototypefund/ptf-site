@@ -1,5 +1,5 @@
 {% set context = context|default("web") %}
-{% set ctaBanner = module.ctaBanner.one() %}
+{% set ctaBanner = module.ctaBanner.eagerly().one() %}
 
 {% set web %}
   {% if ctaBanner|length %}

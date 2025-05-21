@@ -1,4 +1,4 @@
-{% set nextReads = entry.nextReads.eagerly().all() %}
+{% set nextReads = entry.nextReads.all() %}
 
 {% if (nextReads|length) == 0 %}
   {% set nextReads =

@@ -76,7 +76,9 @@
 
           {% if fundingStatus|length %}
             {% set category =
-              entry.projectRounds.one()|default(entry.projectYearGroups.one())
+              entry.projectRounds.eagerly().one()|default(
+                entry.projectYearGroups.eagerly().one()
+              )
             %}
             {% set startDate = category.startDate|default(null) %}
             {% set endDateRegular = category.endDateRegular|default(null) %}

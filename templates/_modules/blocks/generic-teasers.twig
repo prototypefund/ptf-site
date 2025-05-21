@@ -7,7 +7,7 @@
 {% set web %}
   {% set content %}
     {% for teaser in teasers %}
-      {% set image = teaser.mainImage.one() %}
+      {% set image = teaser.mainImage.eagerly().one() %}
       {% set link = teaser.genericLink %}
       <div
         class="group/generic border-gray grid grid-cols-1 border-t py-3 md:mb-8 md:grid-cols-16 md:py-0 dark:border-gray-500"
@@ -71,7 +71,7 @@
     {{ sideLink.getLink() }}
   {% endif %}
   {% for teaser in teasers %}
-    {% set image = teaser.mainImage.one() %}
+    {% set image = teaser.mainImage.eagerly().one() %}
     {% set link = teaser.genericLink %}
 
     {% if image %}
