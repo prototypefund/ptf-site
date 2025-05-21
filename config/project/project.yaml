@@ -1,4 +1,4 @@
-dateModified: 1747743940
+dateModified: 1747833584
 elementSources:
   craft\elements\Entry:
     -
@@ -427,7 +427,7 @@ plugins:
             - compressCachedValues
             - ''
       cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
-      cachingEnabled: false
+      cachingEnabled: true
       debug: false
       defaultCacheControlHeader: 'no-cache, no-store, must-revalidate'
       deployerType: putyourlightson\blitz\drivers\deployers\DummyDeployer
@@ -470,17 +470,6 @@ plugins:
             -
               - uriPattern
               - knock-knock/who-is-there
-        -
-          __assoc__:
-            -
-              - enabled
-              - '1'
-            -
-              - siteId
-              - ''
-            -
-              - uriPattern
-              - projects
       generatePagesWithQueryStringParams: true
       hintsEnabled: true
       includedQueryStringParams:
@@ -538,6 +527,7 @@ plugins:
       refreshCacheWhenElementMovedInStructure: true
       refreshCacheWhenElementSavedNotLive: false
       refreshCacheWhenElementSavedUnchanged: false
+      refreshExpiredCacheAfterVisit: true
       refreshMode: 3
       sendPoweredByHeader: true
       ssiEnabled: false
