@@ -57,12 +57,7 @@
   {% apply spaceless %}
   {{ url|split("?")[0]
     ~ (params|length
-      ? "?"
-        ~ (params
-          |map((values, k) => values|map(value => k ~ "=" ~ value))
-          |reduce((carry, item) => carry|merge(item), [])
-          |join("&")
-          |raw)
+      ? "?" ~ craft.customQueryStringParser.toQueryString(params)
       : "") }}
   {% endapply %}
 {% endmacro %}
