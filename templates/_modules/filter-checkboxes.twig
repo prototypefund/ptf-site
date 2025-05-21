@@ -6,8 +6,8 @@
       <a
         class="{{
         filter.isActive
-          ? "before:bg-black before:bg-tick-white"
-          : "before:bg-gray-300"
+          ? "before:bg-tick-white before:bg-black dark:before:bg-white dark:before:bg-tick-black"
+          : "before:bg-gray-300 dark:before:bg-gray-700"
         }} text-head-16 flex items-start gap-[10px] before:block before:min-h-[18px] before:min-w-[18px] before:rounded-[2px] before:bg-center before:bg-no-repeat before:content-['']"
         href="{{ filter.url }}"
       >

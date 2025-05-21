@@ -160,32 +160,35 @@
     alignment: entry.headerAlignment.value
   } only %}
 
+  {% set title %}
+    <h2 class="font-surt text-head-20 md:text-head-24">
+      {{ params|length ? "Matching Projects"|t : "All Projects"|t }}
+      <span class="text-rich-blue dark:text-sky-blue">
+        [{{ projectsQuery.count() }}]
+      </span>
+    </h2>
+  {% endset %}
+
   <div
     id="list"
     class="mt-5 mb-10 px-2 md:mt-9 md:grid md:grid-cols-12 md:px-5 lg:grid-cols-16"
   >
-    <div class="hidden md:col-span-3 md:block lg:col-span-4">
-      <h2 class="font-surt text-head-24 mb-5">{{ "Filter projects"|t }}</h2>
-      {% include "projects/_modules/filters" only %}
+    <div class="relative md:col-span-3 lg:col-span-4">
+      <div class="md:hidden">
+        {{ title }}
+      </div>
+      {% include "projects/_modules/project-filters" only %}
     </div>
 
     <div class="md:col-span-12 md:col-start-5 lg:col-span-11 lg:col-start-6">
       <div class="mb-[30px] md:mb-5 md:flex md:items-center">
-        <h2 class="font-surt text-head-20 md:text-head-24">
-          {{ params|length ? "Matching Projects"|t : "All Projects"|t }}
-          <span class="text-rich-blue dark:text-sky-blue">
-            [{{ projectsQuery.count() }}]
-          </span>
-        </h2>
+        <div class="hidden md:block">
+          {{ title }}
+        </div>
 
         {% if params|length %}
           <div class="ml-auto hidden md:block">
-            <a
-              class="text-ui-16 after:bg-close dark:after:bg-close-white flex items-center gap-[10px] uppercase after:block after:h-[18px] after:w-[18px] after:bg-center after:bg-no-repeat after:content-['']"
-              href="{{ "/" ~ craft.app.request.pathInfo }}"
-            >
-              {{ "Reset filters"|t }}
-            </a>
+            {% include "projects/_modules/reset-filters" only %}
           </div>
         {% endif %}
       </div>
