@@ -18,7 +18,9 @@
         target="{{ target }}"
         {{ target == "_blank" ? 'rel="noopener noreferrer"' }}
       >
-        <span class="group-hover:decoration-sky-blue group-hover:underline">
+        <span
+          class="group-hover:decoration-sky-blue truncate group-hover:underline"
+        >
           {{ link.label }}
         </span>
       </a>
