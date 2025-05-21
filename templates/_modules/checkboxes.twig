@@ -1,0 +1,18 @@
+{% set filters = filters|default([]) %}
+
+<ul>
+  {% for filter in filters %}
+    <li>
+      <a
+        class="{{
+        filter.isActive
+          ? "before:bg-black before:bg-tick-white"
+          : "before:bg-gray-300"
+        }} text-head-16 flex items-start gap-[10px] before:block before:min-h-[18px] before:min-w-[18px] before:rounded-[2px] before:bg-center before:bg-no-repeat before:content-['']"
+        href="{{ filter.url }}"
+      >
+        {{ filter.title }}
+      </a>
+    </li>
+  {% endfor %}
+</ul>

@@ -50,7 +50,7 @@
         {{ "Filter by category"|t }}
       </h3>
 
-      {% include "_modules/filters" with {
+      {% include "_modules/filter-buttons" with {
         filters: allArticles|merge(categories)
       } only %}
     </div>

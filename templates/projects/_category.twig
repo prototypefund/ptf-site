@@ -38,7 +38,7 @@
           {{ "Filter by category"|t }}
         </h3>
 
-        {% include "_modules/filters" with {
+        {% include "_modules/filter-buttons" with {
           filters: categories|map(
             c => c|merge({
               url: c.url ~ "#list",

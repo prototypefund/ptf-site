@@ -24,4 +24,10 @@ use craft\helpers\App;
 
 return [
     'id' => App::env('CRAFT_APP_ID') ?: 'CraftCMS',
+    'modules' => [
+        'query-string-parser' => [
+            'class' => \modules\QueryStringParserModule::class,
+        ],
+    ],
+    'bootstrap' => ['query-string-parser'],
 ];

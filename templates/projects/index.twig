@@ -1,45 +1,20 @@
 {% extends "_layouts/layout.twig" %}
 
-{% set queryString = craft.app.request.queryString %}
-{% set params = {} %}
-
-{% if queryString %}
-  {% for pair in queryString|split("&") %}
-    {% if pair %}
-      {% set parts = pair|split("=") %}
-      {% set key = parts[0] %}
-
-      {% if key != "p" %}
-        {% set value = parts[1] is defined ? parts[1] : null %}
-
-        {% if params[key] is defined %}
-          {% set params =
-            params|merge({
-              (key): params[key]|merge([value])
-            })
-          %}
-        {% else %}
-          {% set params =
-            params|merge({
-              (key): [value]
-            })
-          %}
-        {% endif %}
-      {% endif %}
-    {% endif %}
-  {% endfor %}
-{% endif %}
+{% set params = craft.customQueryStringParser.getQueryParams() %}
+{% set yearGroupParams =
+  craft.customQueryStringParser.getQueryParam("year-group")
+%}
+{% set roundParams = craft.customQueryStringParser.getQueryParam("round") %}
+{% set topicParams = craft.customQueryStringParser.getQueryParam("topic") %}
+{% set technologyParams =
+  craft.customQueryStringParser.getQueryParam("technology")
+%}
+{% set licenseParams = craft.customQueryStringParser.getQueryParam("license") %}
+{% set inFundingParam = "inFunding"
+  in craft.customQueryStringParser.getQueryParam("status")
+%}
 
 {% set projectsQuery = craft.entries.section("projects") %}
-
-{% set yearGroupParams = params["year-group"]|default([]) %}
-{% set roundParams = params["round"]|default([]) %}
-{% set topicParams = params["topic"]|default([]) %}
-{% set technologyParams = params["technology"]|default([]) %}
-{% set licenseParams = params["license"]|default([]) %}
-{% set inFundingParam =
-  (craft.app.request.getParam("status") == "inFunding")|default(false)
-%}
 
 {% if inFundingParam|length %}
   {% set projectsWithoutSecondStage =
@@ -175,12 +150,6 @@
 
 {% paginate projectsQuery as pagination, projects %}
 
-{% set yearGroups = craft.categories.group("projectYearGroups").all() %}
-{% set rounds = craft.categories.group("projectRounds").all() %}
-{% set topics = craft.categories.group("projectTopics").all() %}
-{% set technologies = craft.categories.group("projectTechnologies").all() %}
-{% set licenses = craft.categories.group("projectLicenses").all() %}
-
 {% block content %}
   {% include "_modules/headers/simple" with {
     headline: entry.headline|default(entry.title),
@@ -197,101 +166,7 @@
   >
     <div class="hidden md:col-span-3 md:block lg:col-span-4">
       <h2 class="font-surt text-head-24 mb-5">{{ "Filter projects"|t }}</h2>
-
-      <div class="border-gray mb-4 border-t pt-[10px] dark:border-gray-500">
-        <h3
-          class="md:text-body-16 mb-2 text-[15px] text-gray-600 uppercase dark:text-white"
-        >
-          {{ "Funding status"|t }}
-        </h3>
-
-        {% include "projects/_modules/checkbox-filter" with {
-          key: "status",
-          value: "inFunding",
-          text: "Only show currently funded projects"|t,
-          params
-        } only %}
-      </div>
-
-      {% if yearGroups|length %}
-        <div class="border-gray mb-4 border-t pt-[10px] dark:border-gray-500">
-          <h3
-            class="md:text-body-16 mb-2 text-[15px] text-gray-600 uppercase dark:text-white"
-          >
-            {{ "Year Groups (from 2025)"|t }}
-          </h3>
-
-          {% include "projects/_modules/categories-filter" with {
-            key: "year-group",
-            categories: yearGroups,
-            params
-          } only %}
-        </div>
-      {% endif %}
-
-      {% if rounds|length %}
-        <div class="border-gray mb-4 border-t pt-[10px] dark:border-gray-500">
-          <h3
-            class="md:text-body-16 mb-2 text-[15px] text-gray-600 uppercase dark:text-white"
-          >
-            {{ "Rounds (2016 – 2025)"|t }}
-          </h3>
-
-          {% include "projects/_modules/categories-filter" with {
-            key: "round",
-            categories: rounds,
-            params
-          } only %}
-        </div>
-      {% endif %}
-
-      {% if topics|length %}
-        <div class="border-gray mb-4 border-t pt-[10px] dark:border-gray-500">
-          <h3
-            class="md:text-body-16 mb-2 text-[15px] text-gray-600 uppercase dark:text-white"
-          >
-            {{ "Topics"|t }}
-          </h3>
-
-          {% include "projects/_modules/categories-filter" with {
-            key: "topic",
-            categories: topics,
-            params
-          } only %}
-        </div>
-      {% endif %}
-
-      {% if technologies|length %}
-        <div class="border-gray mb-4 border-t pt-[10px] dark:border-gray-500">
-          <h3
-            class="md:text-body-16 mb-2 text-[15px] text-gray-600 uppercase dark:text-white"
-          >
-            {{ "Technologies"|t }}
-          </h3>
-
-          {% include "projects/_modules/categories-filter" with {
-            key: "technology",
-            categories: technologies,
-            params
-          } only %}
-        </div>
-      {% endif %}
-
-      {% if licenses|length %}
-        <div class="border-gray mb-4 border-t pt-[10px] dark:border-gray-500">
-          <h3
-            class="md:text-body-16 mb-2 text-[15px] text-gray-600 uppercase dark:text-white"
-          >
-            {{ "Licenses"|t }}
-          </h3>
-
-          {% include "projects/_modules/categories-filter" with {
-            key: "license",
-            categories: licenses,
-            params
-          } only %}
-        </div>
-      {% endif %}
+      {% include "projects/_modules/filters" only %}
     </div>
 
     <div class="md:col-span-12 md:col-start-5 lg:col-span-11 lg:col-start-6">
