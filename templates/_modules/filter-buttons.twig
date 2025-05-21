@@ -1,13 +1,18 @@
 {% set filters = filters|default([]) %}
+{% set size = size|default("small") %}
 
 <ul class="flex flex-wrap gap-1">
   {% for filter in filters %}
     <li>
       <a
-        class="text-body-14 block rounded-[2px] border px-1 py-0.5 {{
+        class="{{
+        size == "large"
+          ? "text-body-16 md:text-body-14"
+          : "text-body-14"
+        }} block rounded-[2px] border px-1 py-0.5{{
         filter.isActive
-          ? "bg-gray-900 border-gray-900 text-white dark:bg-gray-100 dark:text-gray-900"
-          : "hover:bg-gray-100 border-gray dark:border-gray-500 dark:hover:text-gray-900"
+          ? " border-gray-900 bg-gray-900 text-white dark:bg-gray-100 dark:text-gray-900"
+          : " border-gray hover:bg-gray-100 dark:border-gray-500 dark:hover:text-gray-900"
         }} transition-colors active:border-gray-900 active:bg-gray-900 active:text-white"
         href="{{ filter.url }}"
       >
