@@ -37,7 +37,7 @@ return GeneralConfig::create()
     // never upscale images
     ->upscaleImages(false)
     // limit entry revisions to a sensible amount
-    ->maxRevisions(10)
+    ->maxRevisions(0)
     // the maximum upload file size allowed (50MB)
     ->maxUploadFileSize(52428800)
     // Disable template caching as the Blitz plugin will handle that
