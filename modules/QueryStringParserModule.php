@@ -40,7 +40,7 @@ class QueryStringParserModule extends Module
     }
 
     /**
-     * Returns a specific parsed query parameter (array or null).
+     * Returns a specific parsed query parameter.
      */
     public function getQueryParam(string $name): array
     {
