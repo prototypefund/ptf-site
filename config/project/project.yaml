@@ -1,4 +1,4 @@
-dateModified: 1747833584
+dateModified: 1747946250
 elementSources:
   craft\elements\Entry:
     -
@@ -217,6 +217,7 @@ meta:
     4fd1e89f-c494-4e78-ae99-20dbd74e4f9b: Publications # Publications
     5a2c3e10-bf78-4986-aecd-f75829889851: 'Project Topics' # Project Topics
     5a633b8c-0848-4867-8990-245346e525e8: 'Project Funding Amount' # Project Funding Amount
+    5ba16bcf-ba15-4541-978f-c4015909dffb: 'Secondary Caption' # Secondary Caption
     5bafc55c-8f31-4f9b-add0-49e9957e63a7: 'Footer Link Group' # Footer Link Group
     5bc4069a-ab98-412d-b924-e02887e903b3: '4/3: w2000' # 4/3: w2000
     5dbb535e-8ef1-46d6-8af1-f389d054afdf: Search # Search
