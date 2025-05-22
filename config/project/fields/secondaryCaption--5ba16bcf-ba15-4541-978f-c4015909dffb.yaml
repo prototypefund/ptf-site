@@ -1,0 +1,24 @@
+columnSuffix: null
+handle: secondaryCaption
+instructions: null
+name: 'Secondary Caption'
+searchable: false
+settings:
+  availableTransforms: '*'
+  availableVolumes: '*'
+  characterLimit: null
+  ckeConfig: c4438391-90e5-49b1-93bd-6fcbbd3aed62 # Simple
+  createButtonLabel: null
+  defaultTransform: null
+  fullGraphqlData: true
+  purifierConfig: null
+  purifyHtml: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  showWordCount: false
+  sourceEditingGroups:
+    - __ADMINS__
+  wordLimit: null
+translationKeyFormat: null
+translationMethod: none
+type: craft\ckeditor\Field
