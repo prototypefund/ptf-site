@@ -13,6 +13,8 @@
       [image.caption, image.credit]|filter(value => value is not null)
     %}
 
+    {% set secondaryCaption = image.secondaryCaption %}
+
     <figure class="mb-[60px] last:mb-0 lg:mb-0">
       <img
         class="w-full"
@@ -21,17 +23,27 @@
         alt="{{ image.alt }}"
       />
 
-      {% if caption|length %}
+      {% if (caption|length) or (secondaryCaption|length) %}
         <figcaption class="mt-1">
-          <ul class="flex flex-wrap gap-y-0.5">
-            {% for text in caption %}
-              <li
-                class="text-body-12 md:text-body-13 after:text-gray dark:text-gray text-gray-600 uppercase after:pr-1 after:pl-[5px] after:content-['|'] last:after:hidden dark:after:text-gray-500"
-              >
-                {{ text }}
-              </li>
-            {% endfor %}
-          </ul>
+          {% if caption|length %}
+            <ul class="flex flex-wrap gap-y-0.5">
+              {% for text in caption %}
+                <li
+                  class="text-body-12 after:text-gray dark:text-gray text-gray-600 after:pr-1 after:pl-[5px] after:content-['|'] last:after:hidden dark:after:text-gray-500"
+                >
+                  {{ text }}
+                </li>
+              {% endfor %}
+            </ul>
+          {% endif %}
+
+          {% if secondaryCaption|length %}
+            <div class="mt-2">
+              {% include "_rich-text/simple" with {
+                text: secondaryCaption
+              } only %}
+            </div>
+          {% endif %}
         </figcaption>
       {% endif %}
     </figure>
