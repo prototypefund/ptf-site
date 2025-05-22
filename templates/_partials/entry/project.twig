@@ -5,10 +5,10 @@
 {% set teamMembers = entry.projectTeamMembers %}
 
 {% set categories =
-  entry.projectYearGroups.all()
-    |merge(entry.projectRounds.all())
-    |merge(entry.projectTopics.all())
-    |merge(entry.projectTechnologies.all())
+  entry.projectYearGroups.eagerly().all()
+    |merge(entry.projectRounds.eagerly().all())
+    |merge(entry.projectTopics.eagerly().all())
+    |merge(entry.projectTechnologies.eagerly().all())
 %}
 
 <article class="border-gray mb-4 border-t md:mb-5 dark:border-gray-500">

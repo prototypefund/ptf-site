@@ -1,4 +1,4 @@
-{% set navLinks = navigation.navLinks.all() %}
+{% set navLinks = navigation.navLinks.eagerly().all() %}
 {% set matchedElement = craft.app.urlManager.matchedElement %}
 
 <main-nav>

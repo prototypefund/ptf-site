@@ -2,7 +2,7 @@
 
 {% if (nextReads|length) == 0 %}
   {% set nextReads =
-    craft.entries.section("blog").id("not " ~ entry.id).limit(4).all()
+    craft.entries.section("blog").id("not " ~ entry.id).limit(4).eagerly().all()
   %}
 {% endif %}
 

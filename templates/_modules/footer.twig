@@ -1,6 +1,6 @@
 {% set footerDescription = footer.footerDescription %}
-{% set mainFooterLinks = footer.mainFooterLinks.all() %}
-{% set secondaryFooterLinks = footer.secondaryFooterLinks.all() %}
+{% set mainFooterLinks = footer.mainFooterLinks.eagerly().all() %}
+{% set secondaryFooterLinks = footer.secondaryFooterLinks.eagerly().all() %}
 {% set newsletterHeadline =
   footer.newsletterHeadline|default(newsletter.newsletterHeadline)
 %}
@@ -8,8 +8,8 @@
   footer.newsletterSecondaryText|default(newsletter.newsletterSecondaryText)
 %}
 {% set sponsorsHeadline = footer.sponsorsHeadline %}
-{% set sponsorsLight = footer.sponsorsLight.all() %}
-{% set sponsorsDark = footer.sponsorsDark.all() %}
+{% set sponsorsLight = footer.sponsorsLight.eagerly().all() %}
+{% set sponsorsDark = footer.sponsorsDark.eagerly().all() %}
 
 <footer class="mt-[60px] bg-gray-100 md:mt-18 dark:bg-gray-900">
   <div

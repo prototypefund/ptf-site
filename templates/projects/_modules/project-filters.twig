@@ -14,27 +14,27 @@
   {
     title: "Year Groups (from 2025)"|t,
     param: "year-group",
-    items: craft.categories.group("projectYearGroups").all()
+    items: craft.categories.group("projectYearGroups").eagerly().all()
   },
   {
     title: "Rounds (2016 – 2025)"|t,
     param: "round",
-    items: craft.categories.group("projectRounds").all()
+    items: craft.categories.group("projectRounds").eagerly().all()
   },
   {
     title: "Topics"|t,
     param: "topic",
-    items: craft.categories.group("projectTopics").all()
+    items: craft.categories.group("projectTopics").eagerly().all()
   },
   {
     title: "Technologies"|t,
     param: "technology",
-    items: craft.categories.group("projectTechnologies").all()
+    items: craft.categories.group("projectTechnologies").eagerly().all()
   },
   {
     title: "Licenses"|t,
     param: "technology",
-    items: craft.categories.group("projectLicenses").all()
+    items: craft.categories.group("projectLicenses").eagerly().all()
   }
 ] %}
 

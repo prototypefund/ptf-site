@@ -3,7 +3,7 @@
 
 {% set intro = entry.intro %}
 {% set text = entry.textEntryTypes %}
-{% set articleAuthor = entry.articleAuthor.one() %}
+{% set articleAuthor = entry.articleAuthor.eagerly().one() %}
 
 {% set date %}
   {% include "_modules/date-time" with {
@@ -21,7 +21,7 @@
         url: blogIndex.url
       },
       date: date,
-      categories: entry.blogCategories.all()
+      categories: entry.blogCategories.eagerly().all()
     } only %}
 
     {% if intro|length %}

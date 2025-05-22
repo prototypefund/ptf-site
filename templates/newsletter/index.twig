@@ -5,7 +5,7 @@
 {% set issuesDescription = entry.issuesDescription %}
 {% set linkListLinks = [] %}
 
-{% for linkGroup in newsletter.newsletterLinks.all() %}
+{% for linkGroup in newsletter.newsletterLinks.eagerly().all() %}
   {% set link = linkGroup.genericLink %}
   {% set sideInfo = linkGroup.sideInfo %}
 

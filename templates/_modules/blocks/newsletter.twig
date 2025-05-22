@@ -14,7 +14,9 @@
     module.newsletterSideTitle|default(newsletter.newsletterSideTitle)
   %}
   {% set newsletterLinks =
-    module.newsletterLinks.all()|default(newsletter.newsletterLinks.all())
+    module.newsletterLinks.eagerly().all()|default(
+      newsletter.newsletterLinks.eagerly().all()
+    )
   %}
 
   <div

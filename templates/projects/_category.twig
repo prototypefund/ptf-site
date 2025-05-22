@@ -3,11 +3,13 @@
 {% set projectsQuery =
   craft.entries.section("projects").orderBy("title ASC").relatedTo(category)
 %}
-{% set indexEntry = craft.entries.section("projectsIndex").one() %}
+{% set indexEntry = craft.entries.section("projectsIndex").eagerly().one() %}
 
 {% paginate projectsQuery.limit(14) as pagination, projects %}
 
-{% set categories = craft.categories.group(category.group.handle).all() %}
+{% set categories =
+  craft.categories.group(category.group.handle).eagerly().all()
+%}
 
 {% set headline = category.headline|default(category.title) %}
 {% set intro = category.intro %}
