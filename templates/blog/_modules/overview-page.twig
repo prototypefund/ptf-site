@@ -18,7 +18,7 @@
 ] %}
 
 {% set categories =
-  craft.categories.group("blogCategories").all()|map(
+  craft.categories.group("blogCategories").eagerly().all()|map(
     category => {
       title: category.title,
       url: category.url ~ "#list",

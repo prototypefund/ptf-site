@@ -33,10 +33,10 @@
 {% set remainingLinks = projectLinks|filter(item => item != demoLink) %}
 
 {% set categories =
-  entry.projectRounds.all()
-    |merge(entry.projectTopics.all())
-    |merge(entry.projectTechnologies.all())
-    |merge(entry.projectYearGroups.all())
+  entry.projectRounds.eagerly().all()
+    |merge(entry.projectTopics.eagerly().all())
+    |merge(entry.projectTechnologies.eagerly().all())
+    |merge(entry.projectYearGroups.eagerly().all())
 %}
 
 {% set pattern =

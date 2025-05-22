@@ -1,8 +1,8 @@
 {% set context = context|default("web") %}
-{% set nextReads = module.trendTeasers.all() %}
+{% set nextReads = module.trendTeasers.eagerly().all() %}
 
 {% if (nextReads|length) == 0 %}
-  {% set nextReads = craft.entries.section("trends").limit(4).all() %}
+  {% set nextReads = craft.entries.section("trends").limit(4).eagerly().all() %}
 {% endif %}
 
 {% set web %}

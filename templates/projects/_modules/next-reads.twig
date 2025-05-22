@@ -1,20 +1,11 @@
-{% set nextReads = entry.projectNextReads.all() %}
+{% set nextReads = entry.projectNextReads.eagerly().all() %}
 
 {% if not nextReads|length %}
   {% set topic = entry.projectTopics.eagerly().one() %}
   {% set technology = entry.projectTechnologies.eagerly().one() %}
 
   {% set baseQuery =
-    craft.entries.section("projects").id("not " ~ entry.id).with(
-      [
-        "projectYearGroups",
-        "projectRounds",
-        "projectTopics",
-        "projectTechnologies"
-      ]
-    ).limit(
-      4
-    )
+    craft.entries.section("projects").id("not " ~ entry.id).limit(4)
   %}
 
   {% if topic and technology %}
@@ -29,26 +20,26 @@
             targetElement: technology
           }
         ]
-      ).all()
+      ).eagerly().all()
     %}
 
     {% if not nextReads|length %}
       {% set nextReads =
         baseQuery.relatedTo({
           targetElement: topic
-        }).all()
+        }).eagerly().all()
       %}
     {% endif %}
   {% elseif topic %}
     {% set nextReads =
       baseQuery.relatedTo({
         targetElement: topic
-      }).all()
+      }).eagerly().all()
     %}
   {% endif %}
 
   {% if not nextReads|length %}
-    {% set nextReads = baseQuery.all() %}
+    {% set nextReads = baseQuery.eagerly().all() %}
   {% endif %}
 {% endif %}
 

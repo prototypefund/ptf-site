@@ -1,15 +1,19 @@
 {% set context = context|default("web") %}
 {% set featured = module.nextReadsFeatured.eagerly().one()|default(null) %}
-{% set nextReads = module.nextReads.all() %}
+{% set nextReads = module.nextReads.eagerly().all() %}
 
 {% set web %}
   {% if (nextReads|length) == 0 %}
     {% if featured %}
       {% set nextReads =
-        craft.entries.section("blog").id(["not", featured.id]).limit(4).all()
+        craft.entries.section("blog").id(["not", featured.id]).limit(
+          4
+        ).eagerly().all()
       %}
     {% else %}
-      {% set nextReads = craft.entries.section("blog").limit(4).all() %}
+      {% set nextReads =
+        craft.entries.section("blog").limit(4).eagerly().all()
+      %}
     {% endif %}
   {% endif %}
 

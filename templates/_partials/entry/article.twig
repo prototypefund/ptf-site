@@ -1,7 +1,7 @@
 {% import "_macros" as macros %}
 
 {% set image = entry.mainImage.eagerly().one() %}
-{% set categories = entry.blogCategories.all() %}
+{% set categories = entry.blogCategories.eagerly().all() %}
 {% set postDate = entry.postDate %}
 {% set featured = featured|default(false) %}
 

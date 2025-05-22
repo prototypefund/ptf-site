@@ -7,7 +7,7 @@
     ["blog", "projects", "events", "trends", "genericPages"]
   ).search(
     "title:" ~ searchParam ~ " OR teaserText:" ~ searchParam
-  ).all()
+  ).eagerly().all()
 %}
 
 {% set content %}

@@ -21,7 +21,7 @@
         url: blogIndex.url
       },
       date: date,
-      categories: entry.blogCategories.all()
+      categories: entry.blogCategories.eagerly().all()
     } only %}
 
     {% if intro|length %}

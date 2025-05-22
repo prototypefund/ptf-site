@@ -7,7 +7,9 @@
 
 {% paginate projectsQuery.limit(14) as pagination, projects %}
 
-{% set categories = craft.categories.group(category.group.handle).all() %}
+{% set categories =
+  craft.categories.group(category.group.handle).eagerly().all()
+%}
 
 {% set headline = category.headline|default(category.title) %}
 {% set intro = category.intro %}

@@ -1,5 +1,5 @@
 {% set heading = "More events like this"|t %}
-{% set nextReads = entry.eventNextReads.all() %}
+{% set nextReads = entry.eventNextReads.eagerly().all() %}
 
 {% if (nextReads|length) == 0 %}
   {% set heading = "More upcoming events"|t %}

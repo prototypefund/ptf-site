@@ -2,7 +2,7 @@
 
 {% set context = context|default("web") %}
 {% set sideLink = module.sideLink %}
-{% set teasers = module.genericTeasers.all() %}
+{% set teasers = module.genericTeasers.eagerly().all() %}
 
 {% set web %}
   {% set content %}

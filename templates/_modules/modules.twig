@@ -2,7 +2,7 @@
 
 {% if entry.modules %}
   <div class="mb-10">
-    {% for module in entry.modules.all() %}
+    {% for module in entry.modules.eagerly().all() %}
       {% switch module.type %}
         {% case "blogTeasers" %}
           {% include "_modules/blocks/blog-teasers" with {

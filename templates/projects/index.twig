@@ -18,23 +18,17 @@
 
 {% if inFundingParam|length %}
   {% set projectsWithoutSecondStage =
-    craft.entries.section("projects").with(
-      ["projectRounds", "projectYearGroups"]
-    ).relatedTo({
+    craft.entries.section("projects").relatedTo({
       targetElement: craft.categories().group(
         ["projectRounds", "projectYearGroups"]
       ).endDateRegular(
         [">= " ~ (now|date("Y-m-d"))]
       )
-    }).all()
+    }).eagerly().all()
   %}
 
   {% set projectsWithSecondStage =
-    craft.entries.section("projects").with(
-      ["projectRounds", "projectYearGroups"]
-    ).secondStage(
-      true
-    ).relatedTo({
+    craft.entries.section("projects").secondStage(true).relatedTo({
       targetElement: craft.categories().group(
         ["projectRounds", "projectYearGroups"]
       ).endDateRegular(
@@ -42,7 +36,7 @@
       ).endDateSecondStage(
         [">= " ~ (now|date("Y-m-d"))]
       )
-    }).all()
+    }).eagerly().all()
   %}
 
   {% set uniqueIds =
@@ -132,21 +126,7 @@
   {% set projectsQuery = projectsQuery.relatedTo(["and"]|merge(relations)) %}
 {% endif %}
 
-{% set projectsQuery =
-  projectsQuery.with(
-    [
-      "projectYearGroups",
-      "projectRounds",
-      "projectTopics",
-      "projectTechnologies",
-      "projectLicenses"
-    ]
-  ).orderBy(
-    "title ASC"
-  ).limit(
-    20
-  )
-%}
+{% set projectsQuery = projectsQuery.orderBy("title ASC").limit(20) %}
 
 {% paginate projectsQuery as pagination, projects %}
 
