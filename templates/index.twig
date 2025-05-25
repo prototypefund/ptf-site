@@ -32,7 +32,7 @@
 
 {% block content %}
   <div
-    class="bg-rich-blue dark:bg-navy-blue px-2 py-5 text-white md:px-5 md:py-[60px] xl:h-[calc(100vh-146px)] xl:min-h-[700px]"
+    class="bg-rich-blue dark:bg-navy-blue relative px-2 py-5 text-white md:px-5 md:py-[60px] xl:h-[calc(100vh-146px)] xl:min-h-[700px]"
   >
     <div class="relative h-full">
       <text-animation>
@@ -55,7 +55,7 @@
 
       {% if (description|length) or (link|length) %}
         <div
-          class="left-0 max-w-[489px] xl:absolute xl:bottom-0 xl:w-[489px] xl:max-w-none"
+          class="relative left-0 z-[1] max-w-[489px] xl:absolute xl:bottom-0 xl:w-[489px] xl:max-w-none"
         >
           {% if description|length %}
             <div class="mb-6">
@@ -75,6 +75,18 @@
         </div>
       {% endif %}
     </div>
+
+    <pixel-grid>
+      <div
+        data-container
+        class="absolute top-0 left-0 h-full w-full overflow-hidden"
+      >
+        <div
+          data-pixel-grid
+          class="absolute flex h-full w-full flex-wrap"
+        ></div>
+      </div>
+    </pixel-grid>
   </div>
 
   {% include "_modules/modules" with {
