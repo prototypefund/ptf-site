@@ -145,6 +145,10 @@
   --background-image-pattern-tr-dark-gray-1: url("/static/images/patterns/bg-pattern-tr-dark-gray-1.svg");
   --background-image-pattern-tr-dark-gray-2: url("/static/images/patterns/bg-pattern-tr-dark-gray-2.svg");
   --background-image-pattern-newsletter: url("/static/images/patterns/bg-pattern-newsletter.svg");
+  --background-image-pixel-1: url("/static/images/pixel-1.svg");
+  --background-image-pixel-2: url("/static/images/pixel-2.svg");
+  --background-image-pixel-3: url("/static/images/pixel-3.svg");
+  --background-image-pixel-4: url("/static/images/pixel-4.svg");
 }
 
 @layer base {
@@ -236,6 +240,26 @@
       border-color: transparent;
     }
   }
+}
+
+.pixel {
+  @apply opacity-0;
+}
+
+.pixel-1 {
+  @apply bg-pixel-1;
+}
+
+.pixel-2 {
+  @apply bg-pixel-2;
+}
+
+.pixel-3 {
+  @apply bg-pixel-3;
+}
+
+.pixel-4 {
+  @apply bg-pixel-4;
 }
 
 .text-link {
