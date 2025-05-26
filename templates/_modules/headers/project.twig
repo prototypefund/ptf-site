@@ -59,7 +59,7 @@
 <header
   class="{{
   pattern
-  }} border-gray relative border-b px-2 pt-2.5 pb-5 md:grid md:grid-cols-12 md:px-5 md:py-[60px] lg:grid-cols-16"
+  }} border-gray relative border-b px-2 pt-[60px] pb-5 md:grid md:grid-cols-12 md:px-5 md:pb-[60px] lg:grid-cols-16"
 >
   <div class="relative z-1 mb-10 md:col-span-6 md:mb-0 lg:col-span-10">
     {% if macros.inFunding(entry)|boolean %}
@@ -92,7 +92,7 @@
       class="text-ui-13 md:text-ui-14 mb-4 block md:mb-5"
       datetime="{{ dateUpdated|date("Y-m-d") }}"
     >
-      {{ "Last updated"|t }}: {{ dateUpdated|date("short") }}
+      {{ "Last updated"|t }}: {{ dateUpdated|date("d/m/Y") }}
     </time>
 
     {% if remainingLinks|length %}

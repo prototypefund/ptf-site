@@ -1,11 +1,12 @@
 {% set context = context|default("web") %}
+{% set text = module.text %}
 
 {% set web %}
   {% set content %}
     {% for row in module.rows %}
       {% set columns = row.columns %}
 
-      <div class="mb-5 last:mb-0 md:mb-[60px]">
+      <div class="mb-[60px] last:mb-0">
         <h3
           class="font-surt text-head-18 md:text-head-22 mb-2.5 uppercase md:tracking-[2%]"
         >
@@ -17,7 +18,7 @@
             {% for column in row.columns %}
               <div class="mb-2.5 last:mb-0 md:mb-0">
                 <h4
-                  class="md:text-head-16 border-gray dark:text-gray mb-1 border-t pt-1 text-[15px] text-gray-600 uppercase md:mb-2 dark:border-gray-500"
+                  class="md:text-head-16 border-gray dark:text-gray mb-[5px] border-t pt-1 text-[15px] text-gray-600 uppercase md:mb-1 md:mb-2 dark:border-gray-500"
                 >
                   {{ column.title }}
                 </h4>
@@ -32,11 +33,13 @@
       </div>
     {% endfor %}
 
-    <div class="mb-5 last:mb-0 md:mb-[60px]">
-      {% include "_rich-text/standard" with {
-        text: module.text
-      } only %}
-    </div>
+    {% if text|length %}
+      <div class="mb-[60px] last:mb-0">
+        {% include "_rich-text/standard" with {
+          text: text
+        } only %}
+      </div>
+    {% endif %}
   {% endset %}
 
   {% include "_modules/side-heading" with {
