@@ -6,10 +6,10 @@
   craft.entries.section(
     ["blog", "projects", "events", "trends", "genericPages"]
   ).search(
-    "title:" ~ searchParam ~ " OR teaserText:" ~ searchParam
-      ~ " OR textEntryTypes:*"
+    'title:"' ~ searchParam ~ '" OR teaserText:"' ~ searchParam
+      ~ '" OR textEntryTypes:"'
       ~ searchParam
-      ~ "*"
+      ~ '"'
   ).eagerly().all()
 %}
 
