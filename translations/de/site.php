@@ -63,7 +63,7 @@ return [
   "Topics" => "Themen",
   "Upcoming Events" => "Bevorstehende Veranstaltungen",
   "Upcoming Talks and Conferences" => "Bevorstehende Vorträge und Konferenzen",
-  "View report" => "Bericht anzeigen",
+  "View" => "Anzeigen",
   "Year Groups (from 2025)" => "Jahrgänge (ab 2025)",
   "{startDate} – {endDateSecondStage} (incl. Second Stage)" => "{startDate} –  {endDateSecondStage} (inkl. Second Stage)"
 ];
