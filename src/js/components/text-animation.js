@@ -20,17 +20,16 @@ export class TextAnimation extends HTMLElement {
     for (const el of lines) {
       const text = el.getAttribute("data-fulltext") || "";
       await this.typeWriter(el, text, 50);
+      el.classList.add("complete");
       await this.wait(100);
     }
-
-    this.dispatchEvent(
-      new CustomEvent("animation-finished", { bubbles: true }),
-    );
   }
 
   async typeWriter(el, text, speed) {
     for (let i = 0; i <= text.length; i++) {
-      el.innerHTML = text.substring(0, i) + '<span aria-hidden="true"></span>';
+      el.innerHTML =
+        text.substring(0, i) +
+        '<span class="border-hot-pink border-r-[0.05em] [.complete_&]:border-r-0" aria-hidden="true"></span>';
       await this.wait(speed);
     }
   }
