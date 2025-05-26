@@ -1,4 +1,4 @@
-dateModified: 1747946250
+dateModified: 1748249423
 elementSources:
   craft\elements\Entry:
     -
@@ -428,7 +428,7 @@ plugins:
             - compressCachedValues
             - ''
       cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
-      cachingEnabled: true
+      cachingEnabled: false
       debug: false
       defaultCacheControlHeader: 'no-cache, no-store, must-revalidate'
       deployerType: putyourlightson\blitz\drivers\deployers\DummyDeployer
@@ -529,7 +529,7 @@ plugins:
       refreshCacheWhenElementSavedNotLive: false
       refreshCacheWhenElementSavedUnchanged: false
       refreshExpiredCacheAfterVisit: true
-      refreshMode: 3
+      refreshMode: 1
       sendPoweredByHeader: true
       ssiEnabled: false
       ssiTagFormat: '<!--#include virtual="{uri}" -->'
