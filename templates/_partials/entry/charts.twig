@@ -21,7 +21,7 @@
           |json_encode
       %}
 
-      <div>
+      <div class="{{ (charts|length) == 1 ? "md:max-w-[700px]" }}">
         <div class="mb-[10px] aspect-4/2 dark:bg-white">
           <bar-chart data-chart="{{ data }}"></bar-chart>
         </div>

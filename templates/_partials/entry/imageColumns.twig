@@ -15,7 +15,12 @@
 
     {% set secondaryCaption = image.secondaryCaption %}
 
-    <figure class="mb-[60px] last:mb-0 lg:mb-0">
+    <figure
+      class="mb-[60px] last:mb-0 lg:mb-0 {{
+      (images|length) == 1
+        ? "md:max-w-[700px]"
+      }}"
+    >
       <img
         class="w-full"
         src="{{ image.getUrl("w1200") }}"
