@@ -14,7 +14,6 @@
     {% set entries = craft.entries().section(['blog', 'projects', 'trends']).limit(10).eagerly().all() %}
 
     {% for entry in entries %}
-      type: {{ entry.type }}
       <item>
         <title>{{ entry.title }}</title>
         <link>{{ entry.url }}</link>
