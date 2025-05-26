@@ -33,8 +33,13 @@
         {% else %}
           <div class="aspect-square">
             <img
-              class="block h-full w-full object-cover"
+              class="block h-full w-full object-cover dark:hidden"
               src="/static/images/patterns/project-fallback-pattern.svg"
+              loading="lazy"
+            />
+            <img
+              class="hidden h-full w-full object-cover dark:block"
+              src="/static/images/patterns/project-fallback-pattern-dark.svg"
               loading="lazy"
             />
           </div>
