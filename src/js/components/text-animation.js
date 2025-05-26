@@ -20,7 +20,11 @@ export class TextAnimation extends HTMLElement {
     for (const el of lines) {
       const text = el.getAttribute("data-fulltext") || "";
       await this.typeWriter(el, text, 50);
-      el.classList.add("complete");
+
+      setTimeout(() => {
+        el.classList.add("complete");
+      }, 1250);
+
       await this.wait(100);
     }
   }
