@@ -6,8 +6,8 @@ This site is based on [Craft CMS](https://craftcms.com) and [ddev](https://ddev.
 
 - Staging site: https://staging.prototypefund.de (password for access: `pushpull`)
 - Staging site CMS: https://staging.prototypefund.de/admin/
-- Live site: [TODO: INSERT PRODUCTION URL]
-- Live site CMS: [TODO: INSERT PRODUCTION ADMIN URL]
+- Live site: https://ptf-prod.frb.io/
+- Live site CMS: https://ptf-prod.frb.io/admin
 
 ## Local setup: first run
 
