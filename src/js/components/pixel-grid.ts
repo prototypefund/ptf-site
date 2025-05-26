@@ -135,7 +135,7 @@ export class PixelGrid extends HTMLElement {
             });
           }
         });
-      }, 50);
+      }, 60);
     }
   }
 }

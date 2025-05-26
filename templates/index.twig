@@ -37,7 +37,7 @@
     <div class="relative h-full">
       <text-animation>
         <p
-          class="font-surt mb-[60px] text-[40px] leading-[1.3] uppercase md:text-[80px] md:leading-[1] xl:mb-0 xl:text-[100px] {{
+          class="font-surt relative z-[1] mb-[60px] text-[40px] leading-[1.3] uppercase md:text-[80px] md:leading-[1] xl:mb-0 xl:text-[100px] {{
           textConfig[currentLanguage][0].sizeStyles
           }}"
         >
@@ -45,7 +45,7 @@
         </p>
 
         <p
-          class="font-surt mb-10 ml-auto text-right text-[40px] leading-[1.3] uppercase md:mb-[60px] md:text-[80px] md:leading-[1] xl:absolute xl:right-0 xl:bottom-0 xl:mb-0 xl:text-[100px] {{
+          class="font-surt relative z-[1] mb-10 ml-auto text-right text-[40px] leading-[1.3] uppercase md:mb-[60px] md:text-[80px] md:leading-[1] xl:absolute xl:right-0 xl:bottom-0 xl:mb-0 xl:text-[100px] {{
           textConfig[currentLanguage][1].sizeStyles
           }}"
         >
@@ -55,7 +55,7 @@
 
       {% if (description|length) or (link|length) %}
         <div
-          class="relative left-0 z-[1] max-w-[489px] xl:absolute xl:bottom-0 xl:w-[489px] xl:max-w-none"
+          class="fade-in relative left-0 z-[1] max-w-[489px] xl:absolute xl:bottom-0 xl:w-[489px] xl:max-w-none"
         >
           {% if description|length %}
             <div class="mb-6">

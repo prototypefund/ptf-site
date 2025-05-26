@@ -231,7 +231,6 @@
   }
 
   text-animation span {
-    @apply border-hot-pink border-r-[0.05em];
     animation: caret 1s steps(1) infinite;
   }
 
@@ -264,4 +263,19 @@
 
 .text-link {
   @apply underline hover:text-gray-600;
+}
+
+.fade-in {
+  animation: fadeIn 2s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    bottom: -2%;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
 }
