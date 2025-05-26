@@ -1,6 +1,20 @@
 {% extends "_layouts/layout.twig" %}
 
-{% set searchParam = craft.app.request.getParam("q") %}
+{% set searchParam =
+  craft.app.request.getParam("q")
+    |replace({
+      '"': "",
+      "!": "",
+      ":": "",
+      "{": "",
+      "}": "",
+      "(": "",
+      ")": "",
+      "[": "",
+      "]": ""
+    })
+    |trim
+%}
 
 {% set allResults =
   craft.entries.section(
