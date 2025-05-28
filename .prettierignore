@@ -9,7 +9,7 @@ storage/
 web/cpresources/
 web/static/dist/
 web/uploads/
-templates/feed.twig
+templates/feed.rss
 templates/_macros.twig
 
 .ddev/
