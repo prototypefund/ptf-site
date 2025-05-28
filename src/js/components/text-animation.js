@@ -33,7 +33,7 @@ export class TextAnimation extends HTMLElement {
     for (let i = 0; i <= text.length; i++) {
       el.innerHTML =
         text.substring(0, i) +
-        '<span class="border-hot-pink border-r-[0.05em] [.complete_&]:border-r-0" aria-hidden="true"></span>';
+        '<span class="border-hot-pink border-r-[0.05em] [.complete_&]:border-r-transparent" aria-hidden="true"></span>';
       await this.wait(speed);
     }
   }
