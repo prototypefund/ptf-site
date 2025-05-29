@@ -11,6 +11,10 @@
     |merge(entry.projectTechnologies.eagerly().all())
 %}
 
+{% set title %}
+  <span class="text-rich-blue dark:text-sky-blue">{{ entry.title }}</span>{{ claim|length ? ": #{claim}" }}
+{% endset %}
+
 <article class="border-gray mb-4 border-t md:mb-5 dark:border-gray-500">
   <a class="block pt-2 md:pt-2.5" href="{{ entry.getUrl() }}">
     <div class="group flex xl:grid xl:grid-cols-11">
@@ -59,11 +63,7 @@
           <h4
             class="font-surt text-head-16 md:text-head-22 group-hover:decoration-sky-blue inline tracking-[2%] break-words uppercase group-hover:underline md:tracking-[2%]"
           >
-            <span class="text-rich-blue dark:text-sky-blue">
-              {{ entry.title }}
-            </span>{% if claim|length %}
-              : {{ claim }}
-            {% endif %}
+            {{ title }}
           </h4>
         </div>
 
