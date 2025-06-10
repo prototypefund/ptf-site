@@ -27,7 +27,7 @@
           >
             <div class="w-full mix-blend-multiply">
               <img
-                class="h-full w-full object-contain"
+                class="h-full w-full object-contain transition-transform ease-in-out group-hover:scale-105"
                 src="{{ image.url }}"
                 alt="{{ image.alt }}"
                 loading="lazy"
@@ -35,14 +35,14 @@
             </div>
           </div>
         {% else %}
-          <div class="aspect-square">
+          <div class="aspect-square overflow-hidden">
             <img
-              class="block h-full w-full object-cover dark:hidden"
+              class="block h-full w-full object-cover transition-transform ease-in-out group-hover:scale-105 dark:hidden"
               src="/static/images/patterns/project-fallback-pattern.svg"
               loading="lazy"
             />
             <img
-              class="hidden h-full w-full object-cover dark:block"
+              class="hidden h-full w-full object-cover transition-transform ease-in-out group-hover:scale-105 dark:block"
               src="/static/images/patterns/project-fallback-pattern-dark.svg"
               loading="lazy"
             />

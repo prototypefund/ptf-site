@@ -46,9 +46,16 @@
                   alt="{{ image.alt }}"
                 />
               {% else %}
-                <div
-                  class="aspect-3/2 bg-gray-100 md:aspect-auto md:h-full dark:bg-gray-800"
-                ></div>
+                <img
+                  class="block aspect-3/2 h-full w-full object-cover md:aspect-auto dark:hidden"
+                  src="/static/images/patterns/people-fallback-pattern.svg"
+                  loading="lazy"
+                />
+                <img
+                  class="hidden aspect-3/2 h-full w-full object-cover md:aspect-auto dark:block"
+                  src="/static/images/patterns/people-fallback-pattern-dark.svg"
+                  loading="lazy"
+                />
               {% endif %}
             </div>
 
