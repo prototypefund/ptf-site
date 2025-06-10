@@ -26,10 +26,6 @@
           class="border-gray border-b pb-5 md:col-span-11 md:col-start-6 md:border-none md:pb-0 lg:col-span-9 lg:col-start-8 dark:border-gray-500"
         >
           {% if startDate and (endDateRegular or endDateSecondStage) %}
-            {% set endDate = endDateRegular
-              ? endDateRegular
-              : endDateSecondStage
-            %}
             <div
               class="border-gray mb-4 border-t pt-1 last:mb-0 md:mb-5 dark:border-gray-500"
             >
@@ -40,7 +36,15 @@
               </h4>
 
               <p class="text-body-18 md:text-body-20">
-                {{ startDate|date("d/m/Y") }} – {{ endDate|date("d/m/Y") }}
+                {{ startDate|date("d/m/Y") }} – {{
+                  endDateRegular|date("d/m/Y")
+                }}{{ endDateSecondStage
+                  ? ", "
+                    ~ ("Second stage until {endDateSecondStage}"|t(
+                      params: {
+                        endDateSecondStage: endDateSecondStage|date("d/m/Y")
+                      }
+                    )) }}
               </p>
             </div>
           {% endif %}
