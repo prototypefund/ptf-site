@@ -43,7 +43,7 @@
         <div class="aspect-3/2 overflow-hidden">
           {% if image|length %}
             <img
-              class="group-hover block h-full w-full object-cover transition-transform group-hover:scale-110"
+              class="block h-full w-full object-cover transition-transform ease-in-out group-hover:scale-105"
               src="{{ image.getUrl("w800__3_2") }}"
               srcSet="{{ macros.srcSetThreeByTwo(image) }}"
               alt="{{ image.alt }}"
