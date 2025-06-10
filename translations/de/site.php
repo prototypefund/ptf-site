@@ -11,6 +11,7 @@ return [
   "Event" => "Veranstaltung",
   "Filter by category" => "Nach Kategorie filtern",
   "Filter projects" => "Projekte filtern",
+  "Funded Period" => "Förderzeitraum",
   "Funding Amount" => "Fördersumme",
   "Funding Period" => "Förderzeitraum",
   "Funding status" => "Förderstatus",
