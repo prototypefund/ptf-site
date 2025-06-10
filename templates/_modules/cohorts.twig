@@ -38,7 +38,8 @@
               <p class="text-body-18 md:text-body-20">
                 {{ startDate|date("d/m/Y") }} – {{
                   endDateRegular|date("d/m/Y")
-                }}{{ endDateSecondStage
+                }}{{ category.group.handle == "projectYearGroups"
+                  and endDateSecondStage
                   ? ", "
                     ~ ("Second stage until {endDateSecondStage}"|t(
                       params: {
