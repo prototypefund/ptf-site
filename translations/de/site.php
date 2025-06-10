@@ -58,7 +58,7 @@ return [
   "See Demo Week" => "Siehe Demo Week",
   "See past events" => "Vergangene Events anzeigen",
   "See Upcoming Events" => "Zu den zukünftigen Veranstaltungen",
-  "Second stage until {endDateSecondStage}" => "zweite Phase bis zum {endDateSecondStage}",
+  "Second stage until {endDateSecondStage}" => "Second Stage bis zum {endDateSecondStage}",
   "Team Members" => "Team-Mitglieder",
   "Technologies" => "Technologien",
   "The page you’re looking for doesn’t exist or has been moved. Please go back to the homepage." => "Die Seite, die du suchst, existiert nicht oder wurde verschoben. Bitte kehre zur Startseite zurück.",
