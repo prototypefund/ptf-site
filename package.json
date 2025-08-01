@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@zackad/prettier-plugin-twig": "^0.16.0",
-    "prettier-plugin-tailwindcss": "^0.6.12",
+    "prettier-plugin-tailwindcss": "^0.6.14",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "recharts": "^2.15.3"
