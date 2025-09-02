@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Checking out git
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           ref: production
           fetch-depth: 0
