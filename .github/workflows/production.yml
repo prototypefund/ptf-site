@@ -24,7 +24,7 @@ jobs:
       - name: Push to fortrabbit
         run: GIT_SSH_COMMAND='ssh -i $HOME/.ssh/deploy_key -o StrictHostKeyChecking=no' git push -u fortrabbit "${GITHUB_REF:11}":main
       - name: Setting up node
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: "18"
       - name: Install node packages
