@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "short_name": "",
+  "name": "PrototypeFund",
+  "short_name": "Prototype Fund",
   "icons": [
     {
       "src": "/static/images/favicons/android-chrome-192x192.png",
@@ -13,7 +13,7 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#28313d",
-  "background_color": "#28313d",
+  "theme_color": "#33CCFF",
+  "background_color": "#33CCFF",
   "display": "standalone"
 }
