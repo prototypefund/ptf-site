@@ -11,8 +11,8 @@ database:
     version: "8.0"
 hooks:
     post-start:
-        - exec: nvm install 20
-        - exec: nvm use 20
+        - exec: nvm install 24
+        - exec: nvm use 24
         - exec: npm i
         - exec: npm run dev
 upload_dirs:
@@ -20,7 +20,7 @@ upload_dirs:
 use_dns_when_possible: true
 composer_version: "2"
 web_environment: []
-nodejs_version: "20"
+nodejs_version: "24"
 corepack_enable: false
 
 # Key features of DDEV's config.yaml:
