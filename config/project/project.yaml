@@ -1,4 +1,4 @@
-dateModified: 1749561245
+dateModified: 1771502511
 elementSources:
   craft\elements\Entry:
     -
@@ -405,7 +405,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: E3FLHMS038ASYZCMOT1N7IBT
-    schemaVersion: 5.10.0
+    schemaVersion: 5.12.0
     settings:
       apiKey: ''
       cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
@@ -515,7 +515,7 @@ plugins:
         - putyourlightson\blitz\drivers\integrations\FeedMeIntegration
         - putyourlightson\blitz\drivers\integrations\SeomaticIntegration
       maxRetryAttempts: 10
-      maxUriLength: 255
+      maxUriLength: 2048
       mutexTimeout: 1
       onlyCacheLowercaseUris: false
       outputComments: true
@@ -542,7 +542,7 @@ plugins:
   feed-me:
     edition: standard
     enabled: true
-    schemaVersion: 5.1.1
+    schemaVersion: 5.14.0
   knock-knock:
     edition: standard
     enabled: true
@@ -595,7 +595,7 @@ plugins:
           __assoc__:
             -
               - policy
-              - '''self'''
+              - "'self'"
       devModeCpTitlePrefix: '&#x1f6a7;⚙ '
       devModeTitlePrefix: '&#x1f6a7; '
       displayAnalysisSidebar: true
@@ -637,5 +637,5 @@ system:
   live: true
   name: 'Prototype Fund'
   retryDuration: null
-  schemaVersion: 5.7.0.3
+  schemaVersion: 5.8.0.3
   timeZone: Europe/Berlin
