@@ -1,4 +1,4 @@
-dateModified: 1771502347
+dateModified: 1771502368
 elementSources:
   craft\elements\Entry:
     -
@@ -405,7 +405,7 @@ plugins:
     edition: standard
     enabled: true
     licenseKey: E3FLHMS038ASYZCMOT1N7IBT
-    schemaVersion: 5.10.0
+    schemaVersion: 5.12.0
     settings:
       apiKey: ''
       cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
@@ -515,7 +515,7 @@ plugins:
         - putyourlightson\blitz\drivers\integrations\FeedMeIntegration
         - putyourlightson\blitz\drivers\integrations\SeomaticIntegration
       maxRetryAttempts: 10
-      maxUriLength: 255
+      maxUriLength: 2048
       mutexTimeout: 1
       onlyCacheLowercaseUris: false
       outputComments: true
