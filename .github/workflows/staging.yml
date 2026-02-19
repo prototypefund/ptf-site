@@ -26,7 +26,7 @@ jobs:
       - name: Setting up node
         uses: actions/setup-node@v4
         with:
-          node-version: "18"
+          node-version: "20"
       - name: Install node packages
         run: npm install
       - name: Create assets
