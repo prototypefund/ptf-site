@@ -1,7 +1,7 @@
 {
   "require": {
     "craftcms/ckeditor": "4.8.0",
-    "craftcms/cms": "5.7.5",
+    "craftcms/cms": "5.8.23",
     "craftcms/feed-me": "6.8.0",
     "mmikkel/retcon": "3.2.1",
     "nystudio107/craft-retour": "5.0.10",

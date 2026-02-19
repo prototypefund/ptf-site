@@ -26,12 +26,12 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: generic/_entry
-    uriFormat: '{parent.uri ? parent.uri ~ ''/'' : ''''}{slug}'
+    uriFormat: "{parent.uri ? parent.uri ~ '/' : ''}{slug}"
   ddc3aedf-983b-4fa7-81eb-69fd761d71af: # German
     enabledByDefault: true
     hasUrls: true
     template: generic/_entry
-    uriFormat: '{parent.uri ? parent.uri ~ ''/'' : ''''}{slug}'
+    uriFormat: "{parent.uri ? parent.uri ~ '/' : ''}{slug}"
 structure:
   maxLevels: 2
   uid: 11596e27-9b13-4068-b549-95fad3c2585f
