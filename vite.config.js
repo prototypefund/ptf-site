@@ -19,20 +19,13 @@ export default ({ command }) => ({
     }),
   ],
   server: {
-    cors: {
-      origin: `https://${host}`,
-      credentials: true,
-    },
-    hmr: {
-      host: host,
-    },
-    allowedHosts: [host],
-    fs: {
-      strict: false,
-    },
     host: "0.0.0.0",
-    origin: "http://localhost:3000",
-    port: 3000,
+    port: 5173,
     strictPort: true,
+    origin: `${host}:5173`,
+    cors: {
+      origin: /^https?:\/\/(?:[a-zA-Z0-9-]+\.)+ddev\.site(?::\d+)?$/,
+    },
+    allowedHosts: [".ddev.site"],
   },
 });

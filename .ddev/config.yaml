@@ -11,10 +11,7 @@ database:
     version: "8.0"
 hooks:
     post-start:
-        - exec: nvm install 24
-        - exec: nvm use 24
-        - exec: npm i
-        - exec: npm run dev
+        - exec: composer install
 upload_dirs:
     - web/uploads
 use_dns_when_possible: true
@@ -22,6 +19,11 @@ composer_version: "2"
 web_environment: []
 nodejs_version: "24"
 corepack_enable: false
+web_extra_exposed_ports:
+  - name: node-vite
+    container_port: 5173
+    http_port: 5172
+    https_port: 5173
 
 # Key features of DDEV's config.yaml:
 
