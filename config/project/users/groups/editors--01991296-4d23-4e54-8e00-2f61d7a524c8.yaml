@@ -22,6 +22,7 @@ permissions:
   - 'createentries:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
   - 'createfolders:b99ee1fe-b466-49ac-8315-43d2af7587e1' # Uploads
   - 'deleteassets:b99ee1fe-b466-49ac-8315-43d2af7587e1' # Uploads
+  - 'deletecategories:2c6d48c3-1f95-478e-ac4f-41e02dc90eb8' # Project Licenses
   - 'deletecategories:5593a3e3-ad74-4e68-ad2d-36a6c8f1d95a' # Project Year Groups
   - 'deletecategories:8d8e3436-a20e-4222-a530-d52fa736ae4d' # Project Technologies
   - 'deletecategories:a06eff6a-35ff-45b1-9c02-c6ef2f3f948c' # Project Rounds
@@ -40,6 +41,7 @@ permissions:
   - 'deleteentries:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
   - 'deleteentries:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
   - 'deletepeerassets:b99ee1fe-b466-49ac-8315-43d2af7587e1' # Uploads
+  - 'deletepeercategorydrafts:2c6d48c3-1f95-478e-ac4f-41e02dc90eb8' # Project Licenses
   - 'deletepeercategorydrafts:5593a3e3-ad74-4e68-ad2d-36a6c8f1d95a' # Project Year Groups
   - 'deletepeercategorydrafts:8d8e3436-a20e-4222-a530-d52fa736ae4d' # Project Technologies
   - 'deletepeercategorydrafts:a06eff6a-35ff-45b1-9c02-c6ef2f3f948c' # Project Rounds
@@ -93,6 +95,7 @@ permissions:
   - 'retour:settings'
   - 'retour:shortlinks'
   - 'saveassets:b99ee1fe-b466-49ac-8315-43d2af7587e1' # Uploads
+  - 'savecategories:2c6d48c3-1f95-478e-ac4f-41e02dc90eb8' # Project Licenses
   - 'savecategories:5593a3e3-ad74-4e68-ad2d-36a6c8f1d95a' # Project Year Groups
   - 'savecategories:8d8e3436-a20e-4222-a530-d52fa736ae4d' # Project Technologies
   - 'savecategories:a06eff6a-35ff-45b1-9c02-c6ef2f3f948c' # Project Rounds
@@ -118,6 +121,7 @@ permissions:
   - 'saveentries:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
   - 'saveentries:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
   - 'savepeerassets:b99ee1fe-b466-49ac-8315-43d2af7587e1' # Uploads
+  - 'savepeercategorydrafts:2c6d48c3-1f95-478e-ac4f-41e02dc90eb8' # Project Licenses
   - 'savepeercategorydrafts:5593a3e3-ad74-4e68-ad2d-36a6c8f1d95a' # Project Year Groups
   - 'savepeercategorydrafts:8d8e3436-a20e-4222-a530-d52fa736ae4d' # Project Technologies
   - 'savepeercategorydrafts:a06eff6a-35ff-45b1-9c02-c6ef2f3f948c' # Project Rounds
@@ -187,6 +191,7 @@ permissions:
   - 'seomatic:tracking-scripts:pinteresttag'
   - 'seomatic:tracking-scripts:plausible'
   - 'viewassets:b99ee1fe-b466-49ac-8315-43d2af7587e1' # Uploads
+  - 'viewcategories:2c6d48c3-1f95-478e-ac4f-41e02dc90eb8' # Project Licenses
   - 'viewcategories:5593a3e3-ad74-4e68-ad2d-36a6c8f1d95a' # Project Year Groups
   - 'viewcategories:8d8e3436-a20e-4222-a530-d52fa736ae4d' # Project Technologies
   - 'viewcategories:a06eff6a-35ff-45b1-9c02-c6ef2f3f948c' # Project Rounds
@@ -212,6 +217,7 @@ permissions:
   - 'viewentries:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
   - 'viewentries:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
   - 'viewpeerassets:b99ee1fe-b466-49ac-8315-43d2af7587e1' # Uploads
+  - 'viewpeercategorydrafts:2c6d48c3-1f95-478e-ac4f-41e02dc90eb8' # Project Licenses
   - 'viewpeercategorydrafts:5593a3e3-ad74-4e68-ad2d-36a6c8f1d95a' # Project Year Groups
   - 'viewpeercategorydrafts:8d8e3436-a20e-4222-a530-d52fa736ae4d' # Project Technologies
   - 'viewpeercategorydrafts:a06eff6a-35ff-45b1-9c02-c6ef2f3f948c' # Project Rounds
