@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a2541963803409171ecfd45c666842e7",
+    "content-hash": "7668efbb84e86d11c2c33f4bc17ba8f1",
     "packages": [
         {
             "name": "amphp/amp",
@@ -9206,52 +9206,6 @@
             "time": "2025-05-03T07:21:55+00:00"
         },
         {
-            "name": "vandres/craft-matrix-extended",
-            "version": "v5.1.0",
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/vandres/craft-matrix-extended/zipball/2ae84bebd46874ce1dbd0f7d3c52b726d97fa368",
-                "reference": "2ae84bebd46874ce1dbd0f7d3c52b726d97fa368",
-                "shasum": ""
-            },
-            "require": {
-                "craftcms/cms": "^5.7.0",
-                "nystudio107/craft-plugin-vite": "^5.0",
-                "php": ">=8.2"
-            },
-            "type": "craft-plugin",
-            "extra": {
-                "handle": "matrix-extended",
-                "name": "Matrix Extended",
-                "developer": "Volker Andres",
-                "documentationUrl": "https://github.com/vandres/craft-matrix-extended",
-                "class": "vandres\\matrixextended\\MatrixExtended"
-            },
-            "autoload": {
-                "psr-4": {
-                    "vandres\\matrixextended\\": "src/"
-                }
-            },
-            "license": [
-                "proprietary"
-            ],
-            "authors": [
-                {
-                    "name": "Volker Andres",
-                    "homepage": "https://www.voan.ch"
-                }
-            ],
-            "description": "Adds functionality to the native Matrix field type",
-            "support": {
-                "email": "andres@voan.ch",
-                "issues": "https://github.com/vandres/craft-matrix-extended/issues?state=open",
-                "source": "https://github.com/vandres/craft-matrix-extended",
-                "docs": "https://github.com/vandres/craft-matrix-extended",
-                "rss": "https://github.com/vandres/craft-matrix-extended/releases.atom"
-            },
-            "time": "2025-12-02T08:47:16+00:00"
-        },
-        {
             "name": "verbb/base",
             "version": "3.0.9",
             "source": {
@@ -10706,13 +10660,13 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.2"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }

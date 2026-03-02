@@ -1,4 +1,4 @@
-dateModified: 1772469111
+dateModified: 1772469373
 elementSources:
   craft\elements\Entry:
     -
@@ -547,10 +547,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.1.1
-  matrix-extended:
-    edition: standard
-    enabled: true
-    schemaVersion: 3.1.0
   retcon:
     edition: standard
     enabled: true
