@@ -19,13 +19,13 @@ export default ({ command }) => ({
     }),
   ],
   server: {
-    host: '0.0.0.0',
+    host: "0.0.0.0",
     port: 5173,
     strictPort: true,
     origin: `${host}:5173`,
     cors: {
       origin: /^https?:\/\/(?:[a-zA-Z0-9-]+\.)+ddev\.site(?::\d+)?$/,
     },
-    allowedHosts: ['.ddev.site'],
+    allowedHosts: [".ddev.site"],
   },
 });
