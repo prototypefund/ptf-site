@@ -3,20 +3,21 @@
 {% set background = entry.headerBackground.value %}
 {% set issuesHeading = entry.issuesHeading %}
 {% set issuesDescription = entry.issuesDescription %}
-{% set linkListLinks = newsletter.newsletterLinks
-  .eagerly()
-  .collect()
-  |filter(linkGroup => linkGroup.genericLink != null)
-  |map(linkGroup => {
-    title: linkGroup.genericLink.label,
-    subheading: linkGroup.sideInfo,
-    genericLink: {
-      label: "See"|t,
-      type: linkGroup.genericLink.type,
-      url: linkGroup.genericLink.url,
-      target: linkGroup.genericLink.target,
-    }
-  })
+{% set linkListLinks =
+  newsletter.newsletterLinks.eagerly().collect()
+    |filter(linkGroup => linkGroup.genericLink != null)
+    |map(
+      linkGroup => {
+        title: linkGroup.genericLink.label,
+        subheading: linkGroup.sideInfo,
+        genericLink: {
+          label: "See"|t,
+          type: linkGroup.genericLink.type,
+          url: linkGroup.genericLink.url,
+          target: linkGroup.genericLink.target
+        }
+      }
+    )
 %}
 
 {% set content %}
