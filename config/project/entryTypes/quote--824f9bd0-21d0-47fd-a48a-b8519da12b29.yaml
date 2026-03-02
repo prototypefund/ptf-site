@@ -10,10 +10,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: d26ba65b-dbab-4a12-b3e8-1ae7a4a2845d # Quote
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -26,10 +24,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 3660aa23-c5a0-4865-b14d-5bd479e01996 # Source
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

@@ -254,3 +254,15 @@ permissions:
   - 'viewpeerentrydrafts:de820dbc-bd7e-4a0f-9554-3d750480d2a4' # Projects
   - 'viewpeerentrydrafts:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
   - 'viewpeerentrydrafts:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
+  - 'changeauthorforpeerentries:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Authors
+  - 'changeauthorforpeerentries:375cd22a-99b6-4667-8ca6-caf2572459ed' # Blog
+  - 'changeauthorforpeerentries:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
+  - 'changeauthorforpeerentries:a805834b-57ba-4e15-8082-a5bf2c23d495' # FAQs
+  - 'changeauthorforpeerentries:6e040108-27cc-4a4a-bca9-c5e3ab1bdc04' # Generic Pages
+  - 'changeauthorforpeerentries:9b03faaf-18e7-4df7-b87c-282d1ead8ea3' # Jury
+  - 'changeauthorforpeerentries:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
+  - 'changeauthorforpeerentries:de820dbc-bd7e-4a0f-9554-3d750480d2a4' # Projects
+  - 'changeauthorforpeerentries:4fd1e89f-c494-4e78-ae99-20dbd74e4f9b' # Publications
+  - 'changeauthorforpeerentries:a22a67ef-b1de-4d1d-b922-5ea14b3e8e1c' # Team
+  - 'changeauthorforpeerentries:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
+  - 'changeauthorforpeerentries:539be7e4-0b10-472e-b4de-ec2fbea58c78' # Trends
