@@ -6,97 +6,152 @@ searchable: false
 settings:
   createButtonLabel: null
   defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
       __assoc__:
         -
           - uid
           - 894e5185-035a-41d1-b272-0b6c1608aabf # Side Heading + Text
-    -
-      __assoc__:
         -
-          - uid
-          - b2b9ea1c-a462-4794-bd6c-d9700c56f94c # CTA Banner
-    -
-      __assoc__:
-        -
-          - uid
-          - 8760f57d-c660-4b7c-a052-940ebce3408c # People Grid
-    -
-      __assoc__:
-        -
-          - uid
-          - c08345c7-f10a-42ce-b893-7f2e82a46fbb # Embed
-    -
-      __assoc__:
-        -
-          - uid
-          - a05e468d-5063-4f3a-8ea3-aa240eebc1bf # Newsletter
-    -
-      __assoc__:
-        -
-          - uid
-          - cee93094-4951-4db3-af0c-29a87c1f2cf8 # Project Teasers
-    -
-      __assoc__:
-        -
-          - uid
-          - 54fc4092-6d81-499d-9360-5b73c81be367 # Blog Teasers
-    -
-      __assoc__:
-        -
-          - uid
-          - db43e022-8680-4b70-8b88-e6fc439994c5 # Trend Teasers
-    -
-      __assoc__:
-        -
-          - uid
-          - 4bfc6f18-1241-4dd1-be73-a95290f1a887 # Event Teasers
-    -
-      __assoc__:
-        -
-          - uid
-          - ca7069c8-f9a4-44e7-9b3e-21db114e4134 # Generic Teasers
-    -
-      __assoc__:
-        -
-          - uid
-          - 3443991a-aefd-4589-ab8f-68fd0f785ea1 # Talk Teasers
-    -
-      __assoc__:
-        -
-          - uid
-          - dcc2d4f6-0aa9-41e6-9135-942fc9d3f8ad # Link List
-    -
-      __assoc__:
-        -
-          - uid
-          - 72564f6d-cb4e-40a8-b30c-99153000f278 # Steps
-    -
-      __assoc__:
-        -
-          - uid
-          - 17844487-59d2-4434-a5f4-3030d625da70 # Expandable Text
-    -
-      __assoc__:
-        -
-          - uid
-          - 53e61864-66a8-435a-aaea-d2ebb408d6aa # Publications
-    -
-      __assoc__:
-        -
-          - uid
-          - 8ad973e9-d5d2-4385-b6cf-beb0a9ca03d2 # Statement
-    -
-      __assoc__:
-        -
-          - uid
-          - e3e7a426-21c5-4767-b047-739432c7f60a # Timeline
+          - group
+          - Blocks
     -
       __assoc__:
         -
           - uid
           - acfeb71e-c3fa-40d8-8b68-3fa03b22cf0a # Text Grid
+        -
+          - group
+          - Blocks
+    -
+      __assoc__:
+        -
+          - uid
+          - dcc2d4f6-0aa9-41e6-9135-942fc9d3f8ad # Link List
+        -
+          - group
+          - Blocks
+    -
+      __assoc__:
+        -
+          - uid
+          - 17844487-59d2-4434-a5f4-3030d625da70 # Expandable Text
+        -
+          - group
+          - Blocks
+    -
+      __assoc__:
+        -
+          - uid
+          - e3e7a426-21c5-4767-b047-739432c7f60a # Timeline
+        -
+          - group
+          - Blocks
+    -
+      __assoc__:
+        -
+          - uid
+          - 53e61864-66a8-435a-aaea-d2ebb408d6aa # Publications
+        -
+          - group
+          - Blocks
+    -
+      __assoc__:
+        -
+          - uid
+          - 72564f6d-cb4e-40a8-b30c-99153000f278 # Steps
+        -
+          - group
+          - Blocks
+    -
+      __assoc__:
+        -
+          - uid
+          - 8760f57d-c660-4b7c-a052-940ebce3408c # People Grid
+        -
+          - group
+          - Blocks
+    -
+      __assoc__:
+        -
+          - uid
+          - 8ad973e9-d5d2-4385-b6cf-beb0a9ca03d2 # Statement
+        -
+          - group
+          - Blocks
+    -
+      __assoc__:
+        -
+          - uid
+          - b2b9ea1c-a462-4794-bd6c-d9700c56f94c # CTA Banner
+        -
+          - group
+          - Blocks
+    -
+      __assoc__:
+        -
+          - uid
+          - c08345c7-f10a-42ce-b893-7f2e82a46fbb # Embed
+        -
+          - group
+          - Blocks
+    -
+      __assoc__:
+        -
+          - uid
+          - a05e468d-5063-4f3a-8ea3-aa240eebc1bf # Newsletter
+        -
+          - group
+          - Blocks
+    -
+      __assoc__:
+        -
+          - uid
+          - 54fc4092-6d81-499d-9360-5b73c81be367 # Blog Teasers
+        -
+          - group
+          - Teasers
+    -
+      __assoc__:
+        -
+          - uid
+          - cee93094-4951-4db3-af0c-29a87c1f2cf8 # Project Teasers
+        -
+          - group
+          - Teasers
+    -
+      __assoc__:
+        -
+          - uid
+          - 4bfc6f18-1241-4dd1-be73-a95290f1a887 # Event Teasers
+        -
+          - group
+          - Teasers
+    -
+      __assoc__:
+        -
+          - uid
+          - ca7069c8-f9a4-44e7-9b3e-21db114e4134 # Generic Teasers
+        -
+          - group
+          - Teasers
+    -
+      __assoc__:
+        -
+          - uid
+          - 3443991a-aefd-4589-ab8f-68fd0f785ea1 # Talk Teasers
+        -
+          - group
+          - Teasers
+    -
+      __assoc__:
+        -
+          - uid
+          - db43e022-8680-4b70-8b88-e6fc439994c5 # Trend Teasers
+        -
+          - group
+          - Teasers
   includeTableView: false
   maxEntries: null
   minEntries: null
