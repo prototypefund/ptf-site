@@ -11,10 +11,7 @@ database:
     version: "8.0"
 hooks:
     post-start:
-        - exec: nvm install 24
-        - exec: nvm use 24
-        - exec: npm i
-        - exec: npm run dev
+        - exec: composer install
 upload_dirs:
     - web/uploads
 use_dns_when_possible: true
