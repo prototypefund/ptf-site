@@ -1,6 +1,6 @@
 {
   "require": {
-    "craftcms/ckeditor": "4.11.1",
+    "craftcms/ckeditor": "^4.11.2",
     "craftcms/cms": "5.9.14",
     "craftcms/feed-me": "6.11.0",
     "mmikkel/retcon": "3.2.2",
