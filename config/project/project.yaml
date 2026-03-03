@@ -1,4 +1,4 @@
-dateModified: 1772461863
+dateModified: 1772469373
 elementSources:
   craft\elements\Entry:
     -
@@ -547,10 +547,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.1.1
-  matrix-extended:
-    edition: standard
-    enabled: true
-    schemaVersion: 3.1.0
   retcon:
     edition: standard
     enabled: true
@@ -637,5 +633,5 @@ system:
   live: true
   name: 'Prototype Fund'
   retryDuration: null
-  schemaVersion: 5.8.0.3
+  schemaVersion: 5.9.0.8
   timeZone: Europe/Berlin

@@ -10,10 +10,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # Link
             handle: null
-            includeInCards: false
             instructions: null
             label: Link
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField
