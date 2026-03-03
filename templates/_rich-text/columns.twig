@@ -17,9 +17,11 @@
   ]|join(" ") }}"
 >
   {% include "_rich-text/standard" with {
-    text: text|replace({
-      '/<div class="col-xs-24">/': "",
-      "/<\/div>$/": ""
-    })
+    text: text
+      |retconAutoAlt
+      |replace({
+        '/<div class="col-xs-24">/': "",
+        "/<\/div>$/": ""
+      })
   } only %}
 </div>
