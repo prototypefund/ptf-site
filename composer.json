@@ -1,14 +1,13 @@
 {
   "require": {
-    "craftcms/ckeditor": "4.11.1",
-    "craftcms/cms": "5.8.23",
+    "craftcms/ckeditor": "^4.11.2",
+    "craftcms/cms": "5.9.14",
     "craftcms/feed-me": "6.11.0",
     "mmikkel/retcon": "3.2.2",
     "nystudio107/craft-retour": "5.0.14",
     "nystudio107/craft-seomatic": "5.1.20",
     "nystudio107/craft-vite": "5.0.1",
     "putyourlightson/craft-blitz": "5.12.7",
-    "vandres/craft-matrix-extended": "v5.1.0",
     "verbb/knock-knock": "3.0.5",
     "vlucas/phpdotenv": "^5.6.0"
   },

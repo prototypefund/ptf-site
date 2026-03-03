@@ -16,7 +16,6 @@ fieldLayouts:
             disabled: false
             elementCondition: null
             id: null
-            includeInCards: false
             inputType: null
             instructions: null
             label: null
@@ -25,7 +24,6 @@ fieldLayouts:
             name: null
             orientation: null
             placeholder: null
-            providesThumbs: false
             readonly: false
             required: true
             size: null
@@ -43,10 +41,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 0f8a3079-62db-4270-ac53-6903c9b28557 # Main Image
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -66,10 +62,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: ad1324f8-1337-475f-8516-ab1e13543027 # Intro
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -83,10 +77,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 13a0aaca-3bd8-4653-b163-69738ce277c3 # Text
             handle: null
-            includeInCards: true
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -106,10 +98,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 1bf40018-82e4-4e44-bbd6-6f49c132678d # Modules
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -129,10 +119,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 6c3461da-2d32-418a-803b-efe329a38c30 # Article Author
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -146,10 +134,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 2965e0c7-feb2-4aa2-98d4-de16d458eb30 # Categories
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -163,10 +149,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 9c0f58c4-4b28-4aca-b80d-3b370bc38f9e # Next Reads
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -186,10 +170,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: cff97bfa-6eb7-473b-97c0-cc3af58c0f64 # Article ID
             handle: null
-            includeInCards: false
             instructions: 'This only exists as a helper field for the data migration from the old site. Don’t change it.'
             label: 'Legacy Article ID'
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -209,10 +191,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 0d857c68-7bb1-4ce7-b61f-671446aa8bb3 # SEO
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField

@@ -10,10 +10,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: 2d6b9ef4-4190-4cf7-9a92-b6f6b0fb7f61 # CTA Banner
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: true
             tip: null
             type: craft\fieldlayoutelements\CustomField

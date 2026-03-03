@@ -3,29 +3,22 @@
 {% set background = entry.headerBackground.value %}
 {% set issuesHeading = entry.issuesHeading %}
 {% set issuesDescription = entry.issuesDescription %}
-{% set linkListLinks = [] %}
-
-{% for linkGroup in newsletter.newsletterLinks.eagerly().all() %}
-  {% set link = linkGroup.genericLink %}
-  {% set sideInfo = linkGroup.sideInfo %}
-
-  {% if link|length %}
-    {% set linkListLinks =
-      [
-        {
-          title: link.label,
-          subheading: linkGroup.sideInfo,
-          genericLink: {
-            label: "See"|t,
-            type: link.type,
-            url: link.url,
-            target: link.target
-          }
+{% set linkListLinks =
+  newsletter.newsletterLinks.eagerly().collect()
+    |filter(linkGroup => linkGroup.genericLink != null)
+    |map(
+      linkGroup => {
+        title: linkGroup.genericLink.label,
+        subheading: linkGroup.sideInfo,
+        genericLink: {
+          label: "See"|t,
+          type: linkGroup.genericLink.type,
+          url: linkGroup.genericLink.url,
+          target: linkGroup.genericLink.target
         }
-      ]|merge(linkListLinks)
-    %}
-  {% endif %}
-{% endfor %}
+      }
+    )
+%}
 
 {% set content %}
   {% include "_modules/newsletter-form" with {

@@ -1,4 +1,4 @@
-dateModified: 1771502511
+dateModified: 1772469373
 elementSources:
   craft\elements\Entry:
     -
@@ -187,7 +187,7 @@ fs:
     settings:
       path: '@webroot/uploads'
     type: craft\fs\Local
-    url: '@web/uploads'
+    url: /uploads
 meta:
   __names__:
     0a7d996f-dc9c-416e-ab72-2d475eaa550b: Talk # Talk
@@ -547,10 +547,6 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 1.1.1
-  matrix-extended:
-    edition: standard
-    enabled: true
-    schemaVersion: 3.1.0
   retcon:
     edition: standard
     enabled: true
@@ -637,5 +633,5 @@ system:
   live: true
   name: 'Prototype Fund'
   retryDuration: null
-  schemaVersion: 5.8.0.3
+  schemaVersion: 5.9.0.8
   timeZone: Europe/Berlin

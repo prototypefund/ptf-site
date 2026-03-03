@@ -9,10 +9,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: e0be08b6-634c-4eed-aa9a-175b6bc828c1 # Enable Announcement Bar
             handle: null
-            includeInCards: false
             instructions: null
             label: null
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
@@ -25,10 +23,8 @@ fieldLayouts:
             elementCondition: null
             fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # Link
             handle: announcementLink
-            includeInCards: false
             instructions: null
             label: 'Announcement Link'
-            providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
