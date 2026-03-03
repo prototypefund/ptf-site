@@ -96,6 +96,12 @@
               context: context
             })
           }}
+        {% case "gallery" %}
+          {{
+            module.render({
+              context: context
+            })
+          }}
         {% default %}
       {% endswitch %}
     {% endfor %}

@@ -1,0 +1,58 @@
+{% import "_macros" as macros %}
+
+{% set images = entry.images
+  .eagerly()
+  .withTransforms(['w800__3_2'])
+  .all()
+%}
+
+<gallery-carousel class="overflow-hidden cursor-grab active:cursor-grabbing">
+  <div class="splide">
+    <div class="splide__track">
+        <ul class="splide__list">
+          {% for image in images %}
+           {% set caption =
+              [image.caption, image.credit]|filter(value => value is not null)
+            %}
+
+            {% set secondaryCaption = image.secondaryCaption %}
+
+            <li class="splide__slide">
+              <figure>
+                <img
+                  class="h-28 md:h-80 w-auto"
+                  src="{{ image.getUrl('w800__3_2') }}"
+                  srcset="{{ macros.srcSetThreeByTwo(image) }}"
+                  alt="{{ image.alt|e('html_attr') }}"
+                />
+
+                {% if (caption|length) or (secondaryCaption|length) %}
+                  <figcaption class="mt-1">
+                    {% if caption|length %}
+                      <ul class="flex flex-wrap gap-y-0.5">
+                        {% for text in caption %}
+                          <li
+                            class="text-body-12 text-wrap after:text-gray dark:text-gray text-gray-600 after:pr-1 after:pl-[5px] after:content-['|'] last:after:hidden dark:after:text-gray-500"
+                          >
+                            {{ text }}
+                          </li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+
+                    {% if secondaryCaption|length %}
+                      <div class="mt-2">
+                        {% include "_rich-text/simple" with {
+                          text: secondaryCaption
+                        } only %}
+                      </div>
+                    {% endif %}
+                  </figcaption>
+                {% endif %}
+              </figure>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+</gallery-carousel>
