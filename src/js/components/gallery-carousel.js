@@ -1,4 +1,4 @@
-import '@splidejs/splide/css/core';
+import "@splidejs/splide/css/core";
 
 export class GalleryCarousel extends HTMLElement {
   constructor() {
@@ -6,25 +6,25 @@ export class GalleryCarousel extends HTMLElement {
   }
 
   async connectedCallback() {
-    const {default: Splide} = await import('@splidejs/splide');
+    const { default: Splide } = await import("@splidejs/splide");
 
-    const instance = new Splide(this.querySelector('.splide'), {
+    const instance = new Splide(this.querySelector(".splide"), {
       arrows: false,
       pagination: false,
-      padding: 'calc(var(--spacing) * 5)',
+      padding: "calc(var(--spacing) * 5)",
       gap: 24,
       autoWidth: true,
-      drag: 'free',
+      drag: "free",
       snap: false,
       easingFunc: (t) => 1 - Math.pow(1 - t, 5),
       breakpoints: {
         767: {
-          padding: 'calc(var(--spacing) * 2)',
+          padding: "calc(var(--spacing) * 2)",
           gap: 16,
-        }
-      }
+        },
+      },
     });
 
-    instance.mount()
+    instance.mount();
   }
 }

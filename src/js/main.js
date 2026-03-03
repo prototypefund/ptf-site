@@ -14,7 +14,7 @@ if (
   !customElements.get("text-animation") ||
   !customElements.get("project-filters") ||
   !customElements.get("pixel-grid") ||
-  !customElements.get('gallery-carousel')
+  !customElements.get("gallery-carousel")
 ) {
   customElements.define("display-toggle", DisplayToggle);
   customElements.define("main-nav", MainNav);
