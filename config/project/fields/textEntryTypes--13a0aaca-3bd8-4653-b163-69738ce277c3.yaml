@@ -26,7 +26,14 @@ settings:
         -
           - uid
           - c08345c7-f10a-42ce-b893-7f2e82a46fbb # Embed
+    -
+      __assoc__:
+        -
+          - uid
+          - 0a3f8849-b320-4a0e-929f-d5d0fddc7c45 # Gallery
+  expandEntryButtons: false
   fullGraphqlData: false
+  parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false

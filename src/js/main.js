@@ -5,6 +5,7 @@ import { MainNav } from "./components/main-nav";
 import { TextAnimation } from "./components/text-animation";
 import { ProjectFilters } from "./components/project-filters";
 import { PixelGrid } from "./components/pixel-grid";
+import { GalleryCarousel } from "./components/gallery-carousel";
 
 if (
   !customElements.get("display-toggle") ||
@@ -12,7 +13,8 @@ if (
   !customElements.get("bar-chart") ||
   !customElements.get("text-animation") ||
   !customElements.get("project-filters") ||
-  !customElements.get("pixel-grid")
+  !customElements.get("pixel-grid") ||
+  !customElements.get("gallery-carousel")
 ) {
   customElements.define("display-toggle", DisplayToggle);
   customElements.define("main-nav", MainNav);
@@ -20,6 +22,7 @@ if (
   customElements.define("text-animation", TextAnimation);
   customElements.define("project-filters", ProjectFilters);
   customElements.define("pixel-grid", PixelGrid);
+  customElements.define("gallery-carousel", GalleryCarousel);
 }
 
 window.addEventListener("beforeprint", () => {

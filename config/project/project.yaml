@@ -1,4 +1,4 @@
-dateModified: 1772469373
+dateModified: 1772546154
 elementSources:
   craft\elements\Entry:
     -
@@ -190,6 +190,7 @@ fs:
     url: /uploads
 meta:
   __names__:
+    0a3f8849-b320-4a0e-929f-d5d0fddc7c45: Gallery # Gallery
     0a7d996f-dc9c-416e-ab72-2d475eaa550b: Talk # Talk
     0b9eb562-64e5-4b3c-9478-8cefd24e8039: Text # Text
     0d857c68-7bb1-4ce7-b61f-671446aa8bb3: SEO # SEO

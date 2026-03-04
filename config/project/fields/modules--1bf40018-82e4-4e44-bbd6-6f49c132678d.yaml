@@ -108,6 +108,14 @@ settings:
       __assoc__:
         -
           - uid
+          - 0a3f8849-b320-4a0e-929f-d5d0fddc7c45 # Gallery
+        -
+          - group
+          - Blocks
+    -
+      __assoc__:
+        -
+          - uid
           - 54fc4092-6d81-499d-9360-5b73c81be367 # Blog Teasers
         -
           - group

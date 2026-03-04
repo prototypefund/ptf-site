@@ -1,0 +1,44 @@
+allowLineBreaksInTitles: false
+color: null
+description: null
+fieldLayouts:
+  91588f5f-7383-49e3-aecf-93c77f1f26d5:
+    cardThumbAlignment: end
+    cardView:
+      - 'layoutElement:217a2c90-eeb9-495e-8605-be8adfd8e58d'
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2026-03-03T11:10:08+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 861f15c4-66e5-4a20-8b69-3bca664a1602 # Images
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 217a2c90-eeb9-495e-8605-be8adfd8e58d
+            userCondition: null
+            warning: null
+            width: 100
+        name: Inhalt
+        uid: dd2bee79-b80d-4118-bc69-ed1561abee55
+        userCondition: null
+    thumbFieldKey: 'layoutElement:217a2c90-eeb9-495e-8605-be8adfd8e58d'
+handle: gallery
+hasTitleField: false
+icon: null
+name: Gallery
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: '{{ "{n,plural,=0{No image} =1{1 Image} other{# Images}}"|t(''site'', {n: images.count()}) }}  '
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
+uiLabelFormat: '{title}'
