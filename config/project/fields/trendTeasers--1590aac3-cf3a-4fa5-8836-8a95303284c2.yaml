@@ -2,7 +2,7 @@ columnSuffix: null
 handle: trendTeasers
 instructions: null
 name: Teasers
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null

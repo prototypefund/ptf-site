@@ -2,7 +2,7 @@ columnSuffix: null
 handle: columns
 instructions: null
 name: Columns
-searchable: false
+searchable: true
 settings:
   addRowLabel: 'Add a row'
   columns:
@@ -48,6 +48,9 @@ settings:
         -
           - col2
           - ''
+        -
+          - rowId
+          - d7721b47-5fc2-4d80-8693-7378eb2585fd
   maxRows: 2
   minRows: null
   staticRows: false

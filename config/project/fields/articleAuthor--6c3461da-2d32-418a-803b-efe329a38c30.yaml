@@ -2,7 +2,7 @@ columnSuffix: null
 handle: articleAuthor
 instructions: null
 name: 'Article Author'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null

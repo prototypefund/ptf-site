@@ -2,7 +2,7 @@ columnSuffix: null
 handle: intro
 instructions: null
 name: Intro
-searchable: false
+searchable: true
 settings:
   availableTransforms: '*'
   availableVolumes: '*'

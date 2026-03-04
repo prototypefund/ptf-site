@@ -2,7 +2,7 @@ columnSuffix: null
 handle: expandableItems
 instructions: null
 name: 'Expandable Items'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null

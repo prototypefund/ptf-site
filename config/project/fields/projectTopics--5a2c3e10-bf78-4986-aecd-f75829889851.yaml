@@ -2,7 +2,7 @@ columnSuffix: null
 handle: projectTopics
 instructions: null
 name: 'Project Topics'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null

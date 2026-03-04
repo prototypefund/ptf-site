@@ -2,7 +2,7 @@ columnSuffix: null
 handle: links
 instructions: null
 name: Links
-searchable: false
+searchable: true
 settings:
   createButtonLabel: 'New link'
   defaultIndexViewMode: cards
@@ -13,6 +13,9 @@ settings:
         -
           - uid
           - 65570146-7afc-432e-9890-2cb116aa66ac # Link
+        -
+          - group
+          - Allgemein
   includeTableView: false
   maxEntries: null
   minEntries: null

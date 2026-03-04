@@ -2,7 +2,7 @@ columnSuffix: null
 handle: projectId
 instructions: null
 name: 'Project ID'
-searchable: false
+searchable: true
 settings:
   decimals: 0
   defaultValue: null

@@ -2,7 +2,7 @@ columnSuffix: null
 handle: talkTeasers
 instructions: 'Leave empty to always display the latest three talks automatically'
 name: 'Talk Teasers'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null

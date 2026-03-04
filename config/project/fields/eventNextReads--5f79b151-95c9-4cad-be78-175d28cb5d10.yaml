@@ -2,7 +2,7 @@ columnSuffix: null
 handle: eventNextReads
 instructions: 'Leave empty to always display the latest three upcoming events automatically'
 name: 'Event Next Reads'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null

@@ -2,7 +2,7 @@ columnSuffix: null
 handle: people
 instructions: null
 name: People
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null

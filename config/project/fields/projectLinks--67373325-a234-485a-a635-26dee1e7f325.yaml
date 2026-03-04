@@ -2,7 +2,7 @@ columnSuffix: null
 handle: projectLinks
 instructions: null
 name: 'Project Links'
-searchable: false
+searchable: true
 settings:
   addRowLabel: 'Add a row'
   columns:
@@ -67,6 +67,9 @@ settings:
         -
           - col3
           - ''
+        -
+          - rowId
+          - aab56144-c245-488b-ad13-042792f01f0d
   maxRows: null
   minRows: null
   staticRows: false

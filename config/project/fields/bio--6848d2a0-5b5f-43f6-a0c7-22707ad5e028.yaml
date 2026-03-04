@@ -2,7 +2,7 @@ columnSuffix: null
 handle: bio
 instructions: null
 name: Bio
-searchable: false
+searchable: true
 settings:
   availableTransforms: '*'
   availableVolumes: '*'

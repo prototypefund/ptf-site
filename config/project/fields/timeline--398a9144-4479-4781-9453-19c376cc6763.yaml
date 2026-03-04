@@ -2,7 +2,7 @@ columnSuffix: null
 handle: timeline
 instructions: null
 name: Timeline
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null

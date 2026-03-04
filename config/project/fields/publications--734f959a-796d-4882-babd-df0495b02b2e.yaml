@@ -2,7 +2,7 @@ columnSuffix: null
 handle: publications
 instructions: null
 name: Publications
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null

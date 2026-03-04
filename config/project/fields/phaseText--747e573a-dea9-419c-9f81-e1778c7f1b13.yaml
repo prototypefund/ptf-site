@@ -2,7 +2,7 @@ columnSuffix: null
 handle: phaseText
 instructions: null
 name: 'Phase Text'
-searchable: false
+searchable: true
 settings:
   availableTransforms: '*'
   availableVolumes: '*'

@@ -2,7 +2,7 @@ columnSuffix: null
 handle: projectLicenses
 instructions: null
 name: 'Project Licenses'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
@@ -12,7 +12,7 @@ settings:
   minRelations: null
   selectionLabel: null
   showSearchInput: true
-  showSiteMenu: false
+  showSiteMenu: true
   source: 'group:2c6d48c3-1f95-478e-ac4f-41e02dc90eb8' # Project Licenses
   targetSiteId: null
   validateRelatedElements: false

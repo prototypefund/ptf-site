@@ -2,7 +2,7 @@ columnSuffix: null
 handle: date
 instructions: null
 name: Date
-searchable: false
+searchable: true
 settings:
   max: null
   min: null

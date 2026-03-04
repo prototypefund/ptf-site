@@ -2,7 +2,7 @@ columnSuffix: null
 handle: caption
 instructions: null
 name: Caption
-searchable: false
+searchable: true
 settings:
   byteLimit: null
   charLimit: null

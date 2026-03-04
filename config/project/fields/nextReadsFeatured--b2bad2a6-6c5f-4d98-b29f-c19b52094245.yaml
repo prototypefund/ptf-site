@@ -2,7 +2,7 @@ columnSuffix: null
 handle: nextReadsFeatured
 instructions: null
 name: 'Next Reads Featured'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null

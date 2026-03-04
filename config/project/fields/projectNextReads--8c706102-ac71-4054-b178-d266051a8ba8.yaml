@@ -2,7 +2,7 @@ columnSuffix: null
 handle: projectNextReads
 instructions: null
 name: 'Project Next Reads'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null

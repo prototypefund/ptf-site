@@ -2,7 +2,7 @@ columnSuffix: null
 handle: stepText
 instructions: null
 name: 'Step Text'
-searchable: false
+searchable: true
 settings:
   availableTransforms: '*'
   availableVolumes: '*'

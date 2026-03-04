@@ -2,7 +2,7 @@ columnSuffix: null
 handle: images
 instructions: null
 name: Images
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   allowSubfolders: false
@@ -23,7 +23,7 @@ settings:
   restrictedLocationSubpath: null
   selectionLabel: null
   showSearchInput: true
-  showSiteMenu: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources:

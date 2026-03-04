@@ -2,7 +2,7 @@ columnSuffix: null
 handle: mainImage
 instructions: null
 name: 'Main Image'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   allowSubfolders: false
@@ -25,7 +25,7 @@ settings:
   restrictedLocationSubpath: null
   selectionLabel: null
   showSearchInput: true
-  showSiteMenu: false
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources: '*'

@@ -2,7 +2,7 @@ columnSuffix: null
 handle: speakers
 instructions: null
 name: Speakers
-searchable: false
+searchable: true
 settings:
   byteLimit: null
   charLimit: null

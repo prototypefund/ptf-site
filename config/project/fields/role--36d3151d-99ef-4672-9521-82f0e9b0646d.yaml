@@ -2,7 +2,7 @@ columnSuffix: null
 handle: role
 instructions: null
 name: Role
-searchable: false
+searchable: true
 settings:
   byteLimit: null
   charLimit: null

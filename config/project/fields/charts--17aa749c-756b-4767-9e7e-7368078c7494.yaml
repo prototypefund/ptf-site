@@ -2,7 +2,7 @@ columnSuffix: null
 handle: charts
 instructions: null
 name: Charts
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null

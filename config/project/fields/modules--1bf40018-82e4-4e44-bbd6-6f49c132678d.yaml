@@ -2,7 +2,7 @@ columnSuffix: null
 handle: modules
 instructions: null
 name: Modules
-searchable: false
+searchable: true
 settings:
   createButtonLabel: null
   defaultIndexViewMode: cards

@@ -2,7 +2,7 @@ columnSuffix: null
 handle: source
 instructions: null
 name: Source
-searchable: false
+searchable: true
 settings:
   byteLimit: null
   charLimit: null
