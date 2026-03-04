@@ -1,8 +1,11 @@
 {% import "_macros" as macros %}
+{% set class = class ?? "my-[60px]" %}
 
 {% set images = entry.images.eagerly().withTransforms(["w800__3_2"]).all() %}
 
-<gallery-carousel class="cursor-grab overflow-hidden active:cursor-grabbing">
+<gallery-carousel
+  class="{{ class }} block cursor-grab overflow-hidden active:cursor-grabbing"
+>
   <div class="splide">
     <div class="splide__track">
       <ul class="splide__list">
