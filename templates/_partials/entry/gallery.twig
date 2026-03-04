@@ -1,7 +1,11 @@
 {% import "_macros" as macros %}
 {% set class = class ?? "my-[60px]" %}
 
-{% set images = entry.images.eagerly().withTransforms(["w800__3_2"]).all() %}
+{% set images =
+  entry.images.eagerly().withTransforms(
+    ["w300", "w800", "w1200", "w1500", "w2000"]
+  ).all()
+%}
 
 <gallery-carousel
   class="{{ class }} block cursor-grab overflow-hidden active:cursor-grabbing"
@@ -20,20 +24,18 @@
             <figure class="inline-flex flex-col gap-y-1">
               <img
                 class="h-28 w-auto flex-none md:h-80"
-                src="{{ image.getUrl("w800__3_2") }}"
-                srcset="{{ macros.srcSetThreeByTwo(image) }}"
+                src="{{ image.getUrl("w800") }}"
+                srcset="{{ macros.srcSet(image) }}"
                 alt="{{ image.alt|e("html_attr") }}"
               />
 
               {% if caption|length %}
                 <figcaption class="mt-1 w-0 min-w-full">
                   {% if caption|length %}
-                    <ul
-                      class="text-body-14 text-secondary uppercase"
-                    >
+                    <ul class="text-body-14 text-secondary uppercase">
                       {% for text in caption %}
                         <li
-                          class="inline after:text-gray after:pr-1 after:pl-[5px] after:content-['|'] last:after:hidden dark:after:text-gray-500"
+                          class="after:text-gray inline after:pr-1 after:pl-[5px] after:content-['|'] last:after:hidden dark:after:text-gray-500"
                         >
                           {{ text }}
                         </li>
