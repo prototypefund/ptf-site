@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   aa99c716-20fd-45c3-9fca-9f3c274c276a:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -35,7 +38,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-24T19:52:13+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 4ca0ade4-44d2-4594-8253-a909b0a44bb2 # Steps
             handle: null
             instructions: null
@@ -50,6 +55,7 @@ fieldLayouts:
         name: Content
         uid: 79afba70-63b5-4390-8f0f-108e6d472464
         userCondition: null
+    thumbFieldKey: null
 handle: steps
 hasTitleField: true
 icon: null
@@ -61,3 +67,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

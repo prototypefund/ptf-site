@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   a6364d44-4e15-417b-8d42-5e91ffe6dfae:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -35,7 +38,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-30T12:36:26+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d99528c4-136b-413c-9799-56fd20edd2c6 # Headline
             handle: null
             instructions: 'Overrides the title'
@@ -49,7 +54,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-26T15:59:59+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: f190999c-96f7-4cfe-900b-d5f76f8e8018 # Phases
             handle: null
             instructions: null
@@ -63,7 +70,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-26T15:59:59+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 0b9eb562-64e5-4b3c-9478-8cefd24e8039 # Text
             handle: null
             instructions: null
@@ -78,6 +87,7 @@ fieldLayouts:
         name: Content
         uid: a0bf1478-3800-4ca7-b592-92f05cd04937
         userCondition: null
+    thumbFieldKey: null
 handle: timeline
 hasTitleField: true
 icon: null
@@ -89,3 +99,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

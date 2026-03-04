@@ -11,7 +11,7 @@ settings:
   maxRelations: 1
   minRelations: null
   selectionLabel: null
-  showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: false
   source: 'group:5593a3e3-ad74-4e68-ad2d-36a6c8f1d95a' # Project Year Groups
   targetSiteId: null

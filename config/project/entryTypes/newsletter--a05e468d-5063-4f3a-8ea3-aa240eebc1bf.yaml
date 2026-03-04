@@ -1,13 +1,18 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   e6a05a6a-d419-4648-9885-15f3c568ba45:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
             dateAdded: '2025-04-08T18:38:50+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8898a317-df17-4cc9-9475-6376bc29fbd5 # Newsletter Headline
             handle: null
             instructions: 'Leave empty to use the default newsletter headline'
@@ -21,7 +26,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-08T18:42:16+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: fc819c64-6715-4ac6-8573-d5c49ab5420e # Newsletter Text
             handle: null
             instructions: 'Leave empty to use the default newsletter explanation text'
@@ -35,7 +42,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-08T18:38:50+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: fdce3d41-b225-460c-85ea-1908f71ba724 # Newsletter Secondary Text
             handle: null
             instructions: 'Leave empty to use the default newsletter disclaimer text'
@@ -49,7 +58,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-09T06:56:12+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 62efdaf8-a4e7-4149-bc72-3bd492681eba # Newsletter Side Title
             handle: null
             instructions: 'Leave empty to use the default newsletter side title'
@@ -63,7 +74,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-09T07:07:43+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 358db54d-b951-4e0a-b4fa-c43aa2257acc # Newsletter Links
             handle: null
             instructions: 'Leave empty to use the default newsletter links'
@@ -78,6 +91,7 @@ fieldLayouts:
         name: Content
         uid: 6b567ee4-a998-42d7-a48b-5ae641e2e020
         userCondition: null
+    thumbFieldKey: null
 handle: newsletter
 hasTitleField: false
 icon: null
@@ -89,3 +103,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

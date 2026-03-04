@@ -6,11 +6,12 @@ searchable: false
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
   selectionLabel: null
-  showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: false
   source: 'group:bdc78be0-ab3b-4c52-9657-0eaaff1208e9' # Blog Categories
   targetSiteId: null

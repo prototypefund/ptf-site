@@ -1,13 +1,18 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   fd5b8ad4-3df1-423c-9e7a-eec103398f96:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
             dateAdded: '2025-04-09T07:07:08+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # Link
             handle: null
             instructions: null
@@ -21,7 +26,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-09T07:13:49+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 7e4dd8fe-6873-44a9-ada5-acf02698981d # Side Info
             handle: null
             instructions: null
@@ -36,6 +43,7 @@ fieldLayouts:
         name: Content
         uid: ba5080b6-a2be-4c53-b161-3a3d0117c6a1
         userCondition: null
+    thumbFieldKey: null
 handle: newsletterLinkGroup
 hasTitleField: false
 icon: null
@@ -47,3 +55,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

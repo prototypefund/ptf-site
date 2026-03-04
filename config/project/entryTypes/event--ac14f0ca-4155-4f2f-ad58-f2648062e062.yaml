@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   16e5305b-4d01-494a-87af-0cd0087fc30e:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -35,7 +38,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-30T12:18:17+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 0f8a3079-62db-4270-ac53-6903c9b28557 # Main Image
             handle: null
             instructions: null
@@ -49,7 +54,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-30T12:18:17+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: abb2edcb-afed-4766-9c25-594bf7d42262 # Date
             handle: null
             instructions: null
@@ -63,7 +70,9 @@ fieldLayouts:
             width: 25
           -
             dateAdded: '2025-04-30T12:19:28+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d9abc0f0-98c8-45d7-aa77-d9f8fbe83f7a # Time
             handle: startTime
             instructions: null
@@ -77,7 +86,9 @@ fieldLayouts:
             width: 25
           -
             dateAdded: '2025-04-30T12:19:28+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d9abc0f0-98c8-45d7-aa77-d9f8fbe83f7a # Time
             handle: endTime
             instructions: null
@@ -91,7 +102,9 @@ fieldLayouts:
             width: 25
           -
             dateAdded: '2025-04-30T13:50:22+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 6da63526-25ff-45c2-b4f7-543c359ec775 # Location
             handle: null
             instructions: null
@@ -111,7 +124,9 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-04-30T14:28:59+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 15f1ebd8-2e95-45e1-81f5-d39b6253762e # Teaser Text
             handle: null
             instructions: null
@@ -131,7 +146,9 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-04-30T12:20:50+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 1bf40018-82e4-4e44-bbd6-6f49c132678d # Modules
             handle: null
             instructions: null
@@ -151,7 +168,9 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-04-30T14:10:01+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5f79b151-95c9-4cad-be78-175d28cb5d10 # Event Next Reads
             handle: null
             instructions: null
@@ -171,7 +190,9 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-04-30T12:18:17+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 0d857c68-7bb1-4ce7-b61f-671446aa8bb3 # SEO
             handle: null
             instructions: null
@@ -186,6 +207,7 @@ fieldLayouts:
         name: SEO
         uid: f16b19d1-1d53-431e-b436-600c41bef74a
         userCondition: null
+    thumbFieldKey: null
 handle: event
 hasTitleField: true
 icon: null
@@ -197,3 +219,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

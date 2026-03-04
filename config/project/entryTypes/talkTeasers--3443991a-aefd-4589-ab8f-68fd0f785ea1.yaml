@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   c44a02f7-1758-498a-9e0f-aa156b6a140b:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -35,7 +38,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-05-01T12:24:34+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 2c8df106-11d5-4758-8b01-d51d565188f0 # Talk Teasers
             handle: null
             instructions: null
@@ -50,6 +55,7 @@ fieldLayouts:
         name: Content
         uid: aaff4d16-2d4d-4b30-ba27-3a1d323f21dc
         userCondition: null
+    thumbFieldKey: null
 handle: talkTeasers
 hasTitleField: true
 icon: null
@@ -61,3 +67,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   cd8572db-bf4d-44f2-b87d-46aab8ad910c:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -35,7 +38,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-30T12:47:51+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 398a9144-4479-4781-9453-19c376cc6763 # Timeline
             handle: null
             instructions: null
@@ -50,6 +55,7 @@ fieldLayouts:
         name: Content
         uid: 9b5fdd04-63df-4f40-b797-b5e8d39153a5
         userCondition: null
+    thumbFieldKey: null
 handle: relatedTimeline
 hasTitleField: true
 icon: null
@@ -61,3 +67,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

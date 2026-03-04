@@ -1,6 +1,7 @@
 defaultPlacement: end
 fieldLayouts:
   87e8a030-a9c7-4e84-a095-fc835527b57b:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -35,7 +36,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-07T17:45:57+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d99528c4-136b-413c-9799-56fd20edd2c6 # Headline
             handle: null
             instructions: null
@@ -49,7 +52,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-07T17:45:57+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: ad1324f8-1337-475f-8516-ab1e13543027 # Intro
             handle: null
             instructions: null
@@ -63,7 +68,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-29T15:12:55+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: f1944b34-730a-4bbe-8a1b-33fe56c07107 # Secondary text
             handle: null
             instructions: null
@@ -77,7 +84,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-07T17:47:09+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # Link
             handle: null
             instructions: null
@@ -97,7 +106,9 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-04-08T18:09:43+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 1bf40018-82e4-4e44-bbd6-6f49c132678d # Modules
             handle: null
             instructions: null
@@ -117,7 +128,9 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-04-07T17:43:46+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 0d857c68-7bb1-4ce7-b61f-671446aa8bb3 # SEO
             handle: null
             instructions: null
@@ -132,6 +145,7 @@ fieldLayouts:
         name: SEO
         uid: e0366936-04a1-43a4-a25c-96484d0601dc
         userCondition: null
+    thumbFieldKey: null
 handle: blogCategories
 name: 'Blog Categories'
 siteSettings:

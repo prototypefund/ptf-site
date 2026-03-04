@@ -8,6 +8,18 @@ permissions:
   - accessplugin-retour
   - accessplugin-seomatic
   - accesssitewhensystemisoff
+  - 'changeauthorforpeerentries:375cd22a-99b6-4667-8ca6-caf2572459ed' # Blog
+  - 'changeauthorforpeerentries:4fd1e89f-c494-4e78-ae99-20dbd74e4f9b' # Publications
+  - 'changeauthorforpeerentries:539be7e4-0b10-472e-b4de-ec2fbea58c78' # Trends
+  - 'changeauthorforpeerentries:6e040108-27cc-4a4a-bca9-c5e3ab1bdc04' # Generic Pages
+  - 'changeauthorforpeerentries:9b03faaf-18e7-4df7-b87c-282d1ead8ea3' # Jury
+  - 'changeauthorforpeerentries:a22a67ef-b1de-4d1d-b922-5ea14b3e8e1c' # Team
+  - 'changeauthorforpeerentries:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Authors
+  - 'changeauthorforpeerentries:a805834b-57ba-4e15-8082-a5bf2c23d495' # FAQs
+  - 'changeauthorforpeerentries:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
+  - 'changeauthorforpeerentries:de820dbc-bd7e-4a0f-9554-3d750480d2a4' # Projects
+  - 'changeauthorforpeerentries:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
+  - 'changeauthorforpeerentries:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
   - 'createentries:375cd22a-99b6-4667-8ca6-caf2572459ed' # Blog
   - 'createentries:4fd1e89f-c494-4e78-ae99-20dbd74e4f9b' # Publications
   - 'createentries:539be7e4-0b10-472e-b4de-ec2fbea58c78' # Trends
@@ -74,7 +86,7 @@ permissions:
   - 'deletepeerentrydrafts:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Authors
   - 'deletepeerentrydrafts:a805834b-57ba-4e15-8082-a5bf2c23d495' # FAQs
   - 'deletepeerentrydrafts:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
-  - 'deletepeerentrydrafts:db229da2-7471-4db0-a3ec-697da49531d1'
+  - 'deletepeerentrydrafts:db229da2-7471-4db0-a3ec-697da49531d1' # Application
   - 'deletepeerentrydrafts:de820dbc-bd7e-4a0f-9554-3d750480d2a4' # Projects
   - 'deletepeerentrydrafts:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
   - 'deletepeerentrydrafts:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
@@ -116,7 +128,7 @@ permissions:
   - 'saveentries:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Authors
   - 'saveentries:a805834b-57ba-4e15-8082-a5bf2c23d495' # FAQs
   - 'saveentries:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
-  - 'saveentries:db229da2-7471-4db0-a3ec-697da49531d1'
+  - 'saveentries:db229da2-7471-4db0-a3ec-697da49531d1' # Application
   - 'saveentries:de820dbc-bd7e-4a0f-9554-3d750480d2a4' # Projects
   - 'saveentries:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
   - 'saveentries:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
@@ -154,7 +166,7 @@ permissions:
   - 'savepeerentrydrafts:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Authors
   - 'savepeerentrydrafts:a805834b-57ba-4e15-8082-a5bf2c23d495' # FAQs
   - 'savepeerentrydrafts:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
-  - 'savepeerentrydrafts:db229da2-7471-4db0-a3ec-697da49531d1'
+  - 'savepeerentrydrafts:db229da2-7471-4db0-a3ec-697da49531d1' # Application
   - 'savepeerentrydrafts:de820dbc-bd7e-4a0f-9554-3d750480d2a4' # Projects
   - 'savepeerentrydrafts:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
   - 'savepeerentrydrafts:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
@@ -212,7 +224,7 @@ permissions:
   - 'viewentries:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Authors
   - 'viewentries:a805834b-57ba-4e15-8082-a5bf2c23d495' # FAQs
   - 'viewentries:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
-  - 'viewentries:db229da2-7471-4db0-a3ec-697da49531d1'
+  - 'viewentries:db229da2-7471-4db0-a3ec-697da49531d1' # Application
   - 'viewentries:de820dbc-bd7e-4a0f-9554-3d750480d2a4' # Projects
   - 'viewentries:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
   - 'viewentries:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
@@ -250,19 +262,7 @@ permissions:
   - 'viewpeerentrydrafts:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Authors
   - 'viewpeerentrydrafts:a805834b-57ba-4e15-8082-a5bf2c23d495' # FAQs
   - 'viewpeerentrydrafts:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
-  - 'viewpeerentrydrafts:db229da2-7471-4db0-a3ec-697da49531d1'
+  - 'viewpeerentrydrafts:db229da2-7471-4db0-a3ec-697da49531d1' # Application
   - 'viewpeerentrydrafts:de820dbc-bd7e-4a0f-9554-3d750480d2a4' # Projects
   - 'viewpeerentrydrafts:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
   - 'viewpeerentrydrafts:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
-  - 'changeauthorforpeerentries:a6babdad-fc37-48fb-ac86-088ea4129e1e' # Authors
-  - 'changeauthorforpeerentries:375cd22a-99b6-4667-8ca6-caf2572459ed' # Blog
-  - 'changeauthorforpeerentries:ed498341-57c0-4a5d-bedd-9728b250d140' # CTA Banners
-  - 'changeauthorforpeerentries:a805834b-57ba-4e15-8082-a5bf2c23d495' # FAQs
-  - 'changeauthorforpeerentries:6e040108-27cc-4a4a-bca9-c5e3ab1bdc04' # Generic Pages
-  - 'changeauthorforpeerentries:9b03faaf-18e7-4df7-b87c-282d1ead8ea3' # Jury
-  - 'changeauthorforpeerentries:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
-  - 'changeauthorforpeerentries:de820dbc-bd7e-4a0f-9554-3d750480d2a4' # Projects
-  - 'changeauthorforpeerentries:4fd1e89f-c494-4e78-ae99-20dbd74e4f9b' # Publications
-  - 'changeauthorforpeerentries:a22a67ef-b1de-4d1d-b922-5ea14b3e8e1c' # Team
-  - 'changeauthorforpeerentries:f1478917-bc75-4118-b7d9-7cd5fdae8872' # Timelines
-  - 'changeauthorforpeerentries:539be7e4-0b10-472e-b4de-ec2fbea58c78' # Trends

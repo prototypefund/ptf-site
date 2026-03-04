@@ -6,11 +6,12 @@ searchable: false
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
   selectionLabel: null
-  showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: false
   source: 'group:8d8e3436-a20e-4222-a530-d52fa736ae4d' # Project Technologies
   targetSiteId: null

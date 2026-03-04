@@ -1,13 +1,18 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   6105215e-3ab7-4d9c-be58-e68e0d6e2454:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
             dateAdded: '2025-04-22T13:01:08+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 65bbee3d-0a45-412f-a8e5-04ee7c01d8af # People
             handle: null
             instructions: null
@@ -22,6 +27,7 @@ fieldLayouts:
         name: Content
         uid: aee623a3-d040-452b-9fd4-d45df491936b
         userCondition: null
+    thumbFieldKey: null
 handle: peopleGrid
 hasTitleField: false
 icon: null
@@ -33,3 +39,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

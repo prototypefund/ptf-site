@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   90bbf9dc-488e-4fdb-999f-7ec670575063:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -35,7 +38,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-25T09:19:28+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 052db112-993d-44ef-bb78-bfa504e8d2e0 # Expandable Items
             handle: null
             instructions: null
@@ -50,6 +55,7 @@ fieldLayouts:
         name: Content
         uid: 3f77782e-23e0-4664-9ac2-33b8b17baad3
         userCondition: null
+    thumbFieldKey: null
 handle: expandableText
 hasTitleField: true
 icon: null
@@ -61,3 +67,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

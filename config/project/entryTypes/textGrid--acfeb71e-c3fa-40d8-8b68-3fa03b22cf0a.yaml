@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   fc85af82-b2b8-438a-a1db-6f8e9fe794c7:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -37,6 +40,7 @@ fieldLayouts:
             dateAdded: '2025-04-30T20:42:39+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d7c13ef6-9822-4fd8-83f3-ddcd61ea3184 # Rows
             handle: null
             instructions: null
@@ -52,6 +56,7 @@ fieldLayouts:
             dateAdded: '2025-04-30T20:42:39+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 0b9eb562-64e5-4b3c-9478-8cefd24e8039 # Text
             handle: null
             instructions: null
@@ -66,6 +71,7 @@ fieldLayouts:
         name: Content
         uid: 5ad9542b-54ec-4e59-8b4a-3bcb03df9ffb
         userCondition: null
+    thumbFieldKey: null
 handle: textGrid
 hasTitleField: true
 icon: null
@@ -77,3 +83,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

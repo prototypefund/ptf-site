@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   f3f56269-666e-4552-833d-8887eebde95b:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -35,7 +38,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-05-01T09:09:03+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: abb2edcb-afed-4766-9c25-594bf7d42262 # Date
             handle: null
             instructions: null
@@ -49,7 +54,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-05-01T09:09:03+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d9abc0f0-98c8-45d7-aa77-d9f8fbe83f7a # Time
             handle: startTime
             instructions: null
@@ -63,7 +70,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-05-01T09:09:03+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d9abc0f0-98c8-45d7-aa77-d9f8fbe83f7a # Time
             handle: endTime
             instructions: null
@@ -77,7 +86,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-05-01T09:09:03+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 6da63526-25ff-45c2-b4f7-543c359ec775 # Location
             handle: null
             instructions: null
@@ -91,7 +102,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-05-01T09:09:03+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: c5f55fcf-63a3-46ab-8990-2d967de34b7d # Speakers
             handle: null
             instructions: null
@@ -105,7 +118,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-05-01T09:11:22+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # Link
             handle: null
             instructions: null
@@ -120,6 +135,7 @@ fieldLayouts:
         name: Content
         uid: 3c90ad7d-c567-473f-b516-f2976490a0e0
         userCondition: null
+    thumbFieldKey: null
 handle: talk
 hasTitleField: true
 icon: null
@@ -131,3 +147,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

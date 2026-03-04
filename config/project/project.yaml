@@ -1,4 +1,4 @@
-dateModified: 1772546154
+dateModified: 1772637449
 elementSources:
   craft\elements\Entry:
     -
@@ -207,8 +207,10 @@ meta:
     2c8df106-11d5-4758-8b01-d51d565188f0: 'Talk Teasers' # Talk Teasers
     2d6b9ef4-4190-4cf7-9a92-b6f6b0fb7f61: 'CTA Banner' # CTA Banner
     2dae0a42-be0f-40ca-bddb-0d02be719e26: '5/4: w800' # 5/4: w800
+    2f1c60be-70b7-44d8-8539-5621e56995fe: 'Public Schema' # Public Schema
     03b9d1d0-a193-4abc-aeb8-92d2269844e9: 'CTA Background' # CTA Background
     3bc48eb6-2461-44a5-bd0d-4638e9f3c14c: 'Alt Text' # Alt Text
+    03cbee0a-9ed8-464b-ae01-b638102841b4: 'Steps Text' # Steps Text
     3d4c1a3f-6b2d-4919-a863-32877e6722ce: 'Project Year Groups' # Project Year Groups
     4b6ba907-43f2-494b-9816-24894f8de0da: Newsletter # Newsletter
     4bfc6f18-1241-4dd1-be73-a95290f1a887: 'Event Teasers' # Event Teasers
@@ -238,6 +240,7 @@ meta:
     7eac1059-22fa-40a5-b327-b28832b8beb1: 'Publication Cover' # Publication Cover
     7eb26dd5-1c10-45d1-a16b-85a148e4bf8a: 'Projects Index' # Projects Index
     8a18f61b-a93c-4302-8bde-b8f6ed6c0494: 'Inclusive Sans – Semibold' # Inclusive Sans – Semibold
+    8a2262ef-cde3-425f-a9a4-4f531b781c31: Amount # Amount
     8ad973e9-d5d2-4385-b6cf-beb0a9ca03d2: Statement # Statement
     8c706102-ac71-4054-b178-d266051a8ba8: 'Project Next Reads' # Project Next Reads
     8d4ed15c-dd0c-4e96-ae25-ff97b2b6bf03: w300 # w300
@@ -288,9 +291,12 @@ meta:
     646fed4b-fc85-4ed3-8082-aace0ad37228: '4/3: w1200' # 4/3: w1200
     734f959a-796d-4882-babd-df0495b02b2e: Publications # Publications
     747e573a-dea9-419c-9f81-e1778c7f1b13: 'Phase Text' # Phase Text
+    818f2c60-45fc-462e-ba43-e852ce364665: Claim # Claim
     824f9bd0-21d0-47fd-a48a-b8519da12b29: Quote # Quote
     861f15c4-66e5-4a20-8b69-3bca664a1602: Images # Images
     894e5185-035a-41d1-b272-0b6c1608aabf: 'Side Heading + Text' # Side Heading + Text
+    992e8da2-9620-4ec5-a2d5-2f8b3c2c23e6: 'Application Text' # Application Text
+    994e9c1d-7448-4401-bdc6-2657748b1205: Application # Application
     1590aac3-cf3a-4fa5-8836-8a95303284c2: Teasers # Teasers
     2965e0c7-feb2-4aa2-98d4-de16d458eb30: Categories # Categories
     3445dc73-731c-4dd7-90f6-bc2e1d87679d: 'Generic Teaser' # Generic Teaser
@@ -301,6 +307,7 @@ meta:
     8760f57d-c660-4b7c-a052-940ebce3408c: 'People Grid' # People Grid
     8898a317-df17-4cc9-9475-6376bc29fbd5: 'Newsletter Headline' # Newsletter Headline
     15140d29-2c87-492e-84f4-90eb738eb0d8: Columns # Columns
+    36123ba7-7de9-48c0-a222-7aab3ad79da9: 'Start Date' # Start Date
     53364b16-adc8-4b34-802f-054c272771c6: 'Projects Index' # Projects Index
     72564f6d-cb4e-40a8-b30c-99153000f278: Steps # Steps
     586087db-4dd7-43ba-929b-b3f7cef02ff8: w800 # w800
@@ -362,15 +369,18 @@ meta:
     cff97bfa-6eb7-473b-97c0-cc3af58c0f64: 'Article ID' # Article ID
     d4c24b33-4a46-4c55-980e-c1d4af12f9bf: '5/4: w1200' # 5/4: w1200
     d7c13ef6-9822-4fd8-83f3-ddcd61ea3184: Rows # Rows
+    d7dfca16-25e6-43de-8bf1-4afdf802a486: 'Announcement Text' # Announcement Text
     d9abc0f0-98c8-45d7-aa77-d9f8fbe83f7a: Time # Time
     d13f787b-b91b-4821-8104-46e509830347: Avatar # Avatar
     d26ba65b-dbab-4a12-b3e8-1ae7a4a2845d: Quote # Quote
     d94ae721-befb-4d87-921e-3152926fdd9e: 'Step Text' # Step Text
+    d5397ea9-1d37-4f12-bf41-46082d130bd8: Image # Image
     d26039c6-3f56-4e09-a666-c1fd8f160bee: 'Image Columns' # Image Columns
     d42896d4-04a6-4211-8d97-f265c27a3be1: 'Inclusive Sans – Semibold (Italic)' # Inclusive Sans – Semibold (Italic)
     d99528c4-136b-413c-9799-56fd20edd2c6: Headline # Headline
     db2da9aa-6637-4df7-8df4-527aa118c61e: 'Link List' # Link List
     db43e022-8680-4b70-8b88-e6fc439994c5: 'Trend Teasers' # Trend Teasers
+    db229da2-7471-4db0-a3ec-697da49531d1: Application # Application
     dcc2d4f6-0aa9-41e6-9135-942fc9d3f8ad: 'Link List' # Link List
     dd6fd54d-11f2-4a62-8da7-d59718b15225: 'CTA Banner' # CTA Banner
     ddc3aedf-983b-4fa7-81eb-69fd761d71af: German # German

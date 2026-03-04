@@ -2,6 +2,7 @@ altTranslationKeyFormat: null
 altTranslationMethod: site
 fieldLayouts:
   1272fc47-fee0-4a8b-80d0-5c19ed9e14c6:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -38,6 +39,7 @@ fieldLayouts:
             dateAdded: '2025-04-07T08:17:29+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 183a1c32-7844-45ce-93f1-a991260eeadc # Caption
             handle: null
             instructions: null
@@ -53,6 +55,7 @@ fieldLayouts:
             dateAdded: '2025-05-22T20:37:30+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 5ba16bcf-ba15-4541-978f-c4015909dffb # Secondary Caption
             handle: null
             instructions: null
@@ -68,6 +71,7 @@ fieldLayouts:
             dateAdded: '2025-03-12T16:17:51+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: c670b800-a19f-4ca2-a056-283204e59d5d # Credit / License
             handle: null
             instructions: null
@@ -83,6 +87,7 @@ fieldLayouts:
             dateAdded: '2025-05-04T11:39:13+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 3bc48eb6-2461-44a5-bd0d-4638e9f3c14c # Alt Text
             handle: null
             instructions: null
@@ -127,6 +132,7 @@ fieldLayouts:
         name: Content
         uid: b716d9f1-1e92-42c0-bf65-7e868c92a471
         userCondition: null
+    thumbFieldKey: null
 fs: uploadsFs
 handle: uploads
 name: Uploads

@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   c8d90d98-c596-4de5-a53e-200e5b70e6b9:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -35,7 +38,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-23T11:02:03+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d99528c4-136b-413c-9799-56fd20edd2c6 # Headline
             handle: null
             instructions: null
@@ -49,7 +54,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-23T11:02:03+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 62e3c2ea-24fd-42e2-a9ba-3602f1d6e2e8 # Header Background
             handle: null
             instructions: null
@@ -69,7 +76,9 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-04-23T13:53:35+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 15f1ebd8-2e95-45e1-81f5-d39b6253762e # Teaser Text
             handle: null
             instructions: null
@@ -89,7 +98,9 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-04-23T11:02:03+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: ad1324f8-1337-475f-8516-ab1e13543027 # Intro
             handle: null
             instructions: null
@@ -103,7 +114,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-23T11:07:02+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 13a0aaca-3bd8-4653-b163-69738ce277c3 # Text
             handle: null
             instructions: null
@@ -123,7 +136,9 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-04-23T11:02:03+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 1bf40018-82e4-4e44-bbd6-6f49c132678d # Modules
             handle: null
             instructions: null
@@ -143,7 +158,9 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-04-23T11:02:03+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 0d857c68-7bb1-4ce7-b61f-671446aa8bb3 # SEO
             handle: null
             instructions: null
@@ -158,6 +175,7 @@ fieldLayouts:
         name: SEO
         uid: 69d1aafa-b333-4431-a966-f8584d1da423
         userCondition: null
+    thumbFieldKey: null
 handle: trend
 hasTitleField: true
 icon: null
@@ -169,3 +187,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

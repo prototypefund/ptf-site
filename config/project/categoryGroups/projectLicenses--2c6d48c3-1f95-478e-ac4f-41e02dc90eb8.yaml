@@ -1,6 +1,7 @@
 defaultPlacement: end
 fieldLayouts:
   6b1fffd6-5203-4079-bcaf-02047b791804:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -35,7 +36,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-05-02T11:52:45+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d99528c4-136b-413c-9799-56fd20edd2c6 # Headline
             handle: null
             instructions: null
@@ -49,7 +52,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-05-02T11:52:45+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: ad1324f8-1337-475f-8516-ab1e13543027 # Intro
             handle: null
             instructions: null
@@ -63,7 +68,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-05-02T11:52:45+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: f1944b34-730a-4bbe-8a1b-33fe56c07107 # Secondary text
             handle: null
             instructions: null
@@ -77,7 +84,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-05-02T11:52:45+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # Link
             handle: null
             instructions: null
@@ -91,7 +100,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-05-02T11:52:45+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 62e3c2ea-24fd-42e2-a9ba-3602f1d6e2e8 # Header Background
             handle: null
             instructions: null
@@ -105,7 +116,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-05-02T11:52:45+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 33c3763c-9f38-4c39-bebd-48bbec68e094 # Header Alignment
             handle: null
             instructions: null
@@ -125,7 +138,9 @@ fieldLayouts:
             userCondition: null
           -
             dateAdded: '2025-05-02T11:52:45+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 1bf40018-82e4-4e44-bbd6-6f49c132678d # Modules
             handle: null
             instructions: null
@@ -145,7 +160,9 @@ fieldLayouts:
         elements:
           -
             dateAdded: '2025-05-02T11:52:45+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 0d857c68-7bb1-4ce7-b61f-671446aa8bb3 # SEO
             handle: null
             instructions: null
@@ -160,6 +177,7 @@ fieldLayouts:
         name: SEO
         uid: 24a76770-4997-42d5-a5d6-adda4b63a52a
         userCondition: null
+    thumbFieldKey: null
 handle: projectLicenses
 name: 'Project Licenses'
 siteSettings:

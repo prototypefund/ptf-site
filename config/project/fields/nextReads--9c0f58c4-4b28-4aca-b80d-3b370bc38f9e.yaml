@@ -11,7 +11,7 @@ settings:
   maxRelations: null
   minRelations: null
   selectionLabel: 'Add entries as next reads'
-  showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: true
   showUnpermittedEntries: true
   showUnpermittedSections: true

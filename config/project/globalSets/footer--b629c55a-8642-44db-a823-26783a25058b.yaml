@@ -1,5 +1,6 @@
 fieldLayouts:
   34fd07dd-87af-47ce-8a3f-5f7901db7a5c:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -8,6 +9,7 @@ fieldLayouts:
             dateAdded: '2025-04-01T13:24:48+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 6ca70ace-9ae7-4dfa-a915-d1a24572619d # Footer Description
             handle: null
             instructions: null
@@ -23,6 +25,7 @@ fieldLayouts:
             dateAdded: '2025-04-01T12:29:22+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 633b77bd-edb2-4812-ae43-7d61e39fd8fd # Main Footer Links
             handle: null
             instructions: null
@@ -38,6 +41,7 @@ fieldLayouts:
             dateAdded: '2025-04-01T12:57:57+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 018c8387-bc84-4c1c-ae3a-186233bcf754 # Secondary Footer Links
             handle: null
             instructions: null
@@ -53,6 +57,7 @@ fieldLayouts:
             dateAdded: '2025-04-01T13:11:42+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8898a317-df17-4cc9-9475-6376bc29fbd5 # Newsletter Headline
             handle: null
             instructions: 'Leave empty to use the default newsletter headline'
@@ -68,6 +73,7 @@ fieldLayouts:
             dateAdded: '2025-04-01T13:11:42+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: fdce3d41-b225-460c-85ea-1908f71ba724 # Newsletter Secondary Text
             handle: null
             instructions: 'Leave empty to use the default newsletter disclaimer text'
@@ -83,6 +89,7 @@ fieldLayouts:
             dateAdded: '2025-04-01T13:04:13+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: f81cb75d-92f5-44c4-89bd-673d8c8ee15c # Sponsors Headline
             handle: null
             instructions: null
@@ -98,6 +105,7 @@ fieldLayouts:
             dateAdded: '2025-04-01T13:04:13+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 80466913-dc6f-46d5-8013-a55f3a7358da # Sponsors
             handle: sponsorsLight
             instructions: null
@@ -113,6 +121,7 @@ fieldLayouts:
             dateAdded: '2025-05-08T12:11:08+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 80466913-dc6f-46d5-8013-a55f3a7358da # Sponsors
             handle: sponsorsDark
             instructions: null
@@ -127,6 +136,7 @@ fieldLayouts:
         name: 'Footer Content'
         uid: 696b2592-c781-48b9-8e34-5f398c5df011
         userCondition: null
+    thumbFieldKey: null
 handle: footer
 name: Footer
 sortOrder: 2
