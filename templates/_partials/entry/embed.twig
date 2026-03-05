@@ -5,7 +5,7 @@
   {% set content %}
     <figure>
       <div
-        class="relative overflow-hidden [&>iframe]:absolute [&>iframe]:top-0 [&>iframe]:left-0 [&>iframe]:size-full"
+        class="relative overflow-hidden has-[iframe]:aspect-video [&>iframe]:absolute [&>iframe]:inset-0 [&>iframe]:size-full"
       >
         {{ entry.embedCode|raw }}
       </div>
