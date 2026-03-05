@@ -2,7 +2,7 @@ columnSuffix: null
 handle: projectYearGroups
 instructions: null
 name: 'Project Year Groups'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
@@ -11,8 +11,8 @@ settings:
   maxRelations: 1
   minRelations: null
   selectionLabel: null
-  showCardsInGrid: false
-  showSiteMenu: false
+  showSearchInput: true
+  showSiteMenu: true
   source: 'group:5593a3e3-ad74-4e68-ad2d-36a6c8f1d95a' # Project Year Groups
   targetSiteId: null
   validateRelatedElements: false

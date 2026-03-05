@@ -2,7 +2,7 @@ columnSuffix: null
 handle: mainImage
 instructions: null
 name: 'Main Image'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   allowSubfolders: false
@@ -24,8 +24,8 @@ settings:
   restrictedLocationSource: 'volume:b99ee1fe-b466-49ac-8315-43d2af7587e1' # Uploads
   restrictedLocationSubpath: null
   selectionLabel: null
-  showCardsInGrid: false
-  showSiteMenu: false
+  showSearchInput: true
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources: '*'

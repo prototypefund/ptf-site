@@ -1,12 +1,15 @@
 fieldLayouts:
   e4a0803c-b10d-45b4-bddb-0ee3853a2b5a:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
             dateAdded: '2025-04-03T21:45:31+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: ad6378ef-e24f-4541-9819-1a644a3dd8c4 # Nav Links
             handle: null
             instructions: null
@@ -21,6 +24,7 @@ fieldLayouts:
         name: Content
         uid: 604b2e98-1641-4628-9313-68bd9ce5f340
         userCondition: null
+    thumbFieldKey: null
 handle: navigation
 name: Navigation
 sortOrder: 1

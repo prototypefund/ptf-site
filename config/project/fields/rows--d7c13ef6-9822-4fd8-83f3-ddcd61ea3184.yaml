@@ -2,16 +2,20 @@ columnSuffix: null
 handle: rows
 instructions: null
 name: Rows
-searchable: false
+searchable: true
 settings:
   createButtonLabel: null
   defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
       __assoc__:
         -
           - uid
           - 7cd0ec40-65a3-4af3-9c73-edd6ac3d4b12 # Text Row
+        -
+          - group
+          - Allgemein
   includeTableView: false
   maxEntries: null
   minEntries: null

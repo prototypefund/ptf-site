@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   200a811d-ad03-4fdd-be59-9de333c1607e:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -35,7 +38,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-23T13:29:54+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 1590aac3-cf3a-4fa5-8836-8a95303284c2 # Teasers
             handle: null
             instructions: null
@@ -50,6 +55,7 @@ fieldLayouts:
         name: Content
         uid: 76e4c565-5ef7-42b1-a014-0806dce153a2
         userCondition: null
+    thumbFieldKey: null
 handle: trendTeasers
 hasTitleField: true
 icon: null
@@ -61,3 +67,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

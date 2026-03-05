@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   8219643c-7b68-4e84-bc08-b7cd3adeb078:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -35,7 +38,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-05-01T13:05:24+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 62bd293d-8f1c-49bc-bd74-5fc98d9eefba # Data
             handle: null
             instructions: null
@@ -49,7 +54,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-05-01T13:05:24+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 183a1c32-7844-45ce-93f1-a991260eeadc # Caption
             handle: null
             instructions: null
@@ -64,6 +71,7 @@ fieldLayouts:
         name: Content
         uid: b279ef00-a42d-4e25-9001-2db622f90b19
         userCondition: null
+    thumbFieldKey: null
 handle: barChart
 hasTitleField: true
 icon: null
@@ -75,3 +83,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

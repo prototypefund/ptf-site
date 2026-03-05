@@ -2,16 +2,17 @@ columnSuffix: null
 handle: blogCategories
 instructions: null
 name: Categories
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
   selectionLabel: null
-  showCardsInGrid: false
-  showSiteMenu: false
+  showSearchInput: true
+  showSiteMenu: true
   source: 'group:bdc78be0-ab3b-4c52-9657-0eaaff1208e9' # Blog Categories
   targetSiteId: null
   validateRelatedElements: false

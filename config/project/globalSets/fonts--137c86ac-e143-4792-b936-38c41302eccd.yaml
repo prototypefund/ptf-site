@@ -1,12 +1,15 @@
 fieldLayouts:
   ea8c5a6a-a0de-45a0-8eda-f578bf8c0e93:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
             dateAdded: '2025-04-03T13:25:07+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 58b0cfc4-a7f2-491d-a49a-a29faaacedf3 # Inclusive Sans – Regular
             handle: null
             instructions: null
@@ -20,7 +23,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-03T13:25:07+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8a18f61b-a93c-4302-8bde-b8f6ed6c0494 # Inclusive Sans – Semibold
             handle: null
             instructions: null
@@ -34,7 +39,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-03T13:25:07+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: d42896d4-04a6-4211-8d97-f265c27a3be1 # Inclusive Sans – Semibold (Italic)
             handle: null
             instructions: null
@@ -48,7 +55,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-03T13:25:07+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 38533602-ed85-4c63-b7e3-819ae75ac47a # Surt – Regular
             handle: null
             instructions: null
@@ -62,7 +71,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-03T13:25:07+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: fe4cc5ff-86a2-4944-a119-aae5f36fa127 # Surt – Bold
             handle: null
             instructions: null
@@ -77,6 +88,7 @@ fieldLayouts:
         name: Content
         uid: 9ff7a7eb-caa9-4dd0-9237-c58a01d17338
         userCondition: null
+    thumbFieldKey: null
 handle: fonts
 name: Fonts
 sortOrder: 5

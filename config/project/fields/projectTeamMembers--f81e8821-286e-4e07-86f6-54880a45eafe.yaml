@@ -2,7 +2,7 @@ columnSuffix: null
 handle: projectTeamMembers
 instructions: null
 name: 'Project Team Members'
-searchable: false
+searchable: true
 settings:
   byteLimit: null
   charLimit: null

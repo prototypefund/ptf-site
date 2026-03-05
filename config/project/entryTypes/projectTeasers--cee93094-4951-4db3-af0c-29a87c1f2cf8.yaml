@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   50300f76-07b9-4e6d-9d60-0755012e9370:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -35,7 +38,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-23T12:30:25+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 8c706102-ac71-4054-b178-d266051a8ba8 # Project Next Reads
             handle: null
             instructions: 'Leave empty to always display the latest four projects automatically'
@@ -50,6 +55,7 @@ fieldLayouts:
         name: Content
         uid: f0040ac7-bfcf-4ecb-80a8-8cea98bf46f2
         userCondition: null
+    thumbFieldKey: null
 handle: projectTeasers
 hasTitleField: true
 icon: null
@@ -61,3 +67,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

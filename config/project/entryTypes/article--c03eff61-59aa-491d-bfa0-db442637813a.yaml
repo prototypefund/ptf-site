@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   1e6091d0-fce7-4a6f-84fd-9a05f8ebb92f:
+    cardThumbAlignment: end
     cardView:
       - 'layoutElement:fb7bf9c8-5781-4575-a811-352514751665'
     tabs:
@@ -39,6 +42,7 @@ fieldLayouts:
             dateAdded: '2025-04-07T08:20:25+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 0f8a3079-62db-4270-ac53-6903c9b28557 # Main Image
             handle: null
             instructions: null
@@ -60,6 +64,7 @@ fieldLayouts:
             dateAdded: '2025-04-16T11:30:43+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: ad1324f8-1337-475f-8516-ab1e13543027 # Intro
             handle: null
             instructions: null
@@ -75,6 +80,7 @@ fieldLayouts:
             dateAdded: '2025-02-19T09:40:13+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 13a0aaca-3bd8-4653-b163-69738ce277c3 # Text
             handle: null
             instructions: null
@@ -96,6 +102,7 @@ fieldLayouts:
             dateAdded: '2025-04-16T21:00:17+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 1bf40018-82e4-4e44-bbd6-6f49c132678d # Modules
             handle: null
             instructions: null
@@ -117,6 +124,7 @@ fieldLayouts:
             dateAdded: '2025-04-16T21:26:21+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 6c3461da-2d32-418a-803b-efe329a38c30 # Article Author
             handle: null
             instructions: null
@@ -132,6 +140,7 @@ fieldLayouts:
             dateAdded: '2025-04-07T17:37:58+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 2965e0c7-feb2-4aa2-98d4-de16d458eb30 # Categories
             handle: null
             instructions: null
@@ -147,6 +156,7 @@ fieldLayouts:
             dateAdded: '2025-02-19T09:40:13+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 9c0f58c4-4b28-4aca-b80d-3b370bc38f9e # Next Reads
             handle: null
             instructions: null
@@ -168,6 +178,7 @@ fieldLayouts:
             dateAdded: '2025-03-30T20:43:10+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: cff97bfa-6eb7-473b-97c0-cc3af58c0f64 # Article ID
             handle: null
             instructions: 'This only exists as a helper field for the data migration from the old site. Don’t change it.'
@@ -189,6 +200,7 @@ fieldLayouts:
             dateAdded: '2025-02-19T09:40:13+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 0d857c68-7bb1-4ce7-b61f-671446aa8bb3 # SEO
             handle: null
             instructions: null
@@ -203,6 +215,7 @@ fieldLayouts:
         name: SEO
         uid: a6f20f01-439a-4b7f-b400-9dc40366a297
         userCondition: null
+    thumbFieldKey: null
 handle: article
 hasTitleField: true
 icon: null
@@ -214,3 +227,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -2,7 +2,7 @@ columnSuffix: null
 handle: secondaryCaption
 instructions: null
 name: 'Secondary Caption'
-searchable: false
+searchable: true
 settings:
   availableTransforms: '*'
   availableVolumes: '*'
@@ -10,7 +10,9 @@ settings:
   ckeConfig: c4438391-90e5-49b1-93bd-6fcbbd3aed62 # Simple
   createButtonLabel: null
   defaultTransform: null
+  expandEntryButtons: false
   fullGraphqlData: true
+  parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false

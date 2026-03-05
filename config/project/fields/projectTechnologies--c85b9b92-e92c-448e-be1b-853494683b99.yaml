@@ -2,16 +2,17 @@ columnSuffix: null
 handle: projectTechnologies
 instructions: null
 name: 'Project Technologies'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
   selectionLabel: null
-  showCardsInGrid: false
-  showSiteMenu: false
+  showSearchInput: true
+  showSiteMenu: true
   source: 'group:8d8e3436-a20e-4222-a530-d52fa736ae4d' # Project Technologies
   targetSiteId: null
   validateRelatedElements: false

@@ -2,16 +2,20 @@ columnSuffix: null
 handle: genericTeasers
 instructions: null
 name: Teasers
-searchable: false
+searchable: true
 settings:
   createButtonLabel: null
   defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
       __assoc__:
         -
           - uid
           - 3445dc73-731c-4dd7-90f6-bc2e1d87679d # Generic Teaser
+        -
+          - group
+          - Allgemein
   includeTableView: false
   maxEntries: null
   minEntries: null

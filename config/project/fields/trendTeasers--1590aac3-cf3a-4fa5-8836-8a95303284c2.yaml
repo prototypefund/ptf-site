@@ -2,16 +2,19 @@ columnSuffix: null
 handle: trendTeasers
 instructions: null
 name: Teasers
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
   selectionLabel: null
-  showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: false
+  showUnpermittedEntries: true
+  showUnpermittedSections: true
   sources:
     - 'section:539be7e4-0b10-472e-b4de-ec2fbea58c78' # Trends
   targetSiteId: null

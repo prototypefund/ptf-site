@@ -1,12 +1,15 @@
 fieldLayouts:
   b9fbfa9e-96a7-4685-a8b0-63debebac98d:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
         elements:
           -
             dateAdded: '2025-04-30T21:22:57+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: e0be08b6-634c-4eed-aa9a-175b6bc828c1 # Enable Announcement Bar
             handle: null
             instructions: null
@@ -20,7 +23,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-30T21:30:42+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # Link
             handle: announcementLink
             instructions: null
@@ -35,6 +40,7 @@ fieldLayouts:
         name: Content
         uid: 67f9509e-5f56-4042-926e-ec70f741d589
         userCondition: null
+    thumbFieldKey: null
 handle: announcementBar
 name: 'Announcement Bar'
 sortOrder: 4

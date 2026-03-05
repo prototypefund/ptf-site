@@ -2,16 +2,20 @@ columnSuffix: null
 handle: phases
 instructions: null
 name: Phases
-searchable: false
+searchable: true
 settings:
   createButtonLabel: null
   defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
       __assoc__:
         -
           - uid
           - f379a383-dc25-494c-a93c-bd79b34bce36 # Phase
+        -
+          - group
+          - Allgemein
   includeTableView: false
   maxEntries: null
   minEntries: null

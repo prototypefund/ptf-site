@@ -2,13 +2,14 @@ columnSuffix: null
 handle: images
 instructions: null
 name: Images
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   allowSubfolders: false
   allowUploads: true
   allowedKinds: null
   branchLimit: null
+  defaultPlacement: end
   defaultUploadLocationSource: 'volume:b99ee1fe-b466-49ac-8315-43d2af7587e1' # Uploads
   defaultUploadLocationSubpath: null
   maintainHierarchy: false
@@ -21,8 +22,8 @@ settings:
   restrictedLocationSource: 'volume:b99ee1fe-b466-49ac-8315-43d2af7587e1' # Uploads
   restrictedLocationSubpath: null
   selectionLabel: null
-  showCardsInGrid: false
-  showSiteMenu: false
+  showSearchInput: true
+  showSiteMenu: true
   showUnpermittedFiles: false
   showUnpermittedVolumes: false
   sources:

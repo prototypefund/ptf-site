@@ -2,7 +2,7 @@ columnSuffix: null
 handle: headline
 instructions: null
 name: Headline
-searchable: false
+searchable: true
 settings:
   byteLimit: null
   charLimit: null

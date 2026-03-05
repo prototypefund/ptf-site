@@ -2,16 +2,19 @@ columnSuffix: null
 handle: linkListLinks
 instructions: null
 name: 'Link List Links'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
   selectionLabel: null
-  showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: false
+  showUnpermittedEntries: true
+  showUnpermittedSections: true
   sources:
     - 'section:b8ee6536-12a5-4426-b64d-b04a622f6dbf' # Link Lists
   targetSiteId: null

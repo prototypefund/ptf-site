@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   5814abf4-bd59-4f7c-bab9-9fe44aa69287:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -37,6 +40,7 @@ fieldLayouts:
             dateAdded: '2025-05-15T14:56:17+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: f4ddd6a2-288b-4881-a762-884e48b3f1f1 # Description
             handle: null
             instructions: null
@@ -52,6 +56,7 @@ fieldLayouts:
             dateAdded: '2025-05-15T14:59:20+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # Link
             handle: null
             instructions: null
@@ -73,6 +78,7 @@ fieldLayouts:
             dateAdded: '2025-05-02T11:39:53+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 1bf40018-82e4-4e44-bbd6-6f49c132678d # Modules
             handle: null
             instructions: null
@@ -94,6 +100,7 @@ fieldLayouts:
             dateAdded: '2025-02-19T09:40:13+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 0d857c68-7bb1-4ce7-b61f-671446aa8bb3 # SEO
             handle: null
             instructions: null
@@ -108,6 +115,7 @@ fieldLayouts:
         name: SEO
         uid: 68e1e41a-cdb5-4605-8c4d-9213f222c621
         userCondition: null
+    thumbFieldKey: null
 handle: homepage
 hasTitleField: true
 icon: null
@@ -119,3 +127,4 @@ slugTranslationMethod: site
 titleFormat: '{section.name|raw}'
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

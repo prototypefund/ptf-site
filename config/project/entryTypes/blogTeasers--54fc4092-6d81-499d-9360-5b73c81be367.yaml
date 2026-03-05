@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   79c9559d-d92f-4ea9-8008-24ffccc84d20:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -37,6 +40,7 @@ fieldLayouts:
             dateAdded: '2025-05-12T10:48:07+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: b2bad2a6-6c5f-4d98-b29f-c19b52094245 # Next Reads Featured
             handle: null
             instructions: null
@@ -52,6 +56,7 @@ fieldLayouts:
             dateAdded: '2025-04-23T11:25:49+00:00'
             editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 9c0f58c4-4b28-4aca-b80d-3b370bc38f9e # Next Reads
             handle: null
             instructions: null
@@ -66,6 +71,7 @@ fieldLayouts:
         name: Content
         uid: 1ac475ac-2503-4f8e-92e6-05fc5e3f4d26
         userCondition: null
+    thumbFieldKey: null
 handle: blogTeasers
 hasTitleField: true
 icon: null
@@ -77,3 +83,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

@@ -2,16 +2,19 @@ columnSuffix: null
 handle: eventNextReads
 instructions: 'Leave empty to always display the latest three upcoming events automatically'
 name: 'Event Next Reads'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
+  defaultPlacement: end
   maintainHierarchy: false
   maxRelations: null
   minRelations: null
   selectionLabel: null
-  showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: false
+  showUnpermittedEntries: true
+  showUnpermittedSections: true
   sources:
     - 'section:6faac0be-91b5-4747-95b9-2157c66c6246' # Events
   targetSiteId: null

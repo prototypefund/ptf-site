@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   44d33cda-9ea6-472b-9c69-9361434e99c0:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -35,7 +38,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-29T10:22:46+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 15f1ebd8-2e95-45e1-81f5-d39b6253762e # Teaser Text
             handle: textColumnOne
             instructions: null
@@ -49,7 +54,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-29T10:22:46+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 15f1ebd8-2e95-45e1-81f5-d39b6253762e # Teaser Text
             handle: textColumnTwo
             instructions: null
@@ -64,6 +71,7 @@ fieldLayouts:
         name: Content
         uid: e6c98e78-9a0f-4341-a1a1-f8042e2cb30d
         userCondition: null
+    thumbFieldKey: null
 handle: statement
 hasTitleField: true
 icon: null
@@ -75,3 +83,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

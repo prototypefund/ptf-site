@@ -6,6 +6,7 @@ searchable: false
 settings:
   createButtonLabel: Link
   defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
       __assoc__:

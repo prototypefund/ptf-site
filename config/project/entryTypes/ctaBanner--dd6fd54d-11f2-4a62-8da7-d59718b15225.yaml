@@ -1,6 +1,9 @@
+allowLineBreaksInTitles: false
 color: null
+description: null
 fieldLayouts:
   3351196a-1f3c-4591-b90b-8c459a1f669d:
+    cardThumbAlignment: end
     tabs:
       -
         elementCondition: null
@@ -35,7 +38,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-21T15:16:10+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 86ae11d6-820a-47e9-85d6-86f29718f1f8 # Banner Text
             handle: null
             instructions: null
@@ -49,7 +54,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-21T14:40:13+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # Link
             handle: null
             instructions: null
@@ -63,7 +70,9 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-21T20:07:27+00:00'
+            editCondition: null
             elementCondition: null
+            elementEditCondition: null
             fieldUid: 03b9d1d0-a193-4abc-aeb8-92d2269844e9 # CTA Background
             handle: null
             instructions: null
@@ -78,6 +87,7 @@ fieldLayouts:
         name: Content
         uid: 6afea363-b15f-4eb7-b21b-57e51be03cc9
         userCondition: null
+    thumbFieldKey: null
 handle: ctaBanner
 hasTitleField: true
 icon: null
@@ -89,3 +99,4 @@ slugTranslationMethod: site
 titleFormat: null
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
+uiLabelFormat: '{title}'

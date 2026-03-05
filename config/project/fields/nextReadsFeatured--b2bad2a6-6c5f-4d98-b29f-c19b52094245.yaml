@@ -2,7 +2,7 @@ columnSuffix: null
 handle: nextReadsFeatured
 instructions: null
 name: 'Next Reads Featured'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
@@ -11,7 +11,7 @@ settings:
   maxRelations: 1
   minRelations: null
   selectionLabel: null
-  showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: false
   showUnpermittedEntries: true
   showUnpermittedSections: true

@@ -2,10 +2,11 @@ columnSuffix: null
 handle: text
 instructions: null
 name: Text
-searchable: false
+searchable: true
 settings:
   availableTransforms: '*'
   availableVolumes: '*'
+  characterLimit: null
   ckeConfig: 6fa1e10a-d063-4c10-a955-f1b3eda7e7ef # Standard (with Entry Types)
   createButtonLabel: null
   defaultTransform: null
@@ -20,6 +21,9 @@ settings:
         -
           - uid
           - d26039c6-3f56-4e09-a666-c1fd8f160bee # Image Columns
+  expandEntryButtons: false
+  fullGraphqlData: false
+  parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
   showUnpermittedFiles: false

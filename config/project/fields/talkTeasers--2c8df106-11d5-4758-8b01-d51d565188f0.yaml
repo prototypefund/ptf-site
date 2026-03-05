@@ -2,7 +2,7 @@ columnSuffix: null
 handle: talkTeasers
 instructions: 'Leave empty to always display the latest three talks automatically'
 name: 'Talk Teasers'
-searchable: false
+searchable: true
 settings:
   allowSelfRelations: false
   branchLimit: null
@@ -11,7 +11,7 @@ settings:
   maxRelations: null
   minRelations: null
   selectionLabel: null
-  showCardsInGrid: false
+  showSearchInput: true
   showSiteMenu: false
   showUnpermittedEntries: true
   showUnpermittedSections: true

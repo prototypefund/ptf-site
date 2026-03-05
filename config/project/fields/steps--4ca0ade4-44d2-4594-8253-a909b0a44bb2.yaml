@@ -2,16 +2,20 @@ columnSuffix: null
 handle: steps
 instructions: null
 name: Steps
-searchable: false
+searchable: true
 settings:
   createButtonLabel: null
   defaultIndexViewMode: cards
+  enableVersioning: false
   entryTypes:
     -
       __assoc__:
         -
           - uid
           - c84399c0-dd2f-498b-adbf-528b801843c4 # Step
+        -
+          - group
+          - Allgemein
   includeTableView: false
   maxEntries: 3
   minEntries: null

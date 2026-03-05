@@ -2,7 +2,7 @@ columnSuffix: null
 handle: dates
 instructions: "For example: '01.11.2024 – \L01.01.2025' or 'April 2025'."
 name: Date(s)
-searchable: false
+searchable: true
 settings:
   byteLimit: null
   charLimit: null
