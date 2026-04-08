@@ -1,4 +1,4 @@
-dateModified: 1772637799
+dateModified: 1775667080
 elementSources:
   craft\elements\Entry:
     -
@@ -419,6 +419,7 @@ plugins:
     schemaVersion: 5.12.0
     settings:
       apiKey: ''
+      cacheActionRequests: false
       cacheControlHeader: 'public, s-maxage=31536000, max-age=0'
       cacheControlHeaderExpired: 'public, s-maxage=5, max-age=0'
       cacheDuration: null
@@ -427,6 +428,15 @@ plugins:
           -
             - concurrency
             - '3'
+          -
+            - useBasicAuth
+            - ''
+          -
+            - username
+            - ''
+          -
+            - password
+            - ''
       cacheGeneratorType: putyourlightson\blitz\drivers\generators\HttpGenerator
       cacheNonHtmlResponses: false
       cachePurgerType: putyourlightson\blitz\drivers\purgers\DummyPurger
@@ -439,6 +449,7 @@ plugins:
             - compressCachedValues
             - ''
       cacheStorageType: putyourlightson\blitz\drivers\storage\FileStorage
+      cachedIncludePathParam: p
       cachingEnabled: false
       debug: false
       defaultCacheControlHeader: 'no-cache, no-store, must-revalidate'
@@ -526,12 +537,13 @@ plugins:
         - putyourlightson\blitz\drivers\integrations\FeedMeIntegration
         - putyourlightson\blitz\drivers\integrations\SeomaticIntegration
       maxRetryAttempts: 10
+      maxUriIndexLength: 767
       maxUriLength: 2048
       mutexTimeout: 1
       onlyCacheLowercaseUris: false
       outputComments: true
       purgeAssetImagesWhenChanged: true
-      queryStringCaching: 0
+      queryStringCaching: 1
       queueJobTtr: 300
       refreshCacheAutomaticallyForGlobals: true
       refreshCacheEnabled: true
