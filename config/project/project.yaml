@@ -1,4 +1,4 @@
-dateModified: 1775667080
+dateModified: 1775737752
 elementSources:
   craft\elements\Entry:
     -
@@ -543,7 +543,7 @@ plugins:
       onlyCacheLowercaseUris: false
       outputComments: true
       purgeAssetImagesWhenChanged: true
-      queryStringCaching: 1
+      queryStringCaching: 0
       queueJobTtr: 300
       refreshCacheAutomaticallyForGlobals: true
       refreshCacheEnabled: true
