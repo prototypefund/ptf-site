@@ -7,11 +7,33 @@ settings:
   availableTransforms: '*'
   availableVolumes: '*'
   characterLimit: null
-  ckeConfig: 72b63983-0825-4712-ab6f-b4d98ee4efd4 # Standard
-  createButtonLabel: null
+  css: ".ck.ck-editor .button {\r\n  padding: 0.2em 0.4em;\r\n  background-color: grey;\r\n  color: white;\r\n  display: inline-block;\r\n}\r\n\r\n.ck.ck-editor .highlighted {\r\n  background-color: yellow;\r\n}"
+  cssFile: null
   defaultTransform: null
-  expandEntryButtons: false
   fullGraphqlData: false
+  headingLevels:
+    - 2
+    - 3
+    - 4
+    - 5
+  js: null
+  jsFile: null
+  options:
+    list:
+      properties:
+        styles: false
+    style:
+      definitions:
+        -
+          classes:
+            - button
+          element: a
+          name: Button
+        -
+          classes:
+            - highlighted
+          element: span
+          name: Highlight
   parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
@@ -20,6 +42,18 @@ settings:
   showWordCount: false
   sourceEditingGroups:
     - __ADMINS__
+  toolbar:
+    - heading
+    - style
+    - '|'
+    - bold
+    - italic
+    - strikethrough
+    - link
+    - bulletedList
+    - numberedList
+    - insertImage
+    - '|'
   wordLimit: null
 translationKeyFormat: null
 translationMethod: site
