@@ -1,0 +1,25 @@
+{
+  "list": {
+    "properties": {
+      "styles": false
+    }
+  },
+  "style": {
+    "definitions": [
+      {
+        "classes": [
+          "button"
+        ],
+        "element": "a",
+        "name": "Button"
+      },
+      {
+        "classes": [
+          "highlighted"
+        ],
+        "element": "span",
+        "name": "Highlight"
+      }
+    ]
+  }
+}

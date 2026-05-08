@@ -1,0 +1,10 @@
+.ck.ck-editor .button {
+  padding: 0.2em 0.4em;
+  background-color: grey;
+  color: white;
+  display: inline-block;
+}
+
+.ck.ck-editor .highlighted {
+  background-color: yellow;
+}

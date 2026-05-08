@@ -7,11 +7,24 @@ settings:
   availableTransforms: '*'
   availableVolumes: '*'
   characterLimit: null
-  ckeConfig: 9a1aea15-6b42-4b96-b047-ee412bfabc78 # Intro
-  createButtonLabel: null
+  css: ".ck.ck-editor .highlighted {\r\n  background-color: yellow;\r\n}"
+  cssFile: null
   defaultTransform: null
-  expandEntryButtons: false
   fullGraphqlData: false
+  headingLevels: false
+  js: null
+  jsFile: null
+  options:
+    list:
+      properties:
+        styles: false
+    style:
+      definitions:
+        -
+          classes:
+            - highlighted
+          element: span
+          name: Highlight
   parseEmbeds: false
   purifierConfig: null
   purifyHtml: true
@@ -20,6 +33,14 @@ settings:
   showWordCount: false
   sourceEditingGroups:
     - __ADMINS__
+  toolbar:
+    - style
+    - '|'
+    - bold
+    - italic
+    - strikethrough
+    - link
+    - '|'
   wordLimit: null
 translationKeyFormat: null
 translationMethod: site
