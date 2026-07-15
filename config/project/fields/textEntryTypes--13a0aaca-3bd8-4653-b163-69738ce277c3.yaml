@@ -4,27 +4,57 @@ instructions: null
 name: Text
 searchable: true
 settings:
+  advancedLinkFields: null
   availableTransforms: ''
   availableVolumes: '*'
   characterLimit: null
   css: null
   cssFile: Standard-(with-Entry-Types).css
   defaultTransform: null
+  defaultUploadLocationSubpath: null
+  defaultUploadLocationVolume: null
   entryTypes:
     -
-      uid: 894e5185-035a-41d1-b272-0b6c1608aabf # Side Heading + Text
+      __assoc__:
+        -
+          - uid
+          - 894e5185-035a-41d1-b272-0b6c1608aabf # Side Heading + Text
+        -
+          - expanded
+          - false
     -
-      uid: 824f9bd0-21d0-47fd-a48a-b8519da12b29 # Quote
+      __assoc__:
+        -
+          - uid
+          - 824f9bd0-21d0-47fd-a48a-b8519da12b29 # Quote
+        -
+          - expanded
+          - false
     -
-      uid: c08345c7-f10a-42ce-b893-7f2e82a46fbb # Embed
+      __assoc__:
+        -
+          - uid
+          - c08345c7-f10a-42ce-b893-7f2e82a46fbb # Embed
+        -
+          - expanded
+          - false
     -
-      uid: 0a3f8849-b320-4a0e-929f-d5d0fddc7c45 # Gallery
+      __assoc__:
+        -
+          - uid
+          - 0a3f8849-b320-4a0e-929f-d5d0fddc7c45 # Gallery
+        -
+          - expanded
+          - false
   fullGraphqlData: false
   headingLevels:
-    - 2
-    - 3
-    - 4
-    - 5
+    - '2'
+    - '3'
+    - '4'
+    - '5'
+  imageEntryTypeUid: 0a3f8849-b320-4a0e-929f-d5d0fddc7c45 # Gallery
+  imageFieldUid: 217a2c90-eeb9-495e-8605-be8adfd8e58d
+  imageMode: img
   js: null
   jsFile: Standard-(with-Entry-Types).json
   options: null
@@ -47,6 +77,7 @@ settings:
     - bulletedList
     - numberedList
     - insertImage
+    - insertTable
     - '|'
     - createEntry
   wordLimit: null
