@@ -205,7 +205,7 @@
   }
 
   :target {
-    @apply scroll-my-14 md:scroll-my-36;
+    @apply scroll-my-2 md:scroll-my-8;
   }
 
   :focus-visible {
