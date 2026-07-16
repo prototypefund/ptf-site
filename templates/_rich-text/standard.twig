@@ -1,174 +1,39 @@
 {% set size = size|default(null) %}
 
+{# prettier-ignore-start #}
 {{
   text
     |retconAutoAlt
-    |retcon(
-      [
-        ["change", "body > h1", "body > h2"],
-        [
-          "removeEmpty",
-          "body > p, body > h1, body > h2, body > h3, body > h4, body > h5, body > h6"
-        ],
-        [
-          "attr",
-          "body > h2, body > h3, body > h4, body > h5, body > h6",
-          {
-            class: "font-surt [p+&]:mt-5 [ul+&]:mt-5 [ol+&]:mt-5 [blockquote+&]:mt-5 [figure+&]:mt-5 mb-2.5 last:mb-0"
-          },
-          false
-        ],
-        [
-          "attr",
-          "body > h2",
-          {
-            class: "text-body-28 md:text-body-32"
-          },
-          false
-        ],
-        [
-          "attr",
-          "body > h3",
-          {
-            class: "text-body-22 md:text-body-24"
-          },
-          false
-        ],
-        [
-          "attr",
-          "body > h4",
-          {
-            class: "text-body-20 md:text-body-22"
-          },
-          false
-        ],
-        [
-          "attr",
-          "body > h5",
-          {
-            class: "font-surt text-head-18 md:text-head-22 md:tracking-[2%] uppercase"
-          },
-          false
-        ],
-        [
-          "attr",
-          "body > hr",
-          {
-            class: "my-[60px] md:mt-5 border-gray"
-          },
-          false
-        ],
-        [
-          "attr",
-          "body > p, body > ul, body > ol",
-          {
-            class: "text-pretty text-body-16 md:text-body-18 mb-2.5 last:mb-0"
-          },
-          false
-        ],
-        [
-          "attr",
-          "body > ul",
-          {
-            class: "list list-disc list-outside pl-[1.25em]"
-          },
-          false
-        ],
-        [
-          "attr",
-          "body > ul > li",
-          {
-            class: "pl-[0.5em] my-1 last:my-0"
-          },
-          false
-        ],
-        [
-          "attr",
-          "body > ol",
-          {
-            class: "list list-decimal pl-[1.5em]"
-          },
-          false
-        ],
-        [
-          "attr",
-          "body > ol > li",
-          {
-            class: "pl-[0.4em] ml-0 my-1 last:my-0"
-          },
-          false
-        ],
-        [
-          "attr",
-          "body > ol ol",
-          {
-            class: "list-[lower-latin]"
-          },
-          false
-        ],
-        [
-          "attr",
-          "body > figure",
-          {
-            class: "my-[60px] md:mt-6"
-          },
-          false
-        ],
-        [
-          "attr",
-          "body > img",
-          {
-            class: "block max-w-full"
-          },
-          false
-        ],
-        [
-          "attr",
-          "body > figure > figcaption",
-          {
-            class: "mt-1 text-gray-600 text-body-12 uppercase md:text-body-13 dark:text-gray"
-          },
-          false
-        ],
-        [
-          "attr",
-          "body > blockquote",
-          {
-            class: "border-l-4 border-l-hot-pink pl-2.5 md:pl-4 my-[60px] md:mt-5"
-          },
-          false
-        ],
-        [
-          "attr",
-          "body > blockquote, body > blockquote > p",
-          {
-            class: "font-surt text-rich-blue text-body-20 md:text-body-24 [hanging-punctuation:first_last] dark:text-sky-blue"
-          },
-          false
-        ],
-        [
-          "attr",
-          "body > * > a, body * > a",
-          {
-            class: "underline decoration-sky-blue hover:bg-light-blue dark:hover:text-gray-900"
-          },
-          false
-        ],
-        [
-          "attr",
-          "body > p > .button",
-          {
-            class: "uppercase font-surt text-ui-14 md:text-ui-16 border-gray border-l border-r px-[10px] py-[5px] bg-black text-white hover:bg-white hover:text-black transition-colors dark:bg-white dark:text-gray-900 dark:border-white dark:hover:bg-gray-300"
-          }
-        ],
-        [
-          "attr",
-          ".highlighted",
-          {
-            class: "bg-sky-blue dark:text-gray-900"
-          }
-        ]
-      ]
-    )
-    |raw
+    |retcon([
+      ["change", "body > h1", "body > h2"],
+      ["removeEmpty", "body > p, body > h1, body > h2, body > h3, body > h4, body > h5, body > h6"],
+      ["attr", "body > h2, body > h3, body > h4, body > h5, body > h6", { class: "font-surt [p+&]:mt-5 [ul+&]:mt-5 [ol+&]:mt-5 [blockquote+&]:mt-5 [figure+&]:mt-5 mb-2.5 last:mb-0"}, false],
+      [ "attr", "body > h2", { class: "text-body-28 md:text-body-32" }, false],
+      [ "attr", "body > h3", { class: "text-body-22 md:text-body-24" }, false],
+      [ "attr", "body > h4", { class: "text-body-20 md:text-body-22" }, false],
+      [ "attr", "body > h5", { class: "font-surt text-head-18 md:text-head-22 md:tracking-[2%] uppercase" }, false],
+      [ "attr", "body > hr", { class: "my-[60px] md:mt-5 border-gray" }, false],
+      [ "attr", "body > p, body > ul, body > ol", { class: "text-pretty text-body-16 md:text-body-18 mb-2.5 last:mb-0" }, false],
+      [ "attr", "body > ul", { class: "list list-disc list-outside pl-[1.25em]" }, false],
+      [ "attr", "body > ul > li", { class: "pl-[0.5em] my-1 last:my-0" }, false],
+      [ "attr", "body > ol", { class: "list list-decimal pl-[1.5em]" }, false],
+      [ "attr", "body > ol > li", { class: "pl-[0.4em] ml-0 my-1 last:my-0" }, false],
+      [ "attr", "body > ol ol", { class: "list-[lower-latin]" }, false],
+      [ "attr", "body > figure", { class: "my-[60px] md:mt-6 first:mt-0" }, false],
+      [ "attr", "body > img", { class: "block max-w-full" }, false],
+      [ "attr", "body > figure > figcaption", { class: "mt-1 text-gray-600 text-body-12 uppercase md:text-body-13 dark:text-gray" }, false],
+
+      [ "attr", "body > figure.table", { class: "figure-table overflow-x-auto w-[calc(100%+32px)] block text-pretty text-body-14 md:text-body-16 my-[60px] first:mt-0 last:mb-0 -mx-2 px-2 md:w-full md:mx-0 md:px-0" }],
+      [ "attr", "body > .figure-table > table", { class: "w-full max-w-full table-fixed min-w-[550px] overflow-hidden table-auto border-collapse border border-gray dark:border-gray-500" }, false],
+      [ "attr", "body > .figure-table > table th", { class: "border-b border-r border-gray dark:border-gray-500 font-normal align-top text-left min-w-35 p-1 bg-gray-100 w-auto dark:bg-gray-800 lg:p-2" }, false],
+      [ "attr", "body > .figure-table > table td", { class: "border-r border-gray dark:border-gray-500 align-top text-left p-1 lg:p-2" }, false],
+      [ "attr", "body > .figure-table > table tr", { class: "border-b-gray dark:border-gray-500 border-b" }, false],
+
+      [ "attr", "body > blockquote", { class: "border-l-4 border-l-hot-pink pl-2.5 md:pl-4 my-[60px] md:mt-5" }, false],
+      [ "attr", "body > blockquote, body > blockquote > p", { class: "font-surt text-rich-blue text-body-20 md:text-body-24 [hanging-punctuation:first_last] dark:text-sky-blue" }, false],
+      [ "attr", "body > * > a, body * > a", { class: "underline decoration-sky-blue hover:bg-light-blue dark:hover:text-gray-900" }, false],
+      [ "attr", "body > p > .button", { class: "uppercase font-surt text-ui-14 md:text-ui-16 border-gray border-l border-r px-[10px] py-[5px] bg-black text-white hover:bg-white hover:text-black transition-colors  rk:bg-white dark:text-gray-900 dark:border-white dark:hover:bg-gray-300" }],
+      [ "attr",  ".highlighted", { class: "bg-sky-blue dark:text-gray-900" }]
+    ])|raw
 }}
+{# prettier-ignore-end #}

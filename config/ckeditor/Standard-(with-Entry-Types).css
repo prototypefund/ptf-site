@@ -8,3 +8,9 @@
 .ck.ck-editor .highlighted {
   background-color: yellow;
 }
+
+.ck.ck-editor figure.table.ck-widget {
+  margin-left: 0 !important;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
