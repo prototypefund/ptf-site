@@ -3,10 +3,10 @@
 {% set role = person.role %}
 {% set website = person.website %}
 {% set size = size|default("medium") %}
-
-<div class="">
+{% set headlineId = person.title|ascii|kebab %}
+<div class="" id="{{ headlineId }}">
   <h4 class="font-surt text-head-22 md:text-head-38 mb-3 uppercase md:mb-4">
-    {{ person.title }}
+    <a href="#{{ headlineId }}">{{ person.title }}</a>
 
     {% if pronouns|length %}
       <span
