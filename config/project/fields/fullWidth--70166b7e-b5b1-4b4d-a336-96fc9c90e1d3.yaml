@@ -1,0 +1,13 @@
+columnSuffix: null
+handle: fullWidth
+instructions: null
+name: 'Full width'
+searchable: false
+settings:
+  default: false
+  offLabel: null
+  onLabel: null
+  showLabelsInCards: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch
