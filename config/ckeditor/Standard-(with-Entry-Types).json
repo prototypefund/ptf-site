@@ -19,6 +19,20 @@
         ],
         "element": "span",
         "name": "Highlight"
+      },
+      {
+        "classes": [
+          "text-center"
+        ],
+        "element": "th",
+        "name": "Center Table Header"
+      },
+      {
+        "classes": [
+          "text-center"
+        ],
+        "element": "td",
+        "name": "Center Table Cell"
       }
     ]
   }
