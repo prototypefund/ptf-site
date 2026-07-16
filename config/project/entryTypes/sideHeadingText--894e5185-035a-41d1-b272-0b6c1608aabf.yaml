@@ -52,6 +52,31 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2026-07-16T15:58:07+00:00'
+            editCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\elements\conditions\TitleConditionRule
+                  operator: empty
+                  uid: 34785809-5e8b-4935-997a-9aedfcd77c68
+                  value: ''
+              elementType: craft\elements\Entry
+              fieldContext: global
+            elementEditCondition: null
+            fieldUid: 70166b7e-b5b1-4b4d-a336-96fc9c90e1d3 # Full width
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6729b6bb-bdf0-414b-a8ab-f68d20cb3239
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: 263e200c-5f7b-41f9-ba66-d1111fb9fe94
         userCondition: null

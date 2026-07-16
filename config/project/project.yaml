@@ -1,4 +1,4 @@
-dateModified: 1784212088
+dateModified: 1784217487
 elementSources:
   craft\elements\Entry:
     -
@@ -306,6 +306,7 @@ meta:
     15140d29-2c87-492e-84f4-90eb738eb0d8: Columns # Columns
     36123ba7-7de9-48c0-a222-7aab3ad79da9: 'Start Date' # Start Date
     53364b16-adc8-4b34-802f-054c272771c6: 'Projects Index' # Projects Index
+    70166b7e-b5b1-4b4d-a336-96fc9c90e1d3: 'Full width' # Full width
     72564f6d-cb4e-40a8-b30c-99153000f278: Steps # Steps
     586087db-4dd7-43ba-929b-b3f7cef02ff8: w800 # w800
     711863fc-e341-4c43-b45b-dc33dc3c9c2b: Homepage # Homepage
