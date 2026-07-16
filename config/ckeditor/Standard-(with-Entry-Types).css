@@ -14,3 +14,8 @@
   margin-top: 2em;
   margin-bottom: 2em;
 }
+
+.ck.ck-editor figure.table td.text-center,
+.ck.ck-editor figure.table th.text-center {
+  text-align: center;
+}
