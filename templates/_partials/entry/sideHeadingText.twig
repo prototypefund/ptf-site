@@ -14,7 +14,9 @@
 {% endset %}
 
 {% set rss %}
-  <h2>{{ entry.title }}</h2>
+  {% if entry.title|length %}
+    <h2>{{ entry.title }}</h2>
+  {% endif %}
   {% include "_rich-text/standard" with {
     text: entry.text
   } only %}
