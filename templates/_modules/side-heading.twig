@@ -11,7 +11,7 @@
     <h2
       class="font-surt text-body-22 md:text-body-32 mb-5 break-words md:sticky md:top-[1em] md:col-span-4 md:mb-0 lg:col-span-6"
     >
-      <a href="#{{ headlineId }}">{{ headline }}</a>
+      <a class="anchor" href="#{{ headlineId }}">{{ headline }}</a>
     </h2>
   {% endif %}
   {% set layoutClasses = not hasHeading and fullWidth
