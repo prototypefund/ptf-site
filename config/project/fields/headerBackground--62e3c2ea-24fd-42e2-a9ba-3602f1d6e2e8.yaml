@@ -15,6 +15,12 @@ settings:
           - value
           - greyBackgroundBluePattern
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - '1'
     -
@@ -25,6 +31,12 @@ settings:
         -
           - value
           - greyBackgroundPinkPattern
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
         -
           - default
           - ''
@@ -37,6 +49,12 @@ settings:
           - value
           - greyBackgroundGreyPattern
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - ''
     -
@@ -47,6 +65,29 @@ settings:
         -
           - value
           - skyBlueBackgroundLightBluePattern
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Rich Blue Background / Light Blue Pattern'
+        -
+          - value
+          - richBlueBackgroundLightBluePattern
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
         -
           - default
           - ''
@@ -59,6 +100,12 @@ settings:
           - value
           - richBlueBackgroundPinkPattern
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - ''
     -
@@ -70,6 +117,29 @@ settings:
           - value
           - darkMagentaBackgroundBluePattern
         -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
+          - default
+          - ''
+    -
+      __assoc__:
+        -
+          - label
+          - 'Dark Magenta Background / Pink Pattern'
+        -
+          - value
+          - darkMagentaBackgroundPinkPattern
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
+        -
           - default
           - ''
     -
@@ -80,6 +150,12 @@ settings:
         -
           - value
           - navyBlueBackgroundPinkPattern
+        -
+          - icon
+          - ''
+        -
+          - color
+          - ''
         -
           - default
           - ''
