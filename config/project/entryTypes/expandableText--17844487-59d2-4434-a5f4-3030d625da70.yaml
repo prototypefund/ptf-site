@@ -15,7 +15,18 @@ fieldLayouts:
             class: null
             dateAdded: '2025-04-25T09:13:20+00:00'
             disabled: false
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\elements\conditions\entries\FieldConditionRule
+                  operator: ni
+                  uid: 108a515e-c1e4-46c1-8fb0-b0b7aeb4aa1a
+                  values:
+                    - 0b9eb562-64e5-4b3c-9478-8cefd24e8039 # Text
+                    - 13a0aaca-3bd8-4653-b163-69738ce277c3 # Text
+              elementType: craft\elements\Entry
+              fieldContext: global
             id: null
             inputType: null
             instructions: null
@@ -64,7 +75,7 @@ showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site
-titleFormat: null
+titleFormat: "{expandableItems|length ? expandableItems.collect().pluck('title').map(title => title|truncate(30)).join(', ')}"
 titleTranslationKeyFormat: null
 titleTranslationMethod: site
 uiLabelFormat: '{title}'

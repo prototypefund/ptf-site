@@ -1,0 +1,7 @@
+{% set expandableItems = entry.expandableItems.eagerly().all() %}
+
+<div class="my-2.5 last:mb-0">
+  {% include "_modules/blocks/expandable-text-items.twig" with {
+    expandableItems: expandableItems
+  } only %}
+</div>
