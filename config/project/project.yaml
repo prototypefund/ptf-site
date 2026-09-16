@@ -1,4 +1,4 @@
-dateModified: 1789385687
+dateModified: 1789543606
 elementSources:
   craft\elements\Entry:
     -
@@ -214,7 +214,7 @@ meta:
     3d4c1a3f-6b2d-4919-a863-32877e6722ce: 'Project Year Groups' # Project Year Groups
     4b6ba907-43f2-494b-9816-24894f8de0da: Newsletter # Newsletter
     4bfc6f18-1241-4dd1-be73-a95290f1a887: 'Event Teasers' # Event Teasers
-    4ca0ade4-44d2-4594-8253-a909b0a44bb2: Steps # Steps
+    4ca0ade4-44d2-4594-8253-a909b0a44bb2: Cards # Cards
     4e97404d-0992-4280-b87e-903b4fc471c5: Navigation # Navigation
     4f4c5206-4b19-4476-ad5a-331b92869abd: 'Team Member' # Team Member
     4fd1e89f-c494-4e78-ae99-20dbd74e4f9b: Publications # Publications
@@ -307,7 +307,7 @@ meta:
     36123ba7-7de9-48c0-a222-7aab3ad79da9: 'Start Date' # Start Date
     53364b16-adc8-4b34-802f-054c272771c6: 'Projects Index' # Projects Index
     70166b7e-b5b1-4b4d-a336-96fc9c90e1d3: 'Full width' # Full width
-    72564f6d-cb4e-40a8-b30c-99153000f278: Steps # Steps
+    72564f6d-cb4e-40a8-b30c-99153000f278: Cards # Cards
     586087db-4dd7-43ba-929b-b3f7cef02ff8: w800 # w800
     711863fc-e341-4c43-b45b-dc33dc3c9c2b: Homepage # Homepage
     860851bc-5058-4f0d-8f3f-481df7e56099: 'Project Rounds' # Project Rounds
@@ -342,6 +342,7 @@ meta:
     b2b9ea1c-a462-4794-bd6c-d9700c56f94c: 'CTA Banner' # CTA Banner
     b2bad2a6-6c5f-4d98-b29f-c19b52094245: 'Next Reads Featured' # Next Reads Featured
     b8ee6536-12a5-4426-b64d-b04a622f6dbf: 'Link Lists' # Link Lists
+    b9c12da2-9f36-4b23-85b6-b014a6145a19: 'Show Step Numbers' # Show Step Numbers
     b46f826b-dfdb-409c-b483-08cf751ab744: '5/4: w2000' # 5/4: w2000
     b99ee1fe-b466-49ac-8315-43d2af7587e1: Uploads # Uploads
     b629c55a-8642-44db-a823-26783a25058b: Footer # Footer
@@ -359,7 +360,7 @@ meta:
     c94fde1d-e39d-42fe-b771-7e2a22535e6c: '5/4: w1600' # 5/4: w1600
     c670b800-a19f-4ca2-a056-283204e59d5d: 'Credit / License' # Credit / License
     c63194ff-c47c-4c20-80b1-39bfedfc3b0f: 'Project Topics' # Project Topics
-    c84399c0-dd2f-498b-adbf-528b801843c4: Step # Step
+    c84399c0-dd2f-498b-adbf-528b801843c4: Card # Card
     ca7069c8-f9a4-44e7-9b3e-21db114e4134: 'Generic Teasers' # Generic Teasers
     ced3c245-d70a-43bb-a15b-37fa5292066b: FAQ # FAQ
     cee93094-4951-4db3-af0c-29a87c1f2cf8: 'Project Teasers' # Project Teasers
@@ -370,7 +371,7 @@ meta:
     d9abc0f0-98c8-45d7-aa77-d9f8fbe83f7a: Time # Time
     d13f787b-b91b-4821-8104-46e509830347: Avatar # Avatar
     d26ba65b-dbab-4a12-b3e8-1ae7a4a2845d: Quote # Quote
-    d94ae721-befb-4d87-921e-3152926fdd9e: 'Step Text' # Step Text
+    d94ae721-befb-4d87-921e-3152926fdd9e: 'Card Text' # Card Text
     d5397ea9-1d37-4f12-bf41-46082d130bd8: Image # Image
     d26039c6-3f56-4e09-a666-c1fd8f160bee: 'Image Columns' # Image Columns
     d42896d4-04a6-4211-8d97-f265c27a3be1: 'Inclusive Sans – Semibold (Italic)' # Inclusive Sans – Semibold (Italic)

@@ -1,17 +1,23 @@
 columnSuffix: null
-handle: stepText
+handle: cardText
 instructions: null
-name: 'Step Text'
+name: 'Card Text'
 searchable: true
 settings:
+  advancedLinkFields: null
   availableTransforms: '*'
   availableVolumes: '*'
   characterLimit: null
   css: null
   cssFile: null
   defaultTransform: null
+  defaultUploadLocationSubpath: null
+  defaultUploadLocationVolume: null
   fullGraphqlData: false
   headingLevels: false
+  imageEntryTypeUid: null
+  imageFieldUid: null
+  imageMode: img
   js: null
   jsFile: Simple.json
   options: null

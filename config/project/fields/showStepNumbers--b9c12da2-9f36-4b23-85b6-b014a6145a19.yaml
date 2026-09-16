@@ -1,0 +1,13 @@
+columnSuffix: null
+handle: showStepNumbers
+instructions: null
+name: 'Show Step Numbers'
+searchable: false
+settings:
+  default: true
+  offLabel: null
+  onLabel: null
+  showLabelsInCards: false
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch

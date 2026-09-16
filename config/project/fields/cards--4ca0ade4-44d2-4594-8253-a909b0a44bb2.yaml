@@ -1,7 +1,7 @@
 columnSuffix: null
-handle: steps
+handle: cards
 instructions: null
-name: Steps
+name: Cards
 searchable: true
 settings:
   createButtonLabel: null
@@ -12,12 +12,12 @@ settings:
       __assoc__:
         -
           - uid
-          - c84399c0-dd2f-498b-adbf-528b801843c4 # Step
+          - c84399c0-dd2f-498b-adbf-528b801843c4 # Card
         -
           - group
           - Allgemein
   includeTableView: false
-  maxEntries: 3
+  maxEntries: 4
   minEntries: null
   pageSize: null
   propagationKeyFormat: null

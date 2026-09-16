@@ -9,6 +9,11 @@
             module: module,
             context: context
           } only %}
+        {% case "cards" %}
+          {% include "_modules/blocks/cards" with {
+            module: module,
+            context: context
+          } only %}
         {% case "genericTeasers" %}
           {% include "_modules/blocks/generic-teasers" with {
             module: module,
@@ -51,11 +56,6 @@
           } only %}
         {% case "relatedLinkList" %}
           {% include "_modules/blocks/link-list" with {
-            module: module,
-            context: context
-          } only %}
-        {% case "steps" %}
-          {% include "_modules/blocks/steps" with {
             module: module,
             context: context
           } only %}
