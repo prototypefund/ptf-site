@@ -1,10 +1,12 @@
 {% set darkMode = darkMode is not defined ? true : darkMode %}
 
-<form
-  class="relative mb-2.5"
-  method="post"
-  action="https://te917244a.emailsys1a.net/172/4365/50b2a37e1e/subscribe/form.html"
->
+{% set newsletterFormAction =
+  newsletter.newsletterFormAction|default(
+    "https://te917244a.emailsys1a.net/172/4365/50b2a37e1e/subscribe/form.html"
+  )
+%}
+
+<form class="relative mb-2.5" method="post" action="{{ newsletterFormAction }}">
   {% include "_modules/input-text" with {
     type: "email",
     name: "email",

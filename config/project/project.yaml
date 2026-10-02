@@ -1,4 +1,4 @@
-dateModified: 1789543606
+dateModified: 1790947001
 elementSources:
   craft\elements\Entry:
     -
@@ -364,6 +364,7 @@ meta:
     ca7069c8-f9a4-44e7-9b3e-21db114e4134: 'Generic Teasers' # Generic Teasers
     ced3c245-d70a-43bb-a15b-37fa5292066b: FAQ # FAQ
     cee93094-4951-4db3-af0c-29a87c1f2cf8: 'Project Teasers' # Project Teasers
+    ceee4d45-4d87-4884-847e-ed97a2b3be5f: 'Newsletter Form Action' # Newsletter Form Action
     cff97bfa-6eb7-473b-97c0-cc3af58c0f64: 'Article ID' # Article ID
     d4c24b33-4a46-4c55-980e-c1d4af12f9bf: '5/4: w1200' # 5/4: w1200
     d7c13ef6-9822-4fd8-83f3-ddcd61ea3184: Rows # Rows
