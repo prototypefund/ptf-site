@@ -6,6 +6,22 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2026-10-02T13:16:41+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: ceee4d45-4d87-4884-847e-ed97a2b3be5f # Newsletter Form Action
+            handle: null
+            instructions: null
+            label: null
+            required: true
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e1877f2c-053d-4464-9d52-6f497b8ebfe8
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2025-04-08T18:25:24+00:00'
             editCondition: null
             elementCondition: null
