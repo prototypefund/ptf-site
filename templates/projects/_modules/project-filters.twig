@@ -69,10 +69,9 @@
         [
           {
             title: item.title,
-            url: siteUrl(
-              "/" ~ craft.app.request.pathInfo,
-              queryString ~ "#list"
-            ),
+            url: siteUrl(craft.app.request.pathInfo)
+              ~ (queryString ? "?" ~ queryString)
+              ~ "#list",
             isActive: isActive
           }
         ]
