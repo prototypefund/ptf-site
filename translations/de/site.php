@@ -39,6 +39,7 @@ return [
     "No projects found." => "Keine Projekte gefunden.",
     "Number of projects" => "Anzahl der Projekte",
     "Only show currently funded projects" => "Nur aktuell geförderte Projekte anzeigen",
+    "Only show projects with Second Stage funding phase" => "Nur Projekte mit Second Stage Förderphase anzeigen",
     "Open link" => "Öffnen",
     "Open PDF" => "PDF öffnen",
     "Page" => "Seite",
@@ -74,5 +75,5 @@ return [
     "View" => "Anzeigen",
     "Year Groups" => "Jahrgänge",
     "Year Groups (from 2025)" => "Jahrgänge (ab 2025)",
-    "{startDate} – {endDateSecondStage} (incl. Second Stage)" => "{startDate} – {endDateSecondStage} (inkl. Second Stage)"
+    "{startDate} – {endDateSecondStage} (incl. Second Stage)" => "{startDate} – {endDateSecondStage} (inkl. Second Stage)",
 ];
