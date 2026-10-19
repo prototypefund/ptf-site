@@ -8,6 +8,10 @@
       {
         title: "Only show currently funded projects"|t,
         slug: "inFunding"
+      },
+      {
+        title: "Only show projects with Second Stage funding phase"|t,
+        slug: "secondStage"
       }
     ]
   },
@@ -160,13 +164,11 @@
 
           {% switch item.param %}
             {% case "status" %}
-              {% for status in item.items %}
-                {% include "_modules/filter-checkboxes" with {
-                  filters: item.items
-                } only %}
-              {% endfor %}
+              {% include "_modules/filter-checkboxes.twig" with {
+                filters: item.items
+              } only %}
             {% default %}
-              {% include "_modules/filter-buttons" with {
+              {% include "_modules/filter-buttons.twig" with {
                 filters: item.items,
                 size: "large"
               } only %}

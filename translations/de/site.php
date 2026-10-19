@@ -34,6 +34,7 @@ return [
   "No projects found." => "Keine Projekte gefunden.",
   "Number of projects" => "Anzahl der Projekte",
   "Only show currently funded projects" => "Nur aktuell geförderte Projekte anzeigen",
+  "Only show projects with Second Stage funding phase" => "Nur Projekte mit Second Stage Förderphase anzeigen",
   "Open link" => "Öffnen",
   "Open PDF" => "PDF öffnen",
   "Page" => "Seite",

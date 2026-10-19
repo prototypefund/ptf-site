@@ -13,6 +13,9 @@
 {% set inFundingParam = "inFunding"
   in craft.customQueryStringParser.getQueryParam("status")
 %}
+{% set secondStageParam = "secondStage"
+  in craft.customQueryStringParser.getQueryParam("status")
+%}
 
 {% set projectsQuery = craft.entries.section("projects") %}
 
@@ -48,6 +51,10 @@
   %}
 
   {% set projectsQuery = projectsQuery.id(uniqueIds) %}
+{% endif %}
+
+{% if secondStageParam %}
+  {% set projectsQuery = projectsQuery.secondStage(true) %}
 {% endif %}
 
 {% set relations = [] %}
