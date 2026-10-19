@@ -1,5 +1,3 @@
-{% import "_macros" as macros %}
-
 {% extends "_layouts/layout.twig" %}
 
 {% set headline = entry.title %}
@@ -9,7 +7,7 @@
 {% set teamMembers = entry.projectTeamMembers %}
 {% set licenses = entry.projectLicenses %}
 {% set fundingAmount = entry.projectFundingAmount %}
-{% set fundingStatus = macros.fundingStatus(entry) %}
+{% set fundingPeriod = entry.fundingPeriod %}
 
 {% block content %}
   <article class="mb-10 last:mb-0">
@@ -74,18 +72,7 @@
             </div>
           {% endif %}
 
-          {% if fundingStatus|length %}
-            {% set category =
-              entry.projectRounds.eagerly().one()|default(
-                entry.projectYearGroups.eagerly().one()
-              )
-            %}
-            {% set startDate = category.startDate|default(null) %}
-            {% set endDateRegular = category.endDateRegular|default(null) %}
-            {% set endDateSecondStage =
-              category.endDateSecondStage|default(null)
-            %}
-
+          {% if fundingPeriod %}
             <div
               class="border-gray mb-4 border-t pt-1 last:mb-0 md:mb-5 dark:border-gray-500"
             >
@@ -96,37 +83,7 @@
               </h4>
 
               <p class="text-body-18 md:text-body-20">
-                {% switch fundingStatus %}
-                  {% case "inDuration" %}
-                    {{
-                      "In funding since {startDate}"|t(
-                        params: {
-                          startDate: startDate|date("d/m/Y")
-                        }
-                      )
-                    }}
-                  {% case "completed" %}
-                    {{ startDate|date("d/m/Y") }} – {{
-                      endDateRegular|date("d/m/Y")
-                    }}
-                  {% case "inDurationWithSecondStage" %}
-                    {{
-                      "In funding since {startDate}, currently in Second Stage"|t(
-                        params: {
-                          startDate: startDate|date("d/m/Y")
-                        }
-                      )
-                    }}
-                  {% case "completedWithSecondStage" %}
-                    {{
-                      "{startDate} –  {endDateSecondStage} (incl. Second Stage)"|t(
-                        params: {
-                          startDate: startDate|date("d/m/Y"),
-                          endDateSecondStage: endDateSecondStage|date("d/m/Y")
-                        }
-                      )
-                    }}
-                {% endswitch %}
+                {{ fundingPeriod }}
               </p>
             </div>
           {% endif %}

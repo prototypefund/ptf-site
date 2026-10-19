@@ -62,7 +62,7 @@
   }} border-gray relative border-b px-2 pt-[60px] pb-5 md:grid md:grid-cols-12 md:px-5 md:pb-[60px] lg:grid-cols-16"
 >
   <div class="relative z-1 mb-10 md:col-span-6 md:mb-0 lg:col-span-10">
-    {% if macros.inFunding(entry)|boolean %}
+    {% if entry.isInFunding %}
       <div class="mb-1 md:mb-2">
         {% include "_modules/pill" with {
           text: "In Funding"|t
