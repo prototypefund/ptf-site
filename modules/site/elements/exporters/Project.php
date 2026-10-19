@@ -71,4 +71,9 @@ class Project extends ElementExporter
 
         return $data;
     }
+
+    public function getFilename(): string
+    {
+        return 'projects';
+    }
 }
