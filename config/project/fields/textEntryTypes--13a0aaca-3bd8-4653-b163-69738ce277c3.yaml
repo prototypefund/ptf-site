@@ -78,6 +78,7 @@ settings:
     - numberedList
     - insertImage
     - insertTable
+    - insertTableLayout
     - '|'
     - createEntry
   wordLimit: null
