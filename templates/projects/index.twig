@@ -4,6 +4,9 @@
 {% set fundingCycleParams =
   craft.customQueryStringParser.getQueryParam("funding-cycle")
 %}
+{% set fundingTrackParam =
+  craft.customQueryStringParser.getQueryParam("funding-track")
+%}
 {% set topicParams = craft.customQueryStringParser.getQueryParam("topic") %}
 {% set technologyParams =
   craft.customQueryStringParser.getQueryParam("technology")
@@ -67,6 +70,20 @@
             ["projectYearGroups", "projectRounds"]
           ).slug(
             fundingCycleParams
+          )
+        }
+      ]
+    )
+  %}
+{% endif %}
+
+{% if fundingTrackParam|length %}
+  {% set relations =
+    relations|merge(
+      [
+        {
+          targetElement: craft.categories.group("projectFundingTracks").slug(
+            fundingTrackParam
           )
         }
       ]

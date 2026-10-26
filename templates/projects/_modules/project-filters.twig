@@ -18,8 +18,14 @@
   {
     title: "Funding cycle"|t,
     param: "funding-cycle",
-    items: craft.categories.group("projectYearGroups").eagerly().all()
-      |merge(craft.categories.group("projectRounds").eagerly().all())
+    items: craft.categories.group("projectYearGroups").eagerly().all()|merge(
+      craft.categories.group("projectRounds").eagerly().all()
+    )
+  },
+  {
+    title: "Funding Track"|t,
+    param: "funding-track",
+    items: craft.categories.group("projectFundingTracks").eagerly().all()
   },
   {
     title: "Topics"|t,
