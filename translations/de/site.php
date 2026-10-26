@@ -20,6 +20,8 @@ return [
     "Funding Period" => "Förderzeitraum",
     "Funding cycle" => "Förderzyklus",
     "Funding status" => "Förderstatus",
+    "Funding Track" => "Förderlinie",
+    "Funding Tracks" => "Förderlinien",
     "Go back home" => "Zurück zur Startseite",
     "Headline" => "Überschrift",
     "Hide" => "Verbergen",

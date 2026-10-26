@@ -32,13 +32,6 @@
 
 {% set remainingLinks = projectLinks|filter(item => item != demoLink) %}
 
-{% set categories =
-  entry.projectRounds.eagerly().all()
-    |merge(entry.projectTopics.eagerly().all())
-    |merge(entry.projectTechnologies.eagerly().all())
-    |merge(entry.projectYearGroups.eagerly().all())
-%}
-
 {% set pattern =
   [
     "after:bg-pattern-br-gray-2 dark:after:bg-pattern-br-dark-gray-2",
@@ -62,28 +55,16 @@
   }} border-gray relative border-b px-2 pt-[60px] pb-5 md:grid md:grid-cols-12 md:px-5 md:pb-[60px] lg:grid-cols-16"
 >
   <div class="relative z-1 mb-10 md:col-span-6 md:mb-0 lg:col-span-10">
-    {% if entry.isInFunding %}
-      <div class="mb-1 md:mb-2">
-        {% include "_modules/pill" with {
-          text: "In Funding"|t
-        } only %}
-      </div>
-    {% endif %}
-
     <h1
       class="font-surt text-head-22 md:text-head-38 mb-2.5 break-words uppercase last:mb-0 md:mb-3"
     >
       <span class="text-rich-blue dark:text-sky-blue">{{ entry.title }}</span>{{ claim|length ? ": #{claim}" }}
     </h1>
 
-    {% if categories|length %}
-      <div class="mb-2.5 md:mb-3">
-        {% include "_modules/categories-list" with {
-          categories,
-          size: "large"
-        } only %}
-      </div>
-    {% endif %}
+    {% include "_modules/project-meta.twig" with {
+      class: "mb-2.5 md:mb-3",
+      link: true
+    } %}
 
     <time
       class="text-ui-13 md:text-ui-14 mb-4 block md:mb-5"

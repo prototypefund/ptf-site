@@ -165,7 +165,23 @@ fieldLayouts:
             uid: 3ebd30bb-1ff9-483b-8f78-517eb120d5c8
             userCondition: null
             warning: null
-            width: 100
+            width: 50
+          -
+            dateAdded: '2026-10-26T08:39:12+00:00'
+            editCondition: null
+            elementCondition: null
+            elementEditCondition: null
+            fieldUid: 17c59b40-a9b8-48f4-8638-41bb65e6d8da # Project Funding Tracks
+            handle: null
+            instructions: null
+            label: null
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f4741373-d843-4cd9-80ee-78464f2b0d64
+            userCondition: null
+            warning: null
+            width: 50
           -
             dateAdded: '2025-03-10T13:44:06+00:00'
             editCondition: null
@@ -181,7 +197,7 @@ fieldLayouts:
             uid: 7c757f76-4970-4108-bc6b-5141083d6b0a
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             dateAdded: '2025-04-03T14:29:07+00:00'
             editCondition: null
@@ -197,7 +213,7 @@ fieldLayouts:
             uid: d6cf108c-ba1b-47f5-919b-e5f8f8f55077
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             dateAdded: '2025-05-02T11:53:35+00:00'
             editCondition: null
@@ -213,7 +229,7 @@ fieldLayouts:
             uid: 7f35c083-3c1d-45f5-bb51-5c330f8d5ea0
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             dateAdded: '2025-04-10T15:44:22+00:00'
             editCondition: null
@@ -229,7 +245,7 @@ fieldLayouts:
             uid: d65f3f26-0095-4f84-9045-a3c488ece13c
             userCondition: null
             warning: null
-            width: 100
+            width: 50
           -
             dateAdded: '2025-04-21T14:19:39+00:00'
             editCondition: null

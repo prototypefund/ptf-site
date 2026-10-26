@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: projectFundingTracks
+instructions: null
+name: 'Project Funding Tracks'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  defaultPlacement: end
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  selectionLabel: null
+  showSearchInput: true
+  showSiteMenu: true
+  source: 'group:5556c541-5c32-474a-a488-6682f8b5dac0' # Project Funding Tracks
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories

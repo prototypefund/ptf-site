@@ -154,6 +154,32 @@
   --background-image-pixel-4: url("/static/images/pixel-4.svg");
 }
 
+@utility hover-underline {
+  position: relative;
+
+  @variant sm {
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: var(--hover-underline-bottom, -4px);
+      width: 0;
+      height: 1px;
+      background-color: var(--color-sky-blue);
+      @apply transition-[width];
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+}
+
+@utility hover-underline-bottom-* {
+  --hover-underline-bottom: --value([length]);
+  --hover-underline-bottom: calc(var(--spacing) * --value(integer));
+}
+
 @layer base {
   @view-transition {
     navigation: auto;

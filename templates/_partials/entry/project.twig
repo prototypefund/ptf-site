@@ -2,13 +2,6 @@
 {% set claim = entry.headline %}
 {% set teamMembers = entry.projectTeamMembers %}
 
-{% set categories =
-  entry.projectYearGroups.eagerly().all()
-    |merge(entry.projectRounds.eagerly().all())
-    |merge(entry.projectTopics.eagerly().all())
-    |merge(entry.projectTechnologies.eagerly().all())
-%}
-
 {% set title %}
   <span class="text-rich-blue dark:text-sky-blue">{{ entry.title }}</span>{{ claim|length ? ": #{claim}" }}
 {% endset %}
@@ -49,14 +42,6 @@
       </div>
 
       <div class="min-w-0 flex-1 xl:col-span-9">
-        {% if entry.isInFunding %}
-          <div class="mb-1 md:mb-2">
-            {% include "_modules/pill" with {
-              text: "In Funding"|t
-            } only %}
-          </div>
-        {% endif %}
-
         <div class="mb-1 last:mb-0 md:mb-1.5">
           <h4
             class="font-surt text-head-16 md:text-head-22 group-hover:decoration-sky-blue inline tracking-[2%] break-words uppercase group-hover:underline md:tracking-[2%]"
@@ -66,16 +51,14 @@
         </div>
 
         {% if teamMembers|length %}
-          <div class="text-body-14 mb-2 last:mb-0 md:mb-2.5">
+          <div
+            class="text-body-16 dark:text-gray mb-2 text-gray-600 last:mb-0 md:mb-2.5"
+          >
             {{ teamMembers }}
           </div>
         {% endif %}
 
-        {% if categories|length %}
-          {% include "_modules/categories-list" with {
-            categories
-          } only %}
-        {% endif %}
+        {% include "_modules/project-meta.twig" %}
       </div>
     </div>
   </a>
