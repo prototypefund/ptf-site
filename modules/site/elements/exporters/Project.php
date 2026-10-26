@@ -27,6 +27,7 @@ class Project extends ElementExporter
         /** @var EntryQuery $query */
         $query->with([
             'projectRounds',
+            'projectFundingTracks',
             'projectTopics',
             'projectTechnologies',
             'projectLicenses',
@@ -41,6 +42,7 @@ class Project extends ElementExporter
             'fundingStatus' => Craft::t('site', 'Funding status'),
             'fundingPeriod' => Craft::t('site', 'Funding Period'),
             'rounds' => Craft::t('site', 'Rounds'),
+            'fundingTrack' => Craft::t('site', 'Funding Track'),
             'topics' => Craft::t('site', 'Topics'),
             'yearGroups' => Craft::t('site', 'Year Groups'),
             'technologies' => Craft::t('site', 'Technologies'),
@@ -60,6 +62,7 @@ class Project extends ElementExporter
                 $columnLabels['fundingStatus'] => $entry->getFundingStatus()?->label(),
                 $columnLabels['fundingPeriod'] => $entry->getFundingPeriod(),
                 $columnLabels['rounds'] => join(', ', ArrayHelper::getColumn($entry->projectRounds, 'title')),
+                $columnLabels['fundingTrack'] => join(', ', ArrayHelper::getColumn($entry->projectFundingTracks, 'title')),
                 $columnLabels['topics'] => join(', ', ArrayHelper::getColumn($entry->projectTopics, 'title')),
                 $columnLabels['yearGroups'] => join(', ', ArrayHelper::getColumn($entry->projectYearGroups, 'title')),
                 $columnLabels['technologies'] => join(', ', ArrayHelper::getColumn($entry->projectTechnologies, 'title')),
