@@ -1,0 +1,50 @@
+{%- set projectsCount =
+  craft.entries.section("projects").relatedTo({
+    targetElement: category,
+    field: "projectRounds"
+  }).count()
+-%}
+
+<section
+  class="before:pattern before:pattern-card group relative space-y-5 bg-top-right bg-no-repeat px-2 py-4 md:p-5"
+>
+  <header>
+    {% include "_modules/pill.twig" with {
+      text: "Completed"|t,
+      color: "gray"
+    } %}
+    <h3 class="font-surt text-head-24 md:text-head-32 mt-1.25">
+      <a href="{{ category.url }}" class="before:absolute before:inset-0">
+        {{ category.title }}
+      </a>
+    </h3>
+  </header>
+
+  <dl
+    class="*:border-t-gray text-body-14 md:text-body-16 space-y-2.5 tracking-[0.02em] uppercase *:flex *:justify-between *:border-t *:pt-[3px] [&_dd]:text-right [&_dt]:text-gray-600"
+  >
+    <div>
+      <dt>
+        {{ "Funding Period"|t }}
+      </dt>
+      <dd>
+        {{ category.startDate|date("d/m/Y") }}&thinsp;&ndash;&thinsp;{{
+          category.endDateRegular|date("d/m/Y")
+        }}
+      </dd>
+    </div>
+    <div>
+      <dt>
+        {{ "Number of projects"|t }}
+      </dt>
+      <dd>{{ projectsCount }}</dd>
+    </div>
+  </dl>
+
+  {% include "_modules/button.twig" with {
+    url: category.url,
+    icon: "arrow",
+    iconAlignment: "right",
+    text: "See"|t
+  } %}
+</section>

@@ -180,6 +180,24 @@
   --hover-underline-bottom: calc(var(--spacing) * --value(integer));
 }
 
+@utility pattern {
+  pointer-events: none;
+  background-color: light-dark(
+    var(--pattern-color, var(--color-gray-200)),
+    var(--pattern-color-dark, var(--color-gray-800))
+  );
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+@utility pattern-card {
+  mask-image: url(/static/images/patterns/pattern-card.svg);
+  width: 170px;
+  height: 150px;
+}
+
 @layer base {
   @view-transition {
     navigation: auto;
@@ -187,6 +205,11 @@
 
   :root {
     interpolate-size: allow-keywords;
+    color-scheme: light;
+  }
+
+  :root.dark:not(.print) {
+    color-scheme: dark;
   }
 
   *,
