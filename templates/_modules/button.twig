@@ -5,6 +5,7 @@
 {% set color = color|default("dark") %}
 {% set border = border is not defined ? true : border %}
 {% set darkMode = darkMode is not defined ? true : darkMode %}
+{% set attr = attr ?? {} %}
 
 {% set buttonStyles = {
   dark: "group-hover:text-white after:bg-black hover:text-white "
@@ -65,7 +66,8 @@
     {
       class: "#{buttonStyles[color]} #{iconAlignmentStyles} #{icon
         ? iconStyles[icon][color]} #{icon
-        ? 'gap-2.5 before:mt-[-2px] before:content-[""] before:h-[18px] before:w-[18px]'} #{borderStyles} relative before:duration-800 after:duration-400 px-0.5 inline-flex items-center justify-center font-surt uppercase text-ui-14 tracking-wider transition-colors py-[5px] after:absolute after:left-0 after:z-[-1] after:h-full after:transition-all after:content-[''] group-hover:after:w-full hover:after:w-full"
+        ? 'gap-2.5 before:mt-[-2px] before:content-[""] before:h-[18px] before:w-[18px]'} #{borderStyles} relative before:duration-800 after:duration-400 px-0.5 inline-flex items-center justify-center font-surt uppercase text-ui-14 tracking-wider transition-colors py-[5px] after:absolute after:left-0 after:z-[-1] after:h-full after:transition-all after:content-[''] group-hover:after:w-full hover:after:w-full",
+      ...attr
     }|merge(props)
   )
 }}

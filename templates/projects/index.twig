@@ -152,6 +152,18 @@
         {{ title }}
       </div>
       {% include "projects/_modules/project-filters" only %}
+
+      <div class="mt-10 hidden md:block">
+        {% include "_modules/button.twig" with {
+          url: actionUrl("site/export"),
+          text: "All Projects as CSV"|t,
+          icon: "download",
+          iconAlignment: "right",
+          attr: {
+            download: true
+          }
+        } %}
+      </div>
     </div>
 
     <div class="md:col-span-12 md:col-start-5 lg:col-span-11 lg:col-start-6">

@@ -4,6 +4,7 @@ return [
     "About the project" => "Über das Projekt",
     "All Articles" => "Alle Artikel",
     "All Projects" => "Alle Projekte",
+    "All Projects as CSV" => "Alle Projekte als CSV",
     "Articles" => "Artikel",
     "completed" => "Abgeschlossen",
     "completedWithSecondStage" => "Abgeschlossen (inkl. Second Stage)",
