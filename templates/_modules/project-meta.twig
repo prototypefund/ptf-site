@@ -7,6 +7,7 @@
     |merge(entry.projectTechnologies.eagerly().all())
 %}
 {% set class = class ?? "" %}
+{% set link = link ?? false %}
 
 {% if (categories|length) or entry.isInFunding %}
   <ul
@@ -24,7 +25,15 @@
       </li>
     {% endif %}
     {% for category in categories %}
-      <li>{{ category.title }}</li>
+      {% if link %}
+        <li>
+          <a href="{{ category.url }}" class="hover-underline">
+            {{ category.title }}
+          </a>
+        </li>
+      {% else %}
+        <li>{{ category.title }}</li>
+      {% endif %}
     {% endfor %}
   </ul>
 {% endif %}
