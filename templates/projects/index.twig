@@ -1,10 +1,9 @@
 {% extends "_layouts/layout.twig" %}
 
 {% set params = craft.customQueryStringParser.getQueryParams() %}
-{% set yearGroupParams =
-  craft.customQueryStringParser.getQueryParam("year-group")
+{% set fundingCycleParams =
+  craft.customQueryStringParser.getQueryParam("funding-cycle")
 %}
-{% set roundParams = craft.customQueryStringParser.getQueryParam("round") %}
 {% set topicParams = craft.customQueryStringParser.getQueryParam("topic") %}
 {% set technologyParams =
   craft.customQueryStringParser.getQueryParam("technology")
@@ -59,27 +58,15 @@
 
 {% set relations = [] %}
 
-{% if yearGroupParams|length %}
+{% if fundingCycleParams|length %}
   {% set relations =
     relations|merge(
       [
         {
-          targetElement: craft.categories.group("projectYearGroups").slug(
-            yearGroupParams
-          )
-        }
-      ]
-    )
-  %}
-{% endif %}
-
-{% if roundParams|length %}
-  {% set relations =
-    relations|merge(
-      [
-        {
-          targetElement: craft.categories.group("projectRounds").slug(
-            roundParams
+          targetElement: craft.categories.group(
+            ["projectYearGroups", "projectRounds"]
+          ).slug(
+            fundingCycleParams
           )
         }
       ]
@@ -130,7 +117,7 @@
 {% endif %}
 
 {% if relations|length %}
-  {% set projectsQuery = projectsQuery.relatedTo(["or"]|merge(relations)) %}
+  {% set projectsQuery = projectsQuery.relatedTo(["and"]|merge(relations)) %}
 {% endif %}
 
 {% set projectsQuery = projectsQuery.orderBy("title ASC").limit(20) %}

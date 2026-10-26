@@ -6,24 +6,20 @@
     param: "status",
     items: [
       {
-        title: "Only show currently funded projects"|t,
+        title: "Currently funded projects"|t,
         slug: "inFunding"
       },
       {
-        title: "Only show projects with Second Stage funding phase"|t,
+        title: "Second Stage funding phase"|t,
         slug: "secondStage"
       }
     ]
   },
   {
-    title: "Year Groups (from 2025)"|t,
-    param: "year-group",
+    title: "Funding cycle"|t,
+    param: "funding-cycle",
     items: craft.categories.group("projectYearGroups").eagerly().all()
-  },
-  {
-    title: "Rounds (2016 – 2025)"|t,
-    param: "round",
-    items: craft.categories.group("projectRounds").eagerly().all()
+      |merge(craft.categories.group("projectRounds").eagerly().all())
   },
   {
     title: "Topics"|t,
