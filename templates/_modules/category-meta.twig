@@ -1,0 +1,38 @@
+<dl
+  class="*:border-t-gray text-body-14 md:text-body-16 space-y-2.5 tracking-[0.02em] uppercase *:flex *:justify-between *:border-t *:pt-[3px] [&_dd]:text-right [&_dt]:text-gray-600"
+>
+  <div>
+    <dt>
+      {{ "Funded Period"|t }}
+    </dt>
+    <dd>
+      {{ category.startDate|date("d/m/Y") }}&thinsp;&ndash;&thinsp;{{
+        category.endDateRegular|date("d/m/Y")
+      }}
+    </dd>
+  </div>
+
+  {% if category.group.handle == "projectYearGroups" %}
+    <div>
+      <dt>
+        {{ "Second Stage"|t }}
+      </dt>
+      <dd>
+        {{
+          "until {date}"|t({
+            date: category.endDateSecondStage|date("d/m/Y")
+          })
+        }}
+      </dd>
+    </div>
+  {% endif %}
+
+  {% if projectsCount %}
+    <div>
+      <dt>
+        {{ "Number of projects"|t }}
+      </dt>
+      <dd>{{ projectsCount }}</dd>
+    </div>
+  {% endif %}
+</dl>

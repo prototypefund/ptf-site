@@ -20,26 +20,9 @@
     </h3>
   </header>
 
-  <dl
-    class="*:border-t-gray text-body-14 md:text-body-16 space-y-2.5 tracking-[0.02em] uppercase *:flex *:justify-between *:border-t *:pt-[3px] [&_dd]:text-right [&_dt]:text-gray-600"
-  >
-    <div>
-      <dt>
-        {{ "Funding Period"|t }}
-      </dt>
-      <dd>
-        {{ category.startDate|date("d/m/Y") }}&thinsp;&ndash;&thinsp;{{
-          category.endDateRegular|date("d/m/Y")
-        }}
-      </dd>
-    </div>
-    <div>
-      <dt>
-        {{ "Number of projects"|t }}
-      </dt>
-      <dd>{{ projectsCount }}</dd>
-    </div>
-  </dl>
+  {% include "_modules/category-meta.twig" with {
+    projectsCount: projectsCount
+  } %}
 
   {% include "_modules/button.twig" with {
     url: category.url,
