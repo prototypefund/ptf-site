@@ -47,8 +47,8 @@
     <meta name="msapplication-TileColor" content="#33CCFF" />
 
     <script type="speculationrules">
-      { "prerender": [{ "where": { "href_matches": "/*" }, "eagerness":
-      "conservative" }] }
+      { "prerender": [{ "where": { "and": [ { "href_matches": "/*" }, { "not": {
+      "selector_matches": "[download]" } } ] }, "eagerness": "conservative" }] }
     </script>
 
     {% include "_web-fonts" only %}
