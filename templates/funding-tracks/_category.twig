@@ -1,0 +1,33 @@
+{% extends "_layouts/layout.twig" %}
+
+{% set projects = craft.entries.section("projects").relatedTo(category).all() %}
+
+{% block content %}
+  {% include "_modules/headers/simple.twig" with {
+    headline: category.headline|default(category.title),
+    intro: category.intro,
+    secondaryText: category.secondaryText,
+    link: category.genericLink,
+    background: category.headerBackground.value,
+    alignment: category.headerAlignment.value
+  } only %}
+
+  <div class="mt-10">
+    {% embed "_modules/next-reads.twig"
+      with {
+        heading: "All Projects"|t,
+        count: projects|length
+      }
+    %}
+      {% block content %}
+        {% include "projects/_modules/teasers-list.twig" with {
+          projects: projects
+        } %}
+      {% endblock %}
+    {% endembed %}
+
+    {% include "_modules/modules.twig" with {
+      entry: category
+    } %}
+  </div>
+{% endblock %}
