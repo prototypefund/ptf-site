@@ -1,48 +1,50 @@
 {% set params = craft.customQueryStringParser.getQueryParams() %}
 
-{% set filterConfig = [
-  {
-    title: "Funding status"|t,
-    param: "status",
-    items: [
-      {
-        title: "Currently funded projects"|t,
-        slug: "inFunding"
-      },
-      {
-        title: "Second Stage funding phase"|t,
-        slug: "secondStage"
-      }
-    ]
-  },
-  {
-    title: "Funding cycle"|t,
-    param: "funding-cycle",
-    items: craft.categories.group("projectYearGroups").eagerly().all()|merge(
-      craft.categories.group("projectRounds").eagerly().all()
-    )
-  },
-  {
-    title: "Funding Track"|t,
-    param: "funding-track",
-    items: craft.categories.group("projectFundingTracks").eagerly().all()
-  },
-  {
-    title: "Topics"|t,
-    param: "topic",
-    items: craft.categories.group("projectTopics").eagerly().all()
-  },
-  {
-    title: "Technologies"|t,
-    param: "technology",
-    items: craft.categories.group("projectTechnologies").eagerly().all()
-  },
-  {
-    title: "Licenses"|t,
-    param: "license",
-    items: craft.categories.group("projectLicenses").eagerly().all()
-  }
-] %}
+{% set filterConfig =
+  [
+    {
+      title: "Funding status"|t,
+      param: "status",
+      items: [
+        {
+          title: "Currently funded projects"|t,
+          slug: "inFunding"
+        },
+        {
+          title: "Second Stage funding phase"|t,
+          slug: "secondStage"
+        }
+      ]
+    },
+    {
+      title: "Funding cycle"|t,
+      param: "funding-cycle",
+      items: craft.categories.group("projectYearGroups").eagerly().all()|merge(
+        craft.categories.group("projectRounds").eagerly().all()
+      )
+    },
+    {
+      title: "Funding Track"|t,
+      param: "funding-track",
+      items: craft.categories.group("projectFundingTracks").eagerly().all()
+    },
+    {
+      title: "Topics"|t,
+      param: "topic",
+      items: craft.categories.group("projectTopics").eagerly().all()
+    },
+    {
+      title: "Technologies"|t,
+      param: "technology",
+      items: craft.categories.group("projectTechnologies").eagerly().all()
+    },
+    {
+      title: "Licenses"|t,
+      param: "license",
+      items: craft.categories.group("projectLicenses").eagerly().all()
+    }
+  ]|filter(group => (group.items|length) > 1)
+%}
 
 {% set filters = [] %}
 
