@@ -144,54 +144,6 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-04-14T16:08:00+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: eb089684-4134-4cd9-a60d-4aaac63db8f4 # Link
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: cce2e13a-164c-4815-915e-03b7aa697f43
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-04-14T16:08:00+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 62e3c2ea-24fd-42e2-a9ba-3602f1d6e2e8 # Header Background
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: c02b056c-ee1a-467e-abe6-90854ef2064e
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            dateAdded: '2025-04-15T00:48:03+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 33c3763c-9f38-4c39-bebd-48bbec68e094 # Header Alignment
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 77bed486-1762-44ce-82f4-acda7b300b42
-            userCondition: null
-            warning: null
-            width: 50
-          -
-            dateAdded: '2025-04-14T16:08:00+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
             uid: 120177c4-346f-4005-83ad-cac2586bb86f

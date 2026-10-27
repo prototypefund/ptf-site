@@ -1,0 +1,33 @@
+{%- set projectsCount =
+  craft.entries.section("projects").relatedTo({
+    targetElement: category,
+    field: "projectRounds"
+  }).count()
+-%}
+
+<section
+  class="before:pattern before:pattern-card group relative space-y-5 bg-top-right bg-no-repeat px-2 py-4 md:p-5"
+>
+  <header>
+    {% include "_modules/pill.twig" with {
+      text: "completed"|t,
+      color: "gray"
+    } %}
+    <h3 class="font-surt text-head-24 md:text-head-32 mt-1.25">
+      <a href="{{ category.url }}" class="before:absolute before:inset-0">
+        {{ category.title }}
+      </a>
+    </h3>
+  </header>
+
+  {% include "_modules/category-meta.twig" with {
+    projectsCount: projectsCount
+  } %}
+
+  {% include "_modules/button.twig" with {
+    url: category.url,
+    icon: "arrow",
+    iconAlignment: "right",
+    text: "See"|t
+  } %}
+</section>

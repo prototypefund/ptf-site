@@ -1,28 +1,33 @@
 {% extends "_layouts/layout.twig" %}
 
-{% set roundsQuery = craft.categories.group("projectRounds") %}
-
-{% paginate roundsQuery.limit(4) as pagination, rounds %}
+{% set projectRounds = craft.categories.group("projectRounds").all() %}
 
 {% block content %}
-  {% include "_modules/headers/simple" with {
+  {% include "_modules/headers/simple.twig" with {
     headline: entry.headline|default(entry.title),
     intro: entry.intro,
     secondaryText: entry.secondaryText,
     link: entry.genericLink,
-    background: entry.headerBackground.value,
-    alignment: entry.headerAlignment.value
+    background: "greyBackgroundGreyPattern"
   } only %}
 
   <div class="mt-10">
-    {% include "_modules/cohorts" with {
-      cohorts: rounds,
-      projectLimit: 4
-    } only %}
+    <div class="mb-5 px-2 md:px-5">
+      <h2 class="font-surt text-head-20 md:text-head-24">
+        {{ "All Rounds"|t }}
+        <span class="text-rich-blue dark:text-sky-blue">
+          [{{ projectRounds|length }}]
+        </span>
+      </h2>
+    </div>
 
-    {% include "_modules/pagination" with {
-      pagination: pagination
-    } only %}
+    <div
+      class="border-gray mb-10 grid grid-cols-1 border-t *:border-b *:border-inherit md:grid-cols-2 md:*:odd:border-r md:*:last:odd:border-b-0 md:has-[&:nth-child(odd):last-child]:border-b"
+    >
+      {% for projectRound in projectRounds %}
+        {{ projectRound.render() }}
+      {% endfor %}
+    </div>
 
     {% include "_modules/modules" with {
       entry: entry

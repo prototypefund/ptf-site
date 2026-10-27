@@ -1,21 +1,52 @@
 {% extends "_layouts/layout.twig" %}
 
+{% set projects = craft.entries.section("projects").relatedTo(category).all() %}
+
+{% set meta %}
+  {% include "_modules/category-meta.twig" with {
+    projectsCount: projects|length
+  } %}
+{% endset %}
+
 {% block content %}
-  {% include "_modules/headers/simple" with {
-    headline: category.headline|default(category.title),
-    intro: category.intro,
-    secondaryText: category.secondaryText,
-    link: category.genericLink,
-    background: category.headerBackground.value,
-    alignment: category.headerAlignment.value
-  } only %}
+  {% embed "_modules/headers/simple.twig"
+    with {
+      headline: category.headline|default(category.title),
+      intro: category.intro,
+      content: meta,
+      secondaryText: category.secondaryText,
+      background: "greyBackgroundGreyPattern"
+    } only
+  %}
+    {% block subheadline %}
+      <div class="mt-auto">
+        {% include "_modules/button.twig" with {
+          url: roundsIndex.url,
+          icon: "arrow",
+          iconAlignment: "right",
+          text: "See all rounds"|t
+        } %}
+      </div>
+    {% endblock %}
+  {% endembed %}
 
   <div class="mt-10">
-    {% include "_modules/cohorts" with {
-      cohorts: [category]
-    } only %}
+    {% embed "_modules/next-reads.twig"
+      with {
+        heading: "Projects from {cohort}"|t({
+          cohort: category.title
+        }),
+        count: projects|length
+      }
+    %}
+      {% block content %}
+        {% include "projects/_modules/teasers-list.twig" with {
+          projects: projects
+        } %}
+      {% endblock %}
+    {% endembed %}
 
-    {% include "_modules/modules" with {
+    {% include "_modules/modules.twig" with {
       entry: category
     } %}
   </div>

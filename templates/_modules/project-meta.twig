@@ -17,11 +17,10 @@
   >
     {% if entry.isInFunding %}
       <li>
-        <span
-          class="bg-pink dark:bg-dark-magenta inline-block rounded-sm px-0.75 py-0.25 text-gray-900 uppercase md:text-[11px] dark:text-white"
-        >
-          {{ "In Funding"|t }}
-        </span>
+        {% include "_modules/pill.twig" with {
+          color: "pink",
+          text: "In Funding"|t
+        } %}
       </li>
     {% endif %}
     {% for category in categories %}

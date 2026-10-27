@@ -136,7 +136,7 @@
     <div
       class="{{
       alignment == "left"
-        ? "col-span-11 mb-3 pr-0 md:pr-4 lg:col-span-7 lg:mb-0 xl:col-span-8 md:max-w-[600px]"
+        ? "col-span-11 mb-3 flex flex-col gap-5 pr-0 md:max-w-[600px] md:pr-4 lg:col-span-7 lg:mb-0 xl:col-span-8 md:gap-7.5"
         : "mb-3 md:max-w-[680px] lg:mb-5 md:mx-auto"
       }} relative z-1"
     >
@@ -144,11 +144,13 @@
         {{ headline }}
       </h1>
 
-      {% if subheadline %}
-        <div class="mt-5 md:mt-[60px]">
-          {{ subheadline }}
-        </div>
-      {% endif %}
+      {% block subheadline %}
+        {% if subheadline %}
+          <div class="mt-5 md:mt-[60px]">
+            {{ subheadline }}
+          </div>
+        {% endif %}
+      {% endblock %}
     </div>
 
     {% if
