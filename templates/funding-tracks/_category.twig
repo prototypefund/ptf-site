@@ -1,6 +1,10 @@
 {% extends "_layouts/layout.twig" %}
 
-{% set projects = craft.entries.section("projects").relatedTo(category).all() %}
+{% set projectsQuery = craft.entries.section("projects").relatedTo(category) %}
+
+{% paginate projectsQuery.limit(28) as pagination, projects %}
+
+{% do craft.blitz.options.paginate(pagination.totalPages) %}
 
 {% block content %}
   {% include "_modules/headers/simple.twig" with {
@@ -13,18 +17,24 @@
   } only %}
 
   <div class="mt-10">
-    {% embed "_modules/next-reads.twig"
-      with {
-        heading: "All Projects"|t,
-        count: projects|length
-      }
-    %}
-      {% block content %}
-        {% include "projects/_modules/teasers-list.twig" with {
-          projects: projects
-        } %}
-      {% endblock %}
-    {% endembed %}
+    {% if projects|length %}
+      {% embed "_modules/next-reads.twig"
+        with {
+          heading: "All Projects"|t,
+          count: projectsQuery.count()
+        }
+      %}
+        {% block content %}
+          {% include "projects/_modules/teasers-list.twig" with {
+            projects: projects
+          } %}
+        {% endblock %}
+      {% endembed %}
+
+      {% include "_modules/pagination.twig" with {
+        pagination
+      } %}
+    {% endif %}
 
     {% include "_modules/modules.twig" with {
       entry: category
