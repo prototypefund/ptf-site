@@ -26,7 +26,10 @@
     {% for category in categories %}
       {% if link %}
         <li>
-          <a href="{{ category.url }}" class="hover-underline">
+          <a
+            href="{{ category.url }}"
+            class="hover:text-gray-600 dark:hover:text-gray-300"
+          >
             {{ category.title }}
           </a>
         </li>
