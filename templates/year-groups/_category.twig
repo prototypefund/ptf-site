@@ -1,19 +1,104 @@
 {% extends "_layouts/layout.twig" %}
 
+{% set baseProjectIds =
+  craft.entries.section("projects").relatedTo(category).ids()
+%}
+
+{% set availableFundingTracks = baseProjectIds|length
+  ? craft.categories.group("projectFundingTracks").relatedTo({
+    sourceElement: baseProjectIds
+  }).all()
+  : []
+%}
+
+{% set fundingTrackParam = craft.app.request.queryParam("funding-track") %}
+{% set activeFundingTrack =
+  availableFundingTracks|filter(track => track.slug == fundingTrackParam)|first
+%}
+
+{% set activeFundingTrackId = activeFundingTrack.id ?? null %}
+
+{% set fundingTracks =
+  availableFundingTracks|map(
+    track => {
+      title: track.title,
+      url: (track.id == activeFundingTrackId
+        ? category.url
+        : siteUrl(
+          category.url,
+          {
+            "funding-track": track.slug
+          }
+        ))
+        ~ "#list",
+      isActive: track.id == activeFundingTrackId
+    }
+  )
+%}
+
+{% set projectsQuery = craft.entries.section("projects") %}
+{% set projectsQuery = activeFundingTrack
+  ? projectsQuery.relatedTo(["and", category, activeFundingTrack])
+  : projectsQuery.relatedTo(category)
+%}
+
+{% set projects = projectsQuery.all() %}
+
+{% set meta %}
+  {% include "_modules/category-meta.twig" with {
+    projectsCount: projects|length
+  } %}
+{% endset %}
+
 {% block content %}
-  {% include "_modules/headers/simple" with {
-    headline: category.headline|default(category.title),
-    intro: category.intro,
-    secondaryText: category.secondaryText,
-    link: category.genericLink,
-    background: category.headerBackground.value,
-    alignment: category.headerAlignment.value
-  } only %}
+  {% embed "_modules/headers/simple.twig"
+    with {
+      headline: category.headline|default(category.title),
+      intro: category.intro,
+      content: meta,
+      secondaryText: category.secondaryText,
+      background: "greyBackgroundBluePattern"
+    } only
+  %}
+    {% block subheadline %}
+      <div class="mt-auto">
+        {% include "_modules/button.twig" with {
+          url: yearGroupsIndex.url,
+          icon: "arrow",
+          iconAlignment: "right",
+          text: "See all year groups"|t
+        } %}
+      </div>
+    {% endblock %}
+  {% endembed %}
 
   <div class="mt-10">
-    {% include "_modules/cohorts" with {
-      cohorts: [category]
-    } only %}
+    {% embed "_modules/next-reads.twig"
+      with {
+        heading: "Projects from {cohort}"|t({
+          cohort: category.title
+        }),
+        count: projects|length
+      }
+    %}
+      {% block content %}
+        {% include "projects/_modules/teasers-list.twig" with {
+          projects: projects
+        } %}
+      {% endblock %}
+      {% block between %}
+        {% if (fundingTracks|length) > 1 %}
+          <div class="mb-2.5 md:mb-5" id="list">
+            <p class="font-surt text-head-18 md:text-head-20 mb-1 md:mb-2.5">
+              {{ "Filter by Funding Track"|t }}
+            </p>
+            {% include "_modules/filter-buttons.twig" with {
+              filters: fundingTracks
+            } %}
+          </div>
+        {% endif %}
+      {% endblock %}
+    {% endembed %}
 
     {% include "_modules/modules" with {
       entry: category
