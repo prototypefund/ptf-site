@@ -28,7 +28,9 @@
   </div>
 
   <div>
-    {{ content|raw }}
+    {% block content %}
+      {{ content|raw }}
+    {% endblock %}
   </div>
 
   {% if sideLink|length %}
