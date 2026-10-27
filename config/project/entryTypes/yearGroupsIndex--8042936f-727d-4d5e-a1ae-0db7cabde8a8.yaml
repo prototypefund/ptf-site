@@ -102,38 +102,6 @@ fieldLayouts:
             width: 100
           -
             dateAdded: '2025-05-12T21:22:44+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 62e3c2ea-24fd-42e2-a9ba-3602f1d6e2e8 # Header Background
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: b1b9fa68-c3f2-4a3d-a660-dfee1726a278
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-05-12T21:22:44+00:00'
-            editCondition: null
-            elementCondition: null
-            elementEditCondition: null
-            fieldUid: 33c3763c-9f38-4c39-bebd-48bbec68e094 # Header Alignment
-            handle: null
-            instructions: null
-            label: null
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 6c3582c7-8bb4-4563-81b8-21bdf12bcacd
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-05-12T21:22:44+00:00'
             elementCondition: null
             type: craft\fieldlayoutelements\HorizontalRule
             uid: 8d7e07cf-8ffc-45b6-8e79-7aefa0c41adf
