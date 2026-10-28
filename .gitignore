@@ -4,3 +4,4 @@
 .DS_Store
 /node_modules
 /config/license.key*
+/web/cache/*

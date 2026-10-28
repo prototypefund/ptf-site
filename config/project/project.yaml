@@ -1,4 +1,4 @@
-dateModified: 1793104862
+dateModified: 1793175028
 elementSources:
   craft\elements\Entry:
     -
@@ -429,16 +429,7 @@ plugins:
           -
             - concurrency
             - '3'
-          -
-            - useBasicAuth
-            - ''
-          -
-            - username
-            - ''
-          -
-            - password
-            - ''
-      cacheGeneratorType: putyourlightson\blitz\drivers\generators\HttpGenerator
+      cacheGeneratorType: putyourlightson\blitz\drivers\generators\LocalGenerator
       cacheNonHtmlResponses: false
       cachePurgerType: putyourlightson\blitz\drivers\purgers\DummyPurger
       cacheStorageSettings:
