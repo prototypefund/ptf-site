@@ -71,6 +71,10 @@ class ExportController extends Controller
             $this->response->format = Response::FORMAT_RAW;
         }
 
+        $this->response->getHeaders()
+            ->set('Cache-Control', 'no-store, private')
+            ->set('X-Robots-Tag', 'noindex');
+
         return $this->response;
     }
 }
