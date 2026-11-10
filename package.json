@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "@splidejs/splide": "^4.1.4",
-    "@zackad/prettier-plugin-twig": "^0.16.0",
+    "@zackad/prettier-plugin-twig": "^0.17.0",
     "prettier-plugin-tailwindcss": "^0.7.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
