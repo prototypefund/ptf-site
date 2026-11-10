@@ -5,6 +5,7 @@ entryTypes:
     uid: dd6fd54d-11f2-4a62-8da7-d59718b15225 # CTA Banner
 handle: ctaBanners
 maxAuthors: 1
+minAuthors: 1
 name: 'CTA Banners'
 previewTargets:
   -

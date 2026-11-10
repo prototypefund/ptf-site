@@ -136,6 +136,7 @@ fieldLayouts:
 fs: uploadsFs
 handle: uploads
 name: Uploads
+propagationMethod: all
 sortOrder: 1
 subpath: ''
 titleTranslationKeyFormat: null

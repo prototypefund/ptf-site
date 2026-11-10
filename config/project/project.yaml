@@ -1,4 +1,4 @@
-dateModified: 1793175028
+dateModified: 1794323060
 elementSources:
   craft\elements\Entry:
     -
@@ -561,7 +561,7 @@ plugins:
   knock-knock:
     edition: standard
     enabled: true
-    schemaVersion: 1.1.1
+    schemaVersion: 1.1.3
   retcon:
     edition: standard
     enabled: true
@@ -648,5 +648,5 @@ system:
   live: true
   name: 'Prototype Fund'
   retryDuration: null
-  schemaVersion: 5.9.0.8
+  schemaVersion: 5.12.0.2
   timeZone: Europe/Berlin

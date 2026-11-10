@@ -5,6 +5,7 @@ entryTypes:
     uid: 5dbb535e-8ef1-46d6-8af1-f389d054afdf # Search
 handle: searchIndex
 maxAuthors: 1
+minAuthors: 1
 name: 'Search Index'
 previewTargets:
   -

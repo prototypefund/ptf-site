@@ -5,6 +5,7 @@ entryTypes:
     uid: db2da9aa-6637-4df7-8df4-527aa118c61e # Link List
 handle: linkLists
 maxAuthors: 1
+minAuthors: 1
 name: 'Link Lists'
 previewTargets:
   -

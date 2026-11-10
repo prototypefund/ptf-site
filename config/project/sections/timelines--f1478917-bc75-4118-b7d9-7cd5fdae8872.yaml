@@ -5,6 +5,7 @@ entryTypes:
     uid: e52cab12-65a2-4958-badf-d0b2f39913d0 # Timeline
 handle: timelines
 maxAuthors: 1
+minAuthors: 1
 name: Timelines
 previewTargets:
   -

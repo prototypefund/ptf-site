@@ -5,6 +5,7 @@ entryTypes:
     uid: ac14f0ca-4155-4f2f-ad58-f2648062e062 # Event
 handle: events
 maxAuthors: 1
+minAuthors: 1
 name: Events
 previewTargets:
   -

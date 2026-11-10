@@ -5,6 +5,7 @@ entryTypes:
     uid: 0a7d996f-dc9c-416e-ab72-2d475eaa550b # Talk
 handle: talks
 maxAuthors: 1
+minAuthors: 1
 name: Talks
 previewTargets:
   -

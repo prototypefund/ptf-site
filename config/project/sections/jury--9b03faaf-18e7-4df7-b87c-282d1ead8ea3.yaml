@@ -5,6 +5,7 @@ entryTypes:
     uid: 2b8e8081-de20-479d-a37d-362dded4c944 # Juror
 handle: jury
 maxAuthors: 1
+minAuthors: 1
 name: Jury
 previewTargets:
   -

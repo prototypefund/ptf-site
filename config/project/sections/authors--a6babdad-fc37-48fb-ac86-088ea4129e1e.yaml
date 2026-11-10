@@ -5,6 +5,7 @@ entryTypes:
     uid: f6ed0d5d-4ab8-418b-801e-b11f6cb309a5 # Author
 handle: authors
 maxAuthors: 1
+minAuthors: 1
 name: Authors
 previewTargets:
   -

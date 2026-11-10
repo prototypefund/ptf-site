@@ -5,6 +5,7 @@ entryTypes:
     uid: 7eb26dd5-1c10-45d1-a16b-85a148e4bf8a # Projects Index
 handle: projectsIndex
 maxAuthors: 1
+minAuthors: 1
 name: 'Projects Index'
 previewTargets:
   -

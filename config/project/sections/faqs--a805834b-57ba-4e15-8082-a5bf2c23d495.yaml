@@ -5,6 +5,7 @@ entryTypes:
     uid: ced3c245-d70a-43bb-a15b-37fa5292066b # FAQ
 handle: faqs
 maxAuthors: 1
+minAuthors: 1
 name: FAQs
 previewTargets:
   -

@@ -5,6 +5,7 @@ entryTypes:
     uid: 31fe4ba9-d166-4836-acfc-6bd876c0a0ff # Rounds Index
 handle: roundsIndex
 maxAuthors: 1
+minAuthors: 1
 name: 'Rounds Index'
 previewTargets:
   -

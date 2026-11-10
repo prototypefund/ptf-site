@@ -5,6 +5,7 @@ entryTypes:
     uid: 1a0ed17a-7208-4b7e-894f-64506d5432d6 # Events Index
 handle: eventsIndex
 maxAuthors: 1
+minAuthors: 1
 name: 'Events Index'
 previewTargets:
   -

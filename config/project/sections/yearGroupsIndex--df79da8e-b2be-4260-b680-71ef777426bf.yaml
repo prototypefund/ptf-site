@@ -5,6 +5,7 @@ entryTypes:
     uid: 8042936f-727d-4d5e-a1ae-0db7cabde8a8 # Year Groups Index
 handle: yearGroupsIndex
 maxAuthors: 1
+minAuthors: 1
 name: 'Year Groups Index'
 previewTargets:
   -

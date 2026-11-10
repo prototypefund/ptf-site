@@ -5,6 +5,7 @@ entryTypes:
     uid: 35a4b3c3-5eef-4146-8fcc-2652e9582ec4 # Past Events Index
 handle: pastEventsIndex
 maxAuthors: 1
+minAuthors: 1
 name: 'Past Events Index'
 previewTargets:
   -

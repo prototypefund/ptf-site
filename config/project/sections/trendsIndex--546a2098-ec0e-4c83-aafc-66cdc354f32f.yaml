@@ -5,6 +5,7 @@ entryTypes:
     uid: 81982550-63ea-49d9-9142-e30783a4fd54 # Trends Index
 handle: trendsIndex
 maxAuthors: 1
+minAuthors: 1
 name: 'Trends Index'
 previewTargets:
   -

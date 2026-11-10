@@ -7,6 +7,7 @@ entryTypes:
     uid: bc05e7ef-ab74-4604-95d9-d14a383ad33a # Basic Text Page
 handle: genericPages
 maxAuthors: 1
+minAuthors: 1
 name: 'Generic Pages'
 previewTargets:
   -

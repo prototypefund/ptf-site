@@ -5,6 +5,7 @@ entryTypes:
     uid: 16d093d2-5427-4466-a013-a3620b62ef69 # Newsletter
 handle: newsletter
 maxAuthors: 1
+minAuthors: 1
 name: Newsletter
 previewTargets:
   -
