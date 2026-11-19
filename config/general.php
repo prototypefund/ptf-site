@@ -43,7 +43,7 @@ return GeneralConfig::create()
     // Disable template caching as the Blitz plugin will handle that
     ->enableTemplateCaching(false)
     // enable automatic queue running
-    ->runQueueAutomatically(true)
+    ->runQueueAutomatically(App::env('CRAFT_ENVIRONMENT') !== 'production')
     // Set the @webroot alias so the clear-caches command knows where to find CP resources
     ->aliases([
         '@webroot' => dirname(__DIR__) . '/web',
