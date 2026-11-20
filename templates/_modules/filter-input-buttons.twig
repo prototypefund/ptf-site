@@ -1,0 +1,28 @@
+{% set name = name ?? null %}
+{% set filters = filters|default([]) %}
+{% set size = size|default("small") %}
+
+<ul class="flex flex-wrap gap-1">
+  {% for filter in filters %}
+    <li>
+      <input
+        type="checkbox"
+        id="{{ filter.id }}"
+        name="{{ name }}"
+        value="{{ filter.value }}"
+        class="peer sr-only"
+        {{ filter.isActive ? "checked" }}
+      />
+      <label
+        for="{{ filter.id }}"
+        class="{{
+        size == "large"
+          ? "text-body-16 md:text-body-14"
+          : "text-body-14"
+        }} [:not(:checked)+&]:border-gray peer-focus-visible:ring-highlighting-yellow block cursor-pointer rounded-[2px] border px-1 py-0.5 transition-colors peer-checked:border-gray-900 peer-checked:bg-gray-900 peer-checked:text-white peer-focus-visible:ring-8 active:border-gray-900 active:bg-gray-900 active:text-white dark:peer-checked:bg-gray-100 dark:peer-checked:text-gray-900 [:not(:checked)+&]:hover:bg-gray-100 dark:[:not(:checked)+&]:border-gray-500 dark:[:not(:checked)+&]:hover:text-gray-900"
+      >
+        {{ filter.title }}
+      </label>
+    </li>
+  {% endfor %}
+</ul>

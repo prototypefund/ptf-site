@@ -1,41 +1,84 @@
-export class ProjectFilters extends HTMLElement {
-  constructor() {
-    super();
-  }
+const DESKTOP_QUERY = "(min-width: 768px)";
 
+export class ProjectFilters extends HTMLElement {
   connectedCallback() {
-    const filters = this.querySelector("[data-filters]");
+    const filters = this.querySelector<HTMLElement>("[data-filters]");
+    const form = this.querySelector<HTMLFormElement>("[data-filter-form]");
     const filterToggle = this.querySelector("[data-filter-toggle]");
     const filterClose = this.querySelector("[data-filter-close]");
 
-    if (!filters || !filterToggle || !filterClose) {
+    if (!filters || !form || !filterToggle || !filterClose) {
       return;
     }
 
-    filterToggle.addEventListener("click", () => {
-      const menuOpening = !filters.classList.contains("filter-open");
-      menuOpening ? lockPageScroll() : unlockPageScroll();
-      filters.classList.toggle("filter-open");
-    });
+    const desktop = window.matchMedia(DESKTOP_QUERY);
 
-    filterClose.addEventListener("click", () => {
-      unlockPageScroll();
-      filters.classList.remove("filter-open");
-    });
-
-    document.onkeydown = function (event) {
-      if ("key" in event && (event.key === "Escape" || event.key === "Esc")) {
-        filters.classList.remove("filter-open");
-        unlockPageScroll();
-      }
-    };
-
-    const lockPageScroll = () => {
+    const openFilters = () => {
       document.documentElement.classList.add("overflow-hidden");
+      filters.classList.add("filter-open");
     };
 
-    const unlockPageScroll = () => {
+    // Closing without applying discards unsubmitted changes.
+    const closeFilters = () => {
       document.documentElement.classList.remove("overflow-hidden");
+      filters.classList.remove("filter-open");
+      form.reset();
     };
+
+    // hide the submit button on desktop
+    form.toggleAttribute("data-enhanced", true);
+
+    form.addEventListener("change", () => {
+      if (!desktop.matches) {
+        return;
+      }
+
+      form.requestSubmit();
+    });
+
+    form.addEventListener("submit", (event) => {
+      if (form.querySelector("input:checked")) {
+        return;
+      }
+
+      event.preventDefault();
+      window.location.assign(form.action);
+    });
+
+    this.querySelectorAll<HTMLButtonElement>("[data-filter-remove]").forEach(
+      (button) => {
+        button.addEventListener("click", () => {
+          const input = document.getElementById(
+            button.dataset.filterRemove ?? "",
+          );
+
+          if (!(input instanceof HTMLInputElement)) {
+            return;
+          }
+
+          input.checked = false;
+          form.requestSubmit();
+        });
+      },
+    );
+
+    filterToggle.addEventListener("click", () => {
+      filters.classList.contains("filter-open")
+        ? closeFilters()
+        : openFilters();
+    });
+
+    filterClose.addEventListener("click", closeFilters);
+
+    document.addEventListener("keydown", (event) => {
+      if (
+        event.key !== "Escape" ||
+        !filters.classList.contains("filter-open")
+      ) {
+        return;
+      }
+
+      closeFilters();
+    });
   }
 }
