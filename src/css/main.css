@@ -159,7 +159,7 @@
 
   @variant sm {
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       left: 0;
       bottom: var(--hover-underline-bottom, -4px);
